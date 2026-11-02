@@ -841,3 +841,12 @@ Entries:
   id: 102
   time: '2026-11-02T03:04:28.0000000+00:00'
   url: https://github.com/Floof-Station-SS14/Floof-Station/pull/325
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added MoffStation's 'Rewritten' card system, their Tarot cards, and
+        their Go Fish! game.
+  id: 103
+  time: '2026-11-02T05:16:30.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/326
