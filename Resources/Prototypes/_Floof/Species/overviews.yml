@@ -9,6 +9,23 @@
   - species-overview-arachnid-con-poison
 
 - type: speciesOverview
+  id: Rodentia
+  pros:
+  - species-overview-rodentia-pro-claws
+  - species-overview-rodentia-pro-small
+  - species-overview-rodentia-pro-duffelbags
+  - species-overview-rodentia-pro-crawl
+  - species-overview-rodentia-pro-raw-meat
+  - species-overview-rodentia-pro-toxins
+  - species-overview-rodentia-pro-rummage
+  - species-overview-rodentia-pro-cheeks
+  cons:
+  - species-overview-rodentia-con-vomit
+  - species-overview-rodentia-con-blunt
+  - species-overview-rodentia-con-mousetraps
+  - species-overview-rodentia-con-hunger
+
+- type: speciesOverview
   id: Diona
   pros:
   - species-overview-diona-pro-hunger

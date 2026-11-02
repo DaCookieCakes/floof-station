@@ -7,21 +7,18 @@
 
   Rodentia are a race of humanoid beings resembling rodents. Resourceful, evasive, sneaky, but fragile.
 
-  ## Diet
-
-  - Can eat raw meat.
-  - Will get poisoned by Theobromine (Chocolate, Tea, Coffee) and Allicin (Onion, Garlic).
-
   ## Benefits
 
   - Their claws do Slash and Blunt damage.
   - Smaller than humans.
   - Can fit in duffelbags.
   - Crawl about 75% faster than other species while lying down.
+  - Can safely eat raw meat.
+  - Can consume Theobromine (chocolate, tea, coffee) and Allicin (onion, garlic) without toxin damage.
 
   ## Special
 
-  - Can Rummage in disposal chutes, which can sometimes dig up food.
+  - Can rummage through disposal chutes for food, trash, and occasionally useful materials.
   - Can store small items in their cheeks. Having items in their mouth makes their speech unintelligible, and they will drop all items in their mouth if attacked, stunned, or shoved.
 
   ## Drawbacks
@@ -29,5 +26,6 @@
   - They take [color=#ffa500]30% more Blunt damage[/color]
   - Always triggers mousetraps, regardless of whether or not they are wearing shoes.
   - Gets hungry 33% faster.
+  - Cannot vomit to expel ingested substances.
 
 </Document>

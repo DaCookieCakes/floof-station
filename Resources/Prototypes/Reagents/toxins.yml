@@ -493,7 +493,7 @@
       - !type:PopupMessage
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Arachnid, MetabolizerFeroxi, Harpy, Shadekin ] # FLOOF: Feroxi, DeltaV: Harpy, Shadekin
+          type: [ Animal, Vox, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
           inverted: true
         type: Local
         visualType: MediumCaution
@@ -503,12 +503,12 @@
         probability: 0.1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant, Arachnid, MetabolizerFeroxi, Harpy, Shadekin ] # FLOOF: Feroxi, DeltaV: Harpy, Shadekin
+          type: [ Animal, Vox, Plant, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
           inverted: true
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant, Arachnid, MetabolizerFeroxi, Harpy, Shadekin ] # FLOOF: Feroxi, DeltaV: Harpy, Shadekin
+          type: [ Animal, Vox, Plant, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
           inverted: true
         damage:
           types:
@@ -523,7 +523,7 @@
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Arachnid, MetabolizerFeroxi, Harpy, Shadekin ] # FLOOF: Feroxi, DeltaV: Harpy, Shadekin
+          type: [ Animal, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
         reagent: Protein
         amount: 0.5
       - !type:AdjustReagent

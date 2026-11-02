@@ -306,13 +306,139 @@
   - type: MobsterAccent
     isBoss: false
 
+# Floof Start - Rat King rummage loot pools
 - type: entityTable
   id: RatKingLoot
   table: !type:GroupSelector
     children:
-    - id: RandomSpawner100
-      weight: 66
+    - !type:NestedSelector
+      tableId: RatKingFoodLoot
+      weight: 25
+    - !type:NestedSelector
+      tableId: RatKingDrinkLoot
+      weight: 25
+    - !type:NestedSelector
+      tableId: RatKingTrashLoot
+      weight: 40
+    - !type:NestedSelector
+      tableId: RatKingResourceLoot
+      weight: 10
+
+- type: entityTable
+  id: RatKingFoodLoot
+  table: !type:GroupSelector
+    children:
+    - id: FoodPizzaArnold
+      weight: 0.1
+    - id: FoodPizzaDonkpocket
+      weight: 0.1
+    - id: FoodPizzaDank
+      weight: 0.1
+    - id: FoodPizzaArnoldSlice
+      weight: 1
+    - id: FoodPizzaDonkpocketSlice
+      weight: 1
+    - id: FoodPizzaDankSlice
+      weight: 1
     - id: FoodCheese
-      weight: 28
+      weight: 3
+    - id: FoodCheeseSlice
+      weight: 3
+    - id: FoodBurgerCheese
+      weight: 3
+    - id: FoodSnackNutribrick
+      weight: 2
+    - id: FoodBakedCannabisBrownie
+      weight: 0.1
+    - id: FoodBreakfastEnglish
+      weight: 0.1
+    - id: FoodBreakfastAmerican
+      weight: 0.1
+    - id: FoodBakedPancake
+      weight: 3
+    - id: FoodBakedPancakeBb
+      weight: 3
+    - id: FoodBakedPancakeCc
+      weight: 3
+    - id: FoodBakedWaffle
+      weight: 2
+    - id: FoodSnackChocolate
+      weight: 1
+    - id: FoodCakeBerryDelight
+      weight: 0.25
+    - id: FoodCakeBerryDelightSlice
+      weight: 0.75
+    - id: FoodFrozenSandwich
+      weight: 2
+    - id: FoodFrozenSandwichStrawberry
+      weight: 2
+    - id: IceCreamBananaSplit
+      weight: 2
+    - id: IceCreamNeapolitan
+      weight: 2
+    - id: IceCreamCoffee
+      weight: 2
+    - id: IceCreamChoco
+      weight: 2
+    - id: IceCreamVanilla
+      weight: 2
+    - id: IceCreamStrawberry
+      weight: 2
+    - id: FoodSnackSyndi
+      weight: 3
+
+- type: entityTable
+  id: RatKingDrinkLoot
+  table: !type:GroupSelector
+    children:
+    - id: DrinkChocolateGlass
+    - id: DrinkCoffee
+    - id: DrinkTheMartinez
+    - id: DrinkBeerCan
+      weight: 2
+    - id: DrinkBeerBottleFull
+      weight: 2
+    - id: DrinkColaBottleFull
+      weight: 0.25
+    - id: DrinkEnergyDrinkCan
+      weight: 3
+    - id: DrinkRootBeerCan
+      weight: 3
+    - id: DrinkColaCan
+      weight: 3
+    - id: DrinkStarkistCan
+      weight: 3
+
+- type: entityTable
+  id: RatKingTrashLoot
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: GenericTrashItems
+      weight: 8
+    - !type:NestedSelector
+      tableId: AllBananaPeelsTable
+      weight: 3
+    - !type:GroupSelector
+      weight: 2
+      children:
+      - id: FoodTinPeachesTrash
+      - id: FoodTinPeachesMaintTrash
+      - id: FoodTinBeansTrash
+      - id: FoodTinMRETrash
+      - id: FoodPacketMRETrash
+      - id: TrashCherryPit
+      - id: FoodCornTrash
+      - id: BrokenBottle
+
+- type: entityTable
+  id: RatKingResourceLoot
+  table: !type:GroupSelector
+    children:
+    - id: MaterialCardboard10
+      weight: 10
     - id: IngotGold1
-      weight: 5
+      weight: 0.1
+    - id: SheetUranium1
+      weight: 0.02
+# Floof End

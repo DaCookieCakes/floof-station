@@ -63,11 +63,13 @@
       Tongue: OrganHumanTongue
       Ears: OrganHumanEars
       Appendix: OrganHumanAppendix
-      Lungs: OrganHumanLungs
-      Heart: OrganAnimalHeart
-      Stomach: OrganAnimalStomach
-      Liver: OrganAnimalLiver
-      Kidneys: OrganAnimalKidneys
+      # Floof Start - Rat organ variants use Rat metabolism to avoid Allicin and Theobromine damage
+      Lungs: OrganRodentiaLungs # Floof - Rat organs
+      Heart: OrganRodentiaHeart
+      Stomach: OrganRodentiaStomach # Floof - Rat organs
+      Liver: OrganRodentiaLiver
+      Kidneys: OrganRodentiaKidneys
+      # Floof End - Rat organ variants
       Bladder: OrganBladder # Floof - Bladder
   - type: HumanoidProfile
     species: Rodentia
@@ -79,6 +81,7 @@
   id: MobRodentia
   name: Urist McRat
   components:
+  - type: NoVomit # Floof
   #- type: Hunger # Floof - Satiation
   - type: Speech
     speechVerb: Rodentia
