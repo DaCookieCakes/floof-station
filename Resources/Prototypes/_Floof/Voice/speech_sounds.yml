@@ -1,0 +1,10 @@
+
+#BANANA DUCK
+- type: speechSounds
+  id: Duck
+  saySound:
+    path: /Audio/Animals/duck_quack_happy.ogg
+  askSound:
+    path: /Audio/Animals/duck_quack_happy.ogg
+  exclaimSound:
+    path: /Audio/Animals/duck_quack_happy.ogg

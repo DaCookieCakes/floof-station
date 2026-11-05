@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "created by discord: dzordz",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "floof1"
+    },
+    {
+      "name": "floof2"
+    },
+    {
+      "name": "floof3"
+    },
+    {
+      "name": "floof4"
+    },
+    {
+      "name": "floof5"
+    },
+    {
+      "name": "floof6"
+    },
+    {
+      "name": "floof7"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+marking-ThavenCheekBarbels = Thaven Head (Cheek Barbels)
+marking-ThavenCheekBarbels-cheek_barbels = Head
+marking-ThavenEyebrowBarbels = Thaven Head (Eyebrow Barbels)
+marking-ThavenEyebrowBarbels-eyebrow_barbels = Head
+marking-ThavenUnderbellyFace = Thaven Head (Underbelly Face)
+marking-ThavenUnderbellyFace-underbelly_face = Head
+marking-ThavenUnderbellyTorso = Thaven Chest (Underbelly Torso)
+marking-ThavenUnderbellyTorso-underbelly_torso = Chest
+marking-ThavenCarpSpots = Thaven Chest (Carp Spots)
+marking-ThavenCarpSpots-carp_spots = Chest

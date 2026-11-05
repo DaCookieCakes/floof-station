@@ -46,7 +46,7 @@
     access: [["Quartermaster"]]
 
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerSalvageSpecialist
   name: salvage specialist's equipment
   description: Nevermind the pickaxe.
@@ -102,7 +102,7 @@
 
 # Electrical supplies
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseResearch] # Floof - added id lock parent
   id: LockerElectricalSupplies
   name: electrical supplies locker
   components:
@@ -116,7 +116,7 @@
 
 # Welding supplies
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerWeldingSupplies
   name: welding supplies locker
   components:
@@ -130,7 +130,7 @@
 
 # Atmos tech
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerAtmospherics
   name: atmospheric technician's locker
   components:
@@ -144,7 +144,7 @@
 
 # Engineer
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerEngineer
   name: engineer's locker
   components:
@@ -234,7 +234,7 @@
 
 # Medical doctor
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerMedical
   name: medical doctor's locker
   components:
@@ -248,7 +248,7 @@
 
 # Paramedic
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerParamedic
   name: paramedic's locker
   components:
@@ -262,7 +262,7 @@
 
 # Chemical
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseLogistics] # Floof - added id lock parent
   id: LockerChemistry
   name: chemical locker
   components:
@@ -303,7 +303,7 @@
     access: [ [ "ResearchDirector" ] ]
 
 - type: entity
-  parent: LockerBase
+  parent: [LockerBase, IdLockableBaseResearch] # Floof - added id lock parent
   id: LockerScientist
   name: scientist's locker
   components:

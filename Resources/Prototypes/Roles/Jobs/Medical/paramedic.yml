@@ -1,5 +1,6 @@
 - type: job
   id: Paramedic
+  pay: 500 # Floof - bank
   name: job-name-paramedic
   description: job-description-paramedic
   playTimeTracker: JobParamedic

@@ -1,0 +1,15 @@
+
+
+- type: guideEntry
+  id: FloofRuleset
+  name: guide-entry-floof-rules-mrp
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/_Floof/ServerRules/MRPRules.xml"
+
+- type: guideEntry
+  id: FloofAdminRules
+  name: guide-entry-floof-admin-rules
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/_Floof/ServerRules/AdminRules.xml"

@@ -6,6 +6,8 @@
     ClothingBackpackDuffel: 5
     ClothingBackpackSatchel: 3
     ClothingBackpackSatchelLeather: 2
+    ClothingWalletLeatherBrown: 5 # Frontier
+    ClothingWalletLeatherBlack: 5 # Frontier
     ClothingRandomSpawner: 8
     ClothingUniformRandomShorts: 4
     ClothingHeadHatBeret: 4
@@ -94,6 +96,10 @@
     ClothingHandsGlovesColorPurple: 2
     ClothingEyesGlassesCheapSunglasses: 3
     # DO NOT ADD MORE, USE UNIFORM DYING
+    ClothingNeckCollarBlack: 3 # Floof
+    ClothingNeckCollarBlue: 3 # Floof
+    ClothingNeckCollarPink: 3 # Floof
+    ClothingNeckCowBellCollar: 2 #The Den
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
@@ -102,4 +108,5 @@
     ToyFigurineGreytider: 1
     ClothingBackpackSatchelSmugglerUnanchored: 1
     ClothingHeadHatSolidHeadband: 2
+    ClothingNeckCollarSyndie: 1 # Floof
   # DO NOT ADD MORE, USE UNIFORM DYING

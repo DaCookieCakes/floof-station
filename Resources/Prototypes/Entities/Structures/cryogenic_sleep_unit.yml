@@ -26,6 +26,9 @@
     examinationText: access-reader-examination-functionality-restricted
   - type: InteractionOutline
   - type: Cryostorage
+    gracePeriod: 30 # Floof - Persistence
+  - type: CryostorageSilently # DEN - Allow silently entering Cryostorage
+    containerId: storage
   - type: Fixtures
     fixtures:
       fix1:

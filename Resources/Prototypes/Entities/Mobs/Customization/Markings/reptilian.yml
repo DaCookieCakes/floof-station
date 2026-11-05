@@ -121,6 +121,10 @@
     state: tail_smooth_primary
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_smooth_secondary
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_smooth_secondary_behind
+    layer: TailBehind
+    colorFrom: tail_smooth_secondary
 
 - type: marking
   id: LizardTailLarge
@@ -129,6 +133,10 @@
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_large
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_large_behind2
+    layer: TailBehind
+    colorFrom: tail_large
 
 - type: marking
   id: LizardTailSpikes
@@ -137,6 +145,10 @@
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_spikes
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_spikes_behind2
+    layer: TailBehind
+    colorFrom: tail_spikes
 
 - type: marking
   id: LizardTailLTiger
@@ -145,6 +157,10 @@
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_ltiger
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_ltiger_behind2
+    layer: TailBehind
+    colorFrom: tail_ltiger
 
 - type: marking
   id: LizardTailDTiger
@@ -153,6 +169,10 @@
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_dtiger
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_dtiger_behind2
+    layer: TailBehind
+    colorFrom: tail_dtiger
 
 - type: marking
   id: LizardTailAquatic
@@ -161,6 +181,10 @@
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_aquatic
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_aquatic_behind2
+    layer: TailBehind
+    colorFrom: tail_aquatic
 
 - type: marking
   id: LizardSnoutRound
@@ -325,6 +349,10 @@
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: body_backspikes
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: body_backspikes_behind
+    layer: TailBehindBackpack
+    colorFrom: body_backspikes
 
 - type: marking
   id: LizardChestFin

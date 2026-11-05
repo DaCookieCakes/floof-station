@@ -4,6 +4,13 @@
   id: MobBat
   description: Some cultures find them terrifying, others crunchy on the teeth.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
+  # Starlight-end
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
     baseSprintSpeed : 6
@@ -54,8 +61,6 @@
       reagents:
       - ReagentId: Blood
         Quantity: 50
-  - type: ReplacementAccent
-    accent: mouse
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Effects/bite.ogg
@@ -138,6 +143,8 @@
       path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
   - type: ReplacementAccent
     accent: crab
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -201,6 +208,8 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   name: gorilla
@@ -283,6 +292,8 @@
       250: Dead
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   name: kangaroo
@@ -321,6 +332,8 @@
     templateId: kangaroo
   - type: ReplacementAccent
     accent: kangaroo
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: ToolRefinable
     refineResult:
     - id: FoodMeat
@@ -386,6 +399,8 @@
   id: MobLizard
   description: A harmless dragon.
   components:
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 3
@@ -638,6 +653,8 @@
       reagents:
       - ReagentId: Blood
         Quantity: 50
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   parent: MobParrotBase
@@ -703,6 +720,8 @@
     heatDamage:
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
@@ -881,6 +900,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   name: possum
@@ -962,6 +983,13 @@
   id: MobFox
   description: They're a fox.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Fox
+    understands:
+    - Fox
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Animals/fox.rsi
@@ -1037,6 +1065,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   abstract: true
@@ -1102,6 +1132,8 @@
   - type: MobPrice
     price: 200
   - type: MessyDrinker
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   # TODO: Fix the sprite offset
   #- type: CreamPied
   #  sprite:
@@ -1112,6 +1144,15 @@
   parent: [MobCorgiBase, BaseSlicingRefinableButchering]
   id: MobCorgi
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+  # Starlight-end
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1124,8 +1165,6 @@
     refineResult:
     - id: FoodMeat
       amount: 2
-  - type: ReplacementAccent
-    accent: dog
   - type: Tag
     tags:
     - VimPilot
@@ -1226,6 +1265,13 @@
   id: MobCat
   description: Feline pet, very funny.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Cat
+    understands:
+    - Cat
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/cat.rsi
@@ -1262,8 +1308,8 @@
     refineResult:
     - id: FoodMeat
       amount: 3
-  - type: ReplacementAccent
-    accent: cat
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-cat
@@ -1515,6 +1561,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   name: ferret
@@ -1569,6 +1617,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   name: diona nymph
@@ -1655,8 +1705,13 @@
   id: MobDionaNymphAccent # No talky. For non-brain & wild nymphs
   suffix: Accent
   components:
-  - type: ReplacementAccent
-    accent: nymph
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Sylvan
+    understands:
+    - Sylvan
+  # Starlight-end
 
 - type: entity
   name: reindeer buck

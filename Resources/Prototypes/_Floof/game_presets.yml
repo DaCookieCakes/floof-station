@@ -1,0 +1,50 @@
+- type: gamePreset
+  id: DangerLevelRed
+  alias:
+    - red
+  name: danger-level-red-title
+  description: danger-level-red-description
+  showInVote: true
+  minPlayers: 1
+  rules:
+    - DummyNonAntagChance
+    - FloofTraitor
+    - FloofYellowSubGamemodes
+    - FloofRedMajorThreat
+    - FloofRedStationEventScheduler
+    - MeteorSwarmScheduler
+    - FloofRedSpaceTrafficScheduler
+    - BasicRoundstartVariation
+
+- type: gamePreset
+  id: DangerLevelYellow
+  alias:
+    - yellow
+  name: danger-level-yellow-title
+  description: danger-level-yellow-description
+  showInVote: true
+  minPlayers: 1
+  rules:
+    - DummyNonAntagChance
+    - FloofTraitor
+    - FloofYellowSubGamemodes
+    - FloofYellowStationEventScheduler
+    - FloofYellowMeteorSwarmScheduler
+    - FloofYellowSpaceTrafficScheduler
+    - BasicRoundstartVariation
+
+- type: gamePreset
+  id: DangerLevelGreen
+  alias:
+    - green
+  name: danger-level-green-title
+  description: danger-level-green-description
+  showInVote: true
+  minPlayers: 1
+  rules:
+    - DummyNonAntagChance
+    - FloofThief
+    - FloofGreenStationEventScheduler
+    - MeteorSwarmMildScheduler
+    - FloofGreenSpaceTrafficScheduler
+    - BasicRoundstartVariation

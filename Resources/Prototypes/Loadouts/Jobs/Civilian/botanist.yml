@@ -1,53 +1,63 @@
 # Head
 - type: loadout
   id: BotanistHead
+  groupBy: BotanistGear # FLOOF
   equipment:
     head: ClothingHeadHatTrucker
 
 - type: loadout
   id: BotanistBandana
+  groupBy: BotanistGear # FLOOF
   equipment:
     head: ClothingHeadBandBotany
 
 # Jumpsuit
 - type: loadout
   id: BotanistJumpsuit
+  groupBy: BotanistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitHydroponics
 
 - type: loadout
   id: BotanistJumpskirt
+  groupBy: BotanistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtHydroponics
 
 - type: loadout
   id: BotanistOveralls
+  groupBy: BotanistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformOveralls
 
 # Back
 - type: loadout
   id: BotanistBackpack
+  groupBy: BotanistGear # FLOOF
   equipment:
     back: ClothingBackpackHydroponics
 
 - type: loadout
   id: BotanistSatchel
+  groupBy: BotanistGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelHydroponics
 
 - type: loadout
   id: BotanistDuffel
+  groupBy: BotanistGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelHydroponics
 
 # Outer clothing
 - type: loadout
   id: BotanistApron
+  groupBy: BotanistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterApronBotanist
 
 - type: loadout
   id: BotanistWintercoat
+  groupBy: BotanistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterHydro

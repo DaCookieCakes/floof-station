@@ -9,7 +9,7 @@ This isn’t an exhaustive list of things that you can’t do. Rather, take it i
 This code of conduct applies specifically to the Github repositories and its spaces managed by the Space Station 14 project or Space Wizards Federation. Some spaces, such as the Space Station 14 Discord or the official Wizard's Den game servers, have their own rules but are in spirit equal to what may be found in here.
 
 If you believe someone is violating the code of conduct, we ask that you report it by contacting a Maintainer, Project Manager or Wizard staff member through [Discord](https://discord.ss14.io/), [the forums](https://forum.spacestation14.com/), or emailing [support@spacestation14.com](mailto:support@spacestation14.com).
-
+asd
 - **Be friendly and patient.**
 - **Be welcoming.** We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, colour, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
 - **Be considerate.** Your work will be used by other people, and you in turn will depend on the work of others. Any decision you take will affect users and contributors, and you should take those consequences into account when making decisions. Remember that we're a world-wide community, so you might not be communicating in someone else's primary language. We have contributors of all skill levels, some even making their first foray into a new field with this project, so keep that in mind when discussing someone's work.

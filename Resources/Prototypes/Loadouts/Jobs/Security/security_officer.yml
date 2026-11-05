@@ -16,52 +16,62 @@
 # Head
 - type: loadout
   id: SecurityHelmet
+  groupBy: OfficerGear # FLOOF
   equipment:
     head: ClothingHeadHelmetBasic
 
 - type: loadout
   id: SecurityHat
+  groupBy: OfficerGear # FLOOF
   equipment:
     head: ClothingHeadHatSecsoft
 
 - type: loadout
   id: SecurityBeret
+  groupBy: OfficerGear # FLOOF
   equipment:
     head: ClothingHeadHatBeretSecurity
 
 - type: loadout
   id: TrooperHat
+  groupBy: OfficerGear # FLOOF
   equipment:
     head: ClothingHeadHatSecurityTrooper
 
 # Jumpsuit
 - type: loadout
   id: SecurityJumpsuit
+  groupBy: OfficerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitSec
 
 - type: loadout
   id: SecurityJumpskirt
+  groupBy: OfficerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtSec
 
 - type: loadout
   id: SecurityJumpsuitGrey
+  groupBy: OfficerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitSecGrey
 
 - type: loadout
   id: SecurityJumpskirtGrey
+  groupBy: OfficerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtSecGrey
 
 - type: loadout
   id: TrooperUniform
+  groupBy: OfficerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformSecurityTrooper
 
 - type: loadout
   id: SeniorOfficerJumpsuit
+  groupBy: OfficerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorOfficer
@@ -70,6 +80,7 @@
 
 - type: loadout
   id: SeniorOfficerJumpskirt
+  groupBy: OfficerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorOfficer
@@ -79,70 +90,83 @@
 # Back
 - type: loadout
   id: SecurityBackpack
+  groupBy: OfficerGear # FLOOF
   equipment:
     back: ClothingBackpackSecurity
 
 - type: loadout
   id: SecuritySatchel
+  groupBy: OfficerGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelSecurity
 
 - type: loadout
   id: SecurityDuffel
+  groupBy: OfficerGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelSecurity
 
 # Belt
 - type: loadout
   id: SecurityBelt
+  groupBy: OfficerGear # FLOOF
   equipment:
     belt: ClothingBeltSecurityFilled
 
 - type: loadout
   id: SecurityWebbing
+  groupBy: OfficerGear # FLOOF
   equipment:
     belt: ClothingBeltSecurityWebbingFilled
 
 # Outerclothing
 - type: loadout
   id: ArmorVest
+  groupBy: OfficerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterArmorBasic
 
 - type: loadout
   id: ArmorVestSlim
+  groupBy: OfficerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterArmorBasicSlim
 
 - type: loadout
   id: SecurityOfficerWintercoat
+  groupBy: OfficerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterSec
 
 # Shoes
 - type: loadout
   id: CombatBoots
+  groupBy: OfficerGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsCombatFilled
 
 - type: loadout
   id: JackBoots
+  groupBy: OfficerGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsJackFilled
 
 - type: loadout
   id: SecurityWinterBoots
+  groupBy: OfficerGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWinterSecFilled
 
 # PDA
 - type: loadout
   id: SecurityPDA
+  groupBy: OfficerGear # FLOOF
   equipment:
     id: SecurityPDA
 
 - type: loadout
   id: SeniorOfficerPDA
+  groupBy: OfficerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorOfficer

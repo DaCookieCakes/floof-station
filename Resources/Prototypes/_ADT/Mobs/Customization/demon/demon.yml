@@ -1,0 +1,168 @@
+- type: marking
+  id: DemonChestCowSpots
+  bodyPart: LLeg
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: cow_spots
+
+- type: marking
+  id: DemonChestGuard
+  bodyPart: LLeg
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: guards_stripes
+
+- type: marking
+  id: DemonChestLinesEmperos
+  bodyPart: LLeg
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: lines_emperos
+
+- type: marking
+  id: DemonChestQueenLines
+  bodyPart: LLeg
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: queen_lines
+
+- type: marking
+  id: DemonChestTreeLines
+  bodyPart: LLeg
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: tree_lines
+
+- type: marking
+  id: DemonChestTrinitySpots
+  bodyPart: Chest
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: trinity_spots
+
+- type: marking
+  id: DemonCowEars
+  bodyPart: HeadSide
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: cow_ears
+
+- type: marking
+  id: DemonEars
+  bodyPart: HeadSide
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: demon_ears
+
+- type: marking
+  id: DemonElfEars
+  bodyPart: HeadSide
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: ears_elf
+
+- type: marking
+  id: DemonCowHorns
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: cow_horns
+
+- type: marking
+  id: DemonHornsDeer
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: deer_antlers_horns
+
+- type: marking
+  id: DemonHornsSmall
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: small_horns
+
+- type: marking
+  id: DemonHornsBuffalo
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_buffalo
+
+- type: marking
+  id: DemonHornsCarpicorn
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_capricorn
+
+- type: marking
+  id: DemonHornsDevil
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil
+
+- type: marking
+  id: DemonHornsDevil2
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil2
+
+- type: marking
+  id: DemonHornsDevil3
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil3
+
+- type: marking
+  id: DemonHornsDevil4
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil4
+
+- type: marking
+  id: DemonHornsRam
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_ram
+
+- type: marking
+  id: DemonHornsUnicorn
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_unicorn
+
+- type: marking
+  id: DemomTailUp
+  bodyPart: Tail
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: up
+

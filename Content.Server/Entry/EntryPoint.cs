@@ -133,6 +133,7 @@ namespace Content.Server.Entry
             _watchlistWebhookManager.Initialize();
             _job.Initialize();
             _rateLimit.Initialize();
+
         }
 
         public override void PostInit()

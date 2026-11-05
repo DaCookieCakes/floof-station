@@ -7,6 +7,16 @@
   name: vending machine
   description: Just add capitalism!
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Machine
+    understands:
+    - GalacticCommon
+    - Machine
+  # Starlight-end
   - type: ActionGrant
     actions:
     - ActionVendingThrow

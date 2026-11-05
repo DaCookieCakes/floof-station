@@ -32,27 +32,69 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
+        ConfirmTypeButton.OnPressed += ConfirmButtonPressed;
+        HelpGuidebookIds = GuidebookEntries;
+    }
+
+    // Floofstation - only list types from the borg's category
+    /// <summary>
+    /// Fills the selection list with every borg type in <paramref name="category"/>.
+    /// </summary>
+    public void Populate(string category)
+    {
+        SelectionsContainer.RemoveAllChildren();
+
         var group = new ButtonGroup();
-        foreach (var borgType in _prototypeManager.EnumeratePrototypes<BorgTypePrototype>().OrderBy(PrototypeName))
+        var types = _prototypeManager.EnumeratePrototypes<BorgTypePrototype>()
+            .Where(p => p.TypeCategory == category && p.VariantOf == null)
+            .OrderBy(PrototypeName);
+
+        foreach (var borgType in types)
         {
             var button = new Button
             {
                 Text = PrototypeName(borgType),
                 Group = group,
             };
-            button.OnPressed += _ =>
-            {
-                _selectedBorgType = borgType;
-                UpdateInformation(borgType);
-            };
+            button.OnPressed += _ => SelectGroup(borgType);
             SelectionsContainer.AddChild(button);
         }
-
-        ConfirmTypeButton.OnPressed += ConfirmButtonPressed;
-        HelpGuidebookIds = GuidebookEntries;
     }
+    // Floofstation end
 
-    private void UpdateInformation(BorgTypePrototype prototype)
+    /// <summary>
+    /// Shows a borg type along with its recolor variants, if it has any.
+    /// </summary>
+    private void SelectGroup(BorgTypePrototype root)
+    {
+        var variants = _prototypeManager.EnumeratePrototypes<BorgTypePrototype>()
+            .Where(p => p.VariantOf == root.ID && p.TypeCategory == root.TypeCategory)
+            .OrderBy(PrototypeName)
+            .Prepend(root)
+            .ToList();
+
+        VariantsContainer.RemoveAllChildren();
+        VariantsBox.Visible = variants.Count > 1;
+
+        var group = new ButtonGroup();
+        foreach (var variant in variants)
+        {
+            var button = new Button
+            {
+                Text = PrototypeName(variant),
+                Group = group,
+                Pressed = variant == root,
+                HorizontalExpand = true,
+            };
+            button.OnPressed += _ => UpdateInformation(root, variant);
+            VariantsContainer.AddChild(button);
+        }
+
+        UpdateInformation(root, root);
+    }
+    // Floofstation end
+
+    private void UpdateInformation(BorgTypePrototype root, BorgTypePrototype prototype) // Floofstation - variants
     {
         _selectedBorgType = prototype;
 
@@ -61,7 +103,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         ConfirmTypeButton.Disabled = false;
 
         NameLabel.Text = PrototypeName(prototype);
-        DescriptionLabel.Text = Loc.GetString($"borg-type-{prototype.ID}-desc");
+        DescriptionLabel.Text = Loc.GetString($"borg-type-{root.ID}-desc"); // Floofstation - variants share a description
         ChassisView.SetPrototype(prototype.DummyPrototype);
     }
 

@@ -1,5 +1,6 @@
 - type: job
   id: Botanist
+  pay: 400 # Floof - bank
   name: job-name-botanist
   description: job-description-botanist
   playTimeTracker: JobBotanist
@@ -22,7 +23,7 @@
 - type: startingGear
   id: BotanistGear
   equipment:
-    shoes: ClothingShoesColorBrown
+  #  shoes: ClothingShoesColorBrown # FLOOF
     id: BotanistPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled

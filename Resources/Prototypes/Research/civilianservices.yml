@@ -239,7 +239,7 @@
     state: icon
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 15000 # Goobstation 10000 -> 15000
   recipeUnlocks:
   - ClothingShoesBootsSpeed
 
@@ -251,7 +251,7 @@
     state: beakerbluespace
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 20000 # Goobstation 10000 -> 20000
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace

@@ -1,0 +1,33 @@
+- type: SingerInstrument
+  id: HarpySinger
+  instrumentList:   
+    "singer-type-voice": {52: 0}
+    "singer-type-trumpet": {56: 0}
+    "singer-type-electric": {27: 0}
+    "singer-type-bass": {33: 0}
+    "singer-type-rock": {29: 0}
+    "singer-type-acoustic": {24: 0}
+    "singer-type-flute": {73: 0}
+    "singer-type-sax": {66: 0}
+    "singer-type-harp": {46: 0}
+  defaultInstrument: "singer-type-voice"
+  midiUi: Key
+  midiActionId: ActionHarpyPlayMidi
+
+- type: SingerInstrument
+  id: HarpySingerAll
+  instrumentList:
+    "singer-type-lyresong": {52: 0}
+  defaultInstrument: "singer-type-lyresong"
+  midiUi: Key
+  midiActionId: ActionHarpyPlayMidi
+  allowPercussion: true
+  allowProgramChange: true
+
+- type: SingerInstrument
+  id: NormalSinger
+  instrumentList:
+    "singer-type-voice": {52: 0}
+  defaultInstrument: "singer-type-voice"
+  midiUi: Key
+  midiActionId: ActionHarpyPlayMidi # TODO: custom action maybe?

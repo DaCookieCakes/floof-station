@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ ClosetBase, StructureHealthContainerWeak ]
+  parent: [ ClosetBase, StructureHealthContainerWeak, IdLockableBaseDisabled ] # Floof - added a default-disabled ID lock to all closets
   id: LockerBase
   components:
   - type: AccessReader

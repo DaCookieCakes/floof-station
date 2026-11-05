@@ -728,7 +728,17 @@
       effects:
         - !type:Satiate
           satiationType: Thirst
+          conditions:
+            - !type:MetabolizerTypeCondition # DeltaV: Nerf Saline for Feroxi
+              type: [ MetabolizerFeroxi ]
+              inverted: true
           factor: 6
+        - !type:Satiate # DeltaV: Nerf Saline for Feroxi
+          satiationType: Thirst
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [ MetabolizerFeroxi ]
+          factor: 2
         - !type:ModifyBloodLevel
           amount: 6
 

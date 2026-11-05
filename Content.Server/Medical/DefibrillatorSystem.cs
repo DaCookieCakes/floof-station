@@ -3,6 +3,7 @@ using Content.Server.Ghost;
 using Content.Shared.Medical;
 using Content.Shared.Mind;
 using Robust.Shared.Player;
+using Content.Shared.Chat; // Starlight
 
 namespace Content.Server.Medical;
 

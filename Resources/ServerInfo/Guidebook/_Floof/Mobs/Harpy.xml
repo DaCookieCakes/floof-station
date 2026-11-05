@@ -1,0 +1,29 @@
+<Document>
+  # Harpies
+
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceHarpy" Caption=""/>
+  </Box>
+
+  ## General Information
+
+  Harpies are light, winged humanoids. They [color=lightgreen]run 10% faster[/color] than humans and have [color=lightgreen]better acceleration in zero-gravity environments[/color].
+  With both wings free (empty hands, not restrained) they can [color=lightgreen]fly for a short time[/color], moving faster and over obstacles at a heavy stamina cost.
+
+  Their unarmed attacks use talons that deal [color=lightgreen]5 Piercing damage[/color].
+
+  They can [color=lightgreen]mimic almost any sound[/color] through emotes, and have an innate instrument they can sing with.
+  Singing stops when they are muted, crit, shoved down or take more than 5 damage at once.
+
+  ## Drawbacks
+
+  Their avian lungs [color=palevioletred]use up air tanks twice as fast[/color], and they [color=palevioletred]start choking on carbon dioxide and ammonia[/color].
+  Breathing pure oxygen for a few seconds or leaving the fumes stops the choking.
+
+  Their hollow bones make them take [color=palevioletred]15% more Brute damage[/color].
+
+  Being so light, they are [color=palevioletred]easy to shove down, pick up and throw[/color], get more recoil from guns and struggle to drag heavy objects.
+
+  Their eyes see ultraviolet light, but they [color=palevioletred]cannot see the color red[/color].
+
+</Document>

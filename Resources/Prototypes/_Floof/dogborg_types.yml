@@ -1,0 +1,359 @@
+# Dogborg types. Only selectable by chassis with `allowedCategory: dogborg`.
+# Functional setup is copied from the normal borgs in Resources/Prototypes/borg_types.yml via the abstract bases.
+# Types with `variantOf` are recolors, shown in the variant row of their main type instead of the main list.
+#
+# Sprite states are named after spriteBodyState, e.g. for k9:
+#   k9, k9_walk, k9_e, k9_e_r, k9_walk_e, k9_l, k9_walk_l, k9-sit, k9-rest, k9-bellyup
+
+- type: borgType
+  id: dogborgBase
+  abstract: true
+  dummyPrototype: DogBorgChassisSelectable
+  typeCategory: dogborg
+  spriteRsi: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+  inventoryTemplateId: borgShort
+  petSuccessString: petting-success-generic-cyborg
+  petFailureString: petting-failure-generic-cyborg
+
+# Generic
+- type: borgType
+  id: dogborgBaseGeneric
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 5
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleScience
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleTool
+  - BorgModuleInflatable
+  - BorgModuleArtifact
+  - BorgModuleAnomaly
+  radioChannels:
+  - Science
+
+# Engineering
+- type: borgType
+  id: dogborgBaseEngineering
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleEngineering
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleTool
+  - BorgModuleConstruction
+  - BorgModuleRCD
+  - BorgModuleCable
+  radioChannels:
+  - Engineering
+  - Science
+  petSuccessString: petting-success-engineer-cyborg
+  petFailureString: petting-failure-engineer-cyborg
+
+# Mining
+- type: borgType
+  id: dogborgBaseMining
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleCargo
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleTool
+  - BorgModuleMining
+  - BorgModuleTraversal
+  - BorgModuleAppraisal
+  radioChannels:
+  - Supply
+  - Science
+  petSuccessString: petting-success-salvage-cyborg
+  petFailureString: petting-failure-salvage-cyborg
+
+# Janitor
+- type: borgType
+  id: dogborgBaseJanitor
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleJanitor
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleCleaning
+  - BorgModuleCustodial
+  radioChannels:
+  - Science
+  - Service
+  petSuccessString: petting-success-janitor-cyborg
+  petFailureString: petting-failure-janitor-cyborg
+
+# Medical
+- type: borgType
+  id: dogborgBaseMedical
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleMedical
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleChemical
+  - BorgModuleTopicals
+  - BorgModuleRescue
+  radioChannels:
+  - Science
+  - Medical
+  addComponents:
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  petSuccessString: petting-success-medical-cyborg
+  petFailureString: petting-failure-medical-cyborg
+
+# Service
+- type: borgType
+  id: dogborgBaseService
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleService
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleService
+  - BorgModuleBotany
+  - BorgModuleCooking
+  radioChannels:
+  - Science
+  - Service
+  petSuccessString: petting-success-service-cyborg
+  petFailureString: petting-failure-service-cyborg
+
+# Security (no normal-borg equivalent). Non-lethal only, with its own lawset.
+- type: borgType
+  id: dogborgBaseSecurity
+  parent: dogborgBase
+  abstract: true
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleSecurity
+  defaultModules:
+  - BorgModulePrying
+  - BorgModuleSecurity
+  radioChannels:
+  - Security
+  - Science
+  addComponents:
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: BorgTypeLaws
+    laws: K9Protocol
+
+# Generic dogborgs
+- type: borgType
+  id: k50
+  parent: dogborgBaseGeneric
+  dummyPrototype: DogBorgChassisK50
+  spriteBodyState: k50
+  spriteBodyMovementState: k50_walk
+  spriteHasMindState: k50_e
+  spriteNoMindState: k50_e_r
+  spriteToggleLightState: k50_l
+
+- type: borgType
+  id: valesci
+  parent: dogborgBaseGeneric
+  variantOf: k50
+  dummyPrototype: DogBorgChassisValeSci
+  spriteBodyState: valesci
+  spriteBodyMovementState: valesci_walk
+  spriteHasMindState: valesci_e
+  spriteNoMindState: valesci_e_r
+  spriteToggleLightState: valesci_l
+
+# Medical dogborgs
+- type: borgType
+  id: medihound
+  parent: dogborgBaseMedical
+  dummyPrototype: DogBorgChassisMedihound
+  spriteBodyState: medihound
+  spriteBodyMovementState: medihound_walk
+  spriteHasMindState: medihound_e
+  spriteNoMindState: medihound_e_r
+  spriteToggleLightState: medihound_l
+
+- type: borgType
+  id: medihounddark
+  parent: dogborgBaseMedical
+  variantOf: medihound
+  dummyPrototype: DogBorgChassisMedihoundDark
+  spriteBodyState: medihounddark
+  spriteBodyMovementState: medihounddark_walk
+  spriteHasMindState: medihounddark_e
+  spriteNoMindState: medihounddark_e_r
+  spriteToggleLightState: medihounddark_l
+
+- type: borgType
+  id: valemed
+  parent: dogborgBaseMedical
+  variantOf: medihound
+  dummyPrototype: DogBorgChassisValeMed
+  spriteBodyState: valemed
+  spriteBodyMovementState: valemed_walk
+  spriteHasMindState: valemed_e
+  spriteNoMindState: valemed_e_r
+  spriteToggleLightState: valemed_l
+
+- type: borgType
+  id: alina-med
+  parent: dogborgBaseMedical
+  variantOf: medihound
+  dummyPrototype: DogBorgChassisAlinaMed
+  spriteBodyState: alina-med
+  spriteBodyMovementState: alina-med_walk
+  spriteHasMindState: alina-med_e
+  spriteNoMindState: alina-med_e_r
+  spriteToggleLightState: alina-med_l
+
+# Janitor dogborgs
+- type: borgType
+  id: scrubpup
+  parent: dogborgBaseJanitor
+  dummyPrototype: DogBorgChassisScrubpup
+  spriteBodyState: scrubpup
+  spriteBodyMovementState: scrubpup_walk
+  spriteHasMindState: scrubpup_e
+  spriteNoMindState: scrubpup_e_r
+  spriteToggleLightState: scrubpup_l
+
+# Engineering dogborgs
+- type: borgType
+  id: pupdozer
+  parent: dogborgBaseEngineering
+  dummyPrototype: DogBorgChassisPupdozer
+  spriteBodyState: pupdozer
+  spriteBodyMovementState: pupdozer_walk
+  spriteHasMindState: pupdozer_e
+  spriteNoMindState: pupdozer_e_r
+  spriteToggleLightState: pupdozer_l
+
+- type: borgType
+  id: valeeng
+  parent: dogborgBaseEngineering
+  variantOf: pupdozer
+  dummyPrototype: DogBorgChassisValeEng
+  spriteBodyState: valeeng
+  spriteBodyMovementState: valeeng_walk
+  spriteHasMindState: valeeng_e
+  spriteNoMindState: valeeng_e_r
+  spriteToggleLightState: valeeng_l
+
+- type: borgType
+  id: alina-eng
+  parent: dogborgBaseEngineering
+  variantOf: pupdozer
+  dummyPrototype: DogBorgChassisAlinaEng
+  spriteBodyState: alina-eng
+  spriteBodyMovementState: alina-eng_walk
+  spriteHasMindState: alina-eng_e
+  spriteNoMindState: alina-eng_e_r
+  spriteToggleLightState: alina-eng_l
+
+# Mining dogborgs
+- type: borgType
+  id: valemine
+  parent: dogborgBaseMining
+  dummyPrototype: DogBorgChassisValeMine
+  spriteBodyState: valemine
+  spriteBodyMovementState: valemine_walk
+  spriteHasMindState: valemine_e
+  spriteNoMindState: valemine_e_r
+  spriteToggleLightState: valemine_l
+
+# Service dogborgs
+- type: borgType
+  id: valeserv
+  parent: dogborgBaseService
+  dummyPrototype: DogBorgChassisValeServ
+  spriteBodyState: valeserv
+  spriteBodyMovementState: valeserv_walk
+  spriteHasMindState: valeserv_e
+  spriteNoMindState: valeserv_e_r
+  spriteToggleLightState: valeserv_l
+
+- type: borgType
+  id: valeservdark
+  parent: dogborgBaseService
+  variantOf: valeserv
+  dummyPrototype: DogBorgChassisValeServDark
+  spriteBodyState: valeservdark
+  spriteBodyMovementState: valeservdark_walk
+  spriteHasMindState: valeservdark_e
+  spriteNoMindState: valeservdark_e_r
+  spriteToggleLightState: valeservdark_l
+
+# Security dogborgs
+- type: borgType
+  id: k9
+  parent: dogborgBaseSecurity
+  dummyPrototype: DogBorgChassisK9
+  spriteBodyState: k9
+  spriteBodyMovementState: k9_walk
+  spriteHasMindState: k9_e
+  spriteNoMindState: k9_e_r
+  spriteToggleLightState: k9_l
+
+- type: borgType
+  id: k9dark
+  parent: dogborgBaseSecurity
+  variantOf: k9
+  dummyPrototype: DogBorgChassisK9Dark
+  spriteBodyState: k9dark
+  spriteBodyMovementState: k9dark_walk
+  spriteHasMindState: k9dark_e
+  spriteNoMindState: k9dark_e_r
+  spriteToggleLightState: k9dark_l
+
+- type: borgType
+  id: valesec
+  parent: dogborgBaseSecurity
+  variantOf: k9
+  dummyPrototype: DogBorgChassisValeSec
+  spriteBodyState: valesec
+  spriteBodyMovementState: valesec_walk
+  spriteHasMindState: valesec_e
+  spriteNoMindState: valesec_e_r
+  spriteToggleLightState: valesec_l
+
+- type: borgType
+  id: alina-sec
+  parent: dogborgBaseSecurity
+  variantOf: k9
+  dummyPrototype: DogBorgChassisAlinaSec
+  spriteBodyState: alina-sec
+  spriteBodyMovementState: alina-sec_walk
+  spriteHasMindState: alina-sec_e
+  spriteNoMindState: alina-sec_e_r
+  spriteToggleLightState: alina-sec_l

@@ -1,3 +1,5 @@
+using Content.Client._Floof.Bank; // Floof - Bank
+using Content.Client._Floof.Persistence; // Floof - Persistence
 using Content.Client.Info;
 using Content.Client.Info.PlaytimeStats;
 using Content.Client.Resources;
@@ -26,6 +28,7 @@ namespace Content.Client.Lobby.UI
         [Dependency] private IResourceCache _resourceCache = default!;
         [Dependency] private IConfigurationManager _cfg = default!;
         [Dependency] private ISharedPlayerManager _playerManager = default!;
+        [Dependency] private IEntityManager _entManager = default!; // Floof - Persistence
 
         private readonly Button _createNewCharacterButton;
 
@@ -95,11 +98,16 @@ namespace Content.Client.Lobby.UI
             foreach (var (slot, character) in _preferencesManager.Preferences!.Characters)
             {
                 numberOfFullSlots++;
+                // Floof Section - Persistence, Bank
+                var live = _entManager.System<LiveCharacterStatusSystem>().TryGetLive(slot, out var info);
                 var characterPickerButton = new CharacterPickerButton(_protomanager,
                     _playerManager,
                     characterButtonsGroup,
-                    character,
-                    slot == selectedSlot);
+                    live ? info!.Record.ApplyTo(character) : character,
+                    slot == selectedSlot,
+                    live,
+                    _entManager.System<BankBalanceStatusSystem>().GetBalance(slot));
+                // Floof Section End
 
                 if (slot >= maxCharactersSlots)
                 {

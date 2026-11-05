@@ -1,0 +1,167 @@
+# Base
+
+- type: latheRecipe
+  abstract: true
+  id: BaseHandsRecipe
+  categories:
+  - Hands
+  completetime: 2
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseHandsRecipe
+  id: BaseGlovesRecipe
+  materials:
+    Cloth: 100
+
+# Color gloves
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorWhite
+  result: ClothingHandsGlovesColorWhite
+  categories:
+  - Hands
+  - Colorable
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorPurple
+  result: ClothingHandsGlovesColorPurple
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorRed
+  result: ClothingHandsGlovesColorRed
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorBlue
+  result: ClothingHandsGlovesColorBlue
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorTeal
+  result: ClothingHandsGlovesColorTeal
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorBrown
+  result: ClothingHandsGlovesColorBrown
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorGray
+  result: ClothingHandsGlovesColorGray
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorGreen
+  result: ClothingHandsGlovesColorGreen
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorLightBrown
+  result: ClothingHandsGlovesColorLightBrown
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorOrange
+  result: ClothingHandsGlovesColorOrange
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesColorBlack
+  result: ClothingHandsGlovesColorBlack
+
+# Job-relevant gloves
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesLeather
+  result: ClothingHandsGlovesLeather
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesJanitor
+  result: ClothingHandsGlovesJanitor
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesRobohands
+  result: ClothingHandsGlovesRobohands
+
+# Non-job specific cosmetic gloves
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesPowerglove
+  result: ClothingHandsGlovesPowerglove
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesFingerless
+  result: ClothingHandsGlovesFingerless
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesFingerlessInsulated
+  result: ClothingHandsGlovesFingerlessInsulated
+
+- type: latheRecipe
+  parent: BaseGlovesRecipe
+  id: ClothingHandsGlovesMercFingerless
+  result: ClothingHandsGlovesMercFingerless
+
+# Non-job specific cosmetic hand items
+
+- type: latheRecipe
+  parent: BaseHandsRecipe
+  id: GoldRing
+  result: GoldRing
+  materials:
+    Gold: 25
+
+- type: latheRecipe
+  parent: BaseHandsRecipe
+  id: SilverRing
+  result: SilverRing
+  materials:
+    Silver: 25
+
+- type: latheRecipe
+  parent: BaseHandsRecipe
+  id: GoldRingDiamond
+  result: GoldRingDiamondPrinted
+  materials:
+    Gold: 25
+    Diamond: 50
+
+- type: latheRecipe
+  parent: BaseHandsRecipe
+  id: SilverRingDiamond
+  result: SilverRingDiamondPrinted
+  materials:
+    Silver: 25
+    Diamond: 50
+
+- type: latheRecipe
+  parent: BaseHandsRecipe
+  id: GoldRingGem
+  result: GoldRingGemPrinted
+  materials:
+    Gold: 25
+    Diamond: 50
+
+- type: latheRecipe
+  parent: BaseHandsRecipe
+  id: SilverRingGem
+  result: SilverRingGemPrinted
+  materials:
+    Silver: 25
+    Diamond: 50
+
+# TODO: maybe that feature from frontier that allows lathes to produce items at a lowered sale value?
+# then we replace this with the original prototypes

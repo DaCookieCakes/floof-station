@@ -45,6 +45,8 @@
       weight: 4
     - id: VendingMachinePride
     - id: VendingMachineTheater
+    - id: PetStoreVendingMachine # Floofstation
+      weight: 10
 
 - type: entity
   parent: MarkerBase

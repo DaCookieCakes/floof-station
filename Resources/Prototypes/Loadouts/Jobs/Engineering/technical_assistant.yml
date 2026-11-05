@@ -1,10 +1,12 @@
 # Jumpsuit
 - type: loadout
   id: YellowJumpsuit
+  groupBy: TechnicalAssistantGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorYellow
 
 - type: loadout
   id: YellowJumpskirt
+  groupBy: TechnicalAssistantGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorYellow

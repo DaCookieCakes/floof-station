@@ -1,0 +1,24 @@
+- type: loadout
+  id: BeltPaperwork
+  groupBy: HoPGear
+  equipment:
+    shoes: ClothingBeltPaperwork
+
+# Coats
+- type: loadout
+  id: HoPArmoredCoat
+  groupBy: HoPGear
+  equipment:
+    outerClothing: ClothingOuterCoatHoPArmored
+
+- type: loadout
+  id: HoPFormalJacket
+  groupBy: HoPGear
+  equipment:
+    outerClothing: ClothingOuterCoatHoPFormal
+
+- type: loadout
+  id: HoPLongCoat
+  groupBy: HoPGear
+  equipment:
+    outerClothing: ClothingLongcoatHoP

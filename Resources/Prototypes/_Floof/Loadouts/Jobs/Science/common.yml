@@ -1,0 +1,26 @@
+# GLASSES #
+- type: loadout
+  id: PrescriptionDiagnosticHud
+  groupBy: "ScienceGlasses"
+  equipment:
+    eyes: ClothingEyesPrescriptionDiagHud
+
+# NECK #
+- type: loadout
+  id: ClothingNeckCollarSci
+  equipment:
+    neck: ClothingNeckCollarSci
+
+# GLOVES #
+- type: loadout
+  id: ScienceArmWarmers
+  groupBy: ScientistGear
+  equipment:
+    gloves: ClothingHandsEpiWarmers
+
+# SOCKS #
+- type: loadout
+  id: ScienceThighHighs
+  groupBy: ScientistGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksEpi

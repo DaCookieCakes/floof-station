@@ -222,6 +222,7 @@ public sealed partial class HumanoidProfileEditor
         UpdateVoiceControls();
         UpdateSpeciesGuidebookIcon();
         ReloadPreview();
+        UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders
     }
 
     private void SetAge(int newAge)
@@ -247,14 +248,18 @@ public sealed partial class HumanoidProfileEditor
                 break;
         }
 
+        Profile = Profile?.WithGenitals(Genitals.DefaultForSex(newSex)); // Floof - Genitals
+
         // this does the same as above but for voice
         if (_prototypeManager.TryIndex(Profile?.Species, out var prototype))
             SetVoice(prototype.DefaultSoundsBySex[(int)newSex]);
 
         UpdateGenderControls();
         UpdateVoiceControls();
+        UpdateGenitals(); // Floof - Genitals
         _markingsModel.SetOrganSexes(newSex);
         ReloadPreview();
+        UpdateMarkings(); // Floof - Genitals
     }
 
     private void SetVoice(ProtoId<EmoteSoundsPrototype> newVoice)

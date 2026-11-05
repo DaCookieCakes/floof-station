@@ -358,7 +358,7 @@ public sealed partial class ServerGameTicker
             HumanoidCharacterProfile profile;
             if (_prefsManager.TryGetCachedPreferences(userId, out var preferences))
             {
-                profile = preferences.SelectedCharacter;
+                profile = _liveCharacter.GetSpawnProfile(userId, preferences.SelectedCharacterIndex, preferences.SelectedCharacter); // Floof - Persistence
             }
             else
             {

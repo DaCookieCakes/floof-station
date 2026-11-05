@@ -1,0 +1,53 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBunnySuitCollar
+  name: bow-tie collar
+  description: A detached white suit collar with a black bow tie. Cute and fancy!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Costumes/bunnysuit_collar.rsi
+
+- type: entity
+  parent: ClothingNeckBunnySuitCollar
+  id: ClothingNeckBunnySuitCollarBlue
+  suffix: blue
+  description: A detached white suit collar with a blue bow tie. Cute and fancy!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Costumes/bunnysuit_collar_blue.rsi
+
+- type: entity
+  parent: ClothingNeckBunnySuitCollar
+  id: ClothingNeckBunnySuitCollarGreen
+  suffix: green
+  description: A detached white suit collar with a green bow tie. Cute and fancy!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Costumes/bunnysuit_collar_green.rsi
+
+- type: entity
+  parent: ClothingNeckBunnySuitCollar
+  id: ClothingNeckBunnySuitCollarPink
+  suffix: pink
+  description: A detached white suit collar with a pink bow tie. Cute and fancy!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Costumes/bunnysuit_collar_pink.rsi
+
+- type: entity
+  parent: ClothingNeckBunnySuitCollar
+  id: ClothingNeckBunnySuitCollarRed
+  suffix: red
+  description: A detached white suit collar with a red bow tie. Cute and fancy!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Costumes/bunnysuit_collar_red.rsi
+
+- type: entity
+  parent: ClothingNeckBunnySuitCollar
+  id: ClothingNeckBunnySuitCollarWhite
+  suffix: white
+  description: A detached white suit collar with a white bow tie. Cute and fancy!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Costumes/bunnysuit_collar_white.rsi

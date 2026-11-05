@@ -72,7 +72,11 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
         if (ent.Comp.SelectedBorgType != null)
             return;
 
-        if (!ProtoMan.HasIndex(args.Prototype))
+        if (!ProtoMan.TryIndex(args.Prototype, out var proto))
+            return;
+
+        // Floofstation - don't let a borg pick a type from another category's menu
+        if (proto.TypeCategory != ent.Comp.AllowedCategory)
             return;
 
         SelectBorgModule(ent, args.Prototype);

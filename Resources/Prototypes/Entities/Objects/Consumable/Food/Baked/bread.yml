@@ -1006,6 +1006,7 @@
     tags:
     - ReptilianFood
     - FinishedMeal
+    - FeroxiFood # Floof: Added.
   - type: FlavorProfile
     flavors:
     - nutribrick

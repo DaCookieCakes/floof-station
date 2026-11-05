@@ -12,3 +12,7 @@
     sprite: Structures/Furniture/Tables/optable.rsi
     state: operating_table
   - type: AmbientMusicMarkerMedical
+  # Floof Section - Directional Beds
+  - type: Transform
+    noRot: true
+  # Floof Section End

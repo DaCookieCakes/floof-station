@@ -1,0 +1,12 @@
+singer-type-voice = Voice
+singer-type-trumpet = Trumpet
+singer-type-electric = Electric
+singer-type-bass = Bass
+singer-type-rock = Rock
+singer-type-acoustic = Acoustic
+singer-type-flute = Flute
+singer-type-sax = Sax
+singer-type-harp = Harp
+singer-type-lyresong = Lyresong
+singer-type-church-organ = Church Organ
+singer-type-piano = Piano

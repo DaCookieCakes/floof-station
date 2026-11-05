@@ -153,6 +153,19 @@ public sealed partial record PolymorphConfiguration
     [DataField]
     public SoundSpecifier? ExitPolymorphSound;
 
+    // Starlight - Start
+    /// <summary>
+    /// The exact names of components to copy over when this polymorph is applied.
+    /// </summary>
+    [DataField(serverOnly: true)]
+    public HashSet<string> CopiedComponents = new()
+    {
+        "LanguageKnowledge",
+        "LanguageSpeaker",
+        "Grammar"
+    };
+    // Starlight - End
+
     /// <summary>
     /// Whether or not the user should see a confirmation popup when attempting
     /// to morph via an innate polymorph's action.
