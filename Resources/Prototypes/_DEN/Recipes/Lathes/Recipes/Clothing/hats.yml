@@ -1,0 +1,354 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseHatRecipe
+  id: BaseHatPartyRecipe
+  materials:
+    Paper: 100
+
+# Baseball caps
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatMimesoft # white
+  result: ClothingHeadHatMimesoft
+  categories:
+  - Hats
+  - Colorable
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBluesoft
+  result: ClothingHeadHatBluesoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCorpsoft
+  result: ClothingHeadHatCorpsoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatGreensoft
+  result: ClothingHeadHatGreensoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBlacksoft
+  result: ClothingHeadHatBlacksoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatGreysoft
+  result: ClothingHeadHatGreysoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatOrangesoft
+  result: ClothingHeadHatOrangesoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatPurplesoft
+  result: ClothingHeadHatPurplesoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatRedsoft
+  result: ClothingHeadHatRedsoft
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatYellowsoft
+  result: ClothingHeadHatYellowsoft
+
+# Non-job specific cosmetic hats
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBeaverHat
+  result: ClothingHeadHatBeaverHat
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBeret
+  result: ClothingHeadHatBeret
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBeretFrench
+  result: ClothingHeadHatBeretFrench
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCasa
+  result: ClothingHeadHatCasa
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBowlerHat
+  result: ClothingHeadHatBowlerHat
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatFedoraBrown
+  result: ClothingHeadHatFedoraBrown
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatFedoraGrey
+  result: ClothingHeadHatFedoraGrey
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatFez
+  result: ClothingHeadHatFez
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatPaper # TODO: make this a crafting recipe
+  result: ClothingHeadHatPaper
+  materials:
+    Paper: 25
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatPirate
+  result: ClothingHeadHatPirate
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatPirateTricord
+  result: ClothingHeadHatPirateTricord
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatPlaguedoctor
+  result: ClothingHeadHatPlaguedoctor
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatSombrero
+  result: ClothingHeadHatSombrero
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatTophat
+  result: ClothingHeadHatTophat
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatUshanka
+  result: ClothingHeadHatUshanka
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCanadaBeanie
+  result: ClothingHeadHatCanadaBeanie
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatWizardFake
+  result: ClothingHeadHatWizardFake
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatXmasCrown
+  result: ClothingHeadHatXmasCrown
+  materials:
+    Cardboard: 50
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatTrucker
+  result: ClothingHeadHatTrucker
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadPaperSack
+  result: ClothingHeadPaperSack
+  materials:
+    Paper: 100
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadPaperSackSmile
+  result: ClothingHeadPaperSackSmile
+  materials:
+    Paper: 100
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadFishCap
+  result: ClothingHeadFishCap
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadWehcellentCap
+  result: ClothingHeadWehcellentCap
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatHetmanHat
+  result: ClothingHeadHatHetmanHat
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatGreyFlatcap
+  result: ClothingHeadHatGreyFlatcap
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBrownFlatcap
+  result: ClothingHeadHatBrownFlatcap
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatStrawHat
+  result: ClothingHeadHatStrawHat
+  materials:
+    Wood: 50
+    Plastic: 50
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadPropellerHat
+  result: ClothingHeadPropellerHat
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatBunny
+  result: ClothingHeadHatBunny
+
+## Cowboy hats
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCowboyBrown
+  result: ClothingHeadHatCowboyBrown
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCowboyBlack
+  result: ClothingHeadHatCowboyBlack
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCowboyGrey
+  result: ClothingHeadHatCowboyGrey
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCowboyRed
+  result: ClothingHeadHatCowboyRed
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCowboyWhite
+  result: ClothingHeadHatCowboyWhite
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatCowboyBountyHunter
+  result: ClothingHeadHatCowboyBountyHunter
+
+## Party hats
+
+- type: latheRecipe
+  parent: BaseHatPartyRecipe
+  id: ClothingHeadHatPartyRed
+  result: ClothingHeadHatPartyRed
+
+- type: latheRecipe
+  parent: BaseHatPartyRecipe
+  id: ClothingHeadHatPartyYellow
+  result: ClothingHeadHatPartyYellow
+
+- type: latheRecipe
+  parent: BaseHatPartyRecipe
+  id: ClothingHeadHatPartyGreen
+  result: ClothingHeadHatPartyGreen
+
+- type: latheRecipe
+  parent: BaseHatPartyRecipe
+  id: ClothingHeadHatPartyBlue
+  result: ClothingHeadHatPartyBlue
+
+- type: latheRecipe
+  parent: BaseHatPartyRecipe
+  id: ClothingHeadHatPartyWaterCup # TODO: turn into crafting recipe
+  result: ClothingHeadHatPartyWaterCup
+
+## Animal hats
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatAnimalCat
+  result: ClothingHeadHatAnimalCat
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatAnimalCatBrown
+  result: ClothingHeadHatAnimalCatBrown
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatAnimalCatBlack
+  result: ClothingHeadHatAnimalCatBlack
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatAnimalHeadslime
+  result: ClothingHeadHatAnimalHeadslime
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatAnimalMonkey
+  result: ClothingHeadHatAnimalMonkey
+
+## Bandanas
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandBlack
+  result: ClothingHeadBandBlack
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandBlue
+  result: ClothingHeadBandBlue
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandGold
+  result: ClothingHeadBandGold
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandGreen
+  result: ClothingHeadBandGreen
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandGrey
+  result: ClothingHeadBandGrey
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandRed
+  result: ClothingHeadBandRed
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandSkull
+  result: ClothingHeadBandSkull
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandMerc
+  result: ClothingHeadBandMerc
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadBandBrown
+  result: ClothingHeadBandBrown

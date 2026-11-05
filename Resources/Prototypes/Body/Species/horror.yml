@@ -82,6 +82,7 @@
       Stomach: OrganHorrorStomach
       Liver: OrganHorrorLiver
       Kidneys: OrganHorrorKidneys
+      Bladder: OrganBladder # Floof - Bladder
 
 - type: entity
   parent:

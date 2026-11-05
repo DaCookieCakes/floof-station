@@ -266,26 +266,41 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
         ref int numDisplacements,
         DisplacementData? displacement = null)
     {
+        // Floof Section - marking layering
+        var drawLayer = markingProto.GetSpriteLayer(markingLayer);
+        var ownLayer = drawLayer == markingProto.BodyPart;
         if (!Resolve(target, ref target.Comp)
             || !markingProto.Sprites.TryGetValue(markingLayer, out var layerData)
-            || !_sprite.TryGetLayer(target, baseLayerIndex, out var baseLayer, true))
+            || !_sprite.LayerMapTryGet(target, markingProto.BodyPart, out var bodyPartIndex, true)
+            || !_sprite.TryGetLayer(target, bodyPartIndex, out var baseLayer, true)
+            || !_sprite.LayerMapTryGet(target, drawLayer, out baseLayerIndex, true))
             return;
 
+        // Keep the marking's sprite order among the sprites sharing its draw layer
+        var slot = 0;
+        for (var i = 0; i < markingLayer; i++)
+        {
+            if (markingProto.GetSpriteLayer(i) == drawLayer)
+                slot++;
+        }
+
         // - The +1 ensures that marking layers are added on top of the base organ.
-        var spriteLayerIndex = baseLayerIndex + markingLayer + 1;
+        var spriteLayerIndex = baseLayerIndex + slot + 1;
+        var displacementOffset = ownLayer ? numDisplacements : 0;
+        // Floof Section End
 
         // Add the marking layer to the target entity, if the target doesn't have it yet
         var spriteLayer = EnsureTargetLayer(
             target,
             markingProto,
             layerData,
-            newLayerIndex: spriteLayerIndex + numDisplacements,
+            newLayerIndex: spriteLayerIndex + displacementOffset, // Floof - marking layering
             visible: baseLayer.Visible);
 
-        UpdateLayerColor(target, markingConfig, markingLayer, spriteLayer);
+        UpdateLayerColor(target, markingConfig, markingProto.GetColorSource(markingLayer), spriteLayer); // Floof - marking layering
 
         // Apply displacements
-        if (displacement != null && markingProto.CanBeDisplaced)
+        if (displacement != null && markingProto.CanBeDisplaced && ownLayer) // Floof - marking layering
         {
             var layerId = layerData.GetLayerID(markingProto.ID);
             var spriteTarget = (target.Owner, target.Comp);
@@ -307,7 +322,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
         if (layerData.Shader != null)
         {
             // TODO: fix this when LayerSetShader is moved out of component
-            target.Comp.LayerSetShader(spriteLayerIndex + numDisplacements, layerData.Shader);
+            target.Comp.LayerSetShader(spriteLayerIndex + displacementOffset, layerData.Shader); // Floof - marking layering
         }
     }
 

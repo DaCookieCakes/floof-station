@@ -1,3 +1,4 @@
+using Content.Shared._Starlight.Language;
 using Content.Shared.Inventory;
 using Content.Shared.Radio;
 using Content.Shared.Speech;
@@ -61,6 +62,8 @@ public sealed class EntitySpokeEvent : EntityEventArgs
     public readonly EntityUid Source;
     public readonly string Message;
     public readonly string? ObfuscatedMessage; // not null if this was a whisper
+    public readonly bool IsWhisper; // Starlight
+    public readonly LanguagePrototype Language; // Starlight
 
     /// <summary>
     /// If the entity was trying to speak into a radio, this was the channel they were trying to access. If a radio
@@ -68,12 +71,24 @@ public sealed class EntitySpokeEvent : EntityEventArgs
     /// </summary>
     public RadioChannelPrototype? Channel;
 
-    public EntitySpokeEvent(EntityUid source, string message, RadioChannelPrototype? channel, string? obfuscatedMessage)
+    public EntitySpokeEvent(EntityUid source, string message, string? obfuscatedMessage, bool isWhisper, LanguagePrototype language)
+    {
+        Source = source;
+        Message = message;
+        ObfuscatedMessage = obfuscatedMessage;
+        IsWhisper = isWhisper;
+        Language = language;
+    }
+    //Starlight end
+
+    public EntitySpokeEvent(EntityUid source, string message, RadioChannelPrototype? channel, string? obfuscatedMessage, bool isWhisper, LanguagePrototype language) // Starlight - added isWhisper, language
     {
         Source = source;
         Message = message;
         Channel = channel;
         ObfuscatedMessage = obfuscatedMessage;
+        IsWhisper = isWhisper; // Starlight
+        Language = language; // Starlight
     }
 }
 

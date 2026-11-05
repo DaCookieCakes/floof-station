@@ -1,0 +1,72 @@
+- type: marking
+  id: LizardTailSnake
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketail.rsi
+    state: tail_snake_primary
+  - sprite: _CD/Mobs/Customization/snaketail.rsi
+    state: tail_snake_secondary
+
+- type: marking
+  id: LizardTailSnakeStripe
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketailstripe.rsi
+    state: tail_snake_primary
+  - sprite: _CD/Mobs/Customization/snaketailstripe.rsi
+    state: tail_snake_secondary
+
+- type: marking
+  id: LizardTailSnakeUnder
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketailunder.rsi
+    state: tail_snake_primary
+  - sprite: _CD/Mobs/Customization/snaketailunder.rsi
+    state: tail_snake_secondary
+
+- type: marking
+  id: LizardTailSnakeDual
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketaildual.rsi
+    state: tail_snake_primary
+  - sprite: _CD/Mobs/Customization/snaketaildual.rsi
+    state: tail_snake_secondary
+
+- type: marking
+  id: LizardTailSnakeAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketail.rsi
+    state: tail_snake_wag_primary
+  - sprite: _CD/Mobs/Customization/snaketail.rsi
+    state: tail_snake_wag_secondary
+
+- type: marking
+  id: LizardTailSnakeStripeAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketailstripe.rsi
+    state: tail_snake_wag_primary
+  - sprite: _CD/Mobs/Customization/snaketailstripe.rsi
+    state: tail_snake_wag_secondary
+
+- type: marking
+  id: LizardTailSnakeUnderAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketailunder.rsi
+    state: tail_snake_wag_primary
+  - sprite: _CD/Mobs/Customization/snaketailunder.rsi
+    state: tail_snake_wag_secondary
+
+- type: marking
+  id: LizardTailSnakeDualAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _CD/Mobs/Customization/snaketaildual.rsi
+    state: tail_snake_wag_primary
+  - sprite: _CD/Mobs/Customization/snaketaildual.rsi
+    state: tail_snake_wag_secondary
+

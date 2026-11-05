@@ -29,7 +29,7 @@ DISCORD_SPLIT_LIMIT = 2000
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 TRUNCATION_SUFFIX = " [...]"
 
-CHANGELOG_FILE = "Resources/Changelog/Changelog.yml"
+CHANGELOG_FILE = os.environ.get("CHANGELOG_DIR", "Resources/Changelog/Changelog.yml") # Floof
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 

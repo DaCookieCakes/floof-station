@@ -1,0 +1,108 @@
+- type: entity
+  name: Quanana
+  parent: [ FoodBanana, SimpleMobBase ]
+  id: MobBananaDuck
+  description: It quacks. It's a banana. It's a quanana.
+  components:
+  - type: Physics
+    bodyType: KinematicController
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: quack
+      sprite: _Floof/Mobs/Animals/Banana_duck.rsi
+    scale: 0.7,0.7
+  - type: GhostRole
+    name: ghost-role-information-BananaDuck-name
+    allowMovement: true
+    description: ghost-role-information-BananaDuck-description
+    rules: ghost-role-information-nonantagonist-rules
+    raffle:
+  - type: GhostTakeoverAvailable
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Reproductive
+    breedChance: 0.05
+    birthPopup: reproductive-laid-egg-popup
+    makeOffspringInfant: false
+    minHungerThreshold: Peckish
+    partnerWhitelist:
+      tags:
+        - Duck
+    offspring:
+      - id: FoodBananaBaby
+        maxAmount: 1
+  - type: Speech
+    speechSounds: Duck
+    speechVerb: SmallMob
+ # - type: language
+ #   id: Duck
+  - type: RotationVisuals
+    defaultRotation: 0
+    horizontalRotation: 90
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: quack
+      Dead:
+        Base: quack
+  - type: Slippery
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: NoSlip
+  - type: Butcherable
+    spawned:
+    - id: FoodBanana
+      amount: 3
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 20
+      - ReagentId: Vitamin
+        Quantity: 10
+  - type: Puller
+    needsHands: false
+  - type: CanEscapeInventory
+    baseResistTime: 2
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+
+- type: entity
+  name: baby banana
+  parent: FoodBanana
+  id: FoodBananaBaby
+  description: Aww. Wait, how?
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 2
+      - ReagentId: Vitamin
+        Quantity: 1
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/banana.rsi
+    scale: 0.7,0.7
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBanana
+        Quantity: 5
+

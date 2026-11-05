@@ -382,6 +382,22 @@
         orGroup: GiftPool
       - id: RGBStaff
         orGroup: GiftPool
+      # Floof Section - Species plushies, DeltaV #3850
+      - id: PlushieChitinid
+        orGroup: GiftPool
+      - id: PlushieFelinid
+        orGroup: GiftPool
+      - id: PlushieFeroxi
+        orGroup: GiftPool
+      - id: PlushieHarpy
+        orGroup: GiftPool
+      - id: PlushieKitsune
+        orGroup: GiftPool
+      - id: PlushieOni
+        orGroup: GiftPool
+      - id: PlushieRodentia
+        orGroup: GiftPool
+      # Floof Section End
     sound:
       path: /Audio/Effects/unwrap.ogg
 

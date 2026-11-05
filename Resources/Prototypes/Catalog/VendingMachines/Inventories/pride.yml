@@ -38,8 +38,58 @@
     ClothingMultipleHeadphones: 2
     ClothingHeadHatFlowerWreath: 2
     ClothingUniformColorRainbow: 2
+    ClothingUniformJumpskirtColorRainbow: 2 # FLOOF: Moved
     ClothingUnderSocksCoder: 2
     ClothingUnderSocksBee: 2
+    ClothingHandsPlainWarmers: 2          # FLOOF
+    ClothingUnderSocksPlain: 2            # FLOOF
+    ClothingUnderSocksStripedWhite: 2     # FLOOF
+    ClothingUnderSocksStripedPurple: 2    # FLOOF
+    ClothingUnderSocksStripedRainbow: 2   # FLOOF
+    ClothingUnderSocksPrideRainbow: 2     # FLOOF
+    ClothingUnderSocksPrideAce: 2         # FLOOF
+    ClothingUnderSocksPrideAro: 2         # FLOOF
+    ClothingUnderSocksPrideBi: 2          # FLOOF
+    ClothingUnderSocksPrideGay: 2         # FLOOF
+    ClothingUnderSocksPrideInter: 2       # FLOOF
+    ClothingUnderSocksPrideLesbian: 2     # FLOOF
+    ClothingUnderSocksPrideNon: 2         # FLOOF
+    ClothingUnderSocksPridePan: 2         # FLOOF
+    ClothingUnderSocksPrideTrans: 2       # FLOOF
+    ClothingUnderSocksFishnets: 2         # FLOOF
+    ClothingHandsCoderWarmers: 2          # FLOOF
+    ClothingHandsCoderValidWarmers: 2     # FLOOF
+    ClothingHandsBeeWarmers: 2            # FLOOF
+    ClothingHandsStripeWhiteWarmers: 2    # FLOOF
+    ClothingHandsStripePurpleWarmers: 2   # FLOOF
+    ClothingHandsStripeRainbowWarmers: 2  # FLOOF
+    ClothingHandsPrideAce: 2      # FLOOF
+    ClothingHandsPrideAro: 2      # FLOOF
+    ClothingHandsPrideBi: 2       # FLOOF
+    ClothingHandsPrideGay: 2      # FLOOF
+    ClothingHandsPrideInter: 2    # FLOOF
+    ClothingHandsPrideLesbian: 2  # FLOOF
+    ClothingHandsPrideNon: 2      # FLOOF
+    ClothingHandsPridePan: 2      # FLOOF
+    ClothingHandsPrideRainbow: 2  # FLOOF
+    ClothingHandsPrideTrans: 2    # FLOOF
+    ClothingUniformThongCoder: 2          # FLOOF
+    ClothingUniformThongCoderValid: 2     # FLOOF
+    ClothingUniformThongBee: 2            # FLOOF
+    ClothingUniformThongPlain: 2          # FLOOF
+    ClothingUniformStripedThongWhite: 2   # FLOOF
+    ClothingUniformStripedThongPurple: 2  # FLOOF
+    ClothingUniformStripedThongRainbow: 2 # FLOOF
+    ClothingHeadHatCatEarsCosmetic: 1 # FLOOF
+    ClothingHeadHatDogEarsCosmetic: 1 # FLOOF
   contrabandInventory:
     ClothingNeckScarfStripedLesbianLong: 2
-    ClothingUniformJumpskirtColorRainbow: 2
+  #  ClothingUniformJumpskirtColorRainbow: 2 # FLOOF: Moved
+    ClothingUniformFishnet: 2               # FLOOF
+    ClothingUniformFishnetAlt: 2            # FLOOF
+    ClothingUniformFishnetSimpleTop: 2      # FLOOF
+    ClothingUniformFishnetThong: 2          # FLOOF
+    ClothingUniformFishnetSleeves: 2        # FLOOF
+    ClothingUniformFishnetSleevesGloves: 2  # FLOOF
+    ClothingUniformLoinClothBlack: 2  # FLOOF
+    ClothingUniformLoinClothWhite: 2  # FLOOF

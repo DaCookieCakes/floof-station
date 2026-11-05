@@ -1,27 +1,32 @@
 # Back
 - type: loadout
   id: SalvageSpecialistBackpack
+  groupBy: SalvageSpecialistGear # FLOOF
   equipment:
     back: ClothingBackpackSalvage
 
 - type: loadout
   id: SalvageSpecialistSatchel
+  groupBy: SalvageSpecialistGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelSalvage
 
 - type: loadout
   id: SalvageSpecialistDuffel
+  groupBy: SalvageSpecialistGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelSalvage
 
 # OuterClothing
 - type: loadout
   id: SalvageSpecialistWintercoat
+  groupBy: SalvageSpecialistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterMiner
 
 # Shoes
 - type: loadout
   id: SalvageBoots
+  groupBy: SalvageSpecialistGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsSalvage

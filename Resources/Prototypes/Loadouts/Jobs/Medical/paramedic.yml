@@ -1,33 +1,39 @@
 # Head
 - type: loadout
   id: ParamedicHead
+  groupBy: ParamedicGear # FLOOF
   equipment:
     head: ClothingHeadHatParamedicsoft
 
 # Jumpsuit
 - type: loadout
   id: ParamedicJumpsuit
+  groupBy: ParamedicGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitParamedic
 
 - type: loadout
   id: ParamedicJumpskirt
+  groupBy: ParamedicGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtParamedic
 
 # Outer clothing
 - type: loadout
   id: ParamedicWindbreaker
+  groupBy: ParamedicGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatParamedicWB
 
 - type: loadout
   id: ParamedicWintercoat
+  groupBy: ParamedicGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterPara
 
 # Shoes
 - type: loadout
   id: BlueShoes
+  groupBy: ParamedicGear # FLOOF
   equipment:
     shoes: ClothingShoesColorBlue

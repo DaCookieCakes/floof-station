@@ -46,6 +46,8 @@
             <ContainerButton Name="StationAlertLevelInstructionsButton">
                 <RichTextLabel Name="StationAlertLevelInstructions" Access="Public"/>
             </ContainerButton>
+            <!-- Floof - Bank -->
+            <RichTextLabel Name="BalanceLabel" Visible="False"/>
         </BoxContainer>
         <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="True">
             <GridContainer VerticalExpand="True"

@@ -1,0 +1,110 @@
+- type: marking
+  id: KitsuneTailDefault
+  bodyPart: Tail
+  coloring:
+    default:
+      type: !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SimpleColoring
+        color: "#fffafa"
+  sprites:
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: kitsune_primary
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: kitsune_primary_behind
+    layer: TailBehind
+    colorFrom: kitsune_primary
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: kitsune_secondary
+
+- type: marking
+  id: KitsuneTailsNine
+  bodyPart: Tail
+  coloring:
+    default:
+      type: !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SimpleColoring
+        color: "#fffafa"
+  sprites:
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxninetailstone1
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxninetailstone1_behind
+    layer: TailBehind
+    colorFrom: foxninetailstone1
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxninetailstone2
+
+- type: marking
+  id: KitsuneTailsThree
+  bodyPart: Tail
+  coloring:
+    default:
+      type: !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SimpleColoring
+        color: "#fffafa"
+  sprites:
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxthreetailstone1
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxthreetailstone1_behind
+    layer: TailBehind
+    colorFrom: foxthreetailstone1
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxthreetailstone2
+
+- type: marking
+  id: KitsuneTailsTwo
+  bodyPart: Tail
+  coloring:
+    default:
+      type: !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SimpleColoring
+        color: "#fffafa"
+  sprites:
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxtwotailstone1
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxtwotailstone1_behind
+    layer: TailBehind
+    colorFrom: foxtwotailstone1
+  - sprite: _DV/Mobs/Customization/kitsune/tails.rsi
+    state: foxtwotailstone2
+
+- type: marking
+  id: KitsuneEarsDefault
+  bodyPart: Head
+  coloring:
+    default:
+      type: !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SimpleColoring
+        color: "#fffafa"
+  sprites:
+  - sprite: _DV/Mobs/Customization/kitsune/ears.rsi
+    state: kitsune_fluffy_ears
+  - sprite: _DV/Mobs/Customization/kitsune/ears.rsi
+    state: kitsune_fluffy_fluff
+
+- type: marking
+  id: KitsuneEarsFox
+  bodyPart: Head
+  coloring:
+    default:
+      type: !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SimpleColoring
+        color: "#fffafa"
+  sprites:
+  - sprite: _DV/Mobs/Customization/kitsune/ears.rsi
+    state: foxears
+

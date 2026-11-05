@@ -32,6 +32,12 @@
     ClothingShoesColorBlue: 2
     ClothingShoesColorWhite: 2
     ClothingShoesBootsWinterMed: 2
+    # FLOOF: Start
+    ClothingNeckCollarMed: 2
+    ClothingHandsMedicWarmers: 2
+    ClothingUnderSocksMedic: 2
+    ClothingUniformMedicThong: 2
+    # FLOOF: End
   contrabandInventory:
     ClothingUniformJumpskirtOfLife: 1
     ToyFigurineMedicalDoctor: 1

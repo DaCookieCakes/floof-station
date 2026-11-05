@@ -62,6 +62,7 @@
 - type: entity
   id: LandMineKickUnarmed
   name: kick mine
+  suffix: DO NOT MAP # Floof - Kick mine
   parent: BaseLandMine
   components:
   - type: GhostKickOnTrigger
@@ -70,7 +71,7 @@
 
 - type: entity
   id: LandMineKick
-  suffix: armed
+  suffix: armed, DO NOT MAP # Floof - Kick mine
   parent: LandMineKickUnarmed
   components:
   - type: ItemToggle

@@ -1,7 +1,7 @@
 - type: gameMap
   id: Saltern
   mapName: 'Saltern'
-  mapPath: /Maps/saltern.yml
+  mapPath: /Maps/_Floof/saltern.yml
   minPlayers: 0
   maxPlayers: 35
   fallback: true
@@ -60,3 +60,4 @@
             Musician: [ 0, 1 ]
             # Silicon (2)
             Borg: [ 0, 2 ]
+            Dogborg: [ 0, 2 ] # Floofstation

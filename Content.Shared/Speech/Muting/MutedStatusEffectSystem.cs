@@ -1,6 +1,9 @@
+using Content.Shared._Starlight.Language.Systems;
+using Content.Shared.Abilities.Mime;
 using Content.Shared.Chat;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Popups;
+using Content.Shared.Puppet;
 using Content.Shared.StatusEffectNew;
 
 namespace Content.Shared.Speech.Muting;
@@ -11,6 +14,7 @@ namespace Content.Shared.Speech.Muting;
 public sealed partial class MutedStatusEffectSystem : EntitySystem
 {
     [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedLanguageSystem _languages = default!; // Starlight
 
     /// <inheritdoc />
     public override void Initialize()
@@ -43,12 +47,20 @@ public sealed partial class MutedStatusEffectSystem : EntitySystem
 
     private void OnSpeakAttempt(Entity<MutedStatusEffectComponent> ent, ref StatusEffectRelayedEvent<SpeakAttemptEvent> args)
     {
-        if (args.Args.Cancelled)
+        // TODO something better than this.
+
+        // Starlight-start: Cannot mute if there's no speech involved
+        var language = _languages.GetLanguage(ent.Owner);
+        if (!language.SpeechOverride.RequireSpeech)
             return;
+        // Starlight-end
 
-        var target = args.Args.Uid;
-
-        _popup.PopupEntity(Loc.GetString(ent.Comp.SpeakPopup), target, target);
+        if (HasComp<MimePowersComponent>(ent.Owner))
+            _popup.PopupEntity(Loc.GetString("mime-cant-speak"), ent.Owner, ent.Owner);
+        else if (HasComp<VentriloquistPuppetComponent>(ent.Owner))
+            _popup.PopupEntity(Loc.GetString("ventriloquist-puppet-cant-speak"), ent.Owner, ent.Owner);
+        else
+            _popup.PopupEntity(Loc.GetString("speech-muted"), ent.Owner, ent.Owner);
 
         args.Args.Cancel();
     }

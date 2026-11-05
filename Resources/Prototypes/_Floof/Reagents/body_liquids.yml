@@ -1,0 +1,91 @@
+- type: reagent
+  id: Cum
+  name: reagent-name-cum
+  group: Biological
+  desc: reagent-desc-cum
+  physicalDesc: reagent-physical-desc-sticky
+  flavor: salty
+  color: "#ffffff"
+  viscosity: 0.35
+  recognizable: true
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:Satiate
+        satiationType: Thirst
+        factor: 0.2
+      - !type:Satiate
+        satiationType: Hunger
+        factor: 1
+  footstepSound:
+    collection: FootstepSticky
+    params:
+      volume: 6
+
+- type: reagent
+  id: Squirt
+  name: reagent-name-squirt
+  group: Biological
+  desc: reagent-desc-squirt
+  slipData:
+    requiredSlipSpeed: 1
+    superSlippery: true
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: funny
+  color: "#d6d6d6"
+  recognizable: true
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:Satiate
+        satiationType: Thirst
+        factor: 0.3
+  footstepSound:
+    collection: FootstepSticky
+    params:
+      volume: 4
+  tileReactions:
+  - !type:SpillTileReaction
+  friction: 0.05
+
+- type: reagent
+  id: MilkBreast
+  name: reagent-name-breast-milk
+  group: Biological
+  desc: reagent-desc-breast-milk
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: milk
+  color: "#DFDFDF"
+  recognizable: true
+  plantMetabolism:
+  - !type:PlantAdjustNutrition
+    amount: 0.1
+  - !type:PlantAdjustWater
+    amount: 0.9
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:Satiate
+        satiationType: Thirst
+        factor: 4
+
+- type: reagent
+  id: Piss
+  name: reagent-name-piss
+  group: Biological
+  desc: reagent-desc-piss
+  physicalDesc: reagent-physical-desc-dirty
+  flavor: piss
+  color: "#FFFBE8"
+  recognizable: true
+  plantMetabolism:
+  - !type:PlantAdjustNutrition
+    amount: 0.1
+  - !type:PlantAdjustWater
+    amount: 0.9
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:Satiate
+        satiationType: Thirst
+        factor: 0.3

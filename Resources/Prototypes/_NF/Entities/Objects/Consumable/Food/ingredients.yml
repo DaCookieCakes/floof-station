@@ -1,0 +1,117 @@
+﻿#TODO: Change this to not make a BAG for no reason
+- type: entity
+  parent: ReagentPacketBase
+  id: ReagentContainerRaisin
+  name: raisin bag
+  description: A big bag of raisins. Good for baking!
+  components:
+    - type: Sprite
+      sprite: _DV/Objects/Consumable/Food/ingredients.rsi
+      state: raisin-big
+    - type: Solution
+      solution:
+        maxVol: 50
+        reagents:
+          - ReagentId: Raisins
+            Quantity: 50
+
+- type: entity
+  name: raw coffee beans
+  parent: FoodProduceBase
+  id: FoodCoffeeBeansRaw
+  description: Green coffee beans, just waiting to be roasted.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bitter
+  - type: Edible
+  - type: Solution
+    id: food
+    solution:
+      maxVol: 6
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 1
+      - ReagentId: Theobromine # Caffeine
+        Quantity: 1
+  - type: Sprite
+    sprite: _NF/Objects/Specific/Hydroponics/coffee.rsi
+    state: produce-beans
+  - type: Tag
+    tags:
+    - Fruit
+  - type: Construction
+    graph: Coffee
+    node: start
+    defaultTarget: light roasted coffee
+  - type: AtmosExposed
+  - type: Temperature
+    thermalConductivity: 1
+    heatCapacity: 250 # Floof - had to convert this due to upstream change, Arbitrarily chosen
+  - type: TemperatureDamage
+    # required for cooking to work
+  - type: InternalTemperature
+
+- type: entity
+  name: light roasted coffee beans
+  parent: FoodProduceBase
+  id: FoodCoffeeBeansRoastedLight
+  description: Cinnamon roast coffee beans. Bright and fruity.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bitter
+  - type: Edible
+  - type: Solution
+    id: food
+    solution:
+      maxVol: 6
+      reagents:
+      - ReagentId: CoffeeGrounds
+        Quantity: 5
+  - type: Sprite
+    sprite: _NF/Objects/Specific/Hydroponics/coffee.rsi
+    state: produce-beans-light
+  - type: Tag
+    tags:
+    - Fruit
+  - type: Construction
+    graph: Coffee
+    node: light roasted coffee
+    defaultTarget: medium roasted coffee
+  - type: Temperature
+    thermalConductivity: 1
+    heatCapacity: 250 # Floof - had to convert this due to upstream change, Arbitrarily chosen
+  - type: TemperatureDamage
+    # required for cooking to work
+  - type: InternalTemperature
+  - type: Extractable
+    grindableSolutionName: food
+
+- type: entity
+  name: medium roasted coffee beans
+  parent: FoodCoffeeBeansRoastedLight
+  id: FoodCoffeeBeansRoastedMedium
+  description: City roast coffee beans. Smooth and nutty.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Specific/Hydroponics/coffee.rsi
+    state: produce-beans-medium
+  - type: Construction
+    graph: Coffee
+    node: medium roasted coffee
+    defaultTarget: dark roasted coffee
+
+- type: entity
+  name: dark roasted coffee beans
+  parent: FoodCoffeeBeansRoastedLight
+  id: FoodCoffeeBeansRoastedDark
+  description: Viennese roast coffee beans. Smoky and spicy.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Specific/Hydroponics/coffee.rsi
+    state: produce-beans-dark
+  - type: Construction
+    graph: Coffee
+    node: dark roasted coffee
+    defaultTarget: null

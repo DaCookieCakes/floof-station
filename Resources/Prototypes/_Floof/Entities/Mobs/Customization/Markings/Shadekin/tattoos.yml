@@ -1,0 +1,25 @@
+- type: marking
+  id: TattooShadekinEyeRight
+  bodyPart: Eyes
+  groupWhitelist: [Shadekin]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_r
+    shader: unshaded
+
+- type: marking
+  id: TattooShadekinEyeLeft
+  bodyPart: Eyes
+  groupWhitelist: [Shadekin]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_l
+    shader: unshaded

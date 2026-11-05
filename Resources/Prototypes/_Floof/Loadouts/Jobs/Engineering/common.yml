@@ -1,0 +1,19 @@
+# Neck
+- type: loadout
+  id: ClothingNeckCollarEngi
+  equipment:
+    neck: ClothingNeckCollarEngi
+
+# Gloves
+- type: loadout
+  id: EngineerArmWarmers
+  groupBy: EngineerGear
+  equipment:
+    gloves: ClothingHandsEngiWarmers
+
+# Socks
+- type: loadout
+  id: EngineerThighHighs
+  groupBy: EngineerGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksEngi

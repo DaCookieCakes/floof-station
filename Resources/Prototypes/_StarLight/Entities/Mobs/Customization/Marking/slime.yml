@@ -1,0 +1,179 @@
+- type: marking
+  id: bubble
+  bodyPart: Chest
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/chest.rsi
+    state: bubble
+
+- type: marking
+  id: fishbowl
+  bodyPart: Chest
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/chest.rsi
+    state: fishbowl1
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/chest.rsi
+    state: fishbowl2
+
+- type: marking
+  id: SlimeBonechest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/chest.rsi
+    state: bone
+
+- type: marking
+  id: SlimeCore
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/chest.rsi
+    state: core
+
+- type: marking
+  id: SlimeLungs
+  bodyPart: Chest
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/chest.rsi
+    state: lungs
+
+- type: marking
+  id: FadingStars
+  bodyPart: Head
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/head.rsi
+    state: fadingstars1
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/head.rsi
+    state: fadingstars2
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/head.rsi
+    state: fadingstars3
+
+- type: marking
+  id: fizz
+  bodyPart: Head
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/head.rsi
+    state: fizz
+
+- type: marking
+  id: SlimeBonehead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/head.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBrain
+  bodyPart: Head
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/head.rsi
+    state: brain
+
+- type: marking
+  id: SlimeBonearmright
+  bodyPart: RArm
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/rarm.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonearmleft
+  bodyPart: LArm
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/larm.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonelegright
+  bodyPart: RLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/rleg.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonelegleft
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/lleg.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonefootleft
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/lfoot.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonefootright
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/rfoot.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonehandleft
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/lhand.rsi
+    state: bone
+
+- type: marking
+  id: SlimeBonehandright
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#F8F8F8"
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/SlimePerson/rhand.rsi
+    state: bone
+

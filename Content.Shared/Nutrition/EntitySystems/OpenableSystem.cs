@@ -169,6 +169,14 @@ public sealed partial class OpenableSystem : EntitySystem
     }
 
     /// <summary>
+    /// Utility function, returns the opposite of IsClosed
+    /// </summary>
+    public bool IsOpen(EntityUid uid, EntityUid? user = null, OpenableComponent? comp = null, bool predicted = false)
+    {
+        return !IsClosed(uid, user, comp, predicted);
+    }
+
+    /// <summary>
     /// Update open visuals to the current value.
     /// </summary>
     public void UpdateAppearance(EntityUid uid, OpenableComponent? comp = null, AppearanceComponent? appearance = null)

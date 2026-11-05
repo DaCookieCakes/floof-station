@@ -1,0 +1,187 @@
+- type: Interaction
+  id: MilkIntoContainer
+  parent: BaseGlobal
+  priority: 4
+  delay: 3
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:BodyOrganRequirement
+        organCategory: Breasts
+        targetSelf: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [RefillableSolution]
+  action:
+    !type:OrganSolutionTransferAction
+      sourceSolution: breasts
+
+- type: Interaction
+  id: CumIntoContainer
+  parent: BaseGlobal
+  priority: 4
+  delay: 3
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:BodyOrganRequirement
+        organCategory: Dick
+        targetSelf: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [RefillableSolution]
+  action:
+    !type:OrganSolutionTransferAction
+      sourceSolution: balls
+
+- type: Interaction
+  id: SquirtIntoContainer
+  parent: BaseGlobal
+  priority: 4
+  delay: 3
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:BodyOrganRequirement
+        organCategory: Vagina
+        targetSelf: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [RefillableSolution]
+  action:
+    !type:OrganSolutionTransferAction
+      sourceSolution: vagina
+
+- type: Interaction
+  id: PissIntoContainer
+  parent: BaseGlobal
+  priority: 4
+  delay: 3
+  range: {max: 1}
+  effectSuccess:
+    popup: Subtle
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+    - !type:BodyOrganRequirement
+      organCategory: Bladder
+      targetSelf: true
+    - !type:ConsentRequirement
+      toggle: Watersports
+      targetSelf: true
+    - !type:EntityWhitelistRequirement
+      whitelist:
+        components: [RefillableSolution]
+  action:
+    !type:OrganSolutionTransferAction
+    sourceSolution: bladder
+
+- type: Interaction
+  id: BreastFeed
+  parent: BaseGlobal
+  priority: 4
+  icon: /Textures/_Floof/Interface/Actions/breastfeed.png
+  delay: 1.1
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    sound: {path: /Audio/_Floof/Effects/suckle-swallow.ogg}
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:MobStateRequirement
+        inverted: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [HumanoidProfile]
+  action:
+    !type:NoOpAction
+
+- type: Interaction
+  id: SuckDick
+  parent: BaseGlobal
+  priority: 4
+  delay: 1.1
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    sound: {path: /Audio/_Floof/Effects/suckle-swallow.ogg}
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:MobStateRequirement
+        inverted: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [HumanoidProfile]
+      - !type:BodyOrganRequirement
+        organCategory: Dick
+  action:
+    !type:NoOpAction
+
+- type: Interaction
+  id: EatOut
+  parent: BaseGlobal
+  priority: 4
+  delay: 1.1
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    sound: {path: /Audio/_Floof/Effects/suckle-swallow.ogg}
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:MobStateRequirement
+        inverted: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [HumanoidProfile]
+      - !type:BodyOrganRequirement
+        organCategory: Vagina
+  action:
+    !type:NoOpAction
+
+- type: Interaction
+  id: Rim
+  parent: BaseGlobal
+  priority: 4
+  delay: 1.1
+  range: {max: 1}
+  effectSuccess:
+    popup: Obvious
+    sound: {path: /Audio/_Floof/Effects/suckle-swallow.ogg}
+    soundPerceivedByOthers: false
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+      - !type:MobStateRequirement
+        inverted: true
+      - !type:EntityWhitelistRequirement
+        whitelist:
+          components: [HumanoidProfile]
+  action:
+    !type:NoOpAction

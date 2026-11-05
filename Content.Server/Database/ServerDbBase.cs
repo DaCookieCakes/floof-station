@@ -8,6 +8,9 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
+using Content.Server.Administration.Managers;
+using Content.Shared._Floof.Consent;
+using Content.Shared._Floof.Consent.Prototypes;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Database;
@@ -47,6 +50,8 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
                 .Include(p => p.Profiles).ThenInclude(h => h.Antags)
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
+                .Include(p => p.Profiles).ThenInclude(h => h.Genitals) // Floof - Genitals
+                .Include(p => p.Profiles).ThenInclude(h => h.ConsentToggles) // Floof - Consent toggles
                 .Include(p => p.Profiles)
                     .ThenInclude(h => h.Loadouts)
                     .ThenInclude(l => l.Groups)
@@ -105,6 +110,8 @@ namespace Content.Server.Database
                 .Include(p => p.Jobs)
                 .Include(p => p.Antags)
                 .Include(p => p.Traits)
+                .Include(p => p.Genitals) // Floof - Genitals
+                .Include(p => p.ConsentToggles) // Floof - Consent toggles
                 .Include(p => p.Loadouts)
                     .ThenInclude(l => l.Groups)
                     .ThenInclude(group => group.Loadouts)
@@ -197,6 +204,53 @@ namespace Content.Server.Database
             await db.DbContext.SaveChangesAsync();
         }
 
+        // Floof Section - Bank
+        public async Task<int?> GetBankBalanceAsync(NetUserId userId, int slot, int startingBalance)
+        {
+            await using var db = await GetDb();
+            var profile = await db.DbContext.Profile
+                .Include(p => p.BankAccount)
+                .Where(p => p.Preference.UserId == userId.UserId)
+                .SingleOrDefaultAsync(p => p.Slot == slot);
+
+            if (profile == null)
+                return null;
+
+            return profile.BankAccount?.Balance ?? startingBalance;
+        }
+
+        public async Task<Dictionary<int, int>> GetBankBalancesAsync(NetUserId userId, int startingBalance)
+        {
+            await using var db = await GetDb();
+            var profiles = await db.DbContext.Profile
+                .Include(p => p.BankAccount)
+                .Where(p => p.Preference.UserId == userId.UserId)
+                .ToListAsync();
+
+            return profiles.ToDictionary(p => p.Slot, p => p.BankAccount?.Balance ?? startingBalance);
+        }
+
+        public async Task<int?> AddBankBalanceAsync(NetUserId userId, int slot, int amount, int startingBalance)
+        {
+            await using var db = await GetDb();
+            var profile = await db.DbContext.Profile
+                .Include(p => p.BankAccount)
+                .Where(p => p.Preference.UserId == userId.UserId)
+                .SingleOrDefaultAsync(p => p.Slot == slot);
+
+            if (profile == null)
+                return null;
+
+            profile.BankAccount ??= new BankAccount { Balance = startingBalance };
+            if (profile.BankAccount.Balance + amount < 0)
+                return null;
+
+            profile.BankAccount.Balance += amount;
+            await db.DbContext.SaveChangesAsync();
+            return profile.BankAccount.Balance;
+        }
+        // Floof Section End - Bank
+
         private static async Task SetSelectedCharacterSlotAsync(NetUserId userId, int newSlot, ServerDbContext db)
         {
             var prefs = await db.Preference.SingleAsync(p => p.UserId == userId.UserId);
@@ -211,7 +265,10 @@ namespace Content.Server.Database
 
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
+            profile.ConsentText = humanoid.ConsentText; // Floof: Added consent.
             profile.Species = humanoid.Species;
+            profile.Height = humanoid.Height; // Goobstation: port EE height/width sliders
+            profile.Width = humanoid.Width; // Goobstation: port EE height/width sliders
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Voice = humanoid.Voice.ToString();
@@ -220,6 +277,14 @@ namespace Content.Server.Database
             profile.SkinColor = appearance.SkinColor.ToHex();
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.OrganMarkings = JsonSerializer.SerializeToDocument(dataNode.ToJsonNode());
+
+            // Floof Section - Genitals
+            if (profile.Genitals == null)
+                profile.Genitals = new Genitals();
+            profile.Genitals.Penis = humanoid.Genitals.Penis;
+            profile.Genitals.Vagina = humanoid.Genitals.Vagina;
+            profile.Genitals.Breasts = humanoid.Genitals.Breasts;
+            // End Floof Section - Genitals
 
             // support for downgrades - at some point this should be removed
             var legacyMarkings = appearance.Markings
@@ -259,6 +324,14 @@ namespace Content.Server.Database
                 humanoid.TraitPreferences
                         .Select(t => new Trait {TraitName = t})
             );
+
+            // Floof Section - Consent toggles
+            profile.ConsentToggles.Clear();
+            profile.ConsentToggles.AddRange(
+                humanoid.ConsentToggles
+                    .Select(t => new ConsentToggle {ToggleId = t})
+            );
+            // Floof Section End - Consent toggles
 
             profile.Loadouts.Clear();
 
@@ -1074,6 +1147,121 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             db.DbContext.Blacklist.Remove(entry);
             await db.DbContext.SaveChangesAsync();
         }
+
+        #endregion
+
+        #region Live Characters
+
+        // Floof Section - Persistence
+
+        private IQueryable<LiveCharacter> LiveCharacterQuery(ServerDbContext db, NetUserId userId, int slot)
+        {
+            return db.LiveCharacter
+                .Where(l => l.Profile.Preference.UserId == userId.UserId && l.Profile.Slot == slot);
+        }
+
+        public async Task<LiveCharacter?> GetLiveCharacterAsync(NetUserId userId, int slot)
+        {
+            await using var db = await GetDb();
+
+            return await LiveCharacterQuery(db.DbContext, userId, slot)
+                .AsNoTracking()
+                .SingleOrDefaultAsync();
+        }
+
+        public async Task<Dictionary<int, LiveCharacter>> GetLiveCharactersAsync(NetUserId userId)
+        {
+            await using var db = await GetDb();
+
+            return await db.DbContext.LiveCharacter
+                .Where(l => l.Profile.Preference.UserId == userId.UserId)
+                .Include(l => l.Profile)
+                .AsNoTracking()
+                .ToDictionaryAsync(l => l.Profile.Slot);
+        }
+
+        public async Task<bool> SaveLiveCharacterAsync(
+            NetUserId userId,
+            int slot,
+            int schemaVersion,
+            string data,
+            int? roundId,
+            LiveCharacterHistoryReason reason,
+            int historyMin,
+            int historyDays)
+        {
+            await using var db = await GetDb();
+
+            var profile = await db.DbContext.Profile
+                .Include(p => p.LiveCharacter)
+                .SingleOrDefaultAsync(p => p.Preference.UserId == userId.UserId && p.Slot == slot);
+
+            if (profile == null)
+                return false;
+
+            var now = DateTime.UtcNow;
+            if (profile.LiveCharacter == null)
+                profile.LiveCharacter = new LiveCharacter { CreatedAt = now };
+            else
+                await BackupLiveCharacter(db.DbContext, profile.LiveCharacter, reason, historyMin, historyDays);
+
+            profile.LiveCharacter.SchemaVersion = schemaVersion;
+            profile.LiveCharacter.Data = data;
+            profile.LiveCharacter.LastSavedAt = now;
+            profile.LiveCharacter.LastSavedRound = roundId;
+
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> DeleteLiveCharacterAsync(NetUserId userId, int slot, int historyMin, int historyDays)
+        {
+            await using var db = await GetDb();
+
+            var live = await LiveCharacterQuery(db.DbContext, userId, slot).SingleOrDefaultAsync();
+            if (live == null)
+                return false;
+
+            await BackupLiveCharacter(db.DbContext, live, LiveCharacterHistoryReason.Discard, historyMin, historyDays);
+            db.DbContext.LiveCharacter.Remove(live);
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        /// <summary>
+        ///     Copies the current version into the history, then prunes backups that are
+        ///     both outside the newest <paramref name="historyMin"/> and older than <paramref name="historyDays"/>.
+        /// </summary>
+        private static async Task BackupLiveCharacter(
+            ServerDbContext db,
+            LiveCharacter live,
+            LiveCharacterHistoryReason reason,
+            int historyMin,
+            int historyDays)
+        {
+            db.LiveCharacterHistory.Add(new LiveCharacterHistory
+            {
+                ProfileId = live.ProfileId,
+                SchemaVersion = live.SchemaVersion,
+                Data = live.Data,
+                SavedAt = live.LastSavedAt,
+                SavedRound = live.LastSavedRound,
+                Reason = reason,
+            });
+
+            // The new backup isn't saved yet, so it takes one of the kept slots.
+            var cutoff = DateTime.UtcNow.AddDays(-historyDays);
+            var expired = await db.LiveCharacterHistory
+                .Where(h => h.ProfileId == live.ProfileId)
+                .OrderByDescending(h => h.SavedAt)
+                .Skip(Math.Max(historyMin - 1, 0))
+                .Where(h => h.SavedAt < cutoff)
+                .ToListAsync();
+
+            db.LiveCharacterHistory.RemoveRange(expired);
+        }
+
+        // End Floof Section - Persistence
 
         #endregion
 

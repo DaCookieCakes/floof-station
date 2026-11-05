@@ -10,43 +10,51 @@
 # Head
 - type: loadout
   id: BartenderHead
+  groupBy: BartenderGear # FLOOF
   equipment:
     head: ClothingHeadHatTophat
 
 - type: loadout
   id: BartenderBowler
+  groupBy: BartenderGear # FLOOF
   equipment:
     head: ClothingHeadHatBowlerHat
 
 # Jumpsuit
 - type: loadout
   id: BartenderJumpsuit
+  groupBy: BartenderGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitBartender
 
 - type: loadout
   id: BartenderJumpskirt
+  groupBy: BartenderGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtBartender
 
 - type: loadout
   id: BartenderJumpsuitPurple
+  groupBy: BartenderGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitBartenderPurple
 
 # Outer clothing
 - type: loadout
   id: BartenderApron
+  groupBy: BartenderGear # FLOOF
   equipment:
     outerClothing: ClothingOuterApronBar
 
 - type: loadout
   id: BartenderVest
+  groupBy: BartenderGear # FLOOF
   equipment:
     outerClothing: ClothingOuterVest
 
 - type: loadout
   id: BartenderWintercoat
+  groupBy: BartenderGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterBar
 

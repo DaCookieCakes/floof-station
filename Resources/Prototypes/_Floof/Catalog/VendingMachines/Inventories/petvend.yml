@@ -1,0 +1,31 @@
+﻿- type: vendingMachineInventory
+  id: PetVendorInventory
+  startingInventory:
+    # Collars & Leashes
+    LeashBasic: 4
+    ClothingNeckCollarBlack: 2
+    ClothingNeckCollarBlue: 2
+    ClothingNeckCollarPink: 2
+    ClothingNeckCollarBell: 2
+    ClothingNeckCowBellCollar: 2 #The Den
+    ClothingNeckShockCollarCivilian: 2
+    RemoteSignaller: 2
+    # ClothingUncategorizedHarnessBlue: 2
+    # ClothingUncategorizedHarnessGray: 2
+    # ClothingUncategorizedHarnessPink: 2
+    # Other clothing options
+    ClothingMaskMuzzle: 2
+    # Medal-style pins (also fit the medal case)
+    ClothingNeckGoodBoyPin: 2
+    ClothingNeckGoodGirlPin: 2
+    ClothingNeckFunctionalPin: 2
+    # ClothingHeadHatRedRibbon: 2
+    # Toys
+    TennisBall: 2
+    BeachBall: 2
+    Basketball: 2
+    # Snacks & Drinks
+    DrinkWaterBottleFull: 4
+    # FoodSliceOfCheese: 8 # Placeholder till someone sprites something that is better for this
+    # Tools (this is for the silliness)
+    # WrenchImprovised: 2

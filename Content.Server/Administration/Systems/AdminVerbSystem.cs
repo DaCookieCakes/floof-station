@@ -5,6 +5,7 @@ using Content.Server.Afk;
 using Content.Server.EUI;
 using Content.Server.Ghost.Roles;
 using Content.Server.Mind;
+using Content.Server._Floof.Persistence; // Floof - Persistence
 using Content.Server.Prayer;
 using Content.Server.Silicons.Laws;
 using Content.Shared.Administration;
@@ -61,6 +62,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private SharedPopupSystem _popup = default!;
         [Dependency] private StationSystem _stations = default!;
         [Dependency] private StationSpawningSystem _spawning = default!;
+        [Dependency] private LiveCharacterSystem _liveCharacter = default!; // Floof - Persistence
         [Dependency] private ExamineSystemShared _examine = default!;
         [Dependency] private AdminFrozenSystem _freeze = default!;
         [Dependency] private IPlayerManager _playerManager = default!;
@@ -133,32 +135,28 @@ namespace Content.Server.Administration.Systems
                     prayerVerb.Impact = LogImpact.Low;
                     args.Verbs.Add(prayerVerb);
 
-                    // Spawn - Like respawn but on the spot.
-                    args.Verbs.Add(new Verb()
+                    // Floof Section - Persistence
+                    // Spawn - Like respawn but on the spot, from the template or the live version, tracked or not.
+                    foreach (var live in _liveCharacter.HasLive(targetActor.PlayerSession.UserId) ? new[] { false, true } : new[] { false })
                     {
-                        Text = Loc.GetString("admin-player-actions-spawn"),
-                        Message = Loc.GetString("admin-player-actions-spawn-message"),
-                        Category = VerbCategory.Admin,
-                        Act = () =>
+                        foreach (var tracked in new[] { true, false })
                         {
-                            if (!_transformSystem.TryGetMapOrGridCoordinates(args.Target, out var coords))
+                            args.Verbs.Add(new Verb()
                             {
-                                _popup.PopupEntity(Loc.GetString("admin-player-spawn-failed"), args.User, args.User);
-                                return;
-                            }
-
-                            var stationUid = _stations.GetOwningStation(args.Target);
-
-                            var profile = _gameTicker.GetPlayerProfile(targetActor.PlayerSession);
-                            var mobUid = _spawning.SpawnPlayerMob(coords.Value, null, profile, stationUid);
-
-                            if (_mindSystem.TryGetMind(args.Target, out var mindId, out var mindComp))
-                                _mindSystem.TransferTo(mindId, mobUid, true, mind: mindComp);
-
-                        },
-                        ConfirmationPopup = true,
-                        Impact = LogImpact.High,
-                    });
+                                Text = Loc.GetString("admin-player-actions-spawn-floof", ("live", live), ("tracked", tracked)),
+                                Message = Loc.GetString("admin-player-actions-spawn-floof-message", ("tracked", tracked)),
+                                Category = VerbCategory.SpawnHere,
+                                Act = () =>
+                                {
+                                    if (!_transformSystem.TryGetMapOrGridCoordinates(args.Target, out var coords)
+                                        || _liveCharacter.SpawnHere(targetActor.PlayerSession, coords.Value, _stations.GetOwningStation(args.Target), live, tracked) == null)
+                                        _popup.PopupEntity(Loc.GetString("admin-player-spawn-failed"), args.User, args.User);
+                                },
+                                Impact = LogImpact.High,
+                            });
+                        }
+                    }
+                    // Floof Section End
 
                     // Clone - Spawn but without the mind transfer, also spawns at the user's coordinates not the target's
                     args.Verbs.Add(new Verb()

@@ -11,7 +11,7 @@ namespace Content.Shared.Nutrition.EntitySystems;
 /// This system manages <see cref="SatiationComponent"/>. It handles the change of satiations in <see cref="Update"/>
 /// and external changes to satiations through accessors like <see cref="ModifyValue"/>.
 /// </summary>
-public abstract partial class SatiationSystem : EntitySystem
+public abstract partial class  SatiationSystem : EntitySystem
 {
     [Dependency] private IGameTiming _timing = default!;
 

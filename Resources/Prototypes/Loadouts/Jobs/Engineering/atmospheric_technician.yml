@@ -1,43 +1,51 @@
 # Jumpsuit
 - type: loadout
   id: AtmosphericTechnicianJumpsuit
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitAtmos
 
 - type: loadout
   id: AtmosphericTechnicianJumpskirt
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtAtmos
 
 - type: loadout
   id: AtmosphericTechnicianJumpsuitCasual
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitAtmosCasual
 
 # Back
 - type: loadout
   id: AtmosphericTechnicianBackpack
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     back: ClothingBackpackAtmospherics
 
 - type: loadout
   id: AtmosphericTechnicianSatchel
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelAtmospherics
 
 - type: loadout
   id: AtmosphericTechnicianDuffel
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelAtmospherics
 
 # OuterClothing
 - type: loadout
   id: AtmosphericTechnicianWintercoat
+  groupBy: AtmosphericTechnicianGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterAtmos
 
 # Shoes
 - type: loadout
   id: WhiteShoes
+  groupBy: CommonGear # FLOOF
   equipment:
     shoes: ClothingShoesColorWhite

@@ -1,0 +1,114 @@
+- type: entity
+  parent: BasePlant
+  id: HumpShroom
+  name: humpshroom
+  categories: [HideSpawnMenu]
+  components:
+    - type: Sprite
+      sprite: _Floof/Objects/Specific/Hydroponics/humpshroom.rsi
+    - type: PlantData
+      name: seeds-humpshroom-name
+      packetPrototype: HumpShroomSeeds
+      productPrototypes: [ FoodHumpShroom ]
+      mutationPrototypes: [ BreedShroom ]
+    - type: Plant
+      lifespan: 25
+      maturation: 12
+      production: 3
+      yield: 4
+      potency: 10
+      growthStages: 2
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Philterex:
+          min: 1
+          max: 5
+          potencyDivisor: 4
+        Cum:
+          min: 1
+          max: 20
+          potencyDivisor: 10
+        Nutriment:
+          min: 1
+          max: 5
+          potencyDivisor: 20
+
+- type: entity
+  parent: BasePlant
+  id: BreedShroom
+  name: breedshroom
+  categories: [HideSpawnMenu]
+  components:
+    - type: Sprite
+      sprite: _Floof/Objects/Specific/Hydroponics/breedshroom.rsi
+    - type: PlantData
+      name: seeds-breedshroom-name
+      packetPrototype: BreedShroomSeeds
+      productPrototypes: [ FoodBreedShroom ]
+    - type: Plant
+      lifespan: 25
+      maturation: 12
+      production: 3
+      yield: 3
+      potency: 10
+      growthStages: 2
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Libidozenithizine:
+          min: 1
+          max: 2
+          potencyDivisor: 4
+        Cum:
+          min: 1
+          max: 20
+          potencyDivisor: 20
+        Philterex:
+          min: 1
+          max: 4
+          potencyDivisor: 5
+        Happiness:
+          min: 1
+          max: 4
+          potencyDivisor: 5
+
+
+- type: entity
+  parent: BasePlant
+  id: Pomegranate
+  name: pomegranate
+  categories: [HideSpawnMenu]
+  components:
+    - type: Sprite
+      sprite: _Floof/Objects/Specific/Hydroponics/pomegranate.rsi
+    - type: PlantData
+      name: seeds-pomegranate-name
+      packetPrototype: PomegranateSeeds
+      productPrototypes: [ FoodPomegranate ]
+    - type: PlantHarvest
+      harvestRepeat: Repeat
+    - type: Plant
+      lifespan: 55
+      maturation: 6
+      production: 6
+      yield: 3
+      potency: 10
+      growthStages: 6
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Pomelustine:
+          min: 5
+          max: 30
+          potencyDivisor: 10
+        Nutriment:
+          min: 1
+          max: 10
+          potencyDivisor: 25

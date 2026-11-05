@@ -1,0 +1,20 @@
+- type: marking
+  id: MarkingEarsFeroxi
+  bodyPart: HeadTop
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+    layers:
+      feroxi-ears-inner:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/ear_markings.rsi
+    state: feroxi-ears
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/ear_markings.rsi
+    state: feroxi-ears-inner
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/ear_markings.rsi
+    state: feroxi-ears-tips

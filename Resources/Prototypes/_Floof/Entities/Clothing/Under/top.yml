@@ -1,0 +1,1171 @@
+# Colorable
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBra # marking UndershirtBra, used to be colorable
+  name: bra
+  description: A simple bra.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSportsBra # marking UndershirtSportsbra, used to be colorable
+  name: sports bra
+  description: A supportive bra for an active shift.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/sportsbra.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/sportsbra.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopGrossSleeveless # marking UndershirtGrossSleeveless, used to be colorable
+  name: gross tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/gross_sleeveless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/gross_sleeveless.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopClassic # marking UndergarmentTopBra, used to be colorable
+  name: classic bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/classic.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/classic.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSports # marking UndergarmentTopSportsbra, used to be colorable
+  name: sports bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/sports.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/sports.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBinder # marking UndergarmentTopBinder, used to be colorable
+  name: binder
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/binder.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/binder.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTanktop # marking UndergarmentTopTanktop, used to be colorable
+  name: tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tanktop.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tanktop.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTUndershirt # marking UndershirtStandard, used to be colorable
+  name: standard undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/t_undershirt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/t_undershirt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTUndershirtSleeveless # marking UndershirtSleeveless, used to be colorable
+  name: tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/t_undershirt_sleeveless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/t_undershirt_sleeveless.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTRolledUndershirt # marking UndershirtRolled, used to be colorable
+  name: rolled undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/t_rolled_undershirt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/t_rolled_undershirt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTRolledUndershirtSleeveless # marking UndershirtRolledSleeveless, used to be colorable
+  name: rolled tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/t_rolled_undershirt_sleeveless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/t_rolled_undershirt_sleeveless.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTLongUndershirt # marking UndershirtLong, used to be colorable
+  name: long undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/t_long_undershirt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/t_long_undershirt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraAlt # marking UndershirtBraalt, used to be colorable
+  name: classic alt bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraThin # marking UndershirtBrathin, used to be colorable
+  name: thin bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_thin.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_thin.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSportsBraAlt # marking UndershirtSportsbraalt, used to be colorable
+  name: classic alt bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/sports_bra_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/sports_bra_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraStrapless # marking UndershirtBrastrapless, used to be colorable
+  name: strapless bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_strapless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_strapless.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraStraplessAlt # marking UndershirtBrastraplessalt, used to be colorable
+  name: strapless alt bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_strapless_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_strapless_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopHalterneckBra # marking UndershirtHalterneckbra, used to be colorable
+  name: halterneck bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/halterneck_bra.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/halterneck_bra.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraSwimming # marking UndershirtBraswimming, used to be colorable
+  name: bikini bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_swimming.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_swimming.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraSwimmingAlt # marking UndershirtBraswimmingalt, used to be colorable
+  name: bikini alt bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_swimming_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_swimming_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTubetop # marking UndershirtTubetop, used to be colorable
+  name: tube top
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tubetop.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tubetop.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBabydoll # marking UndershirtBabydoll, used to be colorable
+  name: babydoll t-shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/babydoll.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/babydoll.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopStripedBra # marking UndershirtBrastriped, used to be colorable
+  name: striped bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/striped_bra.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/striped_bra.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopUndershirt # marking UndershirtUndershirtgeneric, used to be colorable
+  name: generic undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/undershirt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/undershirt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShortsleeve # marking UndershirtShortsleeve, used to be colorable
+  name: generic shortsleeve undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shortsleeve.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shortsleeve.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTanktopAlt # marking UndershirtTanktopalt, used to be colorable
+  name: tanktop, alt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tanktop_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tanktop_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTankMidriff # marking UndershirtTanktopmidriff, used to be colorable
+  name: midriff tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tank_midriff.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tank_midriff.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTankMidriffAlt # marking UndershirtTanktopmidriffalt, used to be colorable
+  name: midriff alt tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tank_midriff_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tank_midriff_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtSs13 # marking UndershirtSs13shirt, used to be colorable
+  name: old timers shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_ss13.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_ss13.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraBinderStrapless # marking UndershirtBrabinderstrapless, used to be colorable
+  name: strapless binder bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_binder_strapless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_binder_strapless.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopUndershirtImpstation # marking UndershirtDefault, used to be colorable
+  name: default undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/undershirt_impstation.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/undershirt_impstation.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopStrapless # marking UndershirtBraStrapless, used to be colorable
+  name: strapless bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/strapless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/strapless.rsi
+
+# Colorable base, fixed-color detail layer
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraNeko # marking UndershirtBraneko, used to be colorable
+  name: neko bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_neko.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_neko.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowbra # marking UndershirtBowbra, used to be colorable
+  name: bow bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowbra.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowbra.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowbraalt # marking UndershirtBowbraalt, used to be colorable
+  name: bow alt bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowbraalt.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowbraalt.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowbraNeko # marking UndershirtBowbraneko, used to be colorable
+  name: bow neko bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowbra_neko.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowbra_neko.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowbraSwimming # marking UndershirtBowbraswimming, used to be colorable
+  name: bikini bow bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowbra_swimming.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowbra_swimming.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowbraSwimmingAlt # marking UndershirtBowbraswimmingalt, used to be colorable
+  name: bikini bow alt bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowbra_swimming_alt.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowbra_swimming_alt.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+# Non-colorable
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSnowBra # marking UndershirtClassic
+  name: classic bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/snow_bra.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/snow_bra.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSnowSports # marking UndershirtSports
+  name: sport bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/snow_sports.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/snow_sports.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSnowStrapless # marking UndershirtStrapless
+  name: strapless bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/snow_strapless.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/snow_strapless.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraKinky # marking UndershirtBrakinky
+  name: kinky bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_kinky.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_kinky.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraAssblastusa # marking UndershirtBraassblastusa
+  name: USA bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_assblastusa.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_assblastusa.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraBeeKini # marking UndershirtBrabeekini
+  name: bee-kini bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_bee-kini.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_bee-kini.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraCommie # marking UndershirtBracommie
+  name: combloc bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_commie.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_commie.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBraUk # marking UndershirtBrauk
+  name: UK bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bra_uk.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bra_uk.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimmingBlue # marking UndershirtSwimsuitblue
+  name: blue swimsuit
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/swimming_blue.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/swimming_blue.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimmingRed # marking UndershirtSwimsuitred
+  name: red swimsuit
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/swimming_red.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/swimming_red.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopPolo # marking UndershirtPolo
+  name: polo
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/polo.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/polo.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTankRainbow # marking UndershirtTanktoprainbow
+  name: rainbow tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tank_rainbow.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tank_rainbow.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTankStripes # marking UndershirtTanktopstripes
+  name: stripes tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tank_stripes.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tank_stripes.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTankSun # marking UndershirtTanktopsun
+  name: sun tanktop
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tank_sun.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tank_sun.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopIan # marking UndershirtIanshirt
+  name: ian shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/ian.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/ian.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopLover # marking UndershirtLovershirt
+  name: lover shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/lover.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/lover.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopIlovent # marking UndershirtLoventshirt
+  name: NT<3 shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/ilovent.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/ilovent.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopUk # marking UndershirtUkshirt
+  name: UK shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/uk.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/uk.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBand # marking UndershirtBandshirt
+  name: band shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/band.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/band.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopPogoman # marking UndershirtPogomanshirt
+  name: pogoman shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/pogoman.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/pogoman.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopGreenshirtsport # marking UndershirtGreensportshirt
+  name: green sport shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/greenshirtsport.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/greenshirtsport.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopRedshirtsport # marking UndershirtRedsportshirt
+  name: red sport shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/redshirtsport.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/redshirtsport.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBlueshirtsport # marking UndershirtBluesportshirt
+  name: blue sport shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/blueshirtsport.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/blueshirtsport.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopMatroska # marking UndershirtMatroska
+  name: matroska shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/matroska.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/matroska.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtSkull # marking UndershirtSkullshirt
+  name: skull shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_skull.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_skull.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopTankFire # marking UndershirtTankfireshirt
+  name: fire shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/tank_fire.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/tank_fire.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtCommie # marking UndershirtCommieshirt
+  name: combloc shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_commie.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_commie.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtNano # marking UndershirtNanoshirt
+  name: NT shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_nano.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_nano.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtMeat # marking UndershirtMeatshirt
+  name: meat shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_meat.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_meat.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtStripes # marking UndershirtStripesshirt
+  name: stripe shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_stripes.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_stripes.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtTiedye # marking UndershirtTiedyeshirt
+  name: tie dye shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_tiedye.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_tiedye.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtRedjersey # marking UndershirtRedjersey
+  name: red jersey
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_redjersey.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_redjersey.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtBluejersey # marking UndershirtBluejersey
+  name: blue jersey
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_bluejersey.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_bluejersey.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowling # marking UndershirtBowlingshirt
+  name: bowling shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowling.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowling.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowlingp # marking UndershirtBowlingpshirt
+  name: bowling shirt, alt a
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowlingp.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowlingp.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowlinga # marking UndershirtBowlingashirt
+  name: bowling shirt, alt b
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowlinga.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowlinga.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBeeShirt # marking UndershirtBeeshirt
+  name: bee shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bee_shirt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bee_shirt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtAlien # marking UndershirtAlienshirt
+  name: alien shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_alien.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_alien.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtClown # marking UndershirtClownshirt
+  name: clown shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_clown.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_clown.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopCowboyshirtNavy # marking UndershirtNavycowboyshirt
+  name: cowboy shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/cowboyshirt_navy.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/cowboyshirt_navy.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopCowboyshirtRed # marking UndershirtRedcowboyshirt
+  name: red cowboy shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/cowboyshirt_red.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/cowboyshirt_red.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopLongstripeBlue # marking UndershirtBluelongstripeshirt
+  name: blue long striped shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/longstripe_blue.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/longstripe_blue.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopScrubsgreen # marking UndershirtScrubsgreen
+  name: green scrubs
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/scrubsgreen.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/scrubsgreen.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopScrubspurple # marking UndershirtScrubspurple
+  name: purple scrubs
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/scrubspurple.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/scrubspurple.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBrideBlue # marking UndershirtBluebridebra
+  name: fancy blue bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bride_blue.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bride_blue.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBrideOrange # marking UndershirtOrangebridebra
+  name: fancy orange bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bride_orange.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bride_orange.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBridePurple # marking UndershirtPurplebridebra
+  name: fancy purple bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bride_purple.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bride_purple.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBrideRed # marking UndershirtRedbridebra
+  name: fancy red bra
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bride_red.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bride_red.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopNanotrasen # marking UndershirtNanotrasen
+  name: nanotrasen undershirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/nanotrasen.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/nanotrasen.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimmingBlack # marking UndershirtSwimsuitblack
+  name: black swimsuit
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/swimming_black.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/swimming_black.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopFishnet # marking UndershirtFishnet
+  name: upper fishnet
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/fishnet.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/fishnet.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopFishnetBody # marking UndershirtFishnetbody
+  name: torso fishnet
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/fishnet_body.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/fishnet_body.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopFishnetSleeves # marking UndershirtFishnetsleeves
+  name: sleeves fishnet
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/fishnet_sleeves.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/fishnet_sleeves.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopFishnetGloves # marking UndershirtFishnetgloves
+  name: gloves fishnet
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/fishnet_gloves.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/fishnet_gloves.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopPeace # marking UndershirtPeaceshirt
+  name: peace shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/peace.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/peace.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtQuestion # marking UndershirtQuestionshirt
+  name: question shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/shirt_question.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/shirt_question.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBowlingw # marking UndershirtBowlingwshirt
+  name: bowling shirt, alt C
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/bowlingw.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/bowlingw.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopLongstripe # marking UndershirtLongstripeshirt
+  name: long striped shirt
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Tops/longstripe.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Tops/longstripe.rsi
+
+# Shapely tops, not supported (yet)
+
+# - type: entity
+#   parent: ClothingUndergarmentTopBase
+#   id: ClothingUnderTopShapelyGirlish # marking UndershirtShapelyshirtgirlish, used to be colorable
+#   name: girlish S shapely top
+#   description: A piece of underwear.
+#   components:
+#   - type: Sprite
+#     sprite: _Floof/Clothing/Under/Tops/shapely_girlish.rsi
+#   - type: Clothing
+#     sprite: _Floof/Clothing/Under/Tops/shapely_girlish.rsi
+
+# - type: entity
+#   parent: ClothingUndergarmentTopBase
+#   id: ClothingUnderTopShapelyPetite # marking UndershirtShapelyshirtpetite, used to be colorable
+#   name: petite M shapely top
+#   description: A piece of underwear.
+#   components:
+#   - type: Sprite
+#     sprite: _Floof/Clothing/Under/Tops/shapely_petite.rsi
+#   - type: Clothing
+#     sprite: _Floof/Clothing/Under/Tops/shapely_petite.rsi
+
+# - type: entity
+#   parent: ClothingUndergarmentTopBase
+#   id: ClothingUnderTopShapelyCurvy # marking UndershirtShapelyshirtcurvy, used to be colorable
+#   name: curvy L shapely top
+#   description: A piece of underwear.
+#   components:
+#   - type: Sprite
+#     sprite: _Floof/Clothing/Under/Tops/shapely_curvy.rsi
+#   - type: Clothing
+#     sprite: _Floof/Clothing/Under/Tops/shapely_curvy.rsi
+
+# - type: entity
+#   parent: ClothingUndergarmentTopBase
+#   id: ClothingUnderTopShapelyBusty # marking UndershirtShapelyshirtbusty, used to be colorable
+#   name: busty XL shapely top
+#   description: A piece of underwear.
+#   components:
+#   - type: Sprite
+#     sprite: _Floof/Clothing/Under/Tops/shapely_busty.rsi
+#   - type: Clothing
+#     sprite: _Floof/Clothing/Under/Tops/shapely_busty.rsi
+
+# - type: entity
+#   parent: ClothingUndergarmentTopBase
+#   id: ClothingUnderTopShapelyMassive # marking UndershirtShapelyshirtmassive, used to be colorable
+#   name: massive XXL shapely top
+#   description: A piece of underwear.
+#   components:
+#   - type: Sprite
+#     sprite: _Floof/Clothing/Under/Tops/shapely_massive.rsi
+#   - type: Clothing
+#     sprite: _Floof/Clothing/Under/Tops/shapely_massive.rsi
+
+# - type: entity
+#   parent: ClothingUndergarmentTopBase
+#   id: ClothingUnderTopShapelyBackbreaker # marking UndershirtShapelyshirtbackbreaker, used to be colorable
+#   name: back breakers XXXL shapely top
+#   description: A piece of underwear.
+#   components:
+#   - type: Sprite
+#     sprite: _Floof/Clothing/Under/Tops/shapely_backbreaker.rsi
+#   - type: Clothing
+#     sprite: _Floof/Clothing/Under/Tops/shapely_backbreaker.rsi

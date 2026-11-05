@@ -1,5 +1,6 @@
 - type: job
   id: Detective
+  pay: 600 # Floof - bank
   name: job-name-detective
   description: job-description-detective
   playTimeTracker: JobDetective
@@ -25,7 +26,7 @@
 - type: startingGear
   id: DetectiveGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+  #  eyes: ClothingEyesGlassesSecurity # FLOOF
     id: DetectivePDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltHolsterFilled

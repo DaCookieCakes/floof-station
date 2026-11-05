@@ -51,6 +51,8 @@
     - id: CrateFunArtSupplies
     - id: CrateFunFoamGuns
       weight: 0.01
+    - id: CrateFunSprayPaints # Floofstation
+      weight: 2.5
 
 - type: entityTable
   id: LowValueMaterialCrateTable
@@ -156,6 +158,8 @@
     - !type:NestedSelector
       tableId: LowValueScienceCrateTable
       weight: 0.2
+    - !type:NestedSelector # Floof: Added lewd crate.
+      tableId: LowValueFunLewdTable
 
 - type: entity
   name: Filled Crate Spawner

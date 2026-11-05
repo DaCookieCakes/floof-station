@@ -1,0 +1,237 @@
+- type: markingsGroup
+  id: Shadekin
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [TailShadekin]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [EarsShadekin]
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceShadekin
+  name: shadekin appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganShadekinTorso
+      Head: OrganShadekinHead
+      ArmLeft: OrganShadekinArmLeft
+      ArmRight: OrganShadekinArmRight
+      HandRight: OrganShadekinHandRight
+      HandLeft: OrganShadekinHandLeft
+      LegLeft: OrganShadekinLegLeft
+      LegRight: OrganShadekinLegRight
+      FootLeft: OrganShadekinFootLeft
+      FootRight: OrganShadekinFootRight
+      Brain: OrganShadekinBrain
+      Eyes: OrganShadekinEyes
+      Tongue: OrganShadekinTongue
+      Appendix: OrganShadekinAppendix
+      Ears: OrganShadekinEars
+      Lungs: OrganShadekinLungs
+      Heart: OrganShadekinHeart
+      Stomach: OrganShadekinStomach
+      Liver: OrganShadekinLiver
+      Kidneys: OrganShadekinKidneys
+      Bladder: OrganBladder # Floof - Bladder
+  - type: HumanoidProfile
+    species: Shadekin
+  # - type: ScaleVisuals # Floof - HeightWidth
+  #   scale: 0.9, 0.9
+
+
+- type: entity
+  save: false
+  name: Urist McShadow
+  parent:
+  - AppearanceShadekin
+  - BaseSpeciesMob
+  - MobNightVision
+  id: MobShadekin
+  components:
+  - type: Shadekin
+    thresholds:
+      0.8: Low
+      5: Annoying
+      10: High
+      15: Extreme
+  # - type: Absorbable # Delta-V: Commented out, we got no Absorbable
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: NormalSatiationHunger
+      Thirst:
+        prototype: NormalSatiationThirst
+  - type: Icon
+    sprite: _Starlight/Mobs/Species/Shadekin/parts.rsi
+    state: full
+  - type: Speech
+    allowedEmotes: ["Marr", "Wurble"]
+  - type: Vocal
+    emoteSounds: MaleShadekin
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: FlashModifier
+    modifier: 2
+  - type: Damageable
+    damageModifierSet: Shadekin
+  - type: Injurable
+    damageContainer: Biological
+  - type: Deathgasp
+    damageType: Bloodloss
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPie
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Bloodloss: 1
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -0.25
+  - type: Flammable
+    damage:
+      types:
+        Heat: 1.5
+  - type: TypingIndicator
+    proto: alien
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.85 #per second, scales with pressure and other constants.
+        Heat: 0.1
+  - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
+    allowedStates:
+    - Alive
+    damage:
+      types:
+        Heat: -0.07
+        Blunt: -0.07
+        Piercing: -0.07
+        Slash: -0.07
+        Asphyxiation: -0.07 # Floof: Added.
+  - type: TemperatureSpeed
+    thresholds:
+      293: 0.8
+      280: 0.6
+      260: 0.4
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 2
+  - type: Perishable
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Marish
+    understands:
+    - GalacticCommon
+    - Marish
+  # Starlight-end
+  - type: Fingerprint
+  - type: Blindable
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Generic_mob_burning
+    alternateState: Standing
+  - type: StunVisuals
+  - type: InjectableSolution
+    solution: bloodstream
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 1500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Radiation
+        damage: 15
+      behaviors:
+      - !type:PopupBehavior
+        popup: mouth-taste-metal
+        popupType: LargeCaution
+        targetOnly: true
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Radiation
+        damage: 40
+      behaviors:
+      - !type:VomitBehavior
+  - type: NightVision
+    enabled: false
