@@ -1,0 +1,29 @@
+- type: entity
+  id: OrganRodentiaMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Rat, MetabolizerRodentia ]
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganAnimalInternal, OrganRodentiaMetabolizer ]
+  id: OrganRodentiaLungs
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganAnimalInternal, OrganRodentiaMetabolizer ]
+  id: OrganRodentiaStomach
+  components:
+  - type: Metabolizer
+    stages: [ Digestion, Bloodstream ]
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganAnimalInternal, OrganRodentiaMetabolizer ]
+  id: OrganRodentiaHeart
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganAnimalInternal, OrganRodentiaMetabolizer ]
+  id: OrganRodentiaLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganAnimalInternal, OrganRodentiaMetabolizer ]
+  id: OrganRodentiaKidneys

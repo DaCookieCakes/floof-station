@@ -12,6 +12,20 @@ species-overview-arachnid-con-suffocate = Suffocate 50% faster without air
 species-overview-arachnid-con-asphyxiation = Heal asphyxiation damage 100% slower
 species-overview-arachnid-con-poison = Are poisoned by chocolate, coffee, tea, onion and garlic
 
+## Rodentia
+species-overview-rodentia-pro-claws = Claws deal Slash and Blunt damage
+species-overview-rodentia-pro-small = Smaller than humans
+species-overview-rodentia-pro-duffelbags = Can fit in duffelbags
+species-overview-rodentia-pro-crawl = Crawl about 75% faster while lying down
+species-overview-rodentia-pro-raw-meat = Can safely eat raw meat
+species-overview-rodentia-pro-toxins = Can consume Theobromine and Allicin without toxin damage
+species-overview-rodentia-pro-rummage = Can rummage through disposals for food, trash, and occasional materials
+species-overview-rodentia-pro-cheeks = Can store small items in their cheeks
+species-overview-rodentia-con-vomit = Cannot vomit to expel ingested substances
+species-overview-rodentia-con-blunt = Take 30% more Blunt damage
+species-overview-rodentia-con-mousetraps = Always trigger mousetraps, even while wearing shoes
+species-overview-rodentia-con-hunger = Get hungry 33% faster
+
 ## Diona
 species-overview-diona-pro-hunger = Get hungry slower
 species-overview-diona-pro-blunt = Take 30% less Blunt damage

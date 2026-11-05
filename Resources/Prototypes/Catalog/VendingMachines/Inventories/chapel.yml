@@ -26,6 +26,7 @@
     ClothingUnderSocksChaplain: 2
     ClothingUniformChaplainThong: 1
     # FLOOF: End1
+    TarotCardDeckBox: 1 # Moffstation - Add Tarot cards to the chapel vending machine.
   contrabandInventory:
     FoodBakedBunHotX: 2
     DrinkWineBottleFull: 1

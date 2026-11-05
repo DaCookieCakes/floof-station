@@ -830,3 +830,23 @@ Entries:
   id: 101
   time: '2026-10-30T05:37:09.0000000+00:00'
   url: https://github.com/Floof-Station-SS14/Floof-Station/pull/321
+- author: Shy-ivy
+  changes:
+    - type: Tweak
+      message: Rodentia now have an updated guidebook
+    - type: Add
+      message: Rummaging for rodentia have been buffed
+    - type: Remove
+      message: Rodentia have lost their puking privileges and can't induce vomitting
+  id: 102
+  time: '2026-11-02T03:04:28.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/325
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added MoffStation's 'Rewritten' card system, their Tarot cards, and
+        their Go Fish! game.
+  id: 103
+  time: '2026-11-02T05:16:30.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/326

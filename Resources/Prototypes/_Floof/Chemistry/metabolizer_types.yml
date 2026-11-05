@@ -7,3 +7,7 @@
 - type: metabolizerType
   id: MetabolizerFeroxiThirsty
   name: metabolizer-type-feroxi
+
+- type: metabolizerType
+  id: MetabolizerRodentia
+  name: metabolizer-type-rat
