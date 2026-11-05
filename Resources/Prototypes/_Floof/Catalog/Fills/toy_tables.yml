@@ -44,7 +44,7 @@
     - !type:GroupSelector # Species
       weight: 1
       children:
-      - id: PlushieArachind
+      - id: PlushieArachnid
       - id: PlushieArachne
       - id: PlushieChitinid
       - id: PlushieDiona

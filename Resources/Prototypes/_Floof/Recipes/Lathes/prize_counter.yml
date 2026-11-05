@@ -71,8 +71,8 @@
     PrizeTicket: 50
 
 - type: latheRecipe
-  id: PlushieArachind
-  result: PlushieArachind
+  id: PlushieArachnid
+  result: PlushieArachnid
   applyMaterialDiscount: false
   completetime: 0.1
   materials:
