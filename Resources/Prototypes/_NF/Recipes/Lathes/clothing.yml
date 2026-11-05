@@ -1,0 +1,28 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  id: NFBaseJumpsuitRecipe
+  parent: BaseJumpsuitRecipe
+  categories:
+  - Belts # Floof - Wallets
+  applyMaterialDiscount: false
+
+- type: latheRecipe
+  abstract: true
+  id: NFBaseBootRecipe # And gloves and wallets
+  parent: NFBaseJumpsuitRecipe
+  materials:
+    Cloth: 200
+    Durathread: 100
+
+# Wallets
+- type: latheRecipe
+  id: ClothingWalletLeatherBrown
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherBrown
+
+- type: latheRecipe
+  id: ClothingWalletLeatherBlack
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherBlack

@@ -181,7 +181,8 @@ public sealed partial class HumanoidCharacterAppearance : IEquatable<HumanoidCha
 
             foreach (var (organ, _) in appearance.Markings)
             {
-                if (!organs.ContainsKey(organ))
+                if (!proto.TryIndex(organ, out var organProto)
+                    || organProto.Restricted && !organs.ContainsKey(organ))
                     validatedMarkings.Remove(organ);
             }
 

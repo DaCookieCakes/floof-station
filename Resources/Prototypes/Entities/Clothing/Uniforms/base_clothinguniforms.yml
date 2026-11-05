@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [SolutionFood, SolutionToolNormal, Clothing, BaseSlicingRefinable]
+  parent: [SolutionFood, SolutionToolNormal, Clothing, AllowSuitStorageClothing, BaseSlicingRefinable ] # FLOOF: 'AllowSuitStorageClothing'
   id: UnsensoredClothingUniformBase
   components:
   - type: Sprite
@@ -13,6 +13,11 @@
     refineResult:
     - id: MaterialCloth1
       amount: 3
+  - type: HideLayerClothing
+    layers:
+      Vagina: INNERCLOTHING
+      Penis: INNERCLOTHING
+      Breasts: INNERCLOTHING
   - type: PhysicalComposition # 50% of the amount of cloth you'd obtain upon butchering
     materialComposition:
       Cloth: 150
@@ -61,6 +66,9 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  - type: Tag # FLOOF
+    tags:
+    - Jumpskirt
 
 - type: entity
   abstract: true

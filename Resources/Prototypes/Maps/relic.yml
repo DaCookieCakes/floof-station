@@ -1,10 +1,10 @@
 - type: gameMap
   id: Relic
   mapName: 'Relic'
-  mapPath: /Maps/relic.yml
+  mapPath: /Maps/_Floof/relic.yml
   maxRandomOffset: 0
   randomRotation: false
-  minPlayers: 15
+  minPlayers: 0 # Floof - lower min players
   maxPlayers: 35
   stations:
     Relic:

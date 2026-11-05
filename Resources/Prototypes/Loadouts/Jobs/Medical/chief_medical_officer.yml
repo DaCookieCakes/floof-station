@@ -1,43 +1,51 @@
 # Jumpsuit
 - type: loadout
   id: ChiefMedicalOfficerJumpsuit
+  groupBy: CMOGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitCMO
 
 - type: loadout
   id: ChiefMedicalOfficerJumpskirt
+  groupBy: CMOGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtCMO
 
 - type: loadout
   id: ChiefMedicalOfficerTurtleneckJumpsuit
+  groupBy: CMOGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitCMOTurtle
 
 - type: loadout
   id: ChiefMedicalOfficerTurtleneckJumpskirt
+  groupBy: CMOGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtCMOTurtle
 
 # Head
 - type: loadout
   id: ChiefMedicalOfficerBeret
+  groupBy: CMOGear # FLOOF
   equipment:
     head: ClothingHeadHatBeretCmo
 
 - type: loadout
   id: CMOMedicalHeadMirror
+  groupBy: CMOGear # FLOOF
   equipment:
     head: ClothingHeadMirror
 
 # Neck
 - type: loadout
   id: ChiefMedicalOfficerCloak
+  groupBy: CMOGear # FLOOF
   equipment:
     neck: ClothingCloakCmo
 
 - type: loadout
   id: ChiefMedicalOfficerMantle
+  groupBy: CMOGear # FLOOF
   equipment:
     neck: ClothingNeckMantleCMO
   effects:
@@ -47,11 +55,13 @@
 # Outer clothing
 - type: loadout
   id: ChiefMedicalOfficerLabCoat
+  groupBy: CMOGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatLabCmo
 
 - type: loadout
   id: ChiefMedicalOfficerWintercoat
+  groupBy: CMOGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterCMO
 

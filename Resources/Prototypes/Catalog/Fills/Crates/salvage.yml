@@ -133,7 +133,8 @@
           amount: 2
         - id: DoubleEmergencyNitrogenTankFilled
           amount: 2
-
+        - id: EmergencyDoubleTankWaterVaporFilled
+          amount: 2
 - type: entity
   parent: CrateGenericSteel
   id: CrateCrusher
@@ -185,6 +186,7 @@
         - id: ClothingMaskBreath
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
+        - id: TankWaterFilled
 
 - type: entity
   parent: CrateGenericSteel

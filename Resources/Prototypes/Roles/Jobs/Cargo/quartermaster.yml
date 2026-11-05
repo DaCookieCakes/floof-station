@@ -1,5 +1,6 @@
 - type: job
   id: Quartermaster
+  pay: 750 # Floof - bank
   name: job-name-qm
   description: job-description-qm
   playTimeTracker: JobQuartermaster

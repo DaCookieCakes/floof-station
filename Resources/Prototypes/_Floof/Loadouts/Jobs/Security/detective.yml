@@ -1,0 +1,26 @@
+# Coats
+- type: loadout
+  id: DetectiveLongCoat
+  groupBy: DetectiveGear
+  equipment:
+    outerClothing: DetPlatedCoat
+
+- type: loadout
+  id: InspectorCoat
+  groupBy: DetectiveGear
+  equipment:
+    outerClothing: ClothingOuterCoatInspector
+
+# Gloves
+- type: loadout
+  id: DetectiveArmWarmers
+  groupBy: DetectiveGear
+  equipment:
+    gloves: ClothingHandsDetectiveWarmers
+
+# Socks
+- type: loadout
+  id: DetectiveThighHighs
+  groupBy: DetectiveGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksDetective

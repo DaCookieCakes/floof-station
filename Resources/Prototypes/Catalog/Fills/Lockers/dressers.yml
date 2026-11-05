@@ -14,6 +14,11 @@
         - id: ClothingHandsGlovesCaptain
         - id: ClothingOuterWinterCap
         - id: ClothingNeckCloakCap
+        # FLOOF: Start
+        - id: ClothingHandsCaptainWarmers
+        - id: ClothingUnderSocksCaptain
+        - id: ClothingUniformCaptainThong
+        # FLOOF: End
 
 - type: entity
   id: DresserChiefEngineerFilled
@@ -29,6 +34,11 @@
         - id: ClothingHeadHatBeretEngineering
         - id: ClothingOuterWinterCE
         - id: ClothingNeckCloakCe
+          # FLOOF: Start
+        - id: ClothingHandsChiefEngiWarmers
+        - id: ClothingUnderSocksChiefEngi
+        - id: ClothingUniformChiefEngiThong
+          # FLOOF: End
 
 - type: entity
   id: DresserChiefMedicalOfficerFilled
@@ -47,6 +57,11 @@
         - id: ClothingEyesGlasses
         - id: ClothingOuterWinterCMO
         - id: ClothingCloakCmo
+          # FLOOF: Start
+        - id: ClothingHandsCMOWarmers
+        - id: ClothingUnderSocksCMO
+        - id: ClothingUniformCMOThong
+          # FLOOF: End
 
 - type: entity
   id: DresserHeadOfPersonnelFilled
@@ -61,6 +76,11 @@
         - id: ClothingOuterWinterHoP
         - id: ClothingEyesGlasses
         - id: ClothingNeckCloakHop
+          # FLOOF: Start
+        - id: ClothingHandsCommandWarmers
+        - id: ClothingUnderSocksCommand
+        - id: ClothingUniformCommandThong
+          # FLOOF: End
 
 - type: entity
   id: DresserHeadOfSecurityFilled
@@ -80,6 +100,10 @@
         - id: ClothingUniformJumpsuitHosFormal
         - id: ClothingOuterWinterHoS
         - id: ClothingNeckCloakHos
+          # FLOOF: Start
+        - id: ClothingHandsHeadSecurityWarmers
+        - id: ClothingUnderSocksHeadSecurity
+          # FLOOF: End
 
 - type: entity
   id: DresserQuarterMasterFilled
@@ -98,6 +122,11 @@
         - id: ClothingHandsGlovesColorBrown
         - id: ClothingOuterWinterQM
         - id: ClothingNeckCloakQm
+          # FLOOF: Start
+        - id: ClothingHandsLOLogisWarmers
+        - id: ClothingUnderSocksLOLogis
+        - id: ClothingUniformLOLogisThong
+          # FLOOF: End
 
 - type: entity
   id: DresserResearchDirectorFilled
@@ -114,6 +143,11 @@
         - id: ClothingOuterWinterRD
         - id: ClothingOuterCoatRD
         - id: ClothingNeckCloakRd
+          # FLOOF: Start
+        - id: ClothingHandsEpiHeadWarmers
+        - id: ClothingUnderSocksEpiHead
+        - id: ClothingUniformEpiHeadThong
+          # FLOOF: End
 
 - type: entity
   id: DresserWardenFilled

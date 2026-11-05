@@ -47,6 +47,9 @@
     sprite: Clothing/Shoes/Boots/combatboots.rsi
   - type: ClothingSlowOnDamageModifier
     modifier: 0.5
+  - type: Tag #Floofstation
+    tags:
+    - CombatBoots
 
 - type: entity
   parent: ClothingShoesMilitaryBase
@@ -68,6 +71,9 @@
       params:
         volume: -6
         variation: 0.09
+  - type: Tag #Floofstation
+    tags:
+    - HighHeelBoots
 
 - type: entity
   parent: [ ClothingShoesMilitaryBase ]

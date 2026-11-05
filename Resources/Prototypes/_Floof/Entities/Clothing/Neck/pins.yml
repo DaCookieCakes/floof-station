@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingMedalBase
+  id: ClothingNeckGoodBoyPin
+  name: good boy pin
+  description: A golden star for the best boy in the whole station. Who's a good boy?
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Neck/Pins/pin_star.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Neck/Pins/pin_star.rsi
+
+- type: entity
+  parent: ClothingMedalBase
+  id: ClothingNeckGoodGirlPin
+  name: good girl pin
+  description: A golden star for the best girl in the whole station. Who's a good girl?
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Neck/Pins/pin_star.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Neck/Pins/pin_star.rsi
+
+- type: entity
+  parent: ClothingMedalBase
+  id: ClothingNeckFunctionalPin
+  name: functional pin
+  description: A golden star for a fully functional member of society. Keep up the great work!
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Neck/Pins/pin_star.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Neck/Pins/pin_star.rsi

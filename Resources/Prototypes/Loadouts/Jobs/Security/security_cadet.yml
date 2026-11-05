@@ -1,10 +1,12 @@
 # Jumpsuit
 - type: loadout
   id: RedJumpsuit
+  groupBy: CadetGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorRed
 
 - type: loadout
   id: RedJumpskirt
+  groupBy: CadetGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorRed

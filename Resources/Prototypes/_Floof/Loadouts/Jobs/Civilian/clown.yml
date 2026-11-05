@@ -1,0 +1,13 @@
+# Gloves
+- type: loadout
+  id: RainbowArmWarmers
+  groupBy: CommonGear
+  equipment:
+    gloves: ClothingHandsStripeRainbowWarmers
+
+# Socks
+- type: loadout
+  id: RainbowThighHighs
+  groupBy: CommonGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksPrideRainbow

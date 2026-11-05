@@ -1,0 +1,16 @@
+- type: marking
+  id: OniHornShaved
+  bodyPart: HeadTop
+  forcedColoring: false
+  sprites:
+  - sprite: _DV/Mobs/Customization/Oni/oni_horns.rsi
+    state: shaved
+
+- type: marking
+  id: OniHornBull
+  bodyPart: HeadTop
+  forcedColoring: false
+  sprites:
+  - sprite: _DV/Mobs/Customization/Oni/oni_horns.rsi
+    state: bull
+

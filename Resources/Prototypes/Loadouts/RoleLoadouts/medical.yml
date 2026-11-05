@@ -10,11 +10,16 @@
   - MedicalBackpack
   - ChiefMedicalOfficerOuterClothing
   - ChiefMedicalOfficerNeck
+  - CMOGloves # FLOOF
+  - CMOSocks  # FLOOF
   - ChiefMedicalOfficerShoes
-  - Glasses
+  - MedicalGlasses # FLOOF: 'Glasses'
   - AssistiveItems
   - SurvivalMedical
+  - UnderwearTop # Floof - Underwear
+  - UnderwearBottom # Floof - Underwear
   - Trinkets
+  - Wallet # Floof - Wallets
 #  - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
 
@@ -24,15 +29,21 @@
   - GroupTankHarness
   - MedicalDoctorHead
   - MedicalMask
+  - MedicalDoctorNeck # FLOOF
   - MedicalDoctorJumpsuit
   - MedicalBackpack
   - MedicalDoctorOuterClothing
+  - MedicalDoctorGloves # FLOOF
+  - MedicalDoctorSocks  # FLOOF
   - MedicalShoes
   - MedicalDoctorPDA
-  - Glasses
+  - MedicalGlasses # FLOOF: 'Glasses'
   - AssistiveItems
   - SurvivalMedical
+  - UnderwearTop # Floof - Underwear
+  - UnderwearBottom # Floof - Underwear
   - Trinkets
+  - Wallet # Floof - Wallets
 #  - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
 
@@ -40,12 +51,17 @@
   id: JobMedicalIntern
   groups:
   - GroupTankHarness
+  - MedicalInternNeck # FLOOF
   - MedicalInternJumpsuit
   - MedicalBackpack
+  - MedicalShoes # FLOOF
   - Glasses
   - AssistiveItems
   - SurvivalMedical
+  - UnderwearTop # Floof - Underwear
+  - UnderwearBottom # Floof - Underwear
   - Trinkets
+  - Wallet # Floof - Wallets
 #  - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
 
@@ -54,14 +70,20 @@
   groups:
   - GroupTankHarness
   - MedicalMask
+  - ChemistNeck # FLOOF
   - ChemistJumpsuit
   - ChemistBackpack
   - ChemistOuterClothing
+  - ChemistGloves # FLOOF
+  - ChemistSocks  # FLOOF
   - MedicalShoes
-  - Glasses
+  - ChemistGlasses # FLOOF: 'Glasses'
   - AssistiveItems
   - SurvivalMedical
+  - UnderwearTop # Floof - Underwear
+  - UnderwearBottom # Floof - Underwear
   - Trinkets
+  - Wallet # Floof - Wallets
 #  - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
 
@@ -71,13 +93,19 @@
   - GroupTankHarness
   - ParamedicHead
   - MedicalMask
+  - ParamedicNeck # FLOOF
   - ParamedicJumpsuit
   - MedicalBackpack
   - ParamedicOuterClothing
+  - ParamedicGloves # FLOOF
+  - ParamedicSocks  # FLOOF
   - ParamedicShoes
-  - Glasses
+  - MedicalGlasses # FLOOF: 'Glasses'
   - AssistiveItems
   - SurvivalMedical
+  - UnderwearTop # Floof - Underwear
+  - UnderwearBottom # Floof - Underwear
   - Trinkets
+  - Wallet # Floof - Wallets
 #  - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical

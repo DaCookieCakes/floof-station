@@ -1,0 +1,96 @@
+## Glasses
+- type: loadoutGroup
+  parent: Glasses
+  id: SecurityGlasses
+  name: loadout-group-security-glasses
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - SecurityGlasses
+  - SecurityHud
+  - PrescriptionSecurityGlasses
+  - PrescriptionSecurityHud
+
+# Masks
+- type: loadoutGroup
+  id: SecurityMask
+  name: loadout-group-security-masks
+  minLimit: 0
+  loadouts:
+  - SecurityGasMask
+
+# neckwear
+- type: loadoutGroup
+  parent: SecurityCollars
+  id: SecurityNeck
+  name: loadout-group-security-officer-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: SecurityCollars
+  id: SecurityCadetNeck
+  name: loadout-group-security-cadet-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: SecurityCollars
+  id: WardenNeck
+  name: loadout-group-warden-neck
+  minLimit: 0
+
+# Gloves
+- type: loadoutGroup
+  id: SecurityOfficerGloves
+  name: loadout-group-security-officer-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityArmWarmers
+
+- type: loadoutGroup
+  id: DetectiveGloves
+  name: loadout-group-detective-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityArmWarmers
+  - DetectiveArmWarmers
+
+- type: loadoutGroup
+  id: HoSGloves
+  name: loadout-group-head-of-security-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityArmWarmers
+  - HoSArmWarmers
+
+# Socks
+- type: loadoutGroup
+  id: SecurityOfficerSocks
+  name: loadout-group-security-officer-socks
+  minLimit: 0
+  loadouts:
+  - SecurityThighHighs
+
+- type: loadoutGroup
+  id: DetectiveSocks
+  name: loadout-group-detective-socks
+  minLimit: 0
+  loadouts:
+  - SecurityThighHighs
+  - DetectiveThighHighs
+
+- type: loadoutGroup
+  id: HoSSocks
+  name: loadout-group-head-of-security-socks
+  minLimit: 0
+  loadouts:
+  - SecurityThighHighs
+  - HoSThighHighs
+
+# Shoes
+- type: loadoutGroup
+  id: LawyerShoes
+  name: loadout-group-lawyer-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - LaceupShoes

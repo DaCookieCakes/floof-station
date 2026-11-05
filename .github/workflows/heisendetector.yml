@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   # every 15 minutes
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "45 1 * * *" # stop wasting my compute minutes
 
 jobs:
   hunt:

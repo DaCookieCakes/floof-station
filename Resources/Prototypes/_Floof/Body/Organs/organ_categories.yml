@@ -1,0 +1,16 @@
+- type: organCategory
+  id: Dick
+  restricted: false
+  
+- type: organCategory
+  id: Vagina
+  restricted: false
+
+- type: organCategory
+  id: Breasts
+  restricted: false
+    
+- type: organCategory
+  id: Bladder
+  restricted: false
+

@@ -180,8 +180,7 @@
           - id: ClothingMaskMime
           - id: ClothingBeltSuspendersRed
           - id: ClothingBeltSuspendersBlack
-        - !type:NestedSelector
-          tableId: RandomVirtualSingerOutfitTable
+        - id: CostumeBundlePerformer # Floof - Costume bundles, add new performer items to the bundle instead
 
 - type: entity
   parent: CrateGenericSteel

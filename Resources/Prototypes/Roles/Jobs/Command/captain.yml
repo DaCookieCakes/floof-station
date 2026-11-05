@@ -1,5 +1,6 @@
 - type: job
   id: Captain
+  pay: 1000 # Floof - bank
   name: job-name-captain
   description: job-description-captain
   playTimeTracker: JobCaptain
@@ -36,9 +37,9 @@
 - type: startingGear
   id: CaptainGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
+  #  shoes: ClothingShoesBootsLaceup # FLOOF
     eyes: ClothingEyesGlassesCommand
-    gloves: ClothingHandsGlovesCaptain
+  #  gloves: ClothingHandsGlovesCaptain # FLOOF
     id: CaptainPDA
     ears: ClothingHeadsetAltCommand
   storage:

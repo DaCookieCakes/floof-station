@@ -1,0 +1,16 @@
+- type: latheRecipePack
+  id: NFWallets
+  recipes:
+  - ClothingWalletLeatherBrown
+  - ClothingWalletLeatherBlack
+  # Floof Section - Wallets
+  - ClothingWalletLeatherRed
+  - ClothingWalletLeatherBlue
+  - ClothingWalletLeatherGreen
+  - ClothingWalletLeatherMail
+  - ClothingWalletLeatherPirate
+  - ClothingWalletLeatherPrisoner
+  - ClothingWalletLeatherArcadia
+  - ClothingWalletLeatherPunk
+  - ClothingWalletLeatherLizard
+  # Floof Section End

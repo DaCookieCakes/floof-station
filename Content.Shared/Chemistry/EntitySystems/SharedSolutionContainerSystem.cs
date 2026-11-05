@@ -76,6 +76,7 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
     [Dependency] protected SharedContainerSystem ContainerSystem = default!;
     [Dependency] protected SharedHandsSystem Hands = default!;
     [Dependency] private ILocalizationManager _localization = default!;
+    [Dependency] protected IPrototypeManager _prototype = default!;
 
     [Dependency] protected EntityQuery<ContainedSolutionComponent> ContainedQuery = default!;
     [Dependency] protected EntityQuery<SolutionComponent> SolutionQuery = default!;
@@ -754,6 +755,17 @@ public abstract partial class SharedSolutionContainerSystem : EntitySystem
         UpdateChemicals(soln);
         return true;
     }
+
+    // Floof section - tile fires
+    public void BurnFlammableReagents(Entity<SolutionComponent> soln, float fraction)
+    {
+        var (uid, comp) = soln;
+        var solution = comp.Solution;
+
+        solution.BurnFlammableReagents(fraction, _prototype);
+        UpdateChemicals(soln);
+    }
+    // Floof section end - tile fires
 
     /// <summary>
     ///     Removes an amount from all reagents in a solution, adding it to a new solution.

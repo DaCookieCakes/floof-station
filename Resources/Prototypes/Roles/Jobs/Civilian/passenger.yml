@@ -1,5 +1,6 @@
 - type: job
   id: Passenger
+  pay: 250 # Floof - bank
   name: job-name-passenger
   description: job-description-passenger
   playTimeTracker: JobPassenger

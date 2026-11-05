@@ -1,10 +1,12 @@
 # Jumpsuit
 - type: loadout
   id: PsychologistJumpsuit
+  groupBy: PsychologistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitPsychologist
 
 - type: loadout
   id: PsychologistJumpskirt
+  groupBy: PsychologistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtPsychologist

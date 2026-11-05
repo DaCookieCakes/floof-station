@@ -1,0 +1,33 @@
+# UNIFORMS #
+- type: loadout
+  id: ExpressSpaceCourierUniform
+  groupBy: CargoTechGear
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorCargo
+  equipment:
+    jumpsuit: ClothingUniformCourierDevy
+
+# Gloves
+- type: loadout
+  id: CourierArmWarmers
+  groupBy: CargoGear
+  equipment:
+    gloves: ClothingHandsCourierWarmers
+
+# Socks
+- type: loadout
+  id: CourierThighHighs
+  groupBy: CargoGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksCourier
+
+# UNIFORMS #
+- type: loadout
+  id: ExpressSpaceCourierBoots
+  groupBy: CargoTechGear
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorCargo
+  equipment:
+    shoes: ClothingShoesCourierDevy

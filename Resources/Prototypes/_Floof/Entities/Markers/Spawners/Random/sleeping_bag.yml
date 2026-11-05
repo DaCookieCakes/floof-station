@@ -1,0 +1,45 @@
+- type: entity
+  name: random sleeping bag spawner
+  suffix: folded
+  id: SleepingBagFoldedSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Floof/Structures/sleepingbag.rsi
+      state: folded
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: SleepingBagFolded
+      - id: SleepingBagRedFolded
+      - id: SleepingBagBlueFolded
+      - id: SleepingBagGreenFolded
+      - id: SleepingBagYellowFolded
+      - id: SleepingBagPinkFolded
+      - id: SleepingBagBlackFolded
+      - id: SleepingBagWhiteFolded
+
+- type: entity
+  name: random sleeping bag spawner
+  suffix: unfolded
+  id: SleepingBagSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Floof/Structures/sleepingbag.rsi
+      state: closed
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: SleepingBag
+      - id: SleepingBagRed
+      - id: SleepingBagBlue
+      - id: SleepingBagGreen
+      - id: SleepingBagYellow
+      - id: SleepingBagPink
+      - id: SleepingBagBlack
+      - id: SleepingBagWhite

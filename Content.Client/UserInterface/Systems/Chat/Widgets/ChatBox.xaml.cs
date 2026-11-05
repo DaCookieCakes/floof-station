@@ -1,6 +1,9 @@
+using Content.Client._WF.Helpers; // Wayfarer
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.RichText;
 using Content.Client.UserInterface.Systems.Chat.Controls;
+using Content.Shared._EE.CCVars; // EE - chat stacking
+using Content.Shared.CCVar; // Wayfarer
 using Content.Shared.Chat;
 using Content.Shared.Input;
 using Robust.Client.Audio;
@@ -9,10 +12,14 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Audio;
+using Robust.Shared.Configuration;
 using Robust.Shared.Input;
 using Robust.Shared.Player;
+using Robust.Shared.Timing; // Wayfarer
 using Robust.Shared.Utility;
+using System.Linq; // Wayfarer
 using static Robust.Client.UserInterface.Controls.LineEdit;
+using static Robust.Client.UserInterface.Controls.TextEdit; // Wayfarer
 
 namespace Content.Client.UserInterface.Systems.Chat.Widgets;
 
@@ -20,41 +27,112 @@ namespace Content.Client.UserInterface.Systems.Chat.Widgets;
 [Virtual]
 public partial class ChatBox : UIWidget, IEntityLinkClickHandler
 {
-    [Dependency] private IEntityManager _entManager = default!;
-    [Dependency] private ILogManager _log = default!;
-
     private readonly ISawmill _sawmill;
     private readonly ChatUIController _controller;
+    private readonly IEntityManager _entManager;
+    [Dependency] private IConfigurationManager _cfg = default!; // EE - Chat stacking
+    [Dependency] private ILocalizationManager _loc = default!; // EE - Chat stacking
+    [Dependency] private ILogManager _log = default!;
 
     public bool Main { get; set; }
 
     public ChatSelectChannel SelectedChannel => ChatInput.ChannelSelector.SelectedChannel;
 
+    // EE - Chat stacking
+    private int _chatStackAmount = 0;
+    private bool ChatStackEnabled => _chatStackAmount > 0;
+    private List<ChatStackData> _chatStackList;
+    // End EE - Chat stacking
+
+    // Wayfarer - Multiline chatbox
+    private List<Rope.Node> _chatHistory = new();
+    private int _historyPosition = 0;
+    private const int MaxHistorySize = 100;
+    private bool _focused = false;
+    // End Wayfarer
+
     public ChatBox()
     {
         RobustXamlLoader.Load(this);
-        _sawmill = _log.GetSawmill("chat");
 
-        ChatInput.Input.OnTextEntered += OnTextEntered;
+        _sawmill = _log.GetSawmill("chat");
+        IoCManager.InjectDependencies(this);
+        _entManager = IoCManager.Resolve<IEntityManager>();
+
+        // ChatInput.Input.OnTextEntered += OnTextEntered; - Wayfarer
         ChatInput.Input.OnKeyBindDown += OnInputKeyBindDown;
         ChatInput.Input.OnTextChanged += OnTextChanged;
-        ChatInput.Input.OnFocusEnter += OnFocusEnter;
-        ChatInput.Input.OnFocusExit += OnFocusExit;
+        // ChatInput.Input.OnFocusEnter += OnFocusEnter;
+        // ChatInput.Input.OnFocusExit += OnFocusExit;
+        _cfg.OnCVarValueChanged += OnConfigUpdated; 
+        // Wayfarer - Multiline chatbox
         ChatInput.ChannelSelector.OnChannelSelect += OnChannelSelect;
         ChatInput.FilterButton.Popup.OnChannelFilter += OnChannelFilter;
-        ChatInput.FilterButton.Popup.OnNewHighlights += OnNewHighlights;
+        //ChatInput.FilterButton.Popup.OnNewHighlights += OnNewHighlights; // DeltaV - Message highlighting
         _controller = UserInterfaceManager.GetUIController<ChatUIController>();
         _controller.MessageAdded += OnMessageAdded;
         _controller.HighlightsUpdated += OnHighlightsUpdated;
         _controller.RegisterChat(this);
+
+        // EE - Chat stacking
+        _chatStackList = new List<ChatStackData>(_chatStackAmount);
+        _cfg.OnValueChanged(EECVars.ChatStackLastLines, UpdateChatStack, true);
+        // End EE - Chat stacking
     }
 
-    private void OnTextEntered(LineEditEventArgs args)
+    // Wayfarer - Multiline chatbox
+    // Keep the typing indicator synced
+    protected override void FrameUpdate(FrameEventArgs args)
     {
-        _controller.SendMessage(this, SelectedChannel);
+        base.FrameUpdate(args);
+        if (!ChatInput.Input.HasKeyboardFocus())
+        {
+            SetChatFocused(false);
+        }
+        else
+        {
+            SetChatFocused(true);
+        }
     }
 
+    private void SetChatFocused(bool focused)
+    {
+        if (focused != _focused)
+        {
+            _controller.NotifyChatFocus(focused);
+            _focused = focused;
+
+            // Floof Section - typing preview
+            if (focused)
+                _controller.UpdateTypingPreview(this);
+            else
+                _controller.ClearTypingPreview();
+            // End Floof Section
+        }
+    }
+
+    private void OnConfigUpdated(CVarChangeInfo info)
+    {
+        if (info.Name == "ui.chat-lines")
+        {
+            SetInputHeight();
+        }
+    }
+    // End Wayfarer
+
+    // EE - Chat stacking
+    private void UpdateChatStack(int value)
+    {
+        _chatStackAmount = value >= 0 ? value : 0;
+        Repopulate();
+    }
+
+    // private void OnTextEntered(LineEditEventArgs args)
+    // {
+    //     _controller.SendMessage(this, SelectedChannel);
+    // }
     private void OnMessageAdded(ChatMessage msg)
+    // Wayfarer
     {
         _sawmill.Debug($"{msg.Channel}: {msg.Message}");
         if (!ChatInput.FilterButton.Popup.IsActive(msg.Channel))
@@ -69,7 +147,54 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
 
         var color = msg.MessageColorOverride ?? msg.Channel.TextColor();
 
-        AddLine(msg.WrappedMessage, color);
+
+        // EE - Chat stacking
+        var index = _chatStackList.FindIndex(data => data.WrappedMessage == msg.WrappedMessage);
+
+        if (index == -1) // this also handles chatstack being disabled, since FindIndex won't find anything in an empty array
+        {
+            TrackNewMessage(msg.WrappedMessage, color);
+            AddLine(msg.WrappedMessage, color);
+            return;
+        }
+
+        UpdateRepeatingLine(index);
+        // End EE - Chat stacking
+    }
+
+    /// <summary>
+    /// Removing and then adding instantly nudges the chat window up before slowly dragging it back down, which makes the whole chat log shake.
+    /// With rapid enough updates, the whole chat becomes unreadable.
+    /// Adding first and then removing does not produce any visual effects.
+    /// The other option is to duplicate OutputPanel functionality and everything internal to the engine it relies on.
+    /// But OutputPanel relies on directly setting Control.Position for control embedding. (which is not exposed to Content.)
+    /// Thanks robustengine, very cool.
+    /// </summary>
+    /// <remarks>
+    /// zero index is the very last line in chat, 1 is the line before the last one, 2 is the line before that, etc.
+    /// </remarks>
+    // EE - Chat stacking
+    private void UpdateRepeatingLine(int index)
+    {
+        _chatStackList[index].RepeatCount++;
+        for (var i = index; i >= 0; i--)
+        {
+            var data = _chatStackList[i];
+            AddLine(data.WrappedMessage, data.ColorOverride, data.RepeatCount);
+            Contents.RemoveEntry(Index.FromEnd(index + 2));
+        }
+    }
+
+    // EE - Chat stacking
+    private void TrackNewMessage(string wrappedMessage, Color colorOverride)
+    {
+        if (!ChatStackEnabled)
+            return;
+
+        if (_chatStackList.Count == _chatStackList.Capacity)
+            _chatStackList.RemoveAt(_chatStackList.Capacity - 1);
+
+        _chatStackList.Insert(0, new ChatStackData(wrappedMessage, colorOverride));
     }
 
     private void OnHighlightsUpdated(string highlights)
@@ -85,7 +210,7 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
     public void Repopulate()
     {
         Contents.Clear();
-
+        _chatStackList = new List<ChatStackData>(_chatStackAmount); // EE - Chat stacking
         foreach (var message in _controller.History)
         {
             OnMessageAdded(message.Item2);
@@ -121,17 +246,25 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
         }
     }
 
-    private void OnNewHighlights(string highlighs)
+    public void AddLine(string message, Color color, int repeat = 0) // EE - Chat stacking - repeat
     {
-        _controller.UpdateHighlights(highlighs);
-    }
-
-    public void AddLine(string message, Color color)
-    {
-        var formatted = new FormattedMessage(3);
+        var formatted = new FormattedMessage(4); // EE - Chat stacking - up from 3
         formatted.PushColor(color);
         formatted.AddMarkupOrThrow(message);
         formatted.Pop();
+
+        // EE - Chat stacking
+        if (repeat != 0)
+        {
+            var displayRepeat = repeat + 1;
+            var sizeIncrease = Math.Min(displayRepeat / 6, 5);
+            formatted.AddMarkupOrThrow(_loc.GetString("chat-system-repeated-message-counter",
+                                ("count", displayRepeat),
+                                ("size", 8 + sizeIncrease)
+                                ));
+        }
+        // End EE - Chat stacking
+
         Contents.AddMessage(formatted, tagsAllowed: null);
     }
 
@@ -143,11 +276,13 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
         if (channel != null)
             ChatInput.ChannelSelector.Select(channel.Value);
 
-        input.IgnoreNext = true;
+        // input.IgnoreNext = true; - Wayfarer
         input.GrabKeyboardFocus();
 
-        input.CursorPosition = input.Text.Length;
-        input.SelectionStart = selectStart.GetOffset(input.Text.Length);
+        // Wayfarer - Multiline chatbox
+        input.CursorPosition = new CursorPos(input.TextLength, LineBreakBias.Bottom);
+        input.SelectionStart = new CursorPos(selectStart.GetOffset(input.TextLength), LineBreakBias.Bottom);
+        // End Wayfarer
     }
 
     public void CycleChatChannel(bool forward)
@@ -183,13 +318,52 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
 
     private void OnInputKeyBindDown(GUIBoundKeyEventArgs args)
     {
+        // Wayfarer - Multiline chatbox
         if (args.Function == EngineKeyFunctions.TextReleaseFocus)
         {
             ChatInput.Input.ReleaseKeyboardFocus();
-            ChatInput.Input.Clear();
+            // ChatInput.Input.Clear();
+            ChatInput.Input.TextRope = new Rope.Leaf("");
             args.Handle();
             return;
         }
+
+        // Fix bug with robust ctrl-backspace that prevents it from being used at the end of line
+        if (args.Function == EngineKeyFunctions.TextWordBackspace && ChatInput.Input.CursorPosition.Index == ChatInput.Input.TextLength)
+        {
+            var runes = Rope.EnumerateRunesReverse(ChatInput.Input.TextRope, ChatInput.Input.CursorPosition.Index);
+            int remAmt = -TextEditHelpers.PrevWordPosition(runes.GetEnumerator());
+
+            ChatInput.Input.TextRope = Rope.Delete(ChatInput.Input.TextRope, ChatInput.Input.CursorPosition.Index - remAmt, remAmt);
+            ChatInput.Input.CursorPosition = new CursorPos(ChatInput.Input.CursorPosition.Index - remAmt, LineBreakBias.Bottom);
+            SetInputHeight();
+        }
+
+        if (args.Function == EngineKeyFunctions.MultilineTextSubmit)
+        {
+            ChatInput.Input.InsertAtCursor("\n");
+            args.Handle();
+            return;
+        }
+        else if (args.Function == EngineKeyFunctions.TextSubmit)
+        {
+            Submit();
+            args.Handle();
+            return;
+        }
+
+        if (args.Function == EngineKeyFunctions.TextCursorUp && HistoryUp())
+        {
+            args.Handle();
+            return;
+        }
+
+        if (args.Function == EngineKeyFunctions.TextCursorDown && HistoryDown())
+        {
+            args.Handle();
+            return;
+        }
+        // End Wayfarer
 
         if (args.Function == ContentKeyFunctions.CycleChatChannelForward)
         {
@@ -205,10 +379,116 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
         }
     }
 
-    private void OnTextChanged(LineEditEventArgs args)
+    // WF - Multiline chatobox
+    public void Submit()
+    {
+        SaveHistoryRecord();
+        _historyPosition = 0;
+        _controller.SendMessage(this, SelectedChannel);
+    }
+
+    private bool SaveHistoryRecord()
+    {
+        var text = Rope.Collapse(ChatInput.Input.TextRope);
+        // Don't save duplicate history entries
+        if (text.Length > 0 && text != Rope.Collapse(_chatHistory.LastOrDefault() ?? new Rope.Leaf("")))
+        {
+            _chatHistory.Add(ChatInput.Input.TextRope);
+            _historyPosition = 0;
+
+            if (_chatHistory.Count > MaxHistorySize)
+            {
+                _chatHistory.RemoveAt(0);
+            }
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool HistoryUp()
+    {
+        var lines = GetLineBreaks(out var cursorLine);
+
+        // If the cursor is at the top of the box, go up in history
+        if (cursorLine == 1)
+        {
+            // If we're not in the midst of history, save our current text so we can get back to it
+            if (_historyPosition == 0 && SaveHistoryRecord())
+            {
+                _historyPosition = 1;
+            }
+
+            _historyPosition++;
+
+            if (_chatHistory.Count - _historyPosition >= 0)
+            {
+                // Restore the N-th history item from the end
+                ChatInput.Input.TextRope = _chatHistory[_chatHistory.Count - _historyPosition];
+                ChatInput.Input.CursorPosition = new CursorPos(ChatInput.Input.TextLength, LineBreakBias.Bottom);
+
+                SetInputHeight();
+
+                return true;
+            }
+            else
+            {
+                _historyPosition = _chatHistory.Count;
+                return false;
+            }
+        }
+        return false;
+    }
+
+    private bool HistoryDown()
+    {
+        var lines = GetLineBreaks(out var cursorLine);
+
+        // If the cursor is at the bottom of the box, go down in history
+        if (cursorLine == lines)
+        {
+            if (--_historyPosition > 0)
+            {
+                // Restore the N-th history item from the end
+                ChatInput.Input.TextRope = _chatHistory[_chatHistory.Count - _historyPosition];
+                ChatInput.Input.CursorPosition = new CursorPos(ChatInput.Input.TextLength, LineBreakBias.Bottom);
+
+                SetInputHeight();
+                ChatInput.Input.GrabKeyboardFocus(); // Force textbox to update scroll position
+
+                return true;
+            }
+            else
+            {
+                // Save our current text so we can get back to it
+                SaveHistoryRecord();
+                // No more history, to clear the textbox
+                ChatInput.Input.TextRope = new Rope.Leaf("");
+                ChatInput.Input.SetHeight = 22;
+                _historyPosition = 0;
+                return false;
+            }
+        }
+
+        return false;
+    }
+
+    private void SetInputHeight()
+    {
+        int maxLines = _cfg.GetCVar(CCVars.ChatLines);
+
+        var height = 22 * Math.Min(GetLineBreaks(), maxLines);
+        if ((int)ChatInput.Height != height)
+        {
+            ChatInput.Input.SetHeight = height;
+        }
+    }
+
+    private void OnTextChanged(TextEditEventArgs args)
     {
         // Update channel select button to correct channel if we have a prefix.
         _controller.UpdateSelectedChannel(this);
+        SetInputHeight();
 
         // Warn typing indicator about change
         _controller.NotifyChatTextChange();
@@ -217,23 +497,95 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
         _controller.UpdateTypingPreview(this);
     }
 
-    private void OnFocusEnter(LineEditEventArgs args)
+    // private void OnFocusEnter(LineEditEventArgs args)
+    private int GetLineBreaks()
     {
-        // Warn typing indicator about focus
-        _controller.NotifyChatFocus(true);
+        // _controller.CurrentChannel = SelectedChannel; // DeltaV - Alt Chat Indicators
+        // _controller.NotifyChatFocus(true);
+        return GetLineBreaks(out var _);
 
-        // Update the typing preview speech bubble above character's head.
-        _controller.UpdateTypingPreview(this);
     }
 
-    private void OnFocusExit(LineEditEventArgs args)
+    // private void OnFocusExit(LineEditEventArgs args)
+    private int GetLineBreaks(out int cursorLine)
     {
-        // Warn typing indicator about focus
-        _controller.NotifyChatFocus(false);
+        // _controller.NotifyChatFocus(false);
+        var font = StylePropertyDefault("font", UserInterfaceManager.ThemeDefaults.DefaultFont);
+        var scale = UIScale;
 
-        // Remove the typing preview when the chat box loses focus
-        _controller.ClearTypingPreview();
+        var cursorRune = ChatInput.Input.CursorPosition.Index;
+
+        var wordWrap = new WordWrapHelper(ChatInput.Input.PixelWidth);
+        int? breakLine;
+        int lines = 1;
+        int currentRune = 0;
+        int currentWordStart = 0;
+        cursorLine = 1;
+
+        foreach (var rune in Rope.EnumerateRunes(ChatInput.Input.TextRope))
+        {
+            var oldLines = lines;
+            currentRune++;
+            // Check for line breaks
+            wordWrap.NextRune(rune, out breakLine, out var breakNewLine, out var skip, out var isWordBoundry);
+            lines += CheckLineBreak(breakLine);
+            lines += CheckLineBreak(breakNewLine);
+
+            if (!skip && font.TryGetCharMetrics(rune, scale, out var metrics))
+            {
+                wordWrap.NextMetrics(metrics, out var breakLineMetrics, out var abort);
+                if (breakLineMetrics is { }) breakLine = breakLineMetrics;
+                lines += CheckLineBreak(breakLineMetrics);
+            }
+
+            // Update the cursor position
+            if (currentRune == cursorRune)
+            {
+                cursorLine = lines;
+            }
+
+            // When a word wraps, check if the cursor was in the part that got pushed down
+            if (breakLine is { } && oldLines != lines && cursorRune >= currentWordStart - (ChatInput.Input.CursorPosition.Bias == LineBreakBias.Bottom ? 1 : 0) && cursorRune <= currentRune)
+            {
+                // The cursor got pushed to the new line
+                cursorLine = lines;
+            }
+
+            // Check if a line break character has pushed the cursor down
+            if (breakNewLine is { } && cursorRune > breakNewLine)
+            {
+                // we are on the bottom of a newline, update to the new line number
+                cursorLine = lines;
+            }
+
+            // Record the start of a new word
+            if (isWordBoundry)
+            {
+                currentWordStart = currentRune;
+            }
+        }
+
+        wordWrap.FinalizeText(out breakLine);
+        lines += CheckLineBreak(breakLine);
+
+        // If our cursor is on the last word (or just before it), recheck in case the last word wrapped
+        if (cursorRune >= currentWordStart - (ChatInput.Input.CursorPosition.Bias == LineBreakBias.Bottom ? 1 : 0) && cursorRune <= currentRune)
+        {
+            cursorLine = lines;
+        }
+
+        return lines;
+
+        int CheckLineBreak(int? line)
+        {
+            if (line is { } l)
+            {
+                return 1;
+            }
+            return 0;
+        }
     }
+    // End Wayfarer
 
     protected override void Dispose(bool disposing)
     {
@@ -241,9 +593,24 @@ public partial class ChatBox : UIWidget, IEntityLinkClickHandler
 
         if (!disposing) return;
         _controller.UnregisterChat(this);
-        ChatInput.Input.OnTextEntered -= OnTextEntered;
+        // ChatInput.Input.OnTextEntered -= OnTextEntered; - Wayfarer
         ChatInput.Input.OnKeyBindDown -= OnInputKeyBindDown;
         ChatInput.Input.OnTextChanged -= OnTextChanged;
         ChatInput.ChannelSelector.OnChannelSelect -= OnChannelSelect;
+        _cfg.UnsubValueChanged(EECVars.ChatStackLastLines, UpdateChatStack); // EE - Chat stacking
     }
+
+    // EE - Chat stacking
+    private sealed class ChatStackData
+    {
+        public string WrappedMessage;
+        public Color ColorOverride;
+        public int RepeatCount = 0;
+        public ChatStackData(string wrappedMessage, Color colorOverride)
+        {
+            WrappedMessage = wrappedMessage;
+            ColorOverride = colorOverride;
+        }
+    }
+    // End EE - Chat stacking
 }

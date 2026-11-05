@@ -62,7 +62,7 @@
   layer: Mod
   isShaded: true
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_Funky/Interface/Misc/job_icons.rsi # DEN
     state: MindShield
 
 - type: statusIcon

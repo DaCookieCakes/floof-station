@@ -16,6 +16,7 @@
 
 - type: loadout
   id: ScientificBeret
+  groupBy: ScientistGear # FLOOF
   startingGear: ScientificBeret
   effects:
   - !type:GroupLoadoutEffect
@@ -23,11 +24,13 @@
 
 - type: loadout
   id: RoboticistCap
+  groupBy: ScientistGear # FLOOF
   equipment:
     head: ClothingHeadHatCorpsoft
 
 - type: loadout
   id: SkullBandana
+  groupBy: ScientistGear # FLOOF
   equipment:
     head: ClothingHeadBandSkull
 
@@ -35,32 +38,38 @@
 
 - type: loadout
   id: ScientistTie
+  groupBy: ScientistGear # FLOOF
   equipment:
     neck: ClothingNeckTieSci
 
 # Jumpsuit
 - type: loadout
   id: ScientistJumpsuit
+  groupBy: ScientistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitScientist
 
 - type: loadout
   id: ScientistJumpskirt
+  groupBy: ScientistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtScientist
 
 - type: loadout
   id: RoboticistJumpsuit
+  groupBy: ScientistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitRoboticist
 
 - type: loadout
   id: RoboticistJumpskirt
+  groupBy: ScientistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtRoboticist
 
 - type: loadout
   id: SeniorResearcherJumpsuit
+  groupBy: ScientistGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorResearcher
@@ -69,6 +78,7 @@
 
 - type: loadout
   id: SeniorResearcherJumpskirt
+  groupBy: ScientistGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorResearcher
@@ -78,47 +88,56 @@
 # Back
 - type: loadout
   id: ScientistBackpack
+  groupBy: ScientistGear # FLOOF
   equipment:
     back: ClothingBackpackScience
 
 - type: loadout
   id: ScientistSatchel
+  groupBy: ScientistGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelScience
 
 - type: loadout
   id: ScientistDuffel
+  groupBy: ScientistGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelScience
 
 # OuterClothing
 - type: loadout
   id: RegularLabCoat
+  groupBy: CommonGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatLab
 
 - type: loadout
   id: ScienceLabCoat
+  groupBy: ScientistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatRnd
 
 - type: loadout
   id: ScienceWintercoat
+  groupBy: ScientistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterSci
 
 - type: loadout
   id: RoboticistLabCoat
+  groupBy: ScientistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatRobo
 
 - type: loadout
   id: RoboticistWintercoat
+  groupBy: ScientistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterRobo
 
 - type: loadout
   id: SeniorResearcherLabCoat
+  groupBy: ScientistGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorResearcher
@@ -128,28 +147,33 @@
 # Gloves
 - type: loadout
   id: LatexGloves
+  groupBy: CommonGear # FLOOF
   equipment:
     gloves: ClothingHandsGlovesLatex
 
 - type: loadout
   id: RobohandsGloves
+  groupBy: ScientistGear # FLOOF
   equipment:
     gloves: ClothingHandsGlovesRobohands
 
 # Shoes
 - type: loadout
   id: ScienceWinterBoots
+  groupBy: ScientistGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWinterSci
 
 # ID
 - type: loadout
   id: ScientistPDA
+  groupBy: ScientistGear # FLOOF
   equipment:
     id: SciencePDA
 
 - type: loadout
   id: SeniorResearcherPDA
+  groupBy: ScientistGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorResearcher

@@ -3,6 +3,8 @@ using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Body;
 using Content.Shared.CCVar;
+using Content.Shared._Floof.Body;
+using Content.Shared._Floof.Consent;
 using Content.Shared.Clothing;
 using Content.Shared.DetailExaminable;
 using Content.Shared.Hands.Components;
@@ -46,6 +48,7 @@ public sealed partial class StationSpawningSystem : EntitySystem
     [Dependency] private SharedAccessSystem _accessSystem = default!;
     [Dependency] private SharedIdCardSystem _cardSystem = default!;
     [Dependency] private SharedPdaSystem _pdaSystem = default!;
+    [Dependency] private OrganSystem _organ = default!; // Floof - Genitals
 
     [Dependency] private EntityQuery<HandsComponent> _handsQuery;
     [Dependency] private EntityQuery<InventoryComponent> _inventoryQuery;
@@ -362,14 +365,36 @@ public sealed partial class StationSpawningSystem : EntitySystem
 
         if (profile != null)
         {
+            // Floof Section - Genitals
+            if (profile.Genitals.Penis)
+                _organ.AddOrgan(entity.Value, "OrganDick", "Torso");
+            if (profile.Genitals.Breasts)
+                _organ.AddOrgan(entity.Value, "OrganBreasts", "Torso");
+            if (profile.Genitals.Vagina)
+                _organ.AddOrgan(entity.Value, "OrganVagina", "Torso");
+            // End Floof Section - Genitals
+
             _visualBody.ApplyProfileTo(entity.Value, profile);
             _humanoidProfile.ApplyProfileTo(entity.Value, profile);
             _metadata.SetEntityName(entity.Value, profile.Name);
 
+            EnsureComp<ProfileTrackerComponent>(entity.Value, out var profileTracker);
+            profileTracker.Markings = profile.Appearance.Markings;
+                
+                
             if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
             {
                 AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
             }
+
+            // FLOOF: Added Consent.
+            if (profile.ConsentText != "")
+            {
+                AddComp<ConsentExaminableComponent>(entity.Value).Content = profile.ConsentText;
+            }
+
+            if (profile.ConsentToggles.Count > 0) // Floof - Consent toggles
+                EnsureComp<ConsentTogglesComponent>(entity.Value).Toggles = new(profile.ConsentToggles);
         }
 
         if (loadout != null)

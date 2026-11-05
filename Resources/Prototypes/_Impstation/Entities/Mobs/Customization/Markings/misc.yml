@@ -1,0 +1,756 @@
+- type: marking
+  id: Gills
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenchestgills
+
+- type: marking
+  id: ThavenChestScales
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenchestscales
+
+- type: marking
+  id: ThavenHeadScales
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenheadscales
+
+- type: marking
+  id: ThavenLArmScales
+  bodyPart: LArm
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenleftarmscales
+
+- type: marking
+  id: ThavenRArmScales
+  bodyPart: RArm
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenrightarmscales
+
+- type: marking
+  id: ThavenLLegScales
+  bodyPart: LLeg
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenleftlegscales
+
+- type: marking
+  id: ThavenRLegScales
+  bodyPart: RLeg
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenrightlegscales
+
+- type: marking
+  id: ThavenTopSurgery
+  bodyPart: Chest
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavennonaturals
+
+- type: marking
+  id: ThavenFishEars
+  bodyPart: HeadSide
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenfishears
+
+- type: marking
+  id: ThavenTattooVines
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventattoovines
+
+- type: marking
+  id: ThavenSpines
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenspines
+
+- type: marking
+  id: ThavenBiteMark
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenbitemark
+
+- type: marking
+  id: ThavenTattooWave
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventattoowave
+
+- type: marking
+  id: SharkminnowEyeliner
+  bodyPart: HeadTop
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventattoosharkminnoweyeliner
+
+- type: marking
+  id: ThavenTiger
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventiger1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventiger2
+
+- type: marking
+  id: ThavenTigerRArm
+  bodyPart: RArm
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventigerarmsr
+
+- type: marking
+  id: ThavenTigerLArm
+  bodyPart: LArm
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thaventigerarmsl
+
+- type: marking
+  id: ThavenHeadStripes
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenheadstripes
+
+- type: marking
+  id: ThavenBodyStripes
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenbodystripes
+
+- type: marking
+  id: ThavenEarsBigFins
+  bodyPart: HeadSide
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenearsbigfins
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenearsbigfins2
+
+- type: marking
+  id: ThavenHeadCap
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenheadcap1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: thavenheadcap2
+
+- type: marking
+  id: DionaLivingNymph
+  bodyPart: Chest
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: dionalivingnymph
+
+- type: marking
+  id: DionaMossChest
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: dionamosschest
+
+- type: marking
+  id: DionaMoonBloom
+  bodyPart: HeadTop
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: dionamoonbloom
+    shader: unshaded
+
+- type: marking
+  id: DionaBigFirefly
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: dionabigfirefly
+    shader: unshaded
+
+- type: marking
+  id: DionaFirefly
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: dionafirefly
+    shader: unshaded
+
+- type: marking
+  id: DionaPollenDust
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: dionapollendust
+
+- type: marking
+  id: SpiderMirror
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: spidermirror
+    shader: unshaded
+
+- type: marking
+  id: SpiderGlowEyes
+  bodyPart: Eyes
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: spidergloweyes
+    shader: unshaded
+
+- type: marking
+  id: SpiderEyesMulti
+  bodyPart: Eyes
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: spidereyesmulti1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: spidereyesmulti2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: spidereyesmulti3
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: spidereyesmulti4
+
+- type: marking
+  id: MothTrueButterfly
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothtruebutterfly1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothtruebutterfly2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothtruebutterfly3
+
+- type: marking
+  id: MothRhinoBeetle
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: rhinobeetle1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: rhinobeetle2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: rhinobeetle3
+
+- type: marking
+  id: MothGlasswing
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: glasswing1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: glasswing2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: glasswing3
+
+- type: marking
+  id: MothBee
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: bee1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: bee2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: bee3
+
+- type: marking
+  id: MothGlowAntenna
+  bodyPart: HeadTop
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: mothglowantenna
+    shader: unshaded
+
+- type: marking
+  id: MothFireflyOverlay
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: mothfirefly1
+    shader: unshaded
+
+- type: marking
+  id: MothFirefly
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothfirefly2
+
+- type: marking
+  id: MothBeetleTail
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: beetle1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: beetle2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: beetle3
+
+- type: marking
+  id: MothBeetleHorn1
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothbeetlehorn1
+
+- type: marking
+  id: MothBeetleHorn2
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothbeetlehorn2
+
+- type: marking
+  id: MothBiggerEyes
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: mothbiggereyes
+
+- type: marking
+  id: MothSnoth
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: snoth1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: snoth2
+
+- type: marking
+  id: VoxCocktail
+  bodyPart: Tail
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxcocktail1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxcocktail2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxcocktail3
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxcocktail4
+
+- type: marking
+  id: VoxTailBalled
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxtailballed
+  - sprite: Mobs/Customization/vox_parts.rsi
+    state: tail_stenciled
+
+- type: marking
+  id: VoxTailStripes
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxtailstripes
+  - sprite: Mobs/Customization/vox_parts.rsi
+    state: tail_stenciled
+
+- type: marking
+  id: VoxLArmProsthetic
+  bodyPart: LHand
+  forcedColoring: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#E4E4E4"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxarmprostheticl
+
+- type: marking
+  id: VoxRArmProsthetic
+  bodyPart: RHand
+  forcedColoring: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#E4E4E4"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxarmprostheticr
+
+- type: marking
+  id: VoxBeakColor
+  bodyPart: Snout
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxbeakcolor
+
+- type: marking
+  id: VoxBeakSplit
+  bodyPart: Snout
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxbeaksplit1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxbeaksplit2
+
+- type: marking
+  id: VoxBeakTipped
+  bodyPart: Snout
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxbeaktipped
+
+- type: marking
+  id: VoxChestPlumage
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxchestplumage
+
+- type: marking
+  id: VoxFootGradientLFoot
+  bodyPart: LFoot
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxfootgradientl1
+
+- type: marking
+  id: VoxFootGradientRFoot
+  bodyPart: RFoot
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxfootgradientr1
+
+- type: marking
+  id: VoxLegGradientLLeg
+  bodyPart: LLeg
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxfootgradientl2
+
+- type: marking
+  id: VoxLegGradientRLeg
+  bodyPart: RLeg
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxfootgradientr2
+
+- type: marking
+  id: VoxHandGradientRHand
+  bodyPart: RHand
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxhandgradientr1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxhandgradientr2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxhandgradientr3
+
+- type: marking
+  id: VoxHandGradientLHand
+  bodyPart: LHand
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxhandgradientl1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxhandgradientl2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxhandgradientl3
+
+- type: marking
+  id: VoxHeadGradient
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxheadgradient1
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxheadgradient2
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxheadgradient3
+
+- type: marking
+  id: VoxTailSingleStripe
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxtailsinglestripe
+
+- type: marking
+  id: VoxArmsStripesLHand
+  bodyPart: LArm
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxarmsstripesl
+
+- type: marking
+  id: VoxArmsStripesRHand
+  bodyPart: RArm
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxarmsstripesr
+
+- type: marking
+  id: VoxLegsStripesLLeg
+  bodyPart: LLeg
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxlegsstripesl
+
+- type: marking
+  id: VoxLegsStripesRLeg
+  bodyPart: RLeg
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxlegsstripesr
+
+- type: marking
+  id: VoxCheeks
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxcheeks
+
+- type: marking
+  id: VoxBelly
+  bodyPart: Chest
+  forcedColoring: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: voxbelly
+
+- type: marking
+  id: VitiligoHeadL
+  bodyPart: Head
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligoheadl
+
+- type: marking
+  id: VitiligoHeadR
+  bodyPart: Head
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligoheadr
+
+- type: marking
+  id: VitiligoHeadJaw
+  bodyPart: Head
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligoheadjaw
+
+- type: marking
+  id: VitiligoChestF
+  bodyPart: Chest
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligochestf
+
+- type: marking
+  id: VitiligoChestSpots
+  bodyPart: Chest
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligochestspots
+
+- type: marking
+  id: VitiligoArmR
+  bodyPart: RArm
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligoarmr
+
+- type: marking
+  id: VitiligoArmL
+  bodyPart: LArm
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligoarml
+
+- type: marking
+  id: VitiligoHandR
+  bodyPart: RHand
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligohandr
+
+- type: marking
+  id: VitiligoHandL
+  bodyPart: LHand
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligohandl
+
+- type: marking
+  id: VitiligoLegR
+  bodyPart: RLeg
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligolegr
+
+- type: marking
+  id: VitiligoLegL
+  bodyPart: LLeg
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFE5D6"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: vitiligolegl
+
+- type: marking
+  id: ChitinidBeetleHorn1
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: chitinidbeetlehorn1
+
+- type: marking
+  id: ChitinidBeetleHorn2
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: chitinidbeetlehorn2
+

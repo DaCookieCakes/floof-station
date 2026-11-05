@@ -1,0 +1,5 @@
+- type: soundCollection
+  id: ReptilianBellow
+  files:
+  - /Audio/_Floof/Effects/Emotes/bellow1.ogg
+  - /Audio/_Floof/Effects/Emotes/bellow2.ogg

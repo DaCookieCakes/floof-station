@@ -177,6 +177,9 @@ public sealed partial class TileAtmosphere : IGasMixtureHolder
     [ViewVariables]
     public float MaxFireTemperatureSustained;
 
+    [ViewVariables] // Floof - tile fires
+    public int PuddleSolutionFlammability { get; set; }
+    
     /// <summary>
     /// If true, then this tile is directly exposed to the map's atmosphere, either because the grid has no tile at
     /// this position, or because the tile type is not airtight.

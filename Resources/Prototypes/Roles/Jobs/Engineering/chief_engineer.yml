@@ -1,5 +1,6 @@
 - type: job
   id: ChiefEngineer
+  pay: 750 # Floof - bank
   name: job-name-ce
   description: job-description-ce
   playTimeTracker: JobChiefEngineer

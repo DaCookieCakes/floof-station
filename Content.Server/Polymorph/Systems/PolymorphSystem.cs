@@ -1,6 +1,7 @@
 using Content.Server.Actions;
 using Content.Server.Inventory;
 using Content.Server.Polymorph.Components;
+using Content.Shared._DV.Polymorph;
 using Content.Shared.Body;
 using Content.Shared.Buckle;
 using Content.Shared.Coordinates;
@@ -21,6 +22,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Robust.Shared.Serialization.Manager; // Starlight
 
 namespace Content.Server.Polymorph.Systems;
 
@@ -42,6 +44,8 @@ public sealed partial class PolymorphSystem : EntitySystem
     [Dependency] private SharedVisualBodySystem _visualBody = default!;
     [Dependency] private SharedMindSystem _mindSystem = default!;
     [Dependency] private MetaDataSystem _metaData = default!;
+    [Dependency] private IComponentFactory _compFact = default!; // Starlight
+    [Dependency] private ISerializationManager _serialization = default!; // Starlight
 
     private static readonly EntProtoId RevertPolymorphId = "ActionRevertPolymorph";
     private static readonly EntProtoId RevertPolymorphConfirmId = "ActionRevertPolymorphConfirm";
@@ -218,6 +222,20 @@ public sealed partial class PolymorphSystem : EntitySystem
 
         _mindSystem.MakeSentient(child);
 
+        // Starlight - start
+        // Copy specified components over
+        foreach (var compName in configuration.CopiedComponents)
+        {
+            if (!_compFact.TryGetRegistration(compName, out var reg)
+                || !EntityManager.TryGetComponent(uid, reg.Idx, out var comp))
+                continue;
+
+            var copy = _serialization.CreateCopy(comp, notNullableOverride: true);
+            copy.Owner = child;
+            AddComp(child, copy, true);
+        }
+        // Startlight - end
+
         var polymorphedComp = Factory.GetComponent<PolymorphedEntityComponent>();
         polymorphedComp.Parent = uid;
         polymorphedComp.Configuration = configuration;
@@ -237,7 +255,11 @@ public sealed partial class PolymorphSystem : EntitySystem
         {
             _damageable.SetDamage((child, damageParent), damage);
         }
-
+        
+        // DeltaV - Drop MindContainer entities on polymorph
+        var beforePolymorphedEv = new BeforePolymorphedEvent();
+        RaiseLocalEvent(uid, ref beforePolymorphedEv);
+        
         if (configuration.Inventory == PolymorphInventoryChange.Transfer)
         {
             _inventory.TransferEntityInventories(uid, child);

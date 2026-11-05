@@ -1,8 +1,8 @@
 - type: gameMap
   id: Sushi
   mapName: 'Sushi Station'
-  mapPath: /Maps/sushi.yml
-  minPlayers: 45
+  mapPath: /Maps/_Floof/sushi.yml
+  minPlayers: 0 # Floof - lower min players
   stations:
     Sushi:
       stationProto: StandardNanotrasenStation
@@ -64,3 +64,4 @@
             # Silicon (4)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 3 ]
+            Dogborg: [ 0, 3 ] # Floofstation

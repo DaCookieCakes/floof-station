@@ -21,28 +21,33 @@
 # Jumpsuit
 - type: loadout
   id: HoPJumpsuit
+  groupBy: HoPGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoP
 
 - type: loadout
   id: HoPJumpskirt
+  groupBy: HoPGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtHoP
 
 # Head
 - type: loadout
   id: HoPHead
+  groupBy: HoPGear # FLOOF
   equipment:
     head: ClothingHeadHatHopcap
 
 # Neck
 - type: loadout
   id: HoPCloak
+  groupBy: HoPGear # FLOOF
   equipment:
     neck: ClothingNeckCloakHop
 
 - type: loadout
   id: HoPMantle
+  groupBy: HoPGear # FLOOF
   equipment:
     neck: ClothingNeckMantleHOP
   effects:
@@ -57,6 +62,7 @@
 # Back
 - type: loadout
   id: HoPBackpackIan
+  groupBy: HoPGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: ProfessionalHoP
@@ -66,5 +72,6 @@
 # Outerclothing
 - type: loadout
   id: HoPWintercoat
+  groupBy: HoPGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterHoP

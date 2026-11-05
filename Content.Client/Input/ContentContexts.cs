@@ -1,4 +1,5 @@
 using Content.Shared.Input;
+using Content.Shared._EE.Input; // Floof - item offering
 using Robust.Shared.Input;
 
 namespace Content.Client.Input
@@ -53,6 +54,7 @@ namespace Content.Client.Input
 
             // actions should be common (for ghosts, mobs, etc)
             common.AddFunction(ContentKeyFunctions.OpenActionsMenu);
+            common.AddFunction(ContentKeyFunctions.OpenConsentWindow); // Floof - Make consent work
 
             foreach (var boundKey in ContentKeyFunctions.GetHotbarBoundKeys())
             {
@@ -96,8 +98,11 @@ namespace Content.Client.Input
                 ContentKeyFunctions.SmartEquipPocket1,
                 ContentKeyFunctions.SmartEquipPocket2,
                 ContentKeyFunctions.SmartEquipSuitStorage,
+                ContentKeyFunctions.SmartEquipWallet, // Frontier
                 ContentKeyFunctions.OpenBackpack,
                 ContentKeyFunctions.OpenBelt,
+                ContentKeyFunctions.OpenWallet, // Frontier
+                EEKeyFunctions.OfferItem, // Floof - item offering
                 ContentKeyFunctions.RotateObjectClockwise,
                 ContentKeyFunctions.RotateObjectCounterclockwise,
                 ContentKeyFunctions.FlipObject,
@@ -117,6 +122,8 @@ namespace Content.Client.Input
             }
             human.AddFunction(ContentKeyFunctions.ToggleKnockdown);
             human.AddFunction(ContentKeyFunctions.OpenEmotesMenu);
+            human.AddFunction(ContentKeyFunctions.ToggleCrawlingUnder); // Floofstation - under-table crawling
+            human.AddFunction(ContentKeyFunctions.OpenLanguageMenu); // Starlight
 
             var ghost = contexts.New("ghost", "human");
             ghost.AddFunction(EngineKeyFunctions.MoveUp);

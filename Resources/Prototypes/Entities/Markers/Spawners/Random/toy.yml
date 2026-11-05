@@ -41,6 +41,17 @@
     - id: PlushieVulp
     - id: PlushieSheep
     - id: PlushieSpaceSheep
+    - id: PlushieShadekin # Floof: Added.
+    - id: PlushieFeroxi # Floof: Added.
+    # ================================================================
+    # Floofstation: this has been replaced with our own table        #
+    # See RandomPlushieTable in the _Floof namespace                 #
+    # In this table there's a 99% to spawn a plushie from that table #
+    # ================================================================
+    - !type:NestedSelector
+      tableId: RandomPlushieTable
+      weight: 400
+    # ============================================================== #
     - !type:GroupSelector
       children:
       - id: PlushieBee
@@ -334,6 +345,12 @@
       - id: SingularityToy
       - id: TeslaToy
       - id: PonderingOrb
+    - !type:GroupSelector # Floof section color paints
+      children:
+      - id: FunnyPaint
+      - id: FunnyPaintYellow
+        amount: 2
+        # Floof section end
 
 # Entities that don't do much more than make a unique sound. Plushies excluded.
 - type: entityTable # size 1x2  # price 100

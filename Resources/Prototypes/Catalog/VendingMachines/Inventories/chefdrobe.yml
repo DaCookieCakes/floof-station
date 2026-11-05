@@ -12,5 +12,16 @@
     ClothingShoesColorBlack: 2
     ClothingShoesChef: 2
     ClothingBeltChef: 2
+    # FLOOF: Start
+    ClothingHandsGlovesNitrile: 2
+    ClothingHandsGlovesLatex: 2
+    ClothingHandsServiceWarmers: 2
+    ClothingUnderSocksService: 2
+    ClothingUniformServiceThong: 2
+    ClothingHandsChefWarmers: 2
+    ClothingUndergarmentSocksBase: 2
+    ClothingUniformChefThong: 2
+    # FLOOF: End
   contrabandInventory:
     ToyFigurineChef: 1
+    ClothingUniformSurgeonGerneralThong: 2 # FLOOF

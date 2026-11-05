@@ -27,6 +27,9 @@ trait-paracusia-desc = You hear sounds that aren't really there.
 trait-unrevivable-name = Unrevivable
 trait-unrevivable-desc = You are unable to be revived by defibrillators.
 
+trait-pirate-accent-name = Pirate accent
+trait-pirate-accent-desc = You can't stop speaking like a pirate!
+
 trait-accentless-name = Accentless
 trait-accentless-desc = You don't have the accent that your species would usually have.
 
@@ -44,6 +47,12 @@ trait-snoring-desc = You will snore while sleeping.
 
 trait-liar-name = Pathological liar
 trait-liar-desc = You can hardly bring yourself to tell the truth. Sometimes you lie anyway.
+
+trait-cowboy-name = Cowboy accent
+trait-cowboy-desc = You speak with a distinct cowboy accent!
+
+trait-italian-name = Italian accent
+trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
 
 trait-german-name = German accent
 trait-german-desc = You seem to come from space Germany.

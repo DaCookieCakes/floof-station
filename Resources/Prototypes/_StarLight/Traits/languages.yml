@@ -1,0 +1,40 @@
+- type: trait
+  id: ForeignerLight
+  name: trait-language-foreigner-light-name
+  description: trait-language-foreigner-light-desc
+  category: LanguageTraits
+  cost: -1
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: ForeignerTrait
+      cantUnderstand: false
+      baseTranslator: TranslatorForeigner
+
+- type: trait
+  id: Foreigner
+  name: trait-language-foreigner-name
+  description: trait-language-foreigner-desc
+  category: LanguageTraits
+  cost: -2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: ForeignerTrait
+      baseTranslator: TranslatorForeigner
+
+- type: trait
+  id: SignLanguage
+  name: trait-language-signlanguage-name
+  description: trait-language-signlanguage-desc
+  category: LanguageTraits
+  cost: 1
+  effects:
+  - !type:AddLangEffect
+    languagesSpoken:
+    - Sign
+    languagesUnderstood:
+    - Sign
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageSpeaker

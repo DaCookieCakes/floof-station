@@ -121,6 +121,7 @@
   weight: -20 # Displays after all regular crew departments, including Civilian, both because they're mechanically distinct and because they're subordinate to all crew by default
   roles:
   - Borg
+  - Dogborg # Floofstation
   - StationAi
 
 - type: department

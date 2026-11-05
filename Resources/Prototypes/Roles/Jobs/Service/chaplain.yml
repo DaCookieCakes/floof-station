@@ -1,5 +1,6 @@
 - type: job
   id: Chaplain
+  pay: 400 # Floof - bank
   name: job-name-chaplain
   description: job-description-chaplain
   playTimeTracker: JobChaplain

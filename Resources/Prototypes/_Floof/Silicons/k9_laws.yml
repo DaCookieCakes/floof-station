@@ -1,0 +1,31 @@
+# Lawset for K9 security dogborgs, applied by BorgTypeLaws when the type is picked.
+
+- type: siliconLaw
+  id: K9Protocol1
+  order: 1
+  lawString: law-k9-1
+
+- type: siliconLaw
+  id: K9Protocol2
+  order: 2
+  lawString: law-k9-2
+
+- type: siliconLaw
+  id: K9Protocol3
+  order: 3
+  lawString: law-k9-3
+
+- type: siliconLaw
+  id: K9Protocol4
+  order: 4
+  lawString: law-k9-4
+
+- type: siliconLawset
+  id: K9Protocol
+  name: law-k9-name
+  laws:
+  - K9Protocol1
+  - K9Protocol2
+  - K9Protocol3
+  - K9Protocol4
+  obeysTo: laws-owner-crew

@@ -10,6 +10,14 @@
     ClothingHeadsetService: 2
     ClothingOuterWinterJani: 2
     ClothingNeckScarfStripedPurple: 3
+    # FLOOF: Start
+    ClothingHandsServiceWarmers: 2
+    ClothingUnderSocksService: 2
+    ClothingUniformServiceThong: 2
+    ClothingHandsJanitorWarmers: 2
+    ClothingUnderSocksJanitor: 2
+    ClothingUniformJanitorThong: 2
+    # FLOOF: End
   contrabandInventory:
     ToyFigurineJanitor: 1
   emaggedInventory:

@@ -1,0 +1,48 @@
+- type: decal
+  id: FloofStationSign1
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof1
+
+- type: decal
+  id: FloofStationSign2
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof2
+
+- type: decal
+  id: FloofStationSign3
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof3
+
+- type: decal
+  id: FloofStationSign4
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof4
+
+- type: decal
+  id: FloofStationSign5
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof5
+
+- type: decal
+  id: FloofStationSign6
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof6
+
+- type: decal
+  id: FloofStationSign7
+  tags: ["station"]
+  sprite:
+    sprite: _Floof/Decals/floofsign.rsi
+    state: floof7

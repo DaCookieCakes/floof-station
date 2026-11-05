@@ -472,6 +472,17 @@
     mindRoles:
     - MindRoleGhostRoleSilicon
     job: StationAi
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Machine
+    understands:
+    - GalacticCommon
+    - Machine
+    # Starlight-end
+
+
 
 # Hologram projection that the AI's eye tracks.
 - type: entity

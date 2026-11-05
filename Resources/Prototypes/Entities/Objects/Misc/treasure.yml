@@ -162,6 +162,7 @@
     sprite: Objects/Misc/coins.rsi
   - type: Item
     size: Tiny
+  - type: NFCoin # Frontier: relying on inheritance for other coins.
 
 - type: entity
   parent: BaseCoin

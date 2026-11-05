@@ -16,6 +16,8 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Objectives.Systems;
 using Content.Shared.Players;
 using Content.Shared.Speech;
+using Content.Shared._Starlight.Language.Systems; // Starlight-edit
+using Content.Shared._Starlight.Language.Components; // Starlight-edit
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
@@ -43,6 +45,7 @@ public abstract partial class SharedMindSystem : EntitySystem
     [Dependency] private SharedObjectivesSystem _objectives = default!;
     [Dependency] private SharedPhysicsSystem _physics = default!;
     [Dependency] private SharedPlayerSystem _player = default!;
+    [Dependency] private SharedLanguageSystem _language = default!; // Starlight-edit
 
     [ViewVariables]
     protected readonly Dictionary<NetUserId, EntityUid> UserMinds = new();
@@ -767,6 +770,15 @@ public abstract partial class SharedMindSystem : EntitySystem
             EnsureComp<SpeechComponent>(uid);
             EnsureComp<EmotingComponent>(uid);
         }
+
+        // Starlight-start
+        var speaker = EnsureComp<LanguageSpeakerComponent>(uid);
+
+        // If the entity already speaks some language (like monkey or robot), we do nothing else.
+        // Otherwise, we give them the fallback language
+        if (speaker.SpokenLanguages.Count == 0)
+            _language.AddLanguage(uid, SharedLanguageSystem.FallbackLanguagePrototype);
+        // Starlight - End
 
         EnsureComp<ExaminerComponent>(uid);
     }

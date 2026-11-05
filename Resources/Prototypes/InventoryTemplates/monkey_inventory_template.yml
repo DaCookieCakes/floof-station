@@ -44,7 +44,7 @@
     stripTime: 3
     uiWindowPos: 2,0
     strippingWindowPos: 2,5
-    dependsOn: outerClothing
+    dependsOn: jumpsuit # FLOOF: 'outerClothing'
     dependsOnComponents:
     - type: AllowSuitStorage
     displayName: Suit Storage
@@ -67,3 +67,13 @@
     whitelist:
       tags:
         - MonkeyWearable
+  # Frontier: wallet slot
+  - name: wallet
+    slotTexture: wallet
+    slotFlags: WALLET
+    stripTime: 6
+    uiWindowPos: 2,0
+    strippingWindowPos: 2,3
+    dependsOn: jumpsuit
+    displayName: Wallet
+  # End Frontier: wallet slot

@@ -1,0 +1,106 @@
+- type: entityTable
+  id: FloofGreenEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: AnomalySpawn
+    - id: BluespaceArtifact
+    - id: BluespaceLocker
+    - id: BreakerFlip
+    - id: BureaucraticError
+    - id: ClericalError
+    - id: ClosetSkeleton
+    - id: GasLeak
+    - id: MassHallucinations
+    - id: PowerGridCheck
+    - id: RandomSentience
+    - id: SolarFlare
+    - id: VentClog
+    - !type:NestedSelector
+      tableId: CalmPestEventsTable # mice, roaches, snails
+    - !type:NestedSelector
+      tableId: CargoGiftsTable
+
+# Yellow - the usual round, minus the station-ending threats.
+- type: entityTable
+  id: FloofYellowEventsTable
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FloofGreenEventsTable
+    - id: GreytideVirus
+    - id: IonStorm
+    - id: KudzuGrowth
+    - id: SlimesSpawnHorde
+    - id: SnakeSpawnHorde
+    - id: SpiderSpawnHorde
+    - id: SpiderClownSpawnHorde
+    - id: NinjaSpawn
+    - id: ParadoxCloneSpawn
+    - id: RevenantSpawn
+    - id: SleeperAgents
+    - id: SpaceChangelingSpawn
+    - !type:NestedSelector
+      tableId: SpicyPestEventsTable # rat king, snail migration
+    - !type:NestedSelector
+      tableId: FloofDerelictNTBorgEventTable
+
+# Red - the gloves come off.
+- type: entityTable
+  id: FloofRedEventsTable
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FloofYellowEventsTable
+    - id: DragonSpawn
+    - id: LoneOpsSpawn
+    - id: WizardSpawn
+    - id: DerelictSyndicateAssaultCyborgSpawn
+
+- type: entityTable
+  id: FloofDerelictNTBorgEventTable # DerelictBorgEventTable without the syndicate assault borg
+  table: !type:GroupSelector
+    children:
+    - id: DerelictEngineerCyborgSpawn
+    - id: DerelictGenericCyborgSpawn
+    - id: DerelictJanitorCyborgSpawn
+    - id: DerelictMedicalCyborgSpawn
+    - id: DerelictMiningCyborgSpawn
+
+- type: entityTable
+  id: FloofYellowMeteorSwarmEventsTable # BasicMeteorSwarmEventsTable without large swarms and the immovable rod
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: MeteorSwarmDustEventsTable
+    - id: MeteorSwarmSmall
+    - id: MeteorSwarmMedium
+    - id: UristSwarm
+    - id: ClownSwarm
+    - id: CowSwarm
+    - id: PotatoSwarm
+    - id: FunSwarm
+
+# Space traffic
+- type: entityTable
+  id: FloofGreenSpaceTrafficTable
+  table: !type:AllSelector
+    children:
+    - id: UnknownShuttleHonki
+    - id: UnknownShuttleNTQuark
+
+- type: entityTable
+  id: FloofYellowSpaceTrafficTable
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FloofGreenSpaceTrafficTable
+    - id: UnknownShuttleSyndieEvacPod
+
+- type: entityTable
+  id: FloofRedSpaceTrafficTable
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FloofYellowSpaceTrafficTable
+    - !type:NestedSelector
+      tableId: UnknownShuttlesHostileTable

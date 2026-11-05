@@ -14,6 +14,8 @@
         <Label Name="DescriptionLabel"
                ClipText="True"
                HorizontalExpand="True"/>
+        <!-- Floof - Persistence -->
+        <Label Name="LiveLabel" Text="{Loc 'live-character-picker-badge'}" ToolTip="{Loc 'live-character-picker-badge-tooltip'}" StyleClasses="LabelSubText" Visible="False" Margin="4 0"/>
         <Button Name="DeleteButton"
                 Text="{Loc 'character-setup-gui-character-picker-button-delete-button'}"/>
         <Button Name="ConfirmDeleteButton"

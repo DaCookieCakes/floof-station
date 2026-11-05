@@ -18,6 +18,15 @@
   name: Ian
   description: Favorite pet corgi.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/corgi.rsi
@@ -74,6 +83,15 @@
   name: Old Ian
   description: Still the favorite pet corgi. Love his wheels.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -99,6 +117,15 @@
   name: Lisa
   description: Ian's favorite corgi.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -141,6 +168,15 @@
   name: real mouse
   description: It's 100% a real hungry mouse.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -165,6 +201,15 @@
   name: Puppy Ian
   description: Favourite puppy corgi. Awww.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Grammar
     attributes:
       proper: true
@@ -184,6 +229,15 @@
   name: Runtime
   description: Professional mouse hunter. Escape artist.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Cat
+    understands:
+    - Cat
+    - GalacticCommon
+  # Starlight-end
   - type: NpcFactionMember
     factions:
       - PetsNT
@@ -211,6 +265,15 @@
   name: Exception
   description: Ask nicely, and maybe they'll give you one of their spare lives.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Cat
+    understands:
+    - Cat
+    - GalacticCommon
+  # Starlight-end
   - type: NpcFactionMember
     factions:
       - PetsNT
@@ -235,6 +298,15 @@
   name: Floppa
   description: He out here.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Cat
+    understands:
+    - Cat
+    - GalacticCommon
+  # Starlight-end
   - type: Fixtures
     fixtures:
       fix1:
@@ -278,6 +350,15 @@
   name: Bingus
   description: Bingus my beloved...
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Cat
+    understands:
+    - Cat
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/bingus.rsi
@@ -336,6 +417,15 @@
   name: McGriff
   description: This dog can tell something smells around here, and that something is CRIME!
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/mcgriff.rsi
@@ -382,8 +472,6 @@
     refineResult:
     - id: FoodMeat
       amount: 2
-  - type: ReplacementAccent
-    accent: dog
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-dog
@@ -447,6 +535,15 @@
   name: Walter
   description: He likes chems and treats. Walter.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/walter.rsi
@@ -480,8 +577,6 @@
     refineResult:
     - id: FoodMeat
       amount: 3
-  - type: ReplacementAccent
-    accent: dog
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-dog
@@ -600,6 +695,15 @@
   name: Alexander
   description: Chef's finest colleague.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Pig
+    understands:
+    - Pig
+    - GalacticCommon
+  # Starlight-end
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: petting-success-pig
@@ -622,6 +726,15 @@
   name: Renault
   description: The captain's trustworthy fox.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Fox
+    understands:
+    - Fox
+    - GalacticCommon
+  # Starlight-end
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: petting-success-soft-floofy
@@ -653,6 +766,15 @@
   name: Hamlet
   description: A grumpy, cute and fluffy hamster.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Pets/hamlet.rsi
@@ -722,6 +844,15 @@
   name: Shiva
   description: The first defender of the station.
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Chittin
+    understands:
+    - Chittin
+    - GalacticCommon
+  # Starlight-end
   - type: InteractionPopup
     successChance: 0.5 # spider is mean
     interactSuccessString: petting-success-tarantula
@@ -822,6 +953,15 @@
   name: Smile
   description: This masterpiece has gone through thousands of experiments. But it is the sweetest creature in the world. Smile Slime!
   components:
+  # Starlight-start: Languages
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks:
+    - Fox
+    understands:
+    - Fox
+    - Bubblish
+  # Starlight-end
   - type: Sprite
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
@@ -904,6 +1044,14 @@
   name: Pun Pun
   description: A prominent representative of monkeys with unlimited access to alcohol.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Ancestor
+    understands:
+    - Ancestor
+    - GalacticCommon
+  # Starlight-end
   - type: GhostRole
     prob: 1
     makeSentient: true
