@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Composited from liquid-water.rsi, created by vladimir.s",
+  "size": { "x": 32, "y": 32 },
+  "rsic": false,
+  "states": [ { "name": "water", "delays": [ [ 0.35, 0.35, 0.35, 0.35 ] ] } ]
+}

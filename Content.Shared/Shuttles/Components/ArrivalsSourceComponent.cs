@@ -1,3 +1,4 @@
+#if false // Floof - moved to _Floof/Arrivals
 using Content.Shared.Shuttles.Systems;
 
 namespace Content.Shared.Shuttles.Components;
@@ -7,3 +8,4 @@ namespace Content.Shared.Shuttles.Components;
 /// </summary>
 [RegisterComponent, Access(typeof(ArrivalsSystem))]
 public sealed partial class ArrivalsSourceComponent : Component;
+#endif

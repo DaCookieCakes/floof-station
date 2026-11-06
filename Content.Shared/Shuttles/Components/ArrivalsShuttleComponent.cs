@@ -1,3 +1,4 @@
+#if false // Floof - moved to _Floof/Arrivals
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
@@ -23,3 +24,4 @@ public sealed partial class ArrivalsShuttleComponent : Component
     public bool FirstRun = true;
 
 }
+#endif

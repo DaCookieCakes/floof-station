@@ -38,6 +38,7 @@
   abstract: true
   components:
     - type: StationArrivals
+      arrivalsMap: /Maps/_Floof/Misc/terminal.yml # Floof - Arrivals
 
 - type: entity
   id: BaseStationShuttles
