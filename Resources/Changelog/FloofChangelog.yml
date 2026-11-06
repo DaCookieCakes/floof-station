@@ -861,3 +861,12 @@ Entries:
   id: 104
   time: '2026-11-06T13:21:21.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/332
+- author: portfiend
+  changes:
+    - type: Add
+      message: Ported beach umbrellas!
+    - type: Fix
+      message: Lounge chairs now lay you down face up in every direction.
+  id: 105
+  time: '2026-11-06T22:10:45.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/336
