@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 11/05/2026 07:36:45
-  entityCount: 3
+  entityCount: 27
 maps:
 - 1
 grids:
@@ -989,4 +989,139 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: 54.5,0.5
+- proto: WallSolid
+  entities:
+  - uid: 4
+    components:
+    - type: Transform
+      pos: -1.5,2.5
+      parent: 2
+  - uid: 5
+    components:
+    - type: Transform
+      pos: -0.5,2.5
+      parent: 2
+  - uid: 6
+    components:
+    - type: Transform
+      pos: 0.5,2.5
+      parent: 2
+  - uid: 12
+    components:
+    - type: Transform
+      pos: 1.5,2.5
+      parent: 2
+  - uid: 13
+    components:
+    - type: Transform
+      pos: 1.5,1.5
+      parent: 2
+  - uid: 14
+    components:
+    - type: Transform
+      pos: 1.5,0.5
+      parent: 2
+  - uid: 15
+    components:
+    - type: Transform
+      pos: 1.5,-0.5
+      parent: 2
+  - uid: 29
+    components:
+    - type: Transform
+      pos: -2.5,2.5
+      parent: 2
+      rot: 3.141592653589793 rad
+  - uid: 30
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 2
+  - uid: 31
+    components:
+    - type: Transform
+      pos: -3.5,1.5
+      parent: 2
+  - uid: 32
+    components:
+    - type: Transform
+      pos: -3.5,0.5
+      parent: 2
+  - uid: 33
+    components:
+    - type: Transform
+      pos: -3.5,-0.5
+      parent: 2
+  - uid: 34
+    components:
+    - type: Transform
+      pos: 1.5,-1.5
+      parent: 2
+  - uid: 35
+    components:
+    - type: Transform
+      pos: -3.5,-1.5
+      parent: 2
+- proto: TableGlass
+  entities:
+  - uid: 19
+    components:
+    - type: Transform
+      pos: -1.5,1.5
+      parent: 2
+  - uid: 20
+    components:
+    - type: Transform
+      pos: -0.5,1.5
+      parent: 2
+  - uid: 21
+    components:
+    - type: Transform
+      pos: 0.5,1.5
+      parent: 2
+- proto: SodaDispenser
+  entities:
+  - uid: 22
+    components:
+    - type: Transform
+      pos: -1.5,1.5
+      parent: 2
+- proto: BoozeDispenser
+  entities:
+  - uid: 23
+    components:
+    - type: Transform
+      pos: -0.5,1.5
+      parent: 2
+- proto: VendingMachineBooze
+  entities:
+  - uid: 36
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 2
+- proto: TableCounterWood
+  entities:
+  - uid: 37
+    components:
+    - type: Transform
+      pos: 0.5,-1.5
+      parent: 2
+  - uid: 38
+    components:
+    - type: Transform
+      pos: -0.5,-1.5
+      parent: 2
+  - uid: 39
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 2
+- proto: Windoor
+  entities:
+  - uid: 40
+    components:
+    - type: Transform
+      pos: -2.5,-1.5
+      parent: 2
 ...
