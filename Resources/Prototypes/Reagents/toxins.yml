@@ -39,6 +39,10 @@
     Bloodstream:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ MetabolizerFeroxi ]
+          inverted: true
         damage:
           types:
             Poison: 4
@@ -413,7 +417,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Arachnid ] # Applying damage to the mobs with lower metabolism capabilities
+          type: [ Animal, Arachnid, MetabolizerFeroxi ] # Applying damage to the mobs with lower metabolism capabilities
         damage:
           types:
             Poison: 0.4
@@ -421,7 +425,7 @@
         probability: 0.04 #Scaled for time, not metabolismrate.
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Arachnid ]
+          type: [ Animal, Arachnid, MetabolizerFeroxi ]
 
 - type: reagent
   id: Amatoxin
@@ -489,7 +493,7 @@
       - !type:PopupMessage
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Arachnid ]
+          type: [ Animal, Vox, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
           inverted: true
         type: Local
         visualType: MediumCaution
@@ -499,12 +503,12 @@
         probability: 0.1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant, Arachnid ]
+          type: [ Animal, Vox, Plant, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
           inverted: true
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant, Arachnid ]
+          type: [ Animal, Vox, Plant, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
           inverted: true
         damage:
           types:
@@ -519,7 +523,7 @@
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Arachnid ]
+          type: [ Animal, Arachnid, MetabolizerFeroxi, Harpy, Shadekin, MetabolizerRodentia ] # Floof - Rodentia raw-food compatibility; FLOOF: Feroxi, DeltaV: Harpy, Shadekin
         reagent: Protein
         amount: 0.5
       - !type:AdjustReagent
@@ -547,7 +551,7 @@
           reagent: Allicin
           min: 1
         - !type:MetabolizerTypeCondition
-          type: [ Animal ]
+          type: [ Animal, MetabolizerFeroxi ]
         damage:
           types:
             Poison: 0.06
@@ -575,7 +579,7 @@
           reagent: Honk
           min: 1
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Arachnid ]
+          type: [ Animal, Arachnid, MetabolizerFeroxi ]
         damage:
           types:
             Poison: 0.06

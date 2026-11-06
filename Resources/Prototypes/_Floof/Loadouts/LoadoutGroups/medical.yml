@@ -1,0 +1,136 @@
+# BASES #
+- type: loadoutGroup
+  id: MedicalGloves
+  abstract: true
+  name: loadout-group-medical-gloves
+  minLimit: 0
+  loadouts:
+  - NitrileGloves
+  - LatexGloves
+
+# Glasses
+- type: loadoutGroup
+  parent: Glasses
+  id: ChemistGlasses
+  name: loadout-group-chemist-glasses
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - ChemicalGoggles
+  - SafetyGlasses
+
+- type: loadoutGroup
+  parent: Glasses
+  id: MedicalGlasses
+  name: loadout-group-medical-glasses
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - MedicalHud
+  - PrescriptionMedicalHud
+
+# Collars
+- type: loadoutGroup
+  parent: MedicalCollars
+  id: ChemistNeck
+  name: loadout-group-chemist-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: MedicalCollars
+  id: ParamedicNeck
+  name: loadout-group-paramedic-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: MedicalCollars
+  id: PsychologistNeck
+  name: loadout-group-psychologist-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: MedicalCollars
+  id: MedicalDoctorNeck
+  name: loadout-group-medical-doctor-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: MedicalCollars
+  id: MedicalInternNeck
+  name: loadout-group-medical-intern-neck
+  minLimit: 0
+
+# Gloves
+- type: loadoutGroup
+  parent: MedicalGloves
+  id: MedicalDoctorGloves
+  name: loadout-group-medical-doctor-gloves
+  minLimit: 0
+  loadouts:
+  - MedicalArmWarmers
+
+- type: loadoutGroup
+  parent: MedicalGloves
+  id: ChemistGloves
+  name: loadout-group-chemist-gloves
+  minLimit: 0
+  loadouts:
+  - MedicalArmWarmers
+  - ChemistArmWarmers
+
+- type: loadoutGroup
+  parent: MedicalGloves
+  id: ParamedicGloves
+  name: loadout-group-paramedic-gloves
+  minLimit: 0
+  loadouts:
+  - MedicalArmWarmers
+  - ParamedicArmWarmers
+
+- type: loadoutGroup
+  parent: MedicalGloves
+  id: CMOGloves
+  name: loadout-group-cmo-gloves
+  minLimit: 0
+  loadouts:
+  - CMOArmWarmers
+
+# Socks
+- type: loadoutGroup
+  id: MedicalDoctorSocks
+  name: loadout-group-medical-doctor-socks
+  minLimit: 0
+  loadouts:
+  - MedicalThighHighs
+
+- type: loadoutGroup
+  id: ChemistSocks
+  name: loadout-group-chemist-socks
+  minLimit: 0
+  loadouts:
+  - MedicalThighHighs
+  - ChemistThighHighs
+
+- type: loadoutGroup
+  id: ParamedicSocks
+  name: loadout-group-paramedic-socks
+  minLimit: 0
+  loadouts:
+  - MedicalThighHighs
+  - ParamedicThighHighs
+
+- type: loadoutGroup
+  id: CMOSocks
+  name: loadout-group-cmo-socks
+  minLimit: 0
+  loadouts:
+  - CMOThighHighs
+
+# Shoes
+- type: loadoutGroup
+  id: PsychologistShoes
+  name: loadout-group-psychologist-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - LeatherShoes

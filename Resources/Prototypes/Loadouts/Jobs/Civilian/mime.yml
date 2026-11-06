@@ -1,75 +1,89 @@
 # Head
 - type: loadout
   id: MimeHead
+  groupBy: MimeGear # FLOOF
   equipment:
     head: ClothingHeadHatBeret
 
 - type: loadout
   id: MimeFrenchBeret
+  groupBy: MimeGear # FLOOF
   equipment:
     head: ClothingHeadHatBeretFrench
 
 - type: loadout
   id: MimeCap
+  groupBy: MimeGear # FLOOF
   equipment:
     head: ClothingHeadHatMimesoft
 
 # Mask
 - type: loadout
   id: MimeMask
+  groupBy: MimeGear # FLOOF
   equipment:
     mask: ClothingMaskMime
 
 - type: loadout
   id: MimeMaskSad
+  groupBy: MimeGear # FLOOF
   equipment:
     mask: ClothingMaskSadMime
 
 - type: loadout
   id: MimeMaskScared
+  groupBy: MimeGear # FLOOF
   equipment:
     mask: ClothingMaskScaredMime
 
 # Jumpsuit
 - type: loadout
   id: MimeJumpsuit
+  groupBy: MimeGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitMime
 
 - type: loadout
   id: MimeJumpskirt
+  groupBy: MimeGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtMime
 
 # Back
 - type: loadout
   id: MimeBackpack
+  groupBy: MimeGear # FLOOF
   equipment:
     back: ClothingBackpackMime
 
 - type: loadout
   id: MimeSatchel
+  groupBy: MimeGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelMime
 
 - type: loadout
   id: MimeDuffel
+  groupBy: MimeGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelMime
 
 # Outerclothing
 - type: loadout
   id: MimeWintercoat
+  groupBy: MimeGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterMime
 
 # Belt
 - type: loadout
   id: MimeSuspendersRed
+  groupBy: MimeGear # FLOOF
   equipment:
     belt: ClothingBeltSuspendersRed
 
 - type: loadout
   id: MimeSuspendersBlack
+  groupBy: MimeGear # FLOOF
   equipment:
     belt: ClothingBeltSuspendersBlack

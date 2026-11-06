@@ -1,5 +1,6 @@
 - type: job
   id: TramDriver
+  pay: 400 # Floof - bank
   name: job-name-tram-driver
   description: job-description-tram-driver
   playTimeTracker: JobTramDriver
@@ -18,7 +19,7 @@
 - type: startingGear
   id: TramDriverGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
+  #  shoes: ClothingShoesBootsLaceup # FLOOF
     id: TramDriverPDA
     ears: ClothingHeadsetService
     neck: ClothingNeckTieSerious

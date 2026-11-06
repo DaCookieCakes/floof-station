@@ -29,6 +29,7 @@
     tags:
     - Pizza
     - ReptilianFood
+    - FeroxiFood # Floof: Added.
 
 - type: entity
   parent: [SolutionVeryTiny, FoodInjectableBase] # Not sliceable
@@ -54,6 +55,7 @@
     tags:
     - Pizza
     - ReptilianFood
+    - FeroxiFood # Floof: Added.
     - Slice
 
 # Pizza

@@ -1,0 +1,17 @@
+- type: speechVerb
+  id: SpeechVerbFeroxi
+  name: chat-speech-verb-name-feroxi
+  speechVerbStrings:
+  - chat-speech-verb-feroxi-1
+  - chat-speech-verb-feroxi-2
+  - chat-speech-verb-feroxi-3
+  - chat-speech-verb-feroxi-4
+
+- type: speechVerb
+  id: Rodentia
+  name: chat-speech-verb-name-rodentia
+  speechVerbStrings:
+  - chat-speech-verb-rodentia-1
+  - chat-speech-verb-rodentia-2
+  - chat-speech-verb-rodentia-3
+  - chat-speech-verb-rodentia-4

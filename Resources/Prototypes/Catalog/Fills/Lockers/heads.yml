@@ -6,6 +6,8 @@
     - id: BoxFolderQmClipboard
     - id: BoxQMCircuitboards
     - id: BoxQMStamps
+    - id: CargoShuttleConsoleCircuitboard # Floof - for the salvage console
+    - id: SalvageShuttleConsoleCircuitboard # Floof - for the salvage console
     - id: CigPackGreen
       prob: 0.50
     - id: ClothingHeadsetAltCargo
@@ -53,6 +55,7 @@
         max: 15
     - id: PlushieLizardJobCaptain
       prob: 0.02
+    - id: ClothingNeckCollarCmd # Floof
 
 # No laser table + Laser table
 - type: entityTable

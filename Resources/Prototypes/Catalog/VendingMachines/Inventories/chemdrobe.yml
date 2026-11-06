@@ -15,5 +15,12 @@
     ClothingOuterWinterChem: 1
     ClothingHandsGlovesLatex: 1
     ClothingShoesColorWhite: 1
+    # FLOOF: Start
+    ClothingNeckCollarMed: 2
+    ClothingHandsChemistsWarmers: 2
+    ClothingUnderSocksChemists: 2
+    ClothingUniformChemistsThong: 2
+    ClothingOuterApronChemist: 2
+    # FLOOF: End
   contrabandInventory:
     ToyFigurineChemist: 1

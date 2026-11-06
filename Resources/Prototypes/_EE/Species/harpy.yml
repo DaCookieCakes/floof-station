@@ -1,0 +1,41 @@
+## harpy.yml by Tyler Chase Johnson (also known as VMSolidus) is marked CC0 1.0.
+## To view a copy of this mark, visit https://creativecommons.org/publicdomain/zero/1.0/
+## Updated to modern SS14 by DaCookieCakes
+
+- type: species
+  id: Harpy
+  name: species-name-harpy
+  roundStart: true
+  prototype: MobHarpy
+  defaultSkinTone: "#C0967F"
+  dollPrototype: AppearanceHarpy
+  skinColoration: HumanToned
+  # begin Goobstation: port EE height/width sliders
+  minHeight: 0.75
+  defaultHeight: 0.80
+  maxHeight: 1.0
+  minWidth: 0.80
+  defaultWidth: 0.80
+  maxWidth: 1.2 # Floof - Wider species
+  # end Goobstation: port EE height/width sliders
+  defaultSoundsBySex:
+  - UnisexHarpy
+  - UnisexHarpy
+  - UnisexHarpy
+  voices:
+  - UnisexHarpy
+
+- type: entity
+  parent: BaseAction
+  id: ActionHarpyPlayMidi
+  name: Play MIDI
+  description: Sing your heart out! Right click yourself to set an instrument.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+  - type: Sprite
+    layers:
+    - texture: Interface/Actions/pai-midi.png
+  - type: InstantAction
+    event: !type:OpenUiActionEvent
+      key: enum.InstrumentUiKey.Key

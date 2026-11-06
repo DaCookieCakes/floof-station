@@ -1,0 +1,17 @@
+The files below are all rights reserved by @floofmin_floofstation on discord or @Fansana on GitHub.
+
+icon.ico
+icon/icon-16x16.png
+icon/icon-24x24.png
+icon/icon-32x32.png
+icon/icon-48x48.png
+icon/icon-64x64.png
+icon/icon-128x128.png
+icon/icon-256x256.png
+logo.png
+slashlogo.png
+flooflogo.png
+flooflogofall.png
+flooflogospring.png
+flooflogosummer.png
+flooflogowinter.png

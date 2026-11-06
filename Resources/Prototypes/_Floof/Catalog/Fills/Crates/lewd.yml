@@ -1,0 +1,19 @@
+- type: entity
+  id: CrateLewdToys
+  parent: CrateLewd
+  name: sex toys crate
+  description: Improve your station's mood by introducing some fun "toys"! Careful, work may plummet and the station may become a mess.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: LewdVibes
+          rolls: !type:ConstantNumberSelector { value: 4 }
+        - !type:NestedSelector
+          tableId: LewdFleshlights
+          rolls: !type:ConstantNumberSelector { value: 2 }
+        - !type:NestedSelector
+          tableId: LewdDildos
+          rolls: !type:ConstantNumberSelector { value: 4 }

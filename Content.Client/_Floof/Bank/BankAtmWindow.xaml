@@ -1,0 +1,12 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc 'bank-atm-title'}"
+                      MinSize="280 120">
+    <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+        <Label Name="BalanceLabel"/>
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <LineEdit Name="AmountEdit" HorizontalExpand="True"/>
+            <Button Name="WithdrawButton" Text="{Loc 'bank-atm-withdraw'}"/>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

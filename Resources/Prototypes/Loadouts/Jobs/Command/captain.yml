@@ -11,48 +11,57 @@
 # Jumpsuit
 - type: loadout
   id: CaptainJumpsuit
+  groupBy: CaptainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitCaptain
 
 - type: loadout
   id: CaptainJumpskirt
+  groupBy: CaptainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtCaptain
 
 - type: loadout
   id: CaptainFormalSuit
+  groupBy: CaptainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitCapFormal
 
 - type: loadout
   id: CaptainFormalSkirt
+  groupBy: CaptainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtCapFormalDress
 
 # Head
 - type: loadout
   id: CaptainHead
+  groupBy: CaptainGear # FLOOF
   equipment:
     head: ClothingHeadHatCaptain
 
 - type: loadout
   id: CaptainCap
+  groupBy: CaptainGear # FLOOF
   equipment:
     head: ClothingHeadHatCapcap
 
 # Neck
 - type: loadout
   id: CaptainCloak
+  groupBy: CaptainGear # FLOOF
   equipment:
     neck: ClothingNeckCloakCap
 
 - type: loadout
   id: CaptainCloakFormal
+  groupBy: CaptainGear # FLOOF
   equipment:
     neck: ClothingNeckCloakCapFormal
 
 - type: loadout
   id: CaptainMantle
+  groupBy: CaptainGear # FLOOF
   equipment:
     neck: ClothingNeckMantleCap
   effects:
@@ -67,26 +76,31 @@
 # Back
 - type: loadout
   id: CaptainBackpack
+  groupBy: CaptainGear # FLOOF
   equipment:
     back: ClothingBackpackCaptain
 
 - type: loadout
   id: CaptainSatchel
+  groupBy: CaptainGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelCaptain
 
 - type: loadout
   id: CaptainDuffel
+  groupBy: CaptainGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelCaptain
 
 # Outer clothing
 - type: loadout
   id: CaptainOuterClothing
+  groupBy: CaptainGear # FLOOF
   equipment:
     outerClothing: ClothingOuterArmorCaptainCarapace
 
 - type: loadout
   id: CaptainWintercoat
+  groupBy: CaptainGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterCap

@@ -1,0 +1,545 @@
+- type: latheRecipePack
+  parent:
+  - DenBeltsCosmeticJob
+  - DenHandsGlovesJob
+  # - DenMaskJobClown # use autodrobe instead
+  # - DenMaskJobMime # use autodrobe instead
+  - DenNeckCosmeticJob
+  - DenOuterCosmeticJob
+  - DenOuterCoatJob
+  - DenShoesCosmeticJob
+  # - DenShoesJobClown # use the autodrobe instead
+  - DenUniformsCosmeticJob
+  id: DenClothingJob
+
+- type: latheRecipePack
+  parent:
+  # - DenClothingJob # ehh. i'll leave it to the uniform printer sorry
+  - DenAutotailorStaticBelt
+  - DenAutotailorStaticGlasses
+  - DenAutotailorStaticHands
+  - DenAutotailorStaticHats
+  - DenAutotailorStaticMasks
+  - DenAutotailorStaticNeck
+  - DenAutotailorStaticOuterwear
+  - DenAutotailorStaticShoes
+  - DenAutotailorStaticUniforms
+  id: DenAutotailorStatic
+
+- type: latheRecipePack
+  id: DenAutotailorEmagStatic
+  recipes: []
+
+- type: latheRecipePack
+  id: DenAutotailorStaticBelt
+  recipes: []
+
+- type: latheRecipePack
+  parent:
+  - DenEyesGlassesCosmetic
+  - DenEyesGlassesGar
+  - DenEyesMiscellaneous
+  id: DenAutotailorStaticGlasses
+
+- type: latheRecipePack
+  parent:
+  - DenHandsGlovesColor
+  - DenHandsGlovesCosmetic
+  - DenHandsRingsDecorated # indecisive...
+  - DenHandsRingsSimple
+  id: DenAutotailorStaticHands
+
+- type: latheRecipePack
+  parent:
+  - DenHatsColorSoft
+  # - DenHatsAnimal # maintenance loot
+  - DenHatsBandana
+  - DenHatsCosmetic
+  # - DenHatsCowboy # use the autodrobe instead
+  # - DenHatsParty # get a party crate instead
+  id: DenAutotailorStaticHats
+
+- type: latheRecipePack
+  parent:
+  - DenMaskAnimal
+  # - DenMaskBandana # redundant: DenHatsBandana
+  id: DenAutotailorStaticMasks
+
+- type: latheRecipePack
+  parent:
+  - Scarves
+  - Ties
+  id: DenAutotailorStaticNeck
+
+- type: latheRecipePack
+  parent:
+  - DenOuterCoatCosmetic
+  - DenOuterWinter
+  - DenOuterWinterColor
+  id: DenAutotailorStaticOuterwear
+
+- type: latheRecipePack
+  parent:
+  - DenShoesColor
+  - DenShoesCosmetic
+  - DenShoesMisc
+  id: DenAutotailorStaticShoes
+
+- type: latheRecipePack
+  parent:
+  - DenUniformsClothesMate
+  - DenUniformsColor
+  - DenUniformsCosmetic
+  - DenUniformsDresses
+  - DenUniformsRandom
+  id: DenAutotailorStaticUniforms
+
+# region Uniforms
+
+- type: latheRecipePack
+  id: DenUniformsColor
+  recipes:
+  - ClothingUniformJumpsuitColorGrey
+  - ClothingUniformJumpskirtColorGrey
+  - ClothingUniformJumpsuitColorWhite
+  - ClothingUniformJumpskirtColorWhite
+  - ClothingUniformJumpsuitColorBlack
+  - ClothingUniformJumpskirtColorBlack
+  - ClothingUniformJumpsuitColorBlue
+  - ClothingUniformJumpskirtColorBlue
+  - ClothingUniformJumpsuitColorYellow
+  - ClothingUniformJumpskirtColorYellow
+  - ClothingUniformJumpsuitColorGreen
+  - ClothingUniformJumpskirtColorGreen
+  - ClothingUniformJumpsuitColorOrange
+  - ClothingUniformJumpskirtColorOrange
+  - ClothingUniformJumpsuitColorRed
+  - ClothingUniformJumpskirtColorRed
+  - ClothingUniformJumpsuitColorPurple
+  - ClothingUniformJumpskirtColorPurple
+  - ClothingUniformJumpsuitColorPink
+  - ClothingUniformJumpskirtColorPink
+  - ClothingUniformJumpsuitColorDarkBlue
+  - ClothingUniformJumpskirtColorDarkBlue
+  - ClothingUniformJumpsuitColorDarkGreen
+  - ClothingUniformJumpskirtColorDarkGreen
+  - ClothingUniformJumpsuitColorLightBrown
+  - ClothingUniformJumpskirtColorLightBrown
+  - ClothingUniformJumpsuitColorBrown
+  - ClothingUniformJumpskirtColorBrown
+  - ClothingUniformJumpsuitColorMaroon
+  - ClothingUniformJumpskirtColorMaroon
+  - ClothingUniformJumpsuitColorTeal
+  - ClothingUniformJumpskirtColorTeal
+
+- type: latheRecipePack
+  id: DenUniformsClothesMate
+  recipes:
+  - ClothingUniformJumpsuitFlannel
+  - ClothingUniformJumpsuitHawaiBlack
+  - ClothingUniformJumpsuitHawaiBlue
+  - ClothingUniformJumpsuitHawaiRed
+  - ClothingUniformJumpsuitHawaiYellow
+  - ClothingUniformJumpsuitCasualBlue
+  - ClothingUniformJumpskirtCasualBlue
+  - ClothingUniformJumpsuitCasualPurple
+  - ClothingUniformJumpskirtCasualPurple
+  - ClothingUniformJumpsuitCasualRed
+  - ClothingUniformJumpskirtCasualRed
+  - ClothingUniformJumpsuitCasualGreen
+  - ClothingUniformJumpskirtCasualGreen
+
+- type: latheRecipePack
+  id: DenUniformsCosmetic
+  recipes:
+  - ClothingUniformJumpsuitLoungewear
+  - ClothingUniformJumpsuitNanotrasen
+  # - ClothingUniformJumpsuitPirate # autodrobe or pirate crate instead
+  - ClothingUniformJumpsuitCossack
+  - ClothingUniformJumpsuitKimono
+  - ClothingUniformJumpskirtOfLife
+
+- type: latheRecipePack
+  id: DenUniformsDresses
+  recipes:
+  - ClothingUniformJumpskirtBlackElegantDress
+  - ClothingUniformJumpskirtRedElegantDress
+  - ClothingUniformJumpskirtGreenElegantDress
+  - ClothingUniformJumpskirtBlueElegantDress
+  - ClothingUniformJumpskirtPurpleElegantDress
+  - ClothingUniformJumpskirtCyanStripedDress
+  - ClothingUniformJumpskirtRedStripedDress
+  - ClothingUniformJumpskirtGreenStripedDress
+  - ClothingUniformJumpskirtPinkStripedDress
+  - ClothingUniformJumpskirtOrangeStripedDress
+  - ClothingUniformJumpskirtPurpleTurtleneckDress
+  - ClothingUniformJumpskirtRedTurtleneckDress
+  - ClothingUniformJumpskirtGreenTurtleneckDress
+  - ClothingUniformJumpskirtBlueTurtleneckDress
+  - ClothingUniformJumpskirtYellowTurtleneckDress
+  - ClothingUniformJumpskirtYellowOldDress
+
+- type: latheRecipePack
+  id: DenUniformsCosmeticJob
+  recipes:
+  - ClothingUniformJumpskirtJanimaid
+  - ClothingUniformJumpskirtJanimaidmini
+  - ClothingUniformOveralls
+  - UniformScrubsColorPurple
+  - UniformScrubsColorGreen
+  - UniformScrubsColorBlue
+
+- type: latheRecipePack
+  id: DenUniformsRandom
+  recipes:
+  - ClothingUniformRandomArmless
+  - ClothingUniformRandomStandard
+  - ClothingUniformRandomBra
+  - ClothingUniformRandomShorts
+  - ClothingUniformRandomShirt
+
+# endregion Uniforms
+
+# region Outerwear
+
+- type: latheRecipePack
+  id: DenOuterCosmeticJob
+  recipes:
+  - ClothingOuterApron
+  - ClothingOuterApronBar
+  - ClothingOuterApronBotanist
+  - ClothingOuterApronChef
+  - ClothingOuterVest
+
+- type: latheRecipePack
+  id: DenOuterCoatJob
+  recipes:
+  - ClothingOuterJacketChef
+  - ClothingOuterHoodieChaplain
+  - ClothingOuterCoatLab
+
+- type: latheRecipePack
+  id: DenOuterCoatCosmetic
+  recipes:
+  - ClothingOuterHoodieBlack
+  - ClothingOuterHoodieGrey
+  - ClothingOuterCoatGentle
+  - ClothingOuterCoatJensen
+  - ClothingOuterCoatTrench
+  # - ClothingOuterCoatPirate # use autodrobe instead
+  - ClothingOuterPlagueSuit
+  - ClothingOuterCoatSpaceAsshole
+  - ClothingOuterCoatExpensive
+
+- type: latheRecipePack
+  id: DenOuterWinter
+  recipes:
+  - ClothingOuterFlannelRed
+  - ClothingOuterFlannelBlue
+  - ClothingOuterFlannelGreen
+  - ClothingOuterCoatBomber
+  - ClothingOuterCoatTrench
+
+- type: latheRecipePack
+  id: DenOuterWinterColor
+  recipes:
+  - ClothingOuterWinterColorBlack
+  - ClothingOuterWinterColorPurple
+  - ClothingOuterWinterColorRed
+  - ClothingOuterWinterColorBlue
+  - ClothingOuterWinterColorBrown
+  - ClothingOuterWinterColorGray
+  - ClothingOuterWinterColorGreen
+  - ClothingOuterWinterColorLightBrown
+  - ClothingOuterWinterColorOrange
+  - ClothingOuterWinterColorWhite
+  - ClothingOuterWinterColorYellow
+
+# endregion Outerwear
+
+# region Hats
+
+- type: latheRecipePack
+  id: DenHatsColorSoft
+  recipes:
+  - ClothingHeadHatMimesoft
+  - ClothingHeadHatBluesoft
+  - ClothingHeadHatCorpsoft
+  - ClothingHeadHatGreensoft
+  - ClothingHeadHatBlacksoft
+  - ClothingHeadHatGreysoft
+  - ClothingHeadHatOrangesoft
+  - ClothingHeadHatPurplesoft
+  - ClothingHeadHatRedsoft
+  - ClothingHeadHatYellowsoft
+
+- type: latheRecipePack
+  id: DenHatsAnimal
+  recipes:
+  - ClothingHeadHatAnimalCat
+  - ClothingHeadHatAnimalCatBrown
+  - ClothingHeadHatAnimalCatBlack
+  - ClothingHeadHatAnimalHeadslime
+  - ClothingHeadHatAnimalMonkey
+
+- type: latheRecipePack
+  id: DenHatsBandana
+  recipes:
+  - ClothingHeadBandBlack
+  - ClothingHeadBandBlue
+  - ClothingHeadBandGold
+  - ClothingHeadBandGreen
+  - ClothingHeadBandGrey
+  - ClothingHeadBandRed
+  - ClothingHeadBandSkull
+  # - ClothingHeadBandMerc
+  - ClothingHeadBandBrown
+
+- type: latheRecipePack
+  id: DenHatsCosmetic
+  recipes:
+  - ClothingHeadHatBeaverHat
+  - ClothingHeadHatBeret
+  - ClothingHeadHatBeretFrench
+  - ClothingHeadHatCasa
+  - ClothingHeadHatBowlerHat
+  - ClothingHeadHatFedoraBrown
+  - ClothingHeadHatFedoraGrey
+  - ClothingHeadHatFez
+  - ClothingHeadHatPaper
+  # - ClothingHeadHatPirate # autodrobe or pirate crate instead
+  # - ClothingHeadHatPirateTricord # autodrobe or pirate crate instead
+  - ClothingHeadHatPlaguedoctor
+  - ClothingHeadHatSombrero
+  - ClothingHeadHatTophat
+  - ClothingHeadHatUshanka
+  - ClothingHeadHatCanadaBeanie
+  - ClothingHeadHatWizardFake
+  - ClothingHeadHatXmasCrown
+  - ClothingHeadHatTrucker
+  - ClothingHeadPaperSack
+  - ClothingHeadPaperSackSmile
+  - ClothingHeadFishCap
+  - ClothingHeadWehcellentCap
+  - ClothingHeadHatHetmanHat
+  - ClothingHeadHatGreyFlatcap
+  - ClothingHeadHatBrownFlatcap
+  - ClothingHeadHatStrawHat
+  - ClothingHeadPropellerHat
+  - ClothingHeadHatBunny
+
+- type: latheRecipePack
+  id: DenHatsParty
+  recipes:
+  - ClothingHeadHatPartyRed
+  - ClothingHeadHatPartyYellow
+  - ClothingHeadHatPartyGreen
+  - ClothingHeadHatPartyBlue
+  - ClothingHeadHatPartyWaterCup
+
+- type: latheRecipePack
+  id: DenHatsCowboy
+  recipes:
+  - ClothingHeadHatCowboyBrown
+  - ClothingHeadHatCowboyBlack
+  - ClothingHeadHatCowboyGrey
+  - ClothingHeadHatCowboyRed
+  - ClothingHeadHatCowboyWhite
+  - ClothingHeadHatCowboyBountyHunter
+
+# endregion Hats
+
+# region Eyes
+
+- type: latheRecipePack
+  id: DenEyesGlassesCosmetic
+  recipes:
+  - ClothingEyesGlasses
+  - ClothingEyesGlassesJensen
+  - ClothingEyesGlassesJamjar
+  - ClothingEyesGlassesOutlawGlasses
+  - ClothingEyesGlassesCheapSunglasses
+
+- type: latheRecipePack
+  id: DenEyesGlassesGar
+  recipes:
+  - ClothingEyesGlassesGar
+  - ClothingEyesGlassesGarOrange
+  - ClothingEyesGlassesGarGiga
+
+- type: latheRecipePack
+  id: DenEyesMiscellaneous
+  recipes:
+  - ClothingEyesBlindfold
+  - ClothingEyesEyepatch
+
+# endregion Eyes
+
+# region Mask
+
+- type: latheRecipePack
+  id: DenMaskAnimal
+  recipes:
+  - ClothingMaskBat
+  - ClothingMaskBee
+  - ClothingMaskBear
+  - ClothingMaskFox
+  - ClothingMaskRat
+  - ClothingMaskRaven
+  - ClothingMaskJackal
+
+- type: latheRecipePack
+  id: DenMaskCosmetic
+  recipes:
+  - ClothingMaskJoy
+  - ClothingMaskPlague
+  - ClothingMaskNeckGaiter
+  - ClothingMaskNeckGaiterRed
+  - ClothingMaskItalianMoustache
+
+- type: latheRecipePack
+  id: DenMaskJobClown
+  recipes:
+  - ClothingMaskClown
+  - ClothingMaskClownBanana
+  - ClothingMaskClownSecurity
+  - ClothingMaskBlushingClown
+
+- type: latheRecipePack
+  id: DenMaskJobMime
+  recipes:
+  - ClothingMaskMime
+  - ClothingMaskBlushingMime
+  - ClothingMaskSadMime
+  - ClothingMaskScaredMime
+
+- type: latheRecipePack
+  id: DenMaskBandana
+  recipes:
+  - ClothingMaskBandBlack
+  - ClothingMaskBandBlue
+  - ClothingMaskBandGold
+  - ClothingMaskBandGreen
+  - ClothingMaskBandGrey
+  - ClothingMaskBandRed
+  - ClothingMaskBandSkull
+  # - ClothingMaskBandMerc
+  - ClothingMaskBandBrown
+
+# endregion Mask
+
+# region Neck
+
+- type: latheRecipePack
+  id: DenNeckCosmeticJob
+  recipes:
+  - ClothingNeckStoleChaplain
+
+# endregion Neck
+
+# region Belt
+
+- type: latheRecipePack
+  id: DenBeltsCosmeticJob
+  recipes:
+  - ClothingBeltSuspendersRed
+  - ClothingBeltSuspendersBlack
+
+# endregion Belt
+
+# region Hands
+
+- type: latheRecipePack
+  id: DenHandsGlovesColor
+  recipes:
+  - ClothingHandsGlovesColorPurple
+  - ClothingHandsGlovesColorRed
+  - ClothingHandsGlovesColorBlue
+  - ClothingHandsGlovesColorTeal
+  - ClothingHandsGlovesColorBrown
+  - ClothingHandsGlovesColorGray
+  - ClothingHandsGlovesColorGreen
+  - ClothingHandsGlovesColorLightBrown
+  - ClothingHandsGlovesColorOrange
+  - ClothingHandsGlovesColorWhite
+  - ClothingHandsGlovesColorBlack
+
+- type: latheRecipePack
+  id: DenHandsGlovesCosmetic
+  recipes:
+  - ClothingHandsGlovesPowerglove
+  - ClothingHandsGlovesFingerless
+  - ClothingHandsGlovesFingerlessInsulated
+  # - ClothingHandsGlovesMercFingerless
+
+- type: latheRecipePack
+  id: DenHandsGlovesJob
+  recipes:
+  - ClothingHandsGlovesLeather
+  - ClothingHandsGlovesJanitor
+  - ClothingHandsGlovesRobohands
+
+- type: latheRecipePack
+  id: DenHandsRingsSimple
+  recipes:
+  - GoldRing
+  - SilverRing
+
+- type: latheRecipePack
+  id: DenHandsRingsDecorated
+  recipes:
+  - GoldRingDiamond
+  - SilverRingDiamond
+  - GoldRingGem
+  - SilverRingGem
+
+# endregion Hands
+
+# region Shoes
+
+- type: latheRecipePack
+  id: DenShoesColor
+  recipes:
+  - ClothingShoesColorWhite
+  - ClothingShoesColorBlack
+  - ClothingShoesColorBlue
+  - ClothingShoesColorBrown
+  - ClothingShoesColorGreen
+  - ClothingShoesColorOrange
+  - ClothingShoesColorRed
+  - ClothingShoesColorYellow
+  - ClothingShoesColorPurple
+
+- type: latheRecipePack
+  id: DenShoesCosmetic
+  recipes:
+  - ClothingShoesFlippers
+  - ClothingShoesLeather
+  - ClothingShoesSlippers
+  - ClothingShoesSandalsBlack # Floof - Sandals
+  - ClothingShoesSandalsBrown # Floof - Sandals
+  - ClothingShoesHighheelBoots
+  - ClothingShoesBootsLaceup
+  - ClothingUnderSocksBee
+  - ClothingUnderSocksCoder
+
+- type: latheRecipePack
+  id: DenShoesCosmeticJob
+  recipes:
+  - ClothingShoesChef
+  - ClothingShoesBootsWork
+
+- type: latheRecipePack
+  id: DenShoesJobClown
+  recipes:
+  - ClothingShoesClown
+  - ClothingShoesBling
+  - ClothingShoesJester
+  - ClothingShoesClownLarge
+
+- type: latheRecipePack
+  id: DenShoesMisc
+  recipes:
+  - ClothingShoesSkates
+
+# endregion Shoes

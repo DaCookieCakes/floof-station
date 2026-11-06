@@ -107,6 +107,8 @@
       - id: Bloodpack
     - id: SyndicateBusinessCard
       weight: 0.5
+    - id: ClothingWalletLeatherLizard # Floof - Wallets
+      weight: 0.5
 
 # Packages
 # TODO: Currently mostly maints loot, should be updated in the future.

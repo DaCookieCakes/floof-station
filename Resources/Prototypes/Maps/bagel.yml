@@ -1,8 +1,8 @@
 - type: gameMap
   id: Bagel
   mapName: 'Bagel Station'
-  mapPath: /Maps/bagel.yml
-  minPlayers: 45 #removing max players since server already has a max doesnt matter
+  mapPath: /Maps/_Floof/bagel.yml
+  minPlayers: 0 # Floof - lower min players
   stations:
     Bagel:
       stationProto: StandardNanotrasenStation
@@ -63,3 +63,4 @@
             # Silicon (4)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 3 ]
+            Dogborg: [ 0, 3 ] # Floofstation

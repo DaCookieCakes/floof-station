@@ -1,5 +1,6 @@
 - type: job
   id: HeadOfPersonnel
+  pay: 800 # Floof - bank
   name: job-name-hop
   description: job-description-hop
   playTimeTracker: JobHeadOfPersonnel
@@ -62,9 +63,9 @@
 - type: startingGear
   id: HoPGear
   equipment:
-    shoes: ClothingShoesColorBrown
+  #  shoes: ClothingShoesColorBrown # FLOOF
     id: HoPPDA
-    gloves: ClothingHandsGlovesHop
+  #  gloves: ClothingHandsGlovesHop # FLOOF
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboardThreePapers
     eyes: ClothingEyesHudCommand

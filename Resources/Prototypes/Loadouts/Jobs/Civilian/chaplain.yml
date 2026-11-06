@@ -31,96 +31,114 @@
 # Head
 - type: loadout
   id: ChaplainHead
+  groupBy: ChaplainGear # FLOOF
   equipment:
     head: ClothingHeadHatFez
 
 - type: loadout
   id: ChaplainNunHood
+  groupBy: ChaplainGear # FLOOF
   equipment:
     head: ClothingHeadHatHoodNunHood
 
 - type: loadout
   id: ChaplainPlagueHat
+  groupBy: ChaplainGear # FLOOF
   equipment:
     head: ClothingHeadHatPlaguedoctor
 
 - type: loadout
   id: ChaplainWitchHat
+  groupBy: ChaplainGear # FLOOF
   equipment:
     head: ClothingHeadHatWitch
 
 - type: loadout
   id: ChaplainWitchHatAlt
+  groupBy: ChaplainGear # FLOOF
   equipment:
     head: ClothingHeadHatWitch1
 
 # Mask
 - type: loadout
   id: ChaplainMask
+  groupBy: ChaplainGear # FLOOF
   equipment:
     mask: ClothingMaskPlague
 
 # Jumpsuit
 - type: loadout
   id: ChaplainJumpsuit
+  groupBy: ChaplainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitChaplain
 
 - type: loadout
   id: ChaplainJumpskirt
+  groupBy: ChaplainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtChaplain
 
 - type: loadout
   id: ChaplainRobesDark
+  groupBy: ChaplainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitMonasticRobeDark
 
 - type: loadout
   id: ChaplainRobesLight
+  groupBy: ChaplainGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitMonasticRobeLight
 
 # Neck
 - type: loadout
   id: ChaplainNeck
+  groupBy: ChaplainGear # FLOOF
   equipment:
     neck: ClothingNeckStoleChaplain
 
 # Outer clothing
 - type: loadout
   id: ChaplainPlagueSuit
+  groupBy: ChaplainGear # FLOOF
   equipment:
     outerClothing: ClothingOuterPlagueSuit
 
 - type: loadout
   id: ChaplainNunRobe
+  groupBy: ChaplainGear # FLOOF
   equipment:
     outerClothing: ClothingOuterNunRobe
 
 - type: loadout
   id: ChaplainBlackHoodie
+  groupBy: ChaplainGear # FLOOF
   equipment:
     outerClothing: ClothingOuterHoodieBlack
 
 - type: loadout
   id: ChaplainHoodie
+  groupBy: ChaplainGear # FLOOF
   equipment:
     outerClothing: ClothingOuterHoodieChaplain
 
 # Shoes
 - type: loadout
   id: BlackSandals
+  groupBy: ChaplainGear # FLOOF
   equipment:
     shoes: ClothingShoesSandalsBlack
 
 - type: loadout
   id: BrownSandals
+  groupBy: ChaplainGear # FLOOF
   equipment:
     shoes: ClothingShoesSandalsBrown
 
 # Bible/Holy Book
 - type: loadout
+  groupBy: ChaplainGear # FLOOF
   id: Bible
   storage:
     back:
@@ -128,6 +146,7 @@
 
 - type: loadout
   id: BibleDruid
+  groupBy: ChaplainGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: DruidBibleRequirement
@@ -137,6 +156,7 @@
 
 - type: loadout
   id: BibleNanoTrasen
+  groupBy: ChaplainGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: NanoTrasenBibleRequirement
@@ -146,12 +166,14 @@
 
 - type: loadout
   id: BibleNarsie
+  groupBy: ChaplainGear # FLOOF
   storage:
     back:
     - BibleNarsie
 
 - type: loadout
   id: BibleHonk
+  groupBy: ChaplainGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: ClownBibleRequirement
@@ -161,6 +183,7 @@
 
 - type: loadout
   id: BibleRatvar
+  groupBy: ChaplainGear # FLOOF
   storage:
     back:
     - BibleRatvar

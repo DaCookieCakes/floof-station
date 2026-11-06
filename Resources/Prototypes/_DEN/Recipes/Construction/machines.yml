@@ -1,0 +1,17 @@
+- type: construction
+  id: FloorButton
+  graph: FloorButtonGraph
+  startNode: start
+  targetNode: floorbutton
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: Tripwire
+  graph: TripwireGraph
+  startNode: start
+  targetNode: tripwire
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

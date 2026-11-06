@@ -2,7 +2,7 @@
 - type: gameMap
   id: Packed
   mapName: 'Packed'
-  mapPath: /Maps/packed.yml
+  mapPath: /Maps/_Floof/packed.yml
   minPlayers: 0
   maxPlayers: 24
   stations:
@@ -63,3 +63,4 @@
             # Silicon (3)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 2 ]
+            Dogborg: [ 0, 2 ] # Floofstation

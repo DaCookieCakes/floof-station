@@ -18,6 +18,10 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Server.Traits.Assorted; // DV
+using System.Numerics; // Floof - HeightWidth
+using Content.Shared._EE.HeightAdjust; // Floof - HeightWidth
+using Content.Shared._Floof.Body; // Floof - Genitals
 
 namespace Content.Server.Cloning;
 
@@ -37,6 +41,10 @@ public sealed partial class CloningSystem : SharedCloningSystem
     [Dependency] private SharedVisualBodySystem _visualBody = default!;
     [Dependency] private NameModifierSystem _nameMod = default!;
     [Dependency] private IdentitySystem _identity = default!;
+    [Dependency] private HeightAdjustSystem _heightAdjust = default!; // Floof - HeightWidth
+    [Dependency] private OrganSystem _organ = default!; // Floof - Genitals
+
+    private static readonly ProtoId<OrganCategoryPrototype>[] GenitalCategories = ["Dick", "Breasts", "Vagina"]; // Floof - Genitals
 
     public override bool TryCloning(
         EntityUid original,
@@ -63,9 +71,15 @@ public sealed partial class CloningSystem : SharedCloningSystem
         }
 
         clone = coords == null ? Spawn(speciesPrototype.Prototype) : Spawn(speciesPrototype.Prototype, coords.Value);
+        _organ.CopyOrgans(original, clone.Value, GenitalCategories, "Torso"); // Floof - Genitals
         _visualBody.CopyAppearanceFrom(original, clone.Value);
 
         CloneComponents(original, clone.Value, settings);
+
+        // Floof Section - HeightWidth
+        if (TryComp<HumanoidProfileComponent>(clone.Value, out var cloneProfile))
+            _heightAdjust.SetScale(clone.Value, new Vector2(cloneProfile.Width, cloneProfile.Height));
+        // Floof Section End
 
         // Add equipment first so that SetEntityName also renames the ID card.
         if (settings.CopyEquipment != null)

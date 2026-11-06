@@ -1,0 +1,14 @@
+- type: entity
+  abstract: true
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterStorageToggleableBase
+  components:
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHatHoodWinterDefault
+      slot: head
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+        toggleable-under-clothing: !type:ContainerSlot {} # DeltaV - Allow hats under toggleable clothing
+        storagebase: !type:Container
+          ents: []

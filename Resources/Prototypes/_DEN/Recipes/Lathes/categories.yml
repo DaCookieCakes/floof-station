@@ -1,0 +1,41 @@
+# ALPHABETIZE AND DOCUMENT PURPOSE PLEASE
+
+# Clothing - belt slot
+- type: latheCategory
+  id: Belts
+  name: lathe-category-belts
+
+# Items designed to be recolored - primarily used in autotailor
+- type: latheCategory
+  id: Colorable
+  name: lathe-category-colorable
+
+# Clothing - glasses slot
+- type: latheCategory
+  id: Eyes
+  name: lathe-category-eyes
+
+# Clothing - hand slot
+- type: latheCategory
+  id: Hands
+  name: lathe-category-hands
+
+# Clothing - mask slot
+- type: latheCategory
+  id: Masks
+  name: lathe-category-masks
+
+# Clothing - outerwear slot
+- type: latheCategory
+  id: Outerwear
+  name: lathe-category-outerwear
+
+# Clothing - procedurally-generated clothing
+- type: latheCategory
+  id: RandomClothes
+  name: lathe-category-random-clothes
+
+# Clothing - foot slot
+- type: latheCategory
+  id: Shoes
+  name: lathe-category-shoes

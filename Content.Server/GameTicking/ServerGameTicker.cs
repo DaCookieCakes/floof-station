@@ -1,3 +1,5 @@
+using Content.Server._Floof.Persistence; // Floof - Persistence
+using Content.Server._Floof.Arrivals; // Floof - Arrival announcement on station
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
@@ -36,6 +38,7 @@ namespace Content.Server.GameTicking
 #endif
         [Dependency] private IServerPreferencesManager _prefsManager = default!;
         [Dependency] private IServerDbManager _db = default!;
+        [Dependency] private LiveCharacterSystem _liveCharacter = default!; // Floof - Persistence
         [Dependency] private ChatSystem _chatSystem = default!;
         [Dependency] private GhostSystem _ghost = default!;
         [Dependency] private MapLoaderSystem _loader = default!;
@@ -46,6 +49,7 @@ namespace Content.Server.GameTicking
         [Dependency] private ServerStationJobsSystem _stationJobs = default!;
         [Dependency] private StationSpawningSystem _stationSpawning = default!;
         [Dependency] private UserDbDataManager _userDb = default!;
+        [Dependency] private ArrivalAnnouncementSystem _arrivalAnnouncement = default!; // Floof - Arrival announcement on station
 
         [ViewVariables] private bool _initialized;
         [ViewVariables] private bool _postInitialized;

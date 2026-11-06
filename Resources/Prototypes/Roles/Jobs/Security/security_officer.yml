@@ -1,5 +1,6 @@
 - type: job
   id: SecurityOfficer
+  pay: 550 # Floof - bank
   name: job-name-security
   description: job-description-security
   playTimeTracker: JobSecurityOfficer
@@ -24,7 +25,7 @@
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+    #  eyes: ClothingEyesGlassesSecurity # FLOOF
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58
   storage:

@@ -91,6 +91,28 @@ public sealed partial class MarkingPrototype : IPrototype, IInheritingPrototype
         return Sprites.Any(layer => layer.ForcedColoring);
     }
 
+    // Floof Section - marking layering
+    /// <summary>
+    ///     Gets the index of the sprite whose colour the given sprite uses, following <see cref="MarkingLayerData.ColorFrom"/>.
+    /// </summary>
+    public int GetColorSource(int index)
+    {
+        if (Sprites[index].ColorFrom is not { } state)
+            return index;
+
+        var source = Sprites.FindIndex(s => s.GetLayerStateId() == state);
+        return source < 0 ? index : source;
+    }
+
+    /// <summary>
+    ///     Gets the humanoid layer the given sprite is drawn on.
+    /// </summary>
+    public HumanoidVisualLayers GetSpriteLayer(int index)
+    {
+        return Sprites[index].Layer ?? BodyPart;
+    }
+    // Floof Section End
+
     /// <summary>
     ///     Gets a number of adjustible colors associated with this marking.
     /// </summary>

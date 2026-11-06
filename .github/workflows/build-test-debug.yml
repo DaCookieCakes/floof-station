@@ -1,20 +1,36 @@
 name: Build & Test Debug
 
 on:
-  push:
-    branches: [ master, staging, stable ]
-  merge_group:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable ]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3,15 * * *'
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
   cancel-in-progress: ${{ github.event_name != 'merge_group' }}
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo run=true >> "$GITHUB_OUTPUT"; exit 0; fi
+          done=$(gh api "repos/${{ github.repository }}/actions/workflows/build-test-debug.yml/runs?head_sha=${{ github.sha }}&status=completed" --jq '[.workflow_runs[] | select(.id != ${{ github.run_id }} and .conclusion != "skipped" and .conclusion != "cancelled")] | length')
+          echo "run=$([ "$done" = 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
+    needs: check
+    if: needs.check.outputs.run == 'true'
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -75,3 +91,17 @@ jobs:
     steps:
       - name: CI succeeded
         run: exit 0
+
+  report-failure:
+    needs: build
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body="Build & Test Debug failed on ${{ github.sha }}: $url"
+          issue=$(gh issue list --state open --search "in:title \"Build & Test Debug failed\"" --json number --jq '.[0].number')
+          if [ -n "$issue" ]; then gh issue comment "$issue" --body "$body"; else gh issue create --title "Build & Test Debug failed" --label bug --body "$body"; fi

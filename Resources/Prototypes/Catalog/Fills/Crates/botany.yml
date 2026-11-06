@@ -22,6 +22,8 @@
           amount: 2
         - id: BungoSeeds
           amount: 2
+        - id: HumpShroomSeeds # Floof
+          amount: 2
 
 - type: entity
   parent: CrateHydroSecure
@@ -101,6 +103,8 @@
         - id: PeaSeeds
         - id: CherrySeeds
         - id: CottonSeeds
+        - id: PomegranateSeeds # Floof
+        - id: PearSeeds # Floof - Botany  Additions
 
 - type: entity
   parent: CrateHydroponics

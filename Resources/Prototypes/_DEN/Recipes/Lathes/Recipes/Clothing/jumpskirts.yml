@@ -1,0 +1,116 @@
+# Color uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorWhite
+  result: ClothingUniformJumpskirtColorWhite
+  categories:
+  - Jumpsuits
+  - Colorable
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorBlack
+  result: ClothingUniformJumpskirtColorBlack
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorBlue
+  result: ClothingUniformJumpskirtColorBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorYellow
+  result: ClothingUniformJumpskirtColorYellow
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorGreen
+  result: ClothingUniformJumpskirtColorGreen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorOrange
+  result: ClothingUniformJumpskirtColorOrange
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorRed
+  result: ClothingUniformJumpskirtColorRed
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorPurple
+  result: ClothingUniformJumpskirtColorPurple
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorPink
+  result: ClothingUniformJumpskirtColorPink
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorDarkBlue
+  result: ClothingUniformJumpskirtColorDarkBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorDarkGreen
+  result: ClothingUniformJumpskirtColorDarkGreen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorBrown
+  result: ClothingUniformJumpskirtColorBrown
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorMaroon
+  result: ClothingUniformJumpskirtColorMaroon
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtColorTeal
+  result: ClothingUniformJumpskirtColorTeal
+
+# Job-relevant cosmetic uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtJanimaid
+  result: ClothingUniformJumpskirtJanimaid
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtJanimaidmini
+  result: ClothingUniformJumpskirtJanimaidmini
+
+# Non-job specific cosmetic uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtOfLife
+  result: ClothingUniformJumpskirtOfLife
+
+## Casual uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtCasualBlue
+  result: ClothingUniformJumpskirtCasualBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtCasualPurple
+  result: ClothingUniformJumpskirtCasualPurple
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtCasualRed
+  result: ClothingUniformJumpskirtCasualRed
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpskirtCasualGreen
+  result: ClothingUniformJumpskirtCasualGreen
+

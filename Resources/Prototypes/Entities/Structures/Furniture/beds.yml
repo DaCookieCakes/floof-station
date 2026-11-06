@@ -46,6 +46,13 @@
   name: bed
   description: This is used to lie in, sleep in or strap on. Resting here provides extremely slow healing.
   components:
+  # Floof Section - Directional Beds
+  - type: Transform
+    noRot: false
+  - type: Strap
+    modifyBuckleDrawDepth: false
+  - type: DirectionalBed
+  # Floof Section End
   - type: Destructible
     thresholds:
     - trigger: &DamageFurnitureNormal
@@ -69,6 +76,10 @@
   components:
   - type: Sprite
     state: bed-MED
+  # Floof Section - Directional Beds
+  - type: Transform
+    noRot: true
+  # Floof Section End
   - type: HealOnBuckle
     damage:
       types:
@@ -122,6 +133,10 @@
   components:
   - type: Sprite
     state: mattress
+  # Floof Section - Directional Beds
+  - type: Transform
+    noRot: true
+  # Floof Section End
   - type: Damageable
     damageModifierSet: PlasticMod
 

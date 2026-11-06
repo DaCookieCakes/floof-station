@@ -1,53 +1,63 @@
 # Head
 - type: loadout
   id: DetectiveFedora
+  groupBy: DetectiveGear # FLOOF
   equipment:
     head: ClothingHeadHatFedoraBrown
 
 - type: loadout
   id: DetectiveFedoraGrey
+  groupBy: DetectiveGear # FLOOF
   equipment:
     head: ClothingHeadHatFedoraGrey
 
 # Neck
 - type: loadout
   id: DetectiveTie
+  groupBy: DetectiveGear # FLOOF
   equipment:
     neck: ClothingNeckTieDet
 
 # Jumpsuit
 - type: loadout
   id: DetectiveJumpsuit
+  groupBy: DetectiveGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitDetective
 
 - type: loadout
   id: DetectiveJumpskirt
+  groupBy: DetectiveGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtDetective
 
 - type: loadout
   id: NoirJumpsuit
+  groupBy: DetectiveGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitDetectiveGrey
 
 - type: loadout
   id: NoirJumpskirt
+  groupBy: DetectiveGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtDetectiveGrey
 
 # OuterClothing
 - type: loadout
   id: DetectiveArmorVest
+  groupBy: DetectiveGear # FLOOF
   equipment:
     outerClothing: ClothingOuterVestDetective
 
 - type: loadout
   id: DetectiveCoat
+  groupBy: DetectiveGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatDetectiveLoadout
 
 - type: loadout
   id: DetectiveCoatGrey
+  groupBy: DetectiveGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatDetectiveLoadoutGrey

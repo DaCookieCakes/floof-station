@@ -1,0 +1,98 @@
+- type: entity
+  parent: [FoodMeatRawBase, BaseSlicingRefinableFood]
+  id: FoodMeatFeroxi
+  name: raw feroxi meat
+  description: It's filled with odd fluids.
+  components:
+  - type: Sprite
+    state: fish
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeatFeroxiCutlet
+      amount: 5
+  - type: Construction
+    graph: ConstructionGraphFeroxiSteak
+    node: start
+    defaultTarget: feroxi steak
+  - type: Item
+    storedOffset: -1,1
+    inhandVisuals:
+      left:
+      - state: plain-inhand-left
+      right:
+      - state: plain-inhand-right
+
+- type: entity
+  parent: [FoodMeatCookedBase, BaseSlicingRefinableFood]
+  id: FoodMeatFeroxiCooked
+  name: feroxi steak
+  description: Chewy feroxi meat. Filling, though!
+  components:
+  - type: Tag
+    tags:
+    - Cooked
+    - Meat
+    - Steak
+  - type: Sprite
+    sprite: _Floof/Objects/Consumable/Food/meat.rsi
+    state: fish_cooked
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeatFeroxiCutletCooked
+      amount: 5
+  - type: Construction
+    graph: ConstructionGraphFeroxiSteak
+    node: feroxi steak
+  - type: FoodSequenceElement
+    entries:
+      Burger: MeatSteak
+      Taco: MeatSteak
+  - type: Item
+    storedOffset: -1,1
+    inhandVisuals:
+      left:
+      - state: plain-cooked-inhand-left
+      right:
+      - state: plain-cooked-inhand-right
+
+- type: entity
+  parent: FoodMeatCutletBase
+  id: FoodMeatFeroxiCutlet
+  name: raw feroxi cutlet
+  description: Chewy feroxi cutlet.
+  components:
+  - type: Sprite
+    state: cutlet
+  - type: Construction
+    graph: ConstructionGraphFeroxiCutlet
+    node: start
+    defaultTarget: feroxi cutlet
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: generic-pink-inhand-left
+      right:
+      - state: generic-pink-inhand-right
+
+- type: entity
+  parent: FoodMeatCutletCookedBase
+  id: FoodMeatFeroxiCutletCooked
+  name: feroxi cutlet
+  description: Chewy and baked feroxi cutlet.
+  components:
+  - type: Sprite
+    state: cutlet-cooked
+  - type: Construction
+    graph: ConstructionGraphFeroxiCutlet
+    node: feroxi cutlet
+  - type: FoodSequenceElement
+    entries:
+      Burger: MeatCutlet
+      Taco: MeatCutlet
+  - type: Item
+    storedOffset: -1,1
+    inhandVisuals:
+      left:
+      - state: generic-pink-inhand-left
+      right:
+      - state: generic-pink-inhand-right

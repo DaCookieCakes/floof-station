@@ -1,0 +1,322 @@
+- type: marking
+  id: OverlayPlushSeamsHuman
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: human
+
+- type: marking
+  id: OverlayPlushSeamsHeadHuman
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: head_human
+
+- type: marking
+  id: OverlayPlushSeamsHeadSmallSnout
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: head_shortsnout
+
+- type: marking
+  id: OverlayPlushSeamsHeadLongSnout
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: head_longsnout # TODO: Individual markings for these species
+
+- type: marking
+  id: OverlayPlushSeamsHandsFeet
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: handsfeet
+
+- type: marking
+  id: OverlayPlushSeamsFeet
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: feet
+
+- type: marking
+  id: OverlayPlushSeamsHands
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: hands
+
+- type: marking
+  id: OverlayPlushSeamsShadowkin
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: shadowkin
+
+- type: marking
+  id: OverlayPlushSeamsShadowkinFeet
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: shadowkin_feet
+
+- type: marking
+  id: OverlayPlushSeamsBuggy
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: buggy
+
+- type: marking
+  id: OverlayPlushSeamsBuggyFeet
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: buggy_feet
+
+- type: marking
+  id: OverlayPlushSeamsArachne
+  bodyPart: LArm
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: arachne
+
+- type: marking
+  id: OverlayPlushSeamsHarpy
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: harpy
+
+- type: marking
+  id: OverlayPlushSeamsHarpyFeet
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: harpy_feet
+
+- type: marking
+  id: OverlayPlushSeamsVox
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: vox
+
+- type: marking
+  id: OverlayPlushSeamsVoxFeet
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/seams.rsi
+    state: vox_feet
+
+- type: marking
+  id: ChestZipper
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#CCCCCC"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/accessories.rsi
+    state: zipper
+
+- type: marking
+  id: ChestWindupKeyGold
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/accessories.rsi
+    state: windup_gold
+
+- type: marking
+  id: ChestWindupKeySilver
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/accessories.rsi
+    state: windup_silver
+
+- type: marking
+  id: ChestWindupKeyGoldAnimated
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/accessories.rsi
+    state: windup_gold_animated
+
+- type: marking
+  id: ChestWindupKeySilverAnimated
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/accessories.rsi
+    state: windup_silver_animated
+
+- type: marking
+  id: OverlayPlushTorsoHumanM
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/overlay.rsi
+    state: torso_plush_human_m
+
+- type: marking
+  id: OverlayPlushTorsoHumanF
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/overlay.rsi
+    state: torso_plush_human_f
+
+- type: marking
+  id: OverlayPlushFootLeft
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#EEEEEE"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/overlay.rsi
+    state: l_foot_plush
+
+- type: marking
+  id: OverlayPlushFootRight
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#EEEEEE"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/overlay.rsi
+    state: r_foot_plush
+
+- type: marking
+  id: OverlayPlushBellyF
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#EEEEEE"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/overlay.rsi
+    state: belly_plush_f
+
+- type: marking
+  id: OverlayPlushBellyM
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#EEEEEE"
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Body/Toy/overlay.rsi
+    state: belly_plush_m
+

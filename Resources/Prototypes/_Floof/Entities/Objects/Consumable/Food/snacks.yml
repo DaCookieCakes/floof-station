@@ -1,0 +1,46 @@
+- type: entity
+  parent: FoodSnackBase
+  id: FoodSnackRoastedCrickets
+  name: roasted crickets
+  description: Sun-roasted crickets, just like back home. A reptilian favorite.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - roastedcrickets
+      - smokey
+      - salty
+  - type: Sprite
+    sprite: _Floof/Objects/Consumable/Food/snacks.rsi
+    state: roasted-crickets
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Protein
+        Quantity: 5
+  - type: Edible
+    trash:
+    - FoodPacketRoastedCricketsTrash
+  - type: Tag
+    tags:
+    - FoodSnack
+    - ReptilianFood
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: FoodPacketRoastedCricketsTrash
+  name: roasted crickets bag
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Consumable/Food/snacks.rsi
+    state: roasted-crickets-trash
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: trash-inhand-left
+        color: "#A84438"
+      right:
+      - state: trash-inhand-right
+        color: "#A84438"

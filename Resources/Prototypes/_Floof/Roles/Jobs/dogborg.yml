@@ -1,0 +1,25 @@
+# Dogborg job. Spawns as PlayerDogBorgBattery and picks a type from the dogborg menu.
+# Existing cyborg spawners also serve this job (see SpawnPointBorg extraJobs), so maps don't need new spawners.
+
+- type: job
+  id: Dogborg
+  pay: 300 # Floof - bank
+  name: job-name-dogborg
+  description: job-description-dogborg
+  playTimeTracker: JobDogborg
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 10h
+  icon: JobIconBorg
+  supervisors: job-supervisors-rd
+  guides: [ Cyborgs ]
+  jobEntity: PlayerDogBorgBattery
+  applyTraits: false
+
+- type: playTimeTracker
+  id: JobDogborg
+
+- type: roleLoadout
+  id: JobDogborg
+  nameDataset: NamesBorg
+  canCustomizeName: true

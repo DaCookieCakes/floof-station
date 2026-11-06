@@ -1,0 +1,186 @@
+- type: latheRecipe
+  abstract: true
+  id: BaseMaskRecipe
+  categories:
+  - Masks
+  completetime: 2
+  materials:
+    Plastic: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseMaskRecipe
+  id: BaseMaskClothRecipe
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseMaskRecipe
+  id: BaseBandanaRecipe
+  materials:
+    Cloth: 100
+
+# Job-specific masks
+
+## Clown masks
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskClown
+  result: ClothingMaskClown
+  materials:
+    Cloth: 100
+    Plastic: 100
+
+- type: latheRecipe
+  parent: ClothingMaskClown
+  id: ClothingMaskClownBanana
+  result: ClothingMaskClownBanana
+  materials:
+    Bananium: 50
+    Cloth: 50
+    Plastic: 100
+
+- type: latheRecipe
+  parent: ClothingMaskClown
+  id: ClothingMaskClownSecurity
+  result: ClothingMaskClownSecurity
+
+- type: latheRecipe
+  parent: ClothingMaskClown
+  id: ClothingMaskBlushingClown
+  result: ClothingMaskBlushingClown
+
+## Mime masks
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskMime
+  result: ClothingMaskMime
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskBlushingMime
+  result: ClothingMaskBlushingMime
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskSadMime
+  result: ClothingMaskSadMime
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskScaredMime
+  result: ClothingMaskScaredMime
+
+# Non-job specific cosmetic masks
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskJoy
+  result: ClothingMaskJoy
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskPlague
+  result: ClothingMaskPlague
+
+- type: latheRecipe
+  parent: BaseMaskClothRecipe
+  id: ClothingMaskNeckGaiter
+  result: ClothingMaskNeckGaiter
+
+- type: latheRecipe
+  parent: BaseMaskClothRecipe
+  id: ClothingMaskNeckGaiterRed
+  result: ClothingMaskNeckGaiterRed
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskItalianMoustache
+  result: ClothingMaskItalianMoustache
+
+# Animal masks
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskRat
+  result: ClothingMaskRat
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskFox
+  result: ClothingMaskFox
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskBee
+  result: ClothingMaskBee
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskBear
+  result: ClothingMaskBear
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskRaven
+  result: ClothingMaskRaven
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskJackal
+  result: ClothingMaskJackal
+
+- type: latheRecipe
+  parent: BaseMaskRecipe
+  id: ClothingMaskBat
+  result: ClothingMaskBat
+
+# Bandanas
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandBlack
+  result: ClothingMaskBandBlack
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandBlue
+  result: ClothingMaskBandBlue
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandGold
+  result: ClothingMaskBandGold
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandGreen
+  result: ClothingMaskBandGreen
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandGrey
+  result: ClothingMaskBandGrey
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandRed
+  result: ClothingMaskBandRed
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandSkull
+  result: ClothingMaskBandSkull
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandMerc
+  result: ClothingMaskBandMerc
+
+- type: latheRecipe
+  parent: BaseBandanaRecipe
+  id: ClothingMaskBandBrown
+  result: ClothingMaskBandBrown

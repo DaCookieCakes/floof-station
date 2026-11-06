@@ -71,6 +71,11 @@ public sealed partial class VomitSystem : EntitySystem
     /// </summary>
     public void Vomit(EntityUid uid, float thirstAdded = -40f, float hungerAdded = -40f, bool force = false)
     {
+        // Floof Start - Rodentia cannot vomit.
+        if (HasComp<NoVomitComponent>(uid))
+            return;
+        // Floof End
+
         // Vomit only if entity is alive
         // Ignore condition if force was set to true
         if (!force && _mobState.IsDead(uid))

@@ -18,6 +18,11 @@ public sealed partial class LobbyCharacterPreviewPanel : Control
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
+
+        // Floof Section - Persistence
+        RotateLeft.OnPressed += _ => Rotate(6);
+        RotateRight.OnPressed += _ => Rotate(2);
+        // Floof Section End
     }
 
     public void SetLoaded(bool value)
@@ -30,4 +35,33 @@ public sealed partial class LobbyCharacterPreviewPanel : Control
     {
         Summary.Text = value;
     }
+
+    // Floof Section - Persistence
+    public Button LiveToggleButton => LiveToggle;
+
+    private void Rotate(int steps)
+    {
+        var direction = ProfilePreviewSpriteView.OverrideDirection ?? Direction.South;
+        ProfilePreviewSpriteView.OverrideDirection = (Direction) (((int) direction + steps) % 8);
+    }
+
+    /// <summary>
+    ///     Shows the live version label and the template toggle, or hides them if <paramref name="text"/> is null.
+    /// </summary>
+    public void SetLiveText(string? text)
+    {
+        LiveLabel.Text = text;
+        LiveLabel.Visible = text != null;
+        LiveToggle.Visible = text != null;
+    }
+
+    /// <summary>
+    ///     Shows the bank balance of the selected slot, or hides it if <paramref name="text"/> is null.
+    /// </summary>
+    public void SetBalanceText(string? text)
+    {
+        BalanceLabel.Text = text;
+        BalanceLabel.Visible = text != null;
+    }
+    // Floof Section End
 }

@@ -1,6 +1,10 @@
 # Chat window radio wrap (prefix and postfix)
-chat-radio-message-wrap = [color={$color}]{$channel} [bold]{$name}[/bold] {$verb}, [font={$fontType} size={$fontSize}]{ chat-manager-speech-double-quote-begin }{$message}{ chat-manager-speech-double-quote-end }[/font][/color]
-chat-radio-message-wrap-bold = [color={$color}]{$channel} [bold]{$name}[/bold] {$verb}, [font={$fontType} size={$fontSize}][bold]{ chat-manager-speech-double-quote-begin }{$message}{ chat-manager-speech-double-quote-end }[/bold][/font][/color]
+
+# Starlight-edit: Languages
+chat-radio-message-wrap = [color={$color}]{$channel} [bold]{$name}[/bold] {$verb}, { chat-manager-speech-double-quote-begin }[/color][font="{$fontType}" size={$fontSize}][color={$languageColor}]{$message}[/color][/font][color={$color}]{ chat-manager-speech-double-quote-end }[/color]
+
+# Starlight-edit: Languages
+chat-radio-message-wrap-bold = [color={$color}]{$channel} [bold]{$name}[/bold] {$verb}, { chat-manager-speech-double-quote-begin }[/color][font="{$fontType}" size={$fontSize}][color={$languageColor}][bold]{$message}[/bold][/font][/color][color={$color}]{ chat-manager-speech-double-quote-end }[/color]
 
 examine-headset-default-channel = Use {$prefix} for the default channel ([color={$color}]{$channel}[/color]).
 

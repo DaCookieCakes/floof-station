@@ -1,0 +1,187 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: MarkingsGroupHarpy
+  limits:
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+      weight: 1
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: true
+      default: [ HarpyWingFoldedHuescale ]
+    enum.HumanoidVisualLayers.LHand:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 6
+      default: [ HarpyLegsDefault ]
+      required: true
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ HarpyTailPhoenix ]
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceHarpy
+  categories: [ HideSpawnMenu ]
+  name: harpy appearance
+  components:
+  - type: Inventory
+    speciesId: harpy
+    templateId: InventoryTemplateHarpy # FLOOF
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _DV/Mobs/Species/Harpy/displacement.rsi
+            state: jumpsuit
+  - type: InitialBody
+    organs:
+      Torso: OrganHarpyTorso
+      Head: OrganHarpyHead
+      ArmLeft: OrganHarpyArmLeft
+      ArmRight: OrganHarpyArmRight
+      HandRight: OrganHarpyHandRight
+      HandLeft: OrganHarpyHandLeft
+      LegLeft: OrganHarpyLegLeft
+      LegRight: OrganHarpyLegRight
+      FootLeft: OrganHarpyFootLeft
+      FootRight: OrganHarpyFootRight
+      Brain: OrganHarpyBrain
+      Eyes: OrganHarpyEyes
+      Tongue: OrganHarpyTongue
+      Appendix: OrganHarpyAppendix
+      Ears: OrganHarpyEars
+      Lungs: OrganHarpyLungs
+      Heart: OrganHarpyHeart
+      Stomach: OrganHarpyStomach
+      Liver: OrganHarpyLiver
+      Kidneys: OrganHarpyKidneys
+      Bladder: OrganBladder # Floof - Bladder
+  - type: HumanoidProfile
+    species: Harpy
+
+- type: entity
+  parent:
+  - AppearanceHarpy
+  - BaseSpeciesMobOrganic
+  id: MobHarpy
+  name: Urist McHarpy
+  components:
+  - type: Damageable
+    damageModifierSet: Harpy
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - SolCommon
+    understands:
+    - GalacticCommon
+    - SolCommon
+  # Starlight-end
+  - type: Speech
+    allowedEmotes: ['Growl', 'Chirp', 'CatMeow', 'CatHisses', 'MonkeyScreeches', 'RobotBeep', 'Chitter', 'Squeak' ]
+  - type: Singer
+    proto: HarpySinger
+  - type: UltraVision
+  - type: UserInterface
+    interfaces:
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+  - type: Instrument
+    allowPercussion: false
+    program: 52
+  - type: SwappableInstrument
+    instrumentList:
+      "singer-type-voice": { 52: 0 }
+      "singer-type-trumpet": { 56: 0 }
+      "singer-type-electric": { 27: 0 }
+      "singer-type-bass": { 33: 0 }
+      "singer-type-rock": { 29: 0 }
+      "singer-type-acoustic": { 24: 0 }
+      "singer-type-flute": { 73: 0 }
+      "singer-type-sax": { 66: 0 }
+      "singer-type-piano": { 1: 0 }
+      "singer-type-church-organ": { 19: 0 }
+      "singer-type-harp": { 46: 0 }
+  - type: MeleeWeapon
+    animation: WeaponArcClaw
+    soundHit:
+      collection: AlienClaw
+    damage:
+      types:
+        Piercing: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWeightlessAcceleration: 3 # Move around more easily in space. Faster than moffs.
+    baseWeightlessFriction: 1
+    baseWeightlessModifier: 1
+  - type: Flight # EE - Flight
+    isLayerAnimated: true
+    layer: "/Textures/_EE/Mobs/Customization/Harpy/harpy_wings.rsi"
+    animationKey: "Flap"
+
+- type: entity
+  id: ActionToggleFlight
+  name: Fly
+  description: Make use of your wings to fly. Beat the flightless bird allegations.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    checkCanInteract: false
+  - type: Sprite
+    sprite: _EE/Interface/Actions/flight.rsi
+    layers:
+    - state: flight_off
+      map: ["enum.ActionVisuals.Icon"]
+    - state: flight_on
+      map: [ "enum.ActionVisuals.IconToggled" ]
+      visible: false
+  - type: InstantAction
+    event: !type:ToggleFlightEvent

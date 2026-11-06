@@ -34,10 +34,10 @@
       alwaysCombustible: true
       canExtinguish: true
       firestacksOnIgnite: 3.0
-      firestackFade: -0.01
+      firestackFade: -0.0025 #Floof
       damage:
         types:
-          Heat: 0.1
+          Heat: 0.015 #Floof
     - type: FireVisuals
       sprite: Objects/Misc/candles.rsi
       normalState: fire-big

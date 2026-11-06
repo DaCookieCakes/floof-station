@@ -96,6 +96,14 @@
     # Recursive
     - id: ClosetMaintenanceFilledRandom
       prob: 0.01
+    # Floofstation section - toys
+    - !type:NestedSelector
+      tableId: MaintenanceToysTable
+      prob: 0.45
+      rolls: !type:RangeNumberSelector
+        range: 0, 2
+    # TODO: when porting lewd toys, put them here or under MaintenanceToysTable
+    # Floofstation section end
 
 - type: entityTable
   id: MaintenancePlushies

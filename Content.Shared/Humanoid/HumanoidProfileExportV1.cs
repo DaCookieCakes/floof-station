@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Shared.Chat.Prototypes;
+using Content.Shared._Floof.Traits;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
@@ -59,6 +60,10 @@ public sealed partial class HumanoidCharacterProfileV1
     [DataField]
     public string FlavorText;
 
+    // Floof: Added consent.
+    [DataField]
+    public string ConsentText = string.Empty;
+
     [DataField]
     public ProtoId<SpeciesPrototype> Species;
 
@@ -80,9 +85,11 @@ public sealed partial class HumanoidCharacterProfileV1
     [DataField]
     public PreferenceUnavailableMode PreferenceUnavailable;
 
+    // Floof: Added consent.
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, Species, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
+        var species = IoCManager.Resolve<IPrototypeManager>().Index(Species); // Floof - HeightWidth
+        return new(Name, FlavorText, ConsentText, new(), Species, species.DefaultHeight, species.DefaultWidth, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts); // Floof - Genitals, HeightWidth
     }
 
     // In V2 voices are stored as a separate database entry, this picks the default for the species and sex, which would give the same voice as pre-nubody.
@@ -94,7 +101,6 @@ public sealed partial class HumanoidCharacterProfileV1
         return speciesPrototye.DefaultSoundsBySex[(int)sex];
     }
 }
-
 
 [DataDefinition, Serializable]
 public sealed partial class HumanoidCharacterAppearanceV1

@@ -1,0 +1,43 @@
+- type: marking
+  id: TailFox
+  bodyPart: Tail
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_fox_secondary
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_fox_primary
+
+- type: marking
+  id: TailRaccoon
+  bodyPart: Tail
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_raccoon_primary
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_raccoon_secondary
+
+- type: marking
+  id: TailSquirrel
+  bodyPart: Tail
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_squirrel
+
+
+- type: marking
+  id: RodentiaTailRaccoon
+  bodyPart: Tail
+  groupWhitelist: [Rodentia]
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_raccoon_primary
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_raccoon_secondary
+
+- type: marking
+  id: RodentiaTailSquirrelBushy
+  bodyPart: Tail
+  groupWhitelist: [Rodentia]
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyrattails.rsi
+    state: tail_squirrel

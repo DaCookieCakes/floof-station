@@ -1,0 +1,25 @@
+- type: species
+  id: Shadekin
+  name: species-name-shadekin
+  roundStart: true
+  prototype: MobShadekin
+  dollPrototype: AppearanceShadekin
+  defaultSkinTone: "#ffffff"
+  skinColoration: Hues
+  # eyeColoration: Shadekin
+  maleFirstNames: names_shadekin
+  femaleFirstNames: names_shadekin
+  naming: First
+  # Delta V - Comment out
+  maxAge: 300
+  oldAge: 250
+  minHeight: 0.70 # Floof - HeightWidth
+  maxHeight: 1.10 # Floof - HeightWidth
+  # customName: true
+  defaultSoundsBySex:
+  - MaleShadekin
+  - FemaleShadekin
+  - MaleShadekin
+  voices:
+  - MaleShadekin
+  - FemaleShadekin

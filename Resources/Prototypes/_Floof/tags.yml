@@ -1,0 +1,81 @@
+# PUT YOUR TAGS IN ALPHABETICAL ORDER
+# ALSO DOCUMENT WHAT THE HELL THEY DO
+# STARTING WITH 'TAG' IS EXEMPT FROM THIS!
+
+## B ##
+
+- type: Tag
+  id: BeltSlotNotBelt
+
+- type: Tag
+  id: BorgSecurityArmour
+
+## C ##
+
+- type: Tag
+  id: CombatBoots
+
+## D ##
+- type: Tag
+  id: Dildo
+
+## E ##
+
+- type: Tag
+  id: EnergySabre
+
+## F ##
+
+- type: Tag
+  id: FeroxiFood
+
+- type: Tag
+  id: Fleshlight
+
+- type: Tag
+  id: ForensicBeltEquip
+
+## H ##
+
+- type: Tag
+  id: HighHeelBoots
+
+- type: Tag
+  id: HandLabeler
+
+- type: Tag
+  id: Hoodie
+
+## I ##
+
+- type: Tag
+  id: IceCream
+
+## K ##
+
+- type: Tag
+  id: Katana
+
+## J ##
+
+- type: Tag
+  id: Jumpskirt
+
+## P ##
+
+- type: Tag
+  id: PrizeTicket
+
+## S ##
+
+- type: Tag
+  id: ShirtlessClothing
+
+- type: Tag
+  id: Skirt
+
+- type: Tag
+  id: Sterilebag
+
+- type: Tag
+  id: BorgModuleSecurity # Cyborg module category for security dogborgs
