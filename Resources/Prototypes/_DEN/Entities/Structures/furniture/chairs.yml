@@ -11,6 +11,13 @@
     sprite: _DEN/Structures/Furniture/lounge_chair.rsi
   - type: Construction
     graph: ChairBeachLounge
+  - type: Strap
+    position: Down
+    rotation: -90
+    buckleOffset: 0, 0 # Floof - lounge chairs
+    modifyBuckleDrawDepth: false # Floof - lounge chairs
+  - type: DirectionalBed # Floof - lounge chairs
+    headAtBack: true # Floof - lounge chairs
 
 - type: entity
   parent: BaseChairBeachLounge

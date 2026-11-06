@@ -18,7 +18,9 @@ public sealed partial class DirectionalBedSystem : EntitySystem
         var rotation = Transform(ent).LocalRotation;
         _transform.SetLocalRotationNoLerp(args.Buckle, -rotation);
 
-        if (rotation.GetCardinalDir() is Direction.North or Direction.East)
+        if (ent.Comp.HeadAtBack)
+            _rotationVisuals.SetHorizontalAngle(args.Buckle.Owner, rotation.GetCardinalDir().ToAngle());
+        else if (rotation.GetCardinalDir() is Direction.North or Direction.East)
             _rotationVisuals.SetHorizontalAngle(args.Buckle.Owner, -args.Strap.Comp.Rotation);
     }
 }
