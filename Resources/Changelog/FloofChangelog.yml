@@ -850,3 +850,14 @@ Entries:
   id: 103
   time: '2026-11-02T05:16:30.0000000+00:00'
   url: https://github.com/Floof-Station-SS14/Floof-Station/pull/326
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added the arrivals terminal island with an animated ocean and a
+        day-night cycle.
+    - type: Tweak
+      message: Staying on the arrivals shuttle now takes you back to the terminal.
+  id: 104
+  time: '2026-11-06T13:21:21.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/332
