@@ -870,3 +870,12 @@ Entries:
   id: 105
   time: '2026-11-06T22:10:45.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/336
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added flooding! Liquid now spreads across the station, rises around
+        objects and lets you swim.
+  id: 106
+  time: '2026-11-07T00:04:29.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/337
