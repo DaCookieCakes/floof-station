@@ -4,6 +4,7 @@
   name: blindfold
   description: The bind leading the blind.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Eyes/Misc/blindfold.rsi
   - type: Clothing

@@ -4,6 +4,10 @@
   name: bomb suit crate
   description: Science gone bonkers? Beeping behind the airlock? Buy now and be the hero the station des... I mean needs! (time not included)
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateContrabandStorageSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -44,6 +48,10 @@
   name: emergency pressure suit crate
   description: For when the crew needs mass atmospheric protection on a budget. Contains six breath masks, six emergency pressure suits, six oxygen tanks, and six nitrogen tanks.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEmergencyEVA.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -67,6 +75,10 @@
   name: radiation protection crate
   description: Survive the nuclear apocalypse! Or, the nuclear part, anyway. Contains two radiation suits and two Geiger counters.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEmergencyRadiation.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -82,6 +94,10 @@
   name: inflatable wall crate
   description: Three stacks of inflatable walls for when the stations metal walls don't want to hold atmosphere anymore.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:

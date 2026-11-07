@@ -83,6 +83,7 @@
   name: glass shard
   description: A small piece of glass.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     color: "#bbeeff"
   - type: ToolRefinable
@@ -115,6 +116,7 @@
   name: reinforced glass shard
   description: A small piece of reinforced glass.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     color: "#96cdef"
   - type: MeleeWeapon
@@ -156,6 +158,7 @@
   name: plasma glass shard
   description: A small piece of plasma glass.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     color: "#FF72E7"
   - type: MeleeWeapon

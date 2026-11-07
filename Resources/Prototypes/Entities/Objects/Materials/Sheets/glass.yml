@@ -17,6 +17,7 @@
   id: SheetGlass
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Glass: 100
@@ -69,6 +70,7 @@
   id: SheetGlass10
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: glass
   - type: Stack
@@ -80,6 +82,7 @@
   id: SheetGlass1
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: glass
   - type: Stack
@@ -93,6 +96,10 @@
   description: A reinforced sheet of glass.
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetRGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       ReinforcedGlass: 100
@@ -151,6 +158,10 @@
   name: reinforced glass
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetRGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: rglass
   - type: Stack
@@ -164,6 +175,10 @@
   description: A sheet of translucent plasma.
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetPGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       PlasmaGlass: 100
@@ -230,6 +245,10 @@
   description: A reinforced sheet of translucent plasma.
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetRPGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       ReinforcedPlasmaGlass: 100
@@ -271,6 +290,10 @@
   name: reinforced plasma glass
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetRPGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: rpglass
   - type: Stack
@@ -284,6 +307,10 @@
   description: A sheet of uranium glass.
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetUGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       UraniumGlass: 100
@@ -349,6 +376,10 @@
   name: reinforced uranium glass
   description: A reinforced sheet of uranium.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetRUGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       ReinforcedUraniumGlass: 100
@@ -403,6 +434,10 @@
   description: A sheet of brass-hardened glass, primarily used by clockwork enthusiasts and remnants of Ratvarian cults.
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetClockworkGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       BrassGlass: 100

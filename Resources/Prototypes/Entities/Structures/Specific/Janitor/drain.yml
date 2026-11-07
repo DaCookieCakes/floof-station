@@ -6,6 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     drawdepth: FloorObjects
     sprite: Objects/Specific/Janitorial/drain.rsi

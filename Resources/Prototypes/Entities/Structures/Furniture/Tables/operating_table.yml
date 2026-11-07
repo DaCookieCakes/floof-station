@@ -4,6 +4,11 @@
   name: operating table
   description: Special medical table for surgery. This one just seems to be a useless prop, though.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/OperatingTable.rsi # Floof - flooding
+      state: mask # Floof - flooding
+    surface: 0.31 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/optable.rsi
     state: operating_table

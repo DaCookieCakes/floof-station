@@ -186,6 +186,7 @@
   parent: BaseCoin
   id: TreasureCoinGold
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: coinGold_1
   - type: StaticPrice

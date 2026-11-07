@@ -4,6 +4,10 @@
   id: BoxHandcuff
   description: A box full of handcuffs.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxHandcuff.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -20,6 +24,10 @@
   id: BoxZiptie
   description: A box full of zipties.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxZiptie.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -36,6 +44,10 @@
   id: BoxFlashbang
   description: 'WARNING: These devices are extremely dangerous and can cause blindness or deafness in repeated use.'
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxFlashbang.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -52,6 +64,10 @@
   id: BoxStinger
   description: A box full of stinger grenades. Disperse!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxFlashbang.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -68,6 +84,10 @@
   id: BoxTearGas
   description: A box full of tear gas grenades. Hold your breath.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxFlashbang.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:

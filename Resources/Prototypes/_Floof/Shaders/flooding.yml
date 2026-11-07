@@ -1,0 +1,34 @@
+- type: shader
+  id: FloodObject
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_object.swsl"
+
+- type: shader
+  id: FloodMask
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_mask.swsl"
+
+- type: shader
+  id: FloodSubmerged
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_submerged.swsl"
+
+- type: shader
+  id: FloodSubmergedTint
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_submerged_tint.swsl"
+
+- type: shader
+  id: FloodFog
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_fog.swsl"
+
+- type: shader
+  id: FloodFill
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_fill.swsl"
+
+- type: shader
+  id: FloodCaustics
+  kind: source
+  path: "/Textures/_Floof/Shaders/flood_caustics.swsl"

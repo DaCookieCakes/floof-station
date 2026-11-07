@@ -6,6 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
   - type: Transform
     anchored: true
   - type: Pullable
@@ -36,6 +37,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
   - type: Transform
     anchored: true
   - type: Pullable

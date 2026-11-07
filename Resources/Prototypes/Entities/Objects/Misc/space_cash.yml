@@ -4,6 +4,7 @@
   name: spesos
   description: You gotta have money.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Cash
   - type: Item
     shape:
@@ -66,6 +67,7 @@
   id: SpaceCash10
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_10
@@ -77,6 +79,7 @@
   id: SpaceCash100
   suffix: 100
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_100
@@ -88,6 +91,7 @@
   id: SpaceCash500
   suffix: 500
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_500
@@ -99,6 +103,7 @@
   id: SpaceCash1000
   suffix: 1000
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_1000
@@ -110,6 +115,7 @@
   id: SpaceCash2500
   suffix: 2500
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_1000
@@ -132,6 +138,7 @@
   id: SpaceCash10000
   suffix: 10000
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_10000
@@ -165,6 +172,7 @@
   id: SpaceCash1000000
   suffix: 1000000
   components:
+  - type: FloodMask # Floof - flooding
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_1000000

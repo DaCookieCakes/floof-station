@@ -85,6 +85,10 @@
   parent: [ ClosetBase, StructureHealthContainerWeak ]
   id: ClosetSteelBase
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClosetBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Construction
     graph: ClosetSteel
     node: done
@@ -218,6 +222,10 @@
   name: suit storage unit
   description: A fancy hi-tech storage unit made for storing space suits.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SuitStorageAtmos.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
   - type: Lock
   - type: Anchorable

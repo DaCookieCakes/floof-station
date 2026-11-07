@@ -4,6 +4,10 @@
   name: booze storage
   description: This is where the bartender keeps the booze.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: cabinet
@@ -25,6 +29,10 @@
   id: LockerSteel
   name: secure closet
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: secure
@@ -51,6 +59,10 @@
   name: salvage specialist's equipment
   description: Nevermind the pickaxe.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: mining
@@ -92,6 +104,10 @@
   id: LockerChiefEngineer
   name: chief engineer's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: ce
@@ -106,6 +122,10 @@
   id: LockerElectricalSupplies
   name: electrical supplies locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: eng
@@ -148,6 +168,10 @@
   id: LockerEngineer
   name: engineer's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: eng_secure
@@ -178,6 +202,10 @@
   name: freezer
   suffix: No Access
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: freezer
@@ -200,6 +228,10 @@
   name: freezer
   suffix: Kitchen, Locked
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
     access: [ [ "Kitchen" ] ]
 
@@ -209,6 +241,10 @@
   id: LockerBotanist
   name: botanist's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: hydro
@@ -224,6 +260,10 @@
   name: medicine locker
   description: Filled to the brim with medical junk.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: med
@@ -238,6 +278,10 @@
   id: LockerMedical
   name: medical doctor's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: med_secure
@@ -266,6 +310,10 @@
   id: LockerChemistry
   name: chemical locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: med
@@ -280,6 +328,10 @@
   id: LockerChiefMedicalOfficer
   name: chief medical officer's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: cmo
@@ -307,6 +359,10 @@
   id: LockerScientist
   name: scientist's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: science
@@ -321,6 +377,10 @@
   id: LockerHeadOfSecurity
   name: head of security's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: hos
@@ -335,6 +395,10 @@
   id: LockerWarden
   name: warden's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: warden
@@ -363,6 +427,10 @@
   id: LockerSecurity
   name: security officer's locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: sec
@@ -376,6 +444,10 @@
   id: GunSafe
   name: gun safe
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: shotguncase
@@ -433,6 +505,10 @@
   description: It's a secure locker for an inmate's personal belongings during their time in prison.
   suffix: 1
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Fixtures
     fixtures:
       fix1:
@@ -461,6 +537,10 @@
   id: LockerPrisoner2
   suffix: 2
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_2
 
@@ -469,6 +549,10 @@
   id: LockerPrisoner3
   suffix: 3
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_3
 
@@ -477,6 +561,10 @@
   id: LockerPrisoner4
   suffix: 4
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_4
 
@@ -485,6 +573,10 @@
   id: LockerPrisoner5
   suffix: 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_5
 
@@ -493,6 +585,10 @@
   id: LockerPrisoner6
   suffix: 6
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_6
 
@@ -501,6 +597,10 @@
   id: LockerPrisoner7
   suffix: 7
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_7
 
@@ -509,6 +609,10 @@
   id: LockerPrisoner8
   suffix: 8
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_8
 
@@ -519,6 +623,10 @@
   name: detective's cabinet
   description: Usually cold and empty... like your heart.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
     access: [["Detective"]]
 
@@ -528,6 +636,10 @@
   name: evidence locker
   description: To store bags of bullet casings and detainee belongings.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
     access: [["Security"]]
 
@@ -539,6 +651,10 @@
   suffix: "Locked"
   description: It's a personal storage unit with a blood-red design.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: EntityStorageVisuals
     stateBaseClosed: syndicate
@@ -585,6 +701,10 @@
   id: LockerClown
   name: clown locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: AccessReader
     access: [["Theatre"]]
@@ -599,6 +719,10 @@
   id: LockerMime
   name: mime locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: AccessReader
     access: [["Theatre"]]
@@ -613,6 +737,10 @@
   id: LockerRepresentative
   name: representative locker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Appearance
   - type: AccessReader
     access: [["Command"]]

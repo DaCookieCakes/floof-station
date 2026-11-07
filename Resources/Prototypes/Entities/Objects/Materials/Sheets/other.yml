@@ -55,6 +55,7 @@
   name: plasma
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Plasma: 100
@@ -83,6 +84,7 @@
   id: SheetPlasma10
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: plasma
   - type: Stack
@@ -94,6 +96,7 @@
   name: plasma
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: plasma
   - type: Stack
@@ -105,6 +108,10 @@
   name: plastic
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetPlastic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Tag
     tags:
     - Plastic
@@ -141,6 +148,10 @@
   name: plastic
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetPlastic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: plastic
   - type: Stack
@@ -152,6 +163,10 @@
   name: plastic
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetPlastic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: plastic
   - type: Stack

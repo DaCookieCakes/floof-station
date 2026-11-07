@@ -1,5 +1,6 @@
 - type: reagent
   id: Cum
+  liquidOpacity: 0.95
   name: reagent-name-cum
   group: Biological
   desc: reagent-desc-cum
@@ -50,6 +51,7 @@
 
 - type: reagent
   id: MilkBreast
+  liquidOpacity: 0.95
   name: reagent-name-breast-milk
   group: Biological
   desc: reagent-desc-breast-milk

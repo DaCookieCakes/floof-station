@@ -1,0 +1,16 @@
+uniform highp float level;
+uniform highp float line_size;
+uniform highp vec4 water_color;
+uniform highp vec4 line_color;
+
+void fragment() {
+    // Textures load as sRGB. Undo that so a painted value is the level it says.
+    highp vec4 mask = zToSrgb(zTexture(UV));
+
+    if (mask.g == 0.0 || mask.r > level) {
+        discard;
+    }
+
+    COLOR = mask.r > level - line_size ? line_color : water_color;
+    COLOR.a *= mask.g;
+}

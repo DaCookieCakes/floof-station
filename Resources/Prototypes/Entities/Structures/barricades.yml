@@ -33,6 +33,10 @@
   parent: [ BaseBarricade, StructureHealthBarrier ]
   id: Barricade
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Barricade.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Construction
     graph: Barricade
     node: barricadefull
@@ -67,6 +71,10 @@
   id: BarricadeBlock
   parent: Barricade
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BarricadeBlock.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/barricades.rsi
     state: barricade

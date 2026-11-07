@@ -4,6 +4,10 @@
   name: cardboard box
   description: A cardboard box for storing things.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxCardboard.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Construction
     graph: BoxCardboard
     node: boxcardboard
@@ -61,6 +65,10 @@
   id: BoxLighttubeHoliday
   name: holiday lighttube box
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxLighttubeHoliday.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: box
@@ -85,6 +93,10 @@
   id: BoxPDA
   description: A box of spare PDA microcomputers.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxID.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -101,6 +113,10 @@
   id: BoxID
   description: A box of spare blank ID cards.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxID.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -117,6 +133,10 @@
   id: BoxHeadset
   description: A box of spare passenger headsets.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxHeadset.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -160,6 +180,10 @@
   id: BoxMRE
   description: A box of decades old military surplus rations. It is surprisingly not rotten.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMRE.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -190,6 +214,10 @@
   id: BoxInflatable
   description: Inflatable walls are not to be used as floatation devices.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxInflatable.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -225,6 +253,10 @@
   id: BoxFlare
   description: A box of flares. Party time.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxFlare.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -241,6 +273,10 @@
   id: BoxTrashbag
   description: A box of trashbags. Happy janitor noises.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxTrashbag.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -295,6 +331,10 @@
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeyEngineering
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxEncryptionKeyEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -317,6 +357,10 @@
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeyMedical
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxEncryptionKeyEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -350,6 +394,10 @@
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeySecurity
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxEncryptionKeyEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -373,6 +421,10 @@
   id: BoxEncryptionKeySyndie
   description: Two syndicate encryption keys for the price of one. Miniaturized for ease of use.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxEncryptionKeyEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Item
     size: Normal
   - type: EntityTableContainerFill
@@ -400,6 +452,10 @@
   id: BoxCandle
   description: This box is specifically moulded to only carry candles.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxCandle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
       - state: box
@@ -451,6 +507,10 @@
   name: darts box
   description: A box filled with colorful darts.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxDarts.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Item
     size: Normal
     shape:
@@ -480,6 +540,10 @@
   id: BoxEnvelope
   description: A box filled with envelopes.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxEnvelope.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
       - state: box

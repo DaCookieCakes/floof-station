@@ -263,6 +263,10 @@
   name: Booze-O-Mat
   description: A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineBooze.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: BoozeOMatInventory
   - type: VendingMachineVisuals
@@ -295,6 +299,10 @@
   name: Bruise-O-Mat
   description: A refurbished Booze-O-Mat for boosting operative morale. An imprint of a blood-red hardsuit is visible on one side, and the paint seems ashed off on the other side.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineBooze.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: BoozeOMatInventory
   - type: VendingMachineVisuals
@@ -386,6 +394,10 @@
   name: ShadyCigs Deluxe
   description: If you want to get cancer, might as well do it in style.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineCigs.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: CigaretteMachineInventory
   - type: VendingMachineVisuals
@@ -412,6 +424,10 @@
   name: ClothesMate
   description: A vending machine for clothing.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineClothing.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: ClothesMateInventory
   - type: VendingMachineVisuals
@@ -441,6 +457,12 @@
   name: WinterDrobe
   description: The best place to enjoy the cold!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineWinter.rsi # Floof - flooding
+      state: mask # Floof - flooding
+    looks: # Floof - flooding
+      broken: mask-1 # Floof - flooding
   - type: VendingMachine
     pack: WinterDrobeInventory
   - type: VendingMachineVisuals
@@ -470,6 +492,10 @@
   name: Solar's Best Hot Drinks
   description: Served boiling so it stays hot all shift!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineCoffee.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: HotDrinksMachineInventory
     initialStockQuality: 0.33
@@ -540,6 +566,10 @@
   id: VendingMachineColaBlack
   suffix: Black
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineColaBlack.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/cola-black.rsi
     layers:
@@ -561,6 +591,10 @@
   name: Space Cola Vendor
   description: It vends cola, in space.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineColaRed.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/cola-red.rsi
     layers:
@@ -650,6 +684,10 @@
   name: Shambler's Juice Vendor
   description: ~Shake me up some of that Shambler's Juice!~
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineShamblersJuice.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: ShamblersJuiceInventory
     initialStockQuality: 0.33
@@ -681,6 +719,10 @@
   name: Pwr Game Vendor
   description: You want it, we got it. Brought to you in partnership with Vlad's Salads.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachinePwrGame.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: PwrGameInventory
     initialStockQuality: 0.33
@@ -714,6 +756,10 @@
   name: Dr. Gibb Vendor
   description: Canned explosion of different flavors in this very vendor!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineDrGibb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: DrGibbInventory
     initialStockQuality: 0.33
@@ -747,6 +793,10 @@
   name: Smite Vendor
   description: Popular with the administration.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineSmite.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/smite.rsi
     layers:
@@ -811,6 +861,10 @@
   name: MagiVend
   description: A magic vending machine.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineMagivend.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: MagiVendInventory
   - type: DatasetVocalizer
@@ -866,6 +920,10 @@
   name: Engi-Vend
   description: Spare tool vending. What? Did you expect some witty description?
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineEngivend.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: EngiVendInventory
   - type: VendingMachineVisuals
@@ -895,6 +953,10 @@
   name: NanoMed Civilian
   description: It's a medical drug dispenser. Natural chemicals only!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineMedicalBase.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: NanoMedCivilianInventory
   - type: VendingMachineEject
@@ -931,6 +993,10 @@
   id: VendingMachineMedical
   name: NanoMed Plus
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineMedical.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: NanoMedPlusInventory
   - type: VendingMachineVisuals
@@ -1022,6 +1088,10 @@
   description: For when you need seeds fast. Hands down the best seed selection on the station!
   suffix: Unlocked
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineSeeds.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: MegaSeedServitorInventory
   - type: VendingMachineVisuals
@@ -1051,6 +1121,10 @@
   id: VendingMachineSeeds
   suffix: Hydroponics
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineSeeds.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
     access: [["Hydroponics"]]
 
@@ -1060,6 +1134,10 @@
   name: Getmore Chocolate Corp
   description: A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineSnack.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: GetmoreChocolateCorpInventory
     initialStockQuality: 0.33
@@ -1091,6 +1169,10 @@
   name: Sustenance Vendor
   description: A vending machine which vends food, as required by section 47-C of the NT's Prisoner Ethical Treatment Agreement.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineSustenance.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: SustenanceInventory
   - type: VendingMachineVisuals
@@ -1156,6 +1238,10 @@
   id: VendingMachineSnackGreen
   suffix: Green
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineSnackGreen.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/snack-green.rsi
     layers:
@@ -1230,6 +1316,10 @@
   name: AutoDrobe
   description: A vending machine containing costumes.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineTheater.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: AutoDrobeInventory
   - type: VendingMachineVisuals
@@ -1264,6 +1354,10 @@
   name: Vendomat
   description: Only the finest robust equipment in space!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineVendomat.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: VendomatInventory
   - type: VendingMachineVisuals
@@ -1329,6 +1423,10 @@
   name: YouTool
   description: "A vending machine containing standard tools. A label reads: Tools for tools."
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineYouTool.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: YouToolInventory
   - type: VendingMachineVisuals
@@ -1355,6 +1453,10 @@
   name: Good Clean Fun
   description: Vends things that the Captain and Head of Personnel are probably not going to appreciate you fiddling with instead of your job...
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineGames.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: GoodCleanFunInventory
   - type: VendingMachineEject
@@ -1482,6 +1584,10 @@
   name: HyDrobe
   description: A machine with a catchy name. It dispenses botany related clothing and gear.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: HyDrobeInventory
   - type: DatasetVocalizer
@@ -1511,6 +1617,10 @@
   name: LawDrobe
   description: Objection! This wardrobe dispenses the rule of law... and lawyer clothing..
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: LawDrobeInventory
   - type: DatasetVocalizer
@@ -1536,6 +1646,10 @@
   name: SecDrobe
   description: A vending machine for security and security-related clothing!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: SecDrobeInventory
   - type: DatasetVocalizer
@@ -1565,6 +1679,10 @@
   name: BarDrobe
   description: A stylish vendor to dispense the most stylish bar clothing!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: BarDrobeInventory
   - type: DatasetVocalizer
@@ -1616,6 +1734,10 @@
   name: CargoDrobe
   description: A highly advanced vending machine for buying cargo related clothing for free.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: CargoDrobeInventory
   - type: DatasetVocalizer
@@ -1645,6 +1767,10 @@
   name: MediDrobe
   description: A vending machine rumoured to be capable of dispensing clothing for medical personnel.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChemDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: MediDrobeInventory
   - type: DatasetVocalizer
@@ -1670,6 +1796,10 @@
   name: ChemDrobe
   description: A vending machine for dispensing chemistry related clothing.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChemDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: ChemDrobeInventory
   - type: DatasetVocalizer
@@ -1696,6 +1826,10 @@
   name: CuraDrobe
   description: A lowstock vendor only capable of vending clothing for curators and librarians.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: CuraDrobeInventory
   - type: DatasetVocalizer
@@ -1721,6 +1855,10 @@
   name: AtmosDrobe
   description: This relatively unknown vending machine delivers clothing for Atmospherics Technicians, an equally unknown job.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineAtmosDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: AtmosDrobeInventory
   - type: DatasetVocalizer
@@ -1751,6 +1889,10 @@
   name: EngiDrobe
   description: A vending machine renowned for vending industrial grade clothing.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineAtmosDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: EngiDrobeInventory
   - type: DatasetVocalizer
@@ -1781,6 +1923,10 @@
   name: ChefDrobe
   description: This vending machine might not dispense meat, but it certainly dispenses chef related clothing.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChefDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: ChefDrobeInventory
   - type: DatasetVocalizer
@@ -1806,6 +1952,10 @@
   name: DetDrobe
   description: A machine for all your detective needs, as long as you need clothes.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineDetDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: DetDrobeInventory
   - type: DatasetVocalizer
@@ -1831,6 +1981,10 @@
   name: JaniDrobe
   description: A self cleaning vending machine capable of dispensing clothing for janitors.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: JaniDrobeInventory
   - type: DatasetVocalizer
@@ -1860,6 +2014,10 @@
   name: SciDrobe
   description: A simple vending machine suitable to dispense well tailored science clothing. Endorsed by Space Cubans.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChemDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: SciDrobeInventory
   - type: DatasetVocalizer
@@ -1885,6 +2043,10 @@
   name: SyndieDrobe
   description: Wardrobe machine encoded by the syndicate, contains elite outfits for various operations.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingBarDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: SyndieDrobeInventory
   - type: DatasetVocalizer
@@ -1914,6 +2076,10 @@
   name: RoboDrobe
   description: A vending machine designed to dispense clothing known only to roboticists.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChemDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: RoboDrobeInventory
   - type: DatasetVocalizer
@@ -1939,6 +2105,10 @@
   name: GeneDrobe
   description: A machine for dispensing clothing related to genetics.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChemDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: GeneDrobeInventory
   - type: DatasetVocalizer
@@ -1965,6 +2135,10 @@
   name: ViroDrobe
   description: An unsterilized machine for dispending virology related clothing.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineChemDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: ViroDrobeInventory
   - type: DatasetVocalizer
@@ -1991,6 +2165,10 @@
   name: CentDrobe
   description: A one-of-a-kind vending machine for all your centcomm aesthetic needs!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineCentDrobe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: CentDrobeInventory
   - type: Sprite
@@ -2016,6 +2194,10 @@
   name: Happy Honk Dispenser
   description: A happy honk meal box dispenser made by honk! co.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineHappyHonk.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: HappyHonkDispenserInventory
     initialStockQuality: 1.0 # Nobody knows how Honk does it, but their vending machines always seem well-stocked...
@@ -2084,6 +2266,10 @@
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineTankDispenserEVA.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: TankDispenserEVAInventory
   - type: Sprite
@@ -2097,6 +2283,10 @@
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks. This one has an engineering livery.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineTankDispenserEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: VendingMachine
     pack: TankDispenserEngineeringInventory
   - type: Sprite

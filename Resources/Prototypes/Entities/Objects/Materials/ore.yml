@@ -31,6 +31,10 @@
   name: gold ore
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GoldOre.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Stack
     stackType: GoldOre
   - type: Sprite
@@ -50,6 +54,10 @@
   id: GoldOre1
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GoldOre.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Stack
     count: 1
 

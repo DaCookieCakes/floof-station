@@ -33,6 +33,10 @@
   name: kitchen supplies crate
   description: Extra kitchen supplies, in case the botanists are absent.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateFoodIceCream.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -150,6 +154,10 @@
   name: theatrical performances crate
   description: Contains a moth cloak, barber scissors, maid uniform, clown and mime attributes, and other performance charms.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -188,6 +196,10 @@
   name: DIY smokeables crate
   description: Want to get a little creative with what you use to destroy your lungs? Then this crate is for you! Has everything you need to roll your own cigarettes.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -206,6 +218,10 @@
   name: bureaucracy crate
   description: Several stacks of paper, a few pens and an office toy. What more could you ask for?
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -259,6 +275,10 @@
   name: books crate
   description: Contains 10 empty books of random appearance.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -271,6 +291,10 @@
   name: guidebooks crate
   description: Contains guidebooks.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -359,6 +383,10 @@
   id: CrateTrashCartFilled
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateTrashCart.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -437,6 +465,10 @@
   name: candles crate
   description: Contains 4 boxes of candles, 2 large and 2 small. For atmosphere or something.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector

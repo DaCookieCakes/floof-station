@@ -63,6 +63,7 @@
   id: Screwdriver
   description: Industrial grade torque in a small screwdriving package.
   components:
+  - type: FloodMask # Floof - flooding
   - type: EmitSoundOnPickup # Euphoria - New interaction SFX from Funky
     sound:
       path: /Audio/_EE/Items/Handling/screwdriver_pickup.ogg
@@ -119,6 +120,7 @@
   id: Wrench
   description: 'A common tool for assembly and disassembly. Remember: lefty latchy, righty removey.'
   components:
+  - type: FloodMask # Floof - flooding
   - type: EmitSoundOnPickup # Euphoria - New interaction SFX from Funky
     sound:
       path: /Audio/_EE/Items/Handling/wrench_pickup.ogg
@@ -173,6 +175,7 @@
   id: Multitool
   description: An advanced tool to copy, store, and send electrical pulses and signals through wires and machines.
   components:
+  - type: FloodMask # Floof - flooding
   - type: EmitSoundOnPickup # Euphoria - New interaction SFX from Funky
     sound:
       path: /Audio/_EE/Items/Handling/multitool_pickup.ogg

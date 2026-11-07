@@ -5,6 +5,10 @@
   suffix: NTSRA voidsuit locker
   parent: LockerSyndicate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClosetBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -24,6 +28,10 @@
   parent: LockerSyndicate
   suffix: Basic ship gear, Random
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClosetBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -50,6 +58,10 @@
   parent: LockerSyndicateShipGearBasic
   suffix: Basic ship gear, Random, Chameleon Kit
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClosetBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector

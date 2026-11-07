@@ -22,6 +22,10 @@
   suffix: Filled
   parent: LockerQuarterMaster
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -82,6 +86,10 @@
   suffix: Filled
   parent: LockerCaptain
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -93,6 +101,10 @@
   suffix: Filled, AntiqueLaser
   parent: LockerCaptain
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -104,6 +116,10 @@
   suffix: Filled, Hardsuit
   parent: LockerCaptain
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -145,6 +161,10 @@
   suffix: Filled
   parent: LockerHeadOfPersonnel
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -189,6 +209,10 @@
   suffix: Filled
   parent: LockerChiefEngineer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -200,6 +224,10 @@
   suffix: Filled, Hardsuit
   parent: LockerChiefEngineer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -243,6 +271,10 @@
   suffix: Filled
   parent: LockerChiefMedicalOfficer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -254,6 +286,10 @@
   suffix: Filled, Hardsuit
   parent: LockerChiefMedicalOfficer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -294,6 +330,10 @@
   suffix: Filled
   parent: LockerResearchDirector
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -305,6 +345,10 @@
   suffix: Filled, Hardsuit
   parent: LockerResearchDirector
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -356,6 +400,10 @@
   suffix: Filled
   parent: LockerHeadOfSecurity
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -367,6 +415,10 @@
   suffix: Filled, Hardsuit
   parent: LockerHeadOfSecurity
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -391,6 +443,10 @@
   suffix: Vault, Filled
   parent: LockerFreezerBase
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
     access: [ [ "Command" ] ]
   - type: EntityTableContainerFill

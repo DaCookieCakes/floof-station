@@ -21,6 +21,10 @@
   id: LockerMedicineFilled
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -61,6 +65,10 @@
   id: LockerMedicalFilled
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -108,6 +116,10 @@
   id: LockerChemistryFilled
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -136,6 +148,10 @@
   id: LockerParamedicFilled
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector

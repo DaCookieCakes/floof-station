@@ -5,6 +5,10 @@
   suffix: Filled
   description: For the daring.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -178,6 +182,10 @@
   name: mining hardsuit crate
   description: Contains a mining hardsuit, breath mask, and one tank of both oxygen and nitrogen.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector

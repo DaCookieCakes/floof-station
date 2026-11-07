@@ -70,6 +70,10 @@
   name: cell recharger
   description: An older model recharger that can recharge power cells.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PowerCellRecharger.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Power/cell_recharger.rsi
     layers:
@@ -153,6 +157,10 @@
   name: recharger
   description: A modern recharging station that can fit both power cells and small electronic devices.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WeaponCapacitorRecharger.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Power/recharger.rsi
   - type: Machine

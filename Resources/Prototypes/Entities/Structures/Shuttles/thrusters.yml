@@ -51,6 +51,10 @@
   name: thruster
   parent: [ BaseThruster, ConstructibleMachine, BaseConstructibleMachineDestructible ]
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Thruster.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Machine
     board: ThrusterMachineCircuitboard
   - type: Damageable
@@ -157,6 +161,10 @@
   parent: Thruster
   suffix: Unanchored
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/Thruster.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Transform
       anchored: false
     - type: Physics

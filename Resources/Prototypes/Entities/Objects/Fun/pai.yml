@@ -6,6 +6,7 @@
   name: personal ai device
   description: Your electronic pal who's fun to be with!
   components:
+  - type: FloodMask # Floof - flooding
   # Starlight-start: Languages
   - type: LanguageSpeaker
   - type: LanguageKnowledge
@@ -124,6 +125,7 @@
   name: syndicate personal ai device
   description: Your Syndicate pal who's fun to be with!
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Fun/pai.rsi
     layers:

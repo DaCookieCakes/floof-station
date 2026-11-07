@@ -1,0 +1,15 @@
+const highp float centerTint = 0.22;
+const highp float edgeTint = 0.55;
+
+uniform highp vec3 tint;
+uniform highp float strength;
+
+void fragment() {
+    highp vec2 coord = FRAGCOORD.xy * SCREEN_PIXEL_SIZE;
+    highp vec2 centered = (coord - vec2(0.5)) * vec2(SCREEN_PIXEL_SIZE.y / SCREEN_PIXEL_SIZE.x, 1.0);
+    highp float amount = mix(centerTint, edgeTint, smoothstep(0.35, 0.8, length(centered)));
+
+    // Lit like any sprite, so it adds nothing to the dark. The light map only speaks for colour, not coverage.
+    LIGHT.a = 1.0;
+    COLOR = vec4(tint, amount * strength);
+}

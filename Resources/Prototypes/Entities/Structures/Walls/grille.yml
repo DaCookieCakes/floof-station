@@ -176,6 +176,10 @@
   name: grille
   description: A flimsy framework of iron rods. It has seen better days.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GrilleBroken.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/grille.rsi

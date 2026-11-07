@@ -6,6 +6,10 @@
   name: variety instrument collection
   description: Get your sad station movin' and groovin' with this catch-all variety pack! Contains seven different instruments.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -58,6 +62,10 @@
   name: woodwind instrument ensemble crate
   description: If atmos is good at their job, use air to play music with these woodwind instruments! Real wood not guaranteed with every item.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -183,6 +191,10 @@
   name: plushie crate
   description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -196,6 +208,10 @@
   name: bulk lizard plushie crate
   description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -229,6 +245,10 @@
   name: art supplies
   description: Make some happy little accidents with lots of crayons!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -240,6 +260,10 @@
   name: board game crate
   description: Game nights have been proven to either decrease boredom or increase murderous rage depending on the game.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -288,6 +312,10 @@
   name: party crate
   description: An entire party just waiting for you to open it. Includes party favors, party beverages, and even a cake.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -336,6 +364,10 @@
   name: Foam Force crate
   description: Contains four Foam Force Battle Kits™. It's [REDACTED] or nothing!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -352,6 +384,10 @@
   name: boxing crate
   description: Want to set up an underground fight club or host a tournament amongst station crew? This crate is for you!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector

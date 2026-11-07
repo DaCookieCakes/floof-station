@@ -187,6 +187,7 @@
     snap:
     - Window
   components:
+  - type: FloodDry # Floof - Flooding
   - type: WallMount
     arc: 360 # interact despite grilles
   - type: Tag

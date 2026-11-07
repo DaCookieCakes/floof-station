@@ -209,6 +209,7 @@
   id: FoodPizzaVegetableSlice
   description: A slice of this is enough to satisfy even the pickiest station personnel.
   components:
+  - type: FloodMask # Floof - flooding
   - type: FlavorProfile
     flavors:
       - eggplant

@@ -142,6 +142,10 @@
   id: StorageCanister
   name: storage canister
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/StorageCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: yellow
@@ -179,6 +183,10 @@
   name: air canister
   description: A canister that can contain any type of gas. This one is supposed to contain air mixture. It can be attached to connector ports using a wrench.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AirCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Storage/canister.rsi
     layers:
@@ -218,6 +226,10 @@
   name: oxygen canister
   description: A canister that can contain any type of gas. This one is supposed to contain oxygen. It can be attached to connector ports using a wrench.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/LiquidOxygenCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: blue
@@ -255,6 +267,10 @@
   name: liquid oxygen canister
   description: A canister that can contain any type of gas. This one is supposed to contain liquid oxygen. It can be attached to connector ports using a wrench.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/LiquidOxygenCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: GasCanister
     air:
       volume: 1500
@@ -270,6 +286,10 @@
   name: nitrogen canister
   description: A canister that can contain any type of gas. This one is supposed to contain nitrogen. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/LiquidNitrogenCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: red
@@ -307,6 +327,10 @@
   name: liquid nitrogen canister
   description: A canister that can contain any type of gas. This one is supposed to contain liquid nitrogen. It can be attached to connector ports using a wrench.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/LiquidNitrogenCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: GasCanister
     air:
       volume: 1500
@@ -322,6 +346,10 @@
   name: carbon dioxide canister
   description: A canister that can contain any type of gas. This one is supposed to contain carbon dioxide. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/CarbonDioxideCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: black
@@ -361,6 +389,10 @@
   name: liquid carbon dioxide canister
   description: A canister that can contain any type of gas. This one is supposed to contain liquid carbon dioxide. It can be attached to connector ports using a wrench.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CarbonDioxideCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: GasCanister
     air:
       volume: 1500
@@ -376,6 +408,10 @@
   name: plasma canister
   description: A canister that can contain any type of gas. This one is supposed to contain plasma. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/PlasmaCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: orange
@@ -415,6 +451,10 @@
   name: tritium canister
   description: A canister that can contain any type of gas. This one is supposed to contain tritium. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/StorageCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: green
@@ -454,6 +494,10 @@
   name: water vapor canister
   description: A canister that can contain any type of gas. This one is supposed to contain water vapor. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/WaterVaporCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: water_vapor
@@ -491,6 +535,10 @@
   name: ammonia canister
   description: A canister that can contain any type of gas. This one is supposed to contain ammonia. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/AmmoniaCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: greenys
@@ -530,6 +578,10 @@
   name: nitrous oxide canister
   description: A canister that can contain any type of gas. This one is supposed to contain nitrous oxide. It can be attached to connector ports using a wrench.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/NitrousOxideCanister.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       layers:
       - state: redws
@@ -569,6 +621,10 @@
   name: frezon canister
   description: A canister that can contain any type of gas. This one is supposed to contain frezon. It can be attached to connector ports using a wrench.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FrezonCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: frezon

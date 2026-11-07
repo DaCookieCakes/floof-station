@@ -18,6 +18,7 @@
   name: coder socks
   description: It's time to code sisters!!11!
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Under/Socks/coder.rsi
   - type: Clothing

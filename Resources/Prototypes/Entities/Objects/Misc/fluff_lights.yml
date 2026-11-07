@@ -61,6 +61,10 @@
   parent: BaseLamp
   description: A light emitting device.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Lamp.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/Lights/lamp.rsi
     layers:
@@ -104,6 +108,10 @@
   parent: BaseLamp
   description: A light emitting device that would look great on a desk.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/LampGold.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/Lights/lampgreen.rsi
     layers:

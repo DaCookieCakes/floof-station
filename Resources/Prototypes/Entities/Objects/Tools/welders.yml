@@ -115,6 +115,7 @@
   name: welding tool
   description: "Melts anything as long as it's fueled, don't forget your eye protection!"
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder.rsi
 
@@ -136,6 +137,7 @@
   id: WelderIndustrial
   description: "An industrial welder with over double the fuel capacity."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder_industrial.rsi
   - type: Item
@@ -159,6 +161,7 @@
   id: WelderIndustrialAdvanced
   description: "An advanced industrial welder with over double the fuel capacity and hotter flame."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder_industrialadv.rsi
   - type: Item
@@ -207,6 +210,7 @@
   id: WelderMini
   description: "A miniature welder used during emergencies."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder_mini.rsi
   - type: Item
@@ -250,6 +254,7 @@
   name: refueling welding tool
   description: "A slow welder that can refuel itself over time."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tool
     speedModifier: 0.5
   - type: Welder

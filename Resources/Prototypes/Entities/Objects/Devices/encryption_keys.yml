@@ -160,6 +160,7 @@
   name: science encryption key
   description: An encryption key used by scientists. Maybe it is plasmaproof?
   components:
+  - type: FloodMask # Floof - flooding
   - type: EncryptionKey
     channels:
     - Science

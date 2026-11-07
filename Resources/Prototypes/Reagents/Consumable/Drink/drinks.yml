@@ -252,6 +252,7 @@
   desc: reagent-desc-milk
   physicalDesc: reagent-physical-desc-opaque
   flavor: milk
+  liquidOpacity: 0.95 # Floof - flooding
   color: "#DFDFDF"
   recognizable: true
   plantMetabolism:
@@ -440,6 +441,7 @@
   name: reagent-name-water
   desc: reagent-desc-water
   evaporationSpeed: 0.3
+  liquidOpacity: 0.55 # Floof - flooding
   absorbent: true
   physicalDesc: reagent-physical-desc-translucent
   flavor: water
@@ -464,6 +466,10 @@
         damage:
           types:
             Heat: 3
+      - !type:Oxygenate # Floof: Feroxi oxygenate from water.
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ MetabolizerFeroxi ]
       # Convert H2O into CO2.
       - !type:ModifyLungGas
         conditions:

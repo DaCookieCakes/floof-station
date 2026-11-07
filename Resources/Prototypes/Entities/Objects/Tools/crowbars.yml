@@ -58,6 +58,7 @@
   parent: BaseCrowbar
   id: Crowbar
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: icon
   - type: Item
@@ -70,6 +71,7 @@
   parent: BaseCrowbar
   id: CrowbarRed
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - Crowbar
@@ -104,6 +106,7 @@
   parent: BaseCrowbar
   id: CrowbarGreen
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon
@@ -134,6 +137,7 @@
   parent: BaseCrowbar
   id: CrowbarOrange
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon
@@ -164,6 +168,7 @@
   parent: BaseCrowbar
   id: CrowbarYellow
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon

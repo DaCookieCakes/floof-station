@@ -4,6 +4,7 @@
   id: Pickaxe
   description: Notched to perfection, for jamming it into rocks.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - Pickaxe

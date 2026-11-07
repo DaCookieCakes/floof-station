@@ -116,6 +116,10 @@
   name: water cup
   description: A paper water cup.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkWaterCup.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       maxVol: 10 # Miserably small
@@ -143,6 +147,10 @@
   name: mug
   description: A plain white mug.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug.rsi
 
@@ -152,6 +160,10 @@
   name: black mug
   description: A sleek black mug.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_black.rsi
 
@@ -161,6 +173,10 @@
   name: blue mug
   description: A blue and black mug.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_blue.rsi
 
@@ -170,6 +186,10 @@
   name: green mug
   description: A pale green and pink mug.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_green.rsi
 
@@ -233,6 +253,10 @@
   name: red mug
   description: A red and black mug.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_red.rsi
 
@@ -245,6 +269,10 @@
   suffix: Full
   description: A heated drink consisting melted chocolate and heated milk.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -268,6 +296,10 @@
   suffix: Full
   description: Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkHotCoco.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:

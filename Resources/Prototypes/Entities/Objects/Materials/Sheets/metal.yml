@@ -25,6 +25,10 @@
   name: steel
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetSteel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -59,6 +63,10 @@
   name: steel
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetSteel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: steel
   - type: Stack
@@ -71,6 +79,10 @@
   name: steel
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetSteel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: steel
   - type: Stack
@@ -137,6 +149,7 @@
   name: plasteel
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Plasteel: 100
@@ -171,6 +184,7 @@
   name: plasteel
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: plasteel
   - type: Stack
@@ -183,6 +197,7 @@
   name: plasteel
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: plasteel
   - type: Stack

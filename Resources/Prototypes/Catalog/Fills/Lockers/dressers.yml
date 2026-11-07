@@ -3,6 +3,10 @@
   parent: Dresser
   suffix: Filled, Captain
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -25,6 +29,10 @@
   parent: Dresser
   suffix: Filled, Chief Engineer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -45,6 +53,10 @@
   parent: Dresser
   suffix: Filled, Chief Medical Officer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -68,6 +80,10 @@
   parent: Dresser
   suffix: Filled, Head Of Personnel
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -87,6 +103,10 @@
   parent: Dresser
   suffix: Filled, Head Of Security
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -110,6 +130,10 @@
   parent: Dresser
   suffix: Filled, Quarter Master
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -133,6 +157,10 @@
   parent: Dresser
   suffix: Filled, Research Director
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -154,6 +182,10 @@
   parent: Dresser
   suffix: Filled, Warden
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector

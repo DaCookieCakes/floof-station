@@ -244,6 +244,10 @@
     Rated ages 3 and up.
   suffix: Welding Fuel, 8 kW
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PortableGeneratorJrPacman.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AmbientSound
     range: 4
     volume: -8

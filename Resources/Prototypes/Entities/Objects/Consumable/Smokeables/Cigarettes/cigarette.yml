@@ -4,6 +4,7 @@
   name: cigarette
   description: A roll of tobacco and nicotine.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
     state: unlit-icon
@@ -54,6 +55,7 @@
   parent: Cigarette
   suffix: spent
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: burnt-icon
   - type: Smokable
@@ -70,6 +72,7 @@
   parent: Cigarette
   name: cigarette
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -109,6 +112,7 @@
   parent: SoakedCigarette
   name: Licorice Allsorts
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -135,6 +139,7 @@
   parent: SoakedCigarette
   name: Aloe Peanut Butter Medley
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -200,6 +205,7 @@
   parent: SoakedCigarette
   name: North Atlantic Cruise
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -239,6 +245,7 @@
   parent: SoakedCigarette
   name: Chilly P
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -291,6 +298,7 @@
   parent: SoakedCigarette
   name: 80's Workout Routine
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -317,6 +325,7 @@
   parent: SoakedCigarette
   name: Beneath The Sink Experience
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -369,6 +378,7 @@
   parent: SoakedCigarette
   name: Dragon Dating Sim
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -382,6 +392,7 @@
   parent: SoakedCigarette
   name: Pun Pun's Tropical Getaway
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -395,6 +406,7 @@
   parent: SoakedCigarette
   name: English Spice
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:

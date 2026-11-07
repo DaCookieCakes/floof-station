@@ -133,6 +133,10 @@
   parent: DisposalUnitBase
   name: disposal unit
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DisposalUnit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Piping/disposal.rsi
     snapCardinals: true

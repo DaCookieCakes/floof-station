@@ -102,6 +102,11 @@
 - type: entity
   parent: BaseChemistryEmptyBottle
   id: ChemistryEmptyBottle01
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
 
 - type: entity
   parent: BaseChemistryEmptyBottle
@@ -379,6 +384,10 @@
   suffix: epinephrine
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-epinephrine
   - type: Solution
@@ -548,6 +557,10 @@
   suffix: mannitol
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-mannitol
   - type: Solution
@@ -574,6 +587,10 @@
   suffix: omnizine
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-omnizine
   - type: Solution
@@ -810,6 +827,10 @@
   suffix: robust harvest
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-robust-harvest
   - type: Solution
@@ -823,6 +844,10 @@
   suffix: ez nutrient
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-e-z-nutrient
   - type: Solution
@@ -849,6 +874,10 @@
   suffix: unstable mutagen
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-unstable-mutagen
   - type: Solution
@@ -862,6 +891,10 @@
   suffix: nocturine
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-nocturine
   - type: Solution
@@ -875,6 +908,10 @@
   suffix: ephedrine
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-ephedrine
   - type: Solution
@@ -901,6 +938,10 @@
   suffix: mute toxin
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-mute-toxin
   - type: Solution
@@ -1006,6 +1047,10 @@
   suffix: ethanol
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-ethanol
   - type: Solution
@@ -1032,6 +1077,10 @@
   suffix: hydrogen
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-hydrogen
   - type: Solution
@@ -1097,6 +1146,10 @@
   suffix: nitrogen
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-nitrogen
   - type: Solution
@@ -1123,6 +1176,10 @@
   suffix: phosphorus
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-phosphorus
   - type: Solution
@@ -1136,6 +1193,10 @@
   suffix: potassium
   parent: BaseChemistryBottleFilled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChemistryBottleEphedrine.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-potassium
   - type: Solution

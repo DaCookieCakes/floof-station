@@ -60,7 +60,7 @@ public sealed partial class FirelockComponent : Component
     /// <summary>
     /// Whether the firelock can open, or is locked due to its environment.
     /// </summary>
-    public bool IsLocked => Pressure || Temperature;
+    public bool IsLocked => Pressure || Temperature || Flood; // Floof - flooding
 
     /// <summary>
     /// Whether the firelock is holding back a hazardous pressure.
@@ -73,6 +73,14 @@ public sealed partial class FirelockComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool Temperature;
+
+    // Floof Section - flooding
+    /// <summary>
+    /// Whether the firelock is holding back a flood.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool Flood;
+    // Floof Section End
 
     /// <summary>
     /// Whether the airlock is powered.

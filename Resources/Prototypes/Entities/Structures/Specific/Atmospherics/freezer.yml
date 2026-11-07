@@ -10,6 +10,11 @@
 - type: entity
   parent: [AirSensorFreezerBase, AirSensor]
   id: AirSensorFreezer
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AirSensor.rsi # Floof - flooding
+      state: mask # Floof - flooding
 
 - type: entity
   parent: !type:CreateVariants

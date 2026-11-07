@@ -7,5 +7,6 @@ namespace Content.Shared.Fluids
     {
         CurrentVolume,
         SolutionColor,
+        LiquidOpacity, // Floof - flooding
     }
 }

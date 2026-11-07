@@ -58,6 +58,10 @@
   name: fire extinguisher
   description: It extinguishes fires.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FireExtinguisher.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/fire_extinguisher.rsi
     layers:

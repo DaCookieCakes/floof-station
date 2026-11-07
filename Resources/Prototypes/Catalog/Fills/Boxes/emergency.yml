@@ -16,6 +16,10 @@
   name: O2 survival box
   description: A small box containing a breath mask, an emergency oxygen tank, and an emergency medipen. Standard-issue for most oxygen-breathing crew.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxSurvival.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -132,6 +136,10 @@
   name: medical O2 survival box
   description: A small box containing a medical mask, an emergency oxygen tank, and an emergency medipen. Issued to oxygen-breathing members of the medical staff.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxSurvival.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector

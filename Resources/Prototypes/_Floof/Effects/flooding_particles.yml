@@ -1,0 +1,41 @@
+- type: particleEffect
+  id: FloodSplashStroke
+  sprite:
+    sprite: _Starfall/Particles/generic.rsi
+    state: drop
+  startColor: "#FFFFFFFF" # Tinted with the liquid's colour.
+  endColor: "#FFFFFF00"
+  lifetime: 0.45
+  lifetimeVariance: 0.15
+  speed: 2.2
+  speedVariance: 0.8
+  particleSize: 0.5
+  sizeVariance: 0.15
+  emissionRate: 0
+  maxCount: 14
+  burst: true
+  gravity: 5.0
+  shape:
+    type: CircleFill
+    radius: 0.25
+
+- type: particleEffect
+  id: FloodSplashWade
+  sprite:
+    sprite: _Starfall/Particles/generic.rsi
+    state: drop
+  startColor: "#FFFFFFFF"
+  endColor: "#FFFFFF00"
+  lifetime: 0.3
+  lifetimeVariance: 0.1
+  speed: 1.2
+  speedVariance: 0.4
+  particleSize: 0.35
+  sizeVariance: 0.1
+  emissionRate: 0
+  maxCount: 5
+  burst: true
+  gravity: 5.0
+  shape:
+    type: CircleFill
+    radius: 0.15

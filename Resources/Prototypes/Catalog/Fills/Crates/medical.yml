@@ -4,6 +4,10 @@
   name: medical supplies crate
   description: Basic medical supplies.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -24,6 +28,10 @@
   name: chemistry supplies crate
   description: A crate containing assorted laboratory glassware, droppers, syringes, and pill canisters. Chemicals sold separately.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -43,6 +51,10 @@
   name: MindShield implant crate
   description: Crate filled with 3 MindShield implants.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -55,6 +67,10 @@
   name: surgical supplies crate
   description: Surgical instruments.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateMedicalSurgery.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -73,6 +89,10 @@
   name: medical scrubs crate
   description: Medical clothings.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -114,6 +134,10 @@
   name: emergency O2 kit
   description: Crate filled with an O2 treatment kit.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -136,6 +160,10 @@
   name: emergency advanced kit
   description: Crate filled with an advanced treatment kit.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:

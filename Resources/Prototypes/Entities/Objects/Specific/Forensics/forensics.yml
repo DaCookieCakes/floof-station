@@ -4,6 +4,10 @@
   parent: BaseItem
   description: A forensic pad for collecting fingerprints or fibers.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Item
     size: Tiny
   - type: ForensicPad

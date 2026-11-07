@@ -10,6 +10,10 @@
   name: metamorphic glass
   description: A metamorphic glass that automagically turns into a glass appropriate for the drink within. There's a sanded off patent number on the bottom.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Item
     size: Small
   - type: Sprite
@@ -84,6 +88,10 @@
   id: DrinkAleGlass
   suffix: ale
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -182,6 +190,10 @@
   id: DrinkArnoldPalmer
   suffix: arnold palmer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -224,6 +236,10 @@
   id: DrinkBahamaMama
   suffix: bahama mama
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -266,6 +282,10 @@
   id: DrinkBeepskySmashGlass
   suffix: beepsky smash
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -308,6 +328,10 @@
   id: DrinkBlackRussianGlass
   suffix: black russian
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -322,6 +346,10 @@
   id: DrinkBlueCuracaoGlass
   suffix: blue curacao
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -336,6 +364,10 @@
   id: DrinkBloodyMaryGlass
   suffix: bloody mary
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -488,6 +520,10 @@
   id: DrinkCoffee
   suffix: coffee
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -583,6 +619,10 @@
   id: DrinkDeadRumGlass
   suffix: dead rum
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -597,6 +637,10 @@
   id: DrinkDemonsBlood
   suffix: demon's blood
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -625,6 +669,10 @@
   id: DrinkDoctorsDelightGlass
   suffix: doctor's delight
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -653,6 +701,10 @@
   id: DrinkDrGibbGlass
   suffix: dr gibb
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -821,6 +873,10 @@
   id: DrinkGreenTeaGlass
   suffix: green tea
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -849,6 +905,10 @@
   id: DrinkGrogGlass
   suffix: grog
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -863,6 +923,10 @@
   id: DrinkHippiesDelightGlass
   suffix: hippies' delight
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -892,6 +956,10 @@
   id: DrinkIcedCoffeeGlass
   suffix: iced coffee
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -920,6 +988,10 @@
   id: DrinkIcedTeaGlass
   suffix: iced tea
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -962,6 +1034,10 @@
   id: DrinkIceCreamGlass
   suffix: ice cream
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1102,6 +1178,10 @@
   id: DrinkLemonadeGlass
   suffix: lemonade
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1116,6 +1196,10 @@
   id: DrinkLemonJuice
   suffix: lemon juice
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1240,6 +1324,10 @@
   id: DrinkMeadGlass
   suffix: mead
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1254,6 +1342,10 @@
   id: DrinkMilkshake
   suffix: milkshake
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Objects/Consumable/Drinks/milkshake.rsi
     state: icon
@@ -1473,6 +1565,10 @@
   id: DrinkRootBeerGlass
   suffix: root beer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1487,6 +1583,10 @@
   id: DrinkRootBeerFloatGlass
   suffix: root beer float
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1557,6 +1657,10 @@
   id: DrinkScrewdriverCocktailGlass
   suffix: screwdriver
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1571,6 +1675,10 @@
   id: DrinkCogChampBase
   suffix: cogchamp
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Solution
       solution:
           reagents:
@@ -1613,6 +1721,10 @@
   id: DrinkMoonshineGlass
   suffix: moonshine
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1627,6 +1739,10 @@
   id: DrinkGlassWhite
   suffix: milk
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1669,6 +1785,10 @@
   id: DrinkSingulo
   suffix: singulo
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1711,6 +1831,10 @@
   id: DrinkSoyLatte
   suffix: soy latte
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1767,6 +1891,10 @@
   id: DrinkTeaGlass
   suffix: tea
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1795,6 +1923,10 @@
   id: DrinkTequilaSunriseGlass
   suffix: tequila sunrise
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1904,6 +2036,10 @@
   id: DrinkVodkaGlass
   suffix: vodka
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -1918,6 +2054,10 @@
   id: DrinkVodkaMartiniGlass
   suffix: vodka martini
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -2002,6 +2142,10 @@
   id: DrinkWhiskeyGlass
   suffix: whiskey
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -2044,6 +2188,10 @@
   id: DrinkWineGlass
   suffix: wine
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -2058,6 +2206,10 @@
   id: XenoBasherGlass
   suffix: xeno basher
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -2170,6 +2322,10 @@
   id: DrinkMimosa
   suffix: mimosa
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -2212,6 +2368,10 @@
   id: DrinkWhiskeySour
   suffix: whiskey sour
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
         reagents:
@@ -2226,6 +2386,10 @@
   id: DrinkBloodGlass
   suffix: blood
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/DrinkAleGlass.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Solution
       solution:
           reagents:

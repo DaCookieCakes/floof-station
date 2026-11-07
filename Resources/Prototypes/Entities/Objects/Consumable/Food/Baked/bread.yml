@@ -866,6 +866,10 @@
   id: FoodBreadMoldySlice
   description: Entire stations have been ripped apart over arguing whether this is still good to eat.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FoodBreadMoldySlice.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: moldy-slice

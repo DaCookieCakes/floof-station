@@ -3,6 +3,10 @@
   parent: ClothingBeltUtility
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingBeltUtility.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -19,6 +23,10 @@
   parent: ClothingBeltUtility
   suffix: Engineering
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingBeltUtility.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector

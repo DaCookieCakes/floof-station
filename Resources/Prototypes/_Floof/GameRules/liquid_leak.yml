@@ -1,0 +1,67 @@
+- type: entity
+  id: LiquidLeak
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-liquid-leak-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    endAnnouncement: station-event-liquid-leak-end-announcement
+    weight: 8
+  - type: LiquidLeakRule
+    profiles:
+    # Useful
+    - reagents: { WeldingFuel: 1 }
+      weight: 4
+    - reagents: { Bicaridine: 1, Water: 3 }
+      weight: 1
+      minimumRate: 5
+      maximumRate: 15
+    - reagents: { Omnizine: 1, Water: 3 }
+      weight: 0.5
+      minimumRate: 5
+      maximumRate: 15
+    - reagents: { Nutriment: 1, Water: 1 }
+      weight: 3
+    - reagents: { Milk: 1 }
+      weight: 3
+    - reagents: { Sugar: 1, Water: 2 }
+      weight: 3
+    - reagents: { SpaceCleaner: 1 }
+      weight: 3
+    # Harmless or funny
+    - reagents: { Water: 1 }
+      weight: 8
+    - reagents: { Beer: 1 }
+      weight: 4
+    - reagents: { Wine: 1 }
+      weight: 3
+    - reagents: { Vodka: 1 }
+      weight: 2
+    - reagents: { Coffee: 1 }
+      weight: 3
+    - reagents: { Cola: 1 }
+      weight: 3
+    - reagents: { JuiceOrange: 1 }
+      weight: 3
+    - reagents: { Blood: 1 }
+      weight: 3
+    - reagents: { Slime: 1 }
+      weight: 2
+    - reagents: { Cum: 1 }
+      weight: 2
+    - reagents: { MilkBreast: 1 }
+      weight: 2
+    # Dangerous
+    - reagents: { SpaceLube: 1 }
+      weight: 2
+    - reagents: { Toxin: 1, Water: 3 }
+      weight: 1.5
+    - reagents: { Mercury: 1, Water: 3 }
+      weight: 1
+    - reagents: { SulfuricAcid: 1, Water: 4 }
+      weight: 0.5
+    - reagents: { Plasma: 1 }
+      weight: 0.5
+  - type: DynamicRuleCost
+    cost: 25

@@ -7,6 +7,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Cobweb1.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Decoration/cobweb.rsi
@@ -37,6 +41,10 @@
   parent: Cobweb1
   id: Cobweb2
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Cobweb2.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Decoration/cobweb.rsi
     state: cobweb2

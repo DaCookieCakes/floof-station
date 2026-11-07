@@ -20,6 +20,10 @@
   name: metal rod
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PartRodMetal.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Steel: 50 #Half of a regular steel sheet to reflect the crafting recipe
@@ -69,6 +73,10 @@
   name: metal rod
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PartRodMetal.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: rods
   - type: Stack
@@ -80,6 +88,10 @@
   name: metal rod
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PartRodMetal.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: rods
   - type: Stack

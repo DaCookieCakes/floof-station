@@ -202,6 +202,7 @@ namespace Content.Server.Atmos.EntitySystems
             }
 
             UpdateAirtightData(ent.Owner, ent.Comp1, ent.Comp3, tile);
+            UpdateFloodSeal(ent.Comp1, tile); // Floof - flooding
 
             if (mapAtmosphere)
             {

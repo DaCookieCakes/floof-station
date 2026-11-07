@@ -1,0 +1,39 @@
+- type: entity
+  abstract: true
+  id: BaseFloodTile
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: Objects/Specific/Janitorial/drain.rsi
+    state: icon
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+
+- type: entity
+  parent: BaseFloodTile
+  id: FloodSource
+  name: flood source
+  description: Keeps pouring water onto its tile.
+  suffix: Testing
+  components:
+  - type: Sprite
+    color: "#6fb4ff"
+  - type: FloodSource
+
+- type: entity
+  parent: BaseFloodTile
+  id: FloodDrain
+  name: flood drain
+  description: Swallows all liquid that reaches its tile.
+  suffix: Testing
+  components:
+  - type: Sprite
+    color: "#ff8a6f"
+  - type: FloodDrain

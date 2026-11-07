@@ -10,6 +10,7 @@
     - id: ClericalError
     - id: ClosetSkeleton
     - id: GasLeak
+    - id: LiquidLeak
     - id: MassHallucinations
     - id: PowerGridCheck
     - id: RandomSentience

@@ -4,6 +4,10 @@
   parent: LockerSyndicatePersonal
   description: It's a personal storage unit for operative gear.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: AccessReader
     access: [["NuclearOperative"]]
   - type: EntityTableContainerFill
@@ -123,6 +127,10 @@
   suffix: Filled, Random
   parent: ClosetMaintenance
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClosetBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector

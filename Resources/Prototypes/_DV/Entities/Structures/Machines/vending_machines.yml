@@ -5,6 +5,10 @@
   name: Fishing Vendor
   description: Exchange your fish for fishing points and purchase fishing supplies!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/VendingMachineFishing.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: _DV/Structures/Machines/VendingMachines/fishing.rsi
     layers:
