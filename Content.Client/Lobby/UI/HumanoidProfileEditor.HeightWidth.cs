@@ -16,6 +16,8 @@ public sealed partial class HumanoidProfileEditor
         Both
     }
 
+    private bool _settingHeightWidthRanges; // Floof - HeightWidth
+
     private void HeightWidthInit()
     {
         UpdateHeightWidthSliders();
@@ -39,20 +41,25 @@ public sealed partial class HumanoidProfileEditor
 
         var species = GetHeightWidthSpecies();
 
+        // Floof Section - HeightWidth
+        // Changing the range clamps the old value and fires OnValueChanged, which would write it into the new profile.
+        _settingHeightWidthRanges = true;
         HeightSlider.MinValue = species.MinHeight;
         HeightSlider.MaxValue = species.MaxHeight;
-        HeightSlider.SetValueWithoutEvent(Profile.Height);
-
         WidthSlider.MinValue = species.MinWidth;
         WidthSlider.MaxValue = species.MaxWidth;
+        _settingHeightWidthRanges = false;
+
+        HeightSlider.SetValueWithoutEvent(Profile.Height);
         WidthSlider.SetValueWithoutEvent(Profile.Width);
+        // Floof Section End
 
         UpdateDimensions(SliderUpdate.Both);
     }
 
     private void UpdateDimensions(SliderUpdate updateType)
     {
-        if (Profile == null)
+        if (Profile == null || _settingHeightWidthRanges) // Floof - HeightWidth
             return;
 
         var species = GetHeightWidthSpecies();
