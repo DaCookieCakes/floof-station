@@ -901,3 +901,12 @@ Entries:
   id: 108
   time: '2026-11-08T03:44:33.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/341
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: >-
+        Switching characters no longer carries height and width over from the
+        previous character.
+  id: 109
+  time: '2026-11-08T09:36:39.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/345
