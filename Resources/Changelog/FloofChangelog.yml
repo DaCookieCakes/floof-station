@@ -886,3 +886,18 @@ Entries:
   id: 107
   time: '2026-11-07T09:21:08.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/339
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Ported the Swimvend and Beachdrobe, with bikinis, swim shorts and more
+        as underwear in the loadouts.
+    - type: Add
+      message: Added a disco beach ball crate to cargo.
+    - type: Fix
+      message: >-
+        Fixed underwear, swimwear, wallets and cloth wraps being cut up with a
+        welder instead of a knife.
+  id: 108
+  time: '2026-11-08T03:44:33.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/341
