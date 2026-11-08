@@ -1,0 +1,54 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformFishsuit
+  name: fishsuit
+  description: A swimsuit with fish-like features
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/fishsuit.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/fishsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformMermaid
+  name: mermaid swimsuit
+  description: A swimsuit resembling mermaid scales
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/mermaid.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/mermaid.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformNinjaSurfsuit
+  name: ninja surfsuit
+  description: A stealthy ninja-themed swimsuit
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/ninja-surfsuit.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/ninja-surfsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSundress
+  name: swim sundress
+  description: A light sundress suitable for swimming
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/sundress.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/sundress.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformWetsuitOrange
+  name: orange wetsuit
+  description: A bright orange wetsuit for visibility
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/wetsuit-orange.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/wetsuit-orange.rsi

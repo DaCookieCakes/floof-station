@@ -47,6 +47,10 @@
     - id: VendingMachineTheater
     - id: PetStoreVendingMachine # Floofstation
       weight: 10
+    # Moffstation - Start - Added swimvend
+    - id: VendingMachineSwimsuits
+      weight: 10
+    # Moffstation - End
 
 - type: entity
   parent: MarkerBase

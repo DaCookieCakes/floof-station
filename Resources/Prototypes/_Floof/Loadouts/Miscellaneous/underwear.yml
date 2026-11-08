@@ -661,3 +661,260 @@
   id: ClothingUnderTopBraAssblastusa
   equipment:
     undergarmentTop: ClothingUnderTopBraAssblastusa
+
+# Swimwear
+
+- type: loadout
+  id: ClothingUnderTopBikiniWhite
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniWhite
+
+- type: loadout
+  id: ClothingUnderTopBikiniBlack
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniBlack
+
+- type: loadout
+  id: ClothingUnderTopBikiniBlue
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniBlue
+
+- type: loadout
+  id: ClothingUnderTopBikiniRed
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniRed
+
+- type: loadout
+  id: ClothingUnderTopBikiniGreen
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniGreen
+
+- type: loadout
+  id: ClothingUnderTopBikiniYellow
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniYellow
+
+- type: loadout
+  id: ClothingUnderTopBikiniPink
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniPink
+
+- type: loadout
+  id: ClothingUnderTopBikiniNt
+  equipment:
+    undergarmentTop: ClothingUnderTopBikiniNt
+
+- type: loadout
+  id: ClothingUnderTopMedkini
+  equipment:
+    undergarmentTop: ClothingUnderTopMedkini
+
+- type: loadout
+  id: ClothingUnderTopSyndikini
+  equipment:
+    undergarmentTop: ClothingUnderTopSyndikini
+
+- type: loadout
+  id: ClothingUnderTopCoconut
+  equipment:
+    undergarmentTop: ClothingUnderTopCoconut
+
+- type: loadout
+  id: ClothingUnderTopSwimsuitOrange
+  equipment:
+    undergarmentTop: ClothingUnderTopSwimsuitOrange
+
+- type: loadout
+  id: ClothingUnderTopSwimsuitPurple
+  equipment:
+    undergarmentTop: ClothingUnderTopSwimsuitPurple
+
+- type: loadout
+  id: ClothingUnderTopOnepieceWhite
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceWhite
+
+- type: loadout
+  id: ClothingUnderTopOnepieceBlack
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceBlack
+
+- type: loadout
+  id: ClothingUnderTopOnepieceBlue
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceBlue
+
+- type: loadout
+  id: ClothingUnderTopOnepieceRed
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceRed
+
+- type: loadout
+  id: ClothingUnderTopOnepieceGreen
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceGreen
+
+- type: loadout
+  id: ClothingUnderTopOnepieceYellow
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceYellow
+
+- type: loadout
+  id: ClothingUnderTopOnepiecePink
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepiecePink
+
+- type: loadout
+  id: ClothingUnderTopOnepieceHeart
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceHeart
+
+- type: loadout
+  id: ClothingUnderTopOnepieceVintage
+  equipment:
+    undergarmentTop: ClothingUnderTopOnepieceVintage
+
+- type: loadout
+  id: ClothingUnderTopHonkini
+  equipment:
+    undergarmentTop: ClothingUnderTopHonkini
+
+- type: loadout
+  id: ClothingUnderTopShirtkini
+  equipment:
+    undergarmentTop: ClothingUnderTopShirtkini
+
+- type: loadout
+  id: ClothingUnderTopSwimsuitRed
+  equipment:
+    undergarmentTop: ClothingUnderTopSwimsuitRed
+
+- type: loadout
+  id: ClothingUnderTopSwimsuitPink
+  equipment:
+    undergarmentTop: ClothingUnderTopSwimsuitPink
+
+- type: loadout
+  id: ClothingUnderTopSwimsuitTrans
+  equipment:
+    undergarmentTop: ClothingUnderTopSwimsuitTrans
+
+- type: loadout
+  id: ClothingUnderTopSwimsuitYellow
+  equipment:
+    undergarmentTop: ClothingUnderTopSwimsuitYellow
+
+- type: loadout
+  id: ClothingUnderBottomBikiniWhite
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniWhite
+
+- type: loadout
+  id: ClothingUnderBottomBikiniBlack
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniBlack
+
+- type: loadout
+  id: ClothingUnderBottomBikiniBlue
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniBlue
+
+- type: loadout
+  id: ClothingUnderBottomBikiniRed
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniRed
+
+- type: loadout
+  id: ClothingUnderBottomBikiniGreen
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniGreen
+
+- type: loadout
+  id: ClothingUnderBottomBikiniYellow
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniYellow
+
+- type: loadout
+  id: ClothingUnderBottomBikiniPink
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniPink
+
+- type: loadout
+  id: ClothingUnderBottomBikiniNt
+  equipment:
+    undergarmentBottom: ClothingUnderBottomBikiniNt
+
+- type: loadout
+  id: ClothingUnderBottomMedkini
+  equipment:
+    undergarmentBottom: ClothingUnderBottomMedkini
+
+- type: loadout
+  id: ClothingUnderBottomSyndikini
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSyndikini
+
+- type: loadout
+  id: ClothingUnderBottomSwimsuitOrange
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimsuitOrange
+
+- type: loadout
+  id: ClothingUnderBottomSwimsuitPurple
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimsuitPurple
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsWhite
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsWhite
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsBlack
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsBlack
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsBlue
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsBlue
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsRed
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsRed
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsGreen
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsGreen
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsYellow
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsYellow
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsPink
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsPink
+
+- type: loadout
+  id: ClothingUnderBottomSwimShortsMedical
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSwimShortsMedical
+
+- type: loadout
+  id: ClothingUnderBottomSpeedo
+  equipment:
+    undergarmentBottom: ClothingUnderBottomSpeedo
+
+- type: loadout
+  id: ClothingUnderBottomCoconutSkirt
+  equipment:
+    undergarmentBottom: ClothingUnderBottomCoconutSkirt
+
+- type: loadout
+  id: ClothingUnderBottomGrassSkirt
+  equipment:
+    undergarmentBottom: ClothingUnderBottomGrassSkirt

@@ -1,5 +1,5 @@
 - type: entity
-  parent: NFBaseWallet
+  parent: [NFBaseWallet, BaseSlicingRefinable] # Floof - knife refining
   id: ClothingWalletLeatherBrown
   name: leather wallet
   description: Surprisingly thick. Careful not to lose it, and don't sit on it.

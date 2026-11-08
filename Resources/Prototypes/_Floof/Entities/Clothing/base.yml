@@ -13,7 +13,7 @@
 # Base undergarment. Do not inherit from this directly.
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [Clothing, BaseSlicingRefinable]
   id: ClothingUndergarmentBase
   components:
   - type: EmitSoundOnPickup # Goob's interaction sounds.
