@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 09/19/2026 01:21:42
-  entityCount: 18753
+  entityCount: 18754
 maps:
 - 1
 grids:
@@ -51061,41 +51061,6 @@ entities:
             11626: 0,-4
             11636: 5,-5
             11637: 7,-7
-        - node:
-            id: FloofStationSign1
-            color: '#FFFFFFFF'
-          decals:
-            6: 1,-14
-        - node:
-            id: FloofStationSign2
-            color: '#FFFFFFFF'
-          decals:
-            5: 2,-14
-        - node:
-            id: FloofStationSign3
-            color: '#FFFFFFFF'
-          decals:
-            1: 3,-14
-        - node:
-            id: FloofStationSign4
-            color: '#FFFFFFFF'
-          decals:
-            0: 4,-14
-        - node:
-            id: FloofStationSign5
-            color: '#FFFFFFFF'
-          decals:
-            2: 5,-14
-        - node:
-            id: FloofStationSign6
-            color: '#FFFFFFFF'
-          decals:
-            3: 6,-14
-        - node:
-            id: FloofStationSign7
-            color: '#FFFFFFFF'
-          decals:
-            4: 7,-14
         - node:
             id: MiniTileDarkCornerSe
             color: '#FFFFFFFF'
@@ -129652,4 +129617,11 @@ entities:
     - type: Transform
       parent: 2
       pos: -26.609678,7.5555515
+- proto: DecalLayoutFloofStationSign
+  entities:
+  - uid: 18754
+    components:
+    - type: Transform
+      pos: 4.5,-13.5
+      parent: 2
 ...
