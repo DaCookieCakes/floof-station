@@ -106,7 +106,7 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
                     var targetGrid = _station.GetLargestGrid(comp.Station);
 
                     if (targetGrid != null)
-                        _shuttles.FTLToDock(uid, shuttle, targetGrid.Value);
+                        _shuttles.FTLToDock(uid, shuttle, targetGrid.Value, priorityTag: "DockArrivals");
 
                     // The ArrivalsCooldown includes the trip there, so we only need to add the time taken for
                     // the trip back.
