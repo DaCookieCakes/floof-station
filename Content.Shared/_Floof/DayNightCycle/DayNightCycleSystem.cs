@@ -62,16 +62,24 @@ public sealed partial class DayNightCycleSystem : EntitySystem
         var query = AllEntityQuery<DayNightCycleComponent, MapLightComponent>();
         while (query.MoveNext(out var uid, out var comp, out var light))
         {
-            var cycle = _proto.Index(comp.Cycle);
-            var length = cycle.Length.TotalSeconds;
-            var seconds = (_timing.CurTime + comp.Offset - _ticker.RoundStartTimeSpan - _metadata.GetPauseTime(uid)).TotalSeconds;
-
-            var time = (float) (seconds % length / length);
-            if (time < 0)
-                time += 1;
-
-            light.AmbientLightColor = GetColor(cycle, time);
+            light.AmbientLightColor = GetColor((uid, comp));
         }
+    }
+
+    /// <summary>
+    /// The map's light right now. Only clients keep the map light up to date, so the server asks here.
+    /// </summary>
+    public Color GetColor(Entity<DayNightCycleComponent> ent)
+    {
+        var cycle = _proto.Index(ent.Comp.Cycle);
+        var length = cycle.Length.TotalSeconds;
+        var seconds = (_timing.CurTime + ent.Comp.Offset - _ticker.RoundStartTimeSpan - _metadata.GetPauseTime(ent)).TotalSeconds;
+
+        var time = (float) (seconds % length / length);
+        if (time < 0)
+            time += 1;
+
+        return GetColor(cycle, time);
     }
 
     public static Color GetColor(DayNightCyclePrototype cycle, float time)

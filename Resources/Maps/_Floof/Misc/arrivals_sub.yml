@@ -58,6 +58,11 @@ entities:
         uniqueMixes: []
         chunkSize: 4
     - type: GasTileOverlay
+    - type: ArrivalsDive
+    - type: DeviceNetwork
+      transmitFrequencyId: ArrivalsShuttleTimer
+      deviceLists: []
+      configurators: []
     - type: RadiationGridResistance
 - proto: ReinforcedWindowDiagonal
   entities:

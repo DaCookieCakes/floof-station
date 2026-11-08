@@ -1,5 +1,7 @@
 using System.Numerics;
+using Content.Client._Floof.Ocean;
 using Content.Shared._Floof.Flooding;
+using Content.Shared._Floof.Ocean;
 using Content.Shared._Floof.Swimming;
 using Robust.Client.ComponentTrees;
 using Robust.Client.GameObjects;
@@ -51,6 +53,8 @@ public partial class FloodObjectOverlay : Overlay
     private readonly FloodSubmergedSystem _submerged;
     private readonly FloodLevelSystem _level;
     private readonly SwimmingSystem _swimming;
+    private readonly OceanSeaSystem _oceanSea;
+    private readonly OceanSeaVisualsSystem _oceanVisuals;
     private readonly SpriteSystem _sprite;
     private readonly SpriteTreeSystem _spriteTree;
     private readonly SharedMapSystem _map;
@@ -67,6 +71,7 @@ public partial class FloodObjectOverlay : Overlay
     private readonly List<ShaderInstance> _maskShaders = new();
     private ShaderInstance? _dryShader;
     private readonly List<(SpriteComponent.Layer Layer, ShaderInstance Shader)> _layerShaders = new();
+    private readonly FloodWaterlineSystem.WetTile _sea = new();
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceEntities;
 
@@ -83,6 +88,8 @@ public partial class FloodObjectOverlay : Overlay
         _submerged = _entManager.System<FloodSubmergedSystem>();
         _level = _entManager.System<FloodLevelSystem>();
         _swimming = _entManager.System<SwimmingSystem>();
+        _oceanSea = _entManager.System<OceanSeaSystem>();
+        _oceanVisuals = _entManager.System<OceanSeaVisualsSystem>();
         _sprite = _entManager.System<SpriteSystem>();
         _spriteTree = _entManager.System<SpriteTreeSystem>();
         _map = _entManager.System<SharedMapSystem>();
@@ -97,7 +104,8 @@ public partial class FloodObjectOverlay : Overlay
     protected override void Draw(in OverlayDrawArgs args)
     {
         var underwater = _submerged.SubmergedView > 0f;
-        if (_system.Grids.Count == 0 && !underwater || args.Viewport.Eye is not { } eye)
+        var sea = _oceanVisuals.TryGetSea(args.MapId, out _sea.Color, out _sea.Depth);
+        if (_system.Grids.Count == 0 && !underwater && !sea || args.Viewport.Eye is not { } eye)
             return;
 
         var handle = args.WorldHandle;
@@ -146,6 +154,9 @@ public partial class FloodObjectOverlay : Overlay
                 if (wet.Depth > surface)
                     tile = wet;
             }
+
+            if (tile == null && sea && !_dryQuery.HasComp(uid) && _system.GetBarrier(uid) == FloodBarrier.None && IsOverSea(xform))
+                tile = _sea;
 
             if (tile == null && !underwater)
                 continue;
@@ -230,6 +241,16 @@ public partial class FloodObjectOverlay : Overlay
             _surfaces[(gridUid, tile)] = surface = _level.GetSurface(gridUid, grid, tile);
 
         return surface;
+    }
+
+    /// <summary>
+    ///     Past the grid's edge or on a tile open to the map, there's only the sea around it.
+    /// </summary>
+    private bool IsOverSea(TransformComponent xform)
+    {
+        return xform.GridUid is not { } gridUid ||
+               !_gridQuery.TryComp(gridUid, out var grid) ||
+               _oceanSea.IsExposed(gridUid, grid, _map.TileIndicesFor(gridUid, grid, xform.Coordinates));
     }
 
     private void PrepareDryShader(StencilParameters stencil)

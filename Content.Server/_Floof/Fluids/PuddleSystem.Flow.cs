@@ -5,6 +5,7 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Server.Shuttles.Components;
 using Content.Server.Spreader;
 using Content.Shared._Floof.CCVars;
+using Content.Shared._Floof.Ocean;
 using Content.Shared.Atmos;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.FixedPoint;
@@ -28,6 +29,7 @@ public sealed partial class PuddleSystem
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private SpreaderSystem _spreader = default!;
+    [Dependency] private OceanSeaSystem _sea = default!;
 
     [Dependency] private EntityQuery<AirtightComponent> _airtightQuery = default!;
     [Dependency] private EntityQuery<DockingComponent> _dockingQuery = default!;
@@ -318,12 +320,18 @@ public sealed partial class PuddleSystem
             return false;
         }
 
+        // Under the sea the water outside is already as high as it gets.
+        var underSea = _sea.IsUnderSea(xform.MapUid);
         foreach (var (_, tile) in freeTiles)
         {
+            if (underSea && _turf.IsSpace(tile))
+                continue;
+
             targets.Add(new FlowTarget(FlowKind.FreeTile, FixedPoint2.Zero, EntityUid.Invalid, null, tile));
         }
 
-        AddEmptySinks(entity, xform, ref targets);
+        if (!underSea)
+            AddEmptySinks(entity, xform, ref targets);
 
         // Water level shared with every neighbour below it, never under the surface tension.
         targets.Sort((x, y) => x.Volume.CompareTo(y.Volume));

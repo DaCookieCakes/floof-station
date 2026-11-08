@@ -76,14 +76,34 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         if (!args.TryGetData<float>(PuddleVisuals.LiquidOpacity, out var opacity))
             opacity = color.A;
 
-        // Deeper liquid gets darker and more opaque, reaching the liquid's own opacity at a full tile.
         var depth = MathF.Sqrt(Math.Clamp(volume * component.OverflowVolume.Float() / TileVolume.Float(), 0f, 1f));
-        var shade = 1f - MaxDepthDarken * depth;
-        var alpha = opacity * (ShallowOpacity + (1f - ShallowOpacity) * depth) * _floodClarity;
-        color = new Color(color.R * shade, color.G * shade, color.B * shade, alpha);
+        color = GetDepthColor(color, opacity, depth);
 
         _sprite.SetColor((uid, args.Sprite), color * baseColor);
-        _floodWaterline.SetLevel(uid, depth, new Color(color.R * SpriteShade, color.G * SpriteShade, color.B * SpriteShade, color.A), opacity);
+        _floodWaterline.SetLevel(uid, depth, ToFlat(color), opacity);
+    }
+
+    /// <summary>
+    ///     What a liquid looks like at this depth with no puddle sprite to tint, matching a flooded tile.
+    /// </summary>
+    public Color GetFlatColor(Color color, float opacity, float depth)
+    {
+        return ToFlat(GetDepthColor(color, opacity, depth));
+    }
+
+    /// <summary>
+    ///     Deeper liquid gets darker and more opaque, reaching the liquid's own opacity at a full tile.
+    /// </summary>
+    private Color GetDepthColor(Color color, float opacity, float depth)
+    {
+        var shade = 1f - MaxDepthDarken * depth;
+        var alpha = opacity * (ShallowOpacity + (1f - ShallowOpacity) * depth) * _floodClarity;
+        return new Color(color.R * shade, color.G * shade, color.B * shade, alpha);
+    }
+
+    private static Color ToFlat(Color color)
+    {
+        return new Color(color.R * SpriteShade, color.G * SpriteShade, color.B * SpriteShade, color.A);
     }
 
     #region Spill

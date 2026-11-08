@@ -6,6 +6,7 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Shared._Floof.CCVars;
 using Content.Shared._Floof.Flooding;
+using Content.Shared._Floof.Ocean;
 using Content.Shared._Floof.Swimming;
 using Content.Shared.Atmos;
 using Content.Shared.Body;
@@ -34,6 +35,7 @@ public sealed partial class SwimmerMobSystem : EntitySystem
     [Dependency] private BodySystem _body = default!;
     [Dependency] private FlammableSystem _flammable = default!;
     [Dependency] private FloodLevelSystem _level = default!;
+    [Dependency] private OceanSeaSystem _sea = default!;
     [Dependency] private SwimmingSystem _swimming = default!;
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private InternalsSystem _internals = default!;
@@ -52,6 +54,7 @@ public sealed partial class SwimmerMobSystem : EntitySystem
     private const float Interval = 1f;
 
     private static readonly ProtoId<ReagentPrototype> Saline = "Saline";
+    private static readonly ProtoId<ReagentPrototype> Seawater = "Seawater";
 
     private readonly Stopwatch _stopwatch = new();
 
@@ -104,7 +107,7 @@ public sealed partial class SwimmerMobSystem : EntitySystem
         }
 
         // Salt water has no gas form of its own, the gills take the water out of it.
-        breath.AdjustMoles(Gas.WaterVapor, moles * (solution.GetTotalPrototypeQuantity(Saline) / solution.Volume).Float());
+        breath.AdjustMoles(Gas.WaterVapor, moles * (solution.GetTotalPrototypeQuantity(Saline, Seawater) / solution.Volume).Float());
 
         return _respirator.CanMetabolizeInhaledAir((uid, respirator), breath)
             ? breath
@@ -112,12 +115,18 @@ public sealed partial class SwimmerMobSystem : EntitySystem
     }
 
     /// <summary>
-    ///     The puddle the entity is in.
+    ///     The liquid the entity is in. The sea has no solution of its own, and is never the poorer for what's taken out of it.
     /// </summary>
     private bool TryGetLiquid(TransformComponent xform, [NotNullWhen(true)] out Solution? solution, out Entity<SolutionComponent>? solutionEnt)
     {
         solution = null;
         solutionEnt = null;
+        if (_sea.TryGetSea(xform, out var sea))
+        {
+            solution = new Solution(sea.Comp.Reagent, FloodConstants.TileVolume);
+            return true;
+        }
+
         return _level.TryGetPuddle(xform, out var puddle) &&
                _solutions.ResolveSolution(puddle.Owner, puddle.Comp.SolutionName, ref solutionEnt, out solution);
     }

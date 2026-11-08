@@ -1,0 +1,257 @@
+uniform highp vec2 world_origin;
+// Rows of the screen pixel to world tile matrix, so the water turns along with the eye.
+uniform highp vec2 world_x;
+uniform highp vec2 world_y;
+uniform highp float depth;
+uniform highp float brightness;
+uniform highp vec2 eye_position;
+uniform highp vec2 view_center;
+uniform sampler2D floor_texture;
+uniform highp float submerged;
+uniform highp float surface_frame;
+uniform highp vec3 surface_light;
+uniform sampler2D surface_texture;
+
+const highp float surfaceFrames = 4.0;
+const highp float surfaceZoom = 4.0;
+const highp float blipsFrom = 0.7;
+const highp float blipsFull = 0.75;
+const highp float floorFrom = 0.83;
+const highp float floorAlpha = 0.12;
+const highp float floorFarScale = 2.0;
+const highp float floorVariants = 7.0;
+const highp float blipCell = 6.5;
+const highp float riseDistance = 150.0;
+const highp float schoolLane = 13.0;
+const highp float schoolGap = 34.0;
+const highp float schoolLife = 25.0;
+const highp float fishCell = 0.55;
+const highp float speckRarity = 0.45;
+
+highp float hash(highp vec2 p) {
+    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+}
+
+highp float smoothNoise(highp vec2 p) {
+    highp vec2 i = floor(p);
+    highp vec2 f = fract(p);
+    f = f * f * (3.0 - 2.0 * f);
+    return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
+        mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+}
+
+highp float murk(highp vec2 p) {
+    return smoothNoise(p) * 0.55 + smoothNoise(p * 2.1 + 9.0) * 0.3 + smoothNoise(p * 4.3 + 21.0) * 0.15;
+}
+
+// Far apart and mostly gone. Each one slowly swells and fades on its own clock.
+highp float blips(highp vec2 world) {
+    highp vec2 cell = floor(world / blipCell);
+    highp float total = 0.0;
+
+    for (int x = -1; x <= 1; x++) {
+        for (int y = -1; y <= 1; y++) {
+            highp vec2 c = cell + vec2(float(x), float(y));
+            highp float seed = hash(c);
+            if (seed < 0.72)
+                continue;
+
+            highp vec2 center = (c + vec2(hash(c + 3.1), hash(c + 7.7))) * blipCell;
+            highp float period = 7.0 + hash(c + 13.0) * 9.0;
+            highp float pulse = sin((TIME / period + seed * 40.0) * 6.2832) * 0.5 + 0.5;
+            pulse = pulse * pulse * pulse * pulse;
+
+            highp float d = length(world - center);
+            total += pulse * exp(-d * d * 140.0);
+        }
+    }
+
+    return total;
+}
+
+// We look straight down while sinking, so what's in the water comes up from below: small and faint, growing as it nears,
+// sliding south a little from the camera's slight tilt, then gone past us. 0 is far below, 1 is level with us.
+highp float riseFade(highp float t) {
+    return smoothstep(0.0, 0.3, t) * (1.0 - smoothstep(0.85, 1.0, t));
+}
+
+// Perspective: barely changes while far off, then rushes past as it gets close.
+highp float riseNear(highp float t) {
+    return (1.0 / (1.0 - t * 0.85) - 1.0) / 5.667;
+}
+
+// Tied to depth, so the dive itself moves everything, and a resurface runs it backwards.
+highp float riseProgress(highp float life) {
+    return depth * riseDistance / life;
+}
+
+highp float specks(highp vec2 world, highp float cell, highp float size, highp float life, highp float seedOffset) {
+    highp vec2 drift = vec2(sin(TIME * 0.11 + seedOffset) * 1.5 + TIME * 0.05, -TIME * 0.04);
+    highp vec2 p = (world + drift) / cell;
+    highp vec2 id = floor(p) + seedOffset;
+    highp float offset = hash(id);
+    if (offset < speckRarity)
+        return 0.0;
+
+    // Keeps stirring slowly once the station has stopped.
+    highp float cycle = riseProgress(life) + TIME * 0.03 + offset * 7.0;
+    highp float t = fract(cycle);
+    highp vec2 born = id + floor(cycle) * 13.0;
+    highp vec2 center = vec2(hash(born + 3.7) * 0.8 + 0.1, hash(born + 8.3) * 0.4 + 0.5 - riseNear(t) * 0.35);
+    highp float d = length(fract(p) - center) * cell;
+    highp float radius = size * mix(0.3, 2.2, riseNear(t));
+    // Darker in the middle, which only the big close ones have the pixels to show.
+    highp float hollow = mix(0.35, 1.0, smoothstep(0.0, radius * 0.6, d));
+    return (1.0 - smoothstep(radius * 0.5, radius, d)) * hollow * riseFade(t) * mix(0.12, 1.0, riseNear(t));
+}
+
+highp float shafts(highp vec2 world) {
+    highp float slant = world.x + world.y * 0.45;
+    highp float wide = smoothNoise(vec2(slant * 0.16 + TIME * 0.03, world.y * 0.012));
+    highp float thin = smoothNoise(vec2(slant * 0.43 - TIME * 0.05, world.y * 0.02 + 7.0));
+    return smoothstep(0.5, 0.95, wide * 0.65 + thin * 0.35);
+}
+
+// One side-on fish in a box from -0.5 to 0.5, nose towards +x.
+highp float fishShape(highp vec2 p, highp float length, highp float height) {
+    highp float body = 1.0 - step(1.0, dot(p / vec2(length, height), p / vec2(length, height)));
+    highp float behind = -p.x - length * 0.75;
+    highp float tail = step(0.0, behind) * step(behind, length * 0.55) * step(abs(p.y), behind * 0.9);
+    return max(body, tail);
+}
+
+// A school's shape, a few long lobes with their own tilt and length. Above 0 is inside, and it's thickest in the middle.
+highp float schoolBody(highp vec2 p, highp vec2 born) {
+    highp float body = 0.0;
+    for (int i = 0; i < 3; i++) {
+        highp float n = float(i);
+        highp float tilt = (hash(born + 20.0 + n) - 0.5) * 0.7;
+        highp vec2 d = p - (vec2(hash(born + 30.0 + n), hash(born + 40.0 + n)) - 0.5) * vec2(6.0, 2.0);
+        highp vec2 local = vec2(d.x * cos(tilt) + d.y * sin(tilt), d.y * cos(tilt) - d.x * sin(tilt));
+        local /= vec2(3.0 + hash(born + 50.0 + n) * 3.5, 0.7 + hash(born + 60.0 + n) * 0.9);
+        body = max(body, 1.0 - dot(local, local));
+    }
+
+    return body;
+}
+
+// Schools in lanes, each lane swimming its own way and speed while they rise.
+highp vec2 schools(highp vec2 world) {
+    highp float row = floor(world.y / schoolLane);
+    highp float dir = step(0.5, hash(vec2(row, 5.0))) * 2.0 - 1.0;
+    highp float speed = 0.3 + hash(vec2(row, 9.0)) * 0.4;
+    highp float x = world.x - dir * speed * TIME;
+    highp float cell = floor(x / schoolGap);
+    highp vec2 id = vec2(cell, row);
+
+    highp float cycle = riseProgress(schoolLife) + hash(id + 1.0) * 7.0;
+    highp float t = fract(cycle);
+    highp vec2 born = id + floor(cycle) * 17.0;
+    if (hash(born + 2.0) < 0.5)
+        return vec2(0.0);
+
+    highp vec2 center = vec2((cell + 0.5) * schoolGap, (row + 0.5) * schoolLane + 1.5);
+    highp float near = riseNear(t);
+    highp vec2 rel = (vec2(x, world.y) - center + vec2(0.0, near * 3.0)) / mix(0.6, 1.0, near);
+    if (dot(rel / vec2(11.0, 5.5), rel / vec2(11.0, 5.5)) > 1.0)
+        return vec2(0.0);
+
+    // Fish can sit anywhere in their cell and wander, so the neighbours' can reach in here too.
+    highp vec2 here = floor(rel / fishCell);
+    for (int i = -1; i <= 1; i++) {
+        for (int j = -1; j <= 1; j++) {
+            highp vec2 fish = here + vec2(float(i), float(j));
+            highp float seed = hash(fish + born * 3.0);
+            if (seed > 0.85)
+                continue;
+
+            highp vec2 home = (fish + vec2(hash(fish + born + 4.0), hash(fish + born + 6.0))) * fishCell;
+            highp vec2 wander = vec2(sin(TIME * (0.2 + seed * 0.3) + seed * 40.0), cos(TIME * (0.15 + seed * 0.25) + seed * 70.0)) * 0.18;
+            highp vec2 pos = home + wander;
+
+            highp float heading = (hash(fish + born + 8.0) - 0.5) * 0.5;
+            highp vec2 d = rel - pos;
+            highp vec2 local = vec2(d.x * cos(heading) + d.y * sin(heading), d.y * cos(heading) - d.x * sin(heading));
+            local.x *= dir;
+            local.y += sin(TIME * 6.0 + seed * 40.0 + local.x * 18.0) * 0.012;
+
+            highp float fishLength = 0.08 + hash(fish + born + 10.0) * 0.035;
+            if (fishShape(local, fishLength, fishLength * 0.35) <= 0.0)
+                continue;
+
+            // Only now, as it's the costly part and most of the screen never gets here.
+            // Going by its home, or wandering across the edge would make it pop in and out.
+            if (seed < clamp(schoolBody(home, born) * 1.6, 0.0, 0.85))
+                return vec2(riseFade(t), near);
+        }
+    }
+
+    return vec2(0.0);
+}
+
+highp vec2 toWorld(highp vec2 pixels) {
+    return vec2(dot(world_x, pixels), dot(world_y, pixels));
+}
+
+void fragment() {
+    highp vec2 world = toWorld(FRAGCOORD.xy - world_origin);
+
+    highp float cloud = murk(world * 0.07 + vec2(TIME * 0.012, TIME * 0.007));
+    // Made from the surface's own water and light, so going under doesn't change its colour.
+    highp vec3 surfaceBase = zTextureSpec(surface_texture, vec2(0.5 / surfaceFrames, 0.5)).rgb;
+    highp vec3 shallow = surfaceBase * surface_light * mix(0.85, 1.2, cloud);
+    highp vec3 blue = shallow * vec3(0.55, 0.75, 1.1);
+    highp vec3 lit = mix(blue, shallow, brightness);
+    highp vec3 dark = vec3(0.005, 0.012, 0.02);
+    highp vec3 water = mix(dark, lit, sqrt(brightness));
+
+    water += shallow * shafts(world) * brightness * 0.6;
+
+    // Darker the further below us they are, x is how much fish there is and y how close.
+    highp vec2 school = schools(world);
+    highp vec3 fishColor = water * mix(0.2, 0.7, school.y);
+    water = mix(water, fishColor, school.x * smoothstep(0.02, 0.2, brightness) * 0.9);
+
+    // We sink towards the floor under us, so it spreads out from the middle of the view as it gets closer.
+    highp vec3 surfaceColor = surfaceBase;
+    highp float landing = clamp((depth - floorFrom) / (1.0 - floorFrom), 0.0, 1.0);
+    if (landing > 0.0) {
+        highp vec2 fromCenter = toWorld(FRAGCOORD.xy - view_center);
+        highp vec2 floorPos = world + fromCenter * (mix(floorFarScale, 1.0, landing) - 1.0);
+        // The same tile art the seabed map is made of, a strip of variants with one picked per tile.
+        highp vec2 tile = vec2(floorPos.x, -floorPos.y);
+        highp float variant = floor(hash(floor(tile)) * floorVariants);
+        highp vec3 ground = zTextureSpec(floor_texture, vec2((fract(tile.x) + variant) / floorVariants, fract(tile.y))).rgb;
+        highp float floorShare = (1.0 - floorAlpha) * smoothstep(0.0, 0.4, landing);
+        water = mix(water, ground * mix(0.3, 1.0, landing), floorShare);
+        surfaceColor = mix(surfaceColor, ground, floorShare);
+    }
+
+    // The water already dims with the map's light, so only lamps can lift it above this.
+    highp vec3 light = LIGHT.rgb;
+    water = max(water, surfaceColor * light);
+    LIGHT = vec4(1.0);
+
+    highp float glow = blips(world) * smoothstep(blipsFrom, blipsFull, depth);
+    water += vec3(1.0, 0.82, 0.25) * glow;
+
+    highp float speck = specks(world, 1.1, 0.045, 12.0, 0.0)
+        // Further back, so they slide by slower than we move.
+        + specks(world - eye_position * 0.25, 0.8, 0.03, 16.0, 17.0) * 0.6
+        + specks(world - eye_position * 0.5, 0.55, 0.02, 22.0, 41.0) * 0.35;
+    // Lost in the glare until the water has dimmed some.
+    speck *= mix(0.12, 0.55, brightness) * (1.0 - smoothstep(0.3, 0.7, brightness));
+    water += vec3(0.75, 0.88, 0.95) * speck;
+
+    // The surface we just left: the same ripples as up there, rushing past us as we go through them.
+    if (submerged < 1.0) {
+        highp vec2 center = toWorld(view_center - world_origin);
+        highp vec2 ripplePos = center + toWorld(FRAGCOORD.xy - view_center) / mix(1.0, surfaceZoom, submerged * submerged);
+        highp vec2 rippleTile = vec2(ripplePos.x, -ripplePos.y);
+        highp vec3 ripples = zTextureSpec(surface_texture, vec2((fract(rippleTile.x) + surface_frame) / surfaceFrames, fract(rippleTile.y))).rgb;
+        water = mix(ripples * light, water, smoothstep(0.6, 1.0, submerged));
+    }
+
+    COLOR = vec4(water, 1.0);
+    MODULATE = vec4(1.0);
+}

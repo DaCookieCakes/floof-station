@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Shared._Floof.CCVars;
 using Content.Shared._Floof.Flooding;
+using Content.Shared._Floof.Ocean;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Climbing.Components;
@@ -33,6 +34,7 @@ public sealed partial class SwimmingSystem : VirtualController
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private ActionBlockerSystem _blocker = default!;
     [Dependency] private FloodLevelSystem _level = default!;
+    [Dependency] private OceanSeaSystem _sea = default!;
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private ItemToggleSystem _toggle = default!;
     [Dependency] private MobStateSystem _mobState = default!;
@@ -87,6 +89,7 @@ public sealed partial class SwimmingSystem : VirtualController
 
         SubscribeLocalEvent<MobMoverComponent, MapInitEvent>(OnMobMapInit);
         SubscribeLocalEvent<SwimmerComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshSpeed);
+        SubscribeLocalEvent<SwimmerComponent, IsWeightlessEvent>(OnIsWeightless);
 
         Subs.CVar(_cfg, CCVars.CCVars.FloodSlowStartDepth, value => _slowStart = value, true);
         Subs.CVar(_cfg, CCVars.CCVars.FloodSlowEndDepth, value => _slowEnd = value, true);
@@ -122,6 +125,19 @@ public sealed partial class SwimmingSystem : VirtualController
     private void OnRefreshSpeed(Entity<SwimmerComponent> ent, ref RefreshMovementSpeedModifiersEvent args)
     {
         args.ModifySpeed(ent.Comp.SpeedFactor);
+    }
+
+    /// <summary>
+    ///     Past the edge of the grid nothing gives you gravity, but you still swim out there. Parent changes refresh this.
+    /// </summary>
+    private void OnIsWeightless(Entity<SwimmerComponent> ent, ref IsWeightlessEvent args)
+    {
+        var xform = Transform(ent);
+        if (args.Handled || xform.GridUid != null || !_sea.IsInSea(xform))
+            return;
+
+        args.IsWeightless = false;
+        args.Handled = true;
     }
 
     public override void UpdateBeforeSolve(bool prediction, float frameTime)

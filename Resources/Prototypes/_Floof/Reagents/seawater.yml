@@ -1,0 +1,26 @@
+- type: reagent
+  id: Seawater
+  name: reagent-name-seawater
+  desc: reagent-desc-seawater
+  evaporationSpeed: 0.3
+  liquidOpacity: 0.8
+  physicalDesc: reagent-physical-desc-murky
+  flavor: salty
+  color: "#0c3b38"
+  recognizable: true
+  boilingPoint: 100.6
+  meltingPoint: -1.9
+  friction: 0.4
+  plantMetabolism:
+  - !type:PlantAdjustWater
+    amount: -1
+  - !type:PlantAdjustToxins
+    amount: 2
+  - !type:PlantAdjustHealth
+    amount: -1
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:Satiate
+        satiationType: Thirst
+        factor: -2

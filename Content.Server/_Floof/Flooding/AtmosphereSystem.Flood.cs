@@ -32,6 +32,6 @@ public sealed partial class AtmosphereSystem
     /// </summary>
     private static AtmosDirection GetFloodBlocked(TileAtmosphere tile)
     {
-        return tile.FloodFull ? AtmosDirection.All : tile.AirtightData.BlockedDirections;
+        return tile.FloodFull || tile.OceanExposed ? AtmosDirection.All : tile.AirtightData.BlockedDirections;
     }
 }

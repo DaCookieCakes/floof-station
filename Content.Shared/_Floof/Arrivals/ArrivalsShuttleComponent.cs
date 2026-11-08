@@ -25,4 +25,15 @@ public sealed partial class ArrivalsShuttleComponent : Component
     [DataField("firstRun")]
     public bool FirstRun = true;
 
+    /// <summary>
+    /// Set while a trip that isn't FTL (see <c>ArrivalsTripEvent</c>) is under way. The schedule waits until it ends.
+    /// </summary>
+    [DataField]
+    public bool InTrip;
+
+    /// <summary>
+    /// Expected length of the current custom trip, used for the next arrival estimate.
+    /// </summary>
+    [DataField]
+    public TimeSpan TripTime;
 }

@@ -26,3 +26,8 @@
   id: FloorOceanSurface
   sprite: /Textures/_Floof/Tiles/ocean_surface.rsi
   state: water
+
+- type: shader
+  id: OceanDeep
+  kind: source
+  path: "/Textures/_Floof/Shaders/ocean_deep.swsl"

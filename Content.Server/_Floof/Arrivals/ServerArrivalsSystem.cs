@@ -81,42 +81,64 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
 
         var query = EntityQueryEnumerator<ArrivalsShuttleComponent, ShuttleComponent, TransformComponent>();
         var curTime = Timing.CurTime;
-        TryGetArrivals(out var arrivals);
 
-        if (TryComp(arrivals, out TransformComponent? arrivalsXform))
+        if (!TryGetArrivals(out var arrivals) || !TryComp(arrivals, out TransformComponent? arrivalsXform))
+            return;
+
+        while (query.MoveNext(out var uid, out var comp, out var shuttle, out var xform))
         {
-            while (query.MoveNext(out var uid, out var comp, out var shuttle, out var xform))
+            if (comp.InTrip || comp.NextTransfer > curTime)
+                continue;
+
+            var cooldown = TimeSpan.FromSeconds(Cfg.GetCVar(CCVars.ArrivalsCooldown));
+            var tripTime = TimeSpan.FromSeconds(_shuttles.DefaultTravelTime + _shuttles.DefaultStartupTime);
+            var toStation = xform.MapUid == arrivalsXform.MapUid;
+            var target = toStation ? _station.GetLargestGrid(comp.Station) : arrivals;
+            var handled = false;
+
+            if (target != null)
             {
-                if (comp.NextTransfer > curTime)
-                    continue;
+                var ev = new ArrivalsTripEvent(comp.Station, arrivals, target.Value, toStation);
+                RaiseLocalEvent(uid, ref ev);
+                handled = ev.Handled;
 
-                var tripTime = _shuttles.DefaultTravelTime + _shuttles.DefaultStartupTime;
-
-                // Go back to arrivals source
-                if (xform.MapUid != arrivalsXform.MapUid)
+                if (handled)
                 {
-                    if (arrivals.IsValid())
-                        _shuttles.FTLToDock(uid, shuttle, arrivals);
-
-                    comp.NextArrivalsTime = Timing.CurTime + TimeSpan.FromSeconds(tripTime);
+                    comp.InTrip = true;
+                    if (ev.TravelTime > TimeSpan.Zero)
+                        tripTime = ev.TravelTime;
+                    comp.TripTime = tripTime;
                 }
-                // Go to station
                 else
                 {
-                    var targetGrid = _station.GetLargestGrid(comp.Station);
-
-                    if (targetGrid != null)
-                        _shuttles.FTLToDock(uid, shuttle, targetGrid.Value, priorityTag: "DockArrivals");
-
-                    // The ArrivalsCooldown includes the trip there, so we only need to add the time taken for
-                    // the trip back.
-                    comp.NextArrivalsTime = Timing.CurTime + TimeSpan.FromSeconds(
-                        Cfg.GetCVar(CCVars.ArrivalsCooldown) + tripTime);
+                    _shuttles.FTLToDock(uid, shuttle, target.Value, priorityTag: toStation ? "DockArrivals" : null);
                 }
-
-                comp.NextTransfer += TimeSpan.FromSeconds(Cfg.GetCVar(CCVars.ArrivalsCooldown));
             }
+
+            // Go back to arrivals source
+            if (!toStation)
+                comp.NextArrivalsTime = curTime + tripTime;
+            // Go to station
+            else
+            {
+                // The ArrivalsCooldown includes the trip there, so we only need to add the time taken for
+                // the trip back.
+                comp.NextArrivalsTime = curTime + (handled ? tripTime + CustomDockTime() : cooldown) + tripTime;
+            }
+
+            // Custom trips are rescheduled when they arrive, see TripArrived.
+            if (!handled)
+                comp.NextTransfer += cooldown;
         }
+    }
+
+    /// <summary>
+    /// How long a shuttle on a custom trip waits once docked: whatever the cooldown leaves after a default FTL trip.
+    /// </summary>
+    private TimeSpan CustomDockTime()
+    {
+        var tripTime = _shuttles.DefaultTravelTime + _shuttles.DefaultStartupTime;
+        return TimeSpan.FromSeconds(Math.Max(Cfg.GetCVar(CCVars.ArrivalsCooldown) - tripTime, 10f));
     }
 
     private void SetupArrivalsStation()
@@ -236,13 +258,74 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
     [SubscribeLocalEvent]
     private void OnArrivalsFTL(EntityUid shuttleUid, ArrivalsShuttleComponent component, ref FTLStartedEvent args)
     {
+        TryComp<FTLComponent>(shuttleUid, out var ftlComp);
+        var ftlTime = TimeSpan.FromSeconds(ftlComp?.TravelTime ?? _shuttles.DefaultTravelTime);
+
+        Departed((shuttleUid, component),
+            args.FromMapUid,
+            args.FTLFrom,
+            args.FromRotation,
+            Transform(args.TargetCoordinates.EntityId).MapUid,
+            ftlTime);
+    }
+
+    /// <summary>
+    /// Call when an arrivals shuttle on a custom trip (see <see cref="ArrivalsTripEvent"/>) sets off,
+    /// before it has moved. Handles the shuttle screens, kicks stowaways off and clocks players in.
+    /// </summary>
+    public void TripDeparted(Entity<ArrivalsShuttleComponent?> shuttle, EntityUid target, TimeSpan travelTime)
+    {
+        if (!Resolve(shuttle, ref shuttle.Comp))
+            return;
+
+        var xform = Transform(shuttle);
+        Departed(shuttle!,
+            xform.MapUid,
+            _transform.GetWorldMatrix(xform),
+            _transform.GetWorldRotation(xform),
+            Transform(target).MapUid,
+            travelTime,
+            true);
+    }
+
+    /// <summary>
+    /// Call when an arrivals shuttle on a custom trip has docked at its target. Schedules its next departure.
+    /// </summary>
+    public void TripArrived(Entity<ArrivalsShuttleComponent?> shuttle)
+    {
+        if (!Resolve(shuttle, ref shuttle.Comp) || !shuttle.Comp.InTrip)
+            return;
+
+        var comp = shuttle.Comp;
+        var dockTime = CustomDockTime();
+        comp.InTrip = false;
+        comp.NextTransfer = Timing.CurTime + dockTime;
+
+        // Docked at the terminal it's here now, at the station it's back after the dock and the trip back.
+        var mapUid = Transform(shuttle).MapUid;
+        if (TryGetArrivals(out EntityUid arrivals) && Transform(arrivals).MapUid != mapUid)
+            comp.NextArrivalsTime = comp.NextTransfer + comp.TripTime;
+
+        if (mapUid != null)
+            Arrived((shuttle, comp), mapUid.Value, dockTime);
+    }
+
+    private void Departed(
+        Entity<ArrivalsShuttleComponent> shuttle,
+        EntityUid? fromMapUid,
+        Matrix3x2 from,
+        Angle fromRotation,
+        EntityUid? destinationMap,
+        TimeSpan travelTime,
+        bool customTrip = false)
+    {
+        var (shuttleUid, component) = shuttle;
         if (!TryGetArrivals(out EntityUid arrivals))
             return;
 
         if (TryComp<DeviceNetworkComponent>(shuttleUid, out var netComp))
         {
-            TryComp<FTLComponent>(shuttleUid, out var ftlComp);
-            var ftlTime = TimeSpan.FromSeconds(ftlComp?.TravelTime ?? _shuttles.DefaultTravelTime);
+            var ftlTime = travelTime;
 
             var payload = new ScreenShuttlePayload
             {
@@ -260,28 +343,36 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
                 sourceMap = station == null ? null : Transform(station.Value).MapUid;
                 arrivalsDelay += RoundStartFTLDuration;
                 component.FirstRun = false;
-                payload.DestinationMap = Transform(args.TargetCoordinates.EntityId).MapUid;
+                payload.DestinationMap = destinationMap;
                 payload.DestinationTime = ftlTime;
             }
             else
-                sourceMap = args.FromMapUid;
+                sourceMap = fromMapUid;
 
             payload.SourceMap = sourceMap;
             payload.SourceTime = ftlTime + TimeSpan.FromSeconds(arrivalsDelay);
+
+            // There and back with a dock in between, and the far end gets an ETA.
+            if (customTrip)
+            {
+                payload.SourceTime = ftlTime + CustomDockTime() + ftlTime;
+                payload.DestinationMap = destinationMap;
+                payload.DestinationTime = ftlTime;
+            }
 
             _deviceNetworkSystem.SendPacket(shuttleUid, null, ref payload, netComp.TransmitFrequency);
         }
 
         // Don't do anything here when leaving arrivals.
         var arrivalsMapUid = Transform(arrivals).MapUid;
-        if (args.FromMapUid == arrivalsMapUid)
+        if (fromMapUid == arrivalsMapUid)
             return;
 
         var returns = Cfg.GetCVar(CCVars.ArrivalsReturns);
 
         // Any mob then yeet them off the shuttle.
-        if (!returns && args.FromMapUid != null)
-            DumpChildren(shuttleUid, ref args);
+        if (!returns && fromMapUid != null)
+            DumpChildren(shuttleUid, fromMapUid.Value, from, fromRotation);
 
         var pendingQuery = AllEntityQuery<PendingClockInComponent, TransformComponent>();
 
@@ -322,14 +413,19 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
     private void OnArrivalsDocked(EntityUid uid, ArrivalsShuttleComponent component, ref FTLCompletedEvent args)
     {
         var dockTime = component.NextTransfer - Timing.CurTime + TimeSpan.FromSeconds(_shuttles.DefaultStartupTime);
+        Arrived((uid, component), args.MapUid, dockTime);
+    }
 
+    private void Arrived(Entity<ArrivalsShuttleComponent> shuttle, EntityUid mapUid, TimeSpan dockTime)
+    {
+        var uid = shuttle.Owner;
         if (TryComp<DeviceNetworkComponent>(uid, out var netComp))
         {
             var payload = new ScreenShuttlePayload
             {
                 Shuttle = uid,
                 ShuttleTime = dockTime,
-                SourceMap = args.MapUid,
+                SourceMap = mapUid,
                 SourceTime = dockTime,
                 Docked = true,
             };
@@ -337,15 +433,15 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
         }
     }
 
-    private void DumpChildren(EntityUid uid, ref FTLStartedEvent args)
+    private void DumpChildren(EntityUid uid, EntityUid fromMapUid, Matrix3x2 from, Angle fromRotation)
     {
         var toDump = new List<Entity<TransformComponent>>();
         FindDumpChildren(uid, toDump);
         foreach (var (ent, xform) in toDump)
         {
             var rotation = xform.LocalRotation;
-            _transform.SetCoordinates(ent, new EntityCoordinates(args.FromMapUid!.Value, Vector2.Transform(xform.LocalPosition, args.FTLFrom)));
-            _transform.SetWorldRotation(ent, args.FromRotation + rotation);
+            _transform.SetCoordinates(ent, new EntityCoordinates(fromMapUid, Vector2.Transform(xform.LocalPosition, from)));
+            _transform.SetWorldRotation(ent, fromRotation + rotation);
             if (_actor.TryGetSession(ent, out var session))
             {
                 _chat.DispatchServerMessage(session!, Loc.GetString("latejoin-arrivals-dumped-from-shuttle"));

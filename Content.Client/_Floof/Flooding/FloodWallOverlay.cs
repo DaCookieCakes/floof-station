@@ -1,5 +1,7 @@
 using System.Numerics;
+using Content.Client._Floof.Ocean;
 using Content.Shared._Floof.Flooding;
+using Content.Shared._Floof.Ocean;
 using Robust.Client.ComponentTrees;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -41,6 +43,8 @@ public partial class FloodWallOverlay : Overlay
     private readonly FloodBarrier _pass;
     private readonly FloodWaterlineSystem _system;
     private readonly FloodSubmergedSystem _submerged;
+    private readonly OceanSeaSystem _oceanSea;
+    private readonly OceanSeaVisualsSystem _oceanVisuals;
     private readonly SharedMapSystem _map;
     private readonly SharedTransformSystem _xform;
     private readonly SpriteSystem _sprite;
@@ -50,6 +54,7 @@ public partial class FloodWallOverlay : Overlay
 
     private List<Entity<MapGridComponent>> _grids = new();
     private readonly HashSet<Entity<SpriteComponent, TransformComponent>> _sprites = new();
+    private readonly FloodWaterlineSystem.WetTile _sea = new();
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceEntities;
 
@@ -63,6 +68,8 @@ public partial class FloodWallOverlay : Overlay
         IoCManager.InjectDependencies(this);
         _system = _entManager.System<FloodWaterlineSystem>();
         _submerged = _entManager.System<FloodSubmergedSystem>();
+        _oceanSea = _entManager.System<OceanSeaSystem>();
+        _oceanVisuals = _entManager.System<OceanSeaVisualsSystem>();
         _map = _entManager.System<SharedMapSystem>();
         _xform = _entManager.System<SharedTransformSystem>();
         _sprite = _entManager.System<SpriteSystem>();
@@ -93,23 +100,32 @@ public partial class FloodWallOverlay : Overlay
             handle.UseShader(_fill);
         }
 
+        var sea = _oceanVisuals.TryGetSea(args.MapId, out _sea.Color, out _sea.Depth);
+
         _grids.Clear();
         _map.FindGridsIntersecting(args.MapId, args.WorldAABB, ref _grids);
 
         foreach (var grid in _grids)
         {
-            if (!_system.Grids.TryGetValue(grid, out var tiles) || tiles.Count == 0)
+            _system.Grids.TryGetValue(grid, out var tiles);
+            if (!sea && (tiles == null || tiles.Count == 0))
                 continue;
 
             var (_, _, matrix, invMatrix) = _xform.GetWorldPositionRotationMatrixWithInv(grid);
             handle.SetTransform(matrix);
             var bounds = invMatrix.TransformBox(args.WorldBounds).Enlarged(2f);
 
-            foreach (var (indices, tile) in tiles)
+            if (tiles != null)
             {
-                if (tile.Depth > 0f && bounds.Contains(indices))
-                    DrawBandsAround(handle, grid, indices, tile);
+                foreach (var (indices, tile) in tiles)
+                {
+                    if (tile.Depth > 0f && bounds.Contains(indices))
+                        DrawBandsAround(handle, grid, indices, tile);
+                }
             }
+
+            if (sea)
+                DrawSeaBands(handle, grid, bounds);
         }
 
         handle.UseShader(null);
@@ -117,6 +133,23 @@ public partial class FloodWallOverlay : Overlay
 
         if (underwater && args.Viewport.Eye is { } eye)
             DarkenAboveWater(args, stencil, eye.Rotation);
+    }
+
+    /// <summary>
+    ///     Exposed tiles hold no puddles, but the sea on them climbs whatever borders them just the same.
+    /// </summary>
+    private void DrawSeaBands(DrawingHandleWorld handle, Entity<MapGridComponent> grid, Box2 bounds)
+    {
+        var area = bounds.Intersect(grid.Comp.LocalAABB.Enlarged(1f));
+        for (var x = (int) MathF.Floor(area.Left); x < MathF.Ceiling(area.Right); x++)
+        {
+            for (var y = (int) MathF.Floor(area.Bottom); y < MathF.Ceiling(area.Top); y++)
+            {
+                var indices = new Vector2i(x, y);
+                if (_oceanSea.IsExposed(grid, grid, indices) && GetBarrier(grid, indices) == FloodBarrier.None)
+                    DrawBandsAround(handle, grid, indices, _sea);
+            }
+        }
     }
 
     private void DrawBandsAround(DrawingHandleWorld handle, Entity<MapGridComponent> grid, Vector2i indices, FloodWaterlineSystem.WetTile tile)
