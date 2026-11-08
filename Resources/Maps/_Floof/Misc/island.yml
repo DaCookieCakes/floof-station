@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 11/05/2026 07:36:45
-  entityCount: 29
+  entityCount: 43
 maps:
 - 1
 grids:
@@ -1136,4 +1136,100 @@ entities:
     - type: Transform
       parent: 2
       pos: 51.5,-0.5
+- proto: ChairBeachLoungePink
+  entities:
+  - uid: 43
+    components:
+    - type: Transform
+      pos: -5.5,32.5
+      parent: 2
+      rot: 3.141592653589793 rad
+- proto: ChairBeachLoungePurple
+  entities:
+  - uid: 45
+    components:
+    - type: Transform
+      pos: -3.5,32.5
+      parent: 2
+      rot: 3.141592653589793 rad
+- proto: ChairBeachLoungeWhite
+  entities:
+  - uid: 47
+    components:
+    - type: Transform
+      pos: 0.5,32.5
+      parent: 2
+      rot: 3.141592653589793 rad
+- proto: BeachUmbrellaPink
+  entities:
+  - uid: 50
+    components:
+    - type: Transform
+      pos: -6.5,32.5
+      parent: 2
+  - uid: 51
+    components:
+    - type: Transform
+      pos: -2.5,32.5
+      parent: 2
+- proto: BeachUmbrellaPurple
+  entities:
+  - uid: 52
+    components:
+    - type: Transform
+      pos: -4.5,32.5
+      parent: 2
+  - uid: 53
+    components:
+    - type: Transform
+      pos: -0.5,32.5
+      parent: 2
+- proto: BeachBall
+  entities:
+  - uid: 54
+    components:
+    - type: Transform
+      pos: 1.8351471146925586,34.86148651754272
+      parent: 2
+- proto: SwimRingPurple
+  entities:
+  - uid: 55
+    components:
+    - type: Transform
+      pos: 1.2727181308484514,31.47211185174534
+      parent: 2
+- proto: SwimRingSpawner
+  entities:
+  - uid: 56
+    components:
+    - type: Transform
+      pos: -3.5,35.5
+      parent: 2
+  - uid: 57
+    components:
+    - type: Transform
+      pos: -5.5,34.5
+      parent: 2
+- proto: ClothingUnderTopBowbraSwimming
+  entities:
+  - uid: 58
+    components:
+    - type: Transform
+      pos: -1.4210206865101656,32.67097363309725
+      parent: 2
+- proto: ClothingUnderBottomBowpanties
+  entities:
+  - uid: 61
+    components:
+    - type: Transform
+      pos: -1.6383220697086864,32.473517371658346
+      parent: 2
+- proto: ChairBeachLoungeBrown
+  entities:
+  - uid: 46
+    components:
+    - type: Transform
+      pos: -1.5,32.5
+      parent: 2
+      rot: 3.141592653589793 rad
 ...
