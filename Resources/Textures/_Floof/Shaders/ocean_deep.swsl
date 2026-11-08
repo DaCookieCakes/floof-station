@@ -2,7 +2,13 @@ uniform highp vec2 world_origin;
 // Rows of the screen pixel to world tile matrix, so the water turns along with the eye.
 uniform highp vec2 world_x;
 uniform highp vec2 world_y;
+// Meters below the surface, and how far above the floor that is.
 uniform highp float depth;
+uniform highp float floor_distance;
+uniform highp float floor_seen_from;
+uniform highp float floor_far_zoom;
+// How much the real map below shows through, drawn under us already. While it does, there's no floor to draw here.
+uniform highp float underlay;
 uniform highp float brightness;
 uniform highp vec2 eye_position;
 uniform highp vec2 view_center;
@@ -14,14 +20,12 @@ uniform sampler2D surface_texture;
 
 const highp float surfaceFrames = 4.0;
 const highp float surfaceZoom = 4.0;
-const highp float blipsFrom = 0.7;
-const highp float blipsFull = 0.75;
-const highp float floorFrom = 0.83;
+const highp float blipsFrom = 420.0;
+const highp float blipsFull = 450.0;
 const highp float floorAlpha = 0.12;
-const highp float floorFarScale = 2.0;
 const highp float floorVariants = 7.0;
 const highp float blipCell = 6.5;
-const highp float riseDistance = 150.0;
+const highp float risePerMeter = 0.25;
 const highp float schoolLane = 13.0;
 const highp float schoolGap = 34.0;
 const highp float schoolLife = 25.0;
@@ -82,7 +86,7 @@ highp float riseNear(highp float t) {
 
 // Tied to depth, so the dive itself moves everything, and a resurface runs it backwards.
 highp float riseProgress(highp float life) {
-    return depth * riseDistance / life;
+    return depth * risePerMeter / life;
 }
 
 highp float specks(highp vec2 world, highp float cell, highp float size, highp float life, highp float seedOffset) {
@@ -214,10 +218,10 @@ void fragment() {
 
     // We sink towards the floor under us, so it spreads out from the middle of the view as it gets closer.
     highp vec3 surfaceColor = surfaceBase;
-    highp float landing = clamp((depth - floorFrom) / (1.0 - floorFrom), 0.0, 1.0);
-    if (landing > 0.0) {
+    highp float landing = clamp(1.0 - floor_distance / floor_seen_from, 0.0, 1.0);
+    if (landing > 0.0 && underlay <= 0.0) {
         highp vec2 fromCenter = toWorld(FRAGCOORD.xy - view_center);
-        highp vec2 floorPos = world + fromCenter * (mix(floorFarScale, 1.0, landing) - 1.0);
+        highp vec2 floorPos = world + fromCenter * (mix(floor_far_zoom, 1.0, landing) - 1.0);
         // The same tile art the seabed map is made of, a strip of variants with one picked per tile.
         highp vec2 tile = vec2(floorPos.x, -floorPos.y);
         highp float variant = floor(hash(floor(tile)) * floorVariants);
@@ -252,6 +256,6 @@ void fragment() {
         water = mix(ripples * light, water, smoothstep(0.6, 1.0, submerged));
     }
 
-    COLOR = vec4(water, 1.0);
+    COLOR = vec4(water, 1.0 - underlay * (1.0 - floorAlpha));
     MODULATE = vec4(1.0);
 }

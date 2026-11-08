@@ -166,7 +166,7 @@ namespace Content.Client.Viewport
 
             DebugTools.AssertNotNull(_viewport);
 
-            _viewport!.Render();
+            RenderWithUnderlay(_viewport!); // Floof - map underlay
 
             if (_queuedScreenshots.Count != 0)
             {

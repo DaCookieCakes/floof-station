@@ -2,7 +2,9 @@ using System.Numerics;
 using Content.Server.Shuttles.Components;
 using Content.Shared.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
+using Content.Shared.Station.Systems;
 using Content.Shared._Floof.DayNightCycle;
+using Content.Shared._Floof.MapUnderlay;
 using Content.Shared._Floof.Ocean;
 using Content.Shared.Camera;
 using Content.Shared.Gravity;
@@ -35,6 +37,7 @@ public sealed partial class ArrivalsDiveSystem : EntitySystem
     [Dependency] private SharedPhysicsSystem _physics = default!;
     [Dependency] private SharedTransformSystem _xform = default!;
     [Dependency] private ShuttleSystem _shuttles = default!;
+    [Dependency] private StationSystem _station = default!;
 
     private const int LandingShakes = 10;
     private const float LandingShakeStrength = 0.6f;
@@ -64,8 +67,13 @@ public sealed partial class ArrivalsDiveSystem : EntitySystem
         var travel = EnsureTravelMap(ent);
         var depth = EnsureComp<OceanDepthComponent>(travel);
         var now = _timing.CurTime;
-        depth.StartDepth = args.ToStation ? 0f : 1f;
-        depth.Rate = (args.ToStation ? 1f : -1f) / (float) ent.Comp.DiveTime.TotalSeconds;
+        // As deep as the station's sea floor, if it has one.
+        var stationMap = GetStationMap(args.Station);
+        var floor = CompOrNull<OceanDepthComponent>(stationMap);
+        if (floor != null)
+            depth.FloorDepth = floor.FloorDepth;
+        depth.StartDepth = args.ToStation ? 0f : depth.FloorDepth;
+        depth.Rate = (args.ToStation ? 1f : -1f) * depth.FloorDepth / (float) ent.Comp.DiveTime.TotalSeconds;
         depth.StartTime = now;
         depth.SurfaceLight = GetSurfaceLight(args.Terminal);
         Dirty(travel, depth);
@@ -80,6 +88,11 @@ public sealed partial class ArrivalsDiveSystem : EntitySystem
         _dock.UndockDocks(ent);
         var xform = Transform(ent);
         var (position, rotation) = _xform.GetWorldPositionRotation(xform);
+
+        RemComp<MapUnderlayComponent>(travel);
+        if (floor is { Seabed: true })
+            ShowStationBelow(ent, travel, stationMap!.Value, args, position, rotation);
+
         _xform.SetCoordinates(ent, xform, new EntityCoordinates(travel, position), rotation);
         _shuttles.Enable(ent);
     }
@@ -127,6 +140,9 @@ public sealed partial class ArrivalsDiveSystem : EntitySystem
 
     private void Arrive(Entity<ArrivalsDiveComponent> ent, ShuttleComponent shuttle, EntityUid target)
     {
+        if (ent.Comp.TravelMap is { } travel)
+            RemComp<MapUnderlayComponent>(travel);
+
         if (Exists(target))
             _shuttles.TryFTLDock(ent, shuttle, target, ent.Comp.ToStation ? "DockArrivals" : null);
 
@@ -173,6 +189,44 @@ public sealed partial class ArrivalsDiveSystem : EntitySystem
 
         ent.Comp.TravelMap = map;
         return map;
+    }
+
+    /// <summary>
+    ///     Shows the station's sea floor beneath the travel map, lined up so the shuttle comes down right onto its dock,
+    ///     or rises away from where it left it.
+    /// </summary>
+    private void ShowStationBelow(Entity<ArrivalsDiveComponent> ent,
+        EntityUid travel,
+        EntityUid stationMap,
+        ArrivalsTripEvent args,
+        Vector2 position,
+        Angle rotation)
+    {
+        var underlay = EnsureComp<MapUnderlayComponent>(travel);
+        underlay.Map = stationMap;
+        underlay.Offset = Vector2.Zero;
+        underlay.Rotation = Angle.Zero;
+
+        // Leaving, it starts right where it was docked.
+        if (args.ToStation && _dock.GetDockingConfig(ent, args.Target, "DockArrivals") is { } config)
+        {
+            // Where sailing ends: full speed for the whole trip, less half the time spent speeding up and slowing down.
+            var dive = ent.Comp;
+            var distance = dive.Speed * (float) dive.DiveTime.TotalSeconds * (1f - (dive.SpeedUpShare + dive.SlowDownShare) / 2f);
+            var end = position + rotation.RotateVec(Vector2.UnitY) * distance;
+
+            var dock = _xform.ToMapCoordinates(config.Coordinates).Position;
+            var dockRotation = config.Angle + _xform.GetWorldRotation(config.Coordinates.EntityId);
+            underlay.Rotation = dockRotation - rotation;
+            underlay.Offset = dock - underlay.Rotation.RotateVec(end);
+        }
+
+        Dirty(travel, underlay);
+    }
+
+    private EntityUid? GetStationMap(EntityUid station)
+    {
+        return _station.GetLargestGrid(station) is { } grid ? Transform(grid).MapUid : null;
     }
 
     /// <summary>

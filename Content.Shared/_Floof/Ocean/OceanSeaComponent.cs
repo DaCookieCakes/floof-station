@@ -28,11 +28,11 @@ public sealed partial class OceanSeaComponent : Component
     public float DeepPressure = 600f;
 
     /// <summary>
-    ///     The <see cref="OceanDepthComponent"/> depth at which <see cref="DeepPressure"/> is reached. Maps without one
-    ///     are always that deep.
+    ///     The <see cref="OceanDepthComponent"/> depth in meters at which <see cref="DeepPressure"/> is reached. Maps
+    ///     without one are always that deep.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float FullPressureDepth = 0.4f;
+    public float FullPressureDepth = 240f;
 
     /// <summary>
     ///     Share of a puddle that has to be the sea's water before it carries the pressure.

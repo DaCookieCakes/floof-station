@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Client._Floof.Graphics;
 using Content.Shared.Maps;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
@@ -19,20 +20,18 @@ public sealed partial class AnimatedTileOverlay : Overlay
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IPrototypeManager _proto = default!;
 
-    private const int MinStencilRef = 2;
-    private const int MaxStencilRef = 254;
     private static readonly ProtoId<ShaderPrototype> Shader = "AnimatedTile";
 
     private readonly SharedMapSystem _map;
     private readonly SharedTransformSystem _xform;
     private readonly TurfSystem _turf;
     private readonly AnimatedTileSystem _animated;
+    private readonly StencilRefSystem _stencil;
     private readonly ShaderInstance _mask;
     private readonly ShaderInstance _fill;
     private readonly ShaderInstance _redraw;
     private List<Entity<MapGridComponent>> _grids = new();
     private readonly Dictionary<Texture, List<Box2>> _fills = new();
-    private int _stencilRef = MinStencilRef;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowEntities;
 
@@ -43,6 +42,7 @@ public sealed partial class AnimatedTileOverlay : Overlay
         _xform = _entManager.System<SharedTransformSystem>();
         _turf = _entManager.System<TurfSystem>();
         _animated = _entManager.System<AnimatedTileSystem>();
+        _stencil = _entManager.System<StencilRefSystem>();
         _mask = _proto.Index(Shader).InstanceUnique();
         _fill = _proto.Index(Shader).InstanceUnique();
         _redraw = _proto.Index(Shader).InstanceUnique();
@@ -71,12 +71,11 @@ public sealed partial class AnimatedTileOverlay : Overlay
 
     private void DrawGround(in OverlayDrawArgs args, Entity<MapGridComponent> ground)
     {
-        // A new ref each draw, so marks left in the stencil from earlier frames don't count.
-        _stencilRef = _stencilRef >= MaxStencilRef ? MinStencilRef : _stencilRef + 1;
+        var stencilRef = _stencil.Next();
         var stencil = new StencilParameters
         {
             Enabled = true,
-            Ref = _stencilRef,
+            Ref = stencilRef,
             Op = StencilOp.Replace,
             Func = StencilFunc.NotEqual,
         };
@@ -87,7 +86,7 @@ public sealed partial class AnimatedTileOverlay : Overlay
         _redraw.Stencil = new StencilParameters
         {
             Enabled = true,
-            Ref = _stencilRef,
+            Ref = stencilRef,
             Op = StencilOp.Keep,
             Func = StencilFunc.Equal,
         };

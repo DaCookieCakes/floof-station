@@ -1,0 +1,24 @@
+# Mooring: the map itself is a grid of seabed sand under the sea, with the station grid on top.
+- type: gameMap
+  id: Mooring
+  mapName: 'Mooring'
+  mapPath: /Maps/_Floof/mooring.yml
+  minPlayers: 0
+  # The station grid has to stay on the map's tiles.
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    Mooring:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Mooring {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationArrivals
+          arrivalsMap: /Maps/_Floof/Misc/island.yml
+          shuttlePath: /Maps/_Floof/Misc/arrivals_sub.yml
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ -1, -1 ]

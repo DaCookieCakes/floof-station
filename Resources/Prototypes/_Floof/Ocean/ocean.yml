@@ -5,6 +5,13 @@
     threshold: -1.0
     tile: FloorOceanSurface
 
+- type: biomeTemplate
+  id: Seabed
+  layers:
+  - !type:BiomeTileLayer
+    threshold: -1.0
+    tile: FloorAsteroidSand
+
 - type: tile
   id: FloorOceanSurface
   name: tiles-floor-ocean-surface
@@ -31,3 +38,8 @@
   id: OceanDeep
   kind: source
   path: "/Textures/_Floof/Shaders/ocean_deep.swsl"
+
+- type: shader
+  id: OceanUnderlayLight
+  kind: source
+  path: "/Textures/_Floof/Shaders/ocean_underlay_light.swsl"

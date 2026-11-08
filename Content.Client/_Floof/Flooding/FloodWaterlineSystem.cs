@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Client.IconSmoothing;
+using Content.Client._Floof.Graphics;
 using Content.Shared.Doors.Components;
 using Content.Shared.Fluids.Components;
 using Content.Shared.Tag;
@@ -22,6 +23,7 @@ public enum FloodBarrier : byte
 public sealed partial class FloodWaterlineSystem : EntitySystem
 {
     [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private StencilRefSystem _stencil = default!;
     [Dependency] private TagSystem _tag = default!;
 
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
@@ -33,14 +35,6 @@ public sealed partial class FloodWaterlineSystem : EntitySystem
 
     private const float WaterlineLighten = 0.35f;
     private const float WaterlineAlphaBoost = 0.15f;
-
-    /// <summary>
-    ///     Each stencil user marks with its own value. 0 is the cleared buffer (or 255), 1 is used by the engine's stencil shaders.
-    /// </summary>
-    private const int MinStencilRef = 2;
-    private const int MaxStencilRef = 254;
-
-    private int _stencilRef = MinStencilRef;
 
     public readonly Dictionary<EntityUid, Dictionary<Vector2i, WetTile>> Grids = new();
 
@@ -74,8 +68,7 @@ public sealed partial class FloodWaterlineSystem : EntitySystem
 
     public int NextStencilRef()
     {
-        _stencilRef = _stencilRef >= MaxStencilRef ? MinStencilRef : _stencilRef + 1;
-        return _stencilRef;
+        return _stencil.Next();
     }
 
     public FloodBarrier GetBarrier(EntityUid ent)
