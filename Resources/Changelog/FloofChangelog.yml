@@ -910,3 +910,12 @@ Entries:
   id: 109
   time: '2026-11-08T09:36:39.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/345
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added Mooring, a station resting on the sea floor. The arrivals sub
+        dives down to it and you can see the station below as you descend.
+  id: 110
+  time: '2026-11-08T22:36:47.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/353
