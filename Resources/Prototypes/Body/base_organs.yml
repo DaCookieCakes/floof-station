@@ -66,8 +66,8 @@
       - Tail
       - Overlay
       - TailOverlay
-      - UndergarmentTop
-      - UndergarmentBottom
+      # - UndergarmentTop # Floof - underwear items
+      # - UndergarmentBottom # Floof - underwear items
       - Special
 
 - type: entity
