@@ -919,3 +919,10 @@ Entries:
   id: 110
   time: '2026-11-08T22:36:47.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/353
+- author: Pachat-Kas
+  changes:
+    - type: Remove
+      message: Removed underwear markings, pick underwear in your loadout instead.
+  id: 111
+  time: '2026-11-09T02:31:16.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/355
