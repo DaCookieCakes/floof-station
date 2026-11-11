@@ -1,4 +1,3 @@
-# Does not reveal info and has no masters
 - type: entity
   parent: [IdLockableBaseNoAccess, Airlock]
   id: AirlockLockableBaseNoAccess
@@ -8,14 +7,12 @@
   - type: Lock
     locked: false
 
-# Reveals info and has Captain and HoP as masters
 - type: entity
   parent: [IdLockableBase, AirlockLockableBaseNoAccess]
   id: AirlockLockableBase
   name: Lockable Airlock
   abstract: true
 
-# Same as above, but with the command sprite. Use for heads of staff.
 - type: entity
   parent: AirlockLockableBase
   id: AirlockLockableCommandBase
@@ -29,7 +26,6 @@
   - type: Wires
     layoutId: AirlockCommand
 
-# Bartender
 - type: entity
   parent: AirlockLockableBase
   id: AirlockLockableBartender
@@ -40,7 +36,6 @@
     containers:
       board: [ DoorElectronicsBar ]
 
-# Captain
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableCaptain
@@ -51,7 +46,6 @@
     containers:
       board: [ DoorElectronicsCaptain ]
 
-# Chaplain
 - type: entity
   parent: AirlockLockableBase
   id: AirlockLockableChaplain
@@ -62,7 +56,6 @@
     containers:
       board: [ DoorElectronicsChapel ]
 
-# Chef
 - type: entity
   parent: AirlockLockableBase
   id: AirlockLockableChef
@@ -73,7 +66,6 @@
     containers:
       board: [ DoorElectronicsKitchen ]
 
-# Chief Engineer
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableCE
@@ -84,7 +76,6 @@
     containers:
       board: [ DoorElectronicsChiefEngineer ]
 
-# Chief Medical Officer
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableCMO
@@ -95,7 +86,6 @@
     containers:
       board: [ DoorElectronicsChiefMedicalOfficer ]
 
-# Dorms
 - type: entity
   parent: AirlockLockableBase
   id: AirlockLockableDorms
@@ -103,7 +93,6 @@
   description: It opens, it closes, and it can be locked to your ID card.
   suffix: ID lockable
 
-# Head of Personnel
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableHoP
@@ -114,7 +103,6 @@
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
 
-# Head of Security
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableHoS
@@ -125,7 +113,6 @@
     containers:
       board: [ DoorElectronicsHeadOfSecurity ]
 
-# Quartermaster
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableQM
@@ -136,7 +123,6 @@
     containers:
       board: [ DoorElectronicsQuartermaster ]
 
-# Research Director
 - type: entity
   parent: AirlockLockableCommandBase
   id: AirlockLockableRD
@@ -147,7 +133,6 @@
     containers:
       board: [ DoorElectronicsResearchDirector ]
 
-# Theatre (Clown/Mime/Musician)
 - type: entity
   parent: AirlockLockableBase
   id: AirlockLockableTheatre
