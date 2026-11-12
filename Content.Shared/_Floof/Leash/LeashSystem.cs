@@ -395,6 +395,7 @@ public sealed partial class LeashSystem : EntitySystem
                 visualComp.Source = leash;
                 visualComp.Target = leashTarget;
                 visualComp.OffsetTarget = anchor.Comp.Offset;
+                Dirty(visualEntity.Value, visualComp);
 
                 data.LeashVisuals = GetNetEntity(visualEntity);
             }

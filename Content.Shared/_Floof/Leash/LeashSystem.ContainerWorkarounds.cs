@@ -26,6 +26,17 @@ public sealed partial class LeashSystem
     private void OnLeashContainerChanged(EntityUid ent, LeashComponent comp, ContainerModifiedMessage args)
     {
         if (!_net.IsClient)
+        {
             RefreshJoints((ent, comp));
+            return;
+        }
+
+        // Client: the holder of the leash may have changed, which affects whether leashed entities are predicted.
+        // See LeashPredictionSystem on the client.
+        foreach (var data in comp.Leashed)
+        {
+            if (TryGetEntity(data.Pulled, out var pulled))
+                _physics.UpdateIsPredicted(pulled);
+        }
     }
 }
