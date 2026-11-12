@@ -1,0 +1,34 @@
+{
+    "copyright": "Created by Cookie for Trieste Port.",
+    "license": "CC-BY-SA-3.0",
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "blank"
+        },
+        {
+            "name": "running",
+            "directions": 4
+        },
+        {
+            "name": "icon",
+            "directions": 4
+        },
+        {
+            "name": "high",
+            "directions": 4
+        },
+        {
+            "name": "low",
+            "directions": 4
+        },
+        {
+            "name": "medium",
+            "directions": 4
+        }
+    ]
+}
