@@ -940,3 +940,12 @@ Entries:
   id: 113
   time: '2026-11-12T03:24:15.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/364
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: >-
+        Fixed a number of leash issues, including the texture, jittering,
+        prediction states, .etc.
+  id: 114
+  time: '2026-11-12T08:09:08.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/365
