@@ -22,8 +22,10 @@ public sealed partial class LeashSystem
 
     private void OnJointAdded(Entity<LeashedComponent> ent, ref JointAddedEvent args)
     {
-        // If we're on the client side, set the leash length to infinity to avoid predicting the leash
-        if (_net.IsClient && args.Joint.ID.StartsWith(LeashJointIdPrefix) && args.Joint is DistanceJoint dj)
+        // If we're on the client side and leash prediction is disabled, set the leash length to infinity to avoid predicting the leash.
+        // This must respect the prediction setting - otherwise the client would alternate between an infinite joint (after this event)
+        // and the real joint (after the next server state), causing constant mispredictions and jittery movement.
+        if (!ShouldPredictLeashes() && args.Joint.ID.StartsWith(LeashJointIdPrefix) && args.Joint is DistanceJoint dj)
             dj.MaxLength = float.MaxValue;
     }
 
