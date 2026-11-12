@@ -1,3 +1,5 @@
+using System.Numerics;
+using Content.Shared._EE.HeightAdjust;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
@@ -10,6 +12,7 @@ namespace Content.Shared.Humanoid;
 public sealed partial class HumanoidProfileSystem : EntitySystem
 {
     [Dependency] private GrammarSystem _grammar = default!;
+    [Dependency] private HeightAdjustSystem _heightAdjust = default!; // Goobstation: port EE height/width sliders
 
     public override void Initialize()
     {
@@ -30,6 +33,16 @@ public sealed partial class HumanoidProfileSystem : EntitySystem
         ent.Comp.Sex = profile.Sex;
         Dirty(ent);
 
+        // begin Goobstation: port EE height/width sliders
+        var species = ProtoMan.Index(ent.Comp.Species);
+        if (profile.Height <= 0 || profile.Width <= 0)
+            SetScale(ent, new Vector2(species.DefaultWidth, species.DefaultHeight), true, ent.Comp);
+        else
+            SetScale(ent, new Vector2(profile.Width, profile.Height), true, ent.Comp);
+
+        _heightAdjust.SetScale(ent, new Vector2(ent.Comp.Width, ent.Comp.Height));
+        // end Goobstation: port EE height/width sliders
+
         var voiceChanged = new VoiceChangedEvent(ent.Comp.Voice, profile.Voice);
         RaiseLocalEvent(ent, ref voiceChanged);
 
@@ -38,6 +51,28 @@ public sealed partial class HumanoidProfileSystem : EntitySystem
             _grammar.SetGender((ent, grammar), profile.Gender);
         }
     }
+
+    // begin Goobstation: port EE height/width sliders
+    /// <summary>
+    ///     Set the scale of a humanoid mob
+    /// </summary>
+    /// <param name="uid">The humanoid mob's UID</param>
+    /// <param name="scale">The scale to set the mob to</param>
+    /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
+    /// <param name="humanoid">Humanoid profile component of the entity</param>
+    public void SetScale(EntityUid uid, Vector2 scale, bool sync = true, HumanoidProfileComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid))
+            return;
+
+        var species = ProtoMan.Index(humanoid.Species);
+        humanoid.Height = Math.Clamp(scale.Y, species.MinHeight, species.MaxHeight);
+        humanoid.Width = Math.Clamp(scale.X, species.MinWidth, species.MaxWidth);
+
+        if (sync)
+            Dirty(uid, humanoid);
+    }
+    // end Goobstation: port EE height/width sliders
 
     private void OnExamined(Entity<HumanoidProfileComponent> ent, ref ExaminedEvent args)
     {

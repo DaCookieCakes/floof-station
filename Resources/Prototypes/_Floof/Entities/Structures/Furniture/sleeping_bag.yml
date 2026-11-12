@@ -1,0 +1,200 @@
+- type: entity
+  id: SleepingBag
+  parent: BaseFoldable
+  name: sleeping bag
+  description: A warm cocoon, cradling you under the stars as the night passes. Has enough space for two.
+  components:
+  - type: Construction
+    graph: SleepingBag
+    node: sleepingbag
+    containers:
+    - entity_storage
+  - type: Item
+    size: Normal
+  - type: Sprite
+    drawdepth: SmallObjects # I guess body bags need appear above a coroner's table?
+    sprite: _Floof/Structures/sleepingbag.rsi
+    color: "#7D43F2"
+    layers:
+    - state: closed
+      map: ["unfoldedLayer", "enum.StorageVisualLayers.Base"]
+    - map: ["foldedLayer"]
+      state: folded
+      visible: false
+    - state: open
+      map: [ "enum.StorageVisualLayers.Door" ]
+  - type: EntityStorageVisuals
+    stateDoorOpen: open
+  - type: Tag
+    tags:
+    - BodyBag
+  - type: Clickable
+  - type: InteractionOutline
+  - type: MovedByPressure
+  - type: Physics
+    bodyType: Dynamic
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.4,0.25,0.1"
+        density: 20
+        mask:
+        - Impassable
+  - type: EntityStorageLayingDownOverride
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLayer:
+          True: {visible: false}
+          False: {visible: true}
+  - type: Pullable
+  - type: EntityStorage
+    airtight: false
+    capacity: 2
+    isCollidableWhenOpen: true
+    closeSound:
+      path: /Audio/Misc/zip.ogg
+    openSound:
+      path: /Audio/Misc/zip.ogg
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+
+- type: entity
+  id: SleepingBagFolded
+  name: sleeping bag
+  description: A warm cocoon, cradling you under the stars as the night passes. Has enough space for two.
+  parent: SleepingBag
+  suffix: folded
+  components:
+  - type: Sprite
+    layers:
+    - state: closed
+      map: ["unfoldedLayer", "enum.StorageVisualLayers.Base"]
+      visible: false
+    - map: ["foldedLayer"]
+      state: folded
+    - state: open
+      map: [ "enum.StorageVisualLayers.Door" ]
+  - type: Foldable
+    folded: true
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagRed
+  name: red sleeping bag
+  components:
+  - type: Sprite
+    color: "#C43B3B"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagRedFolded
+  name: red sleeping bag
+  components:
+  - type: Sprite
+    color: "#C43B3B"
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagBlue
+  name: blue sleeping bag
+  components:
+  - type: Sprite
+    color: "#3B6BD4"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagBlueFolded
+  name: blue sleeping bag
+  components:
+  - type: Sprite
+    color: "#3B6BD4"
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagGreen
+  name: green sleeping bag
+  components:
+  - type: Sprite
+    color: "#3E9E4A"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagGreenFolded
+  name: green sleeping bag
+  components:
+  - type: Sprite
+    color: "#3E9E4A"
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagYellow
+  name: yellow sleeping bag
+  components:
+  - type: Sprite
+    color: "#E0B53A"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagYellowFolded
+  name: yellow sleeping bag
+  components:
+  - type: Sprite
+    color: "#E0B53A"
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagPink
+  name: pink sleeping bag
+  components:
+  - type: Sprite
+    color: "#E87AB8"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagPinkFolded
+  name: pink sleeping bag
+  components:
+  - type: Sprite
+    color: "#E87AB8"
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagBlack
+  name: black sleeping bag
+  components:
+  - type: Sprite
+    color: "#505050"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagBlackFolded
+  name: black sleeping bag
+  components:
+  - type: Sprite
+    color: "#505050"
+
+- type: entity
+  parent: SleepingBag
+  id: SleepingBagWhite
+  name: white sleeping bag
+  components:
+  - type: Sprite
+    color: "#EDEDED"
+
+- type: entity
+  parent: SleepingBagFolded
+  id: SleepingBagWhiteFolded
+  name: white sleeping bag
+  components:
+  - type: Sprite
+    color: "#EDEDED"

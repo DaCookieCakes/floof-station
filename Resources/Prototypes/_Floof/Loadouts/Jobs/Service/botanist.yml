@@ -1,0 +1,6 @@
+# GLOVES #
+- type: loadout
+  id: LeatherGloves
+  groupBy: BotanistGear
+  equipment:
+    gloves: ClothingHandsGlovesLeather

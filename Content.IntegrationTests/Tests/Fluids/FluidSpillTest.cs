@@ -67,6 +67,14 @@ public sealed class FluidSpill : GameTest
 
             entityManager.SpawnEntity("WallReinforced", mapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(0, 1)));
             entityManager.SpawnEntity("WallReinforced", mapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(1, 0)));
+
+            // Floof Section - flooding
+            // Liquid pours off the grid edge, so wall in the outer sides of the corner too.
+            mapSystem.SetTile(grid, new Vector2i(-1, 0), new Tile(1));
+            mapSystem.SetTile(grid, new Vector2i(0, -1), new Tile(1));
+            entityManager.SpawnEntity("WallReinforced", mapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(-1, 0)));
+            entityManager.SpawnEntity("WallReinforced", mapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(0, -1)));
+            // Floof Section End
         });
 
 

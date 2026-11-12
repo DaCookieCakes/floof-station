@@ -4,6 +4,10 @@
   name: dresser
   description: Wooden dresser, can store things inside itself, ideal for underwear, and someone's kidneys?...
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/furniture.rsi
     snapCardinals: true
@@ -50,6 +54,10 @@
   parent: Dresser
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Dresser.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill #TODO: make these tables in any way consistent
     containers:
       storagebase: !type:AllSelector

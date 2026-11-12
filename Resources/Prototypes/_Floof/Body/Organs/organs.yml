@@ -1,0 +1,144 @@
+- type: entity
+  parent:
+    - OrganBase
+    - OrganBaseChildInternal
+  id: OrganDick
+  name: dick
+  components:
+    - type: Organ
+      category: Dick
+    - type: Sprite
+      sprite: _Floof/Mobs/Species/Generic/penis.rsi
+      layers:
+        - state: penis
+    - type: ProducerGenital
+      solutionId: balls
+    - type: BodyFluidProducer
+      solutionName: balls
+      reagentId: Cum
+      minHungerThreshold: Peckish
+    - type: VisualOrganMarkings
+      markingData:
+        group: Genital
+        layers: 
+          - Penis
+      hideableLayers:
+        - enum.HumanoidVisualLayers.Penis
+    - type: VisualOrgan
+      layer: enum.HumanoidVisualLayers.Penis
+      data:
+        sprite: _Floof/Mobs/Customization/Genital/cocks.rsi
+#        state: penis_nondescript_1_0_FRONT
+    - type: Solution
+      id: balls
+      solution:
+        maxVol: 240 # yes, totally normal
+        canReact: false
+        reagents:
+          - ReagentId: Cum
+            Quantity: 240
+
+- type: entity
+  parent:
+    - OrganBase
+    - OrganBaseChildInternal
+  id: OrganVagina
+  name: vagina
+  components:
+    - type: Organ
+      category: Vagina
+    - type: Sprite
+      sprite: _Floof/Mobs/Species/Generic/vagina.rsi
+      layers:
+        - state: vagina-a
+    - type: ProducerGenital
+      solutionId: vagina
+    - type: BodyFluidProducer
+      solutionName: vagina
+      reagentId: Squirt
+      minHungerThreshold: Peckish
+    - type: VisualOrganMarkings
+      markingData:
+        group: Genital
+        layers:
+          - Vagina
+      hideableLayers:
+        - enum.HumanoidVisualLayers.Vagina
+    - type: VisualOrgan
+      layer: enum.HumanoidVisualLayers.Vagina
+      data:
+        sprite: _Floof/Mobs/Customization/Genital/vagina.rsi
+#        state: vagina_dentata_1_0_FRONT
+    - type: Solution
+      id: vagina
+      solution:
+        maxVol: 120 # yes, totally normal
+        canReact: false
+
+- type: entity
+  parent:
+    - OrganBase
+    - OrganBaseChildInternal
+  id: OrganBreasts
+  name: breasts
+  components:
+    - type: Organ
+      category: Breasts
+    - type: Sprite
+      sprite: _Floof/Mobs/Species/Generic/breasts.rsi
+      layers:
+        - state: breasts
+    - type: ProducerGenital
+      solutionId: breasts
+    - type: BodyFluidProducer
+      solutionName: breasts
+      reagentId: MilkBreast
+      minHungerThreshold: Peckish
+    - type: VisualOrganMarkings
+      markingData:
+        group: Genital
+        layers:
+          - Breasts
+      hideableLayers:
+        - enum.HumanoidVisualLayers.Breasts
+    - type: VisualOrgan
+      layer: enum.HumanoidVisualLayers.Breasts
+      data:
+        sprite: _Floof/Mobs/Customization/Genital/breasts.rsi
+#        state: breasts_pair_a_0_FRONT
+    - type: Solution
+      id: breasts
+      solution:
+        maxVol: 480 # yes, two jugs
+        canReact: false
+        reagents:
+          - ReagentId: MilkBreast
+            Quantity: 480
+
+- type: entity
+  parent:
+  - OrganBase
+  - OrganBaseChildInternal
+  id: OrganBladder
+  name: bladder
+  components:
+  - type: Organ
+    category: Bladder
+  - type: Sprite # Current sprite used just for testing
+    sprite: _Floof/Mobs/Species/Generic/bladder.rsi
+    layers:
+    - state: bladder
+  - type: ProducerGenital
+    solutionId: bladder
+  - type: BodyFluidProducer
+    solutionName: bladder
+    reagentId: Piss
+    minHungerThreshold: Peckish
+  - type: Solution
+    id: bladder
+    solution:
+      maxVol: 320
+      canReact: false
+      reagents:
+      - ReagentId: Piss
+        Quantity: 320

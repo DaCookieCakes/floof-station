@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Server._Floof.Bank; // Floof - Bank
 using Content.Server.Access.Systems;
 using Content.Server.Chat.Managers;
 using Content.Server.Instruments;
@@ -216,7 +217,10 @@ namespace Content.Server.PDA
                 pda.StationName,
                 showUplink,
                 hasInstrument,
-                address);
+                address)
+            {
+                Balance = CompOrNull<BankPdaComponent>(uid)?.Balance, // Floof - Bank
+            };
 
             _ui.SetUiState(uid, PdaUiKey.Key, state);
         }

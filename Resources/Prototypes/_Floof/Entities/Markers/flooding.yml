@@ -1,0 +1,147 @@
+- type: entity
+  abstract: true
+  parent: MarkerBase
+  id: BaseFloodMarker
+  name: flooded room marker
+  description: Fills the room it's in with liquid at round start. The room ends at anything airtight, so close its doors.
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+  - type: FloodMarker
+
+- type: entity
+  abstract: true
+  id: BaseFloodMarkerFull
+  components:
+  - type: FloodMarker
+    depth: 1
+
+- type: entity
+  abstract: true
+  id: BaseFloodMarkerHalf
+  components:
+  - type: FloodMarker
+    depth: 0.5
+
+- type: entity
+  abstract: true
+  id: BaseFloodMarkerLow
+  components:
+  - type: FloodMarker
+    depth: 0.2
+
+- type: entity
+  abstract: true
+  parent: BaseFloodMarker
+  id: BaseFloodMarkerWaterLiquid
+  components:
+  - type: FloodMarker
+    reagent: Water
+
+- type: entity
+  abstract: true
+  parent: BaseFloodMarker
+  id: BaseFloodMarkerCumLiquid
+  components:
+  - type: FloodMarker
+    reagent: Cum
+
+- type: entity
+  abstract: true
+  parent: BaseFloodMarker
+  id: BaseFloodMarkerSquirtLiquid
+  components:
+  - type: FloodMarker
+    reagent: Squirt
+
+- type: entity
+  abstract: true
+  parent: BaseFloodMarker
+  id: BaseFloodMarkerBreastMilkLiquid
+  components:
+  - type: FloodMarker
+    reagent: MilkBreast
+
+- type: entity
+  abstract: true
+  parent: BaseFloodMarker
+  id: BaseFloodMarkerPissLiquid
+  components:
+  - type: FloodMarker
+    reagent: Piss
+
+- type: entity
+  parent: [ BaseFloodMarkerWaterLiquid, BaseFloodMarkerFull ]
+  id: FloodMarkerWaterFull
+  suffix: Water, Full
+
+- type: entity
+  parent: [ BaseFloodMarkerWaterLiquid, BaseFloodMarkerHalf ]
+  id: FloodMarkerWaterHalf
+  suffix: Water, Half
+
+- type: entity
+  parent: [ BaseFloodMarkerWaterLiquid, BaseFloodMarkerLow ]
+  id: FloodMarkerWaterLow
+  suffix: Water, Low
+
+- type: entity
+  parent: [ BaseFloodMarkerCumLiquid, BaseFloodMarkerFull ]
+  id: FloodMarkerCumFull
+  suffix: Cum, Full
+
+- type: entity
+  parent: [ BaseFloodMarkerCumLiquid, BaseFloodMarkerHalf ]
+  id: FloodMarkerCumHalf
+  suffix: Cum, Half
+
+- type: entity
+  parent: [ BaseFloodMarkerCumLiquid, BaseFloodMarkerLow ]
+  id: FloodMarkerCumLow
+  suffix: Cum, Low
+
+- type: entity
+  parent: [ BaseFloodMarkerSquirtLiquid, BaseFloodMarkerFull ]
+  id: FloodMarkerSquirtFull
+  suffix: Squirt, Full
+
+- type: entity
+  parent: [ BaseFloodMarkerSquirtLiquid, BaseFloodMarkerHalf ]
+  id: FloodMarkerSquirtHalf
+  suffix: Squirt, Half
+
+- type: entity
+  parent: [ BaseFloodMarkerSquirtLiquid, BaseFloodMarkerLow ]
+  id: FloodMarkerSquirtLow
+  suffix: Squirt, Low
+
+- type: entity
+  parent: [ BaseFloodMarkerBreastMilkLiquid, BaseFloodMarkerFull ]
+  id: FloodMarkerBreastMilkFull
+  suffix: Breast milk, Full
+
+- type: entity
+  parent: [ BaseFloodMarkerBreastMilkLiquid, BaseFloodMarkerHalf ]
+  id: FloodMarkerBreastMilkHalf
+  suffix: Breast milk, Half
+
+- type: entity
+  parent: [ BaseFloodMarkerBreastMilkLiquid, BaseFloodMarkerLow ]
+  id: FloodMarkerBreastMilkLow
+  suffix: Breast milk, Low
+
+- type: entity
+  parent: [ BaseFloodMarkerPissLiquid, BaseFloodMarkerFull ]
+  id: FloodMarkerPissFull
+  suffix: Piss, Full
+
+- type: entity
+  parent: [ BaseFloodMarkerPissLiquid, BaseFloodMarkerHalf ]
+  id: FloodMarkerPissHalf
+  suffix: Piss, Half
+
+- type: entity
+  parent: [ BaseFloodMarkerPissLiquid, BaseFloodMarkerLow ]
+  id: FloodMarkerPissLow
+  suffix: Piss, Low

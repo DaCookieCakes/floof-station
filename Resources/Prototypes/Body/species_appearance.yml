@@ -4,6 +4,14 @@
   components:
   - type: Sprite
     layers:
+    # Floof Section - behind layers
+    - map: [ "enum.HumanoidVisualLayers.TailBehind" ]
+    - map: [ "enum.HumanoidVisualLayers.PenisBehind" ]
+    - map: [ "enum.HumanoidVisualLayers.TesticlesBehind" ]
+    - map: [ "enum.HumanoidVisualLayers.VaginaBehind" ]
+    - map: [ "enum.HumanoidVisualLayers.BreastsBehind" ]
+    # Floof Section End
+
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
@@ -20,14 +28,26 @@
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
 
+    # Feet - Floof moved these to be below the socks 
+    - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    
+    # Genitals Front - Floof
+    
+    - map: [ "enum.HumanoidVisualLayers.Breasts" ]
+    - map: [ "enum.HumanoidVisualLayers.Vagina" ]
+    - map: [ "enum.HumanoidVisualLayers.Testicles" ]
+    - map: [ "enum.HumanoidVisualLayers.Penis" ]
+
     # Underwear & clothing
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "undergarmentBottom" ] # Floof - undergarment layers
+    - map: [ "undergarmentTop" ] # Floof - undergarment layers
+    - map: [ "undergarmentSocks" ] # Floof - undergarment layers one has to wonder why the feet are in front of the jumpsuit
     - map: ["jumpsuit"]
 
-    # Extremities
-    - map: ["enum.HumanoidVisualLayers.LFoot"]
-    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    # Hands 
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
 
@@ -42,7 +62,9 @@
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "enum.HumanoidVisualLayers.TailBehindBackpack" ] # Floof - marking layering
     - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # Floof - marking layering
     - map: [ "neck" ]
     - map: [ "suitstorage" ]
 
@@ -91,7 +113,7 @@
         type: StrippableBoundUserInterface
   - type: InitialBody
     relationships:
-      Torso: [Head, ArmLeft, ArmRight, LegLeft, LegRight, Appendix, Lungs, Heart, Stomach, Liver, Kidneys]
+      Torso: [Head, ArmLeft, ArmRight, LegLeft, LegRight, Appendix, Lungs, Heart, Stomach, Liver, Kidneys, Bladder] # Floof - Bladder
       Head: [Brain, Eyes, Tongue, Ears]
       ArmLeft: [HandLeft]
       ArmRight: [HandRight]

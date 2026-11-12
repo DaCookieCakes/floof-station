@@ -1,0 +1,10 @@
+- type: trait
+  id: CheeseAccent
+  name: trait-cheese-accent-name
+  description: trait-cheese-accent-desc
+  category: Accents
+  cost: 0
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: CheeseAccent

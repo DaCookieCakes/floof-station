@@ -186,6 +186,7 @@
   name: medical research headset
   description: A headset that is a result of the mating between medical and science.
   components:
+  - type: FloodMask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:

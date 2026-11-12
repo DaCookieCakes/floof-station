@@ -60,6 +60,10 @@
   id: SurveillanceCameraRouterConstructed
   suffix: Constructed
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     setupAvailableNetworks:
     - SurveillanceCameraEngineering
@@ -77,6 +81,10 @@
   name: engineering camera router
   suffix: Engineering
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraEngineering
 
@@ -86,6 +94,10 @@
   name: security camera router
   suffix: Security
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraSecurity
 
@@ -95,6 +107,10 @@
   name: science camera router
   suffix: Science
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraScience
 
@@ -104,6 +120,10 @@
   name: supply camera router
   suffix: Supply
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraSupply
 
@@ -113,6 +133,10 @@
   name: command camera router
   suffix: Command
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraCommand
 
@@ -122,6 +146,10 @@
   name: service camera router
   suffix: Service
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraService
 
@@ -131,6 +159,10 @@
   name: medical camera router
   suffix: Medical
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraMedical
 
@@ -140,6 +172,10 @@
   name: general camera router
   suffix: General
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraGeneral
 
@@ -205,6 +241,10 @@
   id: SurveillanceCameraWirelessRouterConstructed
   suffix: Constructed
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     setupAvailableNetworks:
     - SurveillanceCameraEntertainment
@@ -215,6 +255,10 @@
   name: entertainment camera router
   suffix: Entertainment
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: SurveillanceCameraRouter
     subnetFrequency: SurveillanceCameraEntertainment
 
@@ -223,6 +267,10 @@
   id: SurveillanceCameraWirelessRouterXenoborg
   name: xenoborg camera wireless router
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SurveillanceCameraRouterCommand.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: Mothership

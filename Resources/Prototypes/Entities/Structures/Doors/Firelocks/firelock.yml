@@ -79,6 +79,10 @@
         - FullTileMask
         layer:
         - AirlockLayer
+  # Floof Section - Flooding
+  - type: IconSmooth
+    key: doors
+  # Floof Section End
   - type: Door
     openDrawDepth: WallTops
     closeTimeOne: 0.1
@@ -198,6 +202,7 @@
   name: firelock
   suffix: Edge
   components:
+    - type: FloodDry # Floof - Flooding
     - type: Sprite
       sprite: Structures/Doors/Misc/edge_door_hazard.rsi
       snapCardinals: false

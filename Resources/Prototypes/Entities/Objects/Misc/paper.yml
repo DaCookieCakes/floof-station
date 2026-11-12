@@ -60,6 +60,12 @@
       right:
       - state: paper-inhand-right
   - type: PhysicalComposition
+  - type: EmitSoundOnPickup # Euphoria - Bring back interaction SFX from EE
+    sound: /Audio/_EE/Items/Handling/paper_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_EE/Items/Handling/paper_drop.ogg
+  - type: EmitSoundOnLand
+    sound: /Audio/_EE/Items/Handling/paper_drop.ogg
 
 - type: entity
   parent: BasePaper
@@ -67,6 +73,10 @@
   name: paper
   description: A piece of white paper.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     layers:
@@ -113,6 +123,10 @@
   id: PaperOffice
   description: 'A plain sheet of office paper.'
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PaperVisuals
     backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
     contentImagePath: "/Textures/Interface/Paper/paper_content_lined.svg.96dpi.png"
@@ -125,6 +139,7 @@
   id: PaperArtifactAnalyzer
   description: The readout of a device forgotten to time.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: paper_dotmatrix
@@ -152,6 +167,10 @@
   id: PaperCaptainsThoughts
   description: "A page of the captain's journal. In luxurious lavender."
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: paper
@@ -186,6 +205,10 @@
   id: PaperCargoInvoice
   description: 'A single unit of bureaucracy.'
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: paper
@@ -262,6 +285,10 @@
   name: bounty manifest
   description: A paper label designating a crate as containing a bounty. Selling a crate with this label will fulfill the bounty.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: paper
@@ -354,6 +381,10 @@
   id: PaperCNCSheet # legally gray zone of using "D&D" and "DND"
   description: 'A sheet for your Carps and Crypts characters.'
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Paper
     contentSize: 10000
     content: book-cnc-sheet
@@ -400,6 +431,10 @@
   id: NukeCodePaper
   name: nuclear authentication codes
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: NukeCodePaper
     allNukesAvailable: true
 
@@ -408,6 +443,10 @@
   id: NukeCodePaperStation
   suffix: Station Only
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ForensicPad.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: NukeCodePaper
 
 - type: entity

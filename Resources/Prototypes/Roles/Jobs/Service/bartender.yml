@@ -1,5 +1,6 @@
 - type: job
   id: Bartender
+  pay: 400 # Floof - bank
   name: job-name-bartender
   description: job-description-bartender
   playTimeTracker: JobBartender
@@ -22,7 +23,7 @@
 - type: startingGear
   id: BartenderGear
   equipment:
-    shoes: ClothingShoesColorBlack
+  #  shoes: ClothingShoesColorBlack # FLOOF
     id: BartenderPDA
     ears: ClothingHeadsetService
   #storage:

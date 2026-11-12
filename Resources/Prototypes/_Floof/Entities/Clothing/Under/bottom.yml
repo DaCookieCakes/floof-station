@@ -1,0 +1,415 @@
+# Colorable
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPanties # marking UnderwearClassicpanties, used to be colorable
+  name: panties
+  description: A simple pair of panties.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxers # marking UndergarmentBottomBoxers, used to be colorable
+  name: boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxers.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxers.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBriefs # marking UndergarmentBottomBriefs, used to be colorable
+  name: briefs
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/briefs.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/briefs.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSatin # marking UndergarmentBottomSatin, used to be colorable
+  name: satin
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/satin.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/satin.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomJockstrap # marking UnderwearClassicjockstrap, used to be colorable
+  name: jockstrap
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/jockstrap.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/jockstrap.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomMankini # marking UnderwearClassicmankini, used to be colorable
+  name: mankini
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/mankini.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/mankini.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxerBriefs # marking UnderwearClassicboxerbriefs, used to be colorable
+  name: boxer briefs
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxer_briefs.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxer_briefs.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesAlt # marking UnderwearClassicpantiesalt, used to be colorable
+  name: classic alt panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_alt.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_alt.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesSlim # marking UnderwearClassicpantiesslim, used to be colorable
+  name: slim panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_slim.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_slim.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesThin # marking UnderwearClassicpantiesthin, used to be colorable
+  name: thin panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_thin.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_thin.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesSwimming # marking UnderwearClassicpantiesswimming, used to be colorable
+  name: swimsuit panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_swimming.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_swimming.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomThong # marking UnderwearClassicthong, used to be colorable
+  name: thong
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/thong.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/thong.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomThongBabydoll # marking UnderwearClassicthongbabydoll, used to be colorable
+  name: babydoll thong
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/thong_babydoll.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/thong_babydoll.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomStripedPanties # marking UnderwearClassicpantiesstriped, used to be colorable
+  name: striped panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/striped_panties.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/striped_panties.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesCow # marking UnderwearClassicpantiescow, used to be colorable
+  name: cow panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_cow.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_cow.rsi
+
+# Colorable base, fixed-color detail layer
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBowpanties # marking UnderwearClassicpantiesbow, used to be colorable
+  name: bow panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/bowpanties.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/bowpanties.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBowthong # marking UnderwearClassicthongbow, used to be colorable
+  name: bow thong
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/bowthong.rsi
+    layers:
+    - state: icon
+    - state: icon-detail
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/bowthong.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-detail
+
+# Non-colorable
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSnowBoxers # marking UnderwearBoxers
+  name: boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/snow_boxers.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/snow_boxers.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSnowLowriders # marking UnderwearLowriders
+  name: lowriders
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/snow_lowriders.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/snow_lowriders.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSnowBriefs # marking UnderwearBriefs
+  name: briefs
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/snow_briefs.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/snow_briefs.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSnowSatin # marking UnderwearSatin
+  name: satin
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/snow_satin.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/snow_satin.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSnowTanga # marking UnderwearTanga
+  name: tanga
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/snow_tanga.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/snow_tanga.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxersHeart # marking UnderwearClassicheartboxers
+  name: heart boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_heart.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_heart.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxersUk # marking UnderwearClassicukboxers
+  name: UK boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_uk.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_uk.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxersAssblastusa # marking UnderwearClassicassblastusaboxers
+  name: USA boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_assblastusa.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_assblastusa.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxersCommie # marking UnderwearClassiccommieboxers
+  name: combloc boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_commie.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_commie.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBoxersStriped # marking UnderwearClassicstripedboxers
+  name: striped boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_striped.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/boxers_striped.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBeeShorts # marking UnderwearClassicbeeshorts
+  name: bee boxers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/bee_shorts.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/bee_shorts.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesNeko # marking UnderwearClassicpantiesneko
+  name: neko panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_neko.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_neko.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomFishnetLower # marking UnderwearFishnetlower
+  name: fishnet lowers
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/fishnet_lower.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/fishnet_lower.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesAssblastusa # marking UnderwearClassicpantiesassblastusa
+  name: USA panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_assblastusa.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_assblastusa.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesBeeKini # marking UnderwearClassicpantiesbeekini
+  name: bee-kini panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_bee-kini.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_bee-kini.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesCommie # marking UnderwearClassicpantiescommie
+  name: combloc panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_commie.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_commie.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomPantiesUk # marking UnderwearClassicpantiesuk
+  name: UK panties
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/panties_uk.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/panties_uk.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBowpantiesSlim # marking UnderwearClassicpantiesbowslim
+  name: panties, slim w/ bow
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/bowpanties_slim.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/bowpanties_slim.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBowthongBabydoll # marking UnderwearClassicthongbowbabydoll
+  name: bow & babydoll thong
+  description: A piece of underwear.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Bottoms/bowthong_babydoll.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Bottoms/bowthong_babydoll.rsi

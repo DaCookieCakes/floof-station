@@ -20,11 +20,15 @@
     - ExpandingRepairingStation
 
 - type: entity
-  parent: SheetMetalBase
+  parent: [SheetMetalBase, BaseQuickConstructionMaterial] # DEN add quick construction parent
   id: SheetSteel
   name: steel
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetSteel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -50,6 +54,8 @@
         Quantity: 9
       - ReagentId: Carbon
         Quantity: 1
+  - type: QuickConstructable # DEN quick construction
+    category: Steel
 
 - type: entity
   parent: SheetSteel
@@ -57,6 +63,10 @@
   name: steel
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetSteel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: steel
   - type: Stack
@@ -69,6 +79,10 @@
   name: steel
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SheetSteel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: steel
   - type: Stack
@@ -135,6 +149,7 @@
   name: plasteel
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Plasteel: 100
@@ -169,6 +184,7 @@
   name: plasteel
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: plasteel
   - type: Stack
@@ -181,6 +197,7 @@
   name: plasteel
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: plasteel
   - type: Stack

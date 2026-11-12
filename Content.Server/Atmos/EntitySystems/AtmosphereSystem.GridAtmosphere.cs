@@ -167,7 +167,7 @@ public sealed partial class AtmosphereSystem
     {
         var uid = ent.Owner;
         var atmos = ent.Comp1;
-        var blockedDirs = tile.AirtightData.BlockedDirections;
+        var blockedDirs = GetFloodBlocked(tile); // Floof - flooding
         if (activate)
             AddActiveTile(atmos, tile);
 
@@ -189,7 +189,7 @@ public sealed partial class AtmosphereSystem
                 continue;
             }
 
-            var adjBlockDirs = adjacent.AirtightData.BlockedDirections;
+            var adjBlockDirs = GetFloodBlocked(adjacent); // Floof - flooding
             if (activate)
                 AddActiveTile(atmos, adjacent);
 

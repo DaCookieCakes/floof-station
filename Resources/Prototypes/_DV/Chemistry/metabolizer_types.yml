@@ -1,0 +1,7 @@
+- type: metabolizerType
+  id: Harpy
+  name: metabolizer-type-harpy
+
+- type: metabolizerType
+  id: Shadekin
+  name: metabolizer-type-shadekin

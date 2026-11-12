@@ -4,6 +4,7 @@
   name: door electronics
   description: An electronics board used in doors and airlocks.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: door_electronics

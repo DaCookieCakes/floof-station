@@ -1,0 +1,95 @@
+# FINS #
+- type: marking
+  id: MarkingDorsalFeroxi
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-dorsal
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-dorsal-tip
+
+- type: marking
+  id: MarkingDorsalStripedFeroxi
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+    layers:
+      feroxi-dorsal-stripes:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-dorsal
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-dorsal-stripes
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-dorsal-tip
+
+
+# TAILS #
+- type: marking
+  id: MarkingTailFeroxi
+  bodyPart: Tail
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-under
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-top-tip
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-bottom-tip
+
+- type: marking
+  id: MarkingTailStripedFeroxi
+  bodyPart: Tail
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-under
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-top-tip
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-bottom-tip
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-stripes
+
+
+# TAILS - ANIMATED #
+- type: marking
+  id: MarkingTailFeroxiAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-under-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-top-tip-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-bottom-tip-wagging
+
+- type: marking
+  id: MarkingTailStripedFeroxiAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-under-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-top-tip-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-bottom-tip-wagging
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-stripes-wagging

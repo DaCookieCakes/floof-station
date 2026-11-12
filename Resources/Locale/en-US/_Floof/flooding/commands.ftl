@@ -1,0 +1,10 @@
+cmd-floodspill-desc = Spills a reagent at your feet the normal way.
+cmd-floodspill-help = Usage: floodspill <reagent> <amount>
+cmd-floodspill-arg-reagent = <reagent>
+cmd-floodspill-arg-amount = <amount>
+cmd-floodspill-bad-reagent = Unknown reagent {$reagent}.
+cmd-floodspill-done = Spilled {$spilled}u of {$total}u.
+cmd-floodtrace-desc = Prints flood performance to your console every second. Run it again to stop.
+cmd-floodtrace-help = Usage: floodtrace
+cmd-floodtrace-on = Flood trace on.
+cmd-floodtrace-off = Flood trace off.

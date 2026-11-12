@@ -57,6 +57,7 @@
   name: mime crayon
   description: ...
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: mime
   - type: Item
@@ -76,6 +77,7 @@
   id: CrayonRainbow
   name: rainbow crayon
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: rainbow
   - type: Item
@@ -121,6 +123,7 @@
   id: CrayonWhite
   name: white crayon
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: white
   - type: Item
@@ -159,6 +162,7 @@
   id: CrayonRed
   name: red crayon
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: red
   - type: Item
@@ -216,6 +220,7 @@
   id: CrayonGreen
   name: green crayon
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: green
   - type: Item
@@ -235,6 +240,7 @@
   id: CrayonBlue
   name: blue crayon
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: blue
   - type: Item
@@ -254,6 +260,7 @@
   id: CrayonPurple
   name: purple crayon
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: purple
   - type: Item

@@ -7,6 +7,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Sink.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
@@ -66,6 +70,10 @@
   id: Sink
   suffix: Water
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Sink.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -77,6 +85,10 @@
   id: SinkWide
   name: wide sink
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/SinkWide.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Sprite
       sprite: Structures/Furniture/sink.rsi
       layers:

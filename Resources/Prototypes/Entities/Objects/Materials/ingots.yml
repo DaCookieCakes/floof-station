@@ -21,6 +21,7 @@
   name: gold bar
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Gold: 100
@@ -50,6 +51,7 @@
   name: gold bar
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: gold
   - type: Stack
@@ -61,6 +63,7 @@
   name: silver bar
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Silver: 100
@@ -90,6 +93,7 @@
   name: silver bar
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: silver
   - type: Stack

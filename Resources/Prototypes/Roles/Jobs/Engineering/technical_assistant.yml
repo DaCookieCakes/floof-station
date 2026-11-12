@@ -1,5 +1,6 @@
 - type: job
   id: TechnicalAssistant
+  pay: 300 # Floof - bank
   name: job-name-technical-assistant
   description: job-description-technical-assistant
   playTimeTracker: JobTechnicalAssistant
@@ -22,7 +23,7 @@
 - type: startingGear
   id: TechnicalAssistantGear
   equipment:
-    shoes: ClothingShoesBootsWork
+  #  shoes: ClothingShoesBootsWork # FLOOF
     id: TechnicalAssistantPDA
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering

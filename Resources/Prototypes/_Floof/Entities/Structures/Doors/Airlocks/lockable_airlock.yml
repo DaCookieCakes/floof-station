@@ -1,0 +1,144 @@
+- type: entity
+  parent: [IdLockableBaseNoAccess, Airlock]
+  id: AirlockLockableBaseNoAccess
+  name: Lockable Airlock
+  abstract: true
+  components:
+  - type: Lock
+    locked: false
+
+- type: entity
+  parent: [IdLockableBase, AirlockLockableBaseNoAccess]
+  id: AirlockLockableBase
+  name: Lockable Airlock
+  abstract: true
+
+- type: entity
+  parent: AirlockLockableBase
+  id: AirlockLockableCommandBase
+  name: Lockable Airlock
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/command-base.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockLockableBase
+  id: AirlockLockableBartender
+  name: Bartender's dorm
+  suffix: Lockable, Bar
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBar ]
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableCaptain
+  name: Captain's dorm airlock
+  suffix: Lockable, Captain
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCaptain ]
+
+- type: entity
+  parent: AirlockLockableBase
+  id: AirlockLockableChaplain
+  name: Chaplain's dorm
+  suffix: Lockable, Chaplain
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChapel ]
+
+- type: entity
+  parent: AirlockLockableBase
+  id: AirlockLockableChef
+  name: Chef's dorm
+  suffix: Lockable, Chef
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsKitchen ]
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableCE
+  name: Chief Engineer's dorm
+  suffix: Lockable, CE
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChiefEngineer ]
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableCMO
+  name: Chief Medical Officer's dorm
+  suffix: Lockable, CMO
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChiefMedicalOfficer ]
+
+- type: entity
+  parent: AirlockLockableBase
+  id: AirlockLockableDorms
+  name: dorms airlock
+  description: It opens, it closes, and it can be locked to your ID card.
+  suffix: ID lockable
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableHoP
+  name: Head of Personnel's dorm
+  suffix: Lockable, HoP
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfPersonnel ]
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableHoS
+  name: Head of Security's dorm
+  suffix: Lockable, HoS
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfSecurity ]
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableQM
+  name: Quartermaster's dorm
+  suffix: Lockable, QM
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsQuartermaster ]
+
+- type: entity
+  parent: AirlockLockableCommandBase
+  id: AirlockLockableRD
+  name: Research Director's dorm
+  suffix: Lockable, RD
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearchDirector ]
+
+- type: entity
+  parent: AirlockLockableBase
+  id: AirlockLockableTheatre
+  name: Theatre dorm
+  suffix: Lockable, Theatre
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTheatre ]

@@ -439,6 +439,7 @@
   parent: Pill
   id: PillDexalin
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 15
   - type: Sprite
@@ -457,6 +458,10 @@
   id: PillCanisterDexalin
   suffix: Dexalin 20u, 7
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-dexalin-20u
   - type: EntityTableContainerFill
@@ -471,6 +476,7 @@
   parent: Pill
   id: PillDylovene
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 9
   - type: Sprite
@@ -489,6 +495,10 @@
   id: PillCanisterDylovene
   suffix: Dylovene 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-dylovene-20u
   - type: EntityTableContainerFill
@@ -503,6 +513,7 @@
   parent: Pill
   id: PillHyronalin
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 16
   - type: Sprite
@@ -521,6 +532,10 @@
   id: PillCanisterHyronalin
   suffix: Hyronalin 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-hyronalin-20u
   - type: EntityTableContainerFill
@@ -535,6 +550,7 @@
   parent: Pill
   id: PillPotassiumIodide
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 8
   - type: Sprite
@@ -553,6 +569,10 @@
   id: PillCanisterPotassiumIodide
   suffix: Potassium iodide 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-potassium-iodide-20u
   - type: EntityTableContainerFill
@@ -567,6 +587,7 @@
   parent: Pill
   id: PillIron
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 13
   - type: Sprite
@@ -603,6 +624,10 @@
   id: PillCanisterIron
   suffix: Iron 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-iron-20u
   - type: EntityTableContainerFill
@@ -617,6 +642,10 @@
   id: PillCanisterCopper
   suffix: Copper 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-copper-20u
   - type: EntityTableContainerFill
@@ -631,6 +660,7 @@
   parent: Pill
   id: PillKelotane
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 3
   - type: Sprite
@@ -649,6 +679,10 @@
   id: PillCanisterKelotane
   suffix: Kelotane 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-kelotane-20u
   - type: EntityTableContainerFill
@@ -681,6 +715,10 @@
   id: PillCanisterDermaline
   suffix: Dermaline 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-dermaline-20u
   - type: EntityTableContainerFill
@@ -694,6 +732,7 @@
   parent: Pill
   id: PillSpaceDrugs
   components:
+  - type: FloodMask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -706,6 +745,7 @@
   parent: Pill
   id: PillTricordrazine
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 2
   - type: Sprite
@@ -724,6 +764,10 @@
   id: PillCanisterTricordrazine
   suffix: Tricordrazine 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-tricordrazine-20u
   - type: EntityTableContainerFill
@@ -752,6 +796,7 @@
   parent: Pill
   id: PillBicaridine
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 4
   - type: Sprite
@@ -770,6 +815,10 @@
   id: PillCanisterBicaridine
   suffix: Bicaridine 20u, 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-bicaridine-20u
   - type: EntityTableContainerFill
@@ -784,6 +833,7 @@
   parent: Pill
   id: PillCharcoal
   components:
+  - type: FloodMask # Floof - flooding
   - type: Pill
     pillType: 20
   - type: Sprite
@@ -802,6 +852,10 @@
   id: PillCanisterCharcoal
   suffix: Charcoal 20u, 3
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: pill-label-charcoal-20u
   - type: EntityTableContainerFill
@@ -852,6 +906,10 @@
   id: PillCanisterRandom
   suffix: Random
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:GroupSelector
@@ -891,6 +949,7 @@
   parent: PrefilledSyringe
   id: SyringeEphedrine
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-ephedrine
   - type: Solution
@@ -904,6 +963,7 @@
   parent: PrefilledSyringe
   id: SyringeInaprovaline
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-inaprovaline
   - type: Solution
@@ -917,6 +977,7 @@
   parent: PrefilledSyringe
   id: SyringeTranexamicAcid
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-tranexamic-acid
   - type: Solution
@@ -930,6 +991,7 @@
   parent: PrefilledSyringe
   id: SyringeBicaridine
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-bicaridine
   - type: Solution
@@ -943,6 +1005,7 @@
   parent: PrefilledSyringe
   id: SyringeDermaline
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-dermaline
   - type: Solution
@@ -969,6 +1032,7 @@
   parent: PrefilledSyringe
   id: SyringeIpecac
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-ipecac
   - type: Solution
@@ -1008,6 +1072,7 @@
   parent: PrefilledSyringe
   id: SyringeEthylredoxrazine
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-ethylredoxrazine
   - type: Solution
@@ -1034,6 +1099,7 @@
   parent: PrefilledSyringe
   id: SyringeSaline
   components:
+  - type: FloodMask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-saline
   - type: Solution

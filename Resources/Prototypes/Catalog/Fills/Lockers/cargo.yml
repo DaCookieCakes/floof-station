@@ -29,6 +29,10 @@
   suffix: Filled, Hardsuit
   parent: LockerSalvageSpecialist
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -51,6 +55,10 @@
   suffix: Filled
   parent: LockerSalvageSpecialist
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/GunSafe.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: EntityTableContainerFill
       containers:
         entity_storage: !type:NestedSelector

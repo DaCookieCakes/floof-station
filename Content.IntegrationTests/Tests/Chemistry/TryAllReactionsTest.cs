@@ -8,6 +8,7 @@ using Content.IntegrationTests.Fixtures;
 using Content.IntegrationTests.Fixtures.Attributes;
 using Content.IntegrationTests.Utility;
 using Content.Shared.Chemistry.EntitySystems;
+using Robust.Shared.Log;
 
 namespace Content.IntegrationTests.Tests.Chemistry;
 
@@ -125,10 +126,19 @@ public sealed class TryAllReactionsTest : GameTest
 
                         foreach (var (reagent, quantity) in solution.Contents)
                         {
-                            Assert.That(foundProductsMap.TryFirstOrNull(
-                                x => x.Key.Key == reagent.Prototype && x.Key.Value == quantity,
-                                out var foundProduct));
-                            foundProductsMap[foundProduct!.Value.Key] = true;
+                            // Floofstation section: log an error ffs
+                            if (!foundProductsMap.TryFirstOrNull(x => x.Key.Key == reagent.Prototype && x.Key.Value == quantity, out var foundProduct))
+                            {
+                                var expected = string.Join(", ", reactionPrototype.Products.Select((k, _) => $"{k.Key}: {k.Value} units"));
+                                var found = string.Join(", ", solution.Contents.Select(it => $"{it.Reagent}: {it.Quantity} units"));
+
+                                Logger.GetSawmill("reactions test").Error($"Reaction {reactionPrototype.ID} does not succeeded (conflict?): expected to produce [{expected}], but produced [{found}]");
+                                Assert.That(false);
+                                continue;
+                            }
+
+                            foundProductsMap[foundProduct.Value.Key] = true;
+                            // Floofstation section end
                         }
 
                         Assert.That(foundProductsMap.All(x => x.Value));

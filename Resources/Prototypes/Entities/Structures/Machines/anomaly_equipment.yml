@@ -4,6 +4,10 @@
   name: anomaly vessel
   description: A container able to harness a scan of an anomaly and turn it into research data.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MachineAnomalyVessel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/Anomaly/anomaly_vessel.rsi

@@ -550,6 +550,7 @@
   parent: [ BaseBorgModule, BaseProviderBorgModule ]
   name: tool cyborg module
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: generic
@@ -678,6 +679,7 @@
   name: advanced tool cyborg module
   description: Advanced engineering module containing cutting-edge tools.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: engineering

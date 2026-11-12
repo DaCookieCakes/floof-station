@@ -95,6 +95,8 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             }
         }
 
+        var newGroups = new HashSet<ProtoId<LoadoutGroupPrototype>>(); // Floof - Underwear
+
         // In some instances we might not have picked up a new group for existing data.
         foreach (var groupProto in roleProto.Groups)
         {
@@ -103,6 +105,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
             // Data will get set below.
             SelectedLoadouts[groupProto] = new List<Loadout>();
+            newGroups.Add(groupProto); // Floof - Underwear
         }
 
         // Reset points to recalculate.
@@ -158,11 +161,17 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             // Apply defaults if required
             // Technically it's possible for someone to game themselves into loadouts they shouldn't have
             // If you put invalid ones first but that's your fault for not using sensible defaults
-            if (loadouts.Count < groupProto.MinLimit)
+            // Floof Section - Underwear
+            var minLimit = newGroups.Contains(group)
+                ? Math.Max(groupProto.MinLimit, groupProto.DefaultSelected)
+                : groupProto.MinLimit;
+            // Floof Section End
+
+            if (loadouts.Count < minLimit) // Floof - Underwear
             {
                 foreach (var protoId in groupProto.Loadouts)
                 {
-                    if (loadouts.Count >= groupProto.MinLimit)
+                    if (loadouts.Count >= minLimit) // Floof - Underwear
                         break;
 
                     if (!protoManager.TryIndex(protoId, out var loadoutProto))

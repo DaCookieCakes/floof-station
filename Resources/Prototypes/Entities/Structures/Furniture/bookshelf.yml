@@ -4,6 +4,10 @@
   name: "bookshelf"
   description: Mostly filled with books.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Bookshelf.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/bookshelf.rsi
     snapCardinals: true

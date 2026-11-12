@@ -4,6 +4,7 @@
   name: hand labeler
   description: A hand labeler, used to label items and objects.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Tools/hand_labeler.rsi
       state: hand_labeler

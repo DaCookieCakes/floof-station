@@ -4,6 +4,10 @@
   name: artifact analyzer
   description: A platform capable of performing analysis on various types of artifacts.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MachineArtifactAnalyzer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/artifact_analyzer.rsi

@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodSwimsuitBlack
+  name: black swimsuit hood
+  description: Prevents sunburns specifically on your face!
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Head/Hoods/hoodswimsuitblack.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Head/Hoods/hoodswimsuitblack.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair

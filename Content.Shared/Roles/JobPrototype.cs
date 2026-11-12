@@ -129,6 +129,12 @@ public sealed partial class JobPrototype : IPrototype
     public bool Whitelisted;
 
     /// <summary>
+    /// Floof - Money paid into the character's bank account every payday.
+    /// </summary>
+    [DataField]
+    public int Pay;
+
+    /// <summary>
     /// Optional list of guides associated with this role. If the guides are opened, the first entry in this list
     /// will be used to select the currently selected guidebook.
     /// </summary>

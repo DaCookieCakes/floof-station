@@ -2,6 +2,7 @@
 
 - type: job
   id: ChiefMedicalOfficer
+  pay: 750 # Floof - bank
   name: job-name-cmo
   description: job-description-cmo
   playTimeTracker: JobChiefMedicalOfficer

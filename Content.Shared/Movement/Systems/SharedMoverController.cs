@@ -47,6 +47,7 @@ public abstract partial class SharedMoverController : VirtualController
     [Dependency] private SharedGravitySystem _gravity = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private TagSystem _tags = default!;
+    [Dependency] private Content.Shared._Floof.Swimming.SwimmingSystem _swimming = default!; // Floof - swimming
 
     [Dependency] protected EntityQuery<CanMoveInAirComponent> CanMoveInAirQuery = default!;
     [Dependency] protected EntityQuery<FootstepModifierComponent> FootstepModifierQuery = default!;
@@ -299,6 +300,10 @@ public abstract partial class SharedMoverController : VirtualController
             accel *= tileDef?.MobAcceleration ?? 1f;
         }
 
+        // Floof Section - flooding
+        var swimming = !weightless && _swimming.TrySwim(uid, xform, ref wishDir, ref friction, ref accel);
+        // Floof Section End
+
         // This way friction never exceeds acceleration when you're trying to move.
         // If you want to slow down an entity with "friction" you shouldn't be using this system.
         if (wishDir != Vector2.Zero)
@@ -344,7 +349,7 @@ public abstract partial class SharedMoverController : VirtualController
                 _transform.SetLocalRotation(uid, xform.LocalRotation + wishDir.ToWorldAngle() - worldRot, xform);
             }
 
-            if (!weightless && MobMoverQuery.TryGetComponent(uid, out var mobMover) &&
+            if (!weightless && !swimming && MobMoverQuery.TryGetComponent(uid, out var mobMover) && // Floof - flooding
                 TryGetSound(weightless, uid, mover, mobMover, xform, out var sound, tileDef: tileDef))
             {
                 var soundModifier = mover.Sprinting ? InputMoverComponent.SprintingSoundModifier : InputMoverComponent.WalkingSoundModifier;

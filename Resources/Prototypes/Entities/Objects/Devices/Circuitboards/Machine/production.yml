@@ -4,6 +4,7 @@
   name: autolathe machine board
   description: A machine printed circuit board for an autolathe.
   components:
+    - type: FloodMask # Floof - flooding
     - type: MachineBoard
       prototype: Autolathe
       stackRequirements:
@@ -32,6 +33,7 @@
   name: protolathe machine board
   description: A machine printed circuit board for a protolathe.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: science
   - type: MachineBoard
@@ -132,6 +134,7 @@
   parent: BaseMachineCircuitboard
   name: circuit imprinter machine board
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: science
   - type: MachineBoard
@@ -186,6 +189,7 @@
   name: R&D server machine board
   description: A machine printed circuit board for the R&D server.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: science
   - type: MachineBoard
@@ -263,6 +267,7 @@
   name: artifact analyzer machine board
   description: A machine printed circuit board for an artifact analyzer.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: science
     - type: MachineBoard
@@ -307,6 +312,7 @@
   name: anomaly vessel machine board
   description: A machine printed circuit board for an anomaly vessel.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: science
     - type: MachineBoard
@@ -353,6 +359,7 @@
   name: A.P.E. machine board
   description: A machine printed circuit board for an A.P.E.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: science
     - type: MachineBoard
@@ -513,6 +520,7 @@
   name: crew monitoring server machine board
   description: A machine printed circuit board for a crew monitoring server.
   components:
+    - type: FloodMask # Floof - flooding
     - type: MachineBoard
       prototype: CrewMonitoringServer
       stackRequirements:
@@ -539,6 +547,7 @@
   name: ChemMaster 4000 machine board
   description: A machine printed circuit board for a ChemMaster 4000.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: medical
     - type: MachineBoard
@@ -558,6 +567,7 @@
   name: chem dispenser machine board
   description: A machine printed circuit board for a chem dispenser.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: medical
     - type: MachineBoard
@@ -596,6 +606,7 @@
   name: hydroponics tray machine board
   description: A machine printed circuit board for a hydroponics tray.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: service
     - type: MachineBoard
@@ -615,6 +626,7 @@
   name: seed extractor machine board
   description: A machine printed circuit board for a seed extractor.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: service
     - type: MachineBoard
@@ -631,6 +643,7 @@
   name: SMES machine board
   description: A machine printed circuit board for a SMES.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: power_mod
@@ -669,6 +682,7 @@
   name: cell recharger machine board
   description: A machine printed circuit board for a cell recharger.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: charger_APC
@@ -712,6 +726,7 @@
   name: cyborg recharging station machine board
   description: A machine printed circuit board for a robot recharging station.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: charger_APC
@@ -733,6 +748,7 @@
   name: recharger machine board
   description: A machine printed circuit board for a recharger.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: charger_APC
@@ -773,6 +789,7 @@
   name: substation machine board
   description: A machine printed circuit board for a substation.
   components:
+    - type: FloodMask # Floof - flooding
     - type: MachineBoard
       prototype: SubstationBasicEmpty
       stackRequirements:
@@ -796,6 +813,7 @@
   id: DawInstrumentMachineCircuitboard
   name: digital audio workstation machine board
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: service
   - type: MachineBoard
@@ -851,6 +869,7 @@
   parent: BaseMachineCircuitboard
   name: thruster machine board
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: supply
   - type: MachineBoard
@@ -864,6 +883,7 @@
   parent: BaseMachineCircuitboard
   name: gyroscope machine board
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: supply
   - type: MachineBoard
@@ -918,6 +938,7 @@
   name: reagent grinder machine board
   description: A machine printed circuit board for a reagent grinder.
   components:
+    - type: FloodMask # Floof - flooding
     - type: MachineBoard
       prototype: KitchenReagentGrinder
       stackRequirements:
@@ -933,6 +954,7 @@
   name: hotplate machine board
   description: A machine printed circuit board for a hotplate.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: medical
   - type: MachineBoard
@@ -947,6 +969,7 @@
   name: electric grill machine board
   description: A machine printed circuit board for an electric grill.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: service
   - type: MachineBoard
@@ -961,6 +984,7 @@
   parent: BaseMachineCircuitboard
   name: stasis bed machine board
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: medical
     - type: MachineBoard
@@ -976,6 +1000,7 @@
   name: electrolysis unit machine board
   description: A machine printed circuit board for an electrolysis unit.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: medical
   - type: MachineBoard
@@ -990,6 +1015,7 @@
   name: centrifuge machine board
   description: A machine printed circuit board for a centrifuge.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: medical
   - type: MachineBoard
@@ -1052,6 +1078,7 @@
   parent: BaseMachineCircuitboard
   name: microwave machine board
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: service
     - type: MachineBoard
@@ -1127,6 +1154,7 @@
   name: surveillance camera router board
   description: A machine printed circuit board for a surveillance camera router.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: security
   - type: MachineBoard
@@ -1168,6 +1196,7 @@
   name: movable wireless camera board
   description: A machine printed circuit board for a movable wireless camera.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: service
   - type: MachineBoard
@@ -1182,6 +1211,7 @@
   name: wireless camera board
   description: A machine printed circuit board for a wireless camera.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: service
   - type: MachineBoard
@@ -1211,6 +1241,7 @@
   name: booze dispenser machine board
   description: A machine printed circuit board for a booze dispenser.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: service
     - type: MachineBoard
@@ -1256,6 +1287,7 @@
   name: soda dispenser machine board
   description: A machine printed circuit board for a soda dispenser.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: service
     - type: MachineBoard
@@ -1303,6 +1335,7 @@
   name: mini gravity generator machine board
   description: A machine printed circuit board for a mini gravity generator.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: supply
   - type: MachineBoard

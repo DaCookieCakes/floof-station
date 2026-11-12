@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "license": "CC0-1.0",
+  "copyright": "Sprites by portfiend (GitHub)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "folded-icon"
+    },
+    {
+      "name": "equipped-INNERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-allulalo",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-allulalo",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-apid",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-apid",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-decapoid",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-decapoid",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-gastropoid",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-gastropoid",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-gray",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-gray",
+      "directions": 4
+    },
+    {
+      "name": "equipped-INNERCLOTHING-ungu",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-ungu",
+      "directions": 4
+    }
+  ]
+}

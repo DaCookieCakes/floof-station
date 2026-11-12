@@ -163,3 +163,23 @@
       - id: DeathNettle
         amount: !type:RangeNumberSelector
           range: 1, 5
+#      # Begin DeltaV additions
+#      - id: FoodCrystalThistle
+#        amount: !type:RangeNumberSelector
+#          range: 1, 5
+#      - id: FoodGhostPepper
+#        amount: !type:RangeNumberSelector
+#          range: 1, 5
+#      - id: FoodCosmicRevenant
+#        amount: !type:RangeNumberSelector
+#          range: 1, 5
+#      # End DeltaV additions
+      # Begin Frontier additions
+      - id: FoodCoffee # Frontier
+        amount: !type:RangeNumberSelector
+          range: 1, 5
+      # End Frontier additions
+      # Begin Floof additions
+      - id: FoodPomegranate # Frontier
+        amount: !type:RangeNumberSelector
+          range: 1, 5

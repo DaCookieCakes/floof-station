@@ -169,6 +169,18 @@ namespace Content.Shared.Chemistry.Reagent
         [DataField]
         public bool WorksOnTheDead;
 
+        /// <summary> Floof - tile fires
+        /// How likely is this reagent to set on fire?
+        /// </summary>
+        [DataField]
+        public int Flammability = 0;
+
+        /// <summary> Floof - flooding
+        /// How opaque a full tile of this liquid is, 1 being solid. Shallower liquid is more see-through.
+        /// </summary>
+        [DataField]
+        public float LiquidOpacity = 0.85f;
+        
         [DataField, AlwaysPushInheritance]
         public ReagentMetabolisms? Metabolisms;
 

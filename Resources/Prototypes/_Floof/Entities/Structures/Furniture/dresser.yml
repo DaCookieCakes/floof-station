@@ -1,0 +1,21 @@
+- type: entity
+  id: DresserFilledLewd
+  parent: Dresser
+  suffix: Filled, Lewd
+  components:
+  - type: EntityTableContainerFill #TODO: make these tables in any way consistent
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: DresserMainLootEntityTable
+        - !type:NestedSelector
+          tableId: DresserSecondLootEntityTable
+        - !type:NestedSelector
+          tableId: DresserThirdLootEntityTable
+        - !type:NestedSelector
+          tableId: DresserLewdVibes
+        - !type:NestedSelector
+          tableId: DresserLewdFleshlights
+        - !type:NestedSelector
+          tableId: DresserLewdDildos

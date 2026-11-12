@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterExplorerCoat
+  name: explorer's labcoat
+  description: Looks like it's seen its fair share of dusty trails.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/OuterClothing/Coats/explorer_coat.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/OuterClothing/Coats/explorer_coat.rsi
+

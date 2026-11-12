@@ -1,0 +1,951 @@
+Entries:
+- author: Floofmin
+  changes:
+    - message: Added changelog
+      type: Add
+  id: 1
+  time: '2026-06-21T01:29:24.112Z'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added fun!
+    - type: Remove
+      message: Removed fun!
+  id: 2
+  time: '2026-06-21T21:23:13.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed trait names
+  id: 3
+  time: '2026-06-23T14:53:18.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added unborgable trait!
+  id: 4
+  time: '2026-06-23T16:14:09.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added a new ChemMaster UI.
+  id: 5
+  time: '2026-07-01T19:12:23.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: switched of to Floof Station branding.
+  id: 6
+  time: '2026-07-01T19:39:56.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Remove
+      message: Removed player recording!
+  id: 7
+  time: '2026-07-04T18:49:28.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Remove
+      message: Removed the ability for ghosts to hear local chat.
+  id: 8
+  time: '2026-07-04T18:57:36.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added consent system!
+  id: 9
+  time: '2026-07-04T20:49:25.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added consent window to character creator.
+  id: 10
+  time: '2026-07-05T05:22:08.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added dancing poles which can be constructed.
+  id: 11
+  time: '2026-07-09T06:24:36.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed Character imports!
+  id: 12
+  time: '2026-07-09T06:48:52.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Subtle and Subtle OOC
+  id: 13
+  time: '2026-07-09T10:39:24.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added lewd liquids
+  id: 14
+  time: '2026-07-14T05:31:41.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added Feroxi. They can breathe water vapor, only eat meat, and get
+        poisoned by theobromine and garlic.
+    - type: Add
+      message: Added Water Vapor Tanks and Survival Boxes.
+    - type: Add
+      message: Added a Feroxi chomp emote.
+    - type: Add
+      message: Added a Feroxi guidebook page.
+    - type: Add
+      message: Added a Feroxi plushie.
+    - type: Tweak
+      message: Changed Eye Shadow so it's usable.
+  id: 15
+  time: '2026-07-15T15:06:01.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added a per-character consent system, set it in the character/profile
+        editor!
+    - type: Remove
+      message: Removed the old player-wide consent system.
+  id: 16
+  time: '2026-07-18T03:08:22.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Interactions!
+  id: 17
+  time: '2026-07-18T15:48:13.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added a clicker! You can select it from the loadouts menu.
+    - type: Add
+      message: 'Added a variety of sex toys: dildos, fleshlights, and vibes.'
+    - type: Add
+      message: >-
+        Added Lewd Crates and Sex Toy Crates. They can spawn or be bought from
+        cargo.
+    - type: Add
+      message: Added lewd dressers.
+  id: 18
+  time: '2026-07-18T16:38:54.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added a feroxi Chomp emote icon.
+    - type: Add
+      message: Added hair to feroxi.
+    - type: Tweak
+      message: Doubled Feroxi's thirst rate.
+    - type: Fix
+      message: Fixed Feroxi medical loadouts not including a water box.
+  id: 19
+  time: '2026-07-18T17:29:01.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: Fixed a bug involving ghosts not hearing normal chat.
+  id: 20
+  time: '2026-07-18T17:31:17.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added collars!
+    - type: Add
+      message: Added collars to departmental vendors.
+  id: 21
+  time: '2026-07-22T16:02:04.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Lizard Bellow sound!
+  id: 22
+  time: '2026-07-23T19:48:59.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported spray paint.
+    - type: Fix
+      message: >-
+        Fixed innumerous issues with spray paint, such as being able to paint
+        anomalies, having a do-after before getting told that your spray paint
+        is out of ammo, and more.
+  id: 23
+  time: '2026-07-24T12:28:54.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported Floofs wood railings mapping
+  id: 24
+  time: '2026-07-24T12:34:38.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added Shadekin with our own lore.
+    - type: Add
+      message: Added Shadekin 'survival boxes'
+    - type: Add
+      message: Added Shadekin plushies
+    - type: Add
+      message: Added Shadekin-specific disabilities
+    - type: Tweak
+      message: Shadekin and Feroxi plushies can now spawn in crates and other spawners.
+  id: 25
+  time: '2026-07-24T13:05:59.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added floof sign.
+  id: 26
+  time: '2026-07-24T13:44:12.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: Fixed the stripper pole duping materials on deconstructions.
+    - type: Fix
+      message: Stripper poles can now be clicked.
+  id: 27
+  time: '2026-07-24T16:02:24.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added fun!
+    - type: Remove
+      message: Removed fun!
+    - type: Tweak
+      message: Changed fun!
+    - type: Fix
+      message: Fixed fun!
+  id: 28
+  time: '2026-07-25T10:53:10.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported the "crawling under furniture" system
+  id: 29
+  time: '2026-07-25T14:41:04.0000000+00:00'
+- author: Memeji
+  changes:
+    - type: Add
+      message: Pet Vend
+  id: 30
+  time: '2026-07-27T09:44:02.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Boom cradle!
+    - type: Tweak
+      message: Tweaked volume of newton cradle.
+  id: 31
+  time: '2026-07-27T21:24:00.0000000+00:00'
+- author: Memeji
+  changes:
+    - type: Add
+      message: Added cowbell item.
+  id: 32
+  time: '2026-07-28T10:42:17.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported id lockable crates and lockers
+    - type: Add
+      message: Ported dorms airlocks
+  id: 33
+  time: '2026-07-28T10:54:00.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed character imports!
+  id: 34
+  time: '2026-07-29T01:03:42.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added prize counter
+  id: 35
+  time: '2026-07-30T03:04:43.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added the big marking update!
+  id: 36
+  time: '2026-07-31T14:20:49.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added male Shadekin sounds.
+    - type: Remove
+      message: Removed a secondary Shadekin scream.
+    - type: Tweak
+      message: Improved the Shadekin NV to be a toggle.
+    - type: Fix
+      message: Fixed the Shock Collar.
+    - type: Fix
+      message: Fixed Shadekin loadout vocal names.
+    - type: Fix
+      message: Fixed Feroxi Vision/Goob NV.
+  id: 37
+  time: '2026-08-02T14:34:04.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed most markings locale.
+  id: 38
+  time: '2026-08-02T20:59:14.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added clothes from floof
+  id: 39
+  time: '2026-08-03T02:45:52.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added cocks!
+    - type: Add
+      message: Added vaginas!
+    - type: Add
+      message: Added breasts!
+  id: 40
+  time: '2026-08-03T18:15:34.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Janitorial plungers!
+  id: 41
+  time: '2026-08-04T14:51:48.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added addOrganEffect!
+    - type: Tweak
+      message: tweaked Breastfeeding to require breasts.
+    - type: Add
+      message: >-
+        Added Several Organs to represent genitals with their respective
+        solutions.
+  id: 42
+  time: '2026-08-08T18:35:30.0000000+00:00'
+- author: Memeji
+  changes:
+    - type: Add
+      message: Bladder organ
+  id: 43
+  time: '2026-08-22T04:07:20.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added separate underwear slots
+    - type: Add
+      message: Added fishnet clothes
+    - type: Tweak
+      message: Converted thongs into underwear garments.
+  id: 44
+  time: '2026-08-24T13:05:38.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added carrying, time to throw your co-workers!
+  id: 45
+  time: '2026-08-24T15:22:49.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: Fixed fleshlights.
+  id: 46
+  time: '2026-09-01T04:30:51.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: New characters don't have random markings anymore.
+  id: 47
+  time: '2026-09-05T12:29:28.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added a map auto-vote at the end of rounds/in lobbies.
+  id: 48
+  time: '2026-09-06T04:48:55.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added new sounds for airlocks from Funky and closets from Goob.
+    - type: Add
+      message: >-
+        Item interaction sounds make a return! Objects such as paper, tools,
+        clothing, and more now have sound effects for being picked up and put
+        down.
+  id: 49
+  time: '2026-09-11T09:17:12.0000000+00:00'
+- author: Memeji
+  changes:
+    - type: Add
+      message: Ported showers
+  id: 50
+  time: '2026-09-14T12:20:57.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added fishing, fish in any watersource
+  id: 51
+  time: '2026-09-14T20:38:57.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added fishing vendor, not yet added to maps.
+  id: 52
+  time: '2026-09-18T16:33:57.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: Minimum players for all maps have been set to 0.
+  id: 53
+  time: '2026-09-19T00:45:45.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fix markings disappearing on roundstart
+  id: 54
+  time: '2026-09-19T12:25:20.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed breedshroom and humpshroom textures
+  id: 55
+  time: '2026-09-24T02:09:57.0000000+00:00'
+- author: Memeji
+  changes:
+    - type: Add
+      message: Chatstacking
+  id: 56
+  time: '2026-09-24T17:34:39.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: Fixed a number of issues with the horny plants
+  id: 57
+  time: '2026-09-24T17:36:25.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Librarians can now select red ties.
+    - type: Tweak
+      message: Every job now has a collar selection.
+    - type: Tweak
+      message: Made most jobs shoe-optional.
+    - type: Tweak
+      message: Service workers now have Chef and Bartender outfit selections.
+    - type: Tweak
+      message: Most job loadout options are now grouped together.
+  id: 58
+  time: '2026-09-27T13:03:07.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added Harpies, they have ulravision, can fly for a limited time, and can
+        sing.
+    - type: Add
+      message: Added Harpy-specific jumpskirt sprites.
+  id: 59
+  time: '2026-09-27T21:50:03.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: Fixed Harpy displacements.
+  id: 60
+  time: '2026-09-27T23:25:06.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Tweak
+      message: Shadekin and Harpies can now digest raw animal proteins. (Aka mice)
+  id: 61
+  time: '2026-09-28T04:11:57.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Tweak
+      message: >-
+        The back slot for shotguns, instruments, .etc now requires a JUMPSUIT
+        than outer clothing.
+  id: 62
+  time: '2026-09-28T04:13:00.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Tweak
+      message: Moths can now fly like Harpies.
+  id: 63
+  time: '2026-09-28T05:37:55.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added bowls of Ice Cream.
+    - type: Add
+      message: Added more food types such as bees/honey, cucumbers, fruits, .etc.
+  id: 64
+  time: '2026-09-30T21:08:28.0000000+00:00'
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added thigh-highs and arm warmers to all of the job loadouts.
+    - type: Add
+      message: Added thigh-highs, arm warmers, and thongs to job drobes.
+    - type: Add
+      message: Added thigh-highs, arm warmers, and thongs to the head dressers.
+    - type: Tweak
+      message: Lizards, Moths, and Feroxi can now enjoy ice-cream.
+    - type: Fix
+      message: New fruits/veggies no longer require a welder to cut.
+    - type: Fix
+      message: Newly added crops now appear in the seed vend.
+  id: 65
+  time: '2026-10-03T14:36:46.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Ding Dong, your comfy travel companion.
+  id: 66
+  time: '2026-10-05T07:47:04.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: You can now chose your genitals in the character setup.
+    - type: Add
+      message: New character have matching genitals to their sex.
+    - type: Remove
+      message: the cock, boobs and vagina traits have been removed.
+  id: 67
+  time: '2026-10-06T10:37:43.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Doubled vent release pressure.
+  id: 68
+  time: '2026-10-06T12:54:41.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: fix marking overlay
+  id: 69
+  time: '2026-10-06T13:07:03.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fix Harpies crashing on round join.
+  id: 70
+  time: '2026-10-07T02:26:34.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Goob tech tree
+  id: 71
+  time: '2026-10-07T19:48:13.0000000+00:00'
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added height and width sliders to the character editor.
+    - type: Tweak
+      message: Character size now affects hitbox, blood volume and flight.
+  id: 72
+  time: '2026-10-08T10:23:23.0000000+00:00'
+- author: portfiend Ghost Dirius77 and Alex C
+  changes:
+    - type: Add
+      message: Ported the Autotailor, a lathe that prints cosmetic clothing and rings!
+    - type: Add
+      message: >-
+        Ported costume bundles and bunny suits, sold in the AutoDrobe and
+        unwrapped in hand.
+    - type: Add
+      message: >-
+        Ported quick construction, use sheets in hand to pick what to build from
+        a radial menu.
+    - type: Add
+      message: >-
+        Ported silent cryo, alt-click a cryopod to leave without an announcement
+        or hide others' in the options.
+    - type: Add
+      message: Ported new landmines and floor traps, not yet added to maps.
+    - type: Tweak
+      message: Updated the mindshield icon.
+  id: 73
+  time: '2026-10-16T08:19:15.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/266
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported sleeping bags! Craft one from cloth, it fits two.
+  id: 74
+  time: '2026-10-16T09:04:24.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/273
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added Gator Aid, now you too can death roll your coworkers!
+  id: 75
+  time: '2026-10-16T19:21:10.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/276
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added roasted crickets to the snack vendor, a reptilian favorite!
+  id: 76
+  time: '2026-10-16T19:44:21.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/277
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: Doubled anomaly research point output.
+  id: 77
+  time: '2026-10-18T10:27:41.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/280
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added good boy, good girl and functional pins to the pet store vendor!
+  id: 78
+  time: '2026-10-21T14:19:27.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/294
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: The cowbell collar is now much quieter.
+  id: 79
+  time: '2026-10-21T15:00:33.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/296
+- author: Memeji
+  changes:
+    - type: Add
+      message: >-
+        Ported wallets from Frontier! They go in their own inventory slot and
+        hold cash, coins and paper, available in loadouts and the ClothesMate.
+  id: 80
+  time: '2026-10-23T02:57:06.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/298
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added bank accounts that carry over between rounds, with paydays based
+        on your job and time alive!
+    - type: Add
+      message: >-
+        Added ATMs for withdrawing spesos, and your PDA now shows your balance.
+        ATMs aren't on maps yet.
+  id: 81
+  time: '2026-10-23T15:45:09.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/301
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed camo reinforced walls being rotated wrong.
+  id: 82
+  time: '2026-10-23T16:11:53.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/302
+- author: DaCookieCakes
+  changes:
+    - type: Tweak
+      message: The Goob research UI positioning/prerequisites is now separated.
+  id: 83
+  time: '2026-10-23T16:33:46.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/299
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: >-
+        Latejoiners are now announced when they reach the station, not when they
+        board the arrivals shuttle.
+  id: 84
+  time: '2026-10-26T13:13:22.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/308
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: Pet carriers can now fit people too.
+  id: 85
+  time: '2026-10-26T13:33:42.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/309
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added the Yes ERP poster, replacing the No ERP poster on all maps!
+  id: 86
+  time: '2026-10-26T13:40:00.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/278
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported item offering, press O to hand items directly to other players.
+  id: 87
+  time: '2026-10-26T13:40:01.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/287
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added a species tab to the character editor with an overview of each
+        species.
+  id: 88
+  time: '2026-10-26T13:40:02.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/288
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added persistent characters! Reach CentComm on the evac shuttle and your
+        character carries over to the next round.
+    - type: Add
+      message: >-
+        The lobby now shows your live character, and you can discard it to start
+        fresh from your template.
+  id: 89
+  time: '2026-10-26T13:40:03.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/289
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added Green, Yellow and Red danger levels, which decide how many antags
+        and threats show up in a round.
+    - type: Tweak
+      message: Antag numbers now scale with the player count.
+  id: 90
+  time: '2026-10-26T13:40:04.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/291
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: Characters can now be made wider in the character editor.
+  id: 91
+  time: '2026-10-26T13:40:05.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/295
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added a respawn button for ghosts, usable 5 minutes after death.
+    - type: Tweak
+      message: >-
+        Cryo now takes 30 seconds, saves your character and sends you back to
+        the lobby.
+  id: 92
+  time: '2026-10-26T13:40:06.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/305
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Ported Rodentia from DeltaV, along with the Cheesy puns trait. They can
+        stash items in their cheeks!
+  id: 93
+  time: '2026-10-26T13:40:07.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/306
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Species plushies now show up in presents, toy spawners and the prize
+        counter.
+  id: 94
+  time: '2026-10-26T13:40:08.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/307
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added double beds, room for two!
+    - type: Tweak
+      message: Beds can now be rotated to face left or right.
+  id: 95
+  time: '2026-10-26T22:31:30.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/311
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed character sprite layers jittering by a pixel.
+  id: 96
+  time: '2026-10-27T20:54:16.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/313
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: The lobby and character picker now show each character's bank balance.
+  id: 97
+  time: '2026-10-30T02:17:06.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/317
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added consent toggles to the character editor, starting with
+        watersports.
+    - type: Tweak
+      message: >-
+        The in-round consent window now shows and edits your consent text and
+        toggles.
+    - type: Tweak
+      message: Everyone now has a bladder, no trait needed.
+  id: 98
+  time: '2026-10-30T03:49:44.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/318
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Gator Aid cans are now stocked in more drink vending machines.
+  id: 99
+  time: '2026-10-30T03:54:19.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/319
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: >-
+        Characters now start with a wallet. It can still be unselected in the
+        character editor.
+  id: 100
+  time: '2026-10-30T04:29:05.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/320
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added DogBorgs, a new mechanical companion for work. And perhaps
+        MORE?!?1
+    - type: Add
+      message: Added a variants selector for the Borg menu.
+    - type: Add
+      message: Added a SecBorg lawset.
+    - type: Add
+      message: Added a dedicated DogBorg role spawner, which is currently unused.
+    - type: Tweak
+      message: >-
+        Job Spawners now have a 'ExtraJobs' field. Only used for Cyborgs right
+        now.
+    - type: Tweak
+      message: Borg selector will now only show its 'type'; cyborg or dogborg.
+    - type: Fix
+      message: Borg console sprite is no longer hardcoded.
+    - type: Fix
+      message: Fixed walking sprite toggle syncing via a new event.
+  id: 101
+  time: '2026-10-30T05:37:09.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/321
+- author: Shy-ivy
+  changes:
+    - type: Tweak
+      message: Rodentia now have an updated guidebook
+    - type: Add
+      message: Rummaging for rodentia have been buffed
+    - type: Remove
+      message: Rodentia have lost their puking privileges and can't induce vomitting
+  id: 102
+  time: '2026-11-02T03:04:28.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/325
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: >-
+        Added MoffStation's 'Rewritten' card system, their Tarot cards, and
+        their Go Fish! game.
+  id: 103
+  time: '2026-11-02T05:16:30.0000000+00:00'
+  url: https://github.com/Floof-Station-SS14/Floof-Station/pull/326
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added the arrivals terminal island with an animated ocean and a
+        day-night cycle.
+    - type: Tweak
+      message: Staying on the arrivals shuttle now takes you back to the terminal.
+  id: 104
+  time: '2026-11-06T13:21:21.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/332
+- author: portfiend
+  changes:
+    - type: Add
+      message: Ported beach umbrellas!
+    - type: Fix
+      message: Lounge chairs now lay you down face up in every direction.
+  id: 105
+  time: '2026-11-06T22:10:45.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/336
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added flooding! Liquid now spreads across the station, rises around
+        objects and lets you swim.
+  id: 106
+  time: '2026-11-07T00:04:29.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/337
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Fixed tarot and Go Fish card descriptions.
+  id: 107
+  time: '2026-11-07T09:21:08.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/339
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Ported the Swimvend and Beachdrobe, with bikinis, swim shorts and more
+        as underwear in the loadouts.
+    - type: Add
+      message: Added a disco beach ball crate to cargo.
+    - type: Fix
+      message: >-
+        Fixed underwear, swimwear, wallets and cloth wraps being cut up with a
+        welder instead of a knife.
+  id: 108
+  time: '2026-11-08T03:44:33.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/341
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: >-
+        Switching characters no longer carries height and width over from the
+        previous character.
+  id: 109
+  time: '2026-11-08T09:36:39.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/345
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added Mooring, a station resting on the sea floor. The arrivals sub
+        dives down to it and you can see the station below as you descend.
+  id: 110
+  time: '2026-11-08T22:36:47.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/353
+- author: Pachat-Kas
+  changes:
+    - type: Remove
+      message: Removed underwear markings, pick underwear in your loadout instead.
+  id: 111
+  time: '2026-11-09T02:31:16.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/355
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added job/access specific dorm airlocks, for certain jobs.
+  id: 112
+  time: '2026-11-11T05:53:47.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/362
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added ovens with their own grid UI.
+  id: 113
+  time: '2026-11-12T03:24:15.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/364
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: >-
+        Fixed a number of leash issues, including the texture, jittering,
+        prediction states, .etc.
+  id: 114
+  time: '2026-11-12T08:09:08.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/365

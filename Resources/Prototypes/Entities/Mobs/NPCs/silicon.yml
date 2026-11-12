@@ -51,6 +51,15 @@
   - type: ProtectedFromStepTriggers
   - type: NoSlip
   - type: Insulated
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Machine
+    understands:
+    - GalacticCommon
+    - Machine
+  # Starlight-end
 
 # Used for bots
 - type: entity
@@ -109,6 +118,8 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai #couldn't decide if this should be borg or pai sounds so I flipped a coin.
+  - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 - type: entity
   parent: [MobSiliconBase, SolutionFireExtinguisherMini]

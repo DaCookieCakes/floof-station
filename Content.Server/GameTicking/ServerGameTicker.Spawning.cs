@@ -150,6 +150,17 @@ namespace Content.Server.GameTicking
                     return;
             }
 
+            // Floof Section - Persistence
+            if (!_randomizeCharacters
+                && _liveCharacter.TryGetBody(player.UserId, _prefsManager.GetPreferences(player.UserId).SelectedCharacterIndex, out _))
+            {
+                _chatManager.DispatchServerMessage(player, Loc.GetString("live-character-already-in-round"));
+                if (!LobbyEnabled)
+                    JoinAsObserver(player);
+                return;
+            }
+            // Floof Section End
+
             SpawnPlayer(player, character, station, jobId, lateJoin, silent);
         }
 
@@ -258,30 +269,10 @@ namespace Content.Server.GameTicking
 
             DoSpawn(player, character, station, jobId, silent, out var mob, out var jobPrototype, out var jobName);
 
+            // Floof Section - Arrival announcement on station
             if (lateJoin && !silent)
-            {
-                if (jobPrototype.JoinNotifyCrew)
-                {
-                    _chatSystem.DispatchStationAnnouncement(station,
-                        Loc.GetString("latejoin-arrival-announcement-special",
-                            ("character", MetaData(mob).EntityName),
-                            ("entity", mob),
-                            ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))),
-                        Loc.GetString("latejoin-arrival-sender"),
-                        playDefaultSound: false,
-                        colorOverride: Color.Gold);
-                }
-                else
-                {
-                    _chatSystem.DispatchStationAnnouncement(station,
-                        Loc.GetString("latejoin-arrival-announcement",
-                            ("character", MetaData(mob).EntityName),
-                            ("entity", mob),
-                            ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))),
-                        Loc.GetString("latejoin-arrival-sender"),
-                        playDefaultSound: false);
-                }
-            }
+                _arrivalAnnouncement.QueueAnnouncement(mob, station, jobName, jobPrototype.JoinNotifyCrew);
+            // Floof Section End
 
             _stationJobs.TryAssignJob(station, jobPrototype, player.UserId);
 

@@ -1,0 +1,27 @@
+- type: entity
+  parent: GoldRingDiamond
+  id: GoldRingDiamondPrinted
+  components:
+  - type: StaticPrice
+    price: 300 # 20% of original
+
+- type: entity
+  parent: SilverRingDiamond
+  id: SilverRingDiamondPrinted
+  components:
+  - type: StaticPrice
+    price: 280 # 20% of original
+
+- type: entity
+  parent: GoldRingGem
+  id: GoldRingGemPrinted
+  components:
+  - type: StaticPrice
+    price: 300 # same price as gold diamond ring due to material costs
+
+- type: entity
+  parent: SilverRingGem
+  id: SilverRingGemPrinted
+  components:
+  - type: StaticPrice
+    price: 280 # same price as silver diamond ring due to material costs

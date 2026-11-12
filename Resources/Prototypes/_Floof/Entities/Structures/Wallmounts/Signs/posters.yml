@@ -1,0 +1,9 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitYesERP
+  name: "Yes ERP"
+  description: "This poster reminds the crew that Eroticism and Pornography are welcome on Floof Station."
+  components:
+  - type: Sprite
+    sprite: _Floof/Structures/Wallmounts/posters.rsi
+    state: poster_yes_erp

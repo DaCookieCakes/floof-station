@@ -144,6 +144,10 @@
   name: cheap sunglasses
   description: A pair of black sunglasses. Doesn't block light well, more of an accessory than something useful.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingEyesGlassesCheapSunglasses.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Eyes/Glasses/sunglasses.rsi
   - type: Clothing
@@ -162,6 +166,10 @@
   name: sunglasses
   description: A pair of black sunglasses.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingEyesGlassesCheapSunglasses.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Tag
     tags:
     - Sunglasses

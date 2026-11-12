@@ -20,6 +20,7 @@ namespace Content.Server.Atmos.EntitySystems
         [Dependency] private AlertsSystem _alertsSystem = default!;
         [Dependency] private IAdminLogManager _adminLogger = default!;
         [Dependency] private InventorySystem _inventorySystem = default!;
+        [Dependency] private Content.Shared._Floof.Flooding.FloodLevelSystem _floodLevel = default!; // Floof - Ocean
 
         private const float UpdateTimer = 1f;
         private float _timer;
@@ -227,6 +228,8 @@ namespace Content.Server.Atmos.EntitySystems
                 {
                     pressure = MathF.Max(mixture.Pressure, 1f);
                 }
+
+                pressure += _floodLevel.GetSeaPressure(uid); // Floof - Ocean
 
                 pressure = pressure switch
                 {

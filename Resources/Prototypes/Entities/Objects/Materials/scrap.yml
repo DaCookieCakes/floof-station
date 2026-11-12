@@ -205,6 +205,7 @@
   name: canister handle
   description: Helpful for holding a canister. Now you just need the actual canister part.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: junk-canister-1
@@ -220,6 +221,7 @@
   name: canister valve
   description: A valve from a gas canister.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: junk-canister-2

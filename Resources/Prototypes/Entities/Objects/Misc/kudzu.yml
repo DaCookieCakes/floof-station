@@ -130,6 +130,7 @@
   description: A colorful carpet of flowers sprawling in every direction. You're not sure whether to take it down or leave it up.
   suffix: Friendly, Floral Anomaly
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     drawdepth: HighFloorObjects
     sprite: Objects/Misc/kudzuflower.rsi

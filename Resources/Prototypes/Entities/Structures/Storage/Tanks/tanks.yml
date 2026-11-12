@@ -7,6 +7,10 @@
   description: A fuel tank. It's used to store high amounts of fuel.
   suffix: Empty
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WeldingFuelTank.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: StaticPrice
     price: 750
   - type: Sprite
@@ -39,6 +43,10 @@
   parent: WeldingFuelTank
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WeldingFuelTank.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -82,6 +90,10 @@
   description: A water tank. It's used to store high amounts of water.
   suffix: Empty
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WaterTank.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: StaticPrice
     price: 500
   - type: Sprite
@@ -103,6 +115,10 @@
   id: WaterTankFull
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WaterTank.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -115,6 +131,10 @@
   name: water cooler
   description: Seems like a good place to stand and waste time. It has a stock of paper cups on the side.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WaterCooler.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Storage/tanks.rsi
     layers:
@@ -192,6 +212,10 @@
   parent: [StorageTank, StructureWheeled]
   suffix: Empty
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/GenericTank.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: StaticPrice
       price: 500
     - type: Sprite

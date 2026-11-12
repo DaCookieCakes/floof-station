@@ -1,3 +1,4 @@
+#if false // Floof - moved to _Floof/Fluids, kept so syncs merge upstream changes into it
 using Content.Client.IconSmoothing;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Fluids;
@@ -91,3 +92,5 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
 
     #endregion Spill
 }
+
+#endif

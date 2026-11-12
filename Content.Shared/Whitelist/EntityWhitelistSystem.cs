@@ -102,6 +102,14 @@ public sealed partial class EntityWhitelistSystem : EntitySystem
     }
 
     /// <summary>
+    /// Helper function to determine if a blacklist is not null and the entity is on list.
+    /// </summary>
+    public bool IsBlacklistPass(EntityWhitelist? whitelist, EntityUid uid)
+    {
+        return IsWhitelistPass(whitelist, uid);
+    }
+
+    /// <summary>
     /// Helper function to determine if a whitelist is not null and the entity is not on the list.
     /// </summary>
     public bool IsWhitelistFail(EntityWhitelist? whitelist, EntityUid uid)
@@ -110,6 +118,14 @@ public sealed partial class EntityWhitelistSystem : EntitySystem
             return false;
 
         return !IsValid(whitelist, uid);
+    }
+
+    /// <summary>
+    /// Helper function to determine if a blacklist is not null and the entity is not on the list.
+    /// </summary>
+    public bool IsBlacklistFail(EntityWhitelist? whitelist, EntityUid uid)
+    {
+        return IsWhitelistFail(whitelist, uid);
     }
 
     /// <summary>

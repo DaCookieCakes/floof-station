@@ -80,6 +80,7 @@
   name: cartridge (.35 auto)
   suffix: spent
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:

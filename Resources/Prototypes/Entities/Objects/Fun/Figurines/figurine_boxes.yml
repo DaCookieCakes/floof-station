@@ -4,6 +4,7 @@
   name: unfolded cardboard box
   description: A small, unfolded cardboard toy box.
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Cardboard: 50

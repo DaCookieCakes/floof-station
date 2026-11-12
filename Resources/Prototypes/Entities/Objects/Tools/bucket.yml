@@ -4,6 +4,10 @@
   name: bucket
   description: It's a boring old bucket.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Bucket.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Edible
     utensil: Spoon
   - type: Sprite

@@ -1,0 +1,19 @@
+# Neck
+- type: loadout
+  id: ClothingNeckCollarCmd
+  equipment:
+    neck: ClothingNeckCollarCmd
+
+# Gloves
+- type: loadout
+  id: CommandArmWarmers
+  groupBy: CommandGear
+  equipment:
+    gloves: ClothingHandsCommandWarmers
+
+# Socks
+- type: loadout
+  id: CommandThighHighs
+  groupBy: CommandGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksCommand

@@ -4,6 +4,10 @@
   name: chessboard
   description: A chessboard. Pieces included!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CheckerBoard.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Fun/Tabletop/chessboard.rsi
     state: chessboard

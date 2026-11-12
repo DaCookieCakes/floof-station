@@ -4,6 +4,10 @@
   name: exotic seeds crate
   description: Any entrepreneuring botanist's dream. Contains many different exotic seeds. Requires Hydroponics access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponicsSeedsExotic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -22,6 +26,8 @@
           amount: 2
         - id: BungoSeeds
           amount: 2
+        - id: HumpShroomSeeds # Floof
+          amount: 2
 
 - type: entity
   parent: CrateHydroSecure
@@ -29,6 +35,10 @@
   name: medicinal seeds crate
   description: The wannabe chemist's dream. The power of medicine is at your fingertips! Requires Hydroponics access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponicsSeedsExotic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -50,6 +60,10 @@
   name: hydroponics equipment crate
   description: Supplies for growing a great garden! Contains some spray bottles of plant chemicals, a hatchet, a mini-hoe, scythe, as well as a pair of leather gloves and a botanist's apron.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponics.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -73,6 +87,10 @@
   name: seeds crate
   description: Big things have small beginnings. Contains twenty-four different seeds.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponics.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -101,6 +119,8 @@
         - id: PeaSeeds
         - id: CherrySeeds
         - id: CottonSeeds
+        - id: PomegranateSeeds # Floof
+        - id: PearSeeds # Floof - Botany  Additions
 
 - type: entity
   parent: CrateHydroponics
@@ -108,6 +128,10 @@
   name: hydroponics tray crate
   description: Contains a hydroponics tray flatpack.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponics.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:

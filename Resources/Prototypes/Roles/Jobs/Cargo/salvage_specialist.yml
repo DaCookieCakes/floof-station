@@ -1,5 +1,6 @@
 - type: job
   id: SalvageSpecialist
+  pay: 500 # Floof - bank
   name: job-name-salvagespec
   description: job-description-salvagespec
   playTimeTracker: JobSalvageSpecialist

@@ -1,0 +1,14 @@
+- type: entity
+  id: SpawnPointDogborg
+  parent: SpawnPointJobBase
+  name: dogborg
+  components:
+  - type: SpawnPoint
+    job_id: Dogborg
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+      state: k50
+    - sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+      state: k50_e

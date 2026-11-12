@@ -124,6 +124,9 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
+    # Begin DeltaV Additions
+    - CutterMachineStaticDen
+    # End DeltaV Additions
     - ToolsStatic
     - PartsStatic
     - AtmosStatic
@@ -139,6 +142,9 @@
     - PowerCellsStatic
     - ElectronicsStatic
     - HydroponicsStatic
+    # Floofstation section
+    - CollarsAutolatheFloofstation
+    # Floofstation section end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SecurityAmmoStatic
@@ -260,6 +266,7 @@
     - CargoBoardsStatic
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
+    - DenBoardsStatic # DEN
     dynamicPacks:
     - EngineeringBoards
     - CargoBoards
@@ -396,6 +403,7 @@
     - SecurityPracticeStatic
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
+    - MedicalStaticFloof # Floof
     dynamicPacks:
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
@@ -481,6 +489,7 @@
     - MedicalClothingStatic
     - EmptyMedkitsStatic
     - SurgeryStatic
+    - MedicalStaticFloof # Floof
     dynamicPacks:
     - Chemistry
   - type: Machine
@@ -529,6 +538,14 @@
     - Scarves
     - Carpets
     - Bedsheets
+    # Floofstation section
+    - CollarsFloofstation
+    - ArmWarmersRecipePack
+    - ThighHighsRecipePack
+    - ThongsRecipePack
+    # Floofstation section end
+    - DenClothingJob #DEN
+    - NFWallets # Frontier
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm

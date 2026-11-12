@@ -1,3 +1,4 @@
+using Content.Client._Floof.Persistence; // Floof - Persistence
 using Content.Client.Audio;
 using Content.Client.GameTicking;
 using Content.Client.LateJoin;
@@ -33,6 +34,10 @@ namespace Content.Client.Lobby
 
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;
+        // Floof Section - Persistence
+        private LiveCharacterStatusSystem _liveCharacter = default!;
+        private readonly string _inRoundTooltip = Loc.GetString("live-character-already-in-round");
+        // Floof Section End
 
         protected override Type? LinkedScreenType { get; } = typeof(LobbyGui);
         public LobbyGui? Lobby;
@@ -49,6 +54,7 @@ namespace Content.Client.Lobby
             var chatController = _userInterfaceManager.GetUIController<ChatUIController>();
             _gameTicker = _entityManager.System<ClientGameTicker>();
             _contentAudioSystem = _entityManager.System<ContentAudioSystem>();
+            _liveCharacter = _entityManager.System<LiveCharacterStatusSystem>(); // Floof - Persistence
             _contentAudioSystem.LobbySoundtrackChanged += UpdateLobbySoundtrackInfo;
 
             chatController.SetMainChat(true);
@@ -75,6 +81,7 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
+            _liveCharacter.Updated += UpdateJoinButton; // Floof - Persistence
         }
 
         protected override void Shutdown()
@@ -84,6 +91,7 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated -= UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated -= LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated -= LobbyLateJoinStatusUpdated;
+            _liveCharacter.Updated -= UpdateJoinButton; // Floof - Persistence
             _contentAudioSystem.LobbySoundtrackChanged -= UpdateLobbySoundtrackInfo;
 
             _voteManager.ClearPopupContainer();
@@ -173,8 +181,23 @@ namespace Content.Client.Lobby
 
         private void LobbyLateJoinStatusUpdated()
         {
-            Lobby!.ReadyButton.Disabled = _gameTicker.DisallowedLateJoin;
+            UpdateJoinButton(); // Floof - Persistence
         }
+
+        // Floof Section - Persistence
+        /// <summary>
+        ///     Disables joining while late join is closed or the selected character's body is still in the round.
+        /// </summary>
+        public void UpdateJoinButton()
+        {
+            if (Lobby == null || !_gameTicker.IsGameStarted)
+                return;
+
+            var inRound = _liveCharacter.SelectedInRound();
+            Lobby.ReadyButton.Disabled = _gameTicker.DisallowedLateJoin || inRound;
+            Lobby.ReadyButton.ToolTip = inRound ? _inRoundTooltip : null;
+        }
+        // Floof Section End
 
         private void UpdateLobbyUi()
         {
@@ -184,6 +207,7 @@ namespace Content.Client.Lobby
                 Lobby!.ReadyButton.ToggleMode = false;
                 Lobby!.ReadyButton.Pressed = false;
                 Lobby!.ObserveButton.Disabled = false;
+                UpdateJoinButton(); // Floof - Persistence
             }
             else
             {

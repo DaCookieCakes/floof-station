@@ -80,6 +80,10 @@
   id: BoxEvidenceMarkers
   description: A pack of numbered yellow markers, useful for labeling evidence on a crime scene.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxEvidenceMarkers.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Item
     shape:
     - 0,0,1,1

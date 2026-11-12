@@ -21,6 +21,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
     private readonly MarkingsViewModel _markingsModel;
     private List<ISearchableControl> _searchable = new();
     private const int _columnWidth = 500;
+    private bool _enforceGroupAndSexRestrictions;
 
     public LayerMarkingPicker(MarkingsViewModel markingsModel, ProtoId<OrganCategoryPrototype> organ, HumanoidVisualLayers layer, IReadOnlyDictionary<string, MarkingPrototype> allMarkings)
     {
@@ -30,6 +31,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
         _allMarkings = allMarkings;
         _organ = organ;
         _layer = layer;
+        _enforceGroupAndSexRestrictions = markingsModel.EnforceGroupAndSexRestrictions;
 
         OrderingItems.AddChild(new LayerMarkingOrderer(markingsModel, organ, layer));
 
@@ -110,4 +112,16 @@ public sealed partial class LayerMarkingPicker : BoxContainer
 
         Items.Columns = (int)(Width / _columnWidth);
     }
+
+    public bool Reordering => ReorderButton.Pressed;
+
+    public bool Equals(
+        ProtoId<OrganCategoryPrototype> organ,
+        HumanoidVisualLayers layer,
+        bool enforceGroupAndSexRestrictions,
+        bool reordering = false)
+        => _organ == organ
+           && _layer == layer
+           && _enforceGroupAndSexRestrictions == enforceGroupAndSexRestrictions
+           && Reordering == reordering;
 }

@@ -200,6 +200,7 @@
   name: wood
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
   - type: PhysicalComposition
     materialComposition:
       Wood: 100
@@ -233,6 +234,7 @@
   id: MaterialWoodPlank10
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
   - type: Stack
     count: 10
 
@@ -241,6 +243,7 @@
   id: MaterialWoodPlank1
   suffix: Single
   components:
+  - type: FloodMask # Floof - flooding
   - type: Stack
     count: 1
 
@@ -573,6 +576,7 @@
   id: MaterialWebSilk1
   suffix: 1
   components:
+  - type: FloodMask # Floof - flooding
   - type: Stack
     count: 1
 

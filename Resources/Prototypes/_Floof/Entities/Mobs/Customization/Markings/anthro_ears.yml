@@ -1,0 +1,86 @@
+- type: marking
+  id: EarsFox
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: ears_fox_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: ears_fox_secondary
+
+- type: marking
+  id: EarsBat
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_bat_ADJ_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_bat_ADJ_secondary
+
+- type: marking
+  id: EarsCobraEars
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_cobraears_ADJ_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_cobraears_ADJ_secondary
+
+- type: marking
+  id: EarsCobraHood
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_cobrahood_ADJ_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_cobrahood_ADJ_secondary
+
+- type: marking
+  id: EarsHammerhead
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_hammerhead_FRONT_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_hammerhead_FRONT_secondary
+
+- type: marking
+  id: EarsHorn1
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_horn1_FRONT
+
+- type: marking
+  id: EarsLab
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_lab_FRONT
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_lab_ADJ
+
+- type: marking
+  id: EarsVirtuasaurHorns
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: m_horns_virtuasaur
+
+- type: marking
+  id: EarsRaccoon
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: ears_raccoon_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: ears_raccoon_secondary
+
+- type: marking
+  id: EarsSquirrel
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: ears_squirrel_primary
+  - sprite: _Floof/Mobs/Customization/skyratears.rsi
+    state: ears_squirrel_secondary
+

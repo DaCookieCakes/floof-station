@@ -50,6 +50,11 @@
   id: StationAnchorIndestructible
   parent: StationAnchorBase
   suffix: Indestructible, Unpowered
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/StationAnchor.rsi # Floof - flooding
+      state: mask # Floof - flooding
 
 - type: entity
   id: StationAnchor
@@ -57,6 +62,10 @@
   placement:
     mode: AlignTileAny
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/StationAnchor.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: StationAiWhitelist
   - type: PowerCharge
     windowTitle: station-anchor-window-title
@@ -120,5 +129,9 @@
   id: StationAnchorOff
   suffix: Off
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/StationAnchor.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: StationAnchor
     switchedOn: false

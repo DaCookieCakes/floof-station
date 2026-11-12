@@ -21,56 +21,66 @@
 # Head
 - type: loadout
   id: CargoTechnicianHead
+  groupBy: CargoTechGear # FLOOF
   equipment:
     head: ClothingHeadHatCargosoft
 
 # Jumpsuit
 - type: loadout
   id: CargoTechnicianJumpsuit
+  groupBy: CargoTechGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitCargo
 
 - type: loadout
   id: CargoTechnicianJumpskirt
+  groupBy: CargoTechGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtCargo
 
 # Back
 - type: loadout
   id: CargoTechnicianBackpack
+  groupBy: CargoTechGear # FLOOF
   equipment:
     back: ClothingBackpackCargo
 
 - type: loadout
   id: CargoTechnicianSatchel
+  groupBy: CargoTechGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelCargo
 
 - type: loadout
   id: CargoTechnicianDuffel
+  groupBy: CargoTechGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelCargo
 
 # OuterClothing
 - type: loadout
   id: CargoTechnicianWintercoat
+  groupBy: CargoTechGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterCargo
 
 # Shoes
 - type: loadout
   id: CargoWinterBoots
+  groupBy: CargoTechGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWinterCargo
 
 # ID
 - type: loadout
   id: CargoTechnicianPDA
+  groupBy: CargoTechGear # FLOOF
   equipment:
     id: CargoPDA
 
 - type: loadout
   id: SeniorCourierPDA
+  groupBy: CargoTechGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorCargo

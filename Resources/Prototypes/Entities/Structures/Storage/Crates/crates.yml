@@ -3,6 +3,10 @@
   id: CrateGenericSteel
   name: crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/generic.rsi
   - type: Sprite
@@ -41,6 +45,10 @@
   id: CrateFreezer
   name: freezer
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateFoodIceCream.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/freezer.rsi
   - type: Sprite
@@ -61,6 +69,10 @@
   id: CrateHydroponics
   name: hydroponics crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponics.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/hydroponics.rsi
   - type: Sprite
@@ -71,6 +83,10 @@
   id: CrateMedical
   name: medical crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateChemistrySupplies.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/medical.rsi
   - type: Sprite
@@ -82,6 +98,10 @@
   name: radiation gear crate
   description: Is not actually lead lined. Do not store your plutonium in this.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEmergencyRadiation.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/radiation.rsi
   - type: Sprite
@@ -92,6 +112,10 @@
   id: CrateInternals
   name: oxygen crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEmergencyEVA.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/o2.rsi
   - type: Sprite
@@ -112,6 +136,10 @@
   id: CrateEngineering
   name: engineering crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateAirGrenade.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/engineering.rsi
   - type: Sprite
@@ -122,6 +150,10 @@
   id: CrateScience
   name: science crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateScience.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/science.rsi
   - type: Sprite
@@ -132,6 +164,10 @@
   id: CrateSurgery
   name: surgery crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateMedicalSurgery.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/surgery.rsi
   - type: Sprite
@@ -142,6 +178,10 @@
   id: CrateWeb
   name: web crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateWeb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/web.rsi
     state: icon
@@ -202,6 +242,10 @@
   id: CrateEngineeringSecure
   name: secure engineering crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/engicrate_secure.rsi
   - type: Sprite
@@ -214,6 +258,10 @@
   id: CrateMedicalSecure
   name: secure medical crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateMedicalSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/medicalcrate_secure.rsi
   - type: Sprite
@@ -226,6 +274,10 @@
   id: CrateChemistrySecure
   name: secure chemistry crate
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/CrateChemistrySecure.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Icon
       sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     - type: Sprite
@@ -238,6 +290,10 @@
   id: CratePrivateSecure
   name: private crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCargoGambling.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/privatecrate_secure.rsi
   - type: Sprite
@@ -248,6 +304,10 @@
   id: CrateScienceSecure
   name: secure science crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateScienceBiosuit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/scicrate_secure.rsi
   - type: Sprite
@@ -260,6 +320,10 @@
   id: CratePlasma
   name: plasma crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateMaterialPlasma.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/plasma.rsi
   - type: Sprite
@@ -272,6 +336,10 @@
   id: CrateSecure
   name: secure crate
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/CrateBaseSecure.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: Icon
       sprite: Structures/Storage/Crates/secure.rsi
     - type: Sprite
@@ -282,6 +350,10 @@
   id: CrateHydroSecure
   name: secure hydroponics crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateHydroponicsSeedsExotic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/hydro_secure.rsi
   - type: Sprite
@@ -294,6 +366,10 @@
   id: CrateWeaponSecure
   name: secure weapon crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateSecurityRiot.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/weapon.rsi
   - type: Sprite
@@ -310,6 +386,10 @@
   name: contraband storage crate
   description: An armory access locked crate for storing contraband confiscated from suspects or prisoners.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateContrabandStorageSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Storage/Crates/sec_gear.rsi
   - type: AccessReader
@@ -320,6 +400,10 @@
   id: CrateCommandSecure
   name: command crate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCommandSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/command.rsi
   - type: Sprite
@@ -512,6 +596,10 @@
   parent: CrateBaseLockBox
   name: engineering lock box
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateLockBoxEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: base
@@ -542,6 +630,10 @@
   parent: CrateBaseLockBox
   name: medical lock box
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateLockBoxEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: base
@@ -572,6 +664,10 @@
   parent: CrateBaseLockBox
   name: science lock box
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateLockBoxEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: base
@@ -602,6 +698,10 @@
   parent: CrateBaseLockBox
   name: security lock box
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateLockBoxEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: base
@@ -632,6 +732,10 @@
   parent: CrateBaseLockBox
   name: service lock box
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateLockBoxEngineering.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: base
@@ -822,6 +926,10 @@
   name: syndicate crate
   description: A dark steel crate with red bands and a letter S embossed on the front.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateSyndicate.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/syndicate.rsi
   - type: Sprite
@@ -832,6 +940,10 @@
   id: CrateTrashCart
   name: trash cart
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateTrashCart.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/trashcart.rsi
   - type: Sprite
@@ -855,6 +967,10 @@
   id: CrateTrashCartJani
   name: janitorial trash cart
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateTrashCart.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/trashcart_jani.rsi
   - type: Sprite

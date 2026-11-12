@@ -1,0 +1,9 @@
+- type: entity
+  id: AutotailorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: autotailor machine board
+  components:
+  - type: MachineBoard
+    prototype: Autotailor
+    stackRequirements:
+      Manipulator: 3

@@ -45,6 +45,19 @@ public sealed partial class BorgSwitchableTypeComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<RadioChannelPrototype>[] InherentRadioChannels = [];
+
+    // Floofstation - borg type categories
+    public const string DefaultCategory = "cyborg";
+
+    /// <summary>
+    ///     FLOOF SPECIFIC
+    ///     What kind of cyborg we can select. I.E. "dogborg"
+    ///     Only <see cref="BorgTypePrototype"/>s with a matching <see cref="BorgTypePrototype.Category"/> are selectable.
+    /// </summary>
+    /// <remarks>Networked because the client-side selection menu filters on it.</remarks>
+    [DataField, AutoNetworkedField]
+    public string AllowedCategory = DefaultCategory;
+    // Floofstation end
 }
 
 /// <summary>

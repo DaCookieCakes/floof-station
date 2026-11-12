@@ -1,4 +1,6 @@
 using System.Linq;
+using System.Numerics;
+using Content.Shared._Floof.Body; // Floof - Genitals
 using Content.Shared.Body;
 using Content.Shared.Clothing;
 using Content.Shared.GameTicking;
@@ -6,6 +8,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
+using Content.Shared.Sprite;
 using Content.Shared.Station.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
@@ -25,6 +28,7 @@ public sealed partial class ProfilePreviewSpriteView
             return;
 
         EntMan.System<SharedVisualBodySystem>().ApplyProfileTo(PreviewDummy, humanoid);
+        EntMan.System<SharedScaleVisualsSystem>().SetSpriteScale(PreviewDummy, new Vector2(humanoid.Width, humanoid.Height)); // Floof - HeightWidth
     }
 
     /// <summary>
@@ -49,7 +53,20 @@ public sealed partial class ProfilePreviewSpriteView
         {
             var dummy = _prototypeManager.Index(humanoid.Species).DollPrototype;
             PreviewDummy = EntMan.SpawnEntity(dummy, MapCoordinates.Nullspace);
+            ApplyTraits(PreviewDummy, humanoid.TraitPreferences); // Floof
+
+            // Floof Section - Genitals
+            var organSystem = EntMan.System<OrganSystem>();
+            if (humanoid.Genitals.Penis)
+                organSystem.AddOrgan(PreviewDummy, "OrganDick", "Torso");
+            if (humanoid.Genitals.Breasts)
+                organSystem.AddOrgan(PreviewDummy, "OrganBreasts", "Torso");
+            if (humanoid.Genitals.Vagina)
+                organSystem.AddOrgan(PreviewDummy, "OrganVagina", "Torso");
+            // End Floof Section - Genitals
+
             EntMan.System<SharedVisualBodySystem>().ApplyProfileTo(PreviewDummy, humanoid);
+            EntMan.System<SharedScaleVisualsSystem>().SetSpriteScale(PreviewDummy, new Vector2(humanoid.Width, humanoid.Height)); // Floof - HeightWidth
         }
         else
         {

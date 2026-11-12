@@ -37,6 +37,7 @@ namespace Content.Server.Doors.Systems
 
             SubscribeLocalEvent<FirelockComponent, AtmosAlarmEvent>(OnAtmosAlarm);
             SubscribeLocalEvent<FirelockComponent, PowerChangedEvent>(PowerChanged);
+            InitializeFlood(); // Floof - flooding
         }
 
         private void PowerChanged(EntityUid uid, FirelockComponent component, ref PowerChangedEvent args)
@@ -65,6 +66,16 @@ namespace Content.Server.Doors.Systems
                     EmergencyPressureStop(uid, firelock, door);
                 }
 
+                // Floof Section - flooding
+                if (door.State == DoorState.Open
+                    && _airtightQuery.TryComp(uid, out var floodAirtight)
+                    && this.IsPowered(uid, EntityManager)
+                    && CheckFlood(uid, floodAirtight))
+                {
+                    EmergencyPressureStop(uid, firelock, door);
+                }
+                // Floof Section End
+
                 // only bother to check pressure on doors that are some variation of closed.
                 if (door.State != DoorState.Closed
                     && door.State != DoorState.Denying)
@@ -76,16 +87,18 @@ namespace Content.Server.Doors.Systems
                     && _appearanceQuery.TryGetComponent(uid, out var appearance))
                 {
                     var (pressure, fire) = CheckPressureAndFire(uid, firelock, airtight);
-                    _appearance.SetData(uid, DoorVisuals.ClosedLights, fire || pressure, appearance);
+                    var flood = CheckFlood(uid, airtight); // Floof - flooding
+                    firelock.Flood = flood; // Floof - flooding
+                    _appearance.SetData(uid, DoorVisuals.ClosedLights, fire || pressure || flood, appearance); // Floof - flooding
                     firelock.Temperature = fire;
                     firelock.Pressure = pressure;
-                    _appearance.SetData(uid, FirelockVisuals.PressureWarning, pressure, appearance);
+                    _appearance.SetData(uid, FirelockVisuals.PressureWarning, pressure || flood, appearance); // Floof - flooding
                     _appearance.SetData(uid, FirelockVisuals.TemperatureWarning, fire, appearance);
                     Dirty(uid, firelock);
 
                     if (_pointLightQuery.TryComp(uid, out var pointLight))
                     {
-                        _pointLight.SetEnabled(uid, fire | pressure, pointLight);
+                        _pointLight.SetEnabled(uid, fire | pressure | flood, pointLight); // Floof - flooding
                     }
                 }
             }

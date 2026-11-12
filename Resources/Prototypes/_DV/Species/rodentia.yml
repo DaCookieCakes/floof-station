@@ -1,0 +1,29 @@
+- type: species
+  id: Rodentia
+  name: species-name-rodentia
+  roundStart: true
+  prototype: MobRodentia
+  defaultSkinTone: "#747474"
+  dollPrototype: AppearanceRodentia
+  skinColoration: Hues
+  maleFirstNames: NamesRodentiaMale
+  femaleFirstNames: NamesRodentiaFemale
+  lastNames: NamesRodentiaLast
+  # Floof Section - Newer species API
+  defaultSoundsBySex:
+  - MaleRodentia
+  - FemaleRodentia
+  - MaleRodentia
+  voices:
+  - MaleRodentia
+  - FemaleRodentia
+  # Floof Section End
+  naming: LastFirst
+  # Floof Section - HeightWidth, replaces baseScale 0.8
+  minHeight: 0.65
+  defaultHeight: 0.8
+  maxHeight: 0.95
+  minWidth: 0.7
+  defaultWidth: 0.8
+  maxWidth: 1.1
+  # Floof Section End

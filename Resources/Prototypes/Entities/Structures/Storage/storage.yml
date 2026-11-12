@@ -4,6 +4,11 @@
   name: rack
   description: A rack for storing things on.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Rack.rsi # Floof - flooding
+      state: mask # Floof - flooding
+    surface: 0.37 # Floof - flooding
   - type: MeleeSound
     soundGroups:
       Brute:

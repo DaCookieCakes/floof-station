@@ -1,0 +1,13 @@
+- type: metabolizerType
+  id: MetabolizerFeroxi
+  name: metabolizer-type-feroxi
+
+# This is apparently how other forks do it, but we're doing this from scratch.
+# Basically a non-oxygenated metabolizer. Hacky but amazing.
+- type: metabolizerType
+  id: MetabolizerFeroxiThirsty
+  name: metabolizer-type-feroxi
+
+- type: metabolizerType
+  id: MetabolizerRodentia
+  name: metabolizer-type-rat

@@ -1,0 +1,45 @@
+- type: biomeTemplate
+  id: OpenOcean
+  layers:
+  - !type:BiomeTileLayer
+    threshold: -1.0
+    tile: FloorOceanSurface
+
+- type: biomeTemplate
+  id: Seabed
+  layers:
+  - !type:BiomeTileLayer
+    threshold: -1.0
+    tile: FloorAsteroidSand
+
+- type: tile
+  id: FloorOceanSurface
+  name: tiles-floor-ocean-surface
+  sprite: /Textures/_Floof/Tiles/ocean_surface.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepWater
+    params:
+      volume: 8
+  barestepSounds:
+    collection: FootstepWater
+    params:
+      volume: 8
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
+- type: animatedTile
+  id: FloorOceanSurface
+  sprite: /Textures/_Floof/Tiles/ocean_surface.rsi
+  state: water
+
+- type: shader
+  id: OceanDeep
+  kind: source
+  path: "/Textures/_Floof/Shaders/ocean_deep.swsl"
+
+- type: shader
+  id: OceanUnderlayLight
+  kind: source
+  path: "/Textures/_Floof/Shaders/ocean_underlay_light.swsl"

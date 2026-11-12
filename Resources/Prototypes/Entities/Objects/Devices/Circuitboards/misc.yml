@@ -4,6 +4,7 @@
   name: station map electronics
   description: An electronics board used in station maps.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Item
     storedRotation: 0
   - type: Sprite

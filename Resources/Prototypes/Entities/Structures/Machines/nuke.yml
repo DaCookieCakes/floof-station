@@ -4,6 +4,10 @@
   name: nuclear fission explosive
   description: You probably shouldn't stick around to see if this is armed.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/NuclearBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Transform
     anchored: true
   - type: Sprite
@@ -118,6 +122,10 @@
   id: NuclearBombUnanchored
   suffix: unanchored
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/NuclearBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Transform
     anchored: false
   - type: Physics
@@ -130,6 +138,10 @@
   suffix: keg
   description: You probably shouldn't stick around to see if this is armed. It has a tap on the side.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/NuclearBomb.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Transform
     anchored: false
   - type: NukeLabel

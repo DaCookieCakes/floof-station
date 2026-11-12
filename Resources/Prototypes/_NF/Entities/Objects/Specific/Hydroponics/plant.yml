@@ -1,0 +1,201 @@
+- type: entity
+  parent: BasePlant
+  id: spesos
+  name: spesos
+  categories: [HideSpawnMenu]
+  components:
+    - type: Sprite
+      sprite: _NF/Objects/Specific/Hydroponics/spesostree.rsi
+    - type: PlantData
+      name: seeds-spesos-name
+      packetPrototype: SpesosTreeSeeds
+      productPrototypes: [ SpaceCash ]
+    - type: PlantHarvest
+      harvestRepeat: Repeat
+    - type: Plant
+      lifespan: 45
+      maturation: 15
+      production: 8
+      yield: 3
+      potency: 10
+      growthStages: 2
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+      
+- type: entity
+  parent: BasePlant
+  id: pear
+  name: pear
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _NF/Objects/Specific/Hydroponics/pear.rsi
+    - type: PlantData
+      name: seeds-pear-name
+      packetPrototype: PearSeeds
+      productPrototypes: [ FoodPear ]
+    - type: PlantHarvest
+      harvestRepeat: Repeat
+    - type: Plant
+      lifespan: 55
+      maturation: 6
+      production: 6
+      yield: 3
+      potency: 10
+      growthStages: 2
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Nutriment:
+          min: 1
+          max: 10
+          potencyDivisor: 10
+        Vitamin:
+          min: 1
+          max: 4
+          potencyDivisor: 25
+      
+- type: entity
+  parent: BasePlant
+  id: coffee
+  name: coffee
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _NF/Objects/Specific/Hydroponics/coffee.rsi
+    - type: PlantData
+      name: seeds-coffee-name
+      packetPrototype: HumpShroomSeeds
+      productPrototypes: [ CoffeeSeeds ]
+    - type: PlantHarvest
+      harvestRepeat: Repeat
+    - type: Plant
+      lifespan: 25
+      maturation: 9
+      production: 1
+      yield: 2
+      potency: 5
+      growthStages: 5
+    - type: PlantGrowth 
+      waterConsumption: 0.60
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Nutriment:
+          min: 2
+          max: 8
+          potencyDivisor: 16
+        Theobromine:
+          min: 1
+          max: 4
+          potencyDivisor: 25
+
+- type: entity
+  parent: BasePlant
+  id: avocado
+  name: avocado
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _NF/Objects/Specific/Hydroponics/avocado.rsi
+    - type: PlantData
+      name: seeds-avocado-name
+      packetPrototype: AvocadoSeeds
+      productPrototypes: [ FoodAvocado ]
+    - type: PlantHarvest
+      harvestRepeat: Repeat
+    - type: Plant
+      lifespan: 55
+      maturation: 6
+      production: 6
+      yield: 3
+      potency: 10
+      growthStages: 5
+    - type: PlantGrowth
+      waterConsumption: 0.60
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Nutriment:
+          min: 1
+          max: 10
+          potencyDivisor: 10
+        Vitamin:
+          min: 1
+          max: 4
+          potencyDivisor: 25
+
+- type: entity
+  parent: BasePlant
+  id: cucumber
+  name: cucumber
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _NF/Objects/Specific/Hydroponics/cucumber.rsi
+    - type: PlantData
+      name: seeds-cucumber-name
+      packetPrototype: CucumberSeeds
+      productPrototypes: [ FoodCucumber ]
+    - type: Plant
+      lifespan: 50
+      maturation: 7
+      production: 5
+      yield: 4
+      potency: 10
+      growthStages: 5
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Nutriment:
+          min: 1
+          max: 10
+          potencyDivisor: 10
+        Vitamin:
+          min: 1
+          max: 4
+          potencyDivisor: 25
+
+- type: entity
+  parent: BasePlant
+  id: bees
+  name: bees
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _NF/Objects/Specific/Hydroponics/bees.rsi
+    - type: PlantData
+      name: seeds-bees-name
+      packetPrototype: BeeSeeds
+      productPrototypes: [ FoodHoneyComb ]
+    - type: PlantHarvest
+      harvestRepeat: Repeat
+    - type: Plant
+      lifespan: 60
+      maturation: 7
+      production: 5
+      yield: 4
+      potency: 10
+      growthStages: 4
+    - type: PlantAtmospheric
+      lowHeatTolerance: 288 # 15°C
+      highHeatTolerance: 308 # 35°C
+    - type: PlantChemicals
+      chemicals:
+        Nutriment:
+          min: 1
+          max: 10
+          potencyDivisor: 10
+        Vitamin:
+          min: 1
+          max: 4
+          potencyDivisor: 25

@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: TP14OvenMachineCircuitboard
+  name: oven machine board
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: TP14KitchenOven
+    stackRequirements:
+      Manipulator: 2
+      Glass: 4
+      Cable: 4
+  - type: Tag
+    tags:
+    - TP14TagOvenMachineBoard

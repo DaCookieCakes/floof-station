@@ -1,0 +1,66 @@
+- type: entity
+  abstract: true
+  id: BaseAtm
+  components:
+  - type: BankAtm
+  - type: ActivatableUI
+    key: enum.BankAtmUiKey.Key
+    singleUser: true
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.BankAtmUiKey.Key:
+        type: BankAtmBoundUserInterface
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3db83b"
+  - type: LitOnPowered
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.BankAtmVisuals.Printing:
+        enum.BankAtmVisualLayers.Printing:
+          True: { visible: true, state: printing }
+          False: { visible: false, state: icon } # switching state restarts the animation on the next print
+
+- type: entity
+  parent: [BaseAtm, BaseMachinePowered]
+  id: Atm
+  name: ATM
+  description: Withdraws spesos from your personal account. NT disabled the deposit slot.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/atm/atm.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: printing
+      visible: false
+      map: ["enum.BankAtmVisualLayers.Printing"]
+
+- type: entity
+  parent: [BaseAtm, BaseWallmountMachine]
+  id: AtmWallmount
+  name: wall ATM
+  description: Withdraws spesos from your personal account. NT disabled the deposit slot.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/atm/wall_atm.rsi
+    drawdepth: WallMountedItems
+    offset: 0, -0.25
+    layers:
+    - state: icon
+    - state: unshaded
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: printing
+      visible: false
+      map: ["enum.BankAtmVisualLayers.Printing"]

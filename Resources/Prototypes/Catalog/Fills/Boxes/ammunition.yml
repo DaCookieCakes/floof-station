@@ -17,6 +17,10 @@
   id: BoxMagazinePistolCaselessRifle
   description: A box full of .25 caseless magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -29,6 +33,10 @@
   id: BoxMagazinePistolCaselessRiflePractice
   description: A box full of .25 caseless practice magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -42,6 +50,10 @@
   id: BoxMagazineLightRifle
   description: A box full of .30 rifle magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -69,6 +81,10 @@
   id: BoxMagazinePistolSubMachineGunTopMounted
   description: A box full of WT550 .35 auto magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -81,6 +97,10 @@
   id: BoxMagazinePistol
   description: A box full of pistol .35 auto magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -93,6 +113,10 @@
   id: BoxMagazinePistolPractice
   description: A box full of  magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -129,6 +153,10 @@
   id: BoxMagazinePistolSubMachineGun
   description: A box full of SMG .35 auto magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -141,6 +169,10 @@
   id: BoxMagazinePistolSubMachineGunPractice
   description: A box full of SMG .35 auto (practice) magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -154,6 +186,10 @@
   id: BoxMagazineShotgun
   description: A box full of (.50 pellet) ammo drums.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -166,6 +202,10 @@
   id: BoxMagazineShotgunBeanbag
   description: A box full of (.50 beanbag) ammo drums.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -178,6 +218,10 @@
   id: BoxMagazineShotgunSlug
   description: A box full of (.50 slug) ammo drums.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -190,6 +234,10 @@
   id: BoxMagazineShotgunIncendiary
   description: A box full of (.50 incendiary) ammo drums.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -203,6 +251,10 @@
   id: BoxMagazineRifle
   description: A box full of .20 rifle magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -215,6 +267,10 @@
   id: BoxMagazineRiflePractice
   description: A box full of .20 rifle (practice) magazines.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxMagazineLightRifle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:

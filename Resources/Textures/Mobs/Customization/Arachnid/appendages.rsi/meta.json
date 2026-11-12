@@ -12,7 +12,15 @@
       "directions": 4
     },
     {
+      "name": "long_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "long_secondary",
+      "directions": 4
+    },
+    {
+      "name": "long_secondary_behind",
       "directions": 4
     },
     {
@@ -20,7 +28,15 @@
       "directions": 4
     },
     {
+      "name": "sharp_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "sharp_secondary",
+      "directions": 4
+    },
+    {
+      "name": "sharp_secondary_behind",
       "directions": 4
     },
     {
@@ -28,7 +44,15 @@
       "directions": 4
     },
     {
+      "name": "stingers_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "stingers_secondary",
+      "directions": 4
+    },
+    {
+      "name": "stingers_secondary_behind",
       "directions": 4
     },
     {
@@ -36,7 +60,15 @@
       "directions": 4
     },
     {
+      "name": "curled_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "curled_secondary",
+      "directions": 4
+    },
+    {
+      "name": "curled_secondary_behind",
       "directions": 4
     },
     {
@@ -44,7 +76,15 @@
       "directions": 4
     },
     {
+      "name": "zigzag_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "zigzag_secondary",
+      "directions": 4
+    },
+    {
+      "name": "zigzag_secondary_behind",
       "directions": 4
     },
     {
@@ -52,7 +92,15 @@
       "directions": 4
     },
     {
+      "name": "chipped_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "chipped_secondary",
+      "directions": 4
+    },
+    {
+      "name": "chipped_secondary_behind",
       "directions": 4
     },
     {
@@ -60,7 +108,15 @@
       "directions": 4
     },
     {
+      "name": "harvest_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "harvest_secondary",
+      "directions": 4
+    },
+    {
+      "name": "harvest_secondary_behind",
       "directions": 4
     },
     {
@@ -68,7 +124,15 @@
       "directions": 4
     },
     {
+      "name": "short_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "short_secondary",
+      "directions": 4
+    },
+    {
+      "name": "short_secondary_behind",
       "directions": 4
     },
     {
@@ -76,7 +140,15 @@
       "directions": 4
     },
     {
+      "name": "freaky_primary_behind",
+      "directions": 4
+    },
+    {
       "name": "freaky_secondary",
+      "directions": 4
+    },
+    {
+      "name": "freaky_secondary_behind",
       "directions": 4
     }
   ]

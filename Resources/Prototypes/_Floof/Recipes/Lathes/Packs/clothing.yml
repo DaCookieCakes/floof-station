@@ -1,0 +1,106 @@
+- type: latheRecipePack
+  id: CollarsAutolatheFloofstation
+  recipes:
+  - LeashBasic
+  - ClothingNeckShockCollarCivilian
+
+- type: latheRecipePack
+  id: CollarsFloofstation
+  recipes:
+  - ClothingNeckCollarBell
+  - ClothingNeckCollarBlue
+  - ClothingNeckCollarBlack
+  - ClothingNeckCollarPink
+  - ClothingNeckCollarSci
+  - ClothingNeckCollarEngi
+  - ClothingNeckCollarLogi
+  - ClothingNeckCollarMed
+  - ClothingNeckCollarSec
+  - ClothingNeckCollarCmd
+  - ClothingNeckCollarCC
+  - ClothingNeckCollarSyndie
+  - ClothingNeckCowBellCollar #The Den
+#  - ClothingUncategorizedHarnessGray
+
+- type: latheRecipePack
+  id: ArmWarmersRecipePack
+  recipes:
+  - CaptainArmWarmersRecipe
+  - CommandArmWarmersRecipe
+  - EngineerArmWarmersRecipe
+  - ChiefEngineerArmWarmersRecipe
+  - EpistemicsArmWarmersRecipe
+  - ChaplainArmWarmersRecipe
+  - ResearchDirectorArmWarmersRecipe
+  - PsionicMantisArmWarmersRecipe
+  - LogisticsArmWarmersRecipe
+  - LogisticsOfficerArmWarmersRecipe
+  - CourierArmWarmersRecipe
+  - MedicalArmWarmersRecipe
+  - ChemistArmWarmersRecipe
+  - ParamedicArmWarmersRecipe
+  - CMOArmWarmersRecipe
+  - SecurityArmWarmersRecipe
+  - HoSArmWarmersRecipe
+  - DetectiveArmWarmersRecipe
+  - CorpsmanArmWarmersRecipe
+  - ServiceArmWarmersRecipe
+  - BartenderArmWarmersRecipe
+  - MusicianArmWarmersRecipe
+  - ChefArmWarmersRecipe
+
+- type: latheRecipePack
+  id: ThighHighsRecipePack
+  recipes:
+  - CaptainThighHighsRecipe
+  - CommandThighHighsRecipe
+  - EngineerThighHighsRecipe
+  - ChiefEngineerThighHighsRecipe
+  - EpistemicsThighHighsRecipe
+  - ChaplainThighHighsRecipe
+  - ResearchDirectorThighHighsRecipe
+  - PsionicMantisThighHighsRecipe
+  - LogisticsThighHighsRecipe
+  - LogisticsOfficerThighHighsRecipe
+  - CourierThighHighsRecipe
+  - MedicalThighHighsRecipe
+  - ChemistThighHighsRecipe
+  - ParamedicThighHighsRecipe
+  - CMOThighHighsRecipe
+  - SecurityThighHighsRecipe
+  - HoSThighHighsRecipe
+  - DetectiveThighHighsRecipe
+  - CorpsmanThighHighsRecipe
+  - ServiceThighHighsRecipe
+  - BartenderThighHighsRecipe
+  - MusicianThighHighsRecipe
+  - ChefThighHighsRecipe
+
+- type: latheRecipePack
+  id: ThongsRecipePack
+  recipes:
+  - NudityPermitRecipe
+  - CaptainThongRecipe
+  - CommandThongRecipe
+  - EngineerThongRecipe
+  - ChiefEngineerThongRecipe
+  - EpistemicsThongRecipe
+  - ChaplainThongRecipe
+  - ResearchDirectorThongRecipe
+  - PsionicMantisThongRecipe
+  - LogisticsThongRecipe
+  - LogisticsOfficerThongRecipe
+  - CourierThongRecipe
+  - MedicalThongRecipe
+  - ChemistThongRecipe
+  - ParamedicThongRecipe
+  - CMOThongRecipe
+  - SurgeonGeneralThongRecipe
+  - SecurityThongRecipe
+  - HoSThongRecipe
+  - DetectiveThongRecipe
+  - CorpsmanThongRecipe
+  - ServiceThongRecipe
+  - BartenderThongRecipe
+  - MusicianThongRecipe
+  - ChefThongRecipe

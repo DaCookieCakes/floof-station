@@ -1,0 +1,12 @@
+- type: typingIndicator
+  id: TypingIndicatorFeroxi
+  spritePath: /Textures/_DeltaV/Effects/speech.rsi
+  typingState: feroxi0
+  idleState: feroxi0
+
+- type: typingIndicator
+  id: rodentia
+  spritePath: /Textures/_DeltaV/Effects/speech.rsi # Floof - Paths
+  typingState: rodentia0
+  idleState: rodentia0
+  offset: 0, 0.2 # 0625

@@ -1,0 +1,60 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Stripes made by BlitzTheSquishy, Countershading made by Emily9031. Split by Cookie for Floof Station.",
+    "size": { "x": 32, "y": 32 },
+    "states": [
+        {
+            "name": "feroxi-head-stripes-tiger",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-larm-stripes-blitz",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-larm-stripes-tiger",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-lleg-stripes-blitz",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-lleg-stripes-tiger",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-rarm-stripes-blitz",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-rarm-stripes-tiger",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-rleg-stripes-blitz",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-rleg-stripes-tiger",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-torso-countershading-m",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-torso-countershading-f",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-torso-stripes-blitz",
+            "directions": 4
+        },
+        {
+            "name": "feroxi-torso-stripes-tiger",
+            "directions": 4
+        }
+    ]
+}

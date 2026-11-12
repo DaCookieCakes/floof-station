@@ -1,5 +1,6 @@
 - type: job
   id: CargoTechnician
+  pay: 450 # Floof - bank
   name: job-name-cargotech
   description: job-description-cargotech
   playTimeTracker: JobCargoTechnician
