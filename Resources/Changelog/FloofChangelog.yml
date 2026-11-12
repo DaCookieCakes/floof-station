@@ -933,3 +933,10 @@ Entries:
   id: 112
   time: '2026-11-11T05:53:47.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/362
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Added ovens with their own grid UI.
+  id: 113
+  time: '2026-11-12T03:24:15.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/364
