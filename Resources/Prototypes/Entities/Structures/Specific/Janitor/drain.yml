@@ -29,6 +29,13 @@
     sound:
       path: /Audio/Ambience/Objects/drain.ogg
   - type: Drain
+    unitsDestroyedPerSecond: 30000 # Floof - janicart suction
+  # Floof Section - janicart suction
+  - type: Solution
+    id: drainBuffer
+    solution:
+      maxVol: 300000
+  # Floof Section End
   - type: DumpableSolution
     solution: drainBuffer
   - type: Appearance
