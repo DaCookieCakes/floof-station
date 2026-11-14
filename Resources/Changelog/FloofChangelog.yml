@@ -958,3 +958,14 @@ Entries:
   id: 115
   time: '2026-11-14T22:20:05.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/371
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        The janicart can now run a suction pump that sucks up puddles and
+        floods, slowing it down a lot.
+    - type: Tweak
+      message: Floor drains now hold and clear a full janicart tank.
+  id: 116
+  time: '2026-11-14T23:15:08.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/372
