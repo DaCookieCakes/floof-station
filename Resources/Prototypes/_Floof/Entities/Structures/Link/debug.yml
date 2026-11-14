@@ -1,0 +1,185 @@
+- type: entity
+  abstract: true
+  id: BaseDebugPowerLink
+  name: power link
+  suffix: DEBUG
+  description: Moves power from an input end to its linked output end. Alt-click switches the direction.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer: [MobMask, Opaque]
+  - type: Transform
+    anchored: true
+  - type: Anchorable
+  - type: LinkKey
+    key: DebugPowerLink
+  - type: Sprite
+    sprite: Structures/Power/power.rsi
+    state: wiredmachine
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      link:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: PowerConsumer
+    voltage: High
+    node: link
+    drawRate: 0
+  - type: PowerSupplier
+    voltage: High
+    node: link
+    supplyRate: 0
+    supplyRampRate: 50000
+    supplyRampTolerance: 500
+  - type: PowerLink
+  - type: PowerMonitoringDevice
+    group: Generator
+    sourceNode: link
+    loadNode: link
+    sprite: Structures/Power/power.rsi
+    state: wiredmachine
+
+- type: entity
+  parent: BaseDebugPowerLink
+  id: DebugPowerLinkInput
+  suffix: DEBUG, Input
+  components:
+  - type: PowerLink
+    direction: Input
+
+- type: entity
+  parent: BaseDebugPowerLink
+  id: DebugPowerLinkOutput
+  suffix: DEBUG, Output
+  components:
+  - type: Sprite
+    state: provider
+  - type: PowerLink
+    direction: Output
+
+- type: entity
+  abstract: true
+  parent: BaseGasLinkPipe
+  id: BaseDebugGasLinkPipe
+  suffix: DEBUG
+
+- type: entity
+  parent: BaseDebugGasLinkPipe
+  id: DebugGasLinkPipe1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeHalf
+      color: "#FF4040"
+  - type: AtmosPipeLayers
+    pipeLayer: 0
+  - type: LinkKey
+    key: DebugGasLink1
+
+- type: entity
+  parent: BaseDebugGasLinkPipe
+  id: DebugGasLinkPipe2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe_alt1.rsi
+      state: pipeHalf
+      color: "#40FF40"
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 1
+  - type: AtmosPipeLayers
+    pipeLayer: 1
+  - type: LinkKey
+    key: DebugGasLink2
+
+- type: entity
+  parent: BaseDebugGasLinkPipe
+  id: DebugGasLinkPipe3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe_alt2.rsi
+      state: pipeHalf
+      color: "#4080FF"
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 2
+  - type: AtmosPipeLayers
+    pipeLayer: 2
+  - type: LinkKey
+    key: DebugGasLink3
+
+- type: entity
+  id: DebugGasLink
+  name: gas link
+  suffix: DEBUG
+  description: Spawns three gas link pipes, one per pipe layer.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
+    state: gasCanisterPort
+  - type: Anchorable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 100
+        mask:
+        - ItemMask
+  - type: Pullable
+  - type: Rotatable
+  - type: AnchoredChildEntities
+    childPrototypes:
+    - prototype: DebugGasLinkPipe1
+    - prototype: DebugGasLinkPipe2
+    - prototype: DebugGasLinkPipe3
+
+- type: entity
+  parent: BaseStaticPortal
+  id: DebugStaticPortal
+  suffix: DEBUG
+  components:
+  - type: Sprite
+    layers:
+    - state: portal-blue
+  - type: PointLight
+    color: SkyBlue
+    radius: 3
+    energy: 1
+    netsync: false
+  - type: LinkKey
+    key: DebugStaticPortal

@@ -1,0 +1,37 @@
+- type: entity
+  abstract: true
+  id: BaseStaticPortal
+  name: portal
+  description: Leads to wherever its other end is.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: Effects/portal.rsi
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: -0.375,0.28125,0.375,0.5425
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+      portalTimeout:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.625,0.09375,0.625,0.625"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: StaticPortal
