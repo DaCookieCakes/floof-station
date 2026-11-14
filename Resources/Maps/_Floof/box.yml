@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 09/19/2026 01:19:26
-  entityCount: 28910
+  entityCount: 28907
 maps:
 - 780
 grids:
@@ -3727,9 +3727,6 @@ entities:
       - 26974
       - 22728
       - 26987
-      - 5513
-      - 5512
-      - 5511
   - uid: 5769
     components:
     - type: MetaData
@@ -4511,8 +4508,6 @@ entities:
       - 26037
       - 21539
       - 21540
-      - 21542
-      - 21541
       - 5730
       - 5463
       - 7176
@@ -4659,9 +4654,6 @@ entities:
       pos: 73.5,-48.5
     - type: DeviceList
       devices:
-      - 5511
-      - 5512
-      - 5513
       - 4406
       - 4461
       - 746
@@ -82795,7 +82787,6 @@ entities:
     components:
     - type: Transform
       parent: 8364
-      rot: 1.5707963267948966 rad
       pos: -31.5,-1.5
   - uid: 6165
     components:
@@ -91984,10 +91975,7 @@ entities:
       parent: 8364
       pos: 68.5,-49.5
     - type: DeviceList
-      devices:
-      - 5511
-      - 5512
-      - 5513
+      devices: []
   - uid: 1907
     components:
     - type: Transform
@@ -92078,9 +92066,6 @@ entities:
       pos: -2.5,-48.5
     - type: DeviceList
       devices:
-      - 16853
-      - 26635
-      - 17087
       - 16919
       - 16995
       - 22953
@@ -92088,15 +92073,13 @@ entities:
       - 16960
       - 16961
       - 16962
-      - 1672
-      - 16943
-      - 1652
       - 22561
   - uid: 19166
     components:
     - type: Transform
       parent: 8364
       pos: 2.5,-58.5
+      rot: 4.71238898038469 rad
     - type: DeviceList
       devices:
       - 16975
@@ -92128,12 +92111,8 @@ entities:
       devices:
       - 21543
       - 21544
-      - 26038
-      - 26039
       - 21541
       - 21542
-      - 21539
-      - 21540
       - 22704
   - uid: 21794
     components:
@@ -92535,12 +92514,12 @@ entities:
       pos: 74.5,-11.5
     - type: DeviceList
       devices:
-      - 13380
-      - 13379
-      - 13378
       - 19992
       - 19991
       - 19993
+      - 26036
+      - 26037
+      - 26035
   - uid: 22705
     components:
     - type: Transform
@@ -92608,9 +92587,6 @@ entities:
       - 6464
       - 6467
       - 22728
-      - 5511
-      - 5512
-      - 5513
   - uid: 22730
     components:
     - type: Transform
@@ -92678,6 +92654,9 @@ entities:
       - 7390
       - 7146
       - 23935
+      - 8689
+      - 8707
+      - 8708
   - uid: 23936
     components:
     - type: Transform
@@ -92805,6 +92784,10 @@ entities:
       - 27405
       - 23151
       - 16977
+      - 10877
+      - 5264
+      - 16627
+      - 5278
   - uid: 28498
     components:
     - type: Transform
@@ -92836,14 +92819,10 @@ entities:
       devices:
       - 25639
       - 25638
-      - 25640
-      - 25641
       - 25642
-      - 25643
       - 26235
       - 28355
       - 28444
-      - 26208
   - uid: 28500
     components:
     - type: Transform
@@ -92856,11 +92835,9 @@ entities:
       - 9127
       - 9125
       - 28501
-      - 25648
-      - 25647
-      - 25646
-      - 25649
       - 26248
+      - 28731
+      - 26437
   - uid: 28502
     components:
     - type: Transform
@@ -93381,30 +93358,6 @@ entities:
       - 1907
       - 26707
       - 17159
-  - uid: 5511
-    components:
-    - type: Transform
-      parent: 8364
-      pos: 65.5,-48.5
-    - type: DeviceNetwork
-      deviceLists:
-      - 4329
-  - uid: 5512
-    components:
-    - type: Transform
-      parent: 8364
-      pos: 66.5,-48.5
-    - type: DeviceNetwork
-      deviceLists:
-      - 4329
-  - uid: 5513
-    components:
-    - type: Transform
-      parent: 8364
-      pos: 67.5,-48.5
-    - type: DeviceNetwork
-      deviceLists:
-      - 4329
   - uid: 5518
     components:
     - type: Transform
@@ -106135,7 +106088,7 @@ entities:
     components:
     - type: Transform
       parent: 8364
-      rot: -1.5707963267948966 rad
+      rot: 3.141592653589793 rad
       pos: -31.5,-2.5
     - type: AtmosPipeColor
       color: '#0055CCFF'
@@ -141528,7 +141481,7 @@ entities:
     components:
     - type: Transform
       parent: 8364
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: -31.5,-2.5
     - type: ApcPowerReceiver
       powerLoad: 0
@@ -151867,6 +151820,16 @@ entities:
     - type: Transform
       parent: 8364
       pos: -27.5,0.5
+  - uid: 28911
+    components:
+    - type: Transform
+      pos: 67.5,-49.5
+      parent: 8364
+  - uid: 28912
+    components:
+    - type: Transform
+      pos: 65.5,-49.5
+      parent: 8364
 - proto: RemoteSignaller
   entities:
   - uid: 5286
@@ -185774,16 +185737,6 @@ entities:
     - type: Transform
       parent: 8364
       pos: 68.5,-30.5
-  - uid: 2538
-    components:
-    - type: Transform
-      parent: 8364
-      pos: 67.5,-49.5
-  - uid: 2539
-    components:
-    - type: Transform
-      parent: 8364
-      pos: 65.5,-49.5
   - uid: 2546
     components:
     - type: Transform
