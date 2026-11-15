@@ -1,0 +1,8 @@
+- type: entity
+  parent: TP14KitchenOven
+  id: FloofKitchenOvenOld
+  name: old oven
+  description: A stovetop oven. It has seen better days, but it still cooks just fine.
+  components:
+  - type: Sprite
+    sprite: _Floof/Structures/Machines/old_oven.rsi
