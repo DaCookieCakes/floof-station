@@ -1,10 +1,12 @@
 # Jumpsuit
 - type: loadout
   id: WhiteJumpsuit
+  groupBy: MedicalInternGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorWhite
 
 - type: loadout
   id: WhiteJumpskirt
+  groupBy: MedicalInternGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorWhite

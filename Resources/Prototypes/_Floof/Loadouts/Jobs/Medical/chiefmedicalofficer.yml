@@ -1,0 +1,26 @@
+# Coats
+- type: loadout
+  id: CMOLongLabCoat
+  groupBy: CMOGear
+  equipment:
+    outerClothing: ClothingOuterCoatLabLongCMO
+
+- type: loadout
+  id: CMOLongCoat
+  groupBy: CMOGear
+  equipment:
+    outerClothing: ClothingLongcoatCMO
+
+# Gloves
+- type: loadout
+  id: CMOArmWarmers
+  groupBy: CMOGear
+  equipment:
+    gloves: ClothingHandsCMOWarmers
+
+# Socks
+- type: loadout
+  id: CMOThighHighs
+  groupBy: CMOGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksCMO

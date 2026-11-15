@@ -1,5 +1,5 @@
 # These options are kept very sparse to not put emphasis on nudity, and to provide a base for players to feel comfortable with.
-# It's unlikely more will be added to upstream for cosmetic reasons. 
+# It's unlikely more will be added to upstream for cosmetic reasons.
 
 - type: marking
   id: UndergarmentBottomBoxers
@@ -40,7 +40,7 @@
 - type: marking
   id: UndergarmentTopBra
   bodyPart: UndergarmentTop
-  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime]
+  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime, Feroxi]
   coloring:
     default:
       type: null
@@ -52,7 +52,7 @@
 - type: marking
   id: UndergarmentTopSportsbra
   bodyPart: UndergarmentTop
-  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime]
+  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime, Feroxi]
   coloring:
     default:
       type: null
@@ -64,7 +64,7 @@
 - type: marking
   id: UndergarmentTopBinder
   bodyPart: UndergarmentTop
-  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime]
+  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime, Feroxi]
   coloring:
     default:
       type: null
@@ -76,7 +76,7 @@
 - type: marking
   id: UndergarmentTopTanktop
   bodyPart: UndergarmentTop
-  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime]
+  groupWhitelist: [Arachnid, Diona, Human, Moth, Reptilian, Slime, Feroxi]
   coloring:
     default:
       type: null
@@ -172,7 +172,7 @@
 - type: marking
   id: UndergarmentBottomBoxersReptilian
   bodyPart: UndergarmentBottom
-  groupWhitelist: [Reptilian]
+  groupWhitelist: [Reptilian, Feroxi]
   coloring:
     default:
       type: null
@@ -184,7 +184,7 @@
 - type: marking
   id: UndergarmentBottomBriefsReptilian
   bodyPart: UndergarmentBottom
-  groupWhitelist: [Reptilian]
+  groupWhitelist: [Reptilian, Feroxi]
   coloring:
     default:
       type: null
@@ -196,7 +196,7 @@
 - type: marking
   id: UndergarmentBottomSatinReptilian
   bodyPart: UndergarmentBottom
-  groupWhitelist: [Reptilian]
+  groupWhitelist: [Reptilian, Feroxi]
   coloring:
     default:
       type: null

@@ -1,5 +1,6 @@
 - type: job
   id: ResearchDirector
+  pay: 750 # Floof - bank
   name: job-name-rd
   description: job-description-rd
   playTimeTracker: JobResearchDirector

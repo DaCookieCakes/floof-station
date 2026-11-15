@@ -5,6 +5,14 @@
   name: space carp
   description: It's a space carp.
   components:
+  # Starlight-start: Languages
+    - type: LanguageSpeaker
+    - type: LanguageKnowledge
+      speaks:
+      - Carptongue
+      understands:
+      - Carptongue
+  # Starlight-end
     - type: InputMover
     - type: MobMover
     - type: HTN
@@ -22,6 +30,8 @@
       layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: alive
+    - type: LeashAnchor # Floofstation - also this :3
+      kind: Intrinsic
     - type: CombatMode
     - type: Physics
     - type: Fixtures

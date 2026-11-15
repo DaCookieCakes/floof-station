@@ -60,6 +60,10 @@
   name: solar panel plasma
   description: A few sheets of plasma glass that generate electricity when hit by photons.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SolarPanelPlasma.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PowerSupplier
     supplyRampTolerance: 500
     supplyRampRate: 500
@@ -96,6 +100,10 @@
   name: solar panel uranium
   description: A few sheets of uranium glass that generate electricity when hit by photons.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SolarPanelUranium.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PowerSupplier
     supplyRampTolerance: 500
     supplyRampRate: 500
@@ -130,6 +138,10 @@
   name: solar panel
   description: A few sheets of glass that generate electricity when hit by photons.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SolarPanel.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PowerSupplier
     supplyRampTolerance: 500
     supplyRampRate: 500
@@ -162,6 +174,10 @@
   description: A broken solar panel.
   suffix: Broken
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SolarPanelBroken.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: solar_panel_glass_broken
   - type: Damageable
@@ -244,6 +260,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SolarAssembly.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Clickable
   - type: InteractionOutline
   - type: Physics

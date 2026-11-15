@@ -7,6 +7,13 @@
   name: mallard duck #Quack
   description: An adorable mallard duck, it's fluffy and soft!
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Sylvan
+    understands:
+    - Sylvan
+  # Starlight-end
   - type: Sprite
     sprite: Mobs/Animals/Farm/duck.rsi
     drawdepth: Mobs
@@ -81,8 +88,8 @@
   - type: ActionGrant
     actions:
     - ActionAnimalLayEgg
-  - type: ReplacementAccent
-    accent: duck
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember

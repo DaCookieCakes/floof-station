@@ -4,6 +4,10 @@
   name: Syndicate surplus crate
   description: Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good.
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/CrateSyndicate.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: SurplusBundle
       totalPrice: 50
 

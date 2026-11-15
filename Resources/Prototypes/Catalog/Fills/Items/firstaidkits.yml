@@ -4,6 +4,10 @@
   suffix: Filled
   parent: Medkit
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Medkit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -19,6 +23,10 @@
   suffix: Filled
   parent: MedkitBurn
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitBurn.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -33,6 +41,10 @@
   suffix: Filled
   parent: MedkitBrute
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitBruteFilled.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -47,6 +59,10 @@
   suffix: Filled
   parent: MedkitToxin
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitToxin.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -62,6 +78,10 @@
   suffix: Filled
   parent: MedkitO2
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitO2.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -77,6 +97,10 @@
   suffix: Filled
   parent: MedkitRadiation
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitRadiationFilled.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -91,6 +115,10 @@
   suffix: Filled
   parent: MedkitAdvanced
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitAdvancedFilled.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -105,6 +133,10 @@
   suffix: Filled
   parent: MedkitCombat
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Medkit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -121,6 +153,10 @@
   suffix: Stimkit, Filled
   parent: Medkit
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Medkit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:

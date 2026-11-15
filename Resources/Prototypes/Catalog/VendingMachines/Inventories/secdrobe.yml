@@ -25,6 +25,12 @@
     ClothingShoesBootsCombat: 1
     ClothingShoesBootsWinterSec: 2
     ClothingHeadHelmetJustice: 1
+    # FLOOF: Start
+    ClothingNeckCollarSec: 2
+    ClothingHandsSecurityWarmers: 3
+    ClothingUnderSocksSecurity: 3
+    ClothingUniformSecurityThong: 3
+    # FLOOF: End
   contrabandInventory:
     ClothingMaskClownSecurity: 1
     ClothingMaskMimeSecurity: 1

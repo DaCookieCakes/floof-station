@@ -20,6 +20,10 @@ using Robust.Shared.Console;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
+using Content.Shared.Speech; // Starlight
+using Content.Server._Starlight.Language; // Starlight
+using Content.Shared._Starlight.Language; // Starlight
+using Content.Shared.Popups; // Starlight
 
 namespace Content.Server.Chat.Systems;
 
@@ -45,12 +49,15 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private ExamineSystemShared _examineSystem = default!;
     [Dependency] private EntityQuery<GhostHearingComponent> _ghostHearingQuery = default!;
+    [Dependency] private SpeechSystem _speechSystem = default!; //Starlight
+    [Dependency] private LanguageSystem _language = default!; // Starlight
+    [Dependency] private SharedPopupSystem _popups = default!; // Starlight
 
+    public readonly Color DefaultSpeakColor = Color.White; // Starlight
     private bool _loocEnabled = true;
     private bool _deadLoocEnabled;
     private bool _critLoocEnabled;
     private readonly bool _adminLoocEnabled = true;
-
     private bool _deadChatEnabled = true;
 
     public override void Initialize()
@@ -130,7 +137,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false)
+        bool ignoreActionBlocker = false
+        )
     {
         TrySendInGameICMessage(source, message, desiredType, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, hideLog, shell, player, nameOverride, checkRadioPrefix, ignoreActionBlocker);
     }
@@ -146,7 +154,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false
+        bool ignoreActionBlocker = false,
+        LanguagePrototype? languageOverride = null // Starlight
         )
     {
         if (HasComp<GhostComponent>(source))
@@ -190,7 +199,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             message = message[1..];
         }
 
-        bool shouldCapitalize = (desiredType != InGameICChatType.Emote);
+        var language = languageOverride ?? _language.GetLanguage(source); // Starlight
+
+        bool shouldCapitalize = (desiredType != InGameICChatType.Emote && desiredType != InGameICChatType.Subtle && desiredType != InGameICChatType.SubtleOOC);
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation);
         // Capitalizing the word I only happens in English, so we check language here
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
@@ -201,19 +212,23 @@ public sealed partial class ChatSystem : SharedChatSystem
         // Was there an emote in the message? If so, send it.
         if (player != null && emoteStr != message && emoteStr != null)
         {
-            SendEntityEmote(source, emoteStr, range, nameOverride, ignoreActionBlocker);
+            SendEntityEmote(source, emoteStr, range, nameOverride, language, ignoreActionBlocker); // Starlight
         }
 
         // This can happen if the entire string is sanitized out.
         if (string.IsNullOrEmpty(message))
             return;
 
+        // Starlight
+        if (language.SpeechOverride.ChatTypeOverride is { } chatTypeOverride)
+            desiredType = chatTypeOverride;
+
         // This message may have a radio prefix, and should then be whispered to the resolved radio channel
         if (checkRadioPrefix)
         {
             if (TryProcessRadioMessage(source, message, out var modMessage, out var channel))
             {
-                SendEntityWhisper(source, modMessage, range, channel, nameOverride, hideLog, ignoreActionBlocker);
+                SendEntityWhisper(source, modMessage, range, channel, nameOverride,language, hideLog, ignoreActionBlocker); // Starlight
                 return;
             }
         }
@@ -222,13 +237,19 @@ public sealed partial class ChatSystem : SharedChatSystem
         switch (desiredType)
         {
             case InGameICChatType.Speak:
-                SendEntitySpeak(source, message, range, nameOverride, hideLog, ignoreActionBlocker);
+                SendEntitySpeak(source, message, range, nameOverride, language, hideLog, ignoreActionBlocker); // Starlight
                 break;
             case InGameICChatType.Whisper:
-                SendEntityWhisper(source, message, range, null, nameOverride, hideLog, ignoreActionBlocker);
+                SendEntityWhisper(source, message, range, null, nameOverride, language, hideLog, ignoreActionBlocker); // Starlight
                 break;
             case InGameICChatType.Emote:
-                SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
+                SendEntityEmote(source, message, range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker); // Starlight
+                break;
+            case InGameICChatType.Subtle:
+                SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
+                break;
+            case InGameICChatType.SubtleOOC:
+                SendEntitySubtleOOC(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
         }
     }
@@ -286,6 +307,59 @@ public sealed partial class ChatSystem : SharedChatSystem
                 break;
         }
     }
+
+    // Starlight - Start
+    /// <summary>
+    ///     Wraps a message sent by the specified entity into an "x says y" string.
+    /// </summary>
+    public string WrapPublicMessage(EntityUid source, string name, string message, LanguagePrototype? language = null, bool? obfuscated = false)
+    {
+        var wrapId = GetSpeechVerb(source, message).Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message";
+        return WrapMessage(wrapId, InGameICChatType.Speak, source, name, message, language, obfuscated);
+    }
+
+    /// <summary>
+    ///     Wraps a message whispered by the specified entity into an "x whispers y" string.
+    /// </summary>
+    public string WrapWhisperMessage(EntityUid source, LocId defaultWrap, string entityName, string message, LanguagePrototype? language = null, bool? obfuscated = false)
+    {
+        return WrapMessage(defaultWrap, InGameICChatType.Whisper, source, entityName, message, language, obfuscated);
+    }
+
+    /// <summary>
+    ///     Wraps a message sent by the specified entity into the specified wrap string.
+    /// </summary>
+    public string WrapMessage(LocId wrapId, InGameICChatType chatType, EntityUid source, string entityName, string message, LanguagePrototype? language, bool? obfuscated = false)
+    {
+        language ??= _language.GetLanguage(source);
+        if (language.SpeechOverride.MessageWrapOverrides.TryGetValue(chatType, out var wrapOverride))
+            wrapId = wrapOverride;
+
+        var speech = GetSpeechVerb(source, message);
+        var verbId = language.SpeechOverride.SpeechVerbOverrides is { } verbsOverride
+            ? _random.Pick(verbsOverride).ToString()
+            : _random.Pick(speech.SpeechVerbStrings);
+        var color = DefaultSpeakColor;
+        if (language.SpeechOverride.Color is { } colorOverride)
+            color = Color.InterpolateBetween(color, colorOverride, colorOverride.A);
+
+        var namestring = entityName;
+        if (_language.GetLanguageIcon(language, obfuscated ?? false))
+            namestring = $"[icon src=\"{language.Icon}\" tooltip=\"{language.Name}\"] {entityName}";
+
+        var fonttype = language.SpeechOverride.FontId ?? speech.FontId;
+        if ((language.SpeechOverride.ObfuscationFont ?? false) && (!obfuscated ?? false))
+            fonttype = speech.FontId;
+
+        return Loc.GetString(wrapId,
+            ("color", color),
+            ("entityName", namestring),
+            ("verb", Loc.GetString(verbId)),
+            ("fontType", fonttype),
+            ("fontSize", language.SpeechOverride.FontSize ?? speech.FontSize),
+            ("message", message));
+    }
+    // Starlight - End
 }
 
 /// <summary>

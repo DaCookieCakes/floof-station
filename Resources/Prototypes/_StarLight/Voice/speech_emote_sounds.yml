@@ -1,0 +1,70 @@
+# species
+- type: emoteSounds
+  id: MaleShadekin
+  voiceSelectorName: humanoid-profile-editor-voice-masculine
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: ShadekinFemaleScreams # Floof: Better than "HL1 scientist scream"
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+    Marr:
+      path: /Audio/_Starlight/Voice/Shadekin/mar.ogg
+    Wurble:
+      path: /Audio/_Starlight/Voice/Shadekin/wurble.ogg
+
+- type: emoteSounds
+  id: FemaleShadekin
+  voiceSelectorName: humanoid-profile-editor-voice-feminine
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: ShadekinFemaleScreams
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
+    Marr:
+      path: /Audio/_Starlight/Voice/Shadekin/mar.ogg
+    Wurble:
+      path: /Audio/_Starlight/Voice/Shadekin/wurble.ogg

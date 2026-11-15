@@ -69,7 +69,7 @@ public abstract partial class SharedGasTileOverlaySystem : EntitySystem
         [ViewVariables] public readonly byte FireState;
         [ViewVariables] public readonly byte[] Opacity;
         // TODO change fire color based on ByteTemp
-
+        [ViewVariables] public readonly byte FireType; // Floof - tile fires
         /// <summary>
         /// Network-synced air temperature, compressed to a single byte per tile for bandwidth optimization.
         /// Note: Values are approximate and may deviate even ~10°C from the precise server side only temperature.
@@ -78,9 +78,10 @@ public abstract partial class SharedGasTileOverlaySystem : EntitySystem
         public readonly ThermalByte ByteGasTemperature;
 
 
-        public GasOverlayData(byte fireState, byte[] opacity, ThermalByte byteTemp)
+        public GasOverlayData(byte fireState, byte type, byte[] opacity, ThermalByte byteTemp) // Floof - tile fires
         {
             FireState = fireState;
+            FireType = type; // Floof - tile fires
             Opacity = opacity;
             ByteGasTemperature = byteTemp;
         }

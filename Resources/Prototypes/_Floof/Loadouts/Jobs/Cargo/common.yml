@@ -1,0 +1,25 @@
+# Neck
+- type: loadout
+  id: ClothingNeckCollarLogi
+  equipment:
+    neck: ClothingNeckCollarLogi
+
+# Gloves
+- type: loadout
+  id: CargoArmWarmers
+  groupBy: CargoGear
+  equipment:
+    gloves: ClothingHandsLogisWarmers
+
+- type: loadout
+  id: FingerlessGloves
+  groupBy: CommonGear
+  equipment:
+    gloves: ClothingHandsGlovesFingerless
+
+# Socks
+- type: loadout
+  id: CargoThighHighs
+  groupBy: CargoGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksLogis

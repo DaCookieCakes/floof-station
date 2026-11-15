@@ -29,6 +29,7 @@
     tags:
     - Pizza
     - ReptilianFood
+    - FeroxiFood # Floof: Added.
 
 - type: entity
   parent: [SolutionVeryTiny, FoodInjectableBase] # Not sliceable
@@ -54,6 +55,7 @@
     tags:
     - Pizza
     - ReptilianFood
+    - FeroxiFood # Floof: Added.
     - Slice
 
 # Pizza
@@ -207,6 +209,7 @@
   id: FoodPizzaVegetableSlice
   description: A slice of this is enough to satisfy even the pickiest station personnel.
   components:
+  - type: FloodMask # Floof - flooding
   - type: FlavorProfile
     flavors:
       - eggplant

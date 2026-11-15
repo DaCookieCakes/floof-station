@@ -4,6 +4,7 @@
   id: HydroponicsToolMiniHoe
   description: It's used for removing weeds or scratching your back.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - BotanyTool
@@ -32,6 +33,7 @@
   id: HydroponicsToolClippers
   description: A tool used to take samples from plants.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - BotanyTool
@@ -60,6 +62,7 @@
   id: HydroponicsToolScythe
   description: A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tool
     qualities:
     - Slicing
@@ -93,6 +96,7 @@
   id: HydroponicsToolHatchet
   description: A very sharp axe blade upon a short fibremetal handle. It has a long history of chopping things, but now it is used for chopping wood.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tool
     qualities:
     - Slicing
@@ -126,6 +130,7 @@
   id: HydroponicsToolSpade
   description: A small tool for digging and moving dirt.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - BotanyShovel

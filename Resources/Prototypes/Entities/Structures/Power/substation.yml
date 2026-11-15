@@ -203,6 +203,10 @@
   id: SubstationBasic
   suffix: Basic, 2.5MJ
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SubstationBasic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Battery
     maxCharge: 2500000
     startingCharge: 2500000
@@ -212,6 +216,10 @@
   id: SubstationBasicEmpty
   suffix: Empty
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SubstationBasic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Battery
     startingCharge: 0
 

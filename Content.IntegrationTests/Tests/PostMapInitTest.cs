@@ -66,6 +66,9 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/bagel.yml", ["RubberStampMime"]},
             {"/Maps/reach.yml", ["HandheldCrewMonitor"]},
             {"/Maps/hike.yml", ["HandheldCrewMonitor"]},
+            {"/Maps/_Floof/bagel.yml", ["RubberStampMime"]}, // Floof
+            {"/Maps/_Floof/serpentcrest.yml", ["WehMedipen"]}, // Floof
+            {"/Maps/_Floof/reach.yml", ["HandheldCrewMonitor"]}, // Floof
             {"/Maps/Shuttles/ShuttleEvent/honki.yml", ["GoldenBikeHorn", "RubberStampClown"]},
             {"/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", ["RubberStampSyndicate"]},
             {"/Maps/Shuttles/ShuttleEvent/cruiser.yml", ["ShuttleGunPerforator"]},
@@ -83,7 +86,9 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             "/Maps/centcomm.yml",
-            "/Maps/Shuttles/AdminSpawn/**" // admin gaming
+            "/Maps/_Floof/centcomm.yml", // Floof
+            "/Maps/Shuttles/AdminSpawn/**", // admin gaming
+            "/Maps/_Floof/Shuttles/AdminSpawn/**" // Floof admin gaming
         };
 
         /// <summary>
@@ -94,7 +99,7 @@ namespace Content.IntegrationTests.Tests
             .ToArray();
 
         private static readonly string[] GameMaps = GameDataScrounger.PrototypesOfKind<GameMapPrototype>().Where(x => x != PoolManager.TestMap).ToArray();
-        private static readonly ResPath[] AllMapFiles = GameDataScrounger.FilesInDirectoryInVfs("/Maps", "*.yml");
+        private static readonly ResPath[] AllMapFiles = GameDataScrounger.FilesInDirectoryInVfs("/Maps/_Floof", "*.yml");
         private static readonly ResPath[] ShuttleMapFiles = GameDataScrounger.FilesInDirectoryInVfs("/Maps/Shuttles", "*.yml");
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
@@ -417,6 +422,11 @@ namespace Content.IntegrationTests.Tests
                         .Select(x => x.Job.Value);
 
                     jobs.ExceptWith(spawnPoints);
+
+                    // Floofstation - spawners can serve extra jobs
+                    jobs.ExceptWith(entManager.EntityQuery<SpawnPointComponent>()
+                        .Where(x => x.SpawnType == SpawnPointType.Job)
+                        .SelectMany(x => x.ExtraJobs));
 
                     spawnPoints = entManager.EntityQuery<ContainerSpawnPointComponent>()
                         .Where(x => x.SpawnType is SpawnPointType.Job or SpawnPointType.Unset && x.Job != null)

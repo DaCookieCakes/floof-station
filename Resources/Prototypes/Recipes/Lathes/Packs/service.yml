@@ -38,6 +38,7 @@
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
   - SmartFridgeCircuitboard
+  - TP14LatheRecipeOvenMachineCircuitboard # TRIESTE
 
 - type: latheRecipePack
   id: HydroponicsStatic

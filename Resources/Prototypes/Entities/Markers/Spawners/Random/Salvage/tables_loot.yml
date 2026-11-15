@@ -130,6 +130,7 @@
     - id: WristwatchGold
     - !type:NestedSelector
       tableId: RingTableCommon
+    - id: SpesosTreeSeeds # FLOOF
 
 - type: entityTable
   id: SalvageTreasureRare

@@ -1,8 +1,8 @@
 - type: gameMap
   id: Exo
   mapName: 'Exo'
-  mapPath: /Maps/exo.yml
-  minPlayers: 45
+  mapPath: /Maps/_Floof/exo.yml
+  minPlayers: 0 # Floof - lower min players
   stations:
     Exo:
       stationProto: StandardNanotrasenStation
@@ -66,3 +66,4 @@
             # Silicon (4)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 3 ]
+            Dogborg: [ 0, 3 ] # Floofstation

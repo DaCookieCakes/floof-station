@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared._EE.Flight.Events;
 using Robust.Shared.Map;
 
 namespace Content.Shared.Gravity;
@@ -16,6 +17,8 @@ public abstract partial class SharedFloatingVisualizerSystem : EntitySystem
 
         SubscribeLocalEvent<FloatingVisualsComponent, ComponentStartup>(OnComponentStartup);
         SubscribeLocalEvent<FloatingVisualsComponent, WeightlessnessChangedEvent>(OnWeightlessnessChanged);
+
+        SubscribeNetworkEvent<FlightEvent>(OnFlight);
     }
 
     /// <summary>

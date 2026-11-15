@@ -12,6 +12,7 @@
         - id: ClothingMaskBreath
         - id: OxygenTankFilled
         - id: NitrogenTankFilled
+        - id: TankWaterFilled # Floof: Added.
 
 - type: entity
   parent: CrateGenericSteel
@@ -31,6 +32,10 @@
   name: the grand lottery $$$
   description: A box containing treasure beyond your greatest imaginations!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCargoGambling.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -202,6 +207,8 @@
     - id: PlushieVulp
     - id: PlushieArachnid
     - id: PlushieLizardJobMultiweh # the exceedingly rare multiweh!
+    - id: PlushieShadekin # Floof: Added.
+    - id: PlushieFeroxi # Floof: Added.
     - id: PlushieThrongler #hehe
       weight: 0.05
 

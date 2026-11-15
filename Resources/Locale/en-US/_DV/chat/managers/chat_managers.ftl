@@ -1,0 +1,12 @@
+
+chat-speech-verb-name-feroxi = Feroxi
+chat-speech-verb-feroxi-1 = blubs
+chat-speech-verb-feroxi-2 = swishes
+chat-speech-verb-feroxi-3 = gnashes
+chat-speech-verb-feroxi-4 = growls
+
+chat-speech-verb-name-rodentia = Rodentia
+chat-speech-verb-rodentia-1 = squeaks
+chat-speech-verb-rodentia-2 = pieps
+chat-speech-verb-rodentia-3 = chatters
+chat-speech-verb-rodentia-4 = squeals

@@ -106,6 +106,7 @@
   name: Toggle Light
   description: Turn the light on and off.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Action
     useDelay: 1
   - type: Sprite

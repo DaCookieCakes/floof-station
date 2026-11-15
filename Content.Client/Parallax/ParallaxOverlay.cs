@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Client._Floof.MapUnderlay; // Floof - map underlay
 using Content.Client.Parallax.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.Parallax.Biomes;
@@ -21,6 +22,7 @@ public sealed partial class ParallaxOverlay : Overlay
     [Dependency] private IParallaxManager _manager = default!;
     private readonly SharedMapSystem _mapSystem;
     private readonly ParallaxSystem _parallax;
+    private readonly MapUnderlaySystem _underlay; // Floof - map underlay
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowWorld;
 
@@ -30,12 +32,19 @@ public sealed partial class ParallaxOverlay : Overlay
         IoCManager.InjectDependencies(this);
         _mapSystem = _entManager.System<SharedMapSystem>();
         _parallax = _entManager.System<ParallaxSystem>();
+        _underlay = _entManager.System<MapUnderlaySystem>(); // Floof - map underlay
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
         if (args.MapId == MapId.Nullspace || _entManager.HasComponent<BiomeComponent>(_mapSystem.GetMapOrInvalid(args.MapId)))
             return false;
+
+        // Floof Section - map underlay
+        // The map below is the background.
+        if (_underlay.GetDrawnShare(args.Viewport) > 0f)
+            return false;
+        // Floof Section End
 
         return true;
     }

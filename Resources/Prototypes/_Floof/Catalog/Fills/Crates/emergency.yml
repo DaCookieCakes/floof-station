@@ -1,0 +1,16 @@
+- type: entity
+  parent: CrateInternals
+  id: CrateWaterVaporInternals
+  name: internals crate (water)
+  description: Contains two breath masks, two gas masks, and four water-vapor tanks. Intended for water-breathing species.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingMaskGas
+          amount: 2
+        - id: ClothingMaskBreath
+          amount: 2
+        - id: TankWaterFilled
+          amount: 4

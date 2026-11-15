@@ -1,0 +1,68 @@
+- type: marking
+  id: CyberLimbsMarkingComp1LArm
+  bodyPart: LArm
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_arm-primary
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_arm-secondary
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_arm-tertiary
+
+- type: marking
+  id: CyberLimbsMarkingComp1LHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_hand
+
+- type: marking
+  id: CyberLimbsMarkingComp1LLeg
+  bodyPart: LLeg
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_leg-primary
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_leg-secondary
+
+- type: marking
+  id: CyberLimbsMarkingComp1LFoot
+  bodyPart: LFoot
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: l_foot
+
+- type: marking
+  id: CyberLimbsMarkingComp1RArm
+  bodyPart: RArm
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_arm-primary
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_arm-secondary
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_arm-tertiary
+
+- type: marking
+  id: CyberLimbsMarkingComp1RHand
+  bodyPart: RHand
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_hand
+
+- type: marking
+  id: CyberLimbsMarkingComp1RLeg
+  bodyPart: RLeg
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_leg-primary
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_leg-secondary
+
+- type: marking
+  id: CyberLimbsMarkingComp1RFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _EE/Mobs/Customization/cyberlimbs/comp1/comp1_main.rsi
+    state: r_foot
+

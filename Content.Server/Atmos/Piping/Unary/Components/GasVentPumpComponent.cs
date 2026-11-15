@@ -119,7 +119,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         ///     room with gas.
         /// </remarks>
         [DataField]
-        public float TargetPressureChange = Atmospherics.OneAtmosphere;
+        public float TargetPressureChange = Atmospherics.OneAtmosphere * 2f; // Floof - doubled vent output rate
 
         /// <summary>
         ///     Ratio of max output air pressure and pipe pressure, representing the vent's ability to increase pressure

@@ -108,6 +108,7 @@
       Stomach: OrganReptilianStomach
       Liver: OrganReptilianLiver
       Kidneys: OrganReptilianKidneys
+      Bladder: OrganBladder # Floof - Bladder
   - type: HumanoidProfile
     species: Reptilian
 
@@ -128,7 +129,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['Thump']
+    allowedEmotes: ['Thump', 'Bellow']
   - type: TypingIndicator
     proto: lizard
   - type: CreamPied
@@ -164,6 +165,15 @@
       295: 0.8
       285: 0.7
   - type: Wagging
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Draconic
+    understands:
+    - GalacticCommon
+    - Draconic
+  # Starlight-end
 
 - type: entity
   parent: OrganBaseOrganic
@@ -298,6 +308,7 @@
       - Pill
       - Crayon
       - Paper
+      - IceCream # FLOOF
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganReptilianInternal, OrganReptilianMetabolizer ]

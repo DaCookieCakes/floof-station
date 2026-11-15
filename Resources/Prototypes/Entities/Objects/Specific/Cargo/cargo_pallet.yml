@@ -36,6 +36,7 @@
   parent: [ BaseCargoPallet, StructureHealthMachineWeak ]
   id: CargoPallet
   components:
+  - type: FloodMask # Floof - flooding
   - type: Damageable
     damageModifierSet: RodMetalMod
   - type: Destructible

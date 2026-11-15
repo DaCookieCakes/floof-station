@@ -75,8 +75,6 @@
   - type: Deathgasp
     prototype: KoboldDeathgasp
   - type: LizardAccent
-  - type: ReplacementAccent
-    accent: kobold
   - type: TypingIndicator
     proto: lizard
   - type: InteractionPopup

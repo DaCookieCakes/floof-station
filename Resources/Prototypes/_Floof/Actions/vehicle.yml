@@ -1,0 +1,14 @@
+- type: entity
+  parent: BaseAction
+  id: ActionToggleJanicartSuction
+  name: Toggle Suction
+  description: Suck up the liquid around the janicart. Slows it down a lot while running.
+  components:
+  - type: Action
+    useDelay: 1
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/drain.rsi
+    layers:
+    - state: icon
+  - type: InstantAction
+    event: !type:VehicleToggleActionEvent

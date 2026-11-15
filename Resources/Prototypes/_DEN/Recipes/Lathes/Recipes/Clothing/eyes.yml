@@ -1,0 +1,69 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  id: BaseEyewearRecipe
+  categories:
+  - Eyes
+  completetime: 2
+  materials:
+    Glass: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseEyewearRecipe
+  id: BaseEyewearClothRecipe
+  materials:
+    Cloth: 100
+
+# Non-job specific cosmetic eyewear
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlasses
+  result: ClothingEyesGlasses
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesJensen
+  result: ClothingEyesGlassesJensen
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesJamjar
+  result: ClothingEyesGlassesJamjar
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesOutlawGlasses
+  result: ClothingEyesGlassesOutlawGlasses
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesCheapSunglasses
+  result: ClothingEyesGlassesCheapSunglasses
+
+- type: latheRecipe
+  parent: BaseEyewearClothRecipe
+  id: ClothingEyesBlindfold
+  result: ClothingEyesBlindfold
+
+- type: latheRecipe
+  parent: BaseEyewearClothRecipe
+  id: ClothingEyesEyepatch
+  result: ClothingEyesEyepatch
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesGar
+  result: ClothingEyesGlassesGar
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesGarOrange
+  result: ClothingEyesGlassesGarOrange
+
+- type: latheRecipe
+  parent: BaseEyewearRecipe
+  id: ClothingEyesGlassesGarGiga
+  result: ClothingEyesGlassesGarGiga

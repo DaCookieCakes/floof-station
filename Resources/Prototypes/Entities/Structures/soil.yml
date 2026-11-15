@@ -55,6 +55,10 @@
   name: soil
   description: A mix of organic matter and minerals creating a soil to grow your plant in space. Seems to be dry.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/HydroponicsSoil.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Damageable
     damageModifierSet: RockMod
   - type: Destructible

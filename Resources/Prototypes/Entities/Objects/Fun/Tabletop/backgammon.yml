@@ -4,6 +4,7 @@
   name: backgammon board
   description: Old fashioned game of dice and pieces.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Fun/Tabletop/backgammon.rsi
     state: board

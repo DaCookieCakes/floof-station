@@ -130,6 +130,7 @@
       Stomach: OrganMothStomach
       Liver: OrganMothLiver
       Kidneys: OrganMothKidneys
+      Bladder: OrganBladder # Floof - Bladder
   - type: HumanoidProfile
     species: Moth
 
@@ -192,6 +193,16 @@
       289: 0.9
       275: 0.8
       250: 0.7
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Moffic
+    understands:
+    - GalacticCommon
+    - Moffic
+  # Starlight-end
+  - type: Flight # FLOOF
 
 - type: entity
   parent: OrganBaseOrganic
@@ -319,6 +330,7 @@
       - ClothMade
       - Paper
       - Pill
+      - IceCream # FLOOF
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganMothInternal, OrganAnimalMetabolizer ]

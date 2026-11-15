@@ -1,9 +1,9 @@
 - type: gameMap
   id: Tram2
   mapName: 'Tram2'
-  mapPath: /Maps/tram2.yml
+  mapPath: /Maps/_Floof/tram2.yml
   maxRandomOffset: 0
-  minPlayers: 45
+  minPlayers: 0 # Floof - lower min players
   stations:
     Tram2:
       stationProto: StandardNanotrasenStation
@@ -66,3 +66,4 @@
             # Silicon (4)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 3 ]
+            Dogborg: [ 0, 3 ] # Floofstation

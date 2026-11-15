@@ -1,5 +1,6 @@
 - type: job
   id: Scientist
+  pay: 500 # Floof - bank
   name: job-name-scientist
   description: job-description-scientist
   playTimeTracker: JobScientist

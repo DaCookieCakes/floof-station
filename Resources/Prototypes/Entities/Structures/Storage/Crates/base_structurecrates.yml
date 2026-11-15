@@ -42,6 +42,10 @@
   id: CrateGeneric
   categories: [ HideSpawnMenu ]
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateCandles.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Storage/Crates/generic.rsi
     state: icon
@@ -88,6 +92,10 @@
   id: CrateBaseSecure
   suffix: Secure
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateBaseSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Lock
   - type: LockVisuals
   - type: AccessReader

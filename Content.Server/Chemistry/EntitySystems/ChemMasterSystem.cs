@@ -62,6 +62,25 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterCreatePillsMessage>(OnCreatePillsMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterOutputToBottleMessage>(OnOutputToBottleMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterOutputDrawSourceMessage>(OnSetDrawSourceMessage);
+
+            // CLAW COMMAND SPECIFIC //
+            SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetTransferAmountMessage>(OnSetTransferAmountMessage);
+        }
+
+        /// <summary>
+        /// CLAW COMMAND SPECIFIC
+        /// <para>Sets the new UI trasnfer amount.</para>
+        /// </summary>
+        /// <param name="ent"></param>
+        /// <param name="args"></param>
+        private void OnSetTransferAmountMessage(Entity<ChemMasterComponent> ent, ref ChemMasterSetTransferAmountMessage args)
+        {
+            if (!Enum.IsDefined(typeof(ChemMasterReagentAmount), args.Amount))
+                return;
+
+            ent.Comp.TransferAmount = args.Amount;
+            UpdateUiState(ent);
+            ClickSound(ent);
         }
 
         private void SubscribeUpdateUiState<T>(Entity<ChemMasterComponent> ent, ref T ev)
@@ -82,7 +101,7 @@ namespace Content.Server.Chemistry.EntitySystems
 
             var state = new ChemMasterBoundUserInterfaceState(
                 chemMaster.Mode, chemMaster.SortingType, BuildInputContainerInfo(inputContainer), BuildOutputContainerInfo(outputContainer),
-                bufferReagents, bufferCurrentVolume, chemMaster.PillType, chemMaster.PillDosageLimit, updateLabel, chemMaster.DrawSource);
+                bufferReagents, bufferCurrentVolume, chemMaster.PillType, chemMaster.PillDosageLimit, updateLabel, chemMaster.DrawSource, chemMaster.TransferAmount);
 
             _userInterfaceSystem.SetUiState(owner, ChemMasterUiKey.Key, state);
         }

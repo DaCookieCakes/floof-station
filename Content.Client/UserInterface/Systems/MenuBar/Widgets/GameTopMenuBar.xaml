@@ -73,6 +73,30 @@
         HorizontalExpand="True"
         AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
         />
+    <!-- Starlight-start: Languages -->
+    <ui:MenuButton
+        Name="LanguageButton"
+        Access="Internal"
+        Icon="{xe:Tex '/Textures/_Starlight/Interface/language.png'}"
+        BoundKey = "{x:Static is:ContentKeyFunctions.OpenLanguageMenu}"
+        ToolTip="Open the Language Menu"
+        MinSize="42 64"
+        HorizontalExpand="True"
+        AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
+        />
+    <!-- Starlight-end -->
+    <!-- Floof - Consent System -->
+    <ui:MenuButton
+        Name="ConsentButton"
+        Access="Internal"
+        Icon="{xe:Tex '/Textures/Interface/VerbIcons/settings.svg.192dpi.png'}"
+        BoundKey = "{x:Static is:ContentKeyFunctions.OpenConsentWindow}"
+        ToolTip="{Loc 'game-hud-open-consent-window-button-tooltip'}"
+        MinSize="42 64"
+        HorizontalExpand="True"
+        AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
+    />
+    <!-- End Floof - Consent System -->
     <ui:MenuButton
         Name="AdminButton"
         Access="Internal"

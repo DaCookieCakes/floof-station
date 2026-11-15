@@ -169,6 +169,15 @@
     allowedStates:
     - Dead
   - type: Rootable
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Sylvan
+    understands:
+    - GalacticCommon
+    - Sylvan
+  # Starlight-end
 
 - type: entity
   parent: OrganBaseOrganic

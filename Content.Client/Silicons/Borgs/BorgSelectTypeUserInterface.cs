@@ -26,5 +26,11 @@ public sealed class BorgSelectTypeUserInterface : BoundUserInterface
 
         _menu = this.CreateWindow<BorgSelectTypeMenu>();
         _menu.ConfirmedBorgType += prototype => SendPredictedMessage(new BorgSelectTypeMessage(prototype));
+
+        // Floofstation - only show types from this borg's category
+        var category = EntMan.TryGetComponent(Owner, out BorgSwitchableTypeComponent? switchable)
+            ? switchable.AllowedCategory
+            : BorgSwitchableTypeComponent.DefaultCategory;
+        _menu.Populate(category);
     }
 }

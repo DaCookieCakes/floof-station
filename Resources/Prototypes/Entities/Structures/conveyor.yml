@@ -6,6 +6,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ConveyorBelt.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Rotatable
     rotateWhileAnchored: false
   - type: Clickable

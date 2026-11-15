@@ -1,0 +1,65 @@
+# Neck
+- type: loadout
+  id: ClothingNeckCollarBlue
+  equipment:
+    neck: ClothingNeckCollarBlue
+
+- type: loadout
+  id: ClothingNeckCollarBlack
+  equipment:
+    neck: ClothingNeckCollarBlack
+
+- type: loadout
+  id: ClothingNeckCollarPink
+  equipment:
+    neck: ClothingNeckCollarPink
+
+- type: loadout
+  id: ClothingNeckCollarSyndie
+  equipment:
+    neck: ClothingNeckCollarSyndie
+
+- type: loadout
+  id: ClothingNeckShockCollarCivilian
+  equipment:
+    neck: ClothingNeckShockCollarCivilian
+
+- type: loadout
+  id: ClothingNeckCollarBell
+  equipment:
+    neck: ClothingNeckCollarBell
+
+- type: loadout
+  id: ClothingNeckCowBellCollar #The Den
+  equipment:
+    neck: ClothingNeckCowBellCollar #The Den
+
+- type: loadout
+  id: ClothingNeckTieRed
+  equipment:
+    neck: ClothingNeckTieRed
+
+# Gloves
+- type: loadout
+  id: PlainArmWarmers
+  groupBy: CommonGear
+  equipment:
+    gloves: ClothingHandsPlainWarmers
+
+# Socks
+- type: loadout
+  id: PlainThighHighs
+  groupBy: CommonGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksPlain
+
+# Shoes
+- type: loadout
+  id: LeatherShoes
+  equipment:
+    shoes: ClothingShoesLeather
+
+- type: loadout
+  id: LaceupShoes
+  equipment:
+    shoes: ClothingShoesBootsLaceup

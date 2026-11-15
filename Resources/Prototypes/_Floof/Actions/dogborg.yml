@@ -1,0 +1,64 @@
+# Dogborg pose toggles. Using the action for the current pose stands back up.
+# Placeholder icons use the K50 pose sprites; swap in proper 32x32 icons when you have them.
+
+- type: entity
+  abstract: true
+  parent: BaseAction
+  id: BaseActionDogborgPose
+  components:
+  - type: Action
+    useDelay: 1
+
+- type: entity
+  parent: BaseActionDogborgPose
+  id: ActionDogborgSit
+  name: Sit
+  description: Sit down. Moving stands you back up.
+  components:
+  - type: Sprite
+    sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+    layers:
+    - state: k50-sit
+      map: ["enum.ActionVisuals.Icon"]
+    - state: k50-sit
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  - type: InstantAction
+    event: !type:DogborgPoseActionEvent
+      pose: Sit
+
+- type: entity
+  parent: BaseActionDogborgPose
+  id: ActionDogborgRest
+  name: Rest
+  description: Lie down. Moving stands you back up.
+  components:
+  - type: Sprite
+    sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+    layers:
+    - state: k50-rest
+      map: ["enum.ActionVisuals.Icon"]
+    - state: k50-rest
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  - type: InstantAction
+    event: !type:DogborgPoseActionEvent
+      pose: Rest
+
+- type: entity
+  parent: BaseActionDogborgPose
+  id: ActionDogborgBellyUp
+  name: Belly Up
+  description: Roll over for belly rubs. Moving stands you back up.
+  components:
+  - type: Sprite
+    sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+    layers:
+    - state: k50-bellyup
+      map: ["enum.ActionVisuals.Icon"]
+    - state: k50-bellyup
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  - type: InstantAction
+    event: !type:DogborgPoseActionEvent
+      pose: BellyUp

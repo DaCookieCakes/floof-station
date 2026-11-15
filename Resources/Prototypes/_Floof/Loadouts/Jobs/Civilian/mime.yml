@@ -1,0 +1,19 @@
+# GLOVES #
+- type: loadout
+  id: MimeArmWarmers
+  groupBy: MimeGear
+  equipment:
+    gloves: ClothingHandsStripeWhiteWarmers
+
+- type: loadout
+  id: WhiteGloves
+  groupBy: MimeGear
+  equipment:
+    gloves: ClothingHandsGlovesColorWhite
+
+# SOCKS #
+- type: loadout
+  id: MimeThighHighs
+  groupBy: MimeGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksStripedWhite

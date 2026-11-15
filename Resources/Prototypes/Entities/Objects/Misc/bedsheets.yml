@@ -207,6 +207,10 @@
   name: medical bedsheet
   description: It's a sterilized blanket commonly used in the Medbay. Sterilization is voided if a virologist is present onboard the station.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BedsheetMedical.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: sheetmedical
   - type: Clothing

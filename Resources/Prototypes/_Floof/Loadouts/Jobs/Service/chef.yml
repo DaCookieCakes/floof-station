@@ -1,0 +1,22 @@
+# NECK #
+- type: loadout
+  id: ClothingShoesChef
+  groupBy: ChefGear
+  equipment:
+    shoes: ClothingShoesChef
+
+
+# GLOVES #
+- type: loadout
+  id: ChefArmWarmers
+  groupBy: ChefGear
+  equipment:
+    gloves: ClothingHandsChefWarmers
+
+
+# SOCKS #
+- type: loadout
+  id: ChefThighHighs
+  groupBy: ChefGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksChef

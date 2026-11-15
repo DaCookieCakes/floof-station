@@ -184,7 +184,10 @@ namespace Content.Server.GameTicking
 
         public HumanoidCharacterProfile GetPlayerProfile(ICommonSession p)
         {
-            return (HumanoidCharacterProfile) _prefsManager.GetPreferences(p.UserId).SelectedCharacter;
+            // Floof Section - Persistence
+            var prefs = _prefsManager.GetPreferences(p.UserId);
+            return _liveCharacter.GetSpawnProfile(p.UserId, prefs.SelectedCharacterIndex, prefs.SelectedCharacter);
+            // Floof Section End
         }
 
         public override void PlayerJoinGame(ICommonSession session, bool silent = false)

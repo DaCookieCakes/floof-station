@@ -170,7 +170,8 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
             var colorChannel = new LayerMarkingColorChannel();
             colorChannel.SetLayerText(labelText);
             colorChannel.SetColor(marking.MarkingColors[i]);
-            colorChannel.Visible = !layer.ForcedColoring; // may be iffy to keep invisible sliders, but whatever
+            colorChannel.Visible = !layer.ForcedColoring // may be iffy to keep invisible sliders, but whatever
+                && _markingPrototype.GetColorSource(i) == i; // Floof - marking layering
             colorChannel.OnColorChanged += _ =>
             {
                 _markingsModel.TrySetMarkingColor(_organ,

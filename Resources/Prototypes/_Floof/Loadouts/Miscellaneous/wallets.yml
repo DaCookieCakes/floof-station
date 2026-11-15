@@ -1,0 +1,54 @@
+- type: loadout
+  id: ClothingWalletLeatherBrown
+  equipment:
+    wallet: ClothingWalletLeatherBrown
+
+- type: loadout
+  id: ClothingWalletLeatherBlack
+  equipment:
+    wallet: ClothingWalletLeatherBlack
+
+- type: loadout
+  id: ClothingWalletLeatherRed
+  equipment:
+    wallet: ClothingWalletLeatherRed
+
+- type: loadout
+  id: ClothingWalletLeatherBlue
+  equipment:
+    wallet: ClothingWalletLeatherBlue
+
+- type: loadout
+  id: ClothingWalletLeatherGreen
+  equipment:
+    wallet: ClothingWalletLeatherGreen
+
+- type: loadout
+  id: ClothingWalletLeatherMail
+  equipment:
+    wallet: ClothingWalletLeatherMail
+
+- type: loadout
+  id: ClothingWalletLeatherPirate
+  equipment:
+    wallet: ClothingWalletLeatherPirate
+
+- type: loadout
+  id: ClothingWalletLeatherPrisoner
+  equipment:
+    wallet: ClothingWalletLeatherPrisoner
+
+- type: loadout
+  id: ClothingWalletLeatherArcadia
+  equipment:
+    wallet: ClothingWalletLeatherArcadia
+
+- type: loadout
+  id: ClothingWalletLeatherPunk
+  equipment:
+    wallet: ClothingWalletLeatherPunk
+
+- type: loadout
+  id: ClothingWalletLeatherLizard
+  equipment:
+    wallet: ClothingWalletLeatherLizard

@@ -11,59 +11,63 @@
 # Jumpsuit
 - type: loadout
   id: HeadofSecurityJumpsuit
+  groupBy: HoSGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoS
-  groupBy: "jumpsuit"
 
 - type: loadout
   id: HeadofSecurityJumpskirt
+  groupBy: HoSGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtHoS
-  groupBy: "jumpskirt"
 
 - type: loadout
   id: HeadofSecurityTurtleneck
+  groupBy: HoSGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoSAlt
-  groupBy: "jumpsuit"
 
 - type: loadout
   id: HeadofSecurityTurtleneckSkirt
+  groupBy: HoSGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtHoSAlt
-  groupBy: "jumpskirt"
 
 - type: loadout
   id: HeadofSecurityFormalSuit
+  groupBy: HoSGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitHosFormal
-  groupBy: "jumpsuit"
 
 - type: loadout
   id: HeadofSecurityFormalSkirt
+  groupBy: HoSGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtHosFormal
-  groupBy: "jumpskirt"
 
 # Head
 - type: loadout
   id: HeadofSecurityHead
+  groupBy: HoSGear # FLOOF
   equipment:
     head: ClothingHeadHatHoshat
 
 - type: loadout
   id: HeadofSecurityBeret
+  groupBy: HoSGear # FLOOF
   equipment:
     head: ClothingHeadHatBeretHoS
 
 # Neck
 - type: loadout
   id: HeadofSecurityCloak
+  groupBy: HoSGear # FLOOF
   equipment:
     neck: ClothingNeckCloakHos
 
 - type: loadout
   id: HeadofSecurityMantle
+  groupBy: HoSGear # FLOOF
   equipment:
     neck: ClothingNeckMantleHOS
   effects:
@@ -78,10 +82,12 @@
 # OuterClothing
 - type: loadout
   id: HeadofSecurityCoat
+  groupBy: HoSGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatHoSTrench
 
 - type: loadout
   id: HeadofSecurityWinterCoat
+  groupBy: HoSGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterHoS

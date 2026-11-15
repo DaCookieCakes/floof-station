@@ -75,6 +75,10 @@
   parent: Stairs
   suffix: Dark
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/StairDark.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/stairs.rsi
     state: stairs_dark

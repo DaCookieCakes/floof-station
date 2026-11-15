@@ -83,6 +83,7 @@
   name: d6
   description: A die with six sides. Basic and serviceable.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Dice
     sides: 6
     currentValue: 6
@@ -94,6 +95,7 @@
   id: d6DiceTricked
   suffix: Tricked
   components:
+  - type: FloodMask # Floof - flooding
   - type: Dice
     weightedProb: 0.5
     weightedValue: 6
@@ -149,6 +151,7 @@
   name: Heads or Tails Coin
   description: Some sort of two-sided die. Designed to represent the struggle between Nanotrasen and the Syndicate.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: d2_1
 
@@ -157,6 +160,7 @@
   id: d2DiceTricked
   suffix: Tricked
   components:
+  - type: FloodMask # Floof - flooding
   - type: Dice
     weightedValue: 2
 

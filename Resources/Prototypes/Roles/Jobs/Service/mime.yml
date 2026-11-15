@@ -1,5 +1,6 @@
 - type: job
   id: Mime
+  pay: 350 # Floof - bank
   name: job-name-mime
   description: job-description-mime
   playTimeTracker: JobMime
@@ -23,8 +24,8 @@
 - type: startingGear
   id: MimeGear
   equipment:
-    gloves: ClothingHandsGlovesColorWhite
-    shoes: ClothingShoesColorWhite
+  #  gloves: ClothingHandsGlovesColorWhite  # FLOOF
+  #  shoes: ClothingShoesColorWhite         # FLOOF
     id: MimePDA
     ears: ClothingHeadsetService
   storage:

@@ -6,6 +6,10 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/TwoWayLever.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: StationAiWhitelist
     - type: Clickable
     - type: InteractionOutline

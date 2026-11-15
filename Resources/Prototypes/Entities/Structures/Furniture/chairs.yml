@@ -103,6 +103,10 @@
   id: Chair
   name: chair
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Chair.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: chair
   - type: Construction
@@ -131,6 +135,10 @@
   parent: Chair
   suffix: White
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Chair.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: chair-greyscale
 
@@ -140,6 +148,10 @@
   name: stool
   description: Apply butt.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Stool.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: stool
   - type: Construction
@@ -155,6 +167,10 @@
   id: StoolBar
   name: bar stool
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/StoolBar.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: bar
   - type: Construction
@@ -191,6 +207,10 @@
   id: ChairOfficeLight
   name: white office chair
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChairOfficeLight.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: office-white
   - type: Construction
@@ -206,6 +226,10 @@
   id: ChairOfficeDark
   name: dark office chair
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChairOfficeDark.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: office-dark
   - type: Construction
@@ -218,6 +242,10 @@
   name: comfy chair
   description: It looks comfy.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ComfyChair.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: comfy
   - type: Construction
@@ -234,6 +262,10 @@
   name: pilot seat
   description: The pilot seat of a prestigious ship.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChairPilotSeat.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: shuttle
   - type: Construction
@@ -249,6 +281,10 @@
   id: ChairWood
   name: wooden chair
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChairWood.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: wooden
   - type: Construction
@@ -363,6 +399,10 @@
   name: folding chair
   description: If you carry six of these you become the coolest kid at church.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChairFolding.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Rotatable
   - type: Sprite
     sprite: Structures/Furniture/folding_chair.rsi
@@ -401,6 +441,10 @@
   id: ChairFoldingSpawnFolded
   suffix: folded
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ChairFolding.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Foldable
     folded: true
   - type: Strap
@@ -412,6 +456,10 @@
   name: steel bench
   description: A long chair made for a metro. Really standard design.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SteelBench.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: steel-bench
   - type: Construction
@@ -454,6 +502,10 @@
   name: wooden bench
   description: Did you get a splinter? Well, at least it’s eco friendly.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/WoodenBench.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: wooden-bench
   - type: Construction

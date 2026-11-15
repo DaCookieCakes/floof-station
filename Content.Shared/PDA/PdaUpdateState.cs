@@ -16,6 +16,7 @@ namespace Content.Shared.PDA
         public bool HasUplink;
         public bool CanPlayMusic;
         public string? Address;
+        public int? Balance; // Floof - Bank: balance of the account the PDA was issued to
 
         public PdaUpdateState(
             List<NetEntity> programs,

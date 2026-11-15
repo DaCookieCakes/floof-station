@@ -667,6 +667,7 @@
   parent: FloorTileItemBase
   id: FloorTileItemArcadeBlue
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: arcadeblue
   - type: Item
@@ -683,6 +684,7 @@
   parent: FloorTileItemBase
   id: FloorTileItemArcadeRed
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: arcadered
   - type: Item

@@ -252,6 +252,7 @@
   parent: BaseBed
   id: Bed
   targetNode: bed
+  canRotate: true # Floof - Directional Beds
 
 - type: construction
   parent: BaseBed

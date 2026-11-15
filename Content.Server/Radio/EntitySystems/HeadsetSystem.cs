@@ -5,6 +5,7 @@ using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Content.Server._Starlight.Language; // Starlight
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -12,7 +13,7 @@ public sealed partial class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private INetManager _netMan = default!;
     [Dependency] private RadioSystem _radio = default!;
-
+    [Dependency] private LanguageSystem _language = default!; // Starlight
     public override void Initialize()
     {
         base.Initialize();
@@ -109,7 +110,16 @@ public sealed partial class HeadsetSystem : SharedHeadsetSystem
             RaiseLocalEvent(parent, ref relayEvent);
         }
 
+        // Starlight - Start
         if (TryComp(parent, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        {
+            var canUnderstand = _language.CanUnderstand(parent, args.Language.ID);
+            var msg = new MsgChatMessage
+            {
+                Message = canUnderstand ? args.OriginalChatMsg : args.LanguageObfuscatedChatMsg
+            };
+            _netMan.ServerSendMessage(msg, actor.PlayerSession.Channel);
+        }
+        // Starlight - End
     }
 }

@@ -1,0 +1,44 @@
+- type: latheRecipe
+  id: ClothingWalletLeatherRed
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherRed
+
+- type: latheRecipe
+  id: ClothingWalletLeatherBlue
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherBlue
+
+- type: latheRecipe
+  id: ClothingWalletLeatherGreen
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherGreen
+
+- type: latheRecipe
+  id: ClothingWalletLeatherMail
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherMail
+
+- type: latheRecipe
+  id: ClothingWalletLeatherPirate
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherPirate
+
+- type: latheRecipe
+  id: ClothingWalletLeatherPrisoner
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherPrisoner
+
+- type: latheRecipe
+  id: ClothingWalletLeatherArcadia
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherArcadia
+
+- type: latheRecipe
+  id: ClothingWalletLeatherPunk
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherPunk
+
+- type: latheRecipe
+  id: ClothingWalletLeatherLizard
+  parent: NFBaseBootRecipe
+  result: ClothingWalletLeatherLizard

@@ -61,6 +61,10 @@
   name: water bottle
   description: Simple clean water of unknown origin. You think that maybe you dont want to know it.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkWaterBottleFull.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:

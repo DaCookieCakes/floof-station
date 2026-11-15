@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Flood mask by Niaresa, based on work by Wah, traced from the sprite: Made by PixelTheKermit (github) for SS14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mask"
+    }
+  ]
+}

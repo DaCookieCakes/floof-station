@@ -153,6 +153,7 @@
       Stomach: OrganVoxStomach
       Liver: OrganVoxLiver
       Kidneys: OrganVoxKidneys
+      Bladder: OrganBladder # Floof - Bladder
   - type: HumanoidProfile
     species: Vox
 
@@ -228,6 +229,15 @@
       types:
         Slash: 5 # Reduce?
   - type: Wagging
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - VoxPidgin
+    understands:
+    - GalacticCommon
+    - VoxPidgin
+  # Starlight-end
 
 - type: entity
   parent: OrganBaseOrganic

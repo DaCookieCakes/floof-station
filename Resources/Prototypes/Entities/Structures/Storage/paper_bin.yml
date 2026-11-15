@@ -5,6 +5,10 @@
   description: What secrets lie at the bottom of its endless stack?
   suffix: Empty
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PaperBin.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: paper_bin0
@@ -43,6 +47,10 @@
   id: PaperBin5
   suffix: 5
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PaperBin.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Bin
     initialContents:
     - Paper
@@ -60,6 +68,10 @@
   id: PaperBin10
   suffix: 10
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PaperBin.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Bin
     initialContents:
     - Paper
@@ -82,6 +94,10 @@
   id: PaperBin20
   suffix: 20
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PaperBin.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Bin
     initialContents:
     - Paper

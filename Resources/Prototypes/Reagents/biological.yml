@@ -13,6 +13,7 @@
   metamorphicChangeColor: false
   recognizable: true
   standsout: true
+  liquidOpacity: 1 # Floof - flooding
   physicalDesc: reagent-physical-desc-ferrous
   metabolisms:
     Digestion:
@@ -80,6 +81,7 @@
   color: "#2cf274"
   recognizable: true
   standsout: true
+  liquidOpacity: 1 # Floof - flooding
   physicalDesc: reagent-physical-desc-viscous
   viscosity: 0.25
   tileReactions:

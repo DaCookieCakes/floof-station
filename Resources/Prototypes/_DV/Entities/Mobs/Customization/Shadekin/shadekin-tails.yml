@@ -1,0 +1,61 @@
+# Tails
+
+- type: marking
+  id: TailShadekin
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails64x32.rsi
+    state: shadekin
+
+- type: marking
+  id: TailShadekinBig
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails64x32.rsi
+    state: shadekin_big
+
+- type: marking
+  id: TailShadekinBigFluff
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails64x32.rsi
+    state: shadekin_big_fluff
+
+- type: marking
+  id: TailShadekinShorter
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails32x32.rsi
+    state: shadekin_shorter
+
+- type: marking
+  id: TailShadekinShorterBrush
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails32x32.rsi
+    state: shadekin_shorter
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails32x32.rsi
+    state: shorter_brush
+
+- type: marking
+  id: TailShadekinMedium
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails32x32.rsi
+    state: shadekin_medium
+
+- type: marking
+  id: TailShadekinMediumTwoColored
+  bodyPart: Tail
+  groupWhitelist: [Shadekin]
+  sprites:
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails32x32.rsi
+    state: shadekin_medium
+  - sprite: _Starlight/Mobs/Customization/Shadekin/tails32x32.rsi
+    state: medium_twocolored

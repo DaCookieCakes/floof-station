@@ -1,0 +1,126 @@
+- type: entity
+  parent: OrganBase
+  id: OrganShadekin
+  abstract: true
+  suffix: shadekin
+
+- type: entity
+  id: OrganShadekinMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Shadekin ]
+
+- type: entity
+  parent: OrganShadekin
+  id: OrganShadekinInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Shadekin/organs.rsi
+
+- type: entity
+  id: OrganShadekinVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Shadekin/parts.rsi # Delta V - Changed to our sprites
+  - type: VisualOrganMarkings
+    markingData:
+      group: Shadekin
+
+- type: entity
+  parent: [ OrganShadekin, OrganShadekinVisual ]
+  id: OrganShadekinExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Shadekin/parts.rsi # Delta V - Changed to our Sprites
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganShadekinExternal ]
+  id: OrganShadekinTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganShadekinExternal ]
+  id: OrganShadekinHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganShadekinExternal ]
+  id: OrganShadekinArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganShadekinExternal ]
+  id: OrganShadekinArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganShadekinExternal ]
+  id: OrganShadekinHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganShadekinExternal ]
+  id: OrganShadekinHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganShadekinExternal ]
+  id: OrganShadekinLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganShadekinExternal ]
+  id: OrganShadekinLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganShadekinExternal ]
+  id: OrganShadekinFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganShadekinExternal ]
+  id: OrganShadekinFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganShadekinInternal ]
+  id: OrganShadekinBrain
+
+- type: entity
+  parent: [ OrganShadekinVisual, OrganSpriteHumanInternal, OrganBaseEyes, OrganShadekinInternal ]
+  id: OrganShadekinEyes
+  components:
+  - type: VisualOrgan
+    layer: enum.HumanoidVisualLayers.Eyes
+    data:
+      sprite: _Starlight/Mobs/Species/Shadekin/parts.rsi
+      state: eyes
+      shader: unshaded
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganShadekinInternal ]
+  id: OrganShadekinTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganSpriteHumanInternal, OrganShadekinInternal ]
+  id: OrganShadekinAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganSpriteHumanInternal, OrganShadekinInternal ]
+  id: OrganShadekinEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganSpriteHumanInternal, OrganShadekinInternal, OrganShadekinMetabolizer ]
+  id: OrganShadekinLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganSpriteHumanInternal, OrganShadekinInternal, OrganShadekinMetabolizer ]
+  id: OrganShadekinHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganSpriteHumanInternal, OrganShadekinInternal, OrganShadekinMetabolizer ]
+  id: OrganShadekinStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganShadekinInternal, OrganShadekinMetabolizer ]
+  id: OrganShadekinLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganShadekinInternal, OrganShadekinMetabolizer ]
+  id: OrganShadekinKidneys

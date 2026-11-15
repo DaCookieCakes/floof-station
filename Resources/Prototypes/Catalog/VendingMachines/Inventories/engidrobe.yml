@@ -16,6 +16,11 @@
     ClothingOuterWinterEngi: 2
     ClothingNeckScarfStripedOrange: 3
     ClothingShoesBootsWinterEngi: 2
+    ClothingNeckCollarEngi: 2 # Floof
+    ClothingUncategorizedHarnessSafety: 4 # Floof
+    ClothingHandsEngiWarmers: 3 # FLOOF
+    ClothingUnderSocksEngi: 3   # FLOOF
+    ClothingUniformEngiThong: 3 # FLOOF
   contrabandInventory:
     ToyFigurineEngineer: 1
     ToyFigurineChiefEngineer: 1

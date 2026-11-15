@@ -81,6 +81,10 @@
   suffix: Always powered
   description: "An always powered light."
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AlwaysPoweredLightExterior.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Construction
     graph: LightFixture
     node: tubeLight
@@ -191,6 +195,10 @@
   id: AlwaysPoweredLightLED
   suffix: Always Powered, LED
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AlwaysPoweredLightExterior.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PointLight
     radius: 15
     energy: 1
@@ -221,6 +229,10 @@
   id: AlwaysPoweredLightExterior
   suffix: Always Powered, Exterior
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AlwaysPoweredLightExterior.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PointLight
     radius: 12
     energy: 4.5
@@ -246,6 +258,10 @@
   id: AlwaysPoweredLightSodium
   suffix: Always Powered, Sodium
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AlwaysPoweredLightExterior.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PointLight
     radius: 10
     energy: 4
@@ -422,6 +438,10 @@
   name: emergency light
   description: A small light with an internal battery that turns on as soon as it stops receiving any power. Nanotrasen technology allows it to adapt its color to alert crew to the conditions of the station.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/EmergencyLight.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PointLight
     enabled: false
     radius: 5
@@ -624,6 +644,10 @@
   id: AlwaysPoweredlightRed
   suffix: Always Powered, Red
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AlwaysPoweredLightExterior.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: PointLight
     color: "#fb4747"
 

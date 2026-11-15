@@ -166,6 +166,7 @@
   id: ClothingOuterHardsuitBase
   name: base hardsuit
   components:
+  - type: SwimSinking # Floof - swimming
   - type: PressureProtection
     highPressureMultiplier: 0.3
   - type: ClothingSpeedModifier

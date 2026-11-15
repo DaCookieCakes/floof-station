@@ -1,5 +1,8 @@
 using System.Globalization;
+using Content.Server._DEN.Bed.Cryostorage.Components;
+using Content.Server._Floof.Persistence; // Floof - Persistence
 using Content.Server.Chat.Managers;
+using Content.Server.GameTicking; // Floof - Persistence
 using Content.Server.Ghost;
 using Content.Server.Station.Systems;
 using Content.Shared.Access.Systems;
@@ -26,6 +29,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Content.Shared._DEN.Bed.Cryostorage.Components;
 
 namespace Content.Server.Bed.Cryostorage;
 
@@ -48,6 +52,8 @@ public sealed partial class CryostorageSystem : SharedCryostorageSystem
     [Dependency] private StationRecordsSystem _stationRecords = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private ServerGameTicker _ticker = default!; // Floof - Persistence
+    [Dependency] private LiveCharacterSystem _liveCharacter = default!; // Floof - Persistence
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -61,6 +67,8 @@ public sealed partial class CryostorageSystem : SharedCryostorageSystem
         SubscribeLocalEvent<CryostorageContainedComponent, MindRemovedMessage>(OnMindRemoved);
 
         _playerManager.PlayerStatusChanged += PlayerStatusChanged;
+
+        InitializeIgnoreMessage(); // DEN: Add the ability to ignore cryo messages.
     }
 
     public override void Shutdown()
@@ -205,10 +213,17 @@ public sealed partial class CryostorageSystem : SharedCryostorageSystem
 
         if (!CryoSleepRejoiningEnabled || !comp.AllowReEnteringBody)
         {
+            _liveCharacter.LeaveRound(ent); // Floof - Persistence
+
             if (userId != null && Mind.TryGetMind(userId.Value, out var mind) &&
                 HasComp<CryostorageContainedComponent>(mind.Value.Comp.CurrentEntity))
             {
-                _ghostSystem.OnGhostAttempt(mind.Value, false);
+                // Floof Section - Persistence
+                if (_playerManager.TryGetSessionById(userId.Value, out var session) && session.Status == SessionStatus.InGame)
+                    _ticker.Respawn(session);
+                else
+                    _ghostSystem.OnGhostAttempt(mind.Value, false);
+                // Floof Section End
             }
         }
 
@@ -233,15 +248,33 @@ public sealed partial class CryostorageSystem : SharedCryostorageSystem
             _stationRecords.RemoveRecord(key, stationRecords);
         }
 
-        _chatSystem.DispatchStationAnnouncement(station.Value,
-            Loc.GetString(
-                "earlyleave-cryo-announcement",
-                ("character", name),
-                ("entity", ent.Owner), // gender things for supporting downstreams with other languages
-                ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))
-            ), Loc.GetString("earlyleave-cryo-sender"),
-            playDefaultSound: false
-        );
+        // DEN Start: Add the ability to choose not to broadcast cryo messages, and to opt out of receiving them.
+        if (!TryComp<CryoingSilentlyComponent>(ent, out var silentCryo))
+        {
+            if (!TryComp<StationDataComponent>(station.Value, out var stationData))
+                return;
+
+            var notIgnoring = _station.GetInStation(stationData)
+                .RemoveWhereAttachedEntity(HasComp<IgnoringCryoMessagesComponent>);
+                
+            _chatSystem.DispatchFilteredAnnouncement(
+                notIgnoring,
+                Loc.GetString(
+                    "earlyleave-cryo-announcement",
+                    ("character", name),
+                    ("entity", ent.Owner), // gender things for supporting downstreams with other languages
+                    ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))
+                ),
+                station.Value, 
+                Loc.GetString("earlyleave-cryo-sender"),
+                false
+            );
+        }
+        else
+        {
+            RemCompDeferred(ent, silentCryo);
+        }
+        // DEN End
     }
 
     private void HandleCryostorageReconnection(Entity<CryostorageContainedComponent> entity)
@@ -287,6 +320,8 @@ public sealed partial class CryostorageSystem : SharedCryostorageSystem
             : "cryostorage-insert-message-permanent";
 
         var msg = Loc.GetString(locKey, ("time", comp.GracePeriod.TotalMinutes));
+        if (!CryoSleepRejoiningEnabled) // Floof - Persistence
+            msg = Loc.GetString("cryostorage-insert-message-floof", ("time", comp.GracePeriod.TotalSeconds));
         if (TryComp<ActorComponent>(args.Entity, out var actor))
             _chatManager.ChatMessageToOne(ChatChannel.Server, msg, msg, uid, false, actor.PlayerSession.Channel);
     }

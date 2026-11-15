@@ -4,6 +4,10 @@
   name: inflatable barricade
   description: An inflated membrane. Activate to deflate. Do not puncture.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/InflatableWall.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite

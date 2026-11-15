@@ -1,0 +1,190 @@
+- type: latheRecipe
+  abstract: true
+  parent: BaseCoatRecipe
+  id: BaseCoatCosmeticRecipe
+  materials:
+    Cloth: 500
+
+- type: latheRecipe
+  abstract: true
+  id: BaseOuterwearRecipe
+  categories:
+  - Outerwear
+  completetime: 4
+  materials:
+    Cloth: 400
+
+# Job-specific outerwear
+
+- type: latheRecipe
+  parent: BaseOuterwearRecipe
+  id: ClothingOuterApron
+  result: ClothingOuterApron
+
+- type: latheRecipe
+  parent: BaseOuterwearRecipe
+  id: ClothingOuterApronBar
+  result: ClothingOuterApronBar
+
+- type: latheRecipe
+  parent: BaseOuterwearRecipe
+  id: ClothingOuterApronBotanist
+  result: ClothingOuterApronBotanist
+
+- type: latheRecipe
+  parent: BaseOuterwearRecipe
+  id: ClothingOuterApronChef
+  result: ClothingOuterApronChef
+
+- type: latheRecipe
+  parent: BaseOuterwearRecipe
+  id: ClothingOuterVest
+  result: ClothingOuterVest
+
+# Non-job specific cosmetic outerwear
+
+# Job-specific coats
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterJacketChef
+  result: ClothingOuterJacketChef
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterHoodieChaplain
+  result: ClothingOuterHoodieChaplain
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatLab
+  result: ClothingOuterCoatLab
+
+# Non-job specific cosmetic coats
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterHoodieBlack
+  result: ClothingOuterHoodieBlack
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterHoodieGrey
+  result: ClothingOuterHoodieGrey
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatGentle
+  result: ClothingOuterCoatGentle
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatJensen
+  result: ClothingOuterCoatJensen
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatPirate
+  result: ClothingOuterCoatPirate
+
+- type: latheRecipe
+  parent: BaseOuterwearRecipe
+  id: ClothingOuterPlagueSuit
+  result: ClothingOuterPlagueSuit
+
+- type: latheRecipe
+  parent: BaseCoatRecipe # for durathread cost
+  id: ClothingOuterCoatSpaceAsshole
+  result: ClothingOuterCoatSpaceAsshole
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatExpensive
+  result: ClothingOuterCoatExpensive
+  materials:
+    Cloth: 500
+    Diamond: 25 # it's glittery or something
+
+# Winter coats
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterFlannelRed
+  result: ClothingOuterFlannelRed
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterFlannelBlue
+  result: ClothingOuterFlannelBlue
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterFlannelGreen
+  result: ClothingOuterFlannelGreen
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatBomber
+  result: ClothingOuterCoatBomber
+
+- type: latheRecipe
+  parent: BaseCoatCosmeticRecipe
+  id: ClothingOuterCoatTrench
+  result: ClothingOuterCoatTrench
+
+## Color winter coats
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorBlack
+  result: ClothingOuterWinterColorBlack
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorPurple
+  result: ClothingOuterWinterColorPurple
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorRed
+  result: ClothingOuterWinterColorRed
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorBlue
+  result: ClothingOuterWinterColorBlue
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorBrown
+  result: ClothingOuterWinterColorBrown
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorGray
+  result: ClothingOuterWinterColorGray
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorGreen
+  result: ClothingOuterWinterColorGreen
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorLightBrown
+  result: ClothingOuterWinterColorLightBrown
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorOrange
+  result: ClothingOuterWinterColorOrange
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorWhite
+  result: ClothingOuterWinterColorWhite
+
+- type: latheRecipe
+  parent: BaseCoatRecipe
+  id: ClothingOuterWinterColorYellow
+  result: ClothingOuterWinterColorYellow

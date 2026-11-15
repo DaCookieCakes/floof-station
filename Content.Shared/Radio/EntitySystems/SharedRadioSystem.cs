@@ -1,3 +1,4 @@
+using Content.Shared._Starlight.Language;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
@@ -12,10 +13,12 @@ public abstract partial class SharedRadioSystem : EntitySystem
     /// Send radio message to all active radio listeners.
     /// </summary>
     [PublicAPI]
-    public void SendRadioMessage(EntityUid messageSource,
+    public void SendRadioMessage(
+        EntityUid messageSource,
         string message,
         ProtoId<RadioChannelPrototype> channel,
         EntityUid radioSource,
+        LanguagePrototype? language = null, // Starlight
         bool escapeMarkup = true)
     {
         SendRadioMessage(messageSource, message, ProtoMan.Index(channel), radioSource, escapeMarkup: escapeMarkup);
@@ -30,10 +33,12 @@ public abstract partial class SharedRadioSystem : EntitySystem
     /// <param name="radioSource">Entity transmitting the message.</param>
     /// <param name="escapeMarkup">Whether markup in the message should be escaped.</param>
     [PublicAPI]
-    public virtual void SendRadioMessage(EntityUid messageSource,
+    public virtual void SendRadioMessage(
+        EntityUid messageSource,
         string message,
         RadioChannelPrototype channel,
         EntityUid radioSource,
+        LanguagePrototype? language = null, // Starlight
         bool escapeMarkup = true)
     {
 

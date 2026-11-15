@@ -11,13 +11,23 @@
                       Visible="False">
             <Label Name="Summary" HorizontalAlignment="Center" Margin="3 3"/>
             <BoxContainer Name="ViewBox" Orientation="Horizontal" HorizontalAlignment="Center">
+                <!-- Floof - Preview size: fixed size and scale, so large markings don't shrink the sprite -->
                 <profile:ProfilePreviewSpriteView Name="ProfilePreviewSpriteView"
                                                   OverrideDirection="South"
-                                                  Scale="4 4"
-                                                  MaxSize="112 112"
-                                                  Stretch="Fill"
+                                                  Scale="3.5 3.5"
+                                                  SetSize="224 112"
+                                                  Stretch="None"
                                                   Access="Public" />
             </BoxContainer>
+            <!-- Floof Section - Persistence -->
+            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="RotateLeft" Text="◀" StyleClasses="OpenRight"/>
+                <Button Name="RotateRight" Text="▶" StyleClasses="OpenLeft"/>
+            </BoxContainer>
+            <Label Name="LiveLabel" HorizontalAlignment="Center" Visible="False" StyleClasses="LabelSubText"/>
+            <Button Name="LiveToggle" HorizontalAlignment="Center" Visible="False" ToggleMode="True" Text="{Loc 'live-character-show-template'}"/>
+            <Label Name="BalanceLabel" HorizontalAlignment="Center" Visible="False" StyleClasses="LabelSubText"/>
+            <!-- Floof Section End -->
             <controls:VSpacer/>
             <Button Name="CharacterSetup" Text="{Loc 'lobby-character-preview-panel-character-setup-button'}"
                     HorizontalAlignment="Center"

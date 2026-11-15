@@ -191,6 +191,12 @@ namespace Content.Client.PDA
 
             AddressLabel.Text = state.Address?.ToUpper() ?? " - ";
 
+            // Floof Section - Bank
+            BalanceLabel.Visible = state.Balance != null;
+            if (state.Balance is { } balance)
+                BalanceLabel.SetMarkup(Loc.GetString("comp-pda-ui-balance", ("balance", balance)));
+            // Floof Section End - Bank
+
             EjectIdButton.IsActive = state.PdaOwnerInfo.IdOwner != null || state.PdaOwnerInfo.JobTitle != null;
             EjectPenButton.IsActive = state.HasPen;
             EjectPaiButton.IsActive = state.HasPai;

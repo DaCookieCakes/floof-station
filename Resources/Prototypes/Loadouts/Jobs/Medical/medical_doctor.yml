@@ -1,6 +1,7 @@
 # Head
 - type: loadout
   id: SeniorPhysicianBeret
+  groupBy: DoctorGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorPhysician
@@ -9,6 +10,7 @@
 
 - type: loadout
   id: MedicalHeadMirror
+  groupBy: DoctorGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: MedicalJourneymanTimer
@@ -17,42 +19,50 @@
 
 - type: loadout
   id: MedicalBeret
+  groupBy: DoctorGear # FLOOF
   equipment:
     head: ClothingHeadHatBeretMedic
 
 - type: loadout
   id: BlueSurgeryCap
+  groupBy: DoctorGear # FLOOF
   equipment:
     head: ClothingHeadHatSurgcapBlue
 
 - type: loadout
   id: GreenSurgeryCap
+  groupBy: DoctorGear # FLOOF
   equipment:
     head: ClothingHeadHatSurgcapGreen
 
 - type: loadout
   id: PurpleSurgeryCap
+  groupBy: DoctorGear # FLOOF
   equipment:
     head: ClothingHeadHatSurgcapPurple
 
 - type: loadout
   id: NurseHat
+  groupBy: DoctorGear # FLOOF
   equipment:
     head: ClothingHeadNurseHat
 
 # Jumpsuit
 - type: loadout
   id: MedicalDoctorJumpsuit
+  groupBy: DoctorGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitMedicalDoctor
 
 - type: loadout
   id: MedicalDoctorJumpskirt
+  groupBy: DoctorGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtMedicalDoctor
 
 - type: loadout
   id: SeniorPhysicianJumpsuit
+  groupBy: DoctorGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorPhysician
@@ -61,6 +71,7 @@
 
 - type: loadout
   id: SeniorPhysicianJumpskirt
+  groupBy: DoctorGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorPhysician
@@ -69,43 +80,51 @@
 
 - type: loadout
   id: MedicalBlueScrubs
+  groupBy: DoctorGear # FLOOF
   equipment:
     jumpsuit: UniformScrubsColorBlue
 
 - type: loadout
   id: MedicalGreenScrubs
+  groupBy: DoctorGear # FLOOF
   equipment:
     jumpsuit: UniformScrubsColorGreen
 
 - type: loadout
   id: MedicalPurpleScrubs
+  groupBy: DoctorGear # FLOOF
   equipment:
     jumpsuit: UniformScrubsColorPurple
 
 # Back
 - type: loadout
   id: MedicalDoctorBackpack
+  groupBy: DoctorGear # FLOOF
   equipment:
     back: ClothingBackpackMedical
 
 - type: loadout
   id: MedicalDoctorSatchel
+  groupBy: DoctorGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelMedical
 
 - type: loadout
   id: MedicalDoctorDuffel
+  groupBy: DoctorGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelMedical
 
 # OuterClothing
 - type: loadout
   id: MedicalDoctorWintercoat
+  groupBy: DoctorGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterMed
 
 - type: loadout
   id: SeniorPhysicianLabCoat
+  groupBy: DoctorGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorPhysician
@@ -115,17 +134,20 @@
 # Shoes
 - type: loadout
   id: MedicalWinterBoots
+  groupBy: DoctorGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWinterMed
 
 # ID
 - type: loadout
   id: MedicalDoctorPDA
+  groupBy: DoctorGear # FLOOF
   equipment:
     id: MedicalPDA
 
 - type: loadout
   id: SeniorPhysicianPDA
+  groupBy: DoctorGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorPhysician
@@ -135,5 +157,6 @@
 #Masks
 - type: loadout
   id: SterileMask
+  groupBy: DoctorGear # FLOOF
   equipment:
     mask: ClothingMaskSterile

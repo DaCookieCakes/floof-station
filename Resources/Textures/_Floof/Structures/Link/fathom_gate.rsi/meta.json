@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Fathom gate test scene for the SS14 Sprite Renderer",
+  "size": {
+    "x": 96,
+    "y": 160
+  },
+  "states": [
+    {
+      "name": "plinth",
+      "directions": 4
+    },
+    {
+      "name": "ring",
+      "directions": 4
+    },
+    {
+      "name": "glyphs",
+      "directions": 4
+    },
+    {
+      "name": "portal",
+      "directions": 4,
+      "delays": [
+        [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ]
+      ]
+    }
+  ]
+}

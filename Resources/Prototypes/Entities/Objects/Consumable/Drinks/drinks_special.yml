@@ -4,6 +4,10 @@
   name: shot glass
   description: Perfect for slamming down onto the table angrily.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkShotGlass.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       maxVol: 5 # Shot glass translates to about 5.3u so we round down because Nanotrasen is cheap.

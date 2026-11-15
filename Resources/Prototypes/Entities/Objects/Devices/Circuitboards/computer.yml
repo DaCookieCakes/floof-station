@@ -25,6 +25,7 @@
   name: atmospheric alerts computer board
   description: A computer printed circuit board for an atmospheric alerts computer.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_engineering
     - type: ComputerBoard
@@ -36,6 +37,7 @@
   name: atmospheric network monitor board
   description: A computer printed circuit board for an atmospheric network monitor.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_engineering
     - type: ComputerBoard
@@ -47,6 +49,7 @@
   name: power monitoring computer board
   description: A computer printed circuit board for a power monitoring computer.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_engineering
     - type: ComputerBoard
@@ -69,6 +72,7 @@
   name: criminal records computer board
   description: A computer printed circuit board for a criminal records computer.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_security
     - type: ComputerBoard
@@ -169,6 +173,7 @@
   name: funding allocation computer board
   description: A computer printed circuit board for a funding allocation card console.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: cpu_command
   - type: ComputerBoard
@@ -244,6 +249,7 @@
   name: surveillance camera monitor board
   description: A computer printed circuit board for a surveillance camera monitor.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: cpu_security
   - type: ComputerBoard
@@ -292,6 +298,7 @@
   name: R&D computer board
   description: A computer printed circuit board for a R&D console.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_science
     - type: ComputerBoard
@@ -303,6 +310,7 @@
   name: analysis computer board
   description: A computer printed circuit board for an analysis console.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_science
     - type: ComputerBoard
@@ -325,6 +333,7 @@
   name: crew monitoring computer board
   description: A computer printed circuit board for a crew monitoring console.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: cpu_medical
   - type: ComputerBoard
@@ -336,6 +345,7 @@
   name: ID card computer board
   description: A computer printed circuit board for an ID card console.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_command
     - type: ComputerBoard
@@ -363,6 +373,7 @@
   name: communications computer board
   description: A computer printed circuit board for a communications console.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_command
     - type: ComputerBoard
@@ -374,6 +385,7 @@
   name: syndicate communications computer board
   description: A computer printed circuit board for a syndicate communications console.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: cpu_syndicate
   - type: ComputerBoard
@@ -417,6 +429,7 @@
   name: solar control computer board
   description: A computer printed circuit board for a solar control console.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_engineering
     - type: ComputerBoard
@@ -428,6 +441,7 @@
   name: space villain arcade board
   description: A computer printed circuit board for a space villain arcade cabinet.
   components:
+    - type: FloodMask # Floof - flooding
     - type: ComputerBoard
       prototype: SpaceVillainArcade
 
@@ -437,6 +451,7 @@
   name: block game arcade board
   description: A computer printed circuit board for a block game arcade cabinet.
   components:
+    - type: FloodMask # Floof - flooding
     - type: ComputerBoard
       prototype: BlockGameArcade
 
@@ -457,6 +472,7 @@
   name: shuttle console board
   description: A computer printed circuit board for a shuttle console.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: cpu_supply
   - type: ComputerBoard
@@ -468,6 +484,7 @@
   name: syndicate shuttle console board
   description: A computer printed circuit board for a syndicate shuttle console.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: cpu_syndicate
   - type: ComputerBoard
@@ -490,6 +507,7 @@
   name: IFF console board
   description: Allows you to control the IFF characteristics of this vessel.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_command
     - type: ComputerBoard
@@ -558,6 +576,7 @@
   name: AI upload console board
   description: A computer printed circuit board for an AI upload console.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       state: cpu_science
     - type: ComputerBoard

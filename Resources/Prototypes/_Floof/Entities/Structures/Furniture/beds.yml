@@ -1,0 +1,54 @@
+- type: entity
+  parent: [ BaseStructure, StructureHealthFurniture ]
+  id: DoubleBed
+  name: double bed
+  description: A luxurious double bed with room for two.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - TableMask
+  - type: Sprite
+    sprite: _Floof/Structures/Furniture/double_bed.rsi
+    state: double_bed
+    noRot: true
+  - type: Strap
+    position: Down
+    rotation: -90
+    size: 200
+    modifyBuckleDrawDepth: false
+  - type: DirectionalBed
+  - type: StrapSlots
+    offsets:
+    - 0,0
+    - 0,0.4375
+  - type: Construction
+    graph: DoubleBed
+    node: doublebed
+  - type: PlaceableSurface
+    placeCentered: true
+  - type: Transform
+    anchored: true
+  - type: Anchorable
+  - type: Pullable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 4

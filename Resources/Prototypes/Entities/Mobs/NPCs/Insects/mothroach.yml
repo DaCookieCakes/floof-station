@@ -4,6 +4,13 @@
   name: mothroach
   description: This is the adorable by-product of multiple attempts at genetically mixing mothpeople with cockroaches.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Moffic
+    understands:
+    - Moffic
+  # Starlight-end
   - type: Sprite
     sprite: Mobs/Animals/Insects/mothroach/mothroach.rsi
     layers:
@@ -139,8 +146,6 @@
   - type: BodyEmotes
     soundsId: MothBodyEmotes
   - type: MothAccent
-  - type: ReplacementAccent
-    accent: mothroach
   - type: ZombieAccentOverride
     accent: zombieMoth
   - type: TypingIndicator

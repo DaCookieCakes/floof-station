@@ -4,6 +4,10 @@
   id: BoxBeaker
   description: A box full of beakers.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxBeaker.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Storage
     grid:
     - 0,0,3,2

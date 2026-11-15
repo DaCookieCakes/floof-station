@@ -3,6 +3,19 @@
   parent: [SolutionWelder, BaseItem]
   id: BaseWelder
   components:
+  - type: EmitSoundOnPickup # Euphoria - Bring back interaction SFX from EE
+    sound:
+      path: /Audio/_EE/Items/Handling/welder_pickup.ogg
+      params:
+        volume: -4
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_EE/Items/Handling/welder_drop.ogg
+      params:
+        volume: -4
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
   - type: Sprite
     layers:
     - state: icon
@@ -10,9 +23,6 @@
       visible: false
       shader: unshaded
       map: [ "enum.ToggleableVisuals.Layer" ]
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/welder_drop.ogg
   - type: GenericVisualizer
     visuals:
       enum.ToggleableVisuals.Enabled:
@@ -105,6 +115,7 @@
   name: welding tool
   description: "Melts anything as long as it's fueled, don't forget your eye protection!"
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder.rsi
 
@@ -126,6 +137,7 @@
   id: WelderIndustrial
   description: "An industrial welder with over double the fuel capacity."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder_industrial.rsi
   - type: Item
@@ -149,6 +161,7 @@
   id: WelderIndustrialAdvanced
   description: "An advanced industrial welder with over double the fuel capacity and hotter flame."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder_industrialadv.rsi
   - type: Item
@@ -197,6 +210,7 @@
   id: WelderMini
   description: "A miniature welder used during emergencies."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/welder_mini.rsi
   - type: Item
@@ -240,6 +254,7 @@
   name: refueling welding tool
   description: "A slow welder that can refuel itself over time."
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tool
     speedModifier: 0.5
   - type: Welder

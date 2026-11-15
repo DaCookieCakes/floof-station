@@ -115,6 +115,30 @@
     keyWhitelist:
       tags:
       - JanicartKeys
+  # Floof Section - janicart suction
+  - type: Solution
+    id: suction
+    solution:
+      maxVol: 300000
+  - type: DrainableSolution
+    solution: suction
+  - type: ExaminableSolution
+    solution: suction
+  - type: ItemToggle
+    onUse: false
+    verbToggleOn: janicart-suction-verb-on
+    verbToggleOff: janicart-suction-verb-off
+    popupActivate: janicart-suction-popup-on
+    popupDeactivate: janicart-suction-popup-off
+  - type: ComponentToggler
+    components:
+    - type: PuddleSuction
+    - type: SpeedModifier
+      walkModifier: 0.25
+      sprintModifier: 0.25
+  - type: VehicleToggleAction
+    action: ActionToggleJanicartSuction
+  # Floof Section End
   - type: UnpoweredFlashlight
   - type: PointLight
     enabled: false

@@ -4,6 +4,7 @@
   id: FlashlightLantern
   description: It lights the way to freedom.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - Flashlight

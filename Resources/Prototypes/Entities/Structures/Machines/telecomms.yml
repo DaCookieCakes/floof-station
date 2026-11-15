@@ -4,6 +4,10 @@
   name: telecommunication server
   description: When powered and filled with encryption keys it allows radio headset communication.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Machines/telecomms.rsi
     snapCardinals: true
@@ -188,6 +192,10 @@
   id: TelecomServerFilled
   suffix: Filled All
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -205,6 +213,10 @@
   id: TelecomServerFilledCommon
   suffix: Common
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -215,6 +227,10 @@
   id: TelecomServerFilledCargo
   suffix: Cargo
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -225,6 +241,10 @@
   id: TelecomServerFilledEngineering
   suffix: Engineering
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -235,6 +255,10 @@
   id: TelecomServerFilledMedical
   suffix: Medical
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -245,6 +269,10 @@
   id: TelecomServerFilledScience
   suffix: Science
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -255,6 +283,10 @@
   id: TelecomServerFilledSecurity
   suffix: Security
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -265,6 +297,10 @@
   id: TelecomServerFilledService
   suffix: Service
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:
@@ -275,6 +311,10 @@
   id: TelecomServerFilledCommand
   suffix: Command
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TelecomServer.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       key_slots:

@@ -19,6 +19,7 @@
   name: law board (NT Default)
   description: An electronics board containing the NT Default lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: NTDefault
 
@@ -28,6 +29,7 @@
   name: law board (Crewsimov)
   description: An electronics board containing the Crewsimov lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: Crewsimov
 
@@ -37,6 +39,7 @@
   name: law board (Corporate)
   description: An electronics board containing the Corporate lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: Corporate
 
@@ -46,6 +49,7 @@
   name: law board (Ten Commandments)
   description: An electronics board containing the Ten Commandments lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: CommandmentsLawset
 
@@ -55,6 +59,7 @@
   name: law board (Paladin)
   description: An electronics board containing the Paladin lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: PaladinLawset
 
@@ -64,6 +69,7 @@
   name: law board (Live and Let Live)
   description: An electronics board containing the Live and Let Live lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: LiveLetLiveLaws
 
@@ -73,6 +79,7 @@
   name: law board (Station Efficiency)
   description: An electronics board containing the Station Efficiency lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: EfficiencyLawset
 
@@ -82,6 +89,7 @@
   name: law board (Robocop)
   description: An electronics board containing the Robocop lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: RobocopLawset
 
@@ -100,6 +108,7 @@
   name: law board (Game Master)
   description: An electronics board containing the Game Master lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: GameMasterLawset
 
@@ -109,6 +118,7 @@
   name: law board (Artist)
   description: An electronics board containing the Artist lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: PainterLawset
 
@@ -142,6 +152,7 @@
   name: law board (Nutimov)
   description: An electronics board containing the Nutimov lawset.
   components:
+  - type: FloodMask # Floof - flooding
   - type: SiliconLawProvider
     laws: NutimovLawset
 

@@ -4,6 +4,10 @@
   name: ashtray
   description: Proven by scientists to improve the smoking experience by 37%!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Ashtray.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Decoration/ashtray.rsi
     layers:

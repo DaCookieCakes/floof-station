@@ -1,5 +1,6 @@
 - type: job
   id: Reporter
+  pay: 400 # Floof - bank
   name: job-name-reporter
   description: job-description-reporter
   playTimeTracker: JobReporter
@@ -14,7 +15,7 @@
 - type: startingGear
   id: ReporterGear
   equipment:
-    shoes: ClothingShoesColorWhite
+  #  shoes: ClothingShoesColorWhite # FLOOF
     id: ReporterPDA
     ears: ClothingHeadsetService
   #storage:

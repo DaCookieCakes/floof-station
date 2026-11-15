@@ -1,0 +1,4 @@
+- type: consentToggle
+  id: Watersports
+  name: consent-toggle-watersports
+  description: consent-toggle-watersports-desc

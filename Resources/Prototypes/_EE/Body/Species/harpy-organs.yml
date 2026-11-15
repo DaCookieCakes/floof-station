@@ -1,0 +1,124 @@
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganHarpy
+  abstract: true
+  suffix: harpy
+
+- type: entity
+  id: OrganHarpyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Harpy ]
+
+- type: entity
+  parent: OrganHarpy
+  id: OrganHarpyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _EE/Mobs/Species/Harpy/organs.rsi
+
+- type: entity
+  parent: OrganHarpy
+  id: OrganHarpyExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _EE/Mobs/Species/Harpy/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _EE/Mobs/Species/Harpy/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: MarkingsGroupHarpy
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHarpyExternal ]
+  id: OrganHarpyTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganHarpyExternal ]
+  id: OrganHarpyHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.FacialHair
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganHarpyExternal ]
+  id: OrganHarpyArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganHarpyExternal ]
+  id: OrganHarpyArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganHarpyExternal ]
+  id: OrganHarpyHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganHarpyExternal ]
+  id: OrganHarpyHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganHarpyExternal ]
+  id: OrganHarpyLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganHarpyExternal ]
+  id: OrganHarpyLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganHarpyExternal ]
+  id: OrganHarpyFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganHarpyExternal ]
+  id: OrganHarpyFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganHarpyInternal ]
+  id: OrganHarpyBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganHarpyInternal, OrganHarpyExternal ]
+  id: OrganHarpyEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganHarpyInternal ]
+  id: OrganHarpyTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganHarpyInternal ]
+  id: OrganHarpyAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganHarpyInternal ]
+  id: OrganHarpyEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganHarpyInternal, OrganHarpyMetabolizer ]
+  id: OrganHarpyLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganHarpyInternal, OrganHarpyMetabolizer ]
+  id: OrganHarpyHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganHarpyInternal, OrganHarpyMetabolizer ]
+  id: OrganHarpyStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganHarpyInternal, OrganHarpyMetabolizer ]
+  id: OrganHarpyLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganHarpyInternal, OrganHarpyMetabolizer ]
+  id: OrganHarpyKidneys

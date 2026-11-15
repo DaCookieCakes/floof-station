@@ -1,0 +1,124 @@
+# WATER VAPOR #
+
+# empty tanks
+- type: entity
+  parent: EmergencyOxygenTank
+  id: EmergencyTankWaterVapor
+  suffix: Floof
+  name: emergency water vapor tank
+  description: An easily portable tank for emergencies. Contains very little water vapor, rated for survival use only. It can hold 0.66 L of gas.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Tanks/emergency_water.rsi
+  - type: Item
+    sprite: _Floof/Objects/Tanks/emergency_water.rsi
+    storedSprite:
+      state: storage
+      sprite: _Floof/Objects/Tanks/emergency_water.rsi
+  - type: Clothing
+    sprite: _Floof/Objects/Tanks/emergency_water.rsi
+
+- type: entity
+  parent: DoubleEmergencyOxygenTank
+  id: EmergencyDoubleTankWaterVapor
+  suffix: Floof
+  name: double emergency water vapor tank
+  description: A high-grade dual-tank emergency life support container. It holds a decent amount of water vapor for its small size. It can hold 2.5 L of gas.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Tanks/emergency_water_double.rsi
+  - type: Item
+    sprite: _Floof/Objects/Tanks/emergency_water_double.rsi
+    storedSprite:
+      state: storage
+      sprite: _Floof/Objects/Tanks/emergency_water_double.rsi
+  - type: Clothing
+    sprite: _Floof/Objects/Tanks/emergency_water_double.rsi
+
+- type: entity
+  parent: ExtendedEmergencyOxygenTank
+  id: EmergencyTankExtendedWater
+  suffix: Floof
+  name: extended-capacity emergency water vapor tank
+  description: An emergency tank with extended capacity. Technically rated for prolonged use. It can hold 1.5 L of gas.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Tanks/emergency_water_extended.rsi
+  - type: Item
+    sprite: _Floof/Objects/Tanks/emergency_water_extended.rsi
+    storedSprite:
+      state: storage
+      sprite: _Floof/Objects/Tanks/emergency_water_extended.rsi
+  - type: Clothing
+    sprite: _Floof/Objects/Tanks/emergency_water_extended.rsi
+
+- type: entity
+  parent: GasTankRoundBase
+  id: TankWater
+  name: water vapor tank
+  suffix: Floof
+  description: A standard cylindrical gas tank for water vapor. It can hold 5 L of gas.
+  components:
+  - type: Sprite
+    sprite: _Floof/Objects/Tanks/water.rsi
+  - type: Item
+    sprite: _Floof/Objects/Tanks/water.rsi
+  - type: Clothing
+    sprite: _Floof/Objects/Tanks/water.rsi
+
+
+# filled tanks
+- type: entity
+  id: EmergencyTankWaterVaporFilled
+  parent: EmergencyTankWaterVapor
+  suffix: Filled
+  components:
+  - type: GasTank
+    releasePressure: 21.3
+    air:
+      # 4 minutes
+      volume: 0.66
+      moles:
+        WaterVapor: 0.270782035
+      temperature: 293.15
+
+- type: entity
+  id: EmergencyDoubleTankWaterVaporFilled
+  parent: EmergencyDoubleTankWaterVapor
+  suffix: Floof, Filled
+  components:
+  - type: GasTank
+    releasePressure: 21.3
+    air:
+      # 15 minutes
+      volume: 2.5
+      moles:
+        WaterVapor: 1.025689525
+      temperature: 293.15
+
+- type: entity
+  id: EmergencyTankExtendedWaterFilled
+  parent: EmergencyTankExtendedWater
+  suffix: Floof, Filled
+  components:
+  - type: GasTank
+    releasePressure: 21.3
+    air:
+      # 9 minutes
+      volume: 1.5
+      moles:
+        WaterVapor: 0.615413715
+      temperature: 293.15
+
+- type: entity
+  id: TankWaterFilled
+  parent: TankWater
+  suffix: Floof, Filled
+  components:
+  - type: GasTank
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        WaterVapor: 2.051379050
+      temperature: 293.15

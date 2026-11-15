@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Flood mask by Wah, traced from the sprite: tgstation at bcdd834d17c8c6b20ba53cb270b695ca884fec98",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mask",
+      "directions": 4
+    }
+  ]
+}

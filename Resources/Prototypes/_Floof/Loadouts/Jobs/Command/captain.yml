@@ -1,0 +1,44 @@
+# Outer clothing
+- type: loadout
+  id: CaptainArmoredLongcoat
+  groupBy: "CaptainGear"
+  equipment:
+    outerClothing: ClothingLongcoatCaptainArmored
+
+- type: loadout
+  id: CaptainArmoredWinterCoat
+  groupBy: "CaptainGear"
+  equipment:
+    outerClothing: ClothingOuterWinterCapArmored
+
+- type: loadout
+  id: CaptainLongCoat
+  groupBy: CaptainGear
+  equipment:
+    outerClothing: ClothingLongcoatCap
+
+# Gloves
+- type: loadout
+  id: CaptainGloves
+  groupBy: CaptainGear
+  equipment:
+    gloves: ClothingHandsGlovesCaptain
+
+- type: loadout
+  id: PapercutProofGloves
+  groupBy: HoPGear
+  equipment:
+    gloves: ClothingHandsGlovesHop
+
+- type: loadout
+  id: CaptainArmWarmers
+  groupBy: CaptainGear
+  equipment:
+    gloves: ClothingHandsCaptainWarmers
+
+# Socks
+- type: loadout
+  id: CaptainThighHighs
+  groupBy: CaptainGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksCaptain

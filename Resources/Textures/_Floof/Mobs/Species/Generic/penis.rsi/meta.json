@@ -1,0 +1,299 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "penis"
+        },
+        {
+            "name": "penis_human_1"
+        },
+        {
+            "name": "penis_human_2"
+        },
+        {
+            "name": "penis_human_3"
+        },
+        {
+            "name": "penis_knotted_1"
+        },
+        {
+            "name": "penis_knotted_2"
+        },
+        {
+            "name": "penis_knotted_3"
+        },
+        {
+            "name": "penis_tapered_1"
+        },
+        {
+            "name": "penis_tapered_2"
+        },
+        {
+            "name": "penis_tapered_3"
+        },
+        {
+            "name": "penis_blunt_1"
+        },
+        {
+            "name": "penis_blunt_2"
+        },
+        {
+            "name": "penis_blunt_3"
+        },
+        {
+            "name": "penis_flared_1"
+        },
+        {
+            "name": "penis_flared_2"
+        },
+        {
+            "name": "penis_flared_3"
+        },
+        {
+            "name": "penis_barbknot_1"
+        },
+        {
+            "name": "penis_barbknot_2"
+        },
+        {
+            "name": "penis_barbknot_3"
+        },
+        {
+            "name": "penis_barbed_1"
+        },
+        {
+            "name": "penis_barbed_2"
+        },
+        {
+            "name": "penis_barbed_3"
+        },
+        {
+            "name": "penis_knotrib_1"
+        },
+        {
+            "name": "penis_knotrib_2"
+        },
+        {
+            "name": "penis_knotrib_3"
+        },
+        {
+            "name": "penis_human_1_s"
+        },
+        {
+            "name": "penis_human_2_s"
+        },
+        {
+            "name": "penis_human_3_s"
+        },
+        {
+            "name": "penis_knotted_1_s"
+        },
+        {
+            "name": "penis_knotted_2_s"
+        },
+        {
+            "name": "penis_knotted_3_s"
+        },
+        {
+            "name": "penis_tapered_1_s"
+        },
+        {
+            "name": "penis_tapered_2_s"
+        },
+        {
+            "name": "penis_tapered_3_s"
+        },
+        {
+            "name": "penis_blunt_1_s"
+        },
+        {
+            "name": "penis_blunt_2_s"
+        },
+        {
+            "name": "penis_blunt_3_s"
+        },
+        {
+            "name": "penis_flared_1_s"
+        },
+        {
+            "name": "penis_flared_2_s"
+        },
+        {
+            "name": "penis_flared_3_s"
+        },
+        {
+            "name": "penis_barbknot_1_s"
+        },
+        {
+            "name": "penis_barbknot_2_s"
+        },
+        {
+            "name": "penis_barbknot_3_s"
+        },
+        {
+            "name": "penis_barbed_1_s"
+        },
+        {
+            "name": "penis_barbed_2_s"
+        },
+        {
+            "name": "penis_barbed_3_s"
+        },
+        {
+            "name": "penis_knotrib_1_s"
+        },
+        {
+            "name": "penis_knotrib_2_s"
+        },
+        {
+            "name": "penis_knotrib_3_s"
+        },
+        {
+            "name": "penis_human_4"
+        },
+        {
+            "name": "penis_knotted_4"
+        },
+        {
+            "name": "penis_tapered_4"
+        },
+        {
+            "name": "penis_blunt_4"
+        },
+        {
+            "name": "penis_flared_4"
+        },
+        {
+            "name": "penis_barbknot_4"
+        },
+        {
+            "name": "penis_barbed_4"
+        },
+        {
+            "name": "penis_knotrib4"
+        },
+        {
+            "name": "penis_human_4_s"
+        },
+        {
+            "name": "penis_knotted_4_s"
+        },
+        {
+            "name": "penis_tapered_4_s"
+        },
+        {
+            "name": "penis_blunt_4_s"
+        },
+        {
+            "name": "penis_flared_4_s"
+        },
+        {
+            "name": "penis_barbknot_4_s"
+        },
+        {
+            "name": "penis_knotrib_4_s"
+        },
+        {
+            "name": "penis_tentacle_1"
+        },
+        {
+            "name": "penis_tentacle_2"
+        },
+        {
+            "name": "penis_tentacle_3"
+        },
+        {
+            "name": "penis_tentacle_1_s"
+        },
+        {
+            "name": "penis_tentacle_2_s"
+        },
+        {
+            "name": "penis_tentacle_3_s"
+        },
+        {
+            "name": "penis_tentacle_4"
+        },
+        {
+            "name": "penis_tentacle_4_s"
+        },
+        {
+            "name": "penis_hemi_1"
+        },
+        {
+            "name": "penis_hemi_2"
+        },
+        {
+            "name": "penis_hemi_3"
+        },
+        {
+            "name": "penis_hemi_1_s"
+        },
+        {
+            "name": "penis_hemi_2_s"
+        },
+        {
+            "name": "penis_hemi_3_s"
+        },
+        {
+            "name": "penis_hemi_4"
+        },
+        {
+            "name": "penis_hemi_4_s"
+        },
+        {
+            "name": "penis_hemiknot_1"
+        },
+        {
+            "name": "penis_hemiknot_2"
+        },
+        {
+            "name": "penis_hemiknot_3"
+        },
+        {
+            "name": "penis_hemiknot_1_s"
+        },
+        {
+            "name": "penis_hemiknot_2_s"
+        },
+        {
+            "name": "penis_hemiknot_3_s"
+        },
+        {
+            "name": "penis_hemiknot_4"
+        },
+        {
+            "name": "penis_hemiknot_4_s"
+        },
+        {
+            "name": "penis_thick_1"
+        },
+        {
+            "name": "penis_thick_2"
+        },
+        {
+            "name": "penis_thick_3"
+        },
+        {
+            "name": "penis_thick_1_s"
+        },
+        {
+            "name": "penis_thick_2_s"
+        },
+        {
+            "name": "penis_thick_3_s"
+        },
+        {
+            "name": "penis_thick_4"
+        },
+        {
+            "name": "penis_thick_4_s"
+        }
+    ]
+}

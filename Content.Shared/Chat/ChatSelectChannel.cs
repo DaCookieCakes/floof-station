@@ -7,7 +7,7 @@ namespace Content.Shared.Chat
     ///     Maps to <see cref="ChatChannel"/>, giving better names.
     /// </remarks>
     [Flags]
-    public enum ChatSelectChannel : ushort
+    public enum ChatSelectChannel : UInt32
     {
         None = 0,
 
@@ -40,6 +40,16 @@ namespace Content.Shared.Chat
         ///     Emotes
         /// </summary>
         Emotes = ChatChannel.Emotes,
+
+        /// <summary>
+        ///     Subtle - Floofstation
+        /// </summary>
+        Subtle = ChatChannel.Subtle,
+
+        /// <summary>
+        ///     Subtle - Floofstation
+        /// </summary>
+        SubtleOOC = ChatChannel.SubtleOOC,
 
         /// <summary>
         ///     Deadchat

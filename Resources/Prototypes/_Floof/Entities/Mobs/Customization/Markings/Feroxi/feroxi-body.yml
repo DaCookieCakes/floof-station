@@ -1,0 +1,170 @@
+# HEAD #
+- type: marking
+  id: MarkingStripesTigerHeadFeroxi
+  bodyPart: Head
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-head-stripes-tiger
+
+# TORSO #
+- type: marking
+  id: MarkingStripesBlitzTorsoFeroxi
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-torso-stripes-blitz
+
+- type: marking
+  id: MarkingStripesTigerTorsoFeroxi
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-torso-stripes-tiger
+
+- type: marking
+  id: MarkingStripesCountershadingTorsoMaleFeroxi
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  sexRestriction: [ Male ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-torso-countershading-m
+
+- type: marking
+  id: MarkingStripesCountershadingTorsoFemaleFeroxi
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  sexRestriction: [ Female ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-torso-countershading-f
+
+
+# LEFT ARM #
+- type: marking
+  id: MarkingStripesBlitzLeftArmFeroxi
+  bodyPart: LArm
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-larm-stripes-blitz
+
+- type: marking
+  id: MarkingStripesTigerLeftArmFeroxi
+  bodyPart: LArm
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-larm-stripes-tiger
+
+
+# RIGHT ARM #
+- type: marking
+  id: MarkingStripesBlitzRightArmFeroxi
+  bodyPart: RArm
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-rarm-stripes-blitz
+
+- type: marking
+  id: MarkingStripesTigerRightArmFeroxi
+  bodyPart: RArm
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-rarm-stripes-tiger
+
+
+# LEFT LEG #
+- type: marking
+  id: MarkingStripesBlitzLeftLegFeroxi
+  bodyPart: LLeg
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-lleg-stripes-blitz
+
+- type: marking
+  id: MarkingStripesTigerLeftLegFeroxi
+  bodyPart: LLeg
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-lleg-stripes-tiger
+
+
+# RIGHT LEG #
+- type: marking
+  id: MarkingStripesBlitzRightLegFeroxi
+  bodyPart: RLeg
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-rleg-stripes-blitz
+
+- type: marking
+  id: MarkingStripesTigerRightLegFeroxi
+  bodyPart: RLeg
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-rleg-stripes-tiger

@@ -72,6 +72,10 @@
       "directions": 4
     },
     {
+      "name": "tail_smooth_secondary_behind",
+      "directions": 4
+    },
+    {
       "name": "tail_smooth",
       "directions": 4
     },
@@ -80,7 +84,15 @@
       "directions": 4
     },
     {
+      "name": "tail_large_behind2",
+      "directions": 4
+    },
+    {
       "name": "tail_spikes",
+      "directions": 4
+    },
+    {
+      "name": "tail_spikes_behind2",
       "directions": 4
     },
     {
@@ -88,11 +100,23 @@
       "directions": 4
     },
     {
+      "name": "tail_dtiger_behind2",
+      "directions": 4
+    },
+    {
       "name": "tail_ltiger",
       "directions": 4
     },
     {
+      "name": "tail_ltiger_behind2",
+      "directions": 4
+    },
+    {
       "name": "tail_aquatic",
+      "directions": 4
+    },
+    {
+      "name": "tail_aquatic_behind2",
       "directions": 4
     },
     {
@@ -774,6 +798,10 @@
       "directions": 4
     },
     {
+      "name": "body_backspikes_behind",
+      "directions": 4
+    },
+    {
       "name": "body_fin",
       "directions": 4
     },
@@ -790,12 +818,16 @@
       "directions": 4
     },
     {
-        "name": "visage_round",
-        "directions": 4
+      "name": "visage_round",
+      "directions": 4
     },
     {
-        "name": "visage_sharp",
-        "directions": 4
+      "name": "visage_sharp",
+      "directions": 4
+    },
+    {
+      "name": "floof_neckfull",
+      "directions": 4
     }
   ]
 }

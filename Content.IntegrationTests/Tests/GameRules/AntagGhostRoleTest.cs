@@ -1,5 +1,6 @@
 #nullable enable
 using System.Collections.Generic;
+using System.Linq; // Floof
 using Content.IntegrationTests.Fixtures.Attributes;
 using Content.IntegrationTests.Utility;
 using Content.Server.GameTicking;
@@ -29,7 +30,8 @@ public sealed partial class AntagGhostRoleTest : AntagTest
     [SidedDependency(Side.Server)] private IRobustRandom _random = default!;
     [SidedDependency(Side.Server)] private GhostRoleSystem _ghostRole = default!;
 
-    private static readonly string[] AntagGameRules = GameDataScrounger.EntitiesWithComponent("AntagSelection");
+    private static readonly string[] AntagGameRules = GameDataScrounger.EntitiesWithComponent("AntagSelection")
+        .Except(GameDataScrounger.EntitiesWithComponent("ScalingAntagRule")).ToArray(); // Floof - scaling rules start at zero
 
     [Test]
     [TestOf(typeof(ServerGameTicker)), TestOf(typeof(AntagSelectionSystem)), TestOf(typeof(AntagSelectionComponent)), TestOf(typeof(GhostRoleSystem))]

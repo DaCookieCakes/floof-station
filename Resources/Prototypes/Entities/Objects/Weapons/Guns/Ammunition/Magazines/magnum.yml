@@ -42,6 +42,7 @@
   name: pistol magazine (.45 magnum)
   description: 7-round single stack magazine for large-caliber pistols. Intended to hold general-purpose kinetic ammunition.
   components:
+  - type: FloodMask # Floof - flooding
   - type: BallisticAmmoProvider
     proto: CartridgeMagnum
   - type: Sprite

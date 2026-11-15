@@ -1,0 +1,31 @@
+light_mode unshaded;
+
+uniform sampler2D SCREEN_TEXTURE;
+uniform highp vec2 world_origin;
+uniform highp float tile_pixels;
+uniform highp vec3 light_color;
+
+const highp float gamePixels = 32.0;
+const highp float rippleSize = 0.75;
+const highp float lightStrength = 0.65;
+
+highp float web(highp vec2 q, highp float t) {
+    highp float a = sin(q.x + 1.2 * sin(q.y * 1.3 + t) + t * 0.7);
+    highp float b = sin(q.y + 1.2 * sin(q.x * 1.1 - t * 0.8) - t * 0.6);
+    return pow(1.0 - min(abs(a + b) * 0.5, 1.0), 8.0);
+}
+
+void fragment() {
+    // Anchored to the world, in the sprites' own pixels.
+    highp vec2 world = floor((FRAGCOORD.xy - world_origin) / tile_pixels * gamePixels) / gamePixels;
+    highp float amount = MODULATE.a;
+    highp float t = TIME * 0.6;
+
+    highp vec2 ripple = vec2(sin(world.y * 5.0 + t * 2.5), cos(world.x * 4.0 - t * 2.0));
+    highp vec2 displaced = FRAGCOORD.xy + ripple * rippleSize / gamePixels * tile_pixels * amount;
+    highp vec3 scene = zTextureSpec(SCREEN_TEXTURE, displaced * SCREEN_PIXEL_SIZE).rgb;
+
+    highp float light = web(world * 3.0, t) + web(world.yx * 4.3 + 7.0, t * 1.2);
+    COLOR = vec4(scene + scene * light_color * light * lightStrength * amount, 1.0);
+    MODULATE = vec4(1.0);
+}

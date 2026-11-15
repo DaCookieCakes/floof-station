@@ -1,6 +1,9 @@
 using System.Collections.Frozen;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
+using Content.Shared._Starlight.Language;
+using Content.Shared._Starlight.Language.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.CCVar;
 using Content.Shared.Chat.Prototypes;
@@ -17,6 +20,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Robust.Shared.Serialization; // Starlight
 
 namespace Content.Shared.Chat;
 
@@ -32,6 +36,8 @@ public abstract partial class SharedChatSystem : EntitySystem
     public const char OOCPrefix = '[';
     public const char EmotesPrefix = '@';
     public const char EmotesAltPrefix = '*';
+    public const char SubtlePrefix = '-'; // Floof
+    public const char SubtleOOCPrefix = '{'; // Floof
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
     public const char DefaultChannelKey = 'h';
@@ -56,6 +62,9 @@ public abstract partial class SharedChatSystem : EntitySystem
     [Dependency] private EntityWhitelistSystem _whitelist = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
+
+    [Dependency] private SharedLanguageSystem _language = default!;
+
 
     /// <summary>
     /// Cache of the keycodes for faster lookup.
@@ -184,7 +193,7 @@ public abstract partial class SharedChatSystem : EntitySystem
         if (input.StartsWith(RadioCommonPrefix))
         {
             output = SanitizeMessageCapital(input[1..].TrimStart());
-            channel = ProtoMan.Index(CommonChannel);
+            channel = ProtoMan.Index<RadioChannelPrototype>(CommonChannel);
             return true;
         }
 
@@ -407,6 +416,7 @@ public abstract partial class SharedChatSystem : EntitySystem
         string action,
         ChatTransmitRange range,
         string? nameOverride,
+        LanguagePrototype language,
         bool hideLog = false,
         bool checkEmote = true,
         bool ignoreActionBlocker = false,
@@ -437,7 +447,8 @@ public abstract partial class SharedChatSystem : EntitySystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false)
+        bool ignoreActionBlocker = false
+        )
     { }
 
     /// <summary>
@@ -451,7 +462,6 @@ public abstract partial class SharedChatSystem : EntitySystem
     /// <param name="shell"></param>
     /// <param name="player">The player doing the speaking.</param>
     /// <param name="nameOverride">The name to use for the speaking entity. Usually this should just be modified via <see cref="TransformSpeakerNameEvent"/>. If this is set, the event will not get raised.</param>
-    /// <param name="checkRadioPrefix">Whether or not <paramref name="message"/> should be parsed with consideration of radio channel prefix text at start the start.</param>
     /// <param name="ignoreActionBlocker">If set to true, action blocker will not be considered for whether an entity can send this message.</param>
     public virtual void TrySendInGameICMessage(
         EntityUid source,
@@ -463,7 +473,8 @@ public abstract partial class SharedChatSystem : EntitySystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false
+        bool ignoreActionBlocker = false,
+        LanguagePrototype? languageOverride = null // Starlight
         )
     { }
 
@@ -494,14 +505,12 @@ public abstract partial class SharedChatSystem : EntitySystem
     /// <param name="playSound">Play the announcement sound.</param>
     /// <param name="announcementSound">Sound to play.</param>
     /// <param name="colorOverride">Optional color for the announcement message.</param>
-    /// <param name="signature">Optional signature shown below the announcement message.</param>
     public virtual void DispatchGlobalAnnouncement(
         string message,
         string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null,
-        string? signature = null
+        Color? colorOverride = null
         )
     { }
 
@@ -515,7 +524,6 @@ public abstract partial class SharedChatSystem : EntitySystem
     /// <param name="playSound">Play the announcement sound.</param>
     /// <param name="announcementSound">Sound to play.</param>
     /// <param name="colorOverride">Optional color for the announcement message.</param>
-    /// <param name="signature">Optional signature shown below the announcement message.</param>
     public virtual void DispatchFilteredAnnouncement(
         Filter filter,
         string message,
@@ -523,8 +531,7 @@ public abstract partial class SharedChatSystem : EntitySystem
         string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null,
-        string? signature = null)
+        Color? colorOverride = null)
     { }
 
     /// <summary>
@@ -536,16 +543,35 @@ public abstract partial class SharedChatSystem : EntitySystem
     /// <param name="playDefaultSound">Play the announcement sound.</param>
     /// <param name="announcementSound">Sound to play.</param>
     /// <param name="colorOverride">Optional color for the announcement message.</param>
-    /// <param name="signature">Optional signature shown below the announcement message.</param>
     public virtual void DispatchStationAnnouncement(
         EntityUid source,
         string message,
         string? sender = null,
         bool playDefaultSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null,
-        string? signature = null)
+        Color? colorOverride = null)
     { }
+
+    // FLOOF: Moved from server.
+    public string ObfuscateMessageReadability(string message, float chance)
+    {
+        var modifiedMessage = new StringBuilder(message);
+
+        for (var i = 0; i < message.Length; i++)
+        {
+            if (char.IsWhiteSpace((modifiedMessage[i])))
+            {
+                continue;
+            }
+
+            if (Random.Prob(1 - chance))
+            {
+                modifiedMessage[i] = '~';
+            }
+        }
+
+        return modifiedMessage.ToString();
+    }
 }
 
 /// <summary>
@@ -571,7 +597,9 @@ public enum InGameICChatType : byte
 {
     Speak,
     Emote,
-    Whisper
+    Whisper,
+    Subtle, // Floof
+    SubtleOOC // Floof
 }
 
 /// <summary>

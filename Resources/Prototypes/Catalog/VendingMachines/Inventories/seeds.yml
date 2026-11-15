@@ -4,7 +4,9 @@
     AloeSeeds: 3
     AmbrosiaVulgarisSeeds: 3
     AppleSeeds: 5
+    AvocadoSeeds: 5 # Frontier
     BananaSeeds: 5
+    BeeSeeds: 5 # Frontier
     BerrySeeds: 5
     CarrotSeeds: 5
     CabbageSeeds: 5
@@ -14,6 +16,7 @@
     CocoaSeeds: 3
     CornSeeds: 5
     CottonSeeds: 5
+    CucumberSeeds: 5 # Frontier
     EggplantSeeds: 5
     GalaxythistleSeeds: 3
     GarlicSeeds: 3
@@ -38,7 +41,11 @@
     TowercapSeeds: 5
     WheatSeeds: 5
     WatermelonSeeds: 5
+    PomegranateSeeds: 3 # Floof
+    PearSeeds: 5 # FLOOF
+    CoffeeSeeds: 5 # FLOOF
   contrabandInventory:
     TobaccoSeeds: 2
+    HumpShroomSeeds: 3 # Floof
     FoodSnackSemki: 2
     FlyAmanitaSeeds: 1

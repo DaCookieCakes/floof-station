@@ -6,4 +6,9 @@ namespace Content.Shared.Ghost.Components;
 [RegisterComponent]
 public sealed partial class GhostHearingComponent : Component
 {
+    /// <summary>
+    /// Floof - If false, this entity will never receive any local messages
+    /// </summary>
+    [DataField]
+    public bool CanHearLocal { get; set; } = true;
 }

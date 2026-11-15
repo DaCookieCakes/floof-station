@@ -32,7 +32,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: long_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: long_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: long_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: long_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: long_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: long_secondary
 
 - type: marking
   id: ArachnidAppendagesSharp
@@ -42,7 +50,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: sharp_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: sharp_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: sharp_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: sharp_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: sharp_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: sharp_secondary
 
 - type: marking
   id: ArachnidAppendagesStingers
@@ -52,7 +68,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: stingers_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: stingers_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: stingers_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: stingers_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: stingers_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: stingers_secondary
 
 - type: marking
   id: ArachnidAppendagesZigZag
@@ -62,7 +86,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: zigzag_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: zigzag_primary_behind
+    layer: VaginaBehind
+    colorFrom: zigzag_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: zigzag_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: zigzag_secondary_behind
+    layer: VaginaBehind
+    colorFrom: zigzag_secondary
 
 - type: marking
   id: ArachnidAppendagesCurled
@@ -72,7 +104,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: curled_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: curled_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: curled_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: curled_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: curled_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: curled_secondary
 
 - type: marking
   id: ArachnidAppendagesChipped
@@ -82,7 +122,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: chipped_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: chipped_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: chipped_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: chipped_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: chipped_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: chipped_secondary
 
 - type: marking
   id: ArachnidAppendagesHarvest
@@ -92,7 +140,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: harvest_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: harvest_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: harvest_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: harvest_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: harvest_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: harvest_secondary
 
 - type: marking
   id: ArachnidAppendagesShort
@@ -102,7 +158,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: short_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: short_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: short_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: short_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: short_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: short_secondary
 
 - type: marking
   id: ArachnidAppendagesFreaky
@@ -112,7 +176,15 @@
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: freaky_primary
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: freaky_primary_behind
+    layer: TailBehindBackpack
+    colorFrom: freaky_primary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: freaky_secondary
+  - sprite: Mobs/Customization/Arachnid/appendages.rsi
+    state: freaky_secondary_behind
+    layer: TailBehindBackpack
+    colorFrom: freaky_secondary
 
 # Chest
 - type: marking

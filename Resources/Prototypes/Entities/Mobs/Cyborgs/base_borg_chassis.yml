@@ -228,6 +228,15 @@
     requiredMobState:
     - Critical
     - Dead
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Machine
+    understands:
+    - GalacticCommon
+    - Machine
+  # Starlight-end
 
 - type: entity
   abstract: true

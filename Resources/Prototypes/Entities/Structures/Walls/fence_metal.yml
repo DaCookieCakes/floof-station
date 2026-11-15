@@ -113,6 +113,10 @@
   id: FenceMetalStraight
   suffix: Straight
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FenceMetalStraight.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Icon
     sprite: Structures/Walls/fence.rsi
     state: icon_straight

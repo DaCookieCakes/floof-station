@@ -4,6 +4,7 @@
   save: false
   id: BaseControllable
   components:
+  - type: LanguageSpeaker # Starlight
   - type: Sprite
     noRot: true
     drawdepth: Mobs
@@ -54,6 +55,18 @@
   - type: MobMover
   - type: MovementSpeedModifier
   - type: LagCompensation
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    understands:
+    - GalacticCommon
+  # Starlight-end
+  # Floof-start
+  - type: OwnInteractionVerbs
+    allowedVerbs: [] # TODO: define something here, or don't.
+  - type: Carriable
+  # Floof-end
 
 - type: entity
   save: false

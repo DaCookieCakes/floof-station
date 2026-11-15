@@ -1,3 +1,4 @@
+#if false // Floof - moved to _Floof/Fluids, kept so syncs merge upstream changes into it
 using Content.Server.Fluids.Components;
 using Content.Server.Spreader;
 using Content.Shared.Chemistry;
@@ -571,3 +572,5 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         return false;
     }
 }
+
+#endif

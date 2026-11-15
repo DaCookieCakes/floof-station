@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Flood mask by Niaresa, based on work by Wah, traced from the sprite: Created by EmoGarbage404 (github) and modified by Potato1234x (github) for Space Station 14.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mask"
+    }
+  ]
+}

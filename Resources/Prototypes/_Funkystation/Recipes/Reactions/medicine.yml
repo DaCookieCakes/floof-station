@@ -1,0 +1,15 @@
+
+# brute
+- type: reaction
+  id: SalicylicAcid
+  reactants:
+    Phenol:
+      amount: 1
+    Bicaridine: # DeltaV - we still have wizden basics
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+    Carbon:
+      amount: 1
+  products:
+    SalicylicAcid: 4

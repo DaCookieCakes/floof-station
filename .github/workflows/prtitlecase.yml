@@ -1,0 +1,46 @@
+name: PR Title Case
+on:
+  pull_request_target:
+    types: [opened, edited]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  prtitlecase:
+    if: github.event.action == 'opened' || github.event.changes.title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Title Case PR Title
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.BOT_TOKEN }}
+          script: |
+            const small = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'from', 'in', 'into', 'nor', 'of', 'on', 'or', 'over', 'the', 'to', 'up', 'via', 'vs', 'with']);
+            const old = context.payload.pull_request.title;
+
+            // Leave [tags], `code`, URLs, paths, IDs and anything already containing capitals or digits alone
+            const keep = w => /[A-Z0-9]/.test(w) || /[\[\]`/\\_.:#@=<>]/.test(w);
+
+            const parts = old.split(/(\s+)/);
+            const words = parts.filter(p => p.trim());
+            let i = 0;
+            const title = parts.map(p => {
+              if (!p.trim()) return p;
+              const first = i === 0, last = i === words.length - 1;
+              i++;
+              if (keep(p)) return p;
+              if (!first && !last && small.has(p)) return p;
+              return p.replace(/^([^a-z]*)([a-z])/, (_, pre, c) => pre + c.toUpperCase());
+            }).join('');
+
+            core.info(`Old PR title: ${old}`);
+            core.info(`New PR title: ${title}`);
+            if (title === old) return;
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              title,
+            });

@@ -3,6 +3,7 @@
   id: BoxFolderNuclearCodes
   name: nuclear code folder
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/folders.rsi
     layers:
@@ -118,6 +119,8 @@
 - type: entity
   parent: [BoxFolderBaseEmpty, BoxFolderFill]
   id: BoxFolderBase
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderBaseEmpty, BoxFolderFillThreePapers]
@@ -146,11 +149,15 @@
   parent: [BoxFolderRedEmpty, BoxFolderFill]
   id: BoxFolderRed
   suffix: Red, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderRedEmpty, BoxFolderFillThreePapers]
   id: BoxFolderRedThreePapers
   suffix: Red, 3 papers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -175,11 +182,15 @@
   parent: [BoxFolderBlueEmpty, BoxFolderFill]
   id: BoxFolderBlue
   suffix: Blue, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderBlueEmpty, BoxFolderFillThreePapers]
   id: BoxFolderBlueThreePapers
   suffix: Blue, 3 papers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -204,11 +215,15 @@
   parent: [BoxFolderYellowEmpty, BoxFolderFill]
   id: BoxFolderYellow
   suffix: Yellow, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderYellowEmpty, BoxFolderFillThreePapers]
   id: BoxFolderYellowThreePapers
   suffix: Yellow, 3 papers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -233,11 +248,15 @@
   parent: [BoxFolderGreyEmpty, BoxFolderFill]
   id: BoxFolderGrey
   suffix: Grey, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderGreyEmpty, BoxFolderFillThreePapers]
   id: BoxFolderGreyThreePapers
   suffix: Grey, 3 papers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -262,11 +281,15 @@
   parent: [BoxFolderBlackEmpty, BoxFolderFill]
   id: BoxFolderBlack
   suffix: Black, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderBlackEmpty, BoxFolderFillThreePapers]
   id: BoxFolderBlackThreePapers
   suffix: Black, 3 papers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -291,6 +314,8 @@
   parent: [BoxFolderGreenEmpty, BoxFolderFill]
   id: BoxFolderGreen
   suffix: Green, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderGreenEmpty, BoxFolderFillThreePapers]
@@ -311,11 +336,15 @@
   parent: [BoxFolderWhiteEmpty, BoxFolderFill]
   id: BoxFolderWhite
   suffix: White, Filled
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderWhiteEmpty, BoxFolderFillThreePapers]
   id: BoxFolderWhiteThreePapers
   suffix: White, 3 papers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -410,10 +439,14 @@
 - type: entity
   parent: [BoxFolderClipboardEmpty, BoxFolderFill]
   id: BoxFolderClipboard
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderClipboardEmpty, BoxFolderFillThreePapers]
   id: BoxFolderClipboardThreePapers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderClipboardEmpty
@@ -444,10 +477,14 @@
 - type: entity
   parent: [BoxFolderPlasticClipboardEmpty, BoxFolderFill]
   id: BoxFolderPlasticClipboard
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderPlasticClipboardEmpty, BoxFolderFillThreePapers]
   id: BoxFolderPlasticClipboardThreePapers
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: BoxFolderClipboardEmpty
@@ -479,6 +516,8 @@
 - type: entity
   parent: [BoxFolderCentComClipboardEmpty, BoxFolderFill]
   id: BoxFolderCentComClipboard
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
 
 - type: entity
   parent: [BoxFolderCentComClipboardEmpty, BoxFolderFillThreePapers]
@@ -490,6 +529,7 @@
   name: requisition digi-board
   description: A bulky electric clipboard, filled with shipping orders and financing details. With so many compromising documents, you ought to keep this safe.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/qm_clipboard.rsi
     layers:

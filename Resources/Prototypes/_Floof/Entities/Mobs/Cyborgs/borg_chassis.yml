@@ -1,0 +1,192 @@
+- type: entity
+  parent: BaseBorgChassisNT
+  id: DogBorgChassisSelectable
+  name: dogborg
+  components:
+  - type: Sprite
+    sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+    layers:
+    - state: k50
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: k50_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: k50_l
+      shader: unshaded
+      map: ["light","enum.BorgVisualLayers.LightStatus"]
+      visible: false
+  - type: BorgChassis
+    # Default borg can take no modules until selected type.
+    maxModules: 0
+    hasMindState: k50_e
+    noMindState: k50_e_r
+  - type: BorgTransponder
+    sprite:
+      sprite: _Floof/Mobs/Silicon/dogborg-chassis.rsi
+      state: k50
+    name: cyborg
+  - type: InteractionPopup
+    interactSuccessString: petting-success-generic-cyborg
+    interactFailureString: petting-failure-generic-cyborg
+  - type: BorgSwitchableType
+    inherentRadioChannels:
+    - Common
+    - Binary
+    allowedCategory: dogborg
+  - type: Dogborg
+  - type: LeashAnchor
+    kind: Intrinsic
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisK50
+  name: k50 dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: k50
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeSci
+  name: vale science dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valesci
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisMedihound
+  name: medihound dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: medihound
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisMedihoundDark
+  name: medihound (dark) dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: medihounddark
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeMed
+  name: vale medical dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valemed
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisAlinaMed
+  name: alina medical dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: alina-med
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisScrubpup
+  name: scrubpup dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: scrubpup
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisPupdozer
+  name: pupdozer dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: pupdozer
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeEng
+  name: vale engineering dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valeeng
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisAlinaEng
+  name: alina engineering dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: alina-eng
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeMine
+  name: vale mining dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valemine
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeServ
+  name: vale service dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valeserv
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeServDark
+  name: vale service (dark) dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valeservdark
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisK9
+  name: k9 security dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: k9
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisK9Dark
+  name: k9 (dark) dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: k9dark
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisValeSec
+  name: vale security dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: valesec
+
+- type: entity
+  parent: DogBorgChassisSelectable
+  id: DogBorgChassisAlinaSec
+  name: alina security dogborg
+  suffix: type picked
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: alina-sec

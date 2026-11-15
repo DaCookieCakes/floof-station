@@ -4,6 +4,13 @@
   name: pig
   description: Oink.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Pig
+    understands:
+    - Pig
+  # Starlight-end
   - type: Sprite
     sprite: Mobs/Animals/Farm/pig.rsi
     drawdepth: Mobs
@@ -58,8 +65,8 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/pig_oink.ogg
-  - type: ReplacementAccent
-    accent: pig
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember

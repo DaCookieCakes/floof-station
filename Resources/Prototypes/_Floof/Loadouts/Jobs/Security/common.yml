@@ -1,0 +1,51 @@
+# Glasses
+- type: loadout
+  id: SecurityGlasses
+  groupBy: "SecurityGear"
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+
+- type: loadout
+  id: PrescriptionSecurityGlasses
+  groupBy: "SecurityGear"
+  equipment:
+    eyes: ClothingEyesPrescriptionSecurityGlasses
+
+- type: loadout
+  id: SecurityHud
+  groupBy: "SecurityGear"
+  equipment:
+    eyes: ClothingEyesHudSecurity
+
+- type: loadout
+  id: PrescriptionSecurityHud
+  groupBy: "SecurityGear"
+  equipment:
+    eyes: ClothingEyesPrescriptionHudSecurity
+
+# Masks
+- type: loadout
+  id: SecurityGasMask
+  groupBy: "SecurityGear"
+  equipment:
+    mask: ClothingMaskGasSecurityDV
+
+# Collars
+- type: loadout
+  id: ClothingNeckCollarSec
+  equipment:
+    neck: ClothingNeckCollarSec
+
+# Gloves
+- type: loadout
+  id: SecurityArmWarmers
+  groupBy: SecurityGear
+  equipment:
+    gloves: ClothingHandsSecurityWarmers
+
+# Socks
+- type: loadout
+  id: SecurityThighHighs
+  groupBy: SecurityGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksSecurity

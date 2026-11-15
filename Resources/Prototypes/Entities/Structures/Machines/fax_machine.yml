@@ -4,6 +4,10 @@
   name: long range fax machine
   description: Bluespace technologies on the application of bureaucracy.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FaxMachineBase.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Structures/Machines/fax_machine.rsi
     drawdepth: SmallObjects
@@ -96,6 +100,10 @@
   name: CentComm long range fax machine
   suffix: CentCom
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FaxMachineBase.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon
@@ -117,6 +125,10 @@
   name: syndicate long range fax machine
   suffix: Syndicate
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FaxMachineBase.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon
@@ -141,6 +153,10 @@
   name: captain long range fax machine
   suffix: NukeCodes
   components:
+    - type: FloodMask # Floof - flooding
+      sprite: # Floof - flooding
+        sprite: _Floof/Flooding/Masks/FaxMachineBase.rsi # Floof - flooding
+        state: mask # Floof - flooding
     - type: FaxMachine
       name: "Captain's Office"
       receiveNukeCodes: true

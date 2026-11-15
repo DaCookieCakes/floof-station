@@ -19,6 +19,9 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    # Begin DeltaV additions
+    - Rodentia
+    # End DeltaV additions
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

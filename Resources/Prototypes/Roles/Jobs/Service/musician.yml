@@ -1,5 +1,6 @@
 - type: job
   id: Musician
+  pay: 350 # Floof - bank
   name: job-name-musician
   description: job-description-musician
   playTimeTracker: JobMusician
@@ -19,7 +20,7 @@
   id: MusicianGear
   equipment:
     eyes: ClothingEyesGlassesSunglasses
-    shoes: ClothingShoesBootsLaceup
+  #  shoes: ClothingShoesBootsLaceup # FLOOF
     id: MusicianPDA
     ears: ClothingHeadsetService
   #storage:

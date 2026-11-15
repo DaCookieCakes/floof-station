@@ -1,8 +1,10 @@
 using System.Linq;
 using System.Text;
+using Content.Shared._Starlight.Language;
 using Content.Shared.Chat;
 using Content.Shared.Ghost.Components;
 using Content.Shared.Players;
+using Content.Shared.Popups;
 using Content.Shared.Speech.Prototypes;
 using Robust.Shared.Console;
 using Robust.Shared.Network;
@@ -64,15 +66,37 @@ public sealed partial class ChatSystem
     /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
-    private void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null)
+    private void SendInVoiceRange(ChatChannel channel, string name, string message, string wrappedMessage, string obfuscated, string obfuscatedWrappedMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null, LanguagePrototype? languageOverride = null) // Starlight
     {
-        foreach (var (session, data) in GetRecipients(source, VoiceRange))
+        // Starlight - Start
+        var ignoreLanguage = channel.IsExcemptFromLanguages();
+        var language = languageOverride ?? _language.GetLanguage(source);
+        if (!ignoreLanguage && language.SpeechOverride.RequireHands && !_actionBlocker.CanInteract(source, null))
+        {
+            _popups.PopupEntity(Loc.GetString("chat-manager-language-requires-hands"), source, PopupType.Medium);
+            return;
+        }
+        // Starlight - End
+
+        // Floof: Added 'ghostsCanHear'
+        var ghostsCanHear = channel != ChatChannel.Whisper && channel != ChatChannel.Subtle && channel != ChatChannel.SubtleOOC;
+        foreach (var (session, data) in GetRecipients(source, VoiceRange, ghostsCanHear))
         {
             var entRange = MessageRangeCheck(session, data, range);
             if (entRange == MessageRangeCheckResult.Disallowed)
                 continue;
             var entHideChat = entRange == MessageRangeCheckResult.HideChat;
-            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
+            // Starlight - start
+            if (session.AttachedEntity is not { Valid: true } playerEntity)
+                continue;
+            EntityUid listener = session.AttachedEntity.Value;
+
+            // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
+            if (ignoreLanguage || _language.CanUnderstand(listener, language.ID))
+                _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
+            else
+                _chatManager.ChatMessageToOne(channel, obfuscated, obfuscatedWrappedMessage, source, entHideChat, session.Channel, author: author);
+            // Starlight - end
         }
 
         _replay.RecordServerMessage(new ChatMessage(channel, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
@@ -132,8 +156,11 @@ public sealed partial class ChatSystem
         return newMessage;
     }
 
-    public string TransformSpeech(EntityUid sender, string message)
+    public string TransformSpeech(EntityUid sender, string message, LanguagePrototype language)
     {
+        if (!language.SpeechOverride.RequireSpeech) // Starlight
+            return message; // Do not apply speech accents if there's no speech involved.
+
         var ev = new TransformSpeechEvent(sender, message);
         RaiseLocalEvent(sender, ev, true);
 
@@ -184,9 +211,10 @@ public sealed partial class ChatSystem
     }
 
     /// <summary>
+    ///     FLOOF: Added ghostsCanHear
     ///     Returns list of players and ranges for all players withing some range. Also returns observers with a range of -1.
     /// </summary>
-    private Dictionary<ICommonSession, ICChatRecipientData> GetRecipients(EntityUid source, float voiceGetRange)
+    private Dictionary<ICommonSession, ICChatRecipientData> GetRecipients(EntityUid source, float voiceGetRange, bool ghostsCanHear = true)
     {
         // TODO proper speech occlusion
 
@@ -208,6 +236,9 @@ public sealed partial class ChatSystem
 
             var observer = _ghostHearingQuery.HasComponent(playerEntity);
 
+            if (observer && !ghostsCanHear && !_adminManager.IsAdmin(playerEntity)) // Floof - All non-aghosts are completely deaf to local chat.
+                continue;
+
             // even if they are a ghost hearer, in some situations we still need the range
             if (sourceCoords.TryDistance(EntityManager, transformEntity.Coordinates, out var distance) && distance < voiceGetRange)
             {
@@ -227,7 +258,9 @@ public sealed partial class ChatSystem
     {
     }
 
-    private string ObfuscateMessageReadability(string message, float chance)
+    // FLOOF: Moved to shared.
+    /*
+    public string ObfuscateMessageReadability(string message, float chance)
     {
         var modifiedMessage = new StringBuilder(message);
 
@@ -245,7 +278,7 @@ public sealed partial class ChatSystem
         }
 
         return modifiedMessage.ToString();
-    }
+    }*/
 
     public string BuildGibberishString(IReadOnlyList<char> charOptions, int length)
     {

@@ -44,6 +44,7 @@
   placement:
     mode: SnapgridCenter
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: Oxygen
 
@@ -53,6 +54,7 @@
   id: GasMinerOxygenStation
   suffix: Station, 1000kPa
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       maxExternalPressure: 1000
 
@@ -62,6 +64,7 @@
   id: GasMinerOxygenStationLarge
   suffix: Large Station, 4500kPa
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       maxExternalPressure: 4500
 
@@ -71,6 +74,7 @@
   id: GasMinerNitrogen
   suffix: Shuttle, 300kPa
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: Nitrogen
 
@@ -80,6 +84,7 @@
   id: GasMinerNitrogenStation
   suffix: Station, 1000kPa
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       maxExternalPressure: 1000
 
@@ -89,6 +94,7 @@
   id: GasMinerNitrogenStationLarge
   suffix: Large Station, 4500kPa
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       maxExternalPressure: 4500
 
@@ -97,6 +103,7 @@
   parent: GasMinerBase
   id: GasMinerCarbonDioxide
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: CarbonDioxide
 
@@ -105,6 +112,7 @@
   parent: GasMinerBase
   id: GasMinerPlasma
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: Plasma
 
@@ -113,6 +121,7 @@
   parent: GasMinerBase
   id: GasMinerTritium
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: Tritium
 
@@ -121,6 +130,7 @@
   parent: GasMinerBase
   id: GasMinerFrezon
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: Frezon
 
@@ -129,6 +139,7 @@
   parent: GasMinerBase
   id: GasMinerWaterVapor
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: WaterVapor
 
@@ -137,6 +148,7 @@
   parent: GasMinerBase
   id: GasMinerAmmonia
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: Ammonia
 
@@ -145,5 +157,6 @@
   parent: GasMinerBase
   id: GasMinerNitrousOxide
   components:
+    - type: FloodMask # Floof - flooding
     - type: GasMiner
       spawnGas: NitrousOxide

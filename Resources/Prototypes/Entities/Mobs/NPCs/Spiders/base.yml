@@ -5,6 +5,13 @@
   parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat, BaseSlicingRefinableButchering, MobNightVision, BaseMobDestructible ]
   id: MobSpiderBase
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Chittin
+    understands:
+    - Chittin
+  # Starlight-end
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -40,8 +47,6 @@
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
-  - type: ReplacementAccent
-    accent: xeno
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-tarantula

@@ -1,0 +1,6 @@
+# Outer clothing
+- type: loadout
+  id: SecurityOfficerArmoredLongcoat
+  groupBy: OfficerGear
+  equipment:
+    outerClothing: ClothingLongcoatSec

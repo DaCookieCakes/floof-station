@@ -1,5 +1,6 @@
 - type: job
   id: Chemist
+  pay: 500 # Floof - bank
   name: job-name-chemist
   description: job-description-chemist
   playTimeTracker: JobChemist

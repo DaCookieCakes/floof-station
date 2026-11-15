@@ -528,6 +528,10 @@
   name: beer growler  # beer it is. coffee. beer? coff-ee? be-er? c-o... b-e
   description: An alcoholic beverage made from malted grains, hops, yeast, and water. XL growler bottle.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkBeerBottleFull.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:
@@ -574,6 +578,10 @@
   name: beer bottle # beer it is. coffee. beer? coff-ee? be-er? c-o... b-e
   description: An alcoholic beverage made from malted grains, hops, yeast, and water.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkBeerBottleFull.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-beer
   - type: Sprite
@@ -591,6 +599,10 @@
   id: DrinkBeerBottleFull
   suffix: Full
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/DrinkBeerBottleFull.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:

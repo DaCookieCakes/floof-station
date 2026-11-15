@@ -79,9 +79,13 @@ namespace Content.Client.Entry
         [Dependency] private ClientsidePlaytimeTrackingManager _clientsidePlaytimeManager = default!;
         [Dependency] private ClientFeedbackManager _feedbackManager = null!;
 
+
         public override void PreInit()
         {
             ClientContentIoC.Register(Dependencies);
+
+            // Floof - power-of-two atlas, the 12288 default makes sprite layers jitter by a pixel
+            Dependencies.Resolve<IConfigurationManager>().OverrideDefault(CVars.ResRSIAtlasSize, 8192);
 
             foreach (var callback in TestingCallbacks)
             {
@@ -170,6 +174,7 @@ namespace Content.Client.Entry
             _documentParsingManager.Initialize();
             _titleWindowManager.Initialize();
             _feedbackManager.Initialize();
+
 
             _baseClient.RunLevelChanged += (_, args) =>
             {

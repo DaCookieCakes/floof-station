@@ -1,0 +1,122 @@
+- type: entity # Floofstation
+  name: pomegranate
+  parent: [FoodProduceBase, BaseSlicingRefinableFood]
+  id: FoodPomegranate
+  description: A delicious, sweet fruit, believed to have special properties.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - sweet
+    - spooky
+  - type: Solution
+    solution:
+      maxVol: 40
+      reagents:
+      - ReagentId: Pomelustine
+        Quantity: 20
+      - ReagentId: Nutriment
+        Quantity: 10
+  - type: Sprite
+    sprite: _Floof/Objects/Specific/Hydroponics/pomegranate.rsi
+  - type: Produce
+    plantId: Pomegranate
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuicePomegranate
+        Quantity: 20
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodPomegranateSlice
+      amount: 2
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: pomegranate slice
+  parent: ProduceSliceBase
+  id: FoodPomegranateSlice
+  description: A delicious, sweet fruit, believed to have special properties.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - sweet
+    - spooky
+  - type: Sprite
+    sprite: _Floof/Objects/Specific/Hydroponics/pomegranate.rsi
+  - type: Solution
+    solution:
+      maxVol: 20
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuicePomegranate
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+    - Slice
+
+
+- type: entity
+  name: humpshroom
+  parent: FoodProduceBase
+  id: FoodHumpShroom
+  description: A sweet-smelling mushroom that excretes a sticky and arousing liquid.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - mushroom
+  - type: Solution
+    solution:
+      maxVol: 40
+      reagents:
+      - ReagentId: Philterex
+        Quantity: 5
+      - ReagentId: Cum
+        Quantity: 10
+      - ReagentId: Nutriment
+        Quantity: 5
+  - type: Sprite
+    sprite: _Floof/Objects/Specific/Hydroponics/humpshroom.rsi
+  - type: Produce
+    plantId: HumpShroom
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegetable
+
+- type: entity
+  name: breedshroom
+  parent: FoodProduceBase
+  id: FoodBreedShroom
+  description: An overwhelmingly smelling mushroom that excretes an incredibly sticky and arousing liquid. It has been known to increase the population in colonies.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - mushroom
+  - type: Solution
+    solution:
+      maxVol: 40
+      reagents:
+      - ReagentId: Libidozenithizine
+        Quantity: 2
+      - ReagentId: Cum
+        Quantity: 10
+      - ReagentId: Philterex
+        Quantity: 4
+      - ReagentId: Happiness
+        Quantity: 4
+      - ReagentId: Nutriment
+        Quantity: 5
+  - type: Sprite
+    sprite: _Floof/Objects/Specific/Hydroponics/breedshroom.rsi
+  - type: Produce
+    plantId: BreedShroom
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegetable

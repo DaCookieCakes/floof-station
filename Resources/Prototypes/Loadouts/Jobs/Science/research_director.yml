@@ -11,11 +11,13 @@
 # Head
 - type: loadout
   id: ResearchDirectorBeret
+  groupBy: RDGear # FLOOF
   startingGear: ScientificBeret
 
 # Neck
 - type: loadout
   id: ResearchDirectorMantle
+  groupBy: RDGear # FLOOF
   equipment:
     neck: ClothingNeckMantleRD
   effects:
@@ -29,27 +31,32 @@
 
 - type: loadout
   id: ResearchDirectorCloak
+  groupBy: RDGear # FLOOF
   equipment:
     neck: ClothingNeckCloakRd
 
 # Jumpsuit
 - type: loadout
   id: ResearchDirectorJumpsuit
+  groupBy: RDGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitResearchDirector
 
 - type: loadout
   id: ResearchDirectorJumpskirt
+  groupBy: RDGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtResearchDirector
 
 # OuterClothing
 - type: loadout
   id: ResearchDirectorLabCoat
+  groupBy: RDGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatRD
 
 - type: loadout
   id: ResearchDirectorWintercoat
+  groupBy: RDGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterRD

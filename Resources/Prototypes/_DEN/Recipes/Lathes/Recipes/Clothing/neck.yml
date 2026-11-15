@@ -1,0 +1,10 @@
+# Job-specific neckwear
+
+- type: latheRecipe
+  parent: BaseNeckClothingRecipe
+  id: ClothingNeckStoleChaplain
+  result: ClothingNeckStoleChaplain
+
+# Non-job specific cosmetic neckwear
+
+# holy fuck i just looked. is this literally the only neckwear i can put in? wtf

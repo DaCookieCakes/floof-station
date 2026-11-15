@@ -1,0 +1,55 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesChemist
+  name: safety glasses
+  description: Glasses made for chemists and other workers dealing with caustic reagents.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Eyes/Glasses/safetyglasses.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Eyes/Glasses/safetyglasses.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.85
+  - type: IdentityBlocker # FLOOF
+    coverage: EYES
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesPrescriptionBaseSecGlasses
+  abstract: true
+  components:
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: VisionCorrection
+    correctionPower: 2 # Being flash proof comes at the cost of less range of vision
+  - type: IdentityBlocker
+    coverage: EYES
+
+- type: entity
+  parent: [ClothingEyesPrescriptionBaseSecGlasses, ShowSecurityIcons, BaseSecurityContraband]
+  id: ClothingEyesPrescriptionSecurityGlasses
+  name: prescription security glasses
+  description: A pair of security glasses with what appears to be a... prescription lens glued on top?
+  components:
+  - type: Construction
+    graph: PrescriptionSecGlasses
+    node: prescsecglasses
+  - type: Sprite
+    sprite: _DV/Clothing/Eyes/Glasses/prescsecglasses.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Eyes/Glasses/prescsecglasses.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesWrestlerMaskDomino
+  name: Domino Mask
+  description: No CGI here.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Eyes/Glasses/WrestlerMaskDomino.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Eyes/Glasses/WrestlerMaskDomino.rsi
+

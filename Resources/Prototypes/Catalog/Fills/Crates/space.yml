@@ -65,6 +65,10 @@
   name: shuttle powering crate
   description: A crate containing all needs for shuttle powering.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector

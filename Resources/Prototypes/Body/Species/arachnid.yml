@@ -64,6 +64,7 @@
       Stomach: OrganArachnidStomach
       Liver: OrganArachnidLiver
       Kidneys: OrganArachnidKidneys
+      Bladder: OrganBladder # Floof - Bladder
   - type: HumanoidProfile
     species: Arachnid
 
@@ -146,6 +147,15 @@
     sprite:
       sprite: Effects/creampie.rsi
       state: creampie_arachnid
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Chittin
+    understands:
+    - GalacticCommon
+    - Chittin
+  # Starlight-end
 
 - type: entity
   parent: OrganBaseOrganic

@@ -5,6 +5,13 @@
   name: genetic ancestor
   description: The genetic bipedal ancestor of... Uh... Something. Yeah, there's definitely something on the station that descended from whatever this is.
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Ancestor
+    understands:
+    - Ancestor
+  # Starlight-end
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -99,6 +106,8 @@
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
   - type: JobStatus # marks them as crew
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: CanHostGuardian
   - type: FactionException
   - type: NpcFactionMember

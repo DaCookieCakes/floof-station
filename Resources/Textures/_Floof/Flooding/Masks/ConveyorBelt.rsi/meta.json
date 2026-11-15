@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Flood mask by Wah, traced from the sprite: Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/8e33113cfe8b5da0e64d74c842bec0e6059d992d and modified by Swept and Peperos, switch-fwd and switch-rev modified by RedBookcase (Github)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mask",
+      "directions": 4
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # Jumpsuit
 - type: loadout
   id: TramDriverJumpsuit
+  groupBy: TramDriverGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitTramDriver
 
@@ -12,22 +13,26 @@
 # Outer clothing
 - type: loadout
   id: TramDriverSuit
+  groupBy: TramDriverGear # FLOOF
   equipment:
     outerClothing: ClothingOuterSuitTramDriver
 
 # Hat
 - type: loadout
   id: TramDriverHat
+  groupBy: TramDriverGear # FLOOF
   equipment:
     head: ClothingHeadHatTramDriver
 
 # Glove
 - type: loadout
   id: TramDriverGlovesWhite
+  groupBy: TramDriverGear # FLOOF
   equipment:
     gloves: ClothingHandsGlovesColorWhite
 
 - type: loadout
   id: TramDriverGlovesBlack
+  groupBy: TramDriverGear # FLOOF
   equipment:
     gloves: ClothingHandsGlovesColorBlack

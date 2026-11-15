@@ -1,0 +1,6 @@
+# Looks around a map shown beneath another, so it gets sent to whoever sees it.
+- type: entity
+  id: MapUnderlayEye
+  name: map underlay eye
+  save: false
+  categories: [ HideSpawnMenu ]

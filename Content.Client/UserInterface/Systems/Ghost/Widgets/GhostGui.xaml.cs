@@ -33,6 +33,7 @@ public sealed partial class GhostGui : UIWidget
         ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
         GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
         GhostRolesButton.OnPressed += _ => GhostRolesButton.StyleClasses.Remove(StyleClass.Negative);
+        InitializeRespawn(); // Floof - Ghost respawn
     }
 
     public void Hide()

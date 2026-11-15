@@ -309,24 +309,25 @@
   - growling
 
 #vox
-- type: emote
-  id: Caw
-  name: chat-emote-name-caw
-  category: Vocal
-  icon: Interface/Emotes/caw.png
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
-  chatMessages: [chat-emote-msg-caw]
-  chatTriggers:
-  - caw
-  - caws
-  - cawed
-  - cawing
+# Floof - Caw is defined in _Floof/Voice/speech_emotes.yml
+# - type: emote
+#   id: Caw
+#   name: chat-emote-name-caw
+#   category: Vocal
+#   icon: Interface/Emotes/caw.png
+#   available: false
+#   whitelist:
+#     components:
+#     - Vocal
+#   blacklist:
+#     tags:
+#     - SiliconEmotes
+#   chatMessages: [chat-emote-msg-caw]
+#   chatTriggers:
+#   - caw
+#   - caws
+#   - cawed
+#   - cawing
 
 # hand emotes
 - type: emote

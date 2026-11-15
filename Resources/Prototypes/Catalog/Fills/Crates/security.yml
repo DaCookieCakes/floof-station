@@ -4,6 +4,10 @@
   name: armor crate
   description: Contains three standard-issue helmets and three bulletproof vests. Requires Security access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateContrabandStorageSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -19,6 +23,10 @@
   name: nonlethals crate
   description: Contains a mix of disablers, stun batons, and flashes. Requires Security access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateContrabandStorageSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -39,6 +47,10 @@
   name: security supplies crate
   description: Contains various supplies for the station's Security team. Requires Security access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateContrabandStorageSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -86,6 +98,10 @@
   name: implanter crate
   description: Contains 4 MindShield implants and 4 tracking implant. Requires Security access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateContrabandStorageSecure.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector

@@ -1,8 +1,8 @@
 - type: gameMap
   id: Elkridge
   mapName: 'Elkridge Depot'
-  mapPath: /Maps/elkridge.yml
-  minPlayers: 20
+  mapPath: /Maps/_Floof/elkridge.yml
+  minPlayers: 0 # Floof - lower min players
   maxPlayers: 44
   stations:
     Elkridge:
@@ -67,3 +67,4 @@
             # Silicon (3)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 2 ]
+            Dogborg: [ 0, 2 ] # Floofstation

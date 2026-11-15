@@ -1,0 +1,10 @@
+// The map below comes lit by its own lights. This adds the lights up here on top, so the shuttle's lamps reach the
+// floor as well, from a copy of it drawn without any light.
+blend_mode add;
+
+uniform sampler2D below_unlit;
+uniform highp vec2 viewport_size;
+
+void fragment() {
+    COLOR = vec4(zTextureSpec(below_unlit, FRAGCOORD.xy / viewport_size).rgb, 1.0);
+}

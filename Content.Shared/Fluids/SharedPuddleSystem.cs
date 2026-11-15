@@ -1,5 +1,8 @@
+#if false // Floof - moved to _Floof/Fluids, kept so syncs merge upstream changes into it
 using System.Linq;
+using Content.Shared.Atmos;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Atmos.EntitySystems;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -45,7 +48,9 @@ public abstract partial class SharedPuddleSystem : EntitySystem
     [Dependency] private INetManager _net = default!;
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private TurfSystem _turf = default!;
-
+    [Dependency] private SharedAtmosphereSystem _atmos = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    
     [Dependency] private EntityQuery<StepTriggerComponent> _stepTriggerQuery = default!;
     [Dependency] private EntityQuery<ReactiveComponent> _reactiveQuery = default!;
     [Dependency] private EntityQuery<EvaporationComponent> _evaporationQuery = default!;
@@ -73,6 +78,7 @@ public abstract partial class SharedPuddleSystem : EntitySystem
         SubscribeLocalEvent<PuddleComponent, GetFootstepSoundEvent>(OnGetFootstepSound);
         SubscribeLocalEvent<PuddleComponent, ExaminedEvent>(HandlePuddleExamined);
         SubscribeLocalEvent<PuddleComponent, EntRemovedFromContainerMessage>(OnEntRemoved);
+        SubscribeLocalEvent<PuddleComponent, TileFireEvent>(OnPuddleBurn);
 
         SubscribeLocalEvent<EvaporationComponent, MapInitEvent>(OnEvaporationMapInit);
 
@@ -90,10 +96,11 @@ public abstract partial class SharedPuddleSystem : EntitySystem
         {
             // It's possible to have items in the queue that are already being deleted but threw a
             // SolutionContainerChangedEvent as a part of their shutdown, like during a round restart.
+            UpdateFlammability(ent, null);
             if (!TerminatingOrDeleted(ent))
                 PredictedDel(ent);
         }
-
+        
         _deletionQueue.Clear();
 
         TickEvaporation();
@@ -129,11 +136,27 @@ public abstract partial class SharedPuddleSystem : EntitySystem
         }
 
         _deletionQueue.Remove(entity);
+        UpdateFlammability((entity.Owner, entity.Comp), args.Solution.Comp.Solution); // Floof - tile fires
         UpdateSlip((entity, entity.Comp), args.Solution.Comp.Solution);
         UpdateSlow(entity, args.Solution.Comp.Solution);
         UpdateEvaporation(entity, args.Solution.Comp.Solution);
         UpdateAppearance((entity, entity.Comp));
     }
+    
+    // Floof section - tile fires
+    private void UpdateFlammability(Entity<PuddleComponent?> entity, Solution? solution)
+    {
+        if (solution is null)
+        {
+            _atmos.SetPuddleFlammabilityAtTile(entity.Owner, 0);
+            return;
+        }
+
+        var flammability = solution.GetSolutionFlammability(_prototype);
+        _atmos.SetPuddleFlammabilityAtTile(entity.Owner, flammability);
+
+    }
+    // Floof section end - tile fires
 
     private void OnGetFootstepSound(Entity<PuddleComponent> entity, ref GetFootstepSoundEvent args)
     {
@@ -377,6 +400,17 @@ public abstract partial class SharedPuddleSystem : EntitySystem
         }
     }
 
+    public void OnPuddleBurn(Entity<PuddleComponent> ent, ref TileFireEvent args)
+    {
+        if (!_solutionContainerSystem.ResolveSolution(ent.Owner,
+                ent.Comp.SolutionName,
+                ref ent.Comp.Solution,
+                out var solution))
+            return;
+        _solutionContainerSystem.BurnFlammableReagents(ent.Comp.Solution.Value, 0.05f);
+
+    }
+
     #region Spill
 
     /// <inheritdoc cref="TrySplashSpillAt(EntityUid,EntityCoordinates,Solution,out EntityUid,bool,EntityUid?)"/>
@@ -426,3 +460,5 @@ public abstract partial class SharedPuddleSystem : EntitySystem
 
     #endregion Spill
 }
+
+#endif

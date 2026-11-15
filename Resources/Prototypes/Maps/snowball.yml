@@ -1,8 +1,8 @@
 - type: gameMap
   id: Snowball
   mapName: 'Snowball Station'
-  mapPath: /Maps/snowball.yml
-  minPlayers: 5
+  mapPath: /Maps/_Floof/snowball.yml
+  minPlayers: 0 # Floof - lower min players
   maxPlayers: 25
   stations:
     Snowball:
@@ -63,3 +63,4 @@
             # Silicon (3)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 2 ]
+            Dogborg: [ 0, 2 ] # Floofstation

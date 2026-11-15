@@ -1,0 +1,6 @@
+# Outer clothing
+- type: loadout
+  id: ValetVest
+  groupBy: ServiceWorkerGear
+  equipment:
+    outerClothing: ClothingOuterVestValet

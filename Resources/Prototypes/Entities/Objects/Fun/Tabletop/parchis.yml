@@ -4,6 +4,7 @@
   name: parchís board
   description: Cross and circle board game famous for destroying countless friendships.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Fun/Tabletop/parchis.rsi
     state: board

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using Content.IntegrationTests;
 using Content.IntegrationTests.Utility;
@@ -58,27 +57,7 @@ namespace Content.YAMLLinter
             return -1;
         }
 
-        private static async Task<(Dictionary<string, HashSet<ErrorNode>> YamlErrors, List<string> FieldErrors)>
-            ValidateClient()
-        {
-            await using var pair = await PoolManager.GetServerClient(testContext: TestContext);
-            var client = pair.Client;
-            var result = await ValidateInstance(client);
-            await pair.CleanReturnAsync();
-            return result;
-        }
-
-        private static async Task<(Dictionary<string, HashSet<ErrorNode>> YamlErrors, List<string> FieldErrors)>
-            ValidateServer()
-        {
-            await using var pair = await PoolManager.GetServerClient(testContext: TestContext);
-            var server = pair.Server;
-            var result = await ValidateInstance(server);
-            await pair.CleanReturnAsync();
-            return result;
-        }
-
-        private static async Task<(Dictionary<string, HashSet<ErrorNode>>, List<string>)> ValidateInstance(
+        private static async Task<(Dictionary<string, HashSet<ErrorNode>> YamlErrors, List<string> FieldErrors)> ValidateInstance(
             RobustIntegrationTest.IntegrationInstance instance)
         {
             var protoMan = instance.ResolveDependency<IPrototypeManager>();
@@ -116,14 +95,28 @@ namespace Content.YAMLLinter
         public static async Task<(Dictionary<string, HashSet<ErrorNode>> YamlErrors, List<string> FieldErrors)>
             RunValidation()
         {
-            var (clientAssemblies, serverAssemblies) = await GetClientServerAssemblies();
-            var serverTypes = serverAssemblies.SelectMany(n => n.GetTypes()).Select(t => t.Name).ToHashSet();
-            var clientTypes = clientAssemblies.SelectMany(n => n.GetTypes()).Select(t => t.Name).ToHashSet();
+            // Floof Section - YAML linter speedup
+            // One pair for everything, server & client validated concurrently on their own instance threads.
+            await using var pair = await PoolManager.GetServerClient(testContext: TestContext);
+
+            // Resolve while the instances are still idle, ResolveDependency throws once validation keeps them busy.
+            var serverRefl = pair.Server.ResolveDependency<IReflectionManager>();
+            var clientRefl = pair.Client.ResolveDependency<IReflectionManager>();
+            var serverTypesTask = Task.Run(() => GetTypeNames(serverRefl));
+            var clientTypesTask = Task.Run(() => GetTypeNames(clientRefl));
+            var serverTask = ValidateInstance(pair.Server);
+            var clientTask = ValidateInstance(pair.Client);
+
+            await Task.WhenAll(serverTypesTask, clientTypesTask, serverTask, clientTask);
+            await pair.CleanReturnAsync();
+
+            var serverTypes = await serverTypesTask;
+            var clientTypes = await clientTypesTask;
+            var serverErrors = await serverTask;
+            var clientErrors = await clientTask;
+            // Floof Section End
 
             var yamlErrors = new Dictionary<string, HashSet<ErrorNode>>();
-
-            var serverErrors = await ValidateServer();
-            var clientErrors = await ValidateClient();
 
             foreach (var (key, val) in serverErrors.YamlErrors)
             {
@@ -180,22 +173,10 @@ namespace Content.YAMLLinter
             return (yamlErrors, fieldErrors);
         }
 
-        private static async Task<(Assembly[] clientAssemblies, Assembly[] serverAssemblies)>
-            GetClientServerAssemblies()
+        // Floof - YAML linter speedup
+        private static HashSet<string> GetTypeNames(IReflectionManager refl)
         {
-            await using var pair = await PoolManager.GetServerClient(testContext: TestContext);
-
-            var result = (GetAssemblies(pair.Client), GetAssemblies(pair.Server));
-
-            await pair.CleanReturnAsync();
-
-            return result;
-
-            Assembly[] GetAssemblies(RobustIntegrationTest.IntegrationInstance instance)
-            {
-                var refl = instance.ResolveDependency<IReflectionManager>();
-                return refl.Assemblies.ToArray();
-            }
+            return refl.Assemblies.SelectMany(n => n.GetTypes()).Select(t => t.Name).ToHashSet();
         }
     }
 }

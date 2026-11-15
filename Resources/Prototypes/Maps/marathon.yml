@@ -1,8 +1,8 @@
 - type: gameMap
   id: Marathon
   mapName: 'Marathon Station'
-  mapPath: /Maps/marathon.yml
-  minPlayers: 45
+  mapPath: /Maps/_Floof/marathon.yml
+  minPlayers: 0 # Floof - lower min players
   stations:
     Marathon:
       stationProto: StandardNanotrasenStation
@@ -63,3 +63,4 @@
             # Silicon (4)
             StationAi: [ 1, 1 ]
             Borg: [ 0, 3 ]
+            Dogborg: [ 0, 3 ] # Floofstation

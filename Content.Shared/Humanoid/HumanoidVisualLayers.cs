@@ -35,6 +35,22 @@ namespace Content.Shared.Humanoid
         StencilMask,
         Ensnare,
         Fire,
+        
+        //Genitals - Floof
+        Breasts,
+        BreastsBehind,
+        Testicles,
+        TesticlesBehind,
+        Penis,
+        PenisBehind,
+        Vagina,
+        VaginaBehind, // This one is currently unused but adding it anyway for future support.
+
+        // Floof Section - marking layering
+        TailBehind, // behind the body
+        TailBehindBackpack, // over outer clothing, under the backpack
+        TailOversuit, // over the backpack
+        // Floof Section End
 
     }
 }

@@ -1,0 +1,53 @@
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsBunnySuitCuffs
+  name: buttoned wrist cuffs
+  description: White wrist cuffs fastened with black buttons, devoid of any sleeves. For what purpose, exactly?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Costumes/bunnysuit_cuffs.rsi
+
+- type: entity
+  parent: ClothingHandsBunnySuitCuffs
+  id: ClothingHandsBunnySuitCuffsBlue
+  suffix: blue
+  description: White wrist cuffs fastened with blue buttons, devoid of any sleeves. For what purpose, exactly?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Costumes/bunnysuit_cuffs_blue.rsi
+
+- type: entity
+  parent: ClothingHandsBunnySuitCuffs
+  id: ClothingHandsBunnySuitCuffsGreen
+  suffix: green
+  description: White wrist cuffs fastened with green buttons, devoid of any sleeves. For what purpose, exactly?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Costumes/bunnysuit_cuffs_green.rsi
+
+- type: entity
+  parent: ClothingHandsBunnySuitCuffs
+  id: ClothingHandsBunnySuitCuffsPink
+  suffix: pink
+  description: White wrist cuffs fastened with pink buttons, devoid of any sleeves. For what purpose, exactly?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Costumes/bunnysuit_cuffs_pink.rsi
+
+- type: entity
+  parent: ClothingHandsBunnySuitCuffs
+  id: ClothingHandsBunnySuitCuffsRed
+  suffix: red
+  description: White wrist cuffs fastened with red buttons, devoid of any sleeves. For what purpose, exactly?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Costumes/bunnysuit_cuffs_red.rsi
+
+- type: entity
+  parent: ClothingHandsBunnySuitCuffs
+  id: ClothingHandsBunnySuitCuffsWhite
+  suffix: white
+  description: White wrist cuffs fastened with white buttons, devoid of any sleeves. For what purpose, exactly?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Costumes/bunnysuit_cuffs_white.rsi

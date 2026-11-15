@@ -25,6 +25,7 @@
   id: BaseCoatRecipe
   categories:
   - Coats
+  - Outerwear # DEN
   completetime: 3.2 # don't ask why its faster than a jumpsuit??
   materials:
     Cloth: 500

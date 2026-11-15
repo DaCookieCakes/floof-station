@@ -41,6 +41,7 @@
   name: premium Havanian cigar
   description: A cigar fit for only the best of the best.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
     state: unlit-icon

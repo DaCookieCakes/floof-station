@@ -17,5 +17,13 @@
     ClothingOuterVest: 2
     ClothingBeltBandolier: 2
     ClothingEyesGlassesSunglasses: 2
+    # FLOOF: Start
+    ClothingHandsServiceWarmers: 2
+    ClothingUnderSocksService: 2
+    ClothingUniformServiceThong: 2
+    ClothingHandsBartenderWarmers: 2
+    ClothingUnderSocksBartender: 2
+    ClothingUniformBartenderThong: 2
+    # FLOOF: End
   contrabandInventory:
     ToyFigurineBartender: 1

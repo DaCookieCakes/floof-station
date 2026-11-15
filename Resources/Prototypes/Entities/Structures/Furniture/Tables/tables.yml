@@ -8,6 +8,11 @@
   name: table frame
   description: Pieces of metal that make the frame of a table.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CounterMetalFrame.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/frame.rsi
   - type: Icon
@@ -58,6 +63,11 @@
   name: wooden counter frame
   description: Pieces of wood that make the frame of a table.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CounterMetalFrame.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
   - type: SpriteFade
   - type: Sprite
     sprite: Structures/Furniture/Tables/frame.rsi
@@ -107,6 +117,11 @@
   name: metal counter frame
   description: Pieces of metal that make the frame of a table.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CounterMetalFrame.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
   - type: SpriteFade
   - type: Sprite
     sprite: Structures/Furniture/Tables/frame.rsi
@@ -155,6 +170,12 @@
   name: table
   description: A square piece of metal standing on four metal legs.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Table.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.26 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/generic.rsi
   - type: Icon
@@ -185,6 +206,12 @@
   name: reinforced table
   description: A square piece of metal standing on four metal legs. Extra robust.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableReinforced.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.28 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/reinforced.rsi
   - type: Icon
@@ -228,6 +255,12 @@
   name: glass table
   description: A square piece of glass, standing on four metal legs.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableGlass.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.26 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/glass.rsi
   - type: Icon
@@ -319,6 +352,12 @@
   name: reinforced glass table
   description: A square piece of glass, standing on four metal legs. Extra robust.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableReinforcedGlass.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.26 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/r_glass.rsi
   - type: Icon
@@ -366,6 +405,12 @@
   name: plasma glass table
   description: A square piece of plasma glass, standing on four metal legs. Pretty!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TablePlasmaGlass.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.26 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/plasma.rsi
   - type: Icon
@@ -446,6 +491,12 @@
   name: wood table
   description: Do not apply fire to this. Rumour says it burns easily.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableWood.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.26 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/wood.rsi
   - type: Icon
@@ -482,6 +533,12 @@
   name: gambling table
   description: Play em' cowboy.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableCarpet.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.26 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/carpet.rsi
   - type: Icon
@@ -593,6 +650,12 @@
   name: xeno table
   description: I wouldn't put the silverware on it.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableXeno.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.28 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/xeno.rsi
   - type: Icon
@@ -875,6 +938,12 @@
   name: wood counter
   description: Do not apply fire to this. Rumour says it burns easily.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableCounterWood.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.28 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/counterwood.rsi
   - type: Icon
@@ -907,6 +976,12 @@
   name: metal counter
   description: Looks like a good place to put a drink down.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/TableCounterMetal.rsi # Floof - flooding
+      state: state_0 # Floof - flooding
+    corners: state_ # Floof - flooding
+    surface: 0.28 # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Tables/countermetal.rsi
   - type: Icon

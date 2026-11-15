@@ -1,0 +1,13 @@
+# Gloves
+- type: loadout
+  id: MusicianArmWarmers
+  groupBy: MusicianGear
+  equipment:
+    gloves: ClothingHandsMusicianWarmers
+
+# Socks
+- type: loadout
+  id: MusicianThighHighs
+  groupBy: MusicianGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksMusician

@@ -43,6 +43,22 @@ public sealed partial record MarkingLayerData
     [DataField]
     public string? Shader = null;
 
+    // Floof Section - marking layering
+    /// <summary>
+    ///     Optional humanoid layer to draw this sprite on instead of the marking's body part,
+    ///     e.g. the part of a tail that goes behind the body.
+    /// </summary>
+    [DataField]
+    public HumanoidVisualLayers? Layer = null;
+
+    /// <summary>
+    ///     Optional state of another sprite in this marking whose colour this one uses.
+    ///     Linked sprites are hidden from the colour picker.
+    /// </summary>
+    [DataField]
+    public string? ColorFrom = null;
+    // Floof Section End
+
     /// <summary>
     ///     Tries to get a player-friendly name for this marking layer.
     /// </summary>

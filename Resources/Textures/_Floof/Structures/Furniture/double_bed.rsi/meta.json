@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/0a9404e69be9c2033db468ce2d16f4e5a0b3acfa, via Monkestation",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "double_bed",
+      "directions": 4
+    }
+  ]
+}

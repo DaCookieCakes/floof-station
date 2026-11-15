@@ -15,5 +15,9 @@
     ClothingOuterWinterSci: 2
     ClothingNeckScarfStripedPurple: 3
     ClothingShoesBootsWinterSci: 2
+    ClothingNeckCollarSci: 2    # Floof
+    ClothingHandsEpiWarmers: 3  # FLOOF
+    ClothingUnderSocksEpi: 3    # FLOOF
+    ClothingUniformEpiThong: 3  # FLOOF
   contrabandInventory:
-    ToyFigurineResearchDirector: 1  
+    ToyFigurineResearchDirector: 1

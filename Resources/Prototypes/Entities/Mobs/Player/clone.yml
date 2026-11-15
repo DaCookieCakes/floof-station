@@ -34,6 +34,8 @@
   components:
   # general
   - DetailExaminable
+  - ConsentExaminable # Floof - Consent
+  - ConsentToggles # Floof - Consent toggles
   - Dna
   - Fingerprint
   - FootstepModifier # Footstep sounds!
@@ -50,6 +52,7 @@
   - BackwardsAccent
   - BarkAccent
   - BleatingAccent
+  - CheeseAccent # Floof - Cheese accent trait
   - DamagedSiliconAccent
   - FrenchAccent
   - FrontalLisp
@@ -73,6 +76,10 @@
   - SouthernAccent
   - SpanishAccent
   - StutteringAccent
+  # Languages - Starlight
+  - LanguageSpeaker
+  - LanguageKnowledge
+  - ForeignerTrait
   eventComponents:
   - Damageable # Sprites and damage modifier
   - Flammable # Displacements

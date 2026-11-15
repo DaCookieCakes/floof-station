@@ -4,6 +4,7 @@
   id: Handcuffs
   parent: [BaseItem, BaseSecurityCommandContraband]
   components:
+  - type: FloodMask # Floof - flooding
   - type: Item
     size: Small
     storedRotation: 90

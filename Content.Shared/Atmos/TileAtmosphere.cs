@@ -177,6 +177,9 @@ public sealed partial class TileAtmosphere : IGasMixtureHolder
     [ViewVariables]
     public float MaxFireTemperatureSustained;
 
+    [ViewVariables] // Floof - tile fires
+    public int PuddleSolutionFlammability { get; set; }
+    
     /// <summary>
     /// If true, then this tile is directly exposed to the map's atmosphere, either because the grid has no tile at
     /// this position, or because the tile type is not airtight.
@@ -191,6 +194,18 @@ public sealed partial class TileAtmosphere : IGasMixtureHolder
     /// </summary>
     [ViewVariables]
     public bool NoGridTile;
+
+    /// <summary>
+    /// Full of liquid, which gas can't get through.
+    /// </summary>
+    [ViewVariables]
+    public bool FloodFull; // Floof - flooding
+
+    /// <summary>
+    /// Open to a map under the sea, so it's water rather than somewhere for gas to go.
+    /// </summary>
+    [ViewVariables]
+    public bool OceanExposed; // Floof - Ocean
 
     /// <summary>
     /// If true, this tile is queued for processing in <see cref="GridAtmosphereComponent.PossiblyDisconnectedTiles"/>
@@ -234,6 +249,8 @@ public sealed partial class TileAtmosphere : IGasMixtureHolder
         GridIndices = other.GridIndices;
         Space = other.Space;
         NoGridTile = other.NoGridTile;
+        FloodFull = other.FloodFull; // Floof - flooding
+        OceanExposed = other.OceanExposed; // Floof - Ocean
         MapAtmosphere = other.MapAtmosphere;
         Air = other.Air?.Clone();
         AirArchived = Air != null ? Air.Clone() : null;

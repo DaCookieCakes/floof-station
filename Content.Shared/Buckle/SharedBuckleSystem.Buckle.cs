@@ -138,7 +138,7 @@ public abstract partial class SharedBuckleSystem
         }
 
         var delta = (xform.LocalPosition - strapComp.BuckleOffset).LengthSquared();
-        if (delta > 1e-5)
+        if (delta > 1e-5 && !IsSlotOffset(strapUid, xform.LocalPosition)) // Floof - Strap Slots
             Unbuckle(buckle, (strapUid, strapComp), null);
     }
 
@@ -374,7 +374,7 @@ public abstract partial class SharedBuckleSystem
         _rotationVisuals.SetHorizontalAngle(buckle.Owner, strap.Comp.Rotation);
 
         var xform = Transform(buckle);
-        var coords = new EntityCoordinates(strap, strap.Comp.BuckleOffset);
+        var coords = new EntityCoordinates(strap, GetBuckleOffset(strap, buckle)); // Floof - Strap Slots
         _transform.SetCoordinates(buckle, xform, coords, rotation: Angle.Zero);
 
         _joints.SetRelay(buckle, strap);
