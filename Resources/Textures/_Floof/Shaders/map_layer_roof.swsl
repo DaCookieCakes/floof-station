@@ -1,0 +1,25 @@
+light_mode unshaded;
+
+uniform highp vec4 ambient;
+uniform lowp int light_count;
+uniform highp vec2[8] light_position;
+uniform highp float[8] light_radius;
+uniform highp vec4[8] light_color;
+uniform highp float[8] light_energy;
+
+varying highp vec2 world_position;
+
+void vertex() {
+    world_position = (modelMatrix * vec3(aPos, 1.0)).xy;
+}
+
+void fragment() {
+    highp vec3 light = ambient.rgb;
+    for (int i = 0; i < 8 && i < light_count; i++) {
+        highp float dist = length(world_position - light_position[i]);
+        highp float falloff = clamp(1.0 - dist / light_radius[i], 0.0, 1.0);
+        light += light_color[i].rgb * light_energy[i] * falloff * falloff;
+    }
+
+    COLOR = zTexture(UV) * vec4(light, 1.0);
+}

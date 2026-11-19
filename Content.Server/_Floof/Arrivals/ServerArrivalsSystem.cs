@@ -13,6 +13,7 @@ using Content.Server.Parallax;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Events;
+using JetBrains.Annotations;
 using Content.Shared.Administration;
 using Content.Shared.Antag;
 using Content.Shared.CCVar;
@@ -42,7 +43,6 @@ using Robust.Shared.Utility;
 
 namespace Content.Server.Shuttles.Systems;
 
-/// <inheritdoc/>
 public sealed partial class ServerArrivalsSystem : ArrivalsSystem
 {
     [Dependency] private IChatManager _chat = default!;
@@ -60,9 +60,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
     [Dependency] private EntityQuery<ArrivalsBlacklistComponent> _blacklistQuery;
     [Dependency] private EntityQuery<MobStateComponent> _mobQuery;
 
-    /// <summary>
-    ///     The first arrival is a little early, to save everyone 10s
-    /// </summary>
     private const float RoundStartFTLDuration = 10f;
 
     public override void Initialize()
@@ -71,7 +68,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
 
         Cfg.OnValueChanged(CCVars.ArrivalsShuttles, SetArrivals);
 
-        // Command so admins can set these for funsies
         _console.RegisterCommand("arrivals", ArrivalsCommand, ArrivalsCompletion);
     }
 
@@ -115,26 +111,18 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
                 }
             }
 
-            // Go back to arrivals source
             if (!toStation)
                 comp.NextArrivalsTime = curTime + tripTime;
-            // Go to station
             else
             {
-                // The ArrivalsCooldown includes the trip there, so we only need to add the time taken for
-                // the trip back.
                 comp.NextArrivalsTime = curTime + (handled ? tripTime + CustomDockTime() : cooldown) + tripTime;
             }
 
-            // Custom trips are rescheduled when they arrive, see TripArrived.
             if (!handled)
                 comp.NextTransfer += cooldown;
         }
     }
 
-    /// <summary>
-    /// How long a shuttle on a custom trip waits once docked: whatever the cooldown leaves after a default FTL trip.
-    /// </summary>
     private TimeSpan CustomDockTime()
     {
         var tripTime = _shuttles.DefaultTravelTime + _shuttles.DefaultStartupTime;
@@ -182,7 +170,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
         if (!Deleted(component.Shuttle) || component.ArrivalsMap is not { } arrivalsMap)
             return;
 
-        // Spawn arrivals on a dummy map then dock it to the source.
         var dummpMapEntity = _mapSystem.CreateMap(out var dummyMapId);
 
         if (!TryGetArrivals(out _))
@@ -200,15 +187,10 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             arrivalsComp.NextTransfer = Timing.CurTime + TimeSpan.FromSeconds(Cfg.GetCVar(CCVars.ArrivalsCooldown));
         }
 
-        // Don't start the arrivals shuttle immediately docked so power has a time to stabilise?
         var timer = AddComp<TimedDespawnComponent>(dummpMapEntity);
         timer.Lifetime = 15f;
     }
 
-    /// <summary>
-    /// Loads the round's arrivals map from the first station that needs one. Its <see cref="BecomesTerminalComponent"/>
-    /// grid becomes the terminal.
-    /// </summary>
     private void LoadTerminal(EntityUid station, ResPath path)
     {
         if (!_loader.TryLoadMap(path, out var map, out var grids))
@@ -232,10 +214,23 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             _mapSystem.InitializeMap(map.Value.Owner);
     }
 
+    [PublicAPI]
+    public EntityUid? EnsureTerminal(EntityUid station)
+    {
+        if (!Enabled ||
+            !TryComp<StationArrivalsComponent>(station, out var comp) ||
+            comp.ArrivalsMap is not { } path)
+            return null;
+
+        if (!TryGetArrivals(out _))
+            LoadTerminal(station, path);
+
+        return TryGetArrivals(out var terminal) ? Transform(terminal).MapUid : null;
+    }
+
     [SubscribeLocalEvent]
     private void OnRoundStarting(RoundStartingEvent ev)
     {
-        // Setup arrivals station
         if (!Enabled)
             return;
 
@@ -245,16 +240,12 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
     [SubscribeLocalEvent]
     private void OnStationPostInit(EntityUid uid, StationArrivalsComponent component, ref StationPostInitEvent args)
     {
-        // Roundstart stations are set up on RoundStartingEvent, this is for latespawn stations.
         if (!Enabled || Ticker.RunLevel != GameRunLevel.InRound)
             return;
 
         SetupShuttle(uid, component);
     }
 
-    /// <summary>
-    ///     First sends shuttle timer data, then kicks people off the shuttle if it isn't leaving the arrivals terminal
-    /// </summary>
     [SubscribeLocalEvent]
     private void OnArrivalsFTL(EntityUid shuttleUid, ArrivalsShuttleComponent component, ref FTLStartedEvent args)
     {
@@ -269,10 +260,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             ftlTime);
     }
 
-    /// <summary>
-    /// Call when an arrivals shuttle on a custom trip (see <see cref="ArrivalsTripEvent"/>) sets off,
-    /// before it has moved. Handles the shuttle screens, kicks stowaways off and clocks players in.
-    /// </summary>
     public void TripDeparted(Entity<ArrivalsShuttleComponent?> shuttle, EntityUid target, TimeSpan travelTime)
     {
         if (!Resolve(shuttle, ref shuttle.Comp))
@@ -288,9 +275,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             true);
     }
 
-    /// <summary>
-    /// Call when an arrivals shuttle on a custom trip has docked at its target. Schedules its next departure.
-    /// </summary>
     public void TripArrived(Entity<ArrivalsShuttleComponent?> shuttle)
     {
         if (!Resolve(shuttle, ref shuttle.Comp) || !shuttle.Comp.InTrip)
@@ -301,7 +285,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
         comp.InTrip = false;
         comp.NextTransfer = Timing.CurTime + dockTime;
 
-        // Docked at the terminal it's here now, at the station it's back after the dock and the trip back.
         var mapUid = Transform(shuttle).MapUid;
         if (TryGetArrivals(out EntityUid arrivals) && Transform(arrivals).MapUid != mapUid)
             comp.NextArrivalsTime = comp.NextTransfer + comp.TripTime;
@@ -333,7 +316,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
                 ShuttleTime = ftlTime,
             };
 
-            // unfortunate levels of spaghetti due to roundstart arrivals ftl behavior
             EntityUid? sourceMap;
             var arrivalsDelay = Cfg.GetCVar(CCVars.ArrivalsCooldown);
 
@@ -352,7 +334,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             payload.SourceMap = sourceMap;
             payload.SourceTime = ftlTime + TimeSpan.FromSeconds(arrivalsDelay);
 
-            // There and back with a dock in between, and the far end gets an ETA.
             if (customTrip)
             {
                 payload.SourceTime = ftlTime + CustomDockTime() + ftlTime;
@@ -363,41 +344,30 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             _deviceNetworkSystem.SendPacket(shuttleUid, null, ref payload, netComp.TransmitFrequency);
         }
 
-        // Don't do anything here when leaving arrivals.
         var arrivalsMapUid = Transform(arrivals).MapUid;
         if (fromMapUid == arrivalsMapUid)
             return;
 
         var returns = Cfg.GetCVar(CCVars.ArrivalsReturns);
 
-        // Any mob then yeet them off the shuttle.
         if (!returns && fromMapUid != null)
             DumpChildren(shuttleUid, fromMapUid.Value, from, fromRotation);
 
         var pendingQuery = AllEntityQuery<PendingClockInComponent, TransformComponent>();
 
-        // We're heading from the station back to arrivals (if leaving arrivals, would have returned above).
-        // Process everyone who holds a PendingClockInComponent
-        // Note, due to way DumpChildren works, anyone who doesn't have a PendingClockInComponent gets left in space
-        // and will not warp. This is intended behavior.
         while (pendingQuery.MoveNext(out var pUid, out _, out var xform))
         {
             if (xform.GridUid == shuttleUid)
             {
-                // Riding back to the terminal, they keep their coupon.
                 if (returns)
                     continue;
 
-                // Warp all players who are still on this shuttle to a spawn point. This doesn't let them return to
-                // arrivals. It also ensures noobs, slow players or AFK players safely leave the shuttle.
                 TryTeleportToMapSpawn(pUid, component.Station, xform);
             }
 
-            // Players who have remained at arrivals keep their warp coupon (PendingClockInComponent) for now.
             if (xform.MapUid == arrivalsMapUid)
                 continue;
 
-            // The player has successfully left arrivals and is also not on the shuttle. Remove their warp coupon.
             RemCompDeferred<PendingClockInComponent>(pUid);
             RemCompDeferred<AutoOrientComponent>(pUid);
 
@@ -476,7 +446,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
         if (args.Handled)
             return;
 
-        // Just saves mappers forgetting. (v2 boogaloo)
         args.Handled = true;
         args.Tag = "DockArrivals";
     }
@@ -504,20 +473,17 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
         var points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
         var possiblePositions = new ValueList<EntityCoordinates>(32);
 
-        // Find a spawnpoint on the same map as the player is already docked with now.
         while (points.MoveNext(out var uid, out var spawnPoint, out var xform))
         {
             if (spawnPoint.SpawnType == SpawnPointType.LateJoin &&
                 _station.GetOwningStation(uid, xform) == stationId)
             {
-                // Add to list of possible spawn locations
                 possiblePositions.Add(xform.Coordinates);
             }
         }
 
         if (possiblePositions.Count > 0)
         {
-            // Move the player to a random late-join spawnpoint.
             _transform.SetCoordinates(player, transform, Random.Pick(possiblePositions));
             if (_actor.TryGetSession(player, out var session))
             {
@@ -588,8 +554,6 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
 
         return new CompletionResult(new CompletionOption[]
         {
-            // Enables and disable are separate comms in case you don't want to accidentally toggle it, compared to
-            // returns which doesn't have an immediate effect
             new("enable", Loc.GetString("cmd-arrivals-enable-hint")),
             new("disable", Loc.GetString("cmd-arrivals-disable-hint")),
             new("returns", Loc.GetString("cmd-arrivals-returns-hint")),

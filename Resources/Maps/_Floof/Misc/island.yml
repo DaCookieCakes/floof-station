@@ -95,21 +95,6 @@ entities:
       ambientLightColor: '#FFFFFF00'
     - type: Roof
       data: {}
-    - type: DayNightCycle
-      cycle: Tropical
-    - type: SunShadow
-    - type: SunShadowCycle
-      directions:
-      - direction: 0,3
-      - ratio: 0.25
-        direction: -3,-0.1
-        alpha: 0.5
-      - ratio: 0.5
-        direction: 0,-3
-        alpha: 0.8
-      - ratio: 0.75
-        direction: 3,-0.1
-        alpha: 0.5
     - type: MapAtmosphere
       space: False
       mixture:

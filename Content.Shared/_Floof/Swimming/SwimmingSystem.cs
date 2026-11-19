@@ -25,16 +25,13 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._Floof.Swimming;
 
-/// <summary>
-///     Deep liquid slows mobs down, carries them along with its current and makes them swim in strokes.
-/// </summary>
 public sealed partial class SwimmingSystem : VirtualController
 {
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private ActionBlockerSystem _blocker = default!;
     [Dependency] private FloodLevelSystem _level = default!;
-    [Dependency] private OceanSeaSystem _sea = default!;
+    [Dependency] private MapFluidSystem _fluid = default!;
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private ItemToggleSystem _toggle = default!;
     [Dependency] private MobStateSystem _mobState = default!;
@@ -54,9 +51,6 @@ public sealed partial class SwimmingSystem : VirtualController
 
     private static readonly SoundSpecifier StrokeSound = new SoundCollectionSpecifier("FloodSwimStroke");
 
-    /// <summary>
-    ///     Speed changes smaller than this aren't worth refreshing the mob's movement for.
-    /// </summary>
     private const float SpeedFactorStep = 0.05f;
 
     private float _slowStart;
@@ -127,13 +121,10 @@ public sealed partial class SwimmingSystem : VirtualController
         args.ModifySpeed(ent.Comp.SpeedFactor);
     }
 
-    /// <summary>
-    ///     Past the edge of the grid nothing gives you gravity, but you still swim out there. Parent changes refresh this.
-    /// </summary>
     private void OnIsWeightless(Entity<SwimmerComponent> ent, ref IsWeightlessEvent args)
     {
         var xform = Transform(ent);
-        if (args.Handled || xform.GridUid != null || !_sea.IsInSea(xform))
+        if (args.Handled || xform.GridUid != null || !_fluid.IsInFluid(xform))
             return;
 
         args.IsWeightless = false;
@@ -194,8 +185,6 @@ public sealed partial class SwimmingSystem : VirtualController
             measured = _level.GetCurrent(gridUid, grid, _map.TileIndicesFor(gridUid, grid, xform.Coordinates), volume);
         }
 
-        // Puddles only change about once per flow, so the mob eases towards what it reads. Resimulated ticks keep the
-        // value they have, or the client would ease faster than the server.
         if (_timing.IsFirstTimePredicted)
         {
             var blend = 1f - MathF.Exp(-frameTime / MathF.Max(_currentSmoothing, 0.001f));
@@ -208,10 +197,8 @@ public sealed partial class SwimmingSystem : VirtualController
         if (!free || current == Vector2.Zero)
             return;
 
-        // Shallow water takes a real surge to move you, deep water drags you along with hardly any current.
         var progress = Math.Clamp((depth - _sweepDepth) / MathF.Max(_swimDepth - _sweepDepth, 0.001f), 0f, 1f);
         var strength = current.Length();
-        // Measured from the threshold, so the push fades in rather than switching on.
         var excess = strength - MathHelper.Lerp(_sweepSurge, _sweepCalm, progress);
         if (excess <= 0f)
             return;
@@ -222,10 +209,6 @@ public sealed partial class SwimmingSystem : VirtualController
         PhysicsSystem.SetLinearVelocity(uid, velocity, body: physics);
     }
 
-    /// <summary>
-    ///     Swaps walking for strokes in deep liquid: holding a direction pushes off every so often and glides in between.
-    /// </summary>
-    /// <returns>Whether the mob is swimming, and so isn't taking any steps.</returns>
     public bool TrySwim(EntityUid uid, TransformComponent xform, ref Vector2 wishDir, ref float friction, ref float accel)
     {
         if (!TryComp<SwimmerComponent>(uid, out var swimmer))
@@ -262,17 +245,11 @@ public sealed partial class SwimmingSystem : VirtualController
         return true;
     }
 
-    /// <summary>
-    ///     Depth this mob swims from right now. Lying down takes less of it, as long as the mob can move at all.
-    /// </summary>
     public float GetSwimDepth(EntityUid uid)
     {
         return CanSwimLying(uid) ? MathF.Min(_lyingSwimDepth, _swimDepth) : _swimDepth;
     }
 
-    /// <summary>
-    ///     Whether the mob is swimming on its front, which puts its sprite sideways.
-    /// </summary>
     public bool IsSwimmingLying(EntityUid uid, TransformComponent xform)
     {
         return CanSwimLying(uid) && !IsOnBottom(uid) && GetStandingDepth(uid, xform) >= MathF.Min(_lyingSwimDepth, _swimDepth);
@@ -283,9 +260,6 @@ public sealed partial class SwimmingSystem : VirtualController
         return _lyingSwim && _standing.IsDown(uid) && _blocker.CanMove(uid);
     }
 
-    /// <summary>
-    ///     Active magboots hold you to the floor, so you wade along the bottom however deep it gets.
-    /// </summary>
     public bool IsOnBottom(EntityUid uid)
     {
         return _inventory.TryGetSlotEntity(uid, "shoes", out var boots) &&
@@ -298,9 +272,6 @@ public sealed partial class SwimmingSystem : VirtualController
         return _inventory.TryGetSlotEntity(uid, "outerClothing", out var suit) && _sinkingQuery.HasComp(suit);
     }
 
-    /// <summary>
-    ///     Whether the mob's head is under. Swimming keeps it up, until the water gets too deep or the mob can't swim.
-    /// </summary>
     public bool IsSubmerged(EntityUid uid, TransformComponent xform)
     {
         var depth = GetStandingDepth(uid, xform);
@@ -314,9 +285,6 @@ public sealed partial class SwimmingSystem : VirtualController
                 _staminaQuery.TryComp(uid, out var stamina) && stamina.Critical);
     }
 
-    /// <summary>
-    ///     How deep it is for this mob, which is less on top of a table. A flooded tile has no top left to stand on.
-    /// </summary>
     public float GetStandingDepth(EntityUid uid, TransformComponent xform)
     {
         var depth = _level.GetDepth(xform);

@@ -122,7 +122,7 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
         // Draw nearby grids
         var controlBounds = PixelSizeBox;
         _grids.Clear();
-        _maps.FindGridsIntersecting(gridXform.MapID, viewBoundsWorld, ref _grids);
+        _maps.FindGridsIntersecting(gridXform.MapID, viewBoundsWorld, ref _grids, includeMap: false); // Floof - the map's own floor has no docks or physics
 
         // offset the dotted-line position to the bounds.
         Vector2? viewedDockPos = _viewedState != null ? MidPointVector : null;

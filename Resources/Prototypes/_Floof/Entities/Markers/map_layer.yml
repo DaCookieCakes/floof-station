@@ -1,0 +1,5 @@
+- type: entity
+  id: MapLayerEye
+  name: map layer eye
+  save: false
+  categories: [ HideSpawnMenu ]

@@ -1,0 +1,50 @@
+- type: entity
+  parent: [ BaseWallLight, BaseLightHousingDestructible ]
+  id: PoweredlightSubFloodlight
+  name: submarine floodlight
+  description: A hull-mounted floodlight that shines down into the depths below the submarine.
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/Lighting/light-tube.rsi
+    layers:
+    - map: ["enum.PoweredLightLayers.Base"]
+      state: base
+    - map: ["enum.PoweredLightLayers.Glow"]
+      state: glow
+      shader: unshaded
+      visible: false
+  - type: PointLight
+    enabled: false
+    color: "#B4FCF0"
+    radius: 1.5
+    energy: 0.6
+    softness: 1
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
+  - type: LitOnPowered
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PoweredLightLayers.Glow:
+          True: { visible: true }
+          False: { visible: false }
+  - type: MapLayerDownlight
+    tilt: 0.5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

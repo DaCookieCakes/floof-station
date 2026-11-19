@@ -1,0 +1,51 @@
+<BoxContainer
+    HorizontalExpand="True"
+    xmlns="https://spacestation14.io"
+    xmlns:subHelm="clr-namespace:Content.Client._Floof.MapLayer.Transition"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls">
+    <subHelm:SonarControl
+        Name="NavRadar"
+        MouseFilter="Stop"
+        VerticalAlignment="Stretch"
+        VerticalExpand="True"
+        HorizontalExpand="True"
+        Margin="5 4 10 5"/>
+    <BoxContainer
+        Name="RightDisplayNav"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Right"
+        VerticalExpand="True"
+        MinWidth="256"
+        MaxWidth="256"
+        Margin="5 0 5 5"
+        Orientation="Vertical">
+        <controls:StripeBack MinSize="48 48">
+            <Label
+                Name="NavDisplayLabel"
+                Text="{Loc 'shuttle-console-display-label'}"
+                VerticalExpand="True"
+                HorizontalAlignment="Center"/>
+        </controls:StripeBack>
+        <GridContainer
+            Columns="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            HorizontalExpand="True"
+            Margin="3"
+            Name="ReadonlyDisplay">
+            <Label Text="{Loc 'shuttle-console-position'}" />
+            <Label Name="GridPosition" Text="0.0, 0.0" HorizontalExpand="True" Align="Right" />
+            <Label Text="{Loc 'shuttle-console-orientation'}" />
+            <Label Name="GridOrientation" Text="0.0" HorizontalExpand="True" Align="Right" />
+            <Label Text="{Loc 'shuttle-console-linear-velocity'}" />
+            <Label Name="GridLinearVelocity" Text="0.0, 0.0" HorizontalExpand="True" Align="Right" />
+            <Label Text="{Loc 'shuttle-console-angular-velocity'}" />
+            <Label Name="GridAngularVelocity" Text="0.0" HorizontalExpand="True" Align="Right" />
+        </GridContainer>
+        <Button
+            Name="SonarToggle"
+            ToggleMode="True"
+            Text="{Loc 'sub-helm-sonar-toggle'}"
+            Margin="3"/>
+    </BoxContainer>
+</BoxContainer>

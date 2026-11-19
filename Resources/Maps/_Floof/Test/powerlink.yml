@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 11/11/2026 08:55:21
-  entityCount: 79
+  entityCount: 80
 maps: []
 grids:
 - 1
@@ -25,6 +25,8 @@ entities:
     - type: Transform
       parent: invalid
       pos: 3.2139032,-0.07187462
+    - type: BecomesStation
+      id: TestPowerLink
     - type: MapGrid
       chunks:
         0,0:
@@ -307,6 +309,13 @@ entities:
     - type: Transform
       parent: 1
       pos: 9.5,-2.5
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 80
+    components:
+    - type: Transform
+      parent: 1
+      pos: 4.5,-2.5
 - proto: SpawnPointPassenger
   entities:
   - uid: 41

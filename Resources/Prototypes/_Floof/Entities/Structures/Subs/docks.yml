@@ -1,0 +1,7 @@
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockClamDock
+  suffix: Clam Dock
+  components:
+  - type: GridFill
+    path: /Maps/_Floof/Subs/clam.yml

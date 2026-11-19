@@ -94,6 +94,11 @@ public sealed partial class ShuttleSystem
         )
             return;
 
+        // Floof - phantom grids only block, they never take or deal impact damage
+        if (HasComp<Content.Shared._Floof.MapLayer.PhantomGridComponent>(args.OurEntity) ||
+            HasComp<Content.Shared._Floof.MapLayer.PhantomGridComponent>(args.OtherEntity))
+            return;
+
         var ourBody = args.OurBody;
         var otherBody = args.OtherBody;
 

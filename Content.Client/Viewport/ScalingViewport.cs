@@ -166,7 +166,8 @@ namespace Content.Client.Viewport
 
             DebugTools.AssertNotNull(_viewport);
 
-            RenderWithUnderlay(_viewport!); // Floof - map underlay
+            if (!RenderWithLayers(_viewport!)) // Floof - map layers
+                _viewport!.Render();
 
             if (_queuedScreenshots.Count != 0)
             {
@@ -306,6 +307,7 @@ namespace Content.Client.Viewport
         {
             _viewport?.Dispose();
             _viewport = null;
+            FreeLayerAbove(); // Floof - map layers
         }
 
         public MapCoordinates ScreenToMap(Vector2 coords)

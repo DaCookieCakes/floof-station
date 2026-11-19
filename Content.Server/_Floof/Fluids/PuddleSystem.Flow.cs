@@ -20,42 +20,24 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.Fluids.EntitySystems;
 
-/// <summary>
-///     Overflowing puddles level out with their neighbours. Runs on its own queue instead of the spreader,
-///     so the work is spread over the ticks and capped per tick.
-/// </summary>
 public sealed partial class PuddleSystem
 {
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private SpreaderSystem _spreader = default!;
-    [Dependency] private OceanSeaSystem _sea = default!;
+    [Dependency] private MapFluidSystem _fluid = default!;
 
     [Dependency] private EntityQuery<AirtightComponent> _airtightQuery = default!;
     [Dependency] private EntityQuery<DockingComponent> _dockingQuery = default!;
 
     private static readonly ProtoId<EdgeSpreaderPrototype> PuddleSpreader = "Puddle";
 
-    /// <summary>
-    ///     Two tiles closer than this share of the deeper one count as level, so a settled flood stops spreading.
-    /// </summary>
     private const float LevelTolerance = 0.02f;
 
-    /// <summary>
-    ///     Most that two tiles can differ by and still count as level. A share alone would let the water drop by it on
-    ///     every tile, so a long room would settle with its far end dry.
-    /// </summary>
     private static readonly FixedPoint2 MaxLevelDifference = FixedPoint2.New(100);
 
-    /// <summary>
-    ///     Smallest difference that still flows, for shallow puddles.
-    /// </summary>
     private static readonly FixedPoint2 FlowEpsilon = FixedPoint2.New(1);
 
-    /// <summary>
-    ///     A settled puddle only flows again once its volume moved this far (or by the level tolerance),
-    ///     so evaporation doesn't wake it every tick.
-    /// </summary>
     private static readonly FixedPoint2 WakeThreshold = FixedPoint2.New(10);
 
     private readonly Queue<EntityUid> _flowQueue = new();
@@ -64,7 +46,6 @@ public sealed partial class PuddleSystem
     private readonly Stopwatch _flowStopwatch = new();
     private readonly HashSet<EntityUid> _flowNow = new();
 
-    // Flow moves liquid directly; slip, colour, reactions and so on catch up here, at most once per flow interval.
     private readonly Queue<(EntityUid Uid, TimeSpan Due)> _refreshQueue = new();
     private readonly Dictionary<EntityUid, bool> _refreshPending = new();
     private readonly Dictionary<EntityUid, FixedPoint2> _refreshedVolume = new();
@@ -110,9 +91,6 @@ public sealed partial class PuddleSystem
         Subs.CVar(_cfg, CCVars.FloodMaxProcessTime, value => _maxFlowTime = value, true);
     }
 
-    /// <summary>
-    ///     Queues the puddle to flow, unless it's already waiting.
-    /// </summary>
     public void WakePuddle(EntityUid uid)
     {
         _settledVolume.Remove(uid);
@@ -150,7 +128,6 @@ public sealed partial class PuddleSystem
         WakePuddle(uid);
     }
 
-    /// <param name="mixing">The composition changed, so it can react and needs a full update.</param>
     private void QueueRefresh(EntityUid uid, bool mixing)
     {
         if (_refreshPending.TryGetValue(uid, out var pending))
@@ -188,7 +165,6 @@ public sealed partial class PuddleSystem
                 out var solution))
             return;
 
-        // Same liquid and barely any volume change: nothing anyone could see.
         if (!mixing && _refreshedVolume.TryGetValue(entity, out var refreshed) &&
             FixedPoint2.Abs(solution.Volume - refreshed) < FixedPoint2.Max(FlowEpsilon, refreshed * LevelTolerance))
             return;
@@ -197,16 +173,12 @@ public sealed partial class PuddleSystem
         _solutionContainerSystem.UpdateChemicals(entity.Comp.Solution.Value, mixing);
     }
 
-    // The spreader still wakes puddles next to opened doors and removed walls.
     private void OnPuddleSpread(Entity<PuddleComponent> entity, ref SpreadNeighborsEvent args)
     {
         RemCompDeferred<ActiveEdgeSpreaderComponent>(entity);
         WakePuddle(entity);
     }
 
-    /// <summary>
-    ///     An opening door shouldn't wait for the spreader and the queue: the liquid behind it moves on the next tick.
-    /// </summary>
     private void OnAirtightChanged(ref AirtightChanged ev)
     {
         if (!ev.AirBlockedChanged || ev.Airtight.AirBlocked || !TryComp<MapGridComponent>(ev.Position.Grid, out var grid))
@@ -256,7 +228,6 @@ public sealed partial class PuddleSystem
             return;
         }
 
-        // Every queued puddle flows about once per interval, a slice of them each tick.
         var pending = _flowQueue.Count;
         _flowCredit = MathF.Min(_flowCredit + pending * frameTime / MathF.Max(_flowInterval, frameTime), pending);
 
@@ -277,11 +248,6 @@ public sealed partial class PuddleSystem
         FlowMicroseconds += (_flowStopwatch.ElapsedTicks - refreshTicks) * 1_000_000 / Stopwatch.Frequency;
     }
 
-    /// <summary>
-    ///     Liquid above <see cref="PuddleComponent.OverflowVolume"/> levels out with every lower neighbour:
-    ///     puddles, dry floor and space or empty tiles, which drain it. Higher neighbours get woken to flow in.
-    ///     Returns whether it should flow again.
-    /// </summary>
     private bool Flow(Entity<PuddleComponent> entity)
     {
         if (!_solutionContainerSystem.ResolveSolution(entity.Owner, entity.Comp.SolutionName, ref entity.Comp.Solution,
@@ -320,8 +286,7 @@ public sealed partial class PuddleSystem
             return false;
         }
 
-        // Under the sea the water outside is already as high as it gets.
-        var underSea = _sea.IsUnderSea(xform.MapUid);
+        var underSea = _fluid.HasFluid(xform.MapUid);
         foreach (var (_, tile) in freeTiles)
         {
             if (underSea && _turf.IsSpace(tile))
@@ -333,7 +298,6 @@ public sealed partial class PuddleSystem
         if (!underSea)
             AddEmptySinks(entity, xform, ref targets);
 
-        // Water level shared with every neighbour below it, never under the surface tension.
         targets.Sort((x, y) => x.Volume.CompareTo(y.Volume));
         var total = level;
         var count = 1;
@@ -391,9 +355,6 @@ public sealed partial class PuddleSystem
         return true;
     }
 
-    /// <summary>
-    ///     Tiles next to this one with no floor at all. The spreader never lists them, but liquid pours off the edge.
-    /// </summary>
     private void AddEmptySinks(EntityUid uid, TransformComponent xform, ref ValueList<FlowTarget> targets)
     {
         if (!TryComp<MapGridComponent>(xform.GridUid, out var grid))
@@ -404,7 +365,6 @@ public sealed partial class PuddleSystem
         var anchored = _map.GetAnchoredEntities(xform.GridUid.Value, grid, tile);
         while (anchored.MoveNext(out var ent))
         {
-            // Docked airlocks lead onto the other grid, not into space.
             if (_dockingQuery.TryComp(ent, out var dock) && dock.Docked)
                 return;
 

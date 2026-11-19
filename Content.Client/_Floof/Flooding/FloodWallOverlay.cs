@@ -12,11 +12,6 @@ using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
 namespace Content.Client._Floof.Flooding;
 
-/// <summary>
-///     Draws the liquid climbing the sloped faces of walls and windows. A wall sprite shows a face per side inside its own tile,
-///     running from the tile edge to the wall top, and is opaque, so the band needs no mask. Drawn row by row to stay on
-///     the pixel grid; a free end of a wall follows the sprite's slanted edge between two faces.
-/// </summary>
 [Virtual]
 public partial class FloodWallOverlay : Overlay
 {
@@ -31,9 +26,6 @@ public partial class FloodWallOverlay : Overlay
 
     private const int TilePixels = 32;
 
-    /// <summary>
-    ///     Height of a face in the wall sprite. The perspective makes the south face tall and the north face steep.
-    /// </summary>
     private const int SouthFaceRows = 13;
     private const int NorthFaceRows = 5;
     private const int SideFaceRows = 9;
@@ -43,8 +35,8 @@ public partial class FloodWallOverlay : Overlay
     private readonly FloodBarrier _pass;
     private readonly FloodWaterlineSystem _system;
     private readonly FloodSubmergedSystem _submerged;
-    private readonly OceanSeaSystem _oceanSea;
-    private readonly OceanSeaVisualsSystem _oceanVisuals;
+    private readonly MapFluidSystem _mapFluid;
+    private readonly MapFluidVisualsSystem _fluidVisuals;
     private readonly SharedMapSystem _map;
     private readonly SharedTransformSystem _xform;
     private readonly SpriteSystem _sprite;
@@ -54,7 +46,7 @@ public partial class FloodWallOverlay : Overlay
 
     private List<Entity<MapGridComponent>> _grids = new();
     private readonly HashSet<Entity<SpriteComponent, TransformComponent>> _sprites = new();
-    private readonly FloodWaterlineSystem.WetTile _sea = new();
+    private readonly FloodWaterlineSystem.WetTile _sea = new() { Depth = 1f };
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceEntities;
 
@@ -68,8 +60,8 @@ public partial class FloodWallOverlay : Overlay
         IoCManager.InjectDependencies(this);
         _system = _entManager.System<FloodWaterlineSystem>();
         _submerged = _entManager.System<FloodSubmergedSystem>();
-        _oceanSea = _entManager.System<OceanSeaSystem>();
-        _oceanVisuals = _entManager.System<OceanSeaVisualsSystem>();
+        _mapFluid = _entManager.System<MapFluidSystem>();
+        _fluidVisuals = _entManager.System<MapFluidVisualsSystem>();
         _map = _entManager.System<SharedMapSystem>();
         _xform = _entManager.System<SharedTransformSystem>();
         _sprite = _entManager.System<SpriteSystem>();
@@ -85,7 +77,6 @@ public partial class FloodWallOverlay : Overlay
         var handle = args.WorldHandle;
         var underwater = _submerged.SubmergedView > 0f;
 
-        // Seen from below, the band is what stays clear: it marks the stencil, and the darkening afterwards leaves it out.
         var stencil = new StencilParameters
         {
             Enabled = true,
@@ -100,7 +91,7 @@ public partial class FloodWallOverlay : Overlay
             handle.UseShader(_fill);
         }
 
-        var sea = _oceanVisuals.TryGetSea(args.MapId, out _sea.Color, out _sea.Depth);
+        var sea = _fluidVisuals.TryGetFluidColor(args.MapId, out _sea.Color);
 
         _grids.Clear();
         _map.FindGridsIntersecting(args.MapId, args.WorldAABB, ref _grids);
@@ -135,9 +126,6 @@ public partial class FloodWallOverlay : Overlay
             DarkenAboveWater(args, stencil, eye.Rotation);
     }
 
-    /// <summary>
-    ///     Exposed tiles hold no puddles, but the sea on them climbs whatever borders them just the same.
-    /// </summary>
     private void DrawSeaBands(DrawingHandleWorld handle, Entity<MapGridComponent> grid, Box2 bounds)
     {
         var area = bounds.Intersect(grid.Comp.LocalAABB.Enlarged(1f));
@@ -146,7 +134,7 @@ public partial class FloodWallOverlay : Overlay
             for (var y = (int) MathF.Floor(area.Bottom); y < MathF.Ceiling(area.Top); y++)
             {
                 var indices = new Vector2i(x, y);
-                if (_oceanSea.IsExposed(grid, grid, indices) && GetBarrier(grid, indices) == FloodBarrier.None)
+                if (_mapFluid.IsExposed(grid, grid, indices) && GetBarrier(grid, indices) == FloodBarrier.None)
                     DrawBandsAround(handle, grid, indices, _sea);
             }
         }
@@ -162,7 +150,6 @@ public partial class FloodWallOverlay : Overlay
             if (GetBarrier(grid, wall) == _pass)
                 DrawBand(handle, grid, wall, dir, tile);
 
-            // Inside corner: the diagonal wall shows the ends of both faces.
             if (GetBarrier(grid, wall + next) == _pass &&
                 GetBarrier(grid, wall) != FloodBarrier.None &&
                 GetBarrier(grid, indices + next) != FloodBarrier.None)
@@ -203,7 +190,6 @@ public partial class FloodWallOverlay : Overlay
 
     private void DrawBand(DrawingHandleWorld handle, Entity<MapGridComponent> grid, Vector2i wall, Vector2i dir, FloodWaterlineSystem.WetTile tile)
     {
-        // Looking from the water at the wall: its neighbours on either side.
         var side = new Vector2i(dir.Y, -dir.X);
         var freeA = GetBarrier(grid, wall + side) == FloodBarrier.None;
         var freeB = GetBarrier(grid, wall - side) == FloodBarrier.None;
@@ -218,11 +204,6 @@ public partial class FloodWallOverlay : Overlay
         }
     }
 
-    /// <summary>
-    ///     The two faces meet on a slanted line here, so at any level the water covers a rectangle of this tile.
-    /// </summary>
-    /// <param name="first">Direction from the water to the wall sharing an edge with this one's first face.</param>
-    /// <param name="second">The same for the other face, clockwise of <paramref name="first"/>.</param>
     private static void DrawInnerCorner(DrawingHandleWorld handle, Vector2i wall, Vector2i first, Vector2i second, FloodWaterlineSystem.WetTile tile)
     {
         var firstRows = ShownRows(tile, first);
@@ -258,11 +239,6 @@ public partial class FloodWallOverlay : Overlay
         return waterline ? FloodWaterlineSystem.WaterlineColor(color) : color;
     }
 
-    /// <summary>
-    ///     One pixel row of the face, counted from the edge the water touches.
-    /// </summary>
-    /// <param name="insetA">Pixels cut from the end towards the clockwise neighbour.</param>
-    /// <param name="insetB">Pixels cut from the other end.</param>
     private static Box2 RowBox(Vector2i wall, Vector2i dir, int row, int insetA, int insetB)
     {
         var near = row * PixelSize;
@@ -273,9 +249,9 @@ public partial class FloodWallOverlay : Overlay
 
         return (dir.X, dir.Y) switch
         {
-            (0, 1) => new Box2(x + b, y + near, x + 1 - a, y + far), // water south of the wall
+            (0, 1) => new Box2(x + b, y + near, x + 1 - a, y + far),
             (0, -1) => new Box2(x + a, y + 1 - far, x + 1 - b, y + 1 - near),
-            (1, 0) => new Box2(x + near, y + a, x + far, y + 1 - b), // water west of the wall
+            (1, 0) => new Box2(x + near, y + a, x + far, y + 1 - b),
             _ => new Box2(x + 1 - far, y + b, x + 1 - near, y + 1 - a),
         };
     }
@@ -301,9 +277,6 @@ public partial class FloodWallOverlay : Overlay
     }
 }
 
-/// <summary>
-///     Closed doors draw above mobs, so their band needs its own pass.
-/// </summary>
 public sealed partial class FloodDoorOverlay : FloodWallOverlay
 {
     public FloodDoorOverlay() : base(FloodBarrier.Door, (int) DrawDepth.Overdoors + 1)

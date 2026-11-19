@@ -5,20 +5,17 @@ using Robust.Shared.Map.Components;
 
 namespace Content.Server.Atmos.EntitySystems;
 
-/// <summary>
-///     Under the sea, what's open to the map is water, so nothing vents into it.
-/// </summary>
 public sealed partial class AtmosphereSystem
 {
-    [Dependency] private EntityQuery<OceanSeaComponent> _oceanSeaQuery = default!;
+    [Dependency] private EntityQuery<MapFluidComponent> _mapFluidQuery = default!;
 
     private void InitializeOcean()
     {
-        SubscribeLocalEvent<OceanSeaComponent, ComponentStartup>(OnSeaChanged);
-        SubscribeLocalEvent<OceanSeaComponent, ComponentShutdown>(OnSeaChanged);
+        SubscribeLocalEvent<MapFluidComponent, ComponentStartup>(OnSeaChanged);
+        SubscribeLocalEvent<MapFluidComponent, ComponentShutdown>(OnSeaChanged);
     }
 
-    private void OnSeaChanged<T>(Entity<OceanSeaComponent> ent, ref T args)
+    private void OnSeaChanged<T>(Entity<MapFluidComponent> ent, ref T args)
     {
         var grids = EntityQueryEnumerator<GridAtmosphereComponent, MapGridComponent, TransformComponent>();
         while (grids.MoveNext(out var uid, out var atmos, out _, out var xform))
@@ -33,10 +30,6 @@ public sealed partial class AtmosphereSystem
         }
     }
 
-    /// <summary>
-    ///     Adds every tile bordering one open to the map, with no wall, closed door and so on in between. Once per side
-    ///     it's open on, so a tile with more openings fills faster.
-    /// </summary>
     public void GetOceanBreaches(GridAtmosphereComponent atmos, List<Vector2i> breaches)
     {
         foreach (var outside in atmos.MapTiles)
@@ -58,9 +51,8 @@ public sealed partial class AtmosphereSystem
     private void UpdateOceanSeal(GridAtmosphereComponent atmos, TileAtmosphere tile, bool exposed, EntityUid? map)
     {
         var wasExposed = tile.OceanExposed;
-        tile.OceanExposed = exposed && _oceanSeaQuery.HasComp(map);
+        tile.OceanExposed = exposed && _mapFluidQuery.HasComp(map);
 
-        // A group spanning the new seal would keep sharing across it.
         if (tile.OceanExposed != wasExposed && tile.ExcitedGroup != null)
             ExcitedGroupDispose(atmos, tile.ExcitedGroup);
     }

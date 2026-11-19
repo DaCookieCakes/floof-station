@@ -25,17 +25,13 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._Floof.Swimming;
 
-/// <summary>
-///     What deep liquid does to the mobs in it: no air to breathe once their head is under, tiring them out while they
-///     swim, reagents working on their skin, and swallowing some of it.
-/// </summary>
 public sealed partial class SwimmerMobSystem : EntitySystem
 {
     [Dependency] private AtmosphereSystem _atmos = default!;
     [Dependency] private BodySystem _body = default!;
     [Dependency] private FlammableSystem _flammable = default!;
     [Dependency] private FloodLevelSystem _level = default!;
-    [Dependency] private OceanSeaSystem _sea = default!;
+    [Dependency] private MapFluidSystem _fluid = default!;
     [Dependency] private SwimmingSystem _swimming = default!;
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private InternalsSystem _internals = default!;
@@ -83,15 +79,10 @@ public sealed partial class SwimmerMobSystem : EntitySystem
 
     private void OnInhale(Entity<SwimmerComponent> ent, ref InhaleLocationEvent args)
     {
-        // Internals and the like have already picked what to breathe from.
         if (args.Gas == null && _swimming.IsSubmerged(ent, Transform(ent)))
             args.Gas = GetLiquidBreath(ent, args.Respirator, Transform(ent));
     }
 
-    /// <summary>
-    ///     What a breath of the liquid around the mob comes to. The lungs get the liquid's gas forms, so whoever can
-    ///     breathe a gas can breathe its liquid too, and it's up to their metabolism who that is. Nothing for anyone else.
-    /// </summary>
     private GasMixture GetLiquidBreath(EntityUid uid, RespiratorComponent respirator, TransformComponent xform)
     {
         var breath = new GasMixture(respirator.BreathVolume) { Temperature = Atmospherics.T20C };
@@ -106,7 +97,6 @@ public sealed partial class SwimmerMobSystem : EntitySystem
                 breath.AdjustMoles(i, moles * (solution.GetTotalPrototypeQuantity(reagent) / solution.Volume).Float());
         }
 
-        // Salt water has no gas form of its own, the gills take the water out of it.
         breath.AdjustMoles(Gas.WaterVapor, moles * (solution.GetTotalPrototypeQuantity(Saline, Seawater) / solution.Volume).Float());
 
         return _respirator.CanMetabolizeInhaledAir((uid, respirator), breath)
@@ -114,14 +104,11 @@ public sealed partial class SwimmerMobSystem : EntitySystem
             : new GasMixture(respirator.BreathVolume);
     }
 
-    /// <summary>
-    ///     The liquid the entity is in. The sea has no solution of its own, and is never the poorer for what's taken out of it.
-    /// </summary>
     private bool TryGetLiquid(TransformComponent xform, [NotNullWhen(true)] out Solution? solution, out Entity<SolutionComponent>? solutionEnt)
     {
         solution = null;
         solutionEnt = null;
-        if (_sea.TryGetSea(xform, out var sea))
+        if (_fluid.TryGetFluid(xform, out var sea))
         {
             solution = new Solution(sea.Comp.Reagent, FloodConstants.TileVolume);
             return true;
@@ -170,7 +157,6 @@ public sealed partial class SwimmerMobSystem : EntitySystem
         if (_mobState.IsDead(uid))
             return;
 
-        // Only strokes tire you out, so treading water lets stamina come back.
         var sinceStroke = (_timing.CurTime - swimmer.LastStroke).TotalSeconds;
         if (depth >= _swimming.GetSwimDepth(uid) && !_swimming.IsOnBottom(uid) && sinceStroke <= Math.Max(Interval, _strokeInterval))
             _stamina.TakeStaminaDamage(uid, _swimStamina, visual: false);
@@ -178,7 +164,6 @@ public sealed partial class SwimmerMobSystem : EntitySystem
         if (!_swimming.IsSubmerged(uid, xform) || !_respiratorQuery.TryComp(uid, out var respirator) || _internals.AreInternalsWorking(uid))
             return;
 
-        // Gills pass it through instead.
         if (GetLiquidBreath(uid, respirator, xform).TotalMoles > 0f)
             return;
 

@@ -1,0 +1,49 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              xmlns:subHelm="clr-namespace:Content.Client._Floof.MapLayer.Transition"
+              xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+              xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
+              HorizontalExpand="True">
+    <subHelm:SubDockView Name="DockView"
+                         MouseFilter="Stop"
+                         VerticalAlignment="Stretch"
+                         VerticalExpand="True"
+                         HorizontalExpand="True"
+                         Margin="5 4 10 5"/>
+    <ui:ShuttleDockControl Name="DockingControl"
+                           Visible="False"
+                           MouseFilter="Stop"
+                           VerticalAlignment="Stretch"
+                           VerticalExpand="True"
+                           HorizontalExpand="True"
+                           Margin="5 4 10 5"/>
+    <BoxContainer Name="RightDisplayDock"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Right"
+                  VerticalExpand="True"
+                  MinWidth="256"
+                  MaxWidth="256"
+                  Margin="5 0 5 5"
+                  Orientation="Vertical">
+        <controls:StripeBack MinSize="48 48">
+            <Label Text="{Loc 'shuttle-console-docks-label'}"
+                   VerticalExpand="True"
+                   HorizontalAlignment="Center"/>
+        </controls:StripeBack>
+        <ScrollContainer VerticalExpand="True"
+                         HScrollEnabled="False"
+                         ReturnMeasure="True">
+            <BoxContainer Name="DockPorts" Orientation="Vertical"/>
+        </ScrollContainer>
+        <controls:StripeBack MinSize="48 48">
+            <Label Text="{Loc 'sub-helm-surface-label'}"
+                   VerticalExpand="True"
+                   HorizontalAlignment="Center"/>
+        </controls:StripeBack>
+        <Button Name="LiftButton"
+                Text="{Loc 'sub-helm-land'}"
+                Margin="3"/>
+        <Button Name="DockButton"
+                Text="{Loc 'sub-helm-dock'}"
+                Margin="3"/>
+    </BoxContainer>
+</BoxContainer>

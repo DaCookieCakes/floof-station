@@ -16,10 +16,6 @@ using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
 namespace Content.Client._Floof.Flooding;
 
-/// <summary>
-///     Draws the part of a sprite below the waterline again as water. A pass runs right after the sprites it covers,
-///     anything drawn later stands in front of that water.
-/// </summary>
 [Virtual]
 public partial class FloodObjectOverlay : Overlay
 {
@@ -31,20 +27,10 @@ public partial class FloodObjectOverlay : Overlay
 
     private const int PixelsPerTile = 32;
 
-    /// <summary>
-    ///     Pixels the water climbs up a sprite in a full tile. A wall squeezes its height into a short face,
-    ///     objects don't, so the same water reaches much further up them.
-    /// </summary>
     private const int MaxRows = PixelsPerTile;
 
-    /// <summary>
-    ///     A sprite lying sideways sits in the middle of its tile, clear of shallow water. This wets its lower half.
-    /// </summary>
     private const int LyingSwimRows = 15;
 
-    /// <summary>
-    ///     Matches what painted masks use, so the sprite still shows through.
-    /// </summary>
     private const float FlatSolidity = 0.75f;
 
     private readonly int _minDepth;
@@ -53,8 +39,8 @@ public partial class FloodObjectOverlay : Overlay
     private readonly FloodSubmergedSystem _submerged;
     private readonly FloodLevelSystem _level;
     private readonly SwimmingSystem _swimming;
-    private readonly OceanSeaSystem _oceanSea;
-    private readonly OceanSeaVisualsSystem _oceanVisuals;
+    private readonly MapFluidSystem _mapFluid;
+    private readonly MapFluidVisualsSystem _fluidVisuals;
     private readonly SpriteSystem _sprite;
     private readonly SpriteTreeSystem _spriteTree;
     private readonly SharedMapSystem _map;
@@ -66,12 +52,11 @@ public partial class FloodObjectOverlay : Overlay
     private readonly HashSet<Entity<SpriteComponent, TransformComponent>> _sprites = new();
     private readonly Dictionary<(EntityUid Grid, Vector2i Tile), float> _surfaces = new();
 
-    // A draw only reads its shader's parameters when the batch is flushed, so every sprite needs its own instance.
     private readonly List<ShaderInstance> _shaders = new();
     private readonly List<ShaderInstance> _maskShaders = new();
     private ShaderInstance? _dryShader;
     private readonly List<(SpriteComponent.Layer Layer, ShaderInstance Shader)> _layerShaders = new();
-    private readonly FloodWaterlineSystem.WetTile _sea = new();
+    private readonly FloodWaterlineSystem.WetTile _sea = new() { Depth = 1f };
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceEntities;
 
@@ -88,8 +73,8 @@ public partial class FloodObjectOverlay : Overlay
         _submerged = _entManager.System<FloodSubmergedSystem>();
         _level = _entManager.System<FloodLevelSystem>();
         _swimming = _entManager.System<SwimmingSystem>();
-        _oceanSea = _entManager.System<OceanSeaSystem>();
-        _oceanVisuals = _entManager.System<OceanSeaVisualsSystem>();
+        _mapFluid = _entManager.System<MapFluidSystem>();
+        _fluidVisuals = _entManager.System<MapFluidVisualsSystem>();
         _sprite = _entManager.System<SpriteSystem>();
         _spriteTree = _entManager.System<SpriteTreeSystem>();
         _map = _entManager.System<SharedMapSystem>();
@@ -104,7 +89,7 @@ public partial class FloodObjectOverlay : Overlay
     protected override void Draw(in OverlayDrawArgs args)
     {
         var underwater = _submerged.SubmergedView > 0f;
-        var sea = _oceanVisuals.TryGetSea(args.MapId, out _sea.Color, out _sea.Depth);
+        var sea = _fluidVisuals.TryGetFluidColor(args.MapId, out _sea.Color);
         if (_system.Grids.Count == 0 && !underwater && !sea || args.Viewport.Eye is not { } eye)
             return;
 
@@ -121,7 +106,6 @@ public partial class FloodObjectOverlay : Overlay
         var usedMasks = 0;
         var dryReady = false;
 
-        // A pixel takes the first coat that covers it and refuses the rest, so overlapping sprites stay one coat.
         var stencil = new StencilParameters
         {
             Enabled = true,
@@ -161,7 +145,6 @@ public partial class FloodObjectOverlay : Overlay
             if (tile == null && !underwater)
                 continue;
 
-            // Seen from below, walls and doors are darkened by their own overlay.
             if (underwater && _system.GetBarrier(uid) != FloodBarrier.None)
                 continue;
 
@@ -169,7 +152,6 @@ public partial class FloodObjectOverlay : Overlay
 
             if (tile == null)
             {
-                // All one coat, so these can share a shader and batch.
                 if (!dryReady)
                 {
                     PrepareDryShader(stencil);
@@ -183,7 +165,6 @@ public partial class FloodObjectOverlay : Overlay
             var waterColor = tile.Color;
             var shown = tile.Depth - surface;
 
-            // Fully under there's no surface to see.
             var covered = tile.Depth >= _swimming.DrownDepth;
             var lineColor = covered ? waterColor : FloodWaterlineSystem.WaterlineColor(waterColor);
 
@@ -243,14 +224,11 @@ public partial class FloodObjectOverlay : Overlay
         return surface;
     }
 
-    /// <summary>
-    ///     Past the grid's edge or on a tile open to the map, there's only the sea around it.
-    /// </summary>
     private bool IsOverSea(TransformComponent xform)
     {
         return xform.GridUid is not { } gridUid ||
                !_gridQuery.TryComp(gridUid, out var grid) ||
-               _oceanSea.IsExposed(gridUid, grid, _map.TileIndicesFor(gridUid, grid, xform.Coordinates));
+               _mapFluid.IsExposed(gridUid, grid, _map.TileIndicesFor(gridUid, grid, xform.Coordinates));
     }
 
     private void PrepareDryShader(StencilParameters stencil)
@@ -278,9 +256,6 @@ public partial class FloodObjectOverlay : Overlay
         return fallback;
     }
 
-    /// <summary>
-    ///     Places the mask the way the sprite system places a layer, so it lines up whichever way the entity faces.
-    /// </summary>
     private void DrawMask(DrawingHandleWorld handle, SpriteComponent sprite, SpriteSpecifier mask, Angle eyeRotation, Angle rotation, Vector2 position, SpriteComponent.DirectionOffset offset = SpriteComponent.DirectionOffset.None)
     {
         var angle = (rotation + eyeRotation).Reduced().FlipPositive();
@@ -299,9 +274,6 @@ public partial class FloodObjectOverlay : Overlay
         handle.DrawTexture(texture, -(Vector2) texture.Size / PixelsPerTile / 2f);
     }
 
-    /// <summary>
-    ///     A smoothed sprite is four corner layers, each showing its own state. The mask has a piece for every one of them.
-    /// </summary>
     private void DrawCorners(DrawingHandleWorld handle, SpriteComponent sprite, SpriteSpecifier.Rsi mask, string corners, Angle eyeRotation, Angle rotation, Vector2 position)
     {
         foreach (var layer in sprite.AllLayers)
@@ -311,10 +283,6 @@ public partial class FloodObjectOverlay : Overlay
         }
     }
 
-    /// <summary>
-    ///     A layer's own shader (displaced clothing on mobs) would replace ours, and clears ours for every layer after it.
-    ///     So they're lifted off for this draw.
-    /// </summary>
     private void RenderCovered(DrawingHandleWorld handle, ShaderInstance shader, Entity<SpriteComponent> sprite, Angle eyeRotation, Angle rotation, Vector2 position)
     {
         _layerShaders.Clear();

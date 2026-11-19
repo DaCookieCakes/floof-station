@@ -17,19 +17,16 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Floof.Flooding;
 
-/// <summary>
-///     Reads how much liquid is where, from the puddle appearance data clients already get for drawing.
-///     Both sides use it, so anything built on it predicts without state of its own.
-/// </summary>
 public sealed partial class FloodLevelSystem : EntitySystem
 {
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private TurfSystem _turf = default!;
-    [Dependency] private OceanSeaSystem _sea = default!;
+    [Dependency] private MapFluidSystem _fluid = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private SharedSolutionContainerSystem _solution = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
 
     [Dependency] private EntityQuery<BuckleComponent> _buckleQuery = default!;
     [Dependency] private EntityQuery<ClimbingComponent> _climbingQuery = default!;
@@ -69,7 +66,7 @@ public sealed partial class FloodLevelSystem : EntitySystem
 
     public float GetVolume(TransformComponent xform)
     {
-        if (_sea.IsInSea(xform))
+        if (_fluid.IsInFluid(xform))
             return FloodConstants.TileVolume.Float();
 
         if (xform.GridUid is not { } gridUid || !IsLoose(xform, gridUid) || !_gridQuery.TryComp(gridUid, out var grid))
@@ -90,9 +87,6 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return 0f;
     }
 
-    /// <summary>
-    ///     The puddle the entity is standing in.
-    /// </summary>
     public bool TryGetPuddle(TransformComponent xform, out Entity<PuddleComponent> puddle)
     {
         puddle = default;
@@ -112,9 +106,6 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return false;
     }
 
-    /// <summary>
-    ///     Out in the open: not while held, in a locker and so on. Buckling parents you to the chair, which doesn't keep you dry.
-    /// </summary>
     public bool IsLoose(TransformComponent xform, EntityUid gridUid)
     {
         return xform.ParentUid == gridUid ||
@@ -122,9 +113,6 @@ public sealed partial class FloodLevelSystem : EntitySystem
                Transform(xform.ParentUid).ParentUid == gridUid;
     }
 
-    /// <summary>
-    ///     The height of the highest surface on this tile.
-    /// </summary>
     public float GetSurface(EntityUid gridUid, MapGridComponent grid, Vector2i tile)
     {
         var surface = 0f;
@@ -138,9 +126,6 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return surface;
     }
 
-    /// <summary>
-    ///     Whether this sits on top of whatever surface shares its tile: loose objects do, mobs only once they've climbed up.
-    /// </summary>
     public bool RestsOnSurface(EntityUid uid, TransformComponent xform)
     {
         if (_climbingQuery.TryComp(uid, out var climbing))
@@ -149,19 +134,14 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return !xform.Anchored && !(_maskQuery.TryComp(uid, out var mask) && mask.Surface > 0f);
     }
 
-    /// <summary>
-    ///     Water runs downhill: every neighbour pulls towards itself or pushes away by how much the two levels differ.
-    ///     Walls and closed doors don't take part, a dry floor or the void beyond the hull is simply empty.
-    ///     Under the sea that void is a full tile instead, so settled water along the hull doesn't run out into it.
-    /// </summary>
     public Vector2 GetCurrent(EntityUid gridUid, MapGridComponent grid, Vector2i tile, float volume)
     {
         var current = Vector2.Zero;
-        var underSea = _sea.IsUnderSea(Transform(gridUid).MapUid);
+        var underSea = _fluid.HasFluid(Transform(gridUid).MapUid);
         foreach (var offset in Neighbors)
         {
             var neighbor = tile + offset;
-            var other = underSea && _sea.IsExposed(gridUid, grid, neighbor)
+            var other = underSea && _fluid.IsExposed(gridUid, grid, neighbor)
                 ? FloodConstants.TileVolume.Float()
                 : GetVolume(gridUid, grid, neighbor);
             var deeper = MathF.Max(volume, other);
@@ -177,7 +157,6 @@ public sealed partial class FloodLevelSystem : EntitySystem
 
     public bool IsWaterBlocked(EntityUid gridUid, MapGridComponent grid, Vector2i tile)
     {
-        // Airlock layers don't include Impassable, so a shut door would read as an empty tile.
         var anchored = _map.GetAnchoredEntitiesEnumerator(gridUid, grid, tile);
         while (anchored.MoveNext(out var ent))
         {
@@ -188,13 +167,10 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return _turf.IsTileBlocked(gridUid, tile, CollisionGroup.Impassable, grid);
     }
 
-    /// <summary>
-    ///     The colour of the liquid the entity is in, puddle or sea.
-    /// </summary>
     public bool TryGetLiquidColor(TransformComponent xform, out Color color)
     {
         color = default;
-        if (_sea.TryGetSea(xform, out var sea))
+        if (_fluid.TryGetFluid(xform, out var sea))
         {
             if (!_proto.TryIndex(sea.Comp.Reagent, out var reagent))
                 return false;
@@ -210,27 +186,23 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return true;
     }
 
-    /// <summary>
-    ///     Pressure in kPa the sea adds where this entity stands: out in it, or in a flooded tile that is mostly its
-    ///     water. A spilled tank doesn't crush anyone.
-    /// </summary>
     public float GetSeaPressure(EntityUid uid)
     {
         var xform = Transform(uid);
-        if (!_sea.TryGetMapSea(xform.MapUid, out var sea))
+        if (!_fluid.TryGetMapFluid(xform.MapUid, out var sea))
             return 0f;
 
-        if (_sea.IsInSea(xform))
-            return _sea.GetPressure(sea);
+        if (_fluid.IsInFluid(xform))
+            return _fluid.GetPressure(sea, _transform.GetWorldPosition(xform));
 
-        if (GetDepth(xform) < sea.Comp.PressureDepth ||
+        if (GetDepth(xform) < FloodConstants.PressureDepth ||
             !TryGetPuddle(xform, out var puddle) ||
             !_solution.ResolveSolution(puddle.Owner, puddle.Comp.SolutionName, ref puddle.Comp.Solution, out var solution) ||
             solution.Volume <= 0)
             return 0f;
 
         var share = (solution.GetTotalPrototypeQuantity(sea.Comp.Reagent) / solution.Volume).Float();
-        return share > sea.Comp.MinShare ? _sea.GetPressure(sea) : 0f;
+        return share > FloodConstants.MinShare ? _fluid.GetPressure(sea, _transform.GetWorldPosition(xform)) : 0f;
     }
 
     public Color GetColor(EntityUid puddle)
@@ -238,9 +210,6 @@ public sealed partial class FloodLevelSystem : EntitySystem
         return _appearance.TryGetData<Color>(puddle, PuddleVisuals.SolutionColor, out var color) ? color : Color.White;
     }
 
-    /// <summary>
-    ///     Ghosts, revenants, jaunts and the AI eye pass through liquid without touching it.
-    /// </summary>
     public bool IsIntangible(EntityUid uid)
     {
         return HasComp<SpectralComponent>(uid) || HasComp<MovementIgnoreGravityComponent>(uid);

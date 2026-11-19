@@ -1,10 +1,8 @@
-# Mooring: the map itself is a grid of seabed sand under the sea, with the station grid on top.
 - type: gameMap
   id: Mooring
   mapName: 'Mooring'
   mapPath: /Maps/_Floof/mooring.yml
   minPlayers: 0
-  # The station grid has to stay on the map's tiles.
   maxRandomOffset: 0
   randomRotation: false
   stations:
@@ -16,9 +14,78 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
+        - type: GridSpawn
+          groups:
+            trade: !type:GridSpawnGroup
+              addComponents:
+                - type: ProtectedGrid
+                - type: TradeStation
+              paths:
+                - /Maps/Shuttles/trading_outpost.yml
+            mining: !type:GridSpawnGroup
+              paths:
+                - /Maps/Shuttles/pathfinder.yml
         - type: StationArrivals
           arrivalsMap: /Maps/_Floof/Misc/island.yml
           shuttlePath: /Maps/_Floof/Misc/arrivals_sub.yml
+        - type: StationMapLayers
+          layers:
+            - !type:ArrivalsMapLayer
+              z: 600
+              name: arrivals
+              components:
+                - type: OceanDiveTransition
+                - type: Depth
+                  depth: 0
+                - type: DayNightCycle
+                  cycle: Tropical
+                - type: SunShadow
+                - type: SunShadowCycle
+                  directions:
+                    - direction: 0,3
+                    - ratio: 0.25
+                      direction: -3,-0.1
+                      alpha: 0.5
+                    - ratio: 0.5
+                      direction: 0,-3
+                      alpha: 0.8
+                    - ratio: 0.75
+                      direction: 3,-0.1
+                      alpha: 0.5
+            - !type:NoOpMapLayer
+              z: 400
+              name: dark
+              components:
+                - type: MapLight
+                  ambientLightColor: "#000000"
+            - !type:EmptyMapLayer
+              z: 10
+              name: cruise
+              components:
+                - type: MapLayerCruise
+                - type: MapFluid
+                - type: Depth
+                  depth: 590
+                - type: DepthVariation
+                - type: MapLight
+                  ambientLightColor: "#000000"
+                - type: Gravity
+                  enabled: true
+                  inherent: true
+            - !type:StationMapLayer
+              z: 0
+              name: seabed
+              components:
+                - type: MapLayerSeabed
+                - type: MapFluid
+                - type: Depth
+                  depth: 600
+                - type: DepthVariation
+                - type: MapLight
+                  ambientLightColor: "#000000"
+                - type: Gravity
+                  enabled: true
+                  inherent: true
         - type: StationJobs
           availableJobs:
             Passenger: [ -1, -1 ]

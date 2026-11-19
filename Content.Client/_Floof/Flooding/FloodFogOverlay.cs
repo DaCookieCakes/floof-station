@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Shared._Floof.Flooding;
+using Content.Client._Floof.MapLayer;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using Robust.Shared.Map.Components;
@@ -7,10 +8,6 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client._Floof.Flooding;
 
-/// <summary>
-///     With the local player under, thick liquid hides what's further away. Only inside the liquid: its walls fade with it,
-///     anything past those keeps the plain tint. Water at <see cref="ClearOpacity"/> stays clear.
-/// </summary>
 public sealed partial class FloodFogOverlay : Overlay
 {
     [Dependency] private IEntityManager _entManager = default!;
@@ -26,6 +23,7 @@ public sealed partial class FloodFogOverlay : Overlay
     private readonly FloodSubmergedSystem _submerged;
     private readonly SharedMapSystem _map;
     private readonly SharedTransformSystem _xform;
+    private readonly MapLayerSystem _layers;
     private readonly ShaderInstance _shader;
 
     private readonly Dictionary<Vector2i, Color> _barriers = new();
@@ -39,15 +37,15 @@ public sealed partial class FloodFogOverlay : Overlay
         _submerged = _entManager.System<FloodSubmergedSystem>();
         _map = _entManager.System<SharedMapSystem>();
         _xform = _entManager.System<SharedTransformSystem>();
+        _layers = _entManager.System<MapLayerSystem>();
         _shader = _proto.Index(Shader).InstanceUnique();
 
-        // After the caustics, before the screen tint.
         ZIndex = -1;
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
-        return _submerged.SubmergedView > 0f;
+        return _submerged.SubmergedView > 0f && !_layers.IsDrawingOtherLayer(args.Viewport);
     }
 
     protected override void Draw(in OverlayDrawArgs args)

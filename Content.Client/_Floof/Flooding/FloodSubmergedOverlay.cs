@@ -1,16 +1,14 @@
 using System.Numerics;
+using Content.Client._Floof.MapLayer;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client._Floof.Flooding;
 
-/// <summary>
-///     Drawn with the world's lighting still bound and before the field of view is cut out,
-///     so the tint is lit like a sprite and walls still hide what's behind them.
-/// </summary>
 public sealed partial class FloodSubmergedOverlay : Overlay
 {
+    [Dependency] private IEntityManager _entManager = default!;
     [Dependency] private IPrototypeManager _proto = default!;
 
     private static readonly ProtoId<ShaderPrototype> WaveShader = "FloodSubmerged";
@@ -18,6 +16,7 @@ public sealed partial class FloodSubmergedOverlay : Overlay
 
     private readonly ShaderInstance _wave;
     private readonly ShaderInstance _tint;
+    private readonly MapLayerSystem _layers;
 
     public float Strength;
     public Vector3 Tint;
@@ -30,11 +29,12 @@ public sealed partial class FloodSubmergedOverlay : Overlay
         IoCManager.InjectDependencies(this);
         _wave = _proto.Index(WaveShader).InstanceUnique();
         _tint = _proto.Index(TintShader).InstanceUnique();
+        _layers = _entManager.System<MapLayerSystem>();
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
-        return Strength > 0f;
+        return Strength > 0f && !_layers.IsDrawingOtherLayer(args.Viewport);
     }
 
     protected override void Draw(in OverlayDrawArgs args)

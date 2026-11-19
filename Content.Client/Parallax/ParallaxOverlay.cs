@@ -1,5 +1,6 @@
 using System.Numerics;
-using Content.Client._Floof.MapUnderlay; // Floof - map underlay
+using Content.Client._Floof.MapLayer; // Floof - map layers
+using Content.Shared._Floof.Ocean; // Floof - map layers
 using Content.Client.Parallax.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.Parallax.Biomes;
@@ -22,7 +23,7 @@ public sealed partial class ParallaxOverlay : Overlay
     [Dependency] private IParallaxManager _manager = default!;
     private readonly SharedMapSystem _mapSystem;
     private readonly ParallaxSystem _parallax;
-    private readonly MapUnderlaySystem _underlay; // Floof - map underlay
+    private readonly MapLayerSystem _layers; // Floof - map layers
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowWorld;
 
@@ -32,7 +33,7 @@ public sealed partial class ParallaxOverlay : Overlay
         IoCManager.InjectDependencies(this);
         _mapSystem = _entManager.System<SharedMapSystem>();
         _parallax = _entManager.System<ParallaxSystem>();
-        _underlay = _entManager.System<MapUnderlaySystem>(); // Floof - map underlay
+        _layers = _entManager.System<MapLayerSystem>(); // Floof - map layers
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
@@ -40,9 +41,12 @@ public sealed partial class ParallaxOverlay : Overlay
         if (args.MapId == MapId.Nullspace || _entManager.HasComponent<BiomeComponent>(_mapSystem.GetMapOrInvalid(args.MapId)))
             return false;
 
-        // Floof Section - map underlay
+        // Floof Section - map layers
         // The map below is the background.
-        if (_underlay.GetDrawnShare(args.Viewport) > 0f)
+        if (_layers.IsDrawingOver(args.Viewport))
+            return false;
+
+        if (_entManager.HasComponent<MapFluidComponent>(_mapSystem.GetMapOrInvalid(args.MapId)))
             return false;
         // Floof Section End
 
