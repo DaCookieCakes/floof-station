@@ -36,6 +36,7 @@ This just saves them the trouble. Note that AGPL or MIT licensing is only applic
 ## Breaking changes
 <!-- List any breaking changes, including namespaces, public class/method/field changes, prototype renames; and provide instructions for fixing them.
 This will be posted in #codebase-changes. -->
+<!-- If there are no breaking changes, do not include anything in this section. -->
 
 ## Changelog
 <!-- Add a Changelog entry to make players aware of new features or changes that could affect gameplay.
