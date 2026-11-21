@@ -969,3 +969,12 @@ Entries:
   id: 116
   time: '2026-11-14T23:15:08.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/372
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Ported ship gunnery from Starlight: gunnery consoles, ship cannons,
+        guided rockets and point defense.
+  id: 117
+  time: '2026-11-21T11:43:28.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/382
