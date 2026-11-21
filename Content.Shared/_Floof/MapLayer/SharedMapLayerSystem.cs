@@ -42,6 +42,7 @@ public abstract partial class SharedMapLayerSystem : EntitySystem
         var transition = EnsureComp<MapLayerTransitionComponent>(layer);
         transition.StartZ = startZ;
         transition.EndZ = endZ;
+        transition.To = to;
         transition.StartTime = _timing.CurTime;
         transition.Duration = duration;
         transition.Easing = easing;

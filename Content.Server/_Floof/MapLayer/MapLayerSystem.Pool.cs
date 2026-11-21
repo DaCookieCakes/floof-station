@@ -1,21 +1,20 @@
+using System.Numerics;
 using Content.Server.Administration.Logs;
-using Content.Server.GameTicking;
-using Content.Server.Ghost;
+using Content.Server.Chat.Managers;
 using Content.Shared.Database;
 using Content.Shared.Ghost.Components;
-using Content.Shared.Mind.Components;
 using Content.Shared._Floof.MapLayer;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Player;
 
 namespace Content.Server._Floof.MapLayer;
 
 public sealed partial class MapLayerSystem
 {
     [Dependency] private IAdminLogManager _adminLog = default!;
-    [Dependency] private ServerGameTicker _ticker = default!;
-    [Dependency] private GhostSystem _ghost = default!;
+    [Dependency] private IChatManager _chat = default!;
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private MetaDataSystem _metaData = default!;
 
@@ -23,16 +22,18 @@ public sealed partial class MapLayerSystem
     private readonly List<EntityUid> _grids = new();
     private readonly List<EntityUid> _phantoms = new();
 
+    private const int MaxPushRadius = 256;
+
     private void UpdateArrivals()
     {
         var now = _timing.CurTime;
         _arrived.Clear();
-        var query = EntityQueryEnumerator<MapLayerPoolComponent, MapLayerTransitionComponent, MapLayerComponent>();
-        while (query.MoveNext(out var uid, out var pooled, out var transition, out var layer))
+        var query = EntityQueryEnumerator<MapLayerPoolComponent, MapLayerTransitionComponent>();
+        while (query.MoveNext(out var uid, out var pooled, out var transition))
         {
             if (pooled.InUse &&
                 now >= transition.StartTime + transition.Duration &&
-                FindLayerAt(layer.Stack, transition.EndZ) is { } destination)
+                GetDestination(transition) is { } destination)
                 _arrived.Add((uid, destination));
         }
 
@@ -42,19 +43,9 @@ public sealed partial class MapLayerSystem
         }
     }
 
-    private EntityUid? FindLayerAt(MapLayerStack stack, float z)
+    private EntityUid? GetDestination(MapLayerTransitionComponent transition)
     {
-        var query = EntityQueryEnumerator<MapLayerComponent>();
-        while (query.MoveNext(out var uid, out var layer))
-        {
-            if (layer.Stack == stack &&
-                !layer.NoOp &&
-                MathHelper.CloseTo(layer.Z, z) &&
-                !HasComp<MapLayerTransitionComponent>(uid))
-                return uid;
-        }
-
-        return null;
+        return HasComp<MapLayerComponent>(transition.To) ? transition.To : null;
     }
 
     private void ArriveOn(EntityUid layer, EntityUid destination)
@@ -116,49 +107,90 @@ public sealed partial class MapLayerSystem
         if (!TryComp<MapLayerPoolComponent>(map, out var pooled))
             return;
 
-        SweepLostAtSea(map);
+        TransferContents(map);
         RemoveLayer(map);
         pooled.InUse = false;
         _metaData.SetEntityName(map, Loc.GetString("map-layer-transition-free"));
     }
 
-    private void SweepLostAtSea(EntityUid map)
+    private void TransferContents(EntityUid map)
     {
-        var minds = new List<EntityUid>();
-        var query = EntityQueryEnumerator<MindContainerComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var container, out var xform))
+        if (!TryComp<MapLayerTransitionComponent>(map, out var transition) ||
+            GetDestination(transition) is not { } destination)
         {
-            if (xform.MapUid == map && container.Mind is { } mind && !HasComp<GhostComponent>(uid))
-                minds.Add(mind);
+            if (Transform(map).ChildCount is > 0 and var count)
+                Log.Error($"Couldn't transfer {count} entities from {ToPrettyString(map)}: no destination layer");
+            return;
         }
 
-        foreach (var mind in minds)
-        {
-            _ghost.SpawnGhost(mind);
-        }
-
-        var players = minds.Count;
-
-        var lost = new List<EntityUid>();
-        var children = Transform(map).ChildEnumerator;
-        while (children.MoveNext(out var child))
-        {
-            lost.Add(child);
-        }
-
-        if (lost.Count == 0)
+        var down = transition.EndZ < transition.StartZ;
+        var mapXform = Transform(map);
+        if (mapXform.ChildCount == 0)
             return;
 
-        foreach (var uid in lost)
+        var contents = new List<EntityUid>(mapXform.ChildCount);
+        var children = mapXform.ChildEnumerator;
+        while (children.MoveNext(out var child))
         {
-            if (HasComp<GhostComponent>(uid))
-                _xform.SetCoordinates(uid, _ticker.GetObserverSpawnPoint());
-            else
-                QueueDel(uid);
+            contents.Add(child);
         }
 
-        _adminLog.Add(LogType.EntityDelete,
+        var players = 0;
+        foreach (var uid in contents)
+        {
+            var xform = Transform(uid);
+            var (position, rotation) = _xform.GetWorldPositionRotation(xform);
+            var bounds = TryComp<MapGridComponent>(uid, out var grid)
+                ? _xform.GetWorldMatrix(xform).TransformBox(grid.LocalAABB)
+                : Box2.CenteredAround(position, new Vector2(0.01f));
+            var offset = FindClearOffset(destination, bounds);
+            _xform.SetCoordinates(uid, xform, new EntityCoordinates(destination, position + offset), rotation);
+
+            if (grid != null || HasComp<GhostComponent>(uid) || !TryComp<ActorComponent>(uid, out var actor))
+                continue;
+
+            players++;
+            var direction = down ? "down" : "up";
+            _chat.DispatchServerMessage(actor.PlayerSession,
+                Loc.GetString(offset != Vector2.Zero ? "map-layer-transfer-blocked" : "map-layer-transfer-landed", ("direction", direction)));
+        }
+
+        _adminLog.Add(LogType.Teleport,
             players > 0 ? LogImpact.High : LogImpact.Medium,
-            $"Swept {lost.Count} entities lost at sea off {ToPrettyString(map):map}, ghosting {players} players");
+            $"Transferred {contents.Count} entities from {ToPrettyString(map):map} to {ToPrettyString(destination):map}, {players} players");
+    }
+
+    private Vector2 FindClearOffset(EntityUid map, Box2 bounds)
+    {
+        if (IsClear(map, bounds))
+            return Vector2.Zero;
+
+        for (var radius = 1; radius <= MaxPushRadius; radius++)
+        {
+            var steps = (int) MathF.Ceiling(MathF.Tau * radius);
+            for (var i = 0; i < steps; i++)
+            {
+                var offset = new Angle(MathF.Tau * i / steps).ToVec() * radius;
+                if (IsClear(map, bounds.Translated(offset)))
+                    return offset;
+            }
+        }
+
+        return Vector2.Zero;
+    }
+
+    private bool IsClear(EntityUid map, Box2 bounds)
+    {
+        var clear = true;
+        _map.FindGridsIntersecting(map,
+            bounds,
+            ref clear,
+            static (EntityUid _, MapGridComponent _, ref bool clear) =>
+            {
+                clear = false;
+                return false;
+            },
+            includeMap: false);
+        return clear;
     }
 }

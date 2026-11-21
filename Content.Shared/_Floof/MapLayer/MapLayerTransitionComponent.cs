@@ -13,6 +13,9 @@ public sealed partial class MapLayerTransitionComponent : Component
     [DataField, AutoNetworkedField]
     public float EndZ;
 
+    [DataField]
+    public EntityUid To;
+
     [DataField, AutoNetworkedField]
     public TimeSpan StartTime;
 
