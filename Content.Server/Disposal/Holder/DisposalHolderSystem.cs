@@ -1,3 +1,4 @@
+using Content.Server._Starlight; // Starlight
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Disposal.Components;
 using Content.Shared.Disposal.Holder;
@@ -26,8 +27,10 @@ public sealed partial class DisposalHolderSystem : SharedDisposalHolderSystem
     [Dependency] private INetManager _net = default!;
     [Dependency] private SharedStunSystem _stun = default!;
     [Dependency] private TileSystem _tile = default!;
+    [Dependency] private AutoLoaderSystem _autoLoader = default!; // Starlight
 
     private EntityQuery<DisposalUnitComponent> _disposalUnitQuery;
+    private EntityQuery<AutoLoaderComponent> _autoloaderQuery; // Starlight
     private EntityQuery<MetaDataComponent> _metaQuery;
     private EntityQuery<TransformComponent> _xformQuery;
 
@@ -36,6 +39,7 @@ public sealed partial class DisposalHolderSystem : SharedDisposalHolderSystem
         base.Initialize();
 
         _disposalUnitQuery = GetEntityQuery<DisposalUnitComponent>();
+        _autoloaderQuery = GetEntityQuery<AutoLoaderComponent>(); // Starlight
         _metaQuery = GetEntityQuery<MetaDataComponent>();
         _xformQuery = GetEntityQuery<TransformComponent>();
     }
@@ -83,6 +87,8 @@ public sealed partial class DisposalHolderSystem : SharedDisposalHolderSystem
         // *This is on purpose.*
 
         Entity<DisposalUnitComponent>? unit = null;
+        Entity<AutoLoaderComponent>? autoloader = null; // Starlight
+        EntityUid? autoloaderTube = null; // Starlight
 
         if (TryComp<MapGridComponent>(gridUid, out var grid))
         {
@@ -93,10 +99,32 @@ public sealed partial class DisposalHolderSystem : SharedDisposalHolderSystem
                     unit = new(contentUid, disposalUnit);
                     break;
                 }
+
+                // Starlight - Start
+                if (_autoloaderQuery.TryGetComponent(contentUid, out var autoloaderComp))
+                {
+                    autoloader = new(contentUid, autoloaderComp);
+                    break;
+                }
+                // Starlight - End
             }
 
+            // Starlight - Start
+            if (autoloader != null)
+            {
+                foreach (var contentUid in _maps.GetLocal(gridUid.Value, grid, xform.Coordinates))
+                {
+                    if (HasComp<DisposalTubeComponent>(contentUid))
+                    {
+                        autoloaderTube = contentUid;
+                        break;
+                    }
+                }
+            }
+            // Starlight - End
+
             // If no disposal unit was found, this exit will be a little messy
-            if (unit == null && _net.IsServer)
+            if (unit == null && autoloader == null && _net.IsServer) // Starlight - Edited
             {
                 // Pry up the tile that the pipe was under
                 var tileRef = _maps.GetTileRef((gridUid.Value, grid), xform.Coordinates);
@@ -133,6 +161,12 @@ public sealed partial class DisposalHolderSystem : SharedDisposalHolderSystem
             {
                 _disposalUnit.Remove(unit.Value, held);
             }
+            // Starlight - Start
+            else if (autoloader != null && autoloaderTube is { } currentTube &&_container.TryGetContainer(autoloader.Value, autoloader.Value.Comp.Container, out var autoloaderContainer))
+            {
+                _autoLoader.Cycle(held, autoloader.Value, autoloaderContainer, currentTube);
+            }
+            // Starlight - End
             else
             {
                 // Otherwise remove the child from the holder and prepare to throw it

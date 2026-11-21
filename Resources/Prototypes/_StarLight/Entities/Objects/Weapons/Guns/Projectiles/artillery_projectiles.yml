@@ -1,0 +1,245 @@
+# Dravon 75mm & AK570 90mm Projectiles
+
+# --- DRAVON 75mm HE ---
+- type: entity
+  id: BulletDravon75mmHE
+  name: DVN-75 75mm HE shell
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+    scale: 1.2, 1.2
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 60
+        Structural: 80
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 180      # medium-light blast, ~4 tile radius
+    intensitySlope: 6
+    maxIntensity: 20
+    canCreateVacuum: true
+  - type: PointLight
+    enabled: true
+    radius: 2.5
+    energy: 1.5
+    color: "#ff6600"
+  - type: RadarBlip
+    color: "#FFB300"
+    scale: 0.9
+    shape: Square
+    requireInSpace: true
+  - type: PDTarget
+
+# --- AK570 90mm HE ---
+- type: entity
+  id: BulletAK570_90mmHE
+  name: AK-90 90mm HE shell
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+    scale: 1.35, 1.35
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 90
+        Structural: 120
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 200      # medium blast, ~4 tile radius
+    intensitySlope: 7
+    maxIntensity: 20
+    canCreateVacuum: true
+  - type: PointLight
+    enabled: true
+    radius: 3
+    energy: 2
+    color: "#ff8800"
+  - type: RadarBlip
+    color: "#FF9900"
+    scale: 1.0
+    shape: Square
+    requireInSpace: true
+  - type: PDTarget
+
+# --- LEVIATHAN 240mm HE (single-shot, massive AOE) ---
+- type: entity
+  id: BulletLeviathan240mmHE
+  name: LVT-240 240mm HE shell
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+    scale: 3.5, 3.5
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 400
+        Structural: 1000     # the shell itself hits hard before the explosion
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 1600     # largest ballistic AoE — ~12-14 tile kill radius
+    intensitySlope: 3
+    maxIntensity: 75
+    canCreateVacuum: true
+  - type: PointLight
+    enabled: true
+    radius: 8
+    energy: 7
+    color: "#ff4400"
+  - type: RadarBlip
+    color: "#FF2200"
+    scale: 2.0
+    shape: Triangle
+    requireInSpace: true
+  - type: PDTarget
+
+
+# --- CYERXA 120mm ---
+
+- type: entity
+  id: BulletGrenade120mmBlast
+  name: 120mm blast grenade
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+    scale: 1.5, 1.5
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 450 # 3x stronger than normal blast grenade (150 * 3 = 450) - approximately ~6 tile radius
+    intensitySlope: 8
+    maxIntensity: 30
+    canCreateVacuum: true
+  - type: PointLight
+    enabled: true
+    radius: 3
+    energy: 2
+    color: "#ff4400"
+  - type: RadarBlip
+    color: "#FFDD00"
+    scale: 1.0
+    shape: Square
+    requireInSpace: true
+  - type: PDTarget
+
+# --- CHARYBDIS 280mm ---
+
+# M381 CHARYBDIS 280mm 26.5kg Slug
+- type: entity
+  id: BulletCharon280mmSlug
+  name: M381 CHARYBDIS 280mm slug
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/ArtilleryAmmo/charon_ammo.rsi
+    layers:
+      - state: railgun_slug
+    scale: 2, 2
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1100       # devastating direct penetration
+        Blunt: 350
+        Structural: 1500
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 120      # very tight shockwave — penetrator not a grenade
+    intensitySlope: 35
+    maxIntensity: 10
+    canCreateVacuum: true
+  - type: PointLight
+    enabled: true
+    radius: 5
+    energy: 4
+    color: "#ff6600"
+  - type: RadarBlip
+    color: "#FF6600"
+    scale: 1.5
+    shape: Triangle
+    requireInSpace: true
+
+# M381 CHARYBDIS 280mm 40kg Subnuclear Slug
+- type: entity
+  id: BulletCharon280mmSubnuclear
+  name: M381 CHARYBDIS 280mm subnuclear slug
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/ArtilleryAmmo/charon_ammo.rsi
+    layers:
+      - state: subnuclear
+    scale: 2, 2
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 200
+        Blunt: 100
+        Structural: 300
+        Radiation: 400       # heavy irradiation on direct hit
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 6000     # nuclear detonation — obliterates entire vessels
+    intensitySlope: 2
+    maxIntensity: 160
+    canCreateVacuum: true
+  - type: PointLight
+    enabled: true
+    radius: 10
+    energy: 8
+    color: "#88ff00"
+  - type: RadarBlip
+    color: "#88FF00"
+    scale: 2.0
+    shape: Triangle
+    requireInSpace: true
+
+- type: entity
+  id: Bullet60mmRocket
+  name: 60mm rocket
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: frag
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 20
+    intensitySlope: 3
+    totalIntensity: 100
+    maxTileBreak: 1
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: RadarBlip
+    color: "#44FFAA"
+    scale: 1
+    shape: Circle
+    requireInSpace: true
+  - type: PDTarget

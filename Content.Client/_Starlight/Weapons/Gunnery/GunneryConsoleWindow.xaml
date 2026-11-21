@@ -1,0 +1,124 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:gunnery="clr-namespace:Content.Client._Starlight.Weapons.Gunnery"
+    x:Class="Content.Client._Starlight.Weapons.Gunnery.GunneryConsoleWindow"
+    Title="Gunnery Console"
+    SetSize="1100 740"
+    MinSize="800 540">
+
+    <BoxContainer Orientation="Horizontal">
+
+        <Label 
+            Name="NoServerLabel"
+            Text="{Loc crew-monitoring-ui-no-server-label}"
+            StyleClasses="LabelHeading"
+            FontColorOverride="Red"
+            HorizontalExpand="True"
+            VerticalExpand="True"
+            HorizontalAlignment="Center"
+            Visible="false" />
+
+        <!-- Main radar + category filters -->
+        <BoxContainer
+            Orientation="Vertical"
+            HorizontalExpand="True"
+            VerticalExpand="True"
+            SeparationOverride="0">
+
+            <gunnery:GunneryRadarControl
+                Name="RadarControl"
+                HorizontalExpand="True"
+                VerticalExpand="True"
+                Margin="4" />
+
+            <!-- Category filter row -->
+            <BoxContainer
+                Orientation="Horizontal"
+                Margin="4,0,4,6"
+                SeparationOverride="4">
+
+                <Label
+                    Text="FILTER:"
+                    FontColorOverride="#888888"
+                    VerticalAlignment="Center"
+                    Margin="0,0,4,0" />
+
+                <CheckBox
+                    Name="FilterEnergy"
+                    Text="Energy"
+                    Pressed="True"
+                    ToolTip="Show energy weapons" />
+
+                <CheckBox
+                    Name="FilterRocket"
+                    Text="Rocket"
+                    Pressed="True"
+                    ToolTip="Show rocket/missile launchers" />
+
+                <CheckBox
+                    Name="FilterBallistic"
+                    Text="Ballistic"
+                    Pressed="True"
+                    ToolTip="Show ballistic artillery" />
+
+                <CheckBox
+                    Name="FilterUnknown"
+                    Text="Other"
+                    Pressed="True"
+                    ToolTip="Show uncategorised weapons" />
+
+            </BoxContainer>
+
+        </BoxContainer>
+
+        <controls:Separator StyleClasses="LowDivider" Orientation="Vertical"/>
+
+        <!-- Right sidebar: cannon list + status -->
+        <BoxContainer
+            Orientation="Vertical"
+            MinWidth="320"
+            Margin="4,4,6,4"
+            SeparationOverride="4">
+
+            <Label
+                Text="CANNONS"
+                HorizontalAlignment="Center"
+                FontColorOverride="#FFA040"
+                Margin="0,4,0,2" />
+
+            <!-- Legend -->
+            <BoxContainer Orientation="Horizontal" Margin="2,0,2,2" SeparationOverride="8">
+                <Label Text="■" FontColorOverride="#44FF44" />
+                <Label Text="Ready" FontColorOverride="#888888" />
+                <Label Text="■" FontColorOverride="#FF4444" />
+                <Label Text="Cooldown" FontColorOverride="#888888" />
+                <Label Text="■" FontColorOverride="#FF8800" />
+                <Label Text="No ammo" FontColorOverride="#888888" />
+            </BoxContainer>
+
+            <PanelContainer VerticalExpand="True">
+                <ScrollContainer VerticalExpand="True">
+                    <BoxContainer
+                        Name="CannonContainer"
+                        Orientation="Vertical"
+                        SeparationOverride="2" />
+                </ScrollContainer>
+            </PanelContainer>
+
+            <controls:Separator StyleClasses="LowDivider"/>
+
+            <Label
+                Name="GuidanceLabel"
+                Text=""
+                HorizontalAlignment="Center"
+                FontColorOverride="#44FF44"
+                Margin="0,4,0,4" />
+
+        </BoxContainer>
+
+    </BoxContainer>
+
+</controls:FancyWindow>
+
