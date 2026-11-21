@@ -978,3 +978,12 @@ Entries:
   id: 117
   time: '2026-11-21T11:43:28.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/382
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: >-
+        Added backup lights, dim wall lights that turn on when the power goes
+        out. Not yet added to maps.
+  id: 118
+  time: '2026-11-21T21:29:41.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/387
