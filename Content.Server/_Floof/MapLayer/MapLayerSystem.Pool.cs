@@ -42,7 +42,7 @@ public sealed partial class MapLayerSystem
         }
     }
 
-    private EntityUid? FindLayerAt(EntityUid stack, float z)
+    private EntityUid? FindLayerAt(MapLayerStack stack, float z)
     {
         var query = EntityQueryEnumerator<MapLayerComponent>();
         while (query.MoveNext(out var uid, out var layer))

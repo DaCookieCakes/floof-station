@@ -1,7 +1,8 @@
 - type: entity
   parent: AirlockGlassShuttle
-  id: AirlockClamDock
-  suffix: Clam Dock
+  id: AirlockExpoDock
+  name: expo docking airlock
+  suffix: Expo Dock
   components:
   - type: GridFill
     path: /Maps/_Floof/Subs/clam.yml

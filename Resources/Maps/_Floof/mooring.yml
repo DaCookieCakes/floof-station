@@ -920,7 +920,7 @@ entities:
       parent: 2
       rot: 4.71238898038469 rad
       pos: -1.5,-10.5
-- proto: AirlockClamDock
+- proto: AirlockExpoDock
   entities:
   - uid: 3
     components:

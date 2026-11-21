@@ -12,14 +12,7 @@ public abstract partial class SharedMapLayerSystem : EntitySystem
     private readonly List<(EntityUid Map, float Z)> _bracketLayers = new();
 
     [PublicAPI]
-    public void CreateStack(EntityUid root, float z)
-    {
-        EnsureComp<MapLayerStackComponent>(root);
-        SetLayer(root, root, z);
-    }
-
-    [PublicAPI]
-    public void SetLayer(EntityUid map, EntityUid stack, float z, bool noOp = false)
+    public void SetLayer(EntityUid map, MapLayerStack stack, float z, bool noOp = false)
     {
         var layer = EnsureComp<MapLayerComponent>(map);
         layer.Stack = stack;
@@ -91,9 +84,9 @@ public abstract partial class SharedMapLayerSystem : EntitySystem
     }
 
     [PublicAPI]
-    public bool TryGetStack(EntityUid uid, out EntityUid stack)
+    public bool TryGetStack(EntityUid uid, out MapLayerStack stack)
     {
-        stack = EntityUid.Invalid;
+        stack = default;
         if (Transform(uid).MapUid is not { } map || !TryComp<MapLayerComponent>(map, out var layer))
             return false;
 
@@ -126,7 +119,7 @@ public abstract partial class SharedMapLayerSystem : EntitySystem
     }
 
     [PublicAPI]
-    public void GetLayers(EntityUid stack, List<(EntityUid Map, float Z)> layers, bool noOp = false)
+    public void GetLayers(MapLayerStack stack, List<(EntityUid Map, float Z)> layers, bool noOp = false)
     {
         layers.Clear();
         var query = EntityQueryEnumerator<MapLayerComponent>();
@@ -140,7 +133,7 @@ public abstract partial class SharedMapLayerSystem : EntitySystem
     }
 
     [PublicAPI]
-    public bool TryGetBracket<T>(EntityUid stack,
+    public bool TryGetBracket<T>(MapLayerStack stack,
         float z,
         out Entity<T> above,
         out Entity<T> below,

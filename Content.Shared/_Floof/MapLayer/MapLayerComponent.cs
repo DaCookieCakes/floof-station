@@ -8,7 +8,7 @@ namespace Content.Shared._Floof.MapLayer;
 public sealed partial class MapLayerComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public EntityUid Stack;
+    public MapLayerStack Stack;
 
     [DataField, AutoNetworkedField]
     public bool NoOp;

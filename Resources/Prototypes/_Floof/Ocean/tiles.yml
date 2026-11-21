@@ -1,0 +1,21 @@
+- type: tile
+  id: FloorOceanSurface
+  name: tiles-floor-ocean-surface
+  sprite: /Textures/_Floof/Tiles/ocean_surface.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepWater
+    params:
+      volume: 8
+  barestepSounds:
+    collection: FootstepWater
+    params:
+      volume: 8
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
+- type: animatedTile
+  id: FloorOceanSurface
+  sprite: /Textures/_Floof/Tiles/ocean_surface.rsi
+  state: water

@@ -1,9 +1,0 @@
-sub-helm-window-title = Submarine Console
-sub-helm-sonar-toggle = Sonar
-sub-helm-lift = Lift
-sub-helm-land = Land
-sub-helm-land-blocked = Something is in the way below.
-sub-helm-dock = Dock
-sub-helm-dock-none = No free dock in range.
-sub-helm-dock-no-fit = The submarine doesn't fit at any dock in range.
-sub-helm-surface-label = Surface

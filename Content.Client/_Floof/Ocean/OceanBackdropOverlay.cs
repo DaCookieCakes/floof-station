@@ -204,7 +204,7 @@ public sealed partial class OceanBackdropOverlay : Overlay
         }
     }
 
-    private bool IsDiveTransition(EntityUid map, EntityUid stack)
+    private bool IsDiveTransition(EntityUid map, MapLayerStack stack)
     {
         if (_entManager.HasComponent<OceanDiveTransitionComponent>(map))
             return true;
