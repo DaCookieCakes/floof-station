@@ -90,3 +90,8 @@ interaction-Lick-description = Lick your co-worker. Requires your mouth to be fr
 interaction-Lick-success-self-popup = You lick {THE($target)}.
 interaction-Lick-success-target-popup = {THE($user)} licks you.
 interaction-Lick-success-others-popup = {THE($user)} licks {THE($target)}.
+
+interaction-LewdFillStructurePenis-name = Breed the mount
+interaction-LewdFillStructurePenis-description = mount and breed the breeding mount
+interaction-LewdFillStructurePenis-success-self-popup = Your cum spills out of {THE($target)}.
+interaction-LewdFillStructurePenis-success-others-popup = {THE($user)}'s cum shoots out of {THE($target)}.

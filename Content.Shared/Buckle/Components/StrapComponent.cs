@@ -96,6 +96,13 @@ public sealed partial class StrapComponent : Component
     /// </summary>
     [DataField]
     public bool ModifyBuckleDrawDepth = true;
+
+    //Euphoria
+    /// <summary>
+    /// Which direction an entity will face when strapped in.
+    /// </summary>
+    [DataField]
+    public Angle Facing = 0;
 }
 
 public enum StrapPosition

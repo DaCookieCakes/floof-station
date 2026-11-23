@@ -117,6 +117,25 @@
     !type:NoOpAction
 
 - type: Interaction
+  id: LewdFillStructurePenis
+  parent: BaseGlobal
+  priority: 0
+  delay: 20 # 20s for self, dumping all 20 units (1 u/s)
+  effectSuccess:
+    popup: Obvious
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+    - !type:BodyOrganRequirement
+      organCategory: Dick
+      targetSelf: true
+  action:
+    !type:LewdFillStructureFromTarget
+    sourceSolution: balls
+    amount: 20
+
+- type: Interaction
   id: SuckDick
   parent: BaseGlobal
   priority: 4
