@@ -21,7 +21,6 @@
     facing: 180
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: StorageTank
   - type: Destructible
     thresholds:
     - trigger:
