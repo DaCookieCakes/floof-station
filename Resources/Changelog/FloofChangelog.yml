@@ -987,3 +987,12 @@ Entries:
   id: 118
   time: '2026-11-21T21:29:41.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/387
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Ported breeding mounts from Euphoria.
+    - type: Add
+      message: Ported the milking machine from Euphoria.
+  id: 119
+  time: '2026-11-23T21:57:07.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/395
