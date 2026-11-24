@@ -1067,3 +1067,10 @@ Entries:
   id: 128
   time: '2026-11-24T13:29:55.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/407
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported a new axolotl tail and axolotl head for Reptilians.
+  id: 129
+  time: '2026-11-24T14:00:18.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/408
