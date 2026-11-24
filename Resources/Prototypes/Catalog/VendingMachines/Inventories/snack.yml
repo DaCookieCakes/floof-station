@@ -1,13 +1,16 @@
 - type: vendingMachineInventory
   id: GetmoreChocolateCorpInventory
-  startingInventory:
-    FoodSnackRaisins: 3
-    FoodSnackChocolate: 3
-    FoodSnackCnDs: 3
-    FoodSnackPistachios: 3
-    FoodSnackSus: 3
-    FoodSnackSemki: 3
-    FoodSnackRoastedCrickets: 3 # Floof - roasted crickets
-  contrabandInventory:
-    FoodSnackSwirlLollipop: 2
-    FoodSnackSyndi: 3
+  categories:
+  - name: vending-machine-category-snacks
+    icon: { entity: FoodSnackChocolate }
+    startingInventory:
+      FoodSnackRaisins: 3
+      FoodSnackChocolate: 3
+      FoodSnackCnDs: 3
+      FoodSnackPistachios: 3
+      FoodSnackSus: 3
+      FoodSnackSemki: 3
+      FoodSnackRoastedCrickets: 3 # Floof - roasted crickets
+    contrabandInventory:
+      FoodSnackSwirlLollipop: 2
+      FoodSnackSyndi: 3
