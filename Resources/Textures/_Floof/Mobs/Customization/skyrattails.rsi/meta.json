@@ -1766,22 +1766,6 @@
       "directions": 4
     },
     {
-      "name": "m_tail_axolotl_BEHIND_primary",
-      "directions": 4
-    },
-    {
-      "name": "m_tail_axolotl_FRONT_primary",
-      "directions": 4
-    },
-    {
-      "name": "m_waggingtail_axolotl_BEHIND_primary",
-      "directions": 4
-    },
-    {
-      "name": "m_waggingtail_axolotl_FRONT_primary",
-      "directions": 4
-    },
-    {
       "name": "m_tail_orca_BEHIND_primary",
       "directions": 4
     },

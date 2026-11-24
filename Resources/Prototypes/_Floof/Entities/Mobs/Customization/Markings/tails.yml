@@ -1,6 +1,7 @@
 - type: marking
   id: TailAxolotl
   bodyPart: Tail
+  groupWhitelist: [Reptilian, Feroxi, Human, MarkingsGroupHarpy, Rodentia, Shadekin, Slime, Vox, Vulpkanin]
   sprites:
     - sprite: SimpleStation14/Mobs/Customization/tails32x32.rsi
       state: axolotl
