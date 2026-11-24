@@ -13,6 +13,7 @@
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
   - type: ItemSlots
+    slots: {}
   - type: ContainerContainer
     containers:
       board: !type:Container
