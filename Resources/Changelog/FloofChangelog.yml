@@ -1010,3 +1010,12 @@ Entries:
   id: 121
   time: '2026-11-24T08:57:15.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/398
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: >-
+        Interactions like waving no longer mention a virtual item while you drag
+        or carry someone.
+  id: 122
+  time: '2026-11-24T09:06:32.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/399
