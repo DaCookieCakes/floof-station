@@ -1003,3 +1003,10 @@ Entries:
   id: 120
   time: '2026-11-24T08:51:56.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/397
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: Character names can now use accented letters, like François or Zoë.
+  id: 121
+  time: '2026-11-24T08:57:15.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/398
