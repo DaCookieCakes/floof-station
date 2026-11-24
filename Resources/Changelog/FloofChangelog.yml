@@ -1019,3 +1019,10 @@ Entries:
   id: 122
   time: '2026-11-24T09:06:32.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/399
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: You can now struggle free while being carried by pressing a move key.
+  id: 123
+  time: '2026-11-24T09:15:46.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/400
