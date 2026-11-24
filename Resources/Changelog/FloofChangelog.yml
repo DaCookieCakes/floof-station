@@ -996,3 +996,10 @@ Entries:
   id: 119
   time: '2026-11-23T21:57:07.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/395
+- author: Pachat-Kas
+  changes:
+    - type: Tweak
+      message: Lizards, Feroxi and moths can now eat any normal food.
+  id: 120
+  time: '2026-11-24T08:51:56.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/397
