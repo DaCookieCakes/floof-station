@@ -1056,3 +1056,14 @@ Entries:
   id: 127
   time: '2026-11-24T12:00:17.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/404
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: >-
+        Fixed getting stuck in disposals while wearing a collar leashed to a
+        leash you hold yourself.
+    - type: Tweak
+      message: Leashes now snap when only one end gets flushed down disposals.
+  id: 128
+  time: '2026-11-24T13:29:55.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/407
