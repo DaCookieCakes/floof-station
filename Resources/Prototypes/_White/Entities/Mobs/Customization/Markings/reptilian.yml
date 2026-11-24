@@ -57,6 +57,24 @@
       colorFrom: snake_large_overlay
 
 - type: marking
+  id: SnakeLargeTailAnimated # Floof - Tail wag
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+    - sprite: _White/Mobs/Customization/reptilian_64x32.rsi
+      state: snake_large_wagging
+    - sprite: _White/Mobs/Customization/reptilian_64x32.rsi
+      state: snake_large_wagging_behind
+      layer: TailBehind
+      colorFrom: snake_large_wagging
+    - sprite: _White/Mobs/Customization/reptilian_64x32.rsi
+      state: snake_large_wagging_overlay
+    - sprite: _White/Mobs/Customization/reptilian_64x32.rsi
+      state: snake_large_wagging_overlay_behind
+      layer: TailBehind
+      colorFrom: snake_large_wagging_overlay
+
+- type: marking
   id: LizardChestSpinesAquatic
   bodyPart: Chest
   groupWhitelist: [Reptilian]
