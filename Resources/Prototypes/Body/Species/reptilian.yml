@@ -309,6 +309,7 @@
       - Crayon
       - Paper
       - IceCream # FLOOF
+    isSpecialDigestibleExclusive: false # Floof
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganReptilianInternal, OrganReptilianMetabolizer ]
