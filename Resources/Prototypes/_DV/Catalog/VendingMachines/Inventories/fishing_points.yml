@@ -1,11 +1,14 @@
 - type: vendingMachineInventory
   id: FishingVendorInventory
-  startingInventory:
-    FishingRod: 3
-    FishBasket: 3
-    ClothingHeadFishCap: 3
-    ClothingUniformJumpsuitHawaiBlue: 3
-    ClothingUniformJumpsuitHawaiRed: 3
-    ClothingShrimpFishermanSuit: 3 # FLOOF
+  categories:
+  - name: vending-machine-category-equipment
+    icon: { entity: FishingRod }
+    startingInventory:
+      FishingRod: 3
+      FishBasket: 3
+      ClothingHeadFishCap: 3
+      ClothingUniformJumpsuitHawaiBlue: 3
+      ClothingUniformJumpsuitHawaiRed: 3
+      ClothingShrimpFishermanSuit: 3 # FLOOF
 #    ClothingShoesBootsFishing: 3
-    DrinkBottleBeer: 3
+      DrinkBottleBeer: 3
