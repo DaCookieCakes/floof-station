@@ -1033,3 +1033,10 @@ Entries:
   id: 124
   time: '2026-11-24T09:23:17.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/401
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: Interaction messages now use proper possessives, like "Jess' tongue".
+  id: 125
+  time: '2026-11-24T09:32:27.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/402
