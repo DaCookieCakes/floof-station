@@ -50,6 +50,7 @@ namespace Content.Shared.Localizations
 
             _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
             _loc.AddFunction(cultureEn, "MANY", FormatMany);
+            _loc.AddFunction(cultureEn, "POSSESSIVE", FormatPossessive); // Floof
         }
 
         private ILocValue FormatMany(LocArgs args)

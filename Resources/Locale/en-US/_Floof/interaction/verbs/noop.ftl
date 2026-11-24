@@ -6,26 +6,26 @@ interaction-LookAt-success-others-popup = {THE($user)} looks at {THE($target)}.
 
 interaction-BreastFeed-name = Breast feed
 interaction-BreastFeed-description = suckle on their voluptuous breasts
-interaction-BreastFeed-success-self-popup = You suckle on {THE($target)} breasts.
-interaction-BreastFeed-success-target-popup = You feel {THE($user)} sucking on your breasts
-interaction-BreastFeed-success-others-popup = {THE($user)} sucks at {THE($target)} breasts.
+interaction-BreastFeed-success-self-popup = You suckle on {POSSESSIVE(THE($target))} breasts.
+interaction-BreastFeed-success-target-popup = You feel {THE($user)} sucking on your breasts.
+interaction-BreastFeed-success-others-popup = {THE($user)} sucks at {POSSESSIVE(THE($target))} breasts.
 
 interaction-SuckDick-name = Suck dick
 interaction-SuckDick-description = Wrap your lips around their cock.
-interaction-SuckDick-success-self-popup = You suck on {THE($target)} cock.
+interaction-SuckDick-success-self-popup = You suck on {POSSESSIVE(THE($target))} cock.
 interaction-SuckDick-success-target-popup = You feel {THE($user)} sucking on your cock.
-interaction-SuckDick-success-others-popup = {THE($user)} sucks {THE($target)} cock.
+interaction-SuckDick-success-others-popup = {THE($user)} sucks {POSSESSIVE(THE($target))} cock.
 
 interaction-EatOut-name = Eat out
 interaction-EatOut-description = Bury your face between their thighs.
-interaction-EatOut-success-self-popup = You lick at {THE($target)} pussy.
+interaction-EatOut-success-self-popup = You lick at {POSSESSIVE(THE($target))} pussy.
 interaction-EatOut-success-target-popup = You feel {THE($user)} licking at your pussy.
 interaction-EatOut-success-others-popup = {THE($user)} eats out {THE($target)}.
 
 interaction-Rim-name = Rim
 interaction-Rim-description = Get your tongue right in there.
 interaction-Rim-success-self-popup = You rim {THE($target)}.
-interaction-Rim-success-target-popup = You feel {THE($user)} tongue on your rear.
+interaction-Rim-success-target-popup = You feel {POSSESSIVE(THE($user))} tongue on your rear.
 interaction-Rim-success-others-popup = {THE($user)} rims {THE($target)}.
 
 # Designed to not be seen by others, only you and your target.  Plays a light sound effect that is very unique to it to catch the attention of the party being eye'd up.
