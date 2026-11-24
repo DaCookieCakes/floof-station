@@ -1040,3 +1040,10 @@ Entries:
   id: 125
   time: '2026-11-24T09:32:27.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/402
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Added a wagging animation for the large snake tail.
+  id: 126
+  time: '2026-11-24T11:06:57.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/403
