@@ -6,6 +6,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Ghost.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
+using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.InteractionVerbs.Events;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
@@ -216,6 +217,8 @@ public abstract partial class SharedInteractionVerbsSystem : EntitySystem
                 continue;
 
             var verbArgs = InteractionArgs.From(args);
+            if (HasComp<VirtualItemComponent>(verbArgs.Used))
+                verbArgs.Used = null;
             var isEnabled = PerformChecks(proto, ref verbArgs, out var skipAdding, out var errorLocale);
 
             if (skipAdding)
