@@ -1,5 +1,6 @@
 - type: job
   id: ResearchAssistant
+  pay: 300 # Floof - bank
   name: job-name-research-assistant
   description: job-description-research-assistant
   playTimeTracker: JobResearchAssistant
@@ -19,7 +20,7 @@
 - type: startingGear
   id: ResearchAssistantGear
   equipment:
-    shoes: ClothingShoesColorWhite
+  #  shoes: ClothingShoesColorWhite # FLOOF
     id: ResearchAssistantPDA
     ears: ClothingHeadsetScience
     pocket2: BookScientistsGuidebook

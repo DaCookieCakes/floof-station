@@ -173,6 +173,15 @@
       types:
         Asphyxiation: -1.0
     maxSaturation: 15
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - GalacticCommon
+    - Bubblish
+    understands:
+    - GalacticCommon
+    - Bubblish
+  # Starlight-end
 
 - type: entity
   parent: OrganBaseOrganic

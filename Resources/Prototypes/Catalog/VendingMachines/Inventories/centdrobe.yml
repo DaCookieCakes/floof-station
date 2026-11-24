@@ -30,6 +30,7 @@
       ClothingHeadHatCentcomcap: 3
       ClothingMaskGasCentcom: 3
       ClothingHeadsetCentCom: 3
+      ClothingNeckCollarCC: 2 # Floof
     contrabandInventory:
       ToyFigurineCaptain: 1
       ToyFigurineHeadOfPersonnel: 1

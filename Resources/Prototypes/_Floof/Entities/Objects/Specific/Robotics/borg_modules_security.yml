@@ -1,0 +1,102 @@
+# Security cyborg modules, used by the K9 dogborg. Non-lethal only.
+
+- type: entity
+  id: BaseBorgModuleSecurity
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: BorgModule
+    borgFitTypes:
+    - borg-type-security
+  - type: Tag
+    tags:
+    - BorgModuleSecurity
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-icon-inhand-left
+        color: "#F5EEEE"
+      - state: base-module-inhand-left
+        color: "#B33A3A"
+      - state: base-part-inhand-left
+      - state: base-stripes-inhand-left
+        color: "#C3C3C3"
+      right:
+      - state: base-icon-inhand-right
+        color: "#F5EEEE"
+      - state: base-module-inhand-right
+        color: "#B33A3A"
+      - state: base-part-inhand-right
+      - state: base-stripes-inhand-right
+        color: "#C3C3C3"
+
+- type: entity
+  id: BorgModuleSecurity
+  parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule, BaseSecurityContraband ]
+  name: security cyborg module
+  description: Non-lethal tools for detaining suspects.
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+      color: "#B33A3A"
+    - state: icon-template
+  - type: ItemBorgModule
+    hands:
+    - item: BorgWeaponDisabler
+    - item: BorgFlash
+    - item: BorgHoloprojectorSecurity
+    - item: Zipties
+      hand:
+        emptyLabel: borg-slot-zipties-empty
+        emptyRepresentative: Zipties
+        whitelist:
+          components:
+          - Handcuff
+    - item: Zipties
+      hand:
+        emptyLabel: borg-slot-zipties-empty
+        emptyRepresentative: Zipties
+        whitelist:
+          components:
+          - Handcuff
+  # Refills the two ziptie hands above (indices 2 and 3), one at a time.
+  - type: BorgHandRecharge
+    hands: [ 2, 3 ]
+    item: Zipties
+    rechargeTime: 30
+  - type: BorgModuleIcon
+    icon: { sprite: Objects/Weapons/Guns/Battery/disabler.rsi, state: base }
+
+# Items
+
+- type: entity
+  parent: WeaponDisabler
+  id: BorgWeaponDisabler
+  name: cyborg disabler
+  description: A disabler wired into a cyborg's power systems. It slowly recharges itself.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Battery
+    maxCharge: 400
+    startingCharge: 400
+  - type: BatterySelfRecharger
+    autoRechargeRate: 1
+
+- type: entity
+  parent: Flash
+  id: BorgFlash
+  name: cyborg flash
+  description: A flash built into a cyborg. Its charges slowly come back.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AutoRecharge
+    rechargeDuration: 30
+
+- type: entity
+  parent: HoloprojectorSecurity
+  id: BorgHoloprojectorSecurity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AutoRecharge
+    rechargeDuration: 30

@@ -1,0 +1,9 @@
+- type: shader
+  id: OceanBackdrop
+  kind: source
+  path: "/Textures/_Floof/Shaders/ocean_backdrop.swsl"
+
+- type: shader
+  id: OceanDeep
+  kind: source
+  path: "/Textures/_Floof/Shaders/ocean_deep.swsl"

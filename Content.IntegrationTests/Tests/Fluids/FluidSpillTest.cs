@@ -69,6 +69,14 @@ public sealed class FluidSpill : GameTest
 
             SSpawnAtPosition(WallReinforced, _sMapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(0, 1)));
             SSpawnAtPosition(WallReinforced, _sMapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(1, 0)));
+
+            // Floof Section - flooding
+            // Liquid pours off the grid edge, so wall in the outer sides of the corner too.
+            _sMapSystem.SetTile(grid, new Vector2i(-1, 0), new Tile(1));
+            _sMapSystem.SetTile(grid, new Vector2i(0, -1), new Tile(1));
+            SSpawnAtPosition(WallReinforced, _sMapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(-1, 0)));
+            SSpawnAtPosition(WallReinforced, _sMapSystem.GridTileToLocal(grid, grid.Comp, new Vector2i(0, -1)));
+            // Floof Section End
         });
 
         var puddleOrigin = new Vector2i(0, 0);

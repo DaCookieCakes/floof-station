@@ -1,0 +1,9 @@
+- type: marking
+  id: SingleAntenna
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Floof/Mobs/Customization/unique.rsi
+    state: singleantennaprimary
+  - sprite: _Floof/Mobs/Customization/unique.rsi
+    state: singleantennasecondary
+

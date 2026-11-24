@@ -1,3 +1,4 @@
+using Content.Client._Floof.Movement;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
@@ -44,5 +45,9 @@ public sealed partial class ClientSpriteMovementSystem : SharedSpriteMovementSys
                 _sprite.LayerSetData((ent.Owner, sprite), layer, state);
             }
         }
+
+        // Floofstation - let other systems (dogborgs) react after the layers are swapped
+        var ev = new SpriteMovementUpdatedEvent(isMoving);
+        RaiseLocalEvent(ent, ref ev);
     }
 }

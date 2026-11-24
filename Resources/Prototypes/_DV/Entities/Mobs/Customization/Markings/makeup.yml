@@ -1,0 +1,74 @@
+- type: marking
+  id: MakeupLips
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#7e2727"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: lips
+
+- type: marking
+  id: MakeupBlush
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#d39394"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: blush
+
+- type: marking
+  id: MakeupNailPolishRight
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#702020"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: nail_polish_r
+
+- type: marking
+  id: MakeupNailPolishLeft
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#702020"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: nail_polish_l
+
+- type: marking
+  id: MakeupMothLips
+  bodyPart: Head
+                             # because the Head category for moths only allows 1
+                             # marking and lips should be usable alongside blush
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#7e2727"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: moth_lips
+
+- type: marking
+  id: MakeupMothBlush
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#d39394"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: moth_blush
+

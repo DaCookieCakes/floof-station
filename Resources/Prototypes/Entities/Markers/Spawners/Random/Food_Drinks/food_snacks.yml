@@ -49,6 +49,7 @@
     - id: FoodSnackPopcorn
     - id: FoodSnackRaisins
     - id: FoodSnackSemki
+    - id: FoodSnackRoastedCrickets # Floof - roasted crickets
     - id: FoodSnackSus
     - id: FoodSnackSyndi
     - id: FoodSnackSwirlLollipop

@@ -17,6 +17,7 @@
       UniformScrubsColorPurple: 2
       ClothingUniformJumpsuitParamedic: 1
       ClothingUniformJumpskirtParamedic: 1
+      ClothingUniformMedicThong: 2 # FLOOF
     contrabandInventory:
       ClothingUniformJumpskirtOfLife: 1
   - name: vending-machine-category-outerwear
@@ -32,6 +33,7 @@
       ClothingShoesColorBlue: 2
       ClothingShoesColorWhite: 2
       ClothingShoesBootsWinterMed: 2
+      ClothingUnderSocksMedic: 2 # FLOOF
   - name: vending-machine-category-headwear
     icon: { entity: ClothingHeadHatBeretMedic }
     startingInventory:
@@ -46,6 +48,7 @@
     startingInventory:
       ClothingHandsGlovesLatex: 2
       ClothingHandsGlovesNitrile: 2
+      ClothingHandsMedicWarmers: 2 # FLOOF
   - name: vending-machine-category-eyewear
     icon: { entity: ClothingEyesHudMedical }
     startingInventory:
@@ -56,6 +59,7 @@
     startingInventory:
       ClothingMaskSterile: 2
       ClothingHeadsetMedical: 2
+      ClothingNeckCollarMed: 2 # FLOOF
     contrabandInventory:
       ToyFigurineMedicalDoctor: 1
       ToyFigurineParamedic: 1

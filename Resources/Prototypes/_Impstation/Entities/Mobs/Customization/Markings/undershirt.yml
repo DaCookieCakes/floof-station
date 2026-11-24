@@ -1,0 +1,48 @@
+- type: marking
+  id: UndershirtDefault
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/undershirt.rsi
+    state: undershirt
+
+- type: marking
+  id: UndershirtGrossSleeveless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/undershirt.rsi
+    state: gross_sleeveless
+
+- type: marking
+  id: UndershirtNanotrasen
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/undershirt.rsi
+    state: nanotrasen
+
+- type: marking
+  id: UndershirtBraStrapless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/undershirt.rsi
+    state: strapless
+

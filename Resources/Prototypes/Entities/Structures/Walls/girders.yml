@@ -27,6 +27,10 @@
   name: girder
   description: A large structural assembly made out of metal; It requires a layer of metal before it can be considered a wall.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Girder.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Construction
     graph: Girder
     node: girder

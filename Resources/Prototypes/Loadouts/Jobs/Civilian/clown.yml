@@ -1,74 +1,88 @@
 # Head
 - type: loadout
   id: JesterHat
+  groupBy: ClownGear # FLOOF
   equipment:
     head: ClothingHeadHatJester
 
 - type: loadout
   id: JesterAltHat
+  groupBy: ClownGear # FLOOF
   equipment:
     head: ClothingHeadHatJesterAlt
 
 - type: loadout
   id: ClownMitre
+  groupBy: ClownGear # FLOOF
   equipment:
     head: ClothingHeadHatMitreClown
 
 # Jumpsuit
 - type: loadout
   id: ClownSuit
+  groupBy: ClownGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitClown
 
 - type: loadout
   id: ClownSkirt
+  groupBy: ClownGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtClown
 
 - type: loadout
   id: JesterSuit
+  groupBy: ClownGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitJester
 
 - type: loadout
   id: JesterAltSuit
+  groupBy: ClownGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitJesterAlt
 
 # Back
 - type: loadout
   id: ClownBackpack
+  groupBy: ClownGear # FLOOF
   equipment:
     back: ClothingBackpackClown
 
 - type: loadout
   id: ClownSatchel
+  groupBy: ClownGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelClown
 
 - type: loadout
   id: ClownDuffel
+  groupBy: ClownGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelClown
 
 # Shoes
 - type: loadout
   id: ClownShoes
+  groupBy: ClownGear # FLOOF
   equipment:
     shoes: ClothingShoesClown
 
 - type: loadout
   id: JesterShoes
+  groupBy: ClownGear # FLOOF
   equipment:
     shoes: ClothingShoesJester
 
 # Outer clothing
 - type: loadout
   id: ClownRobes
+  groupBy: ClownGear # FLOOF
   equipment:
     outerClothing: ClothingOuterClownPriest
 
 - type: loadout
   id: ClownWintercoat
+  groupBy: ClownGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterClown

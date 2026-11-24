@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/funky-station/funky-station/tree/c4c4e32267cf3f2814b46c3398159dc0d0d3757a/Resources/Textures/Interface/Misc/job_icons.rsi",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "MindShield",
+            "delays": [
+                [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+            ]
+        }
+    ]
+}

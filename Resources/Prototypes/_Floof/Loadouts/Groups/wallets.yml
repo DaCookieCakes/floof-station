@@ -1,0 +1,18 @@
+- type: loadoutGroup
+  id: Wallet
+  name: loadout-group-wallet
+  minLimit: 0
+  defaultSelected: 1
+  maxLimit: 1
+  loadouts:
+  - ClothingWalletLeatherBrown
+  - ClothingWalletLeatherBlack
+  - ClothingWalletLeatherRed
+  - ClothingWalletLeatherBlue
+  - ClothingWalletLeatherGreen
+  - ClothingWalletLeatherMail
+  - ClothingWalletLeatherPirate
+  - ClothingWalletLeatherPrisoner
+  - ClothingWalletLeatherArcadia
+  - ClothingWalletLeatherPunk
+  - ClothingWalletLeatherLizard

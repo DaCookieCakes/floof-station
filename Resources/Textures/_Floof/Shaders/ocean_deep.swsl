@@ -1,0 +1,24 @@
+#include "/Textures/_Floof/Shaders/ocean_shared.swsl"
+
+uniform highp float cover;
+uniform highp float lit_cover;
+
+const highp float lampCover = 0.6;
+
+void fragment() {
+    highp vec2 world = toWorld(FRAGCOORD.xy - world_origin);
+
+    highp vec3 light = LIGHT.rgb;
+    highp vec3 water = max(deepDark, lampWater(light));
+    highp float lit = clamp(max(light.r, max(light.g, light.b)), 0.0, 1.0);
+    LIGHT = vec4(1.0);
+
+    highp float glow = deepGlow(world);
+    water += blipColor * glow;
+
+    highp float speck = speckLayers(world) * 0.12;
+    water += speckColor * speck;
+
+    COLOR = vec4(water, clamp(max(cover, lit * lampCover * lit_cover) + glow + speck, 0.0, 1.0));
+    MODULATE = vec4(1.0);
+}

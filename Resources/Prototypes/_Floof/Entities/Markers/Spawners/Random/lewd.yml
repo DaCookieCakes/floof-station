@@ -1,0 +1,95 @@
+
+- type: entityTable
+  id: LewdVibes
+  table: !type:GroupSelector
+    children:
+    - id: LewdWand
+    - id: LewdVibeGreen
+    - id: LewdVibeTeal
+    - id: LewdVibePink
+    - id: LewdVibeRed
+    - id: LewdVibeYellow
+
+- type: entityTable
+  id: LewdFleshlights
+  table: !type:GroupSelector
+    children:
+    - id: LewdFleshlightGreen
+    - id: LewdFleshlightTeal
+    - id: LewdFleshlightPink
+    - id: LewdFleshlightRed
+    - id: LewdFleshlightYellow
+
+- type: entityTable
+  id: LewdDildos
+  table: !type:GroupSelector
+    children:
+    - id: AvianDildo
+    - id: CanineDildo
+    - id: CanineDildoRed
+    - id: HorseDildo
+    - id: DragonDildo
+    - id: NormalDildo
+    - id: TentacleDildo
+    - id: DoubleDildo
+
+- type: entityTable
+  id: LowValueFunLewdTable
+  table: !type:GroupSelector
+    children:
+    - id: CrateLewdToys
+
+- type: entityTable
+  id: DresserLewdVibes
+  table: !type:GroupSelector
+    children:
+    - id: LewdWand
+      weight: 0.06
+    - id: LewdVibeGreen
+      weight: 0.06
+    - id: LewdVibeTeal
+      weight: 0.06
+    - id: LewdVibePink
+      weight: 0.06
+    - id: LewdVibeRed
+      weight: 0.06
+    - id: LewdVibeYellow
+      weight: 0.06
+    - id: Clicker
+      weight: 0.06
+
+- type: entityTable
+  id: DresserLewdDildos
+  table: !type:GroupSelector
+    children:
+    - id: AvianDildo
+      weight: 0.06
+    - id: CanineDildo
+      weight: 0.06
+    - id: CanineDildoRed
+      weight: 0.06
+    - id: HorseDildo
+      weight: 0.06
+    - id: DragonDildo
+      weight: 0.06
+    - id: NormalDildo
+      weight: 0.06
+    - id: TentacleDildo
+      weight: 0.06
+    - id: DoubleDildo
+      weight: 0.06
+
+- type: entityTable
+  id: DresserLewdFleshlights
+  table: !type:GroupSelector
+    children:
+    - id: LewdFleshlightGreen
+      weight: 0.06
+    - id: LewdFleshlightTeal
+      weight: 0.06
+    - id: LewdFleshlightPink
+      weight: 0.06
+    - id: LewdFleshlightRed
+      weight: 0.06
+    - id: LewdFleshlightYellow
+      weight: 0.06

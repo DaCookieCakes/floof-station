@@ -1,0 +1,62 @@
+# Belts
+- type: loadoutGroup
+  id: HoPBelts
+  name: loadout-group-hop-belts
+  minLimit: 0
+  loadouts:
+  - BeltPaperwork
+
+# Gloves
+- type: loadoutGroup
+  id: CaptainGloves
+  name: loadout-group-captain-gloves
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - CaptainGloves
+  - CaptainArmWarmers
+
+- type: loadoutGroup
+  id: HoPGloves
+  name: loadout-group-hop-gloves
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - PapercutProofGloves
+  - CommandArmWarmers # FLOOF
+
+# Socks
+- type: loadoutGroup
+  id: CaptainSocks
+  name: loadout-group-captain-socks
+  minLimit: 0
+  loadouts:
+  - CaptainThighHighs
+
+- type: loadoutGroup
+  id: HoPSocks
+  name: loadout-group-hop-socks
+  minLimit: 0
+  loadouts:
+  - CommandThighHighs
+
+# Shoes
+- type: loadoutGroup
+  id: CaptainShoes
+  name: loadout-group-captain-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - LaceupShoes
+  - BlackShoes
+  - BrownShoes
+
+- type: loadoutGroup
+  id: HoPShoes
+  name: loadout-group-hop-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - LaceupShoes
+  - BlackShoes
+  - BrownShoes

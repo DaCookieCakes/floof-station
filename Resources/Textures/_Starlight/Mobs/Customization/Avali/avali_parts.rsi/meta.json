@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites by Github MozarteanChaos / Discord mozarteanchaos (213813868282118144) and modified by Github Zeyria / Discord zeyria (232964236186353664)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "ears_avalibase_primary",
+            "directions": 4
+        },
+        {
+            "name": "ears_avalibase_secondary",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_behind4",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_front3",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_behind3",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_front2",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_behind2",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_behind2_behind",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_front",
+            "directions": 4
+        },
+        {
+            "name": "tail_avalibase_behind",
+            "directions": 4
+        }
+    ]
+}

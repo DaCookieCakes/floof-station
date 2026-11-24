@@ -26,6 +26,12 @@ public enum SlotFlags
     LEGS = 1 << 13,
     FEET = 1 << 14,
     SUITSTORAGE = 1 << 15,
+    WALLET = 1 << 16, // Floof - Wallets
+    // Floof section
+    UNDERGARMENT_BOTTOM = 1 << 20,
+    UNDERGARMENT_TOP = 1 << 21,
+    UNDERGARMENT_SOCKS = 1 << 22,
+    // Floof section end
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

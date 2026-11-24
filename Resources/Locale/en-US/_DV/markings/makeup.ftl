@@ -1,0 +1,12 @@
+marking-MakeupLips = Lips
+marking-MakeupLips-lips = Lips
+marking-MakeupBlush = Blush
+marking-MakeupBlush-blush = Blush
+marking-MakeupNailPolishRight = Nail Polish (Right)
+marking-MakeupNailPolishRight-nail_polish_r = Nail Polish (Right)
+marking-MakeupNailPolishLeft = Nail Polish (Left)
+marking-MakeupNailPolishLeft-nail_polish_l = Nail Polish (Left)
+marking-MakeupMothLips = Moth Lipstick
+marking-MakeupMothLips-moth_lips = Moth Lipstick
+marking-MakeupMothBlush = Moth Blush
+marking-MakeupMothBlush-moth_blush = Moth Blush

@@ -26,6 +26,7 @@
       FoodPlateTin: 5
       FoodPlateMuffinTin: 5
       FoodKebabSkewer: 5
+      IceCreamBowl: 5 # FLOOF
     contrabandInventory:
       CandyBowl: 1
   - name: vending-machine-category-drinkware

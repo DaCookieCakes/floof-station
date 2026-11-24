@@ -1,3 +1,4 @@
+#if false // Floof - moved to _Floof/Arrivals
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.Utility;
 
@@ -14,3 +15,4 @@ public sealed partial class StationArrivalsComponent : Component
 
     [DataField("shuttlePath")] public ResPath ShuttlePath = new("/Maps/Shuttles/arrivals.yml");
 }
+#endif

@@ -5,9 +5,21 @@
   name: crowbar
   description: A multipurpose tool used for many tasks, such as prying doors or bludgeoning interdimensional invaders.
   components:
+  - type: EmitSoundOnPickup # Euphoria - Bring back interaction SFX from EE
+    sound:
+        path: /Audio/_EE/Items/Handling/crowbar_pickup.ogg
+        params:
+          volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_EE/Items/Handling/crowbar_drop.ogg
+      params:
+        volume: -2
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/crowbar_drop.ogg
+      params:
+        volume: -2
   - type: Tag
     tags:
     - Crowbar
@@ -46,6 +58,7 @@
   parent: BaseCrowbar
   id: Crowbar
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     state: icon
   - type: Item
@@ -58,6 +71,7 @@
   parent: BaseCrowbar
   id: CrowbarRed
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - Crowbar
@@ -92,6 +106,7 @@
   parent: BaseCrowbar
   id: CrowbarGreen
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon
@@ -122,6 +137,7 @@
   parent: BaseCrowbar
   id: CrowbarOrange
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon
@@ -152,6 +168,7 @@
   parent: BaseCrowbar
   id: CrowbarYellow
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     layers:
     - state: icon

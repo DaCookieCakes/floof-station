@@ -44,6 +44,10 @@
   parent: BaseRailing
   id: Railing
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Railing.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: side
   - type: Icon
@@ -66,6 +70,10 @@
   parent: BaseRailing
   id: RailingCorner
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/RailingCorner.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: corner
   - type: Icon
@@ -97,6 +105,10 @@
   parent: BaseRailing
   id: RailingCornerSmall
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/RailingCornerSmall.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: corner_small
   - type: Icon

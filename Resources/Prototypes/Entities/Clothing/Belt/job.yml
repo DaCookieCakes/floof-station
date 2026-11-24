@@ -86,6 +86,10 @@
   name: utility belt
   description: Can hold various things.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingBeltUtility.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Belt/utility.rsi
   - type: Clothing

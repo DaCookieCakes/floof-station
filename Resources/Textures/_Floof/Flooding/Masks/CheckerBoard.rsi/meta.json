@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Flood mask by Niaresa, traced from the sprite: Visne",
+  "size": {
+    "x": 18,
+    "y": 18
+  },
+  "states": [
+    {
+      "name": "mask"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+- type: gameMap
+  id: TestPowerLink
+  mapName: TestPowerLink
+  mapPath: /Maps/_Floof/Test/powerlink.yml
+  isGrid: true
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    TestPowerLink:
+      stationProto: TestStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "TestPowerLink"
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ -1, -1 ]
+
+- type: gameMap
+  id: TestGasLink
+  mapName: TestGasLink
+  mapPath: /Maps/_Floof/Test/gaslink.yml
+  isGrid: true
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    TestGasLink:
+      stationProto: TestStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "TestGasLink"
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ -1, -1 ]
+
+- type: gameMap
+  id: TestStaticPortal
+  mapName: TestStaticPortal
+  mapPath: /Maps/_Floof/Test/portaltest.yml
+  isGrid: true
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    TestStaticPortal:
+      stationProto: TestStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "TestStaticPortal"
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ -1, -1 ]
+
+- type: gameMap
+  id: TestFathom
+  mapName: TestFathom
+  mapPath: /Maps/_Floof/Test/fathom.yml
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    TestFathom:
+      stationProto: TestStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "TestFathom"
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ -1, -1 ]

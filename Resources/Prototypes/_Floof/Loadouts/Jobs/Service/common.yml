@@ -1,0 +1,13 @@
+# Gloves
+- type: loadout
+  id: ServiceArmWarmers
+  groupBy: ServiceGear
+  equipment:
+    gloves: ClothingHandsServiceWarmers
+
+# Socks
+- type: loadout
+  id: ServiceThighHighs
+  groupBy: ServiceGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksService

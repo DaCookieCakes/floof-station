@@ -1,0 +1,56 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "testicles"
+        },
+        {
+            "name": "testicles_single_1"
+        },
+        {
+            "name": "testicles_single_2"
+        },
+        {
+            "name": "testicles_single_3"
+        },
+        {
+            "name": "testicles_single_1_s"
+        },
+        {
+            "name": "testicles_single_2_s"
+        },
+        {
+            "name": "testicles_single_3_s"
+        },
+        {
+            "name": "testicles_hidden_1"
+        },
+        {
+            "name": "testicles_hidden_2"
+        },
+        {
+            "name": "testicles_hidden_3"
+        },
+        {
+            "name": "testicles_hidden_1_s"
+        },
+        {
+            "name": "testicles_hidden_2_s"
+        },
+        {
+            "name": "testicles_hidden_3_s"
+        },
+        {
+            "name": "testicles_single_4"
+        },
+        {
+            "name": "testicles_single_4_s"
+        }
+    ]
+}

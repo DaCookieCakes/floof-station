@@ -1,0 +1,100 @@
+uniform highp vec2 world_origin;
+uniform highp vec2 world_x;
+uniform highp vec2 world_y;
+uniform highp float depth;
+uniform highp float blip_depth;
+uniform highp vec2 eye_position;
+uniform sampler2D surface_texture;
+
+const highp float surfaceFrames = 4.0;
+const highp float blipsFrom = 420.0;
+const highp float blipsFull = 450.0;
+const highp float blipCell = 6.5;
+const highp float risePerMeter = 0.25;
+const highp float speckRarity = 0.45;
+const highp float lampScatter = 0.35;
+const highp vec3 deepDark = vec3(0.005, 0.012, 0.02);
+const highp vec3 blipColor = vec3(1.0, 0.82, 0.25);
+const highp vec3 speckColor = vec3(0.75, 0.88, 0.95);
+
+highp float hash(highp vec2 p) {
+    highp vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+    p3 += dot(p3, p3.yzx + 33.33);
+    return fract((p3.x + p3.y) * p3.z);
+}
+
+highp float blips(highp vec2 world) {
+    highp vec2 cell = floor(world / blipCell);
+    highp float total = 0.0;
+
+    for (int x = -1; x <= 1; x++) {
+        for (int y = -1; y <= 1; y++) {
+            highp vec2 c = cell + vec2(float(x), float(y));
+            highp float seed = hash(c);
+            if (seed < 0.72)
+                continue;
+
+            highp vec2 center = (c + vec2(hash(c + 3.1), hash(c + 7.7))) * blipCell;
+            highp float period = 7.0 + hash(c + 13.0) * 9.0;
+            highp float pulse = sin((TIME / period + seed * 40.0) * 6.2832) * 0.5 + 0.5;
+            pulse = pulse * pulse * pulse * pulse;
+
+            highp float d = length(world - center);
+            total += pulse * exp(-d * d * 140.0);
+        }
+    }
+
+    return total;
+}
+
+highp float riseFade(highp float t) {
+    return smoothstep(0.0, 0.3, t) * (1.0 - smoothstep(0.85, 1.0, t));
+}
+
+highp float riseNear(highp float t) {
+    return (1.0 / (1.0 - t * 0.85) - 1.0) / 5.667;
+}
+
+highp float riseProgress(highp float life) {
+    return depth * risePerMeter / life;
+}
+
+highp float specks(highp vec2 world, highp float cell, highp float size, highp float life, highp float seedOffset) {
+    highp vec2 drift = vec2(sin(TIME * 0.11 + seedOffset) * 1.5 + TIME * 0.05, -TIME * 0.04);
+    highp vec2 p = (world + drift) / cell;
+    highp vec2 id = floor(p) + seedOffset;
+    highp float offset = hash(id);
+    if (offset < speckRarity)
+        return 0.0;
+
+    highp float cycle = riseProgress(life) + TIME * 0.03 + offset * 7.0;
+    highp float t = fract(cycle);
+    highp vec2 born = id + floor(cycle) * 13.0;
+    highp vec2 center = vec2(hash(born + 3.7) * 0.8 + 0.1, hash(born + 8.3) * 0.4 + 0.5 - riseNear(t) * 0.35);
+    highp float d = length(fract(p) - center) * cell;
+    highp float radius = size * mix(0.3, 2.2, riseNear(t));
+    highp float hollow = mix(0.35, 1.0, smoothstep(0.0, radius * 0.6, d));
+    return (1.0 - smoothstep(radius * 0.5, radius, d)) * hollow * riseFade(t) * mix(0.12, 1.0, riseNear(t));
+}
+
+highp float speckLayers(highp vec2 world) {
+    return specks(world, 1.1, 0.045, 12.0, 0.0)
+        + specks(world - eye_position * 0.25, 0.8, 0.03, 16.0, 17.0) * 0.6
+        + specks(world - eye_position * 0.5, 0.55, 0.02, 22.0, 41.0) * 0.35;
+}
+
+highp float deepGlow(highp vec2 world) {
+    return blips(world) * smoothstep(blipsFrom, blipsFull, blip_depth);
+}
+
+highp vec3 surfaceBase() {
+    return zTextureSpec(surface_texture, vec2(0.5 / surfaceFrames, 0.5)).rgb;
+}
+
+highp vec3 lampWater(highp vec3 lamps) {
+    return surfaceBase() * lamps * lampScatter;
+}
+
+highp vec2 toWorld(highp vec2 pixels) {
+    return vec2(dot(world_x, pixels), dot(world_y, pixels));
+}

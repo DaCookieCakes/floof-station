@@ -1,0 +1,135 @@
+# EFFECTS #
+- type: loadoutEffectGroup
+  id: LoadoutEffectWaterBreathers
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Feroxi
+
+- type: loadoutEffectGroup
+  id: LoadoutEffectShadekin
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Shadekin
+
+# LOADOUTS #
+# Feroxi
+- type: loadout
+  id: LoadoutEmergencyWater
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  storage:
+    back:
+    - BoxSurvivalWater
+
+- type: loadout
+  id: LoadoutEmergencyWaterClown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  storage:
+    back:
+    - BoxHugWater
+
+- type: loadout
+  id: LoadoutEmergencyWaterExtended
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  storage:
+    back:
+    - BoxSurvivalEngineeringWater
+
+- type: loadout
+  id: LoadoutEmergencyWaterMedical
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  storage:
+    back:
+    - BoxSurvivalMedicalWater
+
+- type: loadout
+  id: LoadoutEmergencyWaterSecurity
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  storage:
+    back:
+    - BoxSurvivalSecurityWater
+
+- type: loadout
+  id: LoadoutEmergencyWaterSyndicate
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  storage:
+    back:
+    - BoxSurvivalSyndicateWater
+
+- type: loadout
+  id: LoadoutEmergencyWaterMilitaryDouble
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  equipment:
+    pocket1: EmergencyDoubleTankWaterVaporFilled
+  storage:
+    back:
+    - BoxSurvivalMilitaryDoubleWater
+
+- type: loadout
+  id: LoadoutSpeciesPocketDoubleWater
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  equipment:
+    pocket1: EmergencyDoubleTankWaterVaporFilled
+
+- type: loadout
+  id: LoadoutSpeciesEVAWater
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectWaterBreathers
+  equipment:
+    suitstorage: TankWaterFilled
+
+
+# Shadekin
+- type: loadout
+  id: LoadoutEmergencyShadekin
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectShadekin
+  storage:
+    back:
+    - BoxSurvivalShadekin
+
+- type: loadout
+  id: LoadoutEmergencyShadekinClown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectShadekin
+  storage:
+    back:
+    - BoxHugShadekin
+
+- type: loadout
+  id: LoadoutEmergencyShadekinSyndicate
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectShadekin
+  storage:
+    back:
+    - BoxSurvivalSyndicateShadekin
+
+- type: loadout
+  id: LoadoutEmergencyShadekinMedical
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LoadoutEffectShadekin
+  storage:
+    back:
+    - BoxSurvivalMedicalShadekin

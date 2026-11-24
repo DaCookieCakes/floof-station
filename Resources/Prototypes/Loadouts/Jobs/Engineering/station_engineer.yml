@@ -26,21 +26,25 @@
 
 - type: loadout
   id: StationEngineerHardhatYellow
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     head: ClothingHeadHatHardhatYellow
 
 - type: loadout
   id: StationEngineerHardhatOrange
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     head: ClothingHeadHatHardhatOrange
 
 - type: loadout
   id: StationEngineerHardhatRed
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     head: ClothingHeadHatHardhatRed
 
 - type: loadout
   id: SeniorEngineerBeret
+  groupBy: StationEngineerGear # FLOOF
   startingGear: EngineeringBeret
   effects:
   - !type:GroupLoadoutEffect
@@ -49,21 +53,25 @@
 # Jumpsuit
 - type: loadout
   id: StationEngineerJumpsuit
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitEngineering
 
 - type: loadout
   id: StationEngineerJumpskirt
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtEngineering
 
 - type: loadout
   id: StationEngineerHazardsuit
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitEngineeringHazard
 
 - type: loadout
   id: SeniorEngineerJumpsuit
+  groupBy: StationEngineerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorEngineering
@@ -72,6 +80,7 @@
 
 - type: loadout
   id: SeniorEngineerJumpskirt
+  groupBy: StationEngineerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorEngineering
@@ -81,49 +90,58 @@
 # Back
 - type: loadout
   id: StationEngineerBackpack
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     back: ClothingBackpackEngineering
 
 - type: loadout
   id: StationEngineerSatchel
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelEngineering
 
 - type: loadout
   id: StationEngineerDuffel
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelEngineering
 
 # OuterClothing
 - type: loadout
   id: StationEngineerOuterVest
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterVestHazard
 
 - type: loadout
   id: StationEngineerWintercoat
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterEngi
 
 # Shoes
 - type: loadout
   id: WorkBoots
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWork
 
 - type: loadout
   id: EngineeringWinterBoots
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWinterEngi
 
 # ID
 - type: loadout
   id: StationEngineerPDA
+  groupBy: StationEngineerGear # FLOOF
   equipment:
     id: EngineerPDA
 
 - type: loadout
   id: SeniorEngineerPDA
+  groupBy: StationEngineerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorEngineering

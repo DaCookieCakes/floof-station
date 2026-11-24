@@ -4,6 +4,10 @@
   name: scientist bio suit crate
   description: Contains 2 biohazard suits to ensure that no disease will distract you from doing science. Requires Science access to open.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateScienceBiosuit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector

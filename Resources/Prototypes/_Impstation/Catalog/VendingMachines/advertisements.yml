@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: BeachDrobeAds
+  values:
+    prefix: advertisement-beachdrobe-
+    count: 3

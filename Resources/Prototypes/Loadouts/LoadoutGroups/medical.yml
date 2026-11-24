@@ -18,6 +18,8 @@
 - type: loadoutGroup
   id: MedicalShoes
   name: loadout-group-medical-doctor-shoes
+  minLimit: 0 # FLOOF
+  defaultSelected: 1 # FLOOF
   loadouts:
   - WhiteShoes
   - MedicalWinterBoots
@@ -31,6 +33,9 @@
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
   - LoadoutSpeciesVoxNitrogen
+  - LoadoutEmergencyWaterMedical # Floof: Added.
+  - LoadoutSpeciesPocketDoubleWater # Floof: Added.
+  - LoadoutEmergencyShadekinMedical # Floof: Added.
 
 # Chief Medical Officer
 
@@ -57,9 +62,12 @@
   minLimit: 0
   loadouts:
   - ChiefMedicalOfficerLabCoat
+  - CMOLongLabCoat  # FLOOF
+  - CMOLongCoat     # FLOOF
   - ChiefMedicalOfficerWintercoat
 
 - type: loadoutGroup
+  parent: CommandCollars # FLOOF
   id: ChiefMedicalOfficerNeck
   name: loadout-group-chief-medical-officer-neck
   minLimit: 0
@@ -70,6 +78,8 @@
 - type: loadoutGroup
   id: ChiefMedicalOfficerShoes
   name: loadout-group-chief-medical-officer-shoes
+  minLimit: 0 # FLOOF
+  defaultSelected: 1 # FLOOF
   loadouts:
   - BrownShoes
   - MedicalWinterBoots
@@ -113,6 +123,9 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
+  - LongLabCoat # FLOOF
+  - MedicalLabCoat # FLOOF
+  - MedicalLongLabCoat # FLOOF
   - MedicalDoctorWintercoat
   - SeniorPhysicianLabCoat
 
@@ -159,8 +172,15 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
+  - LongLabCoat # FLOOF
+  - MedicalLabCoat # FLOOF
+  - MedicalLongLabCoat # FLOOF
   - ChemistLabCoat
+  - ChemistLongLabCoat # FLOOF
+  - SeniorChemistLabCoat # FLOOF
+  - PharmacistLabCoat # FLOOF
   - ChemistWintercoat
+  - ChemicalResistantApron # FLOOF
 
 - type: loadoutGroup
   id: ChemistBackpack
@@ -199,10 +219,13 @@
   loadouts:
   - ParamedicWindbreaker
   - ParamedicWintercoat
+  - ParamedicJacket # FLOOF
 
 - type: loadoutGroup
   id: ParamedicShoes
   name: loadout-group-paramedic-shoes
+  minLimit: 0 # FLOOF
+  defaultSelected: 1 # FLOOF
   loadouts:
   - BlueShoes
   - WhiteShoes

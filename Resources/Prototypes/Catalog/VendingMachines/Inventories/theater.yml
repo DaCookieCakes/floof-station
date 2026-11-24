@@ -9,6 +9,39 @@
       ClothingUniformJumpsuitDameDane: 2
       ClothingUniformJumpsuitKimono: 1
       ClothingUniformJumpsuitGladiator: 1
+      # Floof Section - Costume bundles
+      CostumeBundleJester: 2
+      CostumeBundlePerformer: 2
+      CostumeBundleCardborg: 2
+      CostumeBundleChicken: 2
+      CostumeBundleGladiator: 2
+      CostumeBundleJudge: 2
+      CostumeBundleMonkey: 2
+      CostumeBundlePirate: 2
+      CostumeBundleRedRaccoon: 2
+      CostumeBundleSafari: 2
+      CostumeBundleSanta: 2
+      CostumeBundleShrineMaiden: 2
+      CostumeBundleSkub: 2
+      CostumeBundleWitch: 2
+      CostumeBundleYakuza: 2
+      CostumeBundleBunnySuit: 2
+      CostumeBundleBunnySuitBlue: 2
+      CostumeBundleBunnySuitGreen: 2
+      CostumeBundleBunnySuitPink: 2
+      CostumeBundleBunnySuitRed: 2
+      CostumeBundleBunnySuitWhite: 2
+      # Floof Section End
+      # Floof Section - Dresses
+      ClothingUniformClassicalMaidDress: 1
+      ClothingUniformRedDancersGarb: 2
+      ClothingUniformBandedDancersGarb: 2
+      ClothingUniformRedSidelessDress: 2
+      ClothingUniformPurpleNightclubDress: 2
+      ClothingUniformBlackPetticoatDress: 2
+      ClothingUniformBlueFancyLad: 2
+      ClothingUniformWeddingDress: 1
+      # Floof Section End
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterSuitChicken }
     startingInventory:
@@ -82,6 +115,7 @@
       ClothingMaskSadMime: 1
       ClothingMaskScaredMime: 1
       FoodPoppy: 1
+      ClothingNeckCollarBell: 2 # Floof
     contrabandInventory:
       ToyFigurineBoxer: 1
       ToyFigurineMusician: 1

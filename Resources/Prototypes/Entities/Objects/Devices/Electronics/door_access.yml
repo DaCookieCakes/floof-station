@@ -20,6 +20,7 @@
   id: DoorElectronicsCommand
   suffix: Command, Locked
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["Command"]]
 
@@ -101,6 +102,7 @@
   id: DoorElectronicsService
   suffix: Service, Locked
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["Service"]]
 
@@ -175,6 +177,7 @@
   id: DoorElectronicsEngineering
   suffix: Engineering, Locked
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["Engineering"]]
 
@@ -241,6 +244,7 @@
   id: DoorElectronicsSecurity
   suffix: Security, Locked
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["Security"]]
 
@@ -282,6 +286,7 @@
   id: DoorElectronicsMedical
   suffix: Medical, Locked
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["Medical"]]
 
@@ -332,6 +337,7 @@
   id: DoorElectronicsExternal
   suffix: External, Locked
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["External"]]
 

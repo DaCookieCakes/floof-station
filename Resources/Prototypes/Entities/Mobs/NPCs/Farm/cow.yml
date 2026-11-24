@@ -76,6 +76,8 @@
     guides:
     - Chef
     - FoodRecipes
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   parent: SolutionLarge

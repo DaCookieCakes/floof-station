@@ -13,6 +13,10 @@
     startingInventory:
       ClothingUniformJumpsuitCargo: 3
       ClothingUniformJumpskirtCargo: 3
+      # FLOOF: Start
+      ClothingUniformLogisThong: 3
+      ClothingUniformCourierThong: 2
+      # FLOOF: End
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterWinterCargo }
     startingInventory:
@@ -23,6 +27,10 @@
     startingInventory:
       ClothingShoesColorBlack: 3
       ClothingShoesBootsWinterCargo: 2
+      # FLOOF: Start
+      ClothingUnderSocksLogis: 3
+      ClothingUnderSocksCourier: 2
+      # FLOOF: End
   - name: vending-machine-category-equipment
     icon: { entity: ClothingHeadHatCargosoft }
     startingInventory:
@@ -31,6 +39,11 @@
       ClothingHeadBandBrown: 3
       ClothingHeadsetCargo: 3
       ClothingNeckScarfStripedBrown: 3
+      # FLOOF: Start
+      ClothingNeckCollarLogi: 2
+      ClothingHandsLogisWarmers: 3
+      ClothingHandsCourierWarmers: 2
+      # FLOOF: End
     contrabandInventory:
       ToyFigurineCargoTech: 1
       ToyFigurineSalvage: 1

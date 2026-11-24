@@ -1,3 +1,4 @@
+using System.Globalization; // Floof - Bank
 using System.Linq;
 using Content.Client.Humanoid;
 using Content.Shared.Clothing;
@@ -31,7 +32,9 @@ public sealed partial class CharacterPickerButton : ContainerButton
         ISharedPlayerManager playerMan,
         ButtonGroup group,
         HumanoidCharacterProfile profile,
-        bool isSelected)
+        bool isSelected,
+        bool isLive = false, // Floof - Persistence
+        int? balance = null) // Floof - Bank
     {
         RobustXamlLoader.Load(this);
         AddStyleClass(StyleClassButton);
@@ -48,10 +51,14 @@ public sealed partial class CharacterPickerButton : ContainerButton
             description = $"{description}\n{jobName}";
         }
 
+        if (balance != null) // Floof - Bank
+            description = $"{description}\n{Loc.GetString("bank-picker-balance", ("balance", balance.Value.ToString("N0", CultureInfo.InvariantCulture)))}"; // Floof - Bank
+
         Pressed = isSelected;
         DeleteButton.Visible = !isSelected;
 
         DescriptionLabel.Text = description;
+        LiveLabel.Visible = isLive; // Floof - Persistence
 
         ConfirmDeleteButton.OnPressed += _ =>
         {

@@ -1,0 +1,167 @@
+- type: marking
+  id: VulpSnoutSwiftWhite
+  bodyPart: Snout
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: vulpine-lines-white
+
+- type: marking
+  id: VulpSnoutVulpineWhite
+  bodyPart: Snout
+  sprites:
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: vulpine
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: vulpine-lines-white
+
+- type: marking
+  id: VulpPointsFadeLegL
+  bodyPart: LLeg
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_fade-legsL
+
+- type: marking
+  id: VulpPointsSharpLegL
+  bodyPart: LLeg
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_sharp-legsL
+
+- type: marking
+  id: VulpPointsCrestLegL
+  bodyPart: LLeg
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_crest-legsL
+
+- type: marking
+  id: VulpPointsFadeLegR
+  bodyPart: RLeg
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_fade-legsR
+
+- type: marking
+  id: VulpPointsSharpLegR
+  bodyPart: RLeg
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_sharp-legsR
+
+- type: marking
+  id: VulpPointsCrestLegR
+  bodyPart: RLeg
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_crest-legsR
+
+- type: marking
+  id: VulpPointsFadeArmL
+  bodyPart: LArm
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_fade-armsL
+
+- type: marking
+  id: VulpPointsSharpArmL
+  bodyPart: LArm
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_sharp-armsL
+
+- type: marking
+  id: VulpPointsCrestArmL
+  bodyPart: LArm
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_crest-armsL
+
+- type: marking
+  id: VulpPointsFadeArmR
+  bodyPart: RArm
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_fade-armsR
+
+- type: marking
+  id: VulpPointsSharpArmR
+  bodyPart: RArm
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_sharp-armsR
+
+- type: marking
+  id: VulpPointsCrestArmR
+  bodyPart: RArm
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_crest-armsR
+
+- type: marking
+  id: VulpPointsHandsRight
+  bodyPart: RHand
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_handR
+
+- type: marking
+  id: VulpPointsHandsLeft
+  bodyPart: LHand
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_handL
+
+- type: marking
+  id: VulpPointsFeetRight
+  bodyPart: RFoot
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_feetR
+
+- type: marking
+  id: VulpPointsFeetLeft
+  bodyPart: LFoot
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_feetL
+
+- type: marking
+  id: VulpTailFoxAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-fade
+
+- type: marking
+  id: VulpTailFoxTipAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-tip
+
+- type: marking
+  id: VulpTailBushyAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: bushfluff_wag
+
+- type: marking
+  id: VulpTailCorgi
+  bodyPart: Tail
+  sprites:
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: corgi
+
+- type: marking
+  id: VulpTailCorgiAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: DeltaV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: corgi_wag
+

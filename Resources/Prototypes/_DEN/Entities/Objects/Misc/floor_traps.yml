@@ -1,0 +1,534 @@
+# EMP Mine
+
+- type: entity
+  id: LandMineEMPUnarmed
+  name: emp mine
+  parent: BaseLandMine
+  components:
+  - type: EmpOnTrigger
+    range: 5.5
+    energyConsumption: 50000
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineEMP
+  suffix: armed
+  parent: LandMineEMPUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+
+# Bump Mine
+
+- type: entity
+  id: LandMineBumpUnarmed
+  name: bump mine
+  parent: BaseLandMine
+  components:
+  - type: RepulseAttractOnTrigger
+    speed: 10
+    range: 5
+    whitelist:
+      components:
+      - MobMover
+      - Item
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineBump
+  suffix: armed
+  parent: LandMineBumpUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+  
+# Flash Mine
+
+- type: entity
+  id: LandMineFlashUnarmed
+  name: flash mine
+  parent: BaseLandMine
+  components:
+  - type: FlashOnTrigger
+    range: 7
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Effects/flash_bang.ogg
+    positional: true
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+    predicted: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineFlash
+  suffix: armed
+  parent: LandMineFlashUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+  
+# Heal Mine (Reverse Obliteration)
+
+- type: entity
+  id: LandMineHealUnarmed
+  name: heal mine
+  parent: BaseLandMine
+  components:
+  #- type: RejuvenateOnTrigger
+  #  targetUser: true
+  - type: DamageOnTrigger
+    damage:
+      types:
+        Blunt: -25
+        Piercing: -25
+        Slash: -25
+        Heat: -25
+        Cold: -25
+        Shock: -25
+        Poison: -25
+        Caustic: -25
+        Cellular: -25
+        Radiation: -25
+        Holy: -25
+        Structural: -25
+        Bloodloss: -25
+    targetUser: true
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Effects/church_bell4.ogg
+    positional: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineHeal
+  suffix: armed
+  parent: LandMineHealUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+  
+# Smoke Mine
+
+- type: entity
+  id: LandMineSmokeUnarmed
+  name: smoke mine
+  parent: BaseLandMine
+  components:
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 50
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/smoke_grenade_smoke.ogg
+    positional: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineSmoke
+  suffix: armed
+  parent: LandMineSmokeUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+
+# Needle Mine (injects chemicals)
+
+- type: entity
+  id: LandMineNeedleRazoriumUnarmed
+  name: needle mine
+  suffix: razorium
+  parent: BaseLandMine
+  components:
+  - type: AddSolutionOnTrigger
+    targetUser: true
+    solution: "bloodstream"
+    addedSolution:
+      reagents:
+      - ReagentId: Razorium
+        Quantity: 20
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Effects/bite.ogg
+    positional: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineNeedleRazorium
+  suffix: armed, razorium
+  parent: LandMineNeedleRazoriumUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+
+- type: entity
+  id: LandMineNeedleSpaceDrugsUnarmed
+  name: needle mine
+  suffix: space drugs
+  parent: BaseLandMine
+  components:
+  - type: AddSolutionOnTrigger
+    targetUser: true
+    solution: "bloodstream"
+    addedSolution:
+      reagents:
+      - ReagentId: SpaceDrugs
+        Quantity: 30
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Effects/bite.ogg
+    positional: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineNeedleSpaceDrugs
+  suffix: armed, space drugs
+  parent: LandMineNeedleSpaceDrugsUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+
+- type: entity
+  id: LandMineNeedleMuteUnarmed
+  name: needle mine
+  suffix: mute
+  parent: BaseLandMine
+  components:
+  - type: AddSolutionOnTrigger
+    targetUser: true
+    solution: "bloodstream"
+    addedSolution:
+      reagents:
+      - ReagentId: MuteToxin
+        Quantity: 20
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Effects/bite.ogg
+    positional: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineNeedleMute
+  suffix: armed, mute
+  parent: LandMineNeedleMuteUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+  
+# Obliteration Mine (kills you instantly)
+
+- type: entity
+  id: LandMineObliterationUnarmed
+  name: obliteration mine
+  parent: BaseLandMine
+  components:
+  - type: DamageOnTrigger
+    damage:
+      types:
+        Blunt: 25
+        Piercing: 25
+        Slash: 25
+        Heat: 25
+        Cold: 25
+        Shock: 25
+        Poison: 25
+        Caustic: 25
+        Cellular: 25
+        Radiation: 25
+        Holy: 25
+        Structural: 25
+        Bloodloss: 25
+    targetUser: true
+  - type: EmitSoundOnTrigger
+    sound:
+      params:
+        volume: -12
+      path: /Audio/Effects/Lightning/strobeepsilon.ogg
+    positional: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineObliteration
+  suffix: armed
+  parent: LandMineObliterationUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+  
+# Scram Mine (randomly teleports)
+
+- type: entity
+  id: LandMineScramUnarmed
+  name: scram mine
+  parent: BaseLandMine
+  components:
+  - type: ScramOnTrigger
+    teleportRadius: 10.0, 25.0
+    targetUser: true
+  - type: DeleteOnTrigger
+
+- type: entity
+  id: LandMineScram
+  suffix: armed
+  parent: LandMineScramUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+  
+# Random Mine Spawners
+
+- type: entity
+  parent: MarkerBase
+  id: LandMineRandomSpawner
+  name: random land mine spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Misc/landmine.rsi
+      state: landmine
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomMineTable
+      prob: 1
+
+- type: entityTable
+  id: RandomMineTable
+  table: !type:GroupSelector
+    children:
+    - id: LandMineExplosive
+      weight: 1
+    - id: LandMineEMP
+      weight: 1
+    - id: LandMineBump
+      weight: 1
+    - id: LandMineFlash
+      weight: 1
+    - id: LandMineSmoke
+      weight: 1
+    - id: LandMineScram
+      weight: 1
+    - !type:GroupSelector # Needle Mines
+      children:
+      - id: LandMineNeedleRazorium
+      - id: LandMineNeedleSpaceDrugs
+      - id: LandMineNeedleMute
+      weight: 1
+    - id: LandMineHeal  # Rare because useful
+      weight: 0.1
+    - id: LandMineObliteration  # Rare because incredibly deadly
+      weight: 0.1
+      
+- type: entity
+  parent: LandMineRandomSpawner
+  id: LandMineRandomSpawnerUnarmed
+  name: random land mine spawner
+  suffix: unarmed
+  components:
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomMineTableUnarmed
+      prob: 1
+
+- type: entityTable
+  id: RandomMineTableUnarmed
+  table: !type:GroupSelector
+    children:
+    - id: LandMineExplosiveUnarmed
+      weight: 1
+    - id: LandMineEMPUnarmed
+      weight: 1
+    - id: LandMineBumpUnarmed
+      weight: 1
+    - id: LandMineFlashUnarmed
+      weight: 1
+    - id: LandMineSmokeUnarmed
+      weight: 1
+    - id: LandMineScramUnarmed
+      weight: 1
+    - !type:GroupSelector # Needle Mines
+      children:
+      - id: LandMineNeedleRazoriumUnarmed
+      - id: LandMineNeedleSpaceDrugsUnarmed
+      - id: LandMineNeedleMuteUnarmed
+      weight: 1
+    - id: LandMineHealUnarmed  # Rare because useful
+      weight: 0.1
+    - id: LandMineObliterationUnarmed  # Rare because incredibly deadly
+      weight: 0.1
+      
+
+# Floor Button (can be continuously activated)
+
+- type: entity
+  id: FloorTrapButtonUnarmed
+  name: floor button
+  description: Marked with a highly-visible symbol for easy identification. Who knows what pressing it will do?
+  components:
+  - type: Clickable
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/click.ogg
+      params:
+        maxDistance: 1
+  - type: InteractionOutline
+  - type: Pullable
+  - type: MovedByPressure
+  - type: Anchorable
+  - type: Physics
+    bodyType: Static
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: Sprite
+    drawdepth: Items
+    sprite: _DEN/Objects/Misc/floortrap.rsi
+    layers:
+    - state: pressure-plate
+    - state: pressure-plate-unshaded
+      shader: unshaded
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
+  - type: Damageable # Floof - injurable needs damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.3
+    stepOn: true
+  - type: SignalOnTrigger
+    keysIn:
+    - trigger
+    port: Trigger
+  - type: DeviceLinkSource
+    ports:
+      - Trigger
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: LandMine              # Replace this with something more generic, when possible
+    sound:
+        path: /Audio/Effects/beep_landmine.ogg
+        params:
+            maxDistance: 3
+  - type: Armable
+  - type: Construction
+    graph: FloorButtonGraph
+    node: floorbutton
+
+- type: entity
+  id: FloorTrapButton
+  suffix: armed
+  parent: FloorTrapButtonUnarmed
+  components:
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+  - type: Armable
+
+# Tripwire Mine (trips, deletes after trigger)
+
+- type: entity
+  id: FloorTrapTripwire
+  name: tripwire
+  description: You've got keen eyes to notice this. The furthest tie is connected to a crude signal transmitter.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      slip:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.1,0.4,0.1"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: Sprite
+    drawdepth: Items
+    sprite: _DEN/Objects/Misc/floortrap.rsi
+    layers:
+    - state: tripwire
+  - type: Appearance
+  - type: Damageable # Floof - injurable needs damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.3
+    stepOn: true
+  - type: TriggerOnStepTrigger  # Might be useless?
+  - type: SignalOnTrigger
+    port: Trigger
+  - type: DeviceLinkSource
+    ports:
+      - Trigger
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: TimerTrigger          # Couldn't find a better way to delay deleting until the signal is sent
+    examinable: false
+    delay: 1
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer
+  - type: Slippery
+  - type: Construction
+    graph: TripwireGraph
+    node: tripwire

@@ -20,6 +20,8 @@ namespace Content.Server.Database
 
         public DbSet<Preference> Preference { get; set; } = null!;
         public DbSet<Profile> Profile { get; set; } = null!;
+        public DbSet<LiveCharacter> LiveCharacter { get; set; } = null!; // Floof - Persistence
+        public DbSet<LiveCharacterHistory> LiveCharacterHistory { get; set; } = null!; // Floof - Persistence
         public DbSet<AssignedUserId> AssignedUserId { get; set; } = null!;
         public DbSet<Player> Player { get; set; } = default!;
         public DbSet<Admin> Admin { get; set; } = null!;
@@ -70,6 +72,44 @@ namespace Content.Server.Database
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
                 .IsUnique();
 
+            // Floof Section - Genitals
+            modelBuilder.Entity<Profile>()
+                .HasOne(p => p.Genitals)
+                .WithOne(g => g.Profile)
+                .HasForeignKey<Genitals>(g => g.ProfileId);
+            modelBuilder.Entity<Genitals>()
+                .HasKey(g => g.ProfileId);
+            // End Floof Section - Genitals
+            // Floof Section - Bank
+            modelBuilder.Entity<Profile>()
+                .HasOne(p => p.BankAccount)
+                .WithOne(b => b.Profile)
+                .HasForeignKey<BankAccount>(b => b.ProfileId)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<BankAccount>()
+                .HasKey(b => b.ProfileId);
+            // Floof Section End - Bank
+            // Floof Section - Persistence
+            modelBuilder.Entity<Profile>()
+                .HasOne(p => p.LiveCharacter)
+                .WithOne(l => l.Profile)
+                .HasForeignKey<LiveCharacter>(l => l.ProfileId)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<LiveCharacter>()
+                .HasKey(l => l.ProfileId);
+            modelBuilder.Entity<LiveCharacterHistory>()
+                .HasOne(h => h.Profile)
+                .WithMany(p => p.LiveCharacterHistory)
+                .HasForeignKey(h => h.ProfileId)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<LiveCharacterHistory>()
+                .HasIndex(h => new { h.ProfileId, h.SavedAt });
+            // End Floof Section - Persistence
+            // Floof Section - Consent toggles
+            modelBuilder.Entity<ConsentToggle>()
+                .HasIndex(c => new {c.ProfileId, c.ToggleId})
+                .IsUnique();
+            // Floof Section End - Consent toggles
             modelBuilder.Entity<ProfileRoleLoadout>()
                 .HasOne(e => e.Profile)
                 .WithMany(e => e.Loadouts)
@@ -330,11 +370,18 @@ namespace Content.Server.Database
         public int Slot { get; set; }
         [Column("char_name")] public string CharacterName { get; set; } = null!;
         public string FlavorText { get; set; } = null!;
+        public string ConsentText { get; set; } = null!; // Floof: Added consent.
+        public Genitals? Genitals { get; set; } = null!; // Floof - Genitals
+        public BankAccount? BankAccount { get; set; } // Floof - Bank
+        public LiveCharacter? LiveCharacter { get; set; } // Floof - Persistence
+        public List<LiveCharacterHistory> LiveCharacterHistory { get; } = new(); // Floof - Persistence
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
         public string? Voice { get; set; } = null!; // If null, the voice gets defaulted to the sex associated value
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
+        public float Height { get; set; } = 1f; // Goobstation: port EE height/width sliders
+        public float Width { get; set; } = 1f; // Goobstation: port EE height/width sliders
         [Column(TypeName = "jsonb")] public JsonDocument? OrganMarkings { get; set; } = null!;
         [Column(TypeName = "jsonb")] public JsonDocument? Markings { get; set; } = null!;
         public string HairName { get; set; } = null!;
@@ -347,6 +394,7 @@ namespace Content.Server.Database
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();
         public List<Trait> Traits { get; } = new();
+        public List<ConsentToggle> ConsentToggles { get; } = new(); // Floof - Consent toggles
 
         public List<ProfileRoleLoadout> Loadouts { get; } = new();
 
@@ -355,6 +403,72 @@ namespace Content.Server.Database
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
     }
+    // Floof Section - Genitals
+    public class Genitals
+    {
+        public int ProfileId { get; set; }
+        public bool Penis { get; set; }
+        public bool Vagina { get; set; }
+        public bool Breasts { get; set; }
+        public Profile Profile { get; set; } = null!;
+    }
+    // End Floof Section - Genitals
+    // Floof Section - Bank
+    public class BankAccount
+    {
+        public int ProfileId { get; set; }
+        public int Balance { get; set; }
+        public Profile Profile { get; set; } = null!;
+    }
+    // Floof Section End - Bank
+    // Floof Section - Persistence
+    public class LiveCharacter
+    {
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; } = null!;
+        public int SchemaVersion { get; set; }
+        public string Data { get; set; } = null!;
+        public DateTime CreatedAt { get; set; }
+        public DateTime LastSavedAt { get; set; }
+        public int? LastSavedRound { get; set; }
+    }
+
+    /// <summary>
+    ///     A previous version of a live character, kept as a backup.
+    /// </summary>
+    public class LiveCharacterHistory
+    {
+        public int Id { get; set; }
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; } = null!;
+        public int SchemaVersion { get; set; }
+        public string Data { get; set; } = null!;
+        public DateTime SavedAt { get; set; }
+        public int? SavedRound { get; set; }
+        public LiveCharacterHistoryReason Reason { get; set; }
+    }
+
+    /// <summary>
+    ///     What replaced or removed the backed up version.
+    /// </summary>
+    public enum LiveCharacterHistoryReason
+    {
+        RoundEnd = 0,
+        Migration = 1,
+        AdminEdit = 2,
+        Discard = 3,
+    }
+    // End Floof Section - Persistence
+    // Floof Section - Consent toggles
+    public class ConsentToggle
+    {
+        public int Id { get; set; }
+        public Profile Profile { get; set; } = null!;
+        public int ProfileId { get; set; }
+
+        public string ToggleId { get; set; } = null!;
+    }
+    // Floof Section End - Consent toggles
 
     public class Job
     {

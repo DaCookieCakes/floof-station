@@ -1,5 +1,6 @@
 - type: job
   id: Psychologist
+  pay: 450 # Floof - bank
   name: job-name-psychologist
   description: job-description-psychologist
   playTimeTracker: JobPsychologist
@@ -16,7 +17,7 @@
 - type: startingGear
   id: PsychologistGear
   equipment:
-    shoes: ClothingShoesLeather
+  #  shoes: ClothingShoesLeather # FLOOF
     id: PsychologistPDA
     ears: ClothingHeadsetMedical
   storage:

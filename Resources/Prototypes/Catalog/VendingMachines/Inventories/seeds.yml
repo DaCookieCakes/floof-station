@@ -15,6 +15,9 @@
       PineappleSeeds: 5
       OrangeSeeds: 5
       WatermelonSeeds: 5
+      AvocadoSeeds: 5 # Frontier
+      PomegranateSeeds: 3 # Floof
+      PearSeeds: 5 # FLOOF
   - name: vending-machine-category-vegetable-seeds
     icon: { entity: CarrotSeeds }
     startingInventory:
@@ -31,6 +34,7 @@
       PumpkinSeeds: 5
       SoybeanSeeds: 5
       TomatoSeeds: 5
+      CucumberSeeds: 5 # Frontier
   - name: vending-machine-category-grain-seeds
     icon: { entity: WheatSeeds }
     startingInventory:
@@ -50,7 +54,10 @@
       PoppySeeds: 3
       TeaPlantSeeds: 5
       TowercapSeeds: 5
+      BeeSeeds: 5 # Frontier
+      CoffeeSeeds: 5 # FLOOF
     contrabandInventory:
       TobaccoSeeds: 2
       FoodSnackSemki: 2
       FlyAmanitaSeeds: 1
+      HumpShroomSeeds: 3 # Floof

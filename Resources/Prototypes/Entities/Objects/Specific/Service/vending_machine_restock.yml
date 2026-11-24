@@ -126,6 +126,7 @@
     - ViroDrobeInventory
     - WinterDrobeInventory
     - CuraDrobeInventory
+    - BeachDrobeInventory # Floof - beach gear
   - type: Sprite
     layers:
     - state: base

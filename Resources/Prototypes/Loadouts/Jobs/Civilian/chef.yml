@@ -1,38 +1,45 @@
 # Head
 - type: loadout
   id: ChefHead
+  groupBy: ChefGear # FLOOF
   equipment:
     head: ClothingHeadHatChef
 
 # Mask
 - type: loadout
   id: ChefMask
+  groupBy: ChefGear # FLOOF
   equipment:
     mask: ClothingMaskItalianMoustache
 
 # Jumpsuit
 - type: loadout
   id: ChefJumpsuit
+  groupBy: ChefGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitChef
 
 - type: loadout
   id: ChefJumpskirt
+  groupBy: ChefGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtChef
 
 # Outer clothing
 - type: loadout
   id: ChefApron
+  groupBy: ChefGear # FLOOF
   equipment:
     outerClothing: ClothingOuterApronChef
 
 - type: loadout
   id: ChefJacket
+  groupBy: ChefGear # FLOOF
   equipment:
     outerClothing: ClothingOuterJacketChef
 
 - type: loadout
   id: ChefWintercoat
+  groupBy: ChefGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterChef

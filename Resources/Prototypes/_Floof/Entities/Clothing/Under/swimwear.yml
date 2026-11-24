@@ -1,0 +1,764 @@
+# Bikini tops
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniWhite
+  name: white bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#EAE8E8"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#EAE8E8"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniBlack
+  name: black bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#535353"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniBlue
+  name: blue bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#004787"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#004787"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniRed
+  name: red bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#940000"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#940000"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniGreen
+  name: green bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#29722e"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#29722e"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniYellow
+  name: yellow bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#F7C430"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#F7C430"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniPink
+  name: pink bikini top
+  description: A simple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    layers:
+    - state: icon
+      color: "#ffa69b"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-top.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#ffa69b"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopBikiniNt
+  name: nanotrasen bikini top
+  description: An official Nanotrasen-branded bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/nt-bikini-top.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/nt-bikini-top.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopMedkini
+  name: medkini top
+  description: A bikini top with a medical cross on it.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/medkini-top.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/medkini-top.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSyndikini
+  name: syndikini top
+  description: A suspiciously red bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/syndikini-top.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/syndikini-top.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopCoconut
+  name: coconut bra
+  description: Two coconut halves on a string. Tropical.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/coconut-top.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/coconut-top.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimsuitOrange
+  name: orange bikini top
+  description: A sporty orange bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-orange-top.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-orange-top.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimsuitPurple
+  name: purple bikini top
+  description: A purple bikini top.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-purple-top.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-purple-top.rsi
+
+# One-piece swimsuits
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceWhite
+  name: white one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#EAE8E8"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#EAE8E8"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceBlack
+  name: black one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#535353"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceBlue
+  name: blue one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#004787"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#004787"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceRed
+  name: red one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#940000"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#940000"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceGreen
+  name: green one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#29722e"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#29722e"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceYellow
+  name: yellow one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#F7C430"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#F7C430"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepiecePink
+  name: pink one-piece swimsuit
+  description: A simple one-piece swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    layers:
+    - state: icon
+      color: "#ffa69b"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/onepiece-generic.rsi
+    clothingVisuals:
+      undergarmentTop:
+      - state: equipped-INNERCLOTHING
+        color: "#ffa69b"
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceHeart
+  name: heart one-piece swimsuit
+  description: A cute one-piece swimsuit with a heart on it.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/heart-onepiece.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/heart-onepiece.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopOnepieceVintage
+  name: vintage one-piece swimsuit
+  description: An old-fashioned striped swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/oldtimey-onepiece.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/oldtimey-onepiece.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopHonkini
+  name: honkini
+  description: A clown-themed swimsuit. Honk.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/honkini.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/honkini.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopShirtkini
+  name: shirtkini
+  description: A shirt with a swimsuit underneath.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shirtkini.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shirtkini.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimsuitRed
+  name: red swimsuit
+  description: You'd be a candy cane if these stripes were horizontal.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_red.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_red.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimsuitPink
+  name: pink swimsuit
+  description: Who doesn't love some frills?
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_pink.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_pink.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimsuitTrans
+  name: shark swimsuit
+  description: Rawr, or uh.. something...
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_trans.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_trans.rsi
+
+- type: entity
+  parent: ClothingUndergarmentTopBase
+  id: ClothingUnderTopSwimsuitYellow
+  name: yellow swimsuit
+  description: Did you know that bees can swim?
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_yellow.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_yellow.rsi
+
+# Bikini bottoms
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniWhite
+  name: white bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#EAE8E8"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#EAE8E8"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniBlack
+  name: black bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#535353"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniBlue
+  name: blue bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#004787"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#004787"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniRed
+  name: red bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#940000"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#940000"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniGreen
+  name: green bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#29722e"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#29722e"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniYellow
+  name: yellow bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#F7C430"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#F7C430"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniPink
+  name: pink bikini bottoms
+  description: Simple bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    layers:
+    - state: icon
+      color: "#ffa69b"
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/bikini-bottom.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#ffa69b"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomBikiniNt
+  name: nanotrasen bikini bottoms
+  description: Official Nanotrasen-branded bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/nt-bikini-bottom.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/nt-bikini-bottom.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomMedkini
+  name: medkini bottoms
+  description: Bikini bottoms with a medical theme.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/medkini-bottom.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/medkini-bottom.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSyndikini
+  name: syndikini bottoms
+  description: Suspiciously red bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/syndikini-bottom.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/syndikini-bottom.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimsuitOrange
+  name: orange bikini bottoms
+  description: Sporty orange bikini bottoms.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-orange-bottom.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-orange-bottom.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimsuitPurple
+  name: purple swim skirt
+  description: A purple swim skirt.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-purple-bottom.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/swimsuit-purple-bottom.rsi
+
+# Swim shorts and skirts
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsWhite
+  name: white swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#EAE8E8"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#EAE8E8"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsBlack
+  name: black swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#535353"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsBlue
+  name: blue swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#004787"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#004787"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsRed
+  name: red swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#940000"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#940000"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsGreen
+  name: green swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#29722e"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#29722e"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsYellow
+  name: yellow swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#F7C430"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#F7C430"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsPink
+  name: pink swim shorts
+  description: A simple pair of swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    layers:
+    - state: icon
+      color: "#ffa69b"
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/shorts-generic.rsi
+    clothingVisuals:
+      undergarmentBottom:
+      - state: equipped-INNERCLOTHING
+        color: "#ffa69b"
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSwimShortsMedical
+  name: medical swim shorts
+  description: Medical-themed swim shorts.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/med-shorts.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/med-shorts.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomSpeedo
+  name: speedo
+  description: Classic tight swim briefs.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/speedo.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/speedo.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomCoconutSkirt
+  name: coconut skirt
+  description: A grass skirt to go with a coconut bra.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/Under/Swimwear/coconut-bottom.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Under/Swimwear/coconut-bottom.rsi
+
+- type: entity
+  parent: ClothingUndergarmentBottomBase
+  id: ClothingUnderBottomGrassSkirt
+  name: grass skirt
+  description: A traditional grass skirt.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/grass-skirt.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Uniforms/Swimsuit/grass-skirt.rsi

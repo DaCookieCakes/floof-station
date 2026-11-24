@@ -1,0 +1,20 @@
+uniform highp vec2 center;
+uniform highp float tile_pixels;
+uniform highp vec3 tint;
+
+// Tiles from the viewer, for the thinnest and the thickest fog.
+const highp float thinNear = 3.0;
+const highp float thinFar = 10.0;
+const highp float thickNear = 1.0;
+const highp float thickFar = 4.5;
+
+void fragment() {
+    highp float thickness = MODULATE.r;
+    highp float distance = length(FRAGCOORD.xy - center) / tile_pixels;
+    highp float fog = smoothstep(mix(thinNear, thickNear, thickness), mix(thinFar, thickFar, thickness), distance);
+
+    // Lit like any sprite, so it adds nothing to the dark. The light map only speaks for colour, not coverage.
+    LIGHT.a = 1.0;
+    COLOR = vec4(tint, fog * min(thickness * 4.0, 1.0) * MODULATE.a);
+    MODULATE = vec4(1.0);
+}

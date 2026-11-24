@@ -1,0 +1,1 @@
+cryostorage-insert-message-floof = [color=white]You are now inside of a [bold][color=cyan]cryogenic sleep unit[/color][/bold]. In [bold]{$time} seconds[/bold] your character will be [color=cyan]saved[/color] and you'll return to the lobby. Your job slot will be opened. You can exit at any time to stop this.[/color]

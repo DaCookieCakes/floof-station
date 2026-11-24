@@ -1,0 +1,89 @@
+- type: entity
+  parent: MarkerBase
+  id: DecalLayoutSpawnerBase
+  name: decal layout
+  description: Places a multi-tile decal picture around itself when the map starts.
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    layers:
+    - state: green
+
+- type: entity
+  parent: DecalLayoutSpawnerBase
+  id: DecalLayoutFloofStationSign
+  name: Floof Station sign
+  components:
+  - type: DecalLayoutSpawner
+    decals:
+    - decal: FloofStationSign1
+      offset: -3,0
+    - decal: FloofStationSign2
+      offset: -2,0
+    - decal: FloofStationSign3
+      offset: -1,0
+    - decal: FloofStationSign4
+      offset: 0,0
+    - decal: FloofStationSign5
+      offset: 1,0
+    - decal: FloofStationSign6
+      offset: 2,0
+    - decal: FloofStationSign7
+      offset: 3,0
+
+- type: entity
+  parent: DecalLayoutSpawnerBase
+  id: DecalLayoutSpaceStationSign
+  name: Space Station 14 sign
+  components:
+  - type: DecalLayoutSpawner
+    decals:
+    - decal: SpaceStationSign1
+      offset: -3,0
+    - decal: SpaceStationSign2
+      offset: -2,0
+    - decal: SpaceStationSign3
+      offset: -1,0
+    - decal: SpaceStationSign4
+      offset: 0,0
+    - decal: SpaceStationSign5
+      offset: 1,0
+    - decal: SpaceStationSign6
+      offset: 2,0
+    - decal: SpaceStationSign7
+      offset: 3,0
+
+- type: entity
+  parent: DecalLayoutSpawnerBase
+  id: DecalLayoutOriginStationSign
+  name: Origin Station sign
+  components:
+  - type: DecalLayoutSpawner
+    decals:
+    - decal: OriginStationSign1
+      offset: -3,0
+    - decal: OriginStationSign2
+      offset: -2,0
+    - decal: OriginStationSign3
+      offset: -1,0
+    - decal: OriginStationSign4
+      offset: 0,0
+    - decal: OriginStationSign5
+      offset: 1,0
+    - decal: OriginStationSign6
+      offset: 2,0
+    - decal: OriginStationSign7
+      offset: 3,0
+    - decal: OriginStationSign8
+      offset: -1,1
+    - decal: OriginStationSign9
+      offset: 0,1
+    - decal: OriginStationSign10
+      offset: 1,1
+    - decal: OriginStationSign11
+      offset: -1,-1
+    - decal: OriginStationSign12
+      offset: 0,-1
+    - decal: OriginStationSign13
+      offset: 1,-1

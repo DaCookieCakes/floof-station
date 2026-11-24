@@ -1,38 +1,45 @@
 # Jumpsuit
 - type: loadout
   id: ChemistJumpsuit
+  groupBy: ChemistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitChemistry
 
 - type: loadout
   id: ChemistJumpskirt
+  groupBy: ChemistGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtChemistry
 
 # Back
 - type: loadout
   id: ChemistBackpack
+  groupBy: ChemistGear # FLOOF
   equipment:
     back: ClothingBackpackChemistry
 
 - type: loadout
   id: ChemistSatchel
+  groupBy: ChemistGear # FLOOF
   equipment:
     back: ClothingBackpackSatchelChemistry
 
 - type: loadout
   id: ChemistDuffel
+  groupBy: ChemistGear # FLOOF
   equipment:
     back: ClothingBackpackDuffelChemistry
 
 # Outer clothing
 - type: loadout
   id: ChemistLabCoat
+  groupBy: ChemistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatLabChem
 
 - type: loadout
   id: ChemistWintercoat
+  groupBy: ChemistGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterChem
 

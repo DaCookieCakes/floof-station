@@ -4,9 +4,16 @@
          xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
          xmlns:ui="clr-namespace:Content.Client.Lobby.UI"
          xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls"
+         xmlns:ui1="clr-namespace:Content.Client._Floof.Traits.UI"
          HorizontalExpand="True">
         <!-- Left side -->
         <BoxContainer Orientation="Vertical" Margin="10 10 10 10" HorizontalExpand="True">
+            <!-- Floof Section - Persistence -->
+            <BoxContainer Name="LiveCharacterBanner" Orientation="Horizontal" Visible="False" Margin="0 0 0 10">
+                <RichTextLabel Name="LiveCharacterLabel" HorizontalExpand="True" VerticalAlignment="Center"/>
+                <controls:ConfirmButton Name="LiveCharacterDiscard" Text="{Loc 'live-character-discard'}" ConfirmationText="{Loc 'live-character-discard-confirm'}"/>
+            </BoxContainer>
+            <!-- Floof Section End -->
             <!-- Middle container -->
             <BoxContainer Orientation="Horizontal" SeparationOverride="10" HorizontalExpand="True">
                 <!-- Name box-->
@@ -67,7 +74,7 @@
                         <!-- appearanceList -->
                         <BoxContainer Orientation="Vertical">
                             <BoxContainer Margin="10" Orientation="Vertical" HorizontalExpand="True">
-                                <!-- Species -->
+                                <!-- Floof Section - Species tab: moved to the species tab
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-species-label'}" />
                                     <Control HorizontalExpand="True"/>
@@ -76,6 +83,7 @@
                                                    ToolTip="{Loc 'humanoid-profile-editor-guidebook-button-tooltip'}"/>
                                     <OptionButton Name="SpeciesButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+                                Floof Section End -->
                                 <!-- Age -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-age-label'}" />
@@ -112,7 +120,33 @@
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SpawnPriorityButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+                                <!-- Height Slider --> <!-- begin Goobstation: port EE height/width sliders -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Name="HeightLabel" MinWidth="110" />
+                                    <Slider Name="HeightSlider" MinValue="0.5" Value="1" MaxValue="1.5" HorizontalExpand="True" Margin="5 0 5 0" />
+                                    <Button Name="HeightReset" Text="{Loc 'ui-options-bind-reset'}" />
+                                </BoxContainer>
+                                <!-- Width Slider -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Name="WidthLabel" MinWidth="110" />
+                                    <Slider Name="WidthSlider" MinValue="0.5" Value="1" MaxValue="1.5" HorizontalExpand="True" Margin="5 0 5 0" />
+                                    <Button Name="WidthReset" Text="{Loc 'ui-options-bind-reset'}" />
+                                </BoxContainer>
+                                <!--Weight (Derived from height and width)-->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Name="WeightLabel" />
+                                </BoxContainer>
+                                <!-- end Goobstation: port EE height/width sliders -->
                             </BoxContainer>
+                            <!-- Floof Section - Genitals -->
+                            <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Horizontal">
+                                <Label Text="{Loc 'humanoid-profile-editor-genital-label'}" />
+                                <Control HorizontalExpand="True"/>
+                                <Button Name="Penis" ToggleMode="True" Text="{Loc 'humanoid-profile-editor-genital-penis'}" HorizontalAlignment="Right" />
+                                <Button Name="Vagina" ToggleMode="True" Text="{Loc 'humanoid-profile-editor-genital-vagina'}" HorizontalAlignment="Right" />
+                                <Button Name="Breasts" ToggleMode="True" Text="{Loc 'humanoid-profile-editor-genital-breasts'}" HorizontalAlignment="Right" />
+                            </BoxContainer>
+                            <!-- End Floof Section - Genitals -->
                             <!-- Skin -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">
                                 <Label Text="{Loc 'humanoid-profile-editor-skin-color-label'}" />
@@ -140,12 +174,15 @@
                         <BoxContainer Name="AntagList" Orientation="Vertical" />
                     </ScrollContainer>
                 </BoxContainer>
-                <BoxContainer Orientation="Vertical" Margin="10">
-                    <!-- Traits -->
-                    <ScrollContainer VerticalExpand="True">
-                        <BoxContainer Name="TraitsList" Orientation="Vertical" />
-                    </ScrollContainer>
-                </BoxContainer>
+                <!-- DV - Traits -->
+                <!-- <BoxContainer Orientation="Vertical" Margin="10"> -->
+                <!--     ~1~ Traits @1@ -->
+                <!--     <ScrollContainer VerticalExpand="True"> -->
+                <!--         <BoxContainer Name="TraitsList" Orientation="Vertical" /> -->
+                <!--     </ScrollContainer> -->
+                <!-- </BoxContainer> -->
+                <ui1:TraitsTab Name="Traits"/>
+                <!-- End DV -->
                 <BoxContainer Name="MarkingsTab" Orientation="Vertical" Margin="10">
                     <!-- Markings -->
                     <humanoid:MarkingPicker Name="Markings" HorizontalExpand="True" VerticalExpand="True" />

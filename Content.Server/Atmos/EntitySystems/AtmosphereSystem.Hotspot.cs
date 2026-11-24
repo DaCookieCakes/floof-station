@@ -88,18 +88,21 @@ public sealed partial class AtmosphereSystem
         if (tile.Hotspot.Temperature < Atmospherics.FireMinimumTemperatureToExist ||
             tile.Hotspot.Volume <= 1f ||
             tile.Air == null ||
-            !IsMixtureIgnitable(tile.Air))
+            !IsMixtureIgnitable(tile.Air)
+            && tile.PuddleSolutionFlammability == 0) // Floof - tile fires
         {
             tile.Hotspot = new Hotspot();
+            tile.Hotspot.Type = tile.PuddleSolutionFlammability > 0 ? HotspotType.Puddle : HotspotType.Gas; // Floof - tile fires
             InvalidateVisuals(ent, tile);
             return;
         }
 
         PerformHotspotExposure(tile);
 
+        tile.Hotspot.Type = tile.PuddleSolutionFlammability > 0 ? HotspotType.Puddle : HotspotType.Gas; // Floof - tile fires
         // This tile has now turned into a full-blown tile-fire.
         // Start applying fire effects and spreading to adjacent tiles.
-        if (tile.Hotspot.Bypassing)
+        if (tile.Hotspot.Bypassing || tile.PuddleSolutionFlammability > 0) // Floof - tile fires
         {
             tile.Hotspot.State = 3;
 
@@ -205,22 +208,22 @@ public sealed partial class AtmosphereSystem
             return;
 
         var isFlammable = IsMixtureFuel(tile.Air);
-
+        var puddleFlammability = tile.PuddleSolutionFlammability; // Floof - tile fires
         if (tile.Hotspot.Valid)
         {
             if (soh)
             {
-                if (isFlammable)
+                if (isFlammable || puddleFlammability > 0) // Floof - tile fires
                 {
                     tile.Hotspot.Temperature = MathF.Max(tile.Hotspot.Temperature, exposedTemperature);
                     tile.Hotspot.Volume = MathF.Max(tile.Hotspot.Volume, exposedVolume);
                 }
             }
-
+            tile.Hotspot.Temperature = AddClampedTemperature(tile.Hotspot.Temperature, 5 * puddleFlammability, (float)(Atmospherics.T0C + 20 * Math.Pow(puddleFlammability, 2))); // Floof - tile fires
             return;
         }
 
-        if (exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature && isFlammable)
+        if (exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature && isFlammable  || (puddleFlammability > 0 && exposedTemperature > 573.15 - 50 * puddleFlammability)) // Floof - tile fires
         {
             if (sparkSourceUid.HasValue)
             {
@@ -229,14 +232,17 @@ public sealed partial class AtmosphereSystem
                     $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: " +
                     $"{tile.Air.ToPrettyString()}");
             }
-
+            var temperature = exposedTemperature; // Floof - tile fires
+            if(puddleFlammability > 0)
+                temperature = AddClampedTemperature(temperature, 5 * puddleFlammability, (float)(Atmospherics.T0C + 20 * Math.Pow(puddleFlammability, 2)));
             tile.Hotspot = new Hotspot
             {
                 Volume = exposedVolume * 25f,
-                Temperature = exposedTemperature,
+                Temperature = temperature, // Floof - tile fires
                 SkippedFirstProcess = tile.CurrentCycle > gridAtmosphere.UpdateCounter,
                 Valid = true,
-                State = 1
+                State = 1,
+                Type = puddleFlammability > 0 ? HotspotType.Puddle : HotspotType.Gas // Floof - tile fires
             };
 
             AddActiveTile(gridAtmosphere, tile);
@@ -255,7 +261,7 @@ public sealed partial class AtmosphereSystem
 
         // Determine if the tile has become a full-blown fire if the volume of the fire has effectively reached
         // the volume of the tile's air.
-        tile.Hotspot.Bypassing = tile.Hotspot.SkippedFirstProcess && tile.Hotspot.Volume > tile.Air.Volume * 0.95f;
+        tile.Hotspot.Bypassing = tile.Hotspot.SkippedFirstProcess && tile.Hotspot.Volume > tile.Air.Volume * 0.95f && tile.PuddleSolutionFlammability == 0; // Floof - tile fires
 
         // If the tile is effectively a full fire, use the tile's air for reactions, don't bother partitioning.
         if (tile.Hotspot.Bypassing)
@@ -267,7 +273,7 @@ public sealed partial class AtmosphereSystem
         else
         {
             var affected = tile.Air.RemoveVolume(tile.Hotspot.Volume);
-            affected.Temperature = tile.Hotspot.Temperature;
+            affected.Temperature = MathF.Max(tile.Hotspot.Temperature, Atmospherics.T0C + 50 * tile.PuddleSolutionFlammability); // Floof - tile fires
             React(affected, tile);
             tile.Hotspot.Temperature = affected.Temperature;
             // Scale the fire based on the type of reaction that occured.
@@ -283,5 +289,12 @@ public sealed partial class AtmosphereSystem
         {
             RaiseLocalEvent(entity, ref fireEvent);
         }
+    }
+    /// <summary> Floof - tile fires
+    /// Used for reagent fires to ensure the temperature doesn't get too far out of control.
+    /// </summary>
+    private float AddClampedTemperature(float temperature, float kelvinToAdd, float clampTemperature)
+    {
+        return MathF.Max(temperature, MathF.Min(temperature + kelvinToAdd, clampTemperature));
     }
 }

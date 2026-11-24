@@ -1,5 +1,6 @@
 - type: job
   id: ServiceWorker
+  pay: 350 # Floof - bank
   name: job-name-serviceworker
   description: job-description-serviceworker
   playTimeTracker: JobServiceWorker
@@ -22,7 +23,7 @@
 - type: startingGear
   id: ServiceWorkerGear
   equipment:
-    shoes: ClothingShoesColorBlack
+  #  shoes: ClothingShoesColorBlack # FLOOF
     id: ServiceWorkerPDA
     ears: ClothingHeadsetService
   #storage:

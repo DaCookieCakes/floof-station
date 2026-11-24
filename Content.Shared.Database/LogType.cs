@@ -488,4 +488,14 @@ public enum LogType
     /// Silicon law changes.
     /// </summary>
     SiliconLaw = 105,
+
+    /// <summary> Floof
+    /// Events related to players consent.
+    /// </summary>
+    Consent = 21442, // Floof - Consent system
+
+    /// <summary> Floof
+    /// Personal bank account changes: paydays, ATM withdrawals.
+    /// </summary>
+    Bank = 21443, // Floof - Bank
 }

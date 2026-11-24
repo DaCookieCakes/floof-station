@@ -1,0 +1,13 @@
+- type: biomeTemplate
+  id: OpenOcean
+  layers:
+  - !type:BiomeTileLayer
+    threshold: -1.0
+    tile: FloorOceanSurface
+
+- type: biomeTemplate
+  id: Seabed
+  layers:
+  - !type:BiomeTileLayer
+    threshold: -1.0
+    tile: FloorAsteroidSand

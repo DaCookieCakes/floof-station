@@ -1,0 +1,14 @@
+marking-Fangs = Lizard Fangs
+marking-LizardBeard = Lizard Beard
+marking-LizardBeard-beard = Beard
+marking-LizardSnoutTall = Lizard Snout (Tall)
+marking-LizardSnoutTall-snout_tall = Snout
+marking-LizardHornsKoboldEarspiercings = Lizard Ears (Kobold, Pierced)
+marking-LizardHornsKoboldEarspiercings-horns_kobold_ears = Ears
+marking-LizardHornsKoboldEarspiercings-horns_kobold_ears_piercings = Piercings
+marking-LizardHornsNubby = Lizard Horns (Nubby)
+marking-LizardHornsNubby-horns_nubby = Lizard Horns (Nubby)
+marking-LizardSnoutpiercings = Piercings
+marking-LizardSnoutpiercings-piercings1 = Piercings
+marking-LizardHeadFlat = Flat Head
+marking-LizardHeadFlat-head_flat = Flat Head

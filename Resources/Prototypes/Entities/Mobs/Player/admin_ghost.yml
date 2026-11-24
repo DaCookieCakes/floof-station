@@ -4,6 +4,7 @@
   name: admin observer
   categories: [ HideSpawnMenu ]
   components:
+  - type: GhostRespawn # Floof - Ghost respawn
   - type: ContentEye
     maxZoom: 8.916104, 8.916104
   - type: Tag
@@ -25,6 +26,7 @@
   - type: Ghost
     canInteract: true
   - type: GhostHearing
+    canHearLocal: true # Floof - admins can hear local
   - type: Hands
     startingHands:
       hand_right:

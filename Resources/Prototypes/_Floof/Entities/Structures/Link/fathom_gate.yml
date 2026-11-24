@@ -1,0 +1,233 @@
+- type: entity
+  parent: BaseStaticPortal
+  id: FathomGatePortal
+  categories: [ HideSpawnMenu ]
+  components:
+  # anchoring would snap it to a tile center, off its fractional child offset
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    sprite: _Floof/Structures/Link/fathom_gate.rsi
+    offset: 0,0.9375 # same as the gate: the child offset is baked into the frames
+    noRot: true
+    drawdepth: Mobs
+    layers:
+    - state: ring
+    - state: glyphs
+      shader: unshaded
+    - state: portal
+      shader: unshaded
+      map: [ "portal" ]
+  - type: SpriteFade
+    alwaysFade: true
+  - type: PointLight
+    color: SkyBlue
+    radius: 3
+    energy: 1
+    netsync: false
+
+- type: entity
+  parent: BaseGasLinkPipe
+  id: FathomGateGasPipe1
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeHalf
+  - type: AtmosPipeLayers
+    pipeLayer: 0
+
+- type: entity
+  parent: BaseGasLinkPipe
+  id: FathomGateGasPipe2
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe_alt1.rsi
+      state: pipeHalf
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 1
+  - type: AtmosPipeLayers
+    pipeLayer: 1
+
+- type: entity
+  parent: BaseGasLinkPipe
+  id: FathomGateGasPipe3
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe_alt2.rsi
+      state: pipeHalf
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 2
+  - type: AtmosPipeLayers
+    pipeLayer: 2
+
+- type: entity
+  id: FathomGatePower
+  categories: [ HideSpawnMenu ]
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      link:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: PowerConsumer
+    voltage: High
+    node: link
+    drawRate: 0
+  - type: PowerSupplier
+    voltage: High
+    node: link
+    supplyRate: 0
+    supplyRampRate: 50000
+    supplyRampTolerance: 500
+  # both ends start as input, switching one to output is part of setting up the link
+  - type: PowerLink
+    direction: Input
+  - type: PowerMonitoringDevice
+    group: Generator
+    sourceNode: link
+    loadNode: link
+    sprite: _Floof/Structures/Link/fathom_gate.rsi
+    state: plinth
+
+- type: entity
+  id: FathomGate
+  name: fathom gate
+  description: An ancient looking device with a huge hole in the center and several access ports.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Floof/Structures/Link/fathom_gate.rsi
+    offset: 0,0.9375
+    noRot: true
+    drawdepth: WallTops # under objects, items, mobs and the portal's frame
+    layers:
+    - state: plinth
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: -1.3125,-0.25,-0.5625,0.46875
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: 0.5625,-0.25,1.3125,0.46875
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+        density: 50
+      fix3:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "1.1875,0.46875,1.3125,1.28125"
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+        density: 50
+      fix4:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.3125,0.46875,-1.15625,1.28125"
+        layer:
+        - WallLayer
+        mask:
+        - LargeMobMask
+        density: 50
+      fix5:
+        shape:
+          !type:PhysShapeAabb
+          bounds: -1.3125,1.28125,1.3125,1.46875
+        layer:
+        - WallLayer
+        mask:
+        - LargeMobMask
+        density: 50
+  - type: LinkKey
+    key: FathomGate
+  - type: FathomGate
+  - type: Battery
+    netsync: false
+    maxCharge: 1000000
+    startingCharge: 0
+  - type: ExaminableBattery
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: BatteryCharger
+    voltage: High
+    node: input
+  - type: PowerNetworkBattery
+    maxSupply: 0
+    maxChargeRate: 50000
+    supplyRampTolerance: 5000
+    supplyRampRate: 1000
+  - type: PowerMonitoringDevice
+    group: SMES
+    sourceNode: input
+    loadNode: input
+    sprite: _Floof/Structures/Link/fathom_gate.rsi
+    state: plinth
+  - type: AnchoredChildEntities
+    # these need to be the same for all gate types or the link won't work.
+    childPrototypes:
+    - prototype: FathomGatePortal
+      offset: 0,0.75
+    - prototype: FathomGateGasPipe1
+      offset: -1,0
+    - prototype: FathomGateGasPipe2
+      offset: -1,0
+    - prototype: FathomGateGasPipe3
+      offset: -1,0
+    - prototype: FathomGatePower
+      offset: 1,0
+
+- type: entity
+  parent: BaseItem
+  id: FathomCatalyst
+  name: fathom catalyst
+  description: Opens the link between two fully charged fathom gates. Consumed in the process.
+  components:
+  - type: Sprite
+    sprite: Structures/Specific/Anomalies/Cores/bluespace_core.rsi
+    state: core
+  - type: Item
+    size: Small
+  - type: FathomCatalyst

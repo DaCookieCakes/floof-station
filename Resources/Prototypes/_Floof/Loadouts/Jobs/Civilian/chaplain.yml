@@ -1,0 +1,33 @@
+# Playtime
+- type: loadoutEffectGroup
+  id: MasterChaplainEffect
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChaplain
+      time: 20h
+
+# Neck
+- type: loadout
+  id: ChaplainMantle
+  groupBy: ChaplainGear
+  equipment:
+    neck: ClothingOuterEpiChaplainMantle
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterChaplainEffect
+
+# Gloves
+- type: loadout
+  id: ChaplainArmWarmers
+  groupBy: ChaplainGear
+  equipment:
+    gloves: ClothingHandsChaplainWarmers
+
+# Socks
+- type: loadout
+  id: ChaplainThighHighs
+  groupBy: ChaplainGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksChaplain

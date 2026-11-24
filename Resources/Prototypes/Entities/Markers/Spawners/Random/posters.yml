@@ -104,7 +104,8 @@
     - id: PosterLegit12Gauge
     - id: PosterLegitHighClassMartini
     - id: PosterLegitTheOwl
-    - id: PosterLegitNoERP
+#    - id: PosterLegitNoERP # Floof - yes erp
+    - id: PosterLegitYesERP # Floof - yes erp
     - id: PosterLegitCarbonDioxide
     - id: PosterLegitDickGumshue
     - id: PosterLegitThereIsNoGasGiant

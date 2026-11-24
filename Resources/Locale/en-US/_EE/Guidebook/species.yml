@@ -1,0 +1,4 @@
+- type: guideEntry
+  id: GuideEntryHarpy
+  name: species-name-harpy
+  text: "/ServerInfo/Guidebook/Mobs/_EE/Harpy.xml"

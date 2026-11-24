@@ -1,3 +1,5 @@
+using Content.Client._Floof.Bank; // Floof - Bank
+using Content.Client._Floof.Persistence; // Floof - Persistence
 using Content.Client.Guidebook;
 using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
@@ -19,7 +21,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.Lobby;
 
-public sealed partial class LobbyUIController : UIController, IOnStateEntered<LobbyState>, IOnStateExited<LobbyState>
+public sealed partial class LobbyUIController : UIController, IOnStateEntered<LobbyState>, IOnStateExited<LobbyState>, IOnSystemChanged<LiveCharacterStatusSystem>, IOnSystemChanged<BankBalanceStatusSystem> // Floof - Persistence, Bank
 {
     [Dependency] private IClientPreferencesManager _preferencesManager = default!;
     [Dependency] private IConfigurationManager _configurationManager = default!;
@@ -31,6 +33,8 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
     [Dependency] private JobRequirementsManager _requirements = default!;
     [Dependency] private MarkingManager _markings = default!;
     [UISystemDependency] private readonly GuidebookSystem _guide = default!;
+    [UISystemDependency] private readonly LiveCharacterStatusSystem? _liveCharacter = default!; // Floof - Persistence
+    [UISystemDependency] private readonly BankBalanceStatusSystem? _bankBalance = default!; // Floof - Bank
 
     private CharacterSetupGui? _characterSetup;
     private HumanoidProfileEditor? _profileEditor;
@@ -65,6 +69,52 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
 
         _configurationManager.OnValueChanged(CCVars.GameRoleWhitelist, _ => RefreshProfileEditor());
     }
+
+    // Floof Section - Persistence, Bank
+    public void OnSystemLoaded(LiveCharacterStatusSystem system)
+    {
+        system.LiveUpdated += OnLiveUpdated;
+        system.Updated += OnLiveUpdated;
+    }
+
+    public void OnSystemUnloaded(LiveCharacterStatusSystem system)
+    {
+        system.LiveUpdated -= OnLiveUpdated;
+        system.Updated -= OnLiveUpdated;
+    }
+
+    /// <summary>
+    ///     Refreshes everything showing live characters without resetting the editor.
+    /// </summary>
+    private void OnLiveUpdated()
+    {
+        if (_stateManager.CurrentState is not LobbyState)
+            return;
+
+        RefreshLobbyPreview();
+        _characterSetup?.ReloadCharacterPickers();
+        _profileEditor?.UpdateLiveCharacter();
+    }
+
+    public void OnSystemLoaded(BankBalanceStatusSystem system)
+    {
+        system.Updated += OnBalanceUpdated;
+    }
+
+    public void OnSystemUnloaded(BankBalanceStatusSystem system)
+    {
+        system.Updated -= OnBalanceUpdated;
+    }
+
+    private void OnBalanceUpdated()
+    {
+        if (_stateManager.CurrentState is not LobbyState)
+            return;
+
+        RefreshLobbyPreview();
+        _characterSetup?.ReloadCharacterPickers();
+    }
+    // Floof Section End
 
     private LobbyCharacterPreviewPanel? GetLobbyPreview()
     {
@@ -112,10 +162,10 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                 _profileEditor.RefreshSpecies();
             }
 
-            if (obj.WasModified<TraitPrototype>())
-            {
-                _profileEditor.RefreshTraits();
-            }
+            // if (obj.WasModified<TraitPrototype>()) // DeltaV - Refreshed in TraitsTab
+            // {
+            //     _profileEditor.RefreshTraits();
+            // }
         }
     }
 
@@ -132,6 +182,8 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
     public void OnStateEntered(LobbyState state)
     {
         PreviewPanel?.SetLoaded(_preferencesManager.ServerDataLoaded);
+        if (PreviewPanel != null) // Floof - Persistence
+            PreviewPanel.LiveToggleButton.OnToggled += _ => RefreshLobbyPreview(); // Floof - Persistence
         ReloadCharacterSetup();
     }
 
@@ -163,6 +215,8 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
     /// </summary>
     private void RefreshLobbyPreview()
     {
+        (_stateManager.CurrentState as LobbyState)?.UpdateJoinButton(); // Floof - Persistence
+
         if (PreviewPanel == null)
             return;
 
@@ -175,6 +229,28 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
             PreviewPanel.SetSummaryText(string.Empty);
             return;
         }
+
+        // Floof Section - Persistence, Bank
+        var slot = _preferencesManager.Preferences!.SelectedCharacterIndex;
+        if (_liveCharacter != null && _liveCharacter.TryGetLive(slot, out var info))
+        {
+            PreviewPanel.SetLiveText(info.LastSavedRound is { } round
+                ? Loc.GetString("live-character-preview-label-round", ("round", round))
+                : Loc.GetString("live-character-preview-label"));
+
+            if (!PreviewPanel.LiveToggleButton.Pressed)
+                humanoid = info.Record.ApplyTo(humanoid);
+        }
+        else
+        {
+            PreviewPanel.SetLiveText(null);
+            PreviewPanel.LiveToggleButton.Pressed = false;
+        }
+
+        PreviewPanel.SetBalanceText(_bankBalance?.GetBalance(slot) is { } balance
+            ? Loc.GetString("bank-lobby-balance", ("balance", balance))
+            : null);
+        // Floof Section End
 
         PreviewPanel.ProfilePreviewSpriteView.LoadPreview(humanoid);
         PreviewPanel.SetSummaryText(humanoid.Summary);
@@ -293,6 +369,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         _characterSetup.DeleteCharacter += args =>
         {
             _preferencesManager.DeleteCharacter(args);
+            _liveCharacter?.Forget(args); // Floof - Persistence
 
             // Reload everything
             if (EditedSlot == args)

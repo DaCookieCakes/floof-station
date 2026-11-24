@@ -21,6 +21,7 @@
 # Face
 - type: loadout
   id: PassengerFace
+  groupBy: PassengerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: GreyTider
@@ -31,17 +32,20 @@
 # Grey
 - type: loadout
   id: GreyJumpsuit
+  groupBy: PassengerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGrey
 
 - type: loadout
   id: GreyJumpskirt
+  groupBy: PassengerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorGrey
 
 # Rainbow
 - type: loadout
   id: RainbowJumpsuit
+  groupBy: PassengerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: GreyTider
@@ -51,6 +55,7 @@
 # Rainbow Jumpskirt
 - type: loadout
   id: RainbowJumpskirt
+  groupBy: PassengerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: GreyTider
@@ -60,6 +65,7 @@
 # Ancient
 - type: loadout
   id: AncientJumpsuit
+  groupBy: PassengerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: GreyTider
@@ -69,6 +75,7 @@
 # Neck
 - type: loadout
   id: Mantle
+  groupBy: PassengerGear # FLOOF
   equipment:
     neck: ClothingNeckMantle
   effects:
@@ -83,22 +90,26 @@
 # Back
 - type: loadout
   id: CommonBackpack
+  groupBy: PassengerGear # FLOOF
   equipment:
     back: ClothingBackpack
 
 - type: loadout
   id: CommonSatchel
+  groupBy: PassengerGear # FLOOF
   equipment:
     back: ClothingBackpackSatchel
 
 - type: loadout
   id: CommonDuffel
+  groupBy: PassengerGear # FLOOF
   equipment:
     back: ClothingBackpackDuffel
 
 # Gloves
 - type: loadout
   id: PassengerGloves
+  groupBy: PassengerGear # FLOOF
   effects:
   - !type:GroupLoadoutEffect
     proto: GreyTider
@@ -108,16 +119,19 @@
 # Outerclothing
 - type: loadout
   id: PassengerWintercoat
+  groupBy: PassengerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterCoat
 
 # Shoes
 - type: loadout
   id: BlackShoes
+  groupBy: CommonGear # FLOOF
   equipment:
     shoes: ClothingShoesColorBlack
 
 - type: loadout
   id: WinterBoots
+  groupBy: PassengerGear # FLOOF
   equipment:
     shoes: ClothingShoesBootsWinter

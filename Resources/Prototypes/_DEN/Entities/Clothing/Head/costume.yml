@@ -1,0 +1,53 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBunnySuitHeadband
+  name: black bunny ears
+  description: A headband that represents black, slightly-drooping bunny ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Costumes/bunnysuit_ears.rsi
+
+- type: entity
+  parent: ClothingHeadBunnySuitHeadband
+  id: ClothingHeadBunnySuitHeadbandBlue
+  name: blue bunny ears
+  description: A headband that represents blue, slightly-drooping bunny ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Costumes/bunnysuit_ears_blue.rsi
+
+- type: entity
+  parent: ClothingHeadBunnySuitHeadband
+  id: ClothingHeadBunnySuitHeadbandGreen
+  name: green bunny ears
+  description: A headband that represents green, slightly-drooping bunny ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Costumes/bunnysuit_ears_green.rsi
+
+- type: entity
+  parent: ClothingHeadBunnySuitHeadband
+  id: ClothingHeadBunnySuitHeadbandPink
+  name: pink bunny ears
+  description: A headband that represents pink, slightly-drooping bunny ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Costumes/bunnysuit_ears_pink.rsi
+
+- type: entity
+  parent: ClothingHeadBunnySuitHeadband
+  id: ClothingHeadBunnySuitHeadbandRed
+  name: red bunny ears
+  description: A headband that represents red, slightly-drooping bunny ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Costumes/bunnysuit_ears_red.rsi
+
+- type: entity
+  parent: ClothingHeadBunnySuitHeadband
+  id: ClothingHeadBunnySuitHeadbandWhite
+  name: white bunny ears
+  description: A headband that represents white, slightly-drooping bunny ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Costumes/bunnysuit_ears_white.rsi

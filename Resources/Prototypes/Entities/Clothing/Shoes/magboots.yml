@@ -42,6 +42,11 @@
 - type: entity
   parent: [ClothingShoesBootsMagBase]
   id: ClothingShoesBootsMag
+  components: # Floof - flooding
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingShoesBootsMag.rsi # Floof - flooding
+      state: mask # Floof - flooding
 
 - type: entity
   parent: [ClothingShoesBootsMagBase, BaseGrandTheftContraband]
@@ -49,6 +54,10 @@
   name: advanced magboots
   description: State-of-the-art magnetic boots that do not slow down their wearer.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingShoesBootsMag.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Shoes/Boots/magboots-advanced.rsi
     state: icon

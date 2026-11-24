@@ -1,0 +1,19 @@
+# Gloves
+- type: loadout
+  id: PassengerArmWarmers
+  groupBy: PassengerGear
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GreyTider
+  equipment:
+    gloves: ClothingHandsStripeRainbowWarmers
+
+# Socks
+- type: loadout
+  id: PassengerThighHighs
+  groupBy: PassengerGear
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GreyTider
+  equipment:
+    undergarmentSocks: ClothingUnderSocksPrideRainbow

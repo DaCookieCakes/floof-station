@@ -5,6 +5,7 @@
   name: APC electronics
   description: Circuit used in APC construction.
   components:
+    - type: FloodMask # Floof - flooding
     - type: ApcElectronics
     - type: Sprite
       sprite: Objects/Misc/module.rsi
@@ -24,6 +25,7 @@
   name: wallmount substation electronics
   description: Circuit used to construct a wallmount substation.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: charger_APC
@@ -40,6 +42,7 @@
   name: wallmount generator electronics
   description: Circuit used to construct a wallmount generator.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     state: charger_APC
@@ -59,6 +62,7 @@
   name: wallmount APU electronics
   description: Circuit used to construct a wallmount APU.
   components:
+    - type: FloodMask # Floof - flooding
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: charger_APC

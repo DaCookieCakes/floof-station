@@ -30,6 +30,8 @@ public abstract partial class SharedDisposalHolderSystem : EntitySystem
 
     [Dependency] private EntityQuery<TransformComponent> _xformQuery;
 
+    private readonly List<(EntityUid, DisposalHolderComponent)> _holderSnapshot = new(); // Starlight
+
     /// <summary>
     /// Allowed characters for tagging disposed entities.
     /// </summary>
@@ -259,9 +261,18 @@ public abstract partial class SharedDisposalHolderSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        var query = EntityQueryEnumerator<DisposalHolderComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var holder, out var xform))
+        // Starlight - Start
+        _holderSnapshot.Clear();
+        var query = EntityQueryEnumerator<DisposalHolderComponent>();
+        while (query.MoveNext(out var uid, out var holder))
+            _holderSnapshot.Add((uid, holder));
+
+        foreach (var (uid, holder) in _holderSnapshot)
         {
+            if (TerminatingOrDeleted(uid))
+                continue;
+        // Starlight - End
+
             // Remove any disposal holders that were somehow emptied
             if (holder.Container?.Count == 0)
             {

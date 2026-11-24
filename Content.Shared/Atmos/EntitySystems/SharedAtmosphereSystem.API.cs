@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.Atmos.Components; // Floof section - tile fires
 using JetBrains.Annotations;
 
 namespace Content.Shared.Atmos.EntitySystems;
@@ -100,5 +101,26 @@ public abstract partial class SharedAtmosphereSystem
     {
         return (mix1.Pressure - (mix2?.Pressure ?? 0)) * mix1.Volume;
     }
+    // Floof section - tile fires
+    public bool SetPuddleFlammabilityAtTile(Entity<TransformComponent?> ent, int flammability = 0)
+    {
+        if (!Resolve(ent, ref ent.Comp, false))
+            return false;
+        var grid = ent.Comp.GridUid;
+        var position = XformSystem.GetGridTilePositionOrDefault((ent, ent.Comp));
+        return SetPuddleFlammabilityAtTile(position, grid, flammability);
 
+    }
+
+    public bool SetPuddleFlammabilityAtTile(Vector2i position,
+        Entity<GridAtmosphereComponent?>? grid,
+        int flammability = 0)
+    {
+        if (grid is not { } gridEnt || !Resolve(gridEnt, ref gridEnt.Comp, false) ||
+            !gridEnt.Comp.Tiles.TryGetValue(position, out var atmosTile))
+            return false;
+        atmosTile.PuddleSolutionFlammability = flammability;
+        return true;
+    }
+    // Floof section end - tile fires
 }

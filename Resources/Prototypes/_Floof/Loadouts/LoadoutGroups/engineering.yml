@@ -1,0 +1,73 @@
+# Collars
+- type: loadoutGroup
+  parent: EngineeringCollars
+  id: TechnicalAssistantNeck
+  name: loadout-group-technical-assistant-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: EngineeringCollars
+  id: StationEngineerNeck
+  name: loadout-group-station-engineer-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: EngineeringCollars
+  id: AtmosphericTechnicianNeck
+  name: loadout-group-atmospheric-technician-neck
+  minLimit: 0
+
+# Gloves
+- type: loadoutGroup
+  id: ChiefEngineerGloves
+  name: loadout-group-chief-engineer-gloves
+  minLimit: 0
+  loadouts:
+  - CEArmWarmers
+  - EngineerArmWarmers
+
+- type: loadoutGroup
+  id: StationEngineerGloves
+  name: loadout-group-station-engineer-gloves
+  minLimit: 0
+  loadouts:
+  - EngineerArmWarmers
+
+- type: loadoutGroup
+  id: AtmosphericTechnicianGloves
+  name: loadout-group-atmospheric-technician-gloves
+  minLimit: 0
+  loadouts:
+  - EngineerArmWarmers
+
+# Socks
+- type: loadoutGroup
+  id: ChiefEngineerSocks
+  name: loadout-group-chief-engineer-socks
+  minLimit: 0
+  loadouts:
+  - CEThighHighs
+  - EngineerThighHighs
+
+- type: loadoutGroup
+  id: StationEngineerSocks
+  name: loadout-group-station-engineer-socks
+  minLimit: 0
+  loadouts:
+  - EngineerThighHighs
+
+- type: loadoutGroup
+  id: AtmosphericTechnicianSocks
+  name: loadout-group-atmospheric-technician-socks
+  minLimit: 0
+  loadouts:
+  - EngineerThighHighs
+
+# Shoes
+- type: loadoutGroup
+  id: TechnicalAssistantShoes
+  name: loadout-group-technical-assistant-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - WorkBoots

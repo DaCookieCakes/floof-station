@@ -88,6 +88,8 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
 
 - type: entity
   parent: SolutionUdder

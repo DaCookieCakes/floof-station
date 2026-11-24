@@ -270,6 +270,13 @@
     sprite: Objects/Misc/module.rsi
     state: cpuboard
 
+- type: stealTargetGroup #Floofstation
+  id: SalvageShuttleConsoleCircuitboard #Floofstation
+  name: salvshuttleboard #Floofstation
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: cpuboard
+
 - type: stealTargetGroup
   id: Bible
   name: steal-target-groups-bible

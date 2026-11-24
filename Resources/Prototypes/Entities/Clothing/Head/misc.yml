@@ -189,6 +189,10 @@
   name: warning cone
   description: This cone is trying to warn you of something!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ClothingHeadHatCone.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Head/Misc/cone.rsi
   - type: Clothing

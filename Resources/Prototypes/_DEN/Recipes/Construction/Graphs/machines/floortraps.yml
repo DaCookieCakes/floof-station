@@ -1,0 +1,58 @@
+# Floor Button
+
+- type: constructionGraph
+  id: FloorButtonGraph
+  start: start
+  graph:
+  - node: start
+    actions:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 3
+      - !type:SpawnPrototype
+        prototype: CableApcStack1
+        amount: 2
+      - !type:DeleteEntity {}
+    edges:
+      - to: floorbutton
+        steps:
+          - material: Steel
+            amount: 3
+            doAfter: 6
+          - material: Cable
+            amount: 2
+  - node: floorbutton
+    entity: FloorTrapButtonUnarmed
+    edges:
+      - to: start
+        steps:
+          - tool: Screwing
+            doAfter: 6
+
+# Tripwire
+
+- type: constructionGraph
+  id: TripwireGraph
+  start: start
+  graph:
+  - node: start
+    actions:
+      - !type:SpawnPrototype
+        prototype: CableApcStack1
+        amount: 3
+      - !type:DeleteEntity {}
+    edges:
+      - to: tripwire
+        completed:
+          - !type:SnapToGrid {}
+        steps:
+          - material: Cable
+            amount: 3
+            doAfter: 3
+  - node: tripwire
+    entity: FloorTrapTripwire
+    edges:
+      - to: start
+        steps:
+          - tool: Cutting
+            doAfter: 6

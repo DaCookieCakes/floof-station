@@ -91,6 +91,12 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+  - type: AutoLoader # Starlight
+    container: cell_slot
+    whitelist:
+      tags:
+      - PowerCell
+      - PowerCellSmall
 
 - type: entity
   id: ShuttleGunPerforator
@@ -139,6 +145,11 @@
   - type: BatteryAmmoProvider
     proto: RedShuttleLaser
     fireCost: 150
+  - type: AutoLoader # Starlight
+    container: cell_slot
+    whitelist:
+      tags:
+      - PowerCage
 
 # ---- Launchers ----
 # naming: EXP (Explosion) + conventional power + suffix (g for Grenade, c for RPG Cartridge) + Name
@@ -189,6 +200,11 @@
     magState: mag
     steps: 8
     zeroVisible: false
+  - type: AutoLoader # Starlight
+    container: ballistic-ammo
+    whitelist:
+      tags:
+      - Grenade
 
 - type: entity
   id: ShuttleGunDuster
@@ -240,6 +256,11 @@
           params:
             pitch: 2
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  - type: AutoLoader # Starlight
+    container: gun_magazine
+    whitelist:
+      tags:
+      - MagazineGrenade
 
 # ---- Other weapon ----
 

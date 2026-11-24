@@ -37,6 +37,10 @@
   suffix: Empty
   description: A spray bottle with an unscrewable top.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SprayBottle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Specific/Janitorial/spray_bottle.rsi
     layers:
@@ -81,6 +85,10 @@
   name: spray bottle
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SprayBottle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Tag
     tags:
     - Spray
@@ -96,6 +104,10 @@
   suffix: Space Cleaner
   description: BLAM!-brand non-foaming space cleaner!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/SprayBottle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Solution
     solution:
       reagents:

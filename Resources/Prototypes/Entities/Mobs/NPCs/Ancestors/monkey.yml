@@ -10,7 +10,6 @@
   - type: Speech
     speechSounds: Monkey
     speechVerb: Monkey
-  - type: MonkeyAccent
   - type: GhostTakeoverAvailable
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-primate
@@ -35,6 +34,15 @@
   id: MobBaseSyndicateMonkey
   suffix: syndicate base
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Ancestor
+    understands:
+    - Ancestor
+    - GalacticCommon
+  # Starlight-end
+  - type: MonkeyAccent
   - type: NpcFactionMember
     factions:
     - Syndicate

@@ -1,0 +1,7 @@
+<Control Name="CFlavorText" xmlns="https://spacestation14.io">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+        <TextEdit Name="CConsentTextInput" Access="Public" MinSize="220 100" Margin="10" HorizontalExpand="True" VerticalExpand="True" />
+        <Label Text="{Loc humanoid-profile-editor-consent-toggles-label}" Margin="10 0" />
+        <BoxContainer Name="CConsentToggles" Access="Public" Orientation="Vertical" Margin="10" />
+    </BoxContainer>
+</Control>

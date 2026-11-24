@@ -45,6 +45,10 @@
   id: ToolboxEmergency
   description: A bright red toolbox, stocked with emergency tools.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxArtistic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
     state: icon
@@ -57,6 +61,10 @@
   id: ToolboxMechanical
   description: A blue box, stocked with mechanical tools.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxArtistic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_blue.rsi
     state: icon
@@ -69,6 +77,10 @@
   id: ToolboxElectrical
   description: A toolbox typically stocked with electrical gear.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxElectrical.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_yellow.rsi
     state: icon
@@ -82,6 +94,10 @@
   id: ToolboxElectricalTurret
   description: A toolbox typically stocked with electrical gear.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxElectrical.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Damageable
   - type: Injurable
     damageContainer: Inorganic
@@ -108,6 +124,10 @@
   id: ToolboxArtistic
   description: A toolbox typically stocked with artistic supplies.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxArtistic.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_green.rsi
     state: icon
@@ -120,6 +140,10 @@
   id: ToolboxSyndicate
   description: A sinister looking toolbox filled with elite syndicate tools.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxSyndicate.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_syn.rsi
     state: icon
@@ -140,6 +164,10 @@
   id: ToolboxGolden
   description: A solid gold toolbox. A rapper would kill for this.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/ToolboxGolden.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_gold.rsi
     state: icon

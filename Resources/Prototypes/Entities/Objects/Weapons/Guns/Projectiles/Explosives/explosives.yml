@@ -19,6 +19,12 @@
     radius: 3.5
     color: orange
     energy: 0.5
+  - type: RadarBlip # Starlight
+    color: "#44FFAA"
+    scale: 1
+    shape: Circle
+    requireInSpace: true
+  - type: PDTarget # Starlight
 
 - type: entity
   parent: BaseBulletTrigger
@@ -41,6 +47,12 @@
     radius: 3.5
     color: orange
     energy: 0.5
+  - type: RadarBlip # Starlight
+    color: "#44FFAA"
+    scale: 1
+    shape: Circle
+    requireInSpace: true
+  - type: PDTarget # Starlight
 
 - type: entity
   parent: BaseBullet
@@ -78,6 +90,12 @@
     intensitySlope: 5
     maxIntensity: 20
     canCreateVacuum: false
+  - type: RadarBlip # Starlight
+    color: "#FFDD00"
+    scale: 1
+    shape: Square
+    requireInSpace: true
+  - type: PDTarget # Starlight
 
 - type: entity
   parent: BaseBulletTrigger
@@ -119,6 +137,12 @@
     triggerKey: trigger
     fillPrototype: PelletClusterLessLethal
     capacity: 30
+  - type: RadarBlip # Starlight
+    color: "#FFDD00"
+    scale: 1
+    shape: Square
+    requireInSpace: true
+  - type: PDTarget # Starlight
 
 - type: entity
   parent: BaseBulletTrigger
@@ -169,6 +193,12 @@
     radius: 3.5
     color: blue
     energy: 0.5
+  - type: RadarBlip # Starlight
+    color: "#44FFAA"
+    scale: 1
+    shape: Circle
+    requireInSpace: true
+  - type: PDTarget # Starlight
 
 - type: entity
   parent: BaseBulletTrigger

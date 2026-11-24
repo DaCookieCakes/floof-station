@@ -1,16 +1,19 @@
 # Jumpsuit
 - type: loadout
   id: MusicianJumpsuit
+  groupBy: MusicianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitMusician
 
 - type: loadout
   id: MusicianJumpskirt
+  groupBy: MusicianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtMusician
 
 # Outerclothing
 - type: loadout
   id: MusicianWintercoat
+  groupBy: MusicianGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterMusician

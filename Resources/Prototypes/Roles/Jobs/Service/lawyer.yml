@@ -1,5 +1,6 @@
 - type: job
   id: Lawyer
+  pay: 500 # Floof - bank
   name: job-name-lawyer
   description: job-description-lawyer
   playTimeTracker: JobLawyer
@@ -19,7 +20,7 @@
 - type: startingGear
   id: LawyerGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
+  #  shoes: ClothingShoesBootsLaceup # FLOOF
     id: LawyerPDA
     ears: ClothingHeadsetSecurity
   inhand:

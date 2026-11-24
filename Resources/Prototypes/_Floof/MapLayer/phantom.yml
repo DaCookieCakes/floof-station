@@ -1,0 +1,6 @@
+- type: tile
+  id: FloorPhantom
+  name: tiles-floor-phantom
+  sprite: /Textures/_Floof/Tiles/phantom.png
+  isSpace: true
+  heatCapacity: 10000

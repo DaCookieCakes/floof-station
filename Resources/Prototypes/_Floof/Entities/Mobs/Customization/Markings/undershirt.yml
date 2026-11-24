@@ -1,0 +1,1152 @@
+- type: marking
+  id: UndershirtStandard
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: t_undershirt
+
+- type: marking
+  id: UndershirtSleeveless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: t_undershirt_sleeveless
+
+- type: marking
+  id: UndershirtRolled
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: t_rolled_undershirt
+
+- type: marking
+  id: UndershirtRolledSleeveless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: t_rolled_undershirt_sleeveless
+
+- type: marking
+  id: UndershirtLong
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: t_long_undershirt
+
+- type: marking
+  id: UndershirtClassic
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: snow_bra
+
+- type: marking
+  id: UndershirtSports
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: snow_sports
+
+- type: marking
+  id: UndershirtStrapless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: snow_strapless
+
+- type: marking
+  id: UndershirtBra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra
+
+- type: marking
+  id: UndershirtBraalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_alt
+
+- type: marking
+  id: UndershirtBrathin
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_thin
+
+- type: marking
+  id: UndershirtSportsbra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: sports_bra
+
+- type: marking
+  id: UndershirtSportsbraalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: sports_bra_alt
+
+- type: marking
+  id: UndershirtBrastrapless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_strapless
+
+- type: marking
+  id: UndershirtBrastraplessalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_strapless_alt
+
+- type: marking
+  id: UndershirtHalterneckbra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: halterneck_bra
+
+- type: marking
+  id: UndershirtBraneko
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_neko
+
+- type: marking
+  id: UndershirtBraswimming
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_swimming
+
+- type: marking
+  id: UndershirtBraswimmingalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_swimming_alt
+
+- type: marking
+  id: UndershirtTubetop
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tubetop
+
+- type: marking
+  id: UndershirtBabydoll
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: babydoll
+
+- type: marking
+  id: UndershirtBrakinky
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_kinky
+
+- type: marking
+  id: UndershirtBraassblastusa
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_assblastusa
+
+- type: marking
+  id: UndershirtBrabeekini
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_bee-kini
+
+- type: marking
+  id: UndershirtBracommie
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_commie
+
+- type: marking
+  id: UndershirtBrauk
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_uk
+
+- type: marking
+  id: UndershirtBrastriped
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: striped_bra
+
+- type: marking
+  id: UndershirtSwimsuitblue
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: swimming_blue
+
+- type: marking
+  id: UndershirtSwimsuitred
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: swimming_red
+
+- type: marking
+  id: UndershirtSwimsuitblack
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: swimming_black
+
+- type: marking
+  id: UndershirtFishnet
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: fishnet
+
+- type: marking
+  id: UndershirtFishnetbody
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: fishnet_body
+
+- type: marking
+  id: UndershirtFishnetsleeves
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: fishnet_sleeves
+
+- type: marking
+  id: UndershirtFishnetgloves
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: fishnet_gloves
+
+- type: marking
+  id: UndershirtUndershirtgeneric
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: undershirt
+
+- type: marking
+  id: UndershirtShortsleeve
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shortsleeve
+
+- type: marking
+  id: UndershirtPolo
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: polo
+
+- type: marking
+  id: UndershirtTanktop
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tanktop
+
+- type: marking
+  id: UndershirtTanktoprainbow
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tank_rainbow
+
+- type: marking
+  id: UndershirtTanktopstripes
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tank_stripes
+
+- type: marking
+  id: UndershirtTanktopalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tanktop_alt
+
+- type: marking
+  id: UndershirtTanktopmidriff
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tank_midriff
+
+- type: marking
+  id: UndershirtTanktopmidriffalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tank_midriff_alt
+
+- type: marking
+  id: UndershirtTanktopsun
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tank_sun
+
+- type: marking
+  id: UndershirtIanshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: ian
+
+- type: marking
+  id: UndershirtLovershirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: lover
+
+- type: marking
+  id: UndershirtLoventshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: ilovent
+
+- type: marking
+  id: UndershirtUkshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: uk
+
+- type: marking
+  id: UndershirtPeaceshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: peace
+
+- type: marking
+  id: UndershirtBandshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: band
+
+- type: marking
+  id: UndershirtPogomanshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: pogoman
+
+- type: marking
+  id: UndershirtGreensportshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: greenshirtsport
+
+- type: marking
+  id: UndershirtRedsportshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: redshirtsport
+
+- type: marking
+  id: UndershirtBluesportshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: blueshirtsport
+
+- type: marking
+  id: UndershirtMatroska
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: matroska
+
+- type: marking
+  id: UndershirtSs13shirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_ss13
+
+- type: marking
+  id: UndershirtQuestionshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_question
+
+- type: marking
+  id: UndershirtSkullshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_skull
+
+- type: marking
+  id: UndershirtTankfireshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: tank_fire
+
+- type: marking
+  id: UndershirtCommieshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_commie
+
+- type: marking
+  id: UndershirtNanoshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_nano
+
+- type: marking
+  id: UndershirtMeatshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_meat
+
+- type: marking
+  id: UndershirtStripesshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_stripes
+
+- type: marking
+  id: UndershirtTiedyeshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_tiedye
+
+- type: marking
+  id: UndershirtRedjersey
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_redjersey
+
+- type: marking
+  id: UndershirtBluejersey
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_bluejersey
+
+- type: marking
+  id: UndershirtBowlingshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowling
+
+- type: marking
+  id: UndershirtBowlingpshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowlingp
+
+- type: marking
+  id: UndershirtBowlingashirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowlinga
+
+- type: marking
+  id: UndershirtBowlingwshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowlingw
+
+- type: marking
+  id: UndershirtBeeshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bee_shirt
+
+- type: marking
+  id: UndershirtAlienshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_alien
+
+- type: marking
+  id: UndershirtClownshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shirt_clown
+
+- type: marking
+  id: UndershirtNavycowboyshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: cowboyshirt_navy
+
+- type: marking
+  id: UndershirtRedcowboyshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: cowboyshirt_red
+
+- type: marking
+  id: UndershirtLongstripeshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: longstripe
+
+- type: marking
+  id: UndershirtBluelongstripeshirt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: longstripe_blue
+
+- type: marking
+  id: UndershirtShapelyshirtgirlish
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shapely_girlish
+
+- type: marking
+  id: UndershirtShapelyshirtpetite
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shapely_petite
+
+- type: marking
+  id: UndershirtShapelyshirtcurvy
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shapely_curvy
+
+- type: marking
+  id: UndershirtShapelyshirtbusty
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shapely_busty
+
+- type: marking
+  id: UndershirtShapelyshirtmassive
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shapely_massive
+
+- type: marking
+  id: UndershirtShapelyshirtbackbreaker
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: shapely_backbreaker
+
+- type: marking
+  id: UndershirtBrabinder
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_binder
+
+- type: marking
+  id: UndershirtBrabinderstrapless
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bra_binder_strapless
+
+- type: marking
+  id: UndershirtScrubsgreen
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: scrubsgreen
+
+- type: marking
+  id: UndershirtScrubspurple
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: scrubspurple
+
+- type: marking
+  id: UndershirtBluebridebra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bride_blue
+
+- type: marking
+  id: UndershirtOrangebridebra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bride_orange
+
+- type: marking
+  id: UndershirtPurplebridebra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bride_purple
+
+- type: marking
+  id: UndershirtRedbridebra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bride_red
+
+- type: marking
+  id: UndershirtBowbra
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowbra
+
+- type: marking
+  id: UndershirtBowbraalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowbraalt
+
+- type: marking
+  id: UndershirtBowbraneko
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowbra_neko
+
+- type: marking
+  id: UndershirtBowbraswimming
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowbra_swimming
+
+- type: marking
+  id: UndershirtBowbraswimmingalt
+  bodyPart: UndergarmentTop
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Floof/Mobs/Customization/undershirt.rsi
+    state: bowbra_swimming_alt
+

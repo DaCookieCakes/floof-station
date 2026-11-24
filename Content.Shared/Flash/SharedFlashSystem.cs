@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._Goobstation.Flashbang;
 using Content.Shared.Charges.Components;
 using Content.Shared.Charges.Systems;
 using Content.Shared.Clothing.Components;
@@ -208,6 +209,7 @@ public abstract partial class SharedFlashSystem : EntitySystem
     /// <param name="displayPopup">Whether or not to show a popup to the target player.</param>
     /// <param name="melee">Was this flash caused by a melee attack? Used for checking for revolutionary conversion.</param>
     /// <param name="stunDuration">The time the target will be stunned. If null the target will be slowed down instead.</param>
+    /// <param name="ignoreProtection">DeltaV: Allow flashing to ignore flash protection.</param>
     public void Flash(
         EntityUid target,
         EntityUid? user,
@@ -216,7 +218,8 @@ public abstract partial class SharedFlashSystem : EntitySystem
         float slowTo,
         bool displayPopup = true,
         bool melee = false,
-        TimeSpan? stunDuration = null)
+        TimeSpan? stunDuration = null,
+        bool ignoreProtection = false) //DeltaV: allow flashing to ignore flash protection
     {
         var attempt = new FlashAttemptEvent(target, user, used);
         RaiseLocalEvent(target, ref attempt, true);
@@ -224,8 +227,16 @@ public abstract partial class SharedFlashSystem : EntitySystem
         if (attempt.Cancelled)
             return;
 
+        // Goobstation start
+        var multiplierEv = new FlashDurationMultiplierEvent();
+        RaiseLocalEvent(target, multiplierEv);
+        var multiplier = multiplierEv.Multiplier;
+        // Goobstation end
+
+
         // don't paralyze, slowdown or convert to rev if the target is immune to flashes
-        if (!_statusEffectsSystem.TryAddStatusEffectDuration(target, FlashedKey, flashDuration))
+        // DeltaV: allow flashing to ignore flash protection. Added Flashduration Multiplier.
+        if (!_statusEffectsSystem.TryAddStatusEffectDuration(target, FlashedKey, flashDuration * multiplier) && !ignoreProtection)
             return;
 
         if (stunDuration != null)

@@ -1,0 +1,60 @@
+# Neck
+- type: loadoutGroup
+  parent: CargoCollars
+  id: CargoTechnicianNeck
+  name: loadout-group-cargo-technician-neck
+  minLimit: 0
+
+- type: loadoutGroup
+  parent: CargoCollars
+  id: SalvageSpecialistNeck
+  name: loadout-group-salvage-specialist-neck
+  minLimit: 0
+
+# Gloves
+- type: loadoutGroup
+  id: CargoTechnicianGloves
+  name: loadout-group-cargo-technician-gloves
+  minLimit: 0
+  loadouts:
+  - CargoArmWarmers
+  - CourierArmWarmers
+
+- type: loadoutGroup
+  id: SalvageSpecialistGloves
+  name: loadout-group-salvage-specialist-gloves
+  minLimit: 0
+  loadouts:
+  - CargoArmWarmers
+  - CourierArmWarmers # FLOOF
+
+- type: loadoutGroup
+  id: QuartermasterGloves
+  name: loadout-group-quartermaster-gloves
+  minLimit: 0
+  loadouts:
+  - CargoArmWarmers
+
+# Socks
+- type: loadoutGroup
+  id: CargoTechnicianSocks
+  name: loadout-group-cargo-technician-socks
+  minLimit: 0
+  loadouts:
+  - CargoThighHighs
+  - CourierThighHighs
+
+- type: loadoutGroup
+  id: SalvageSpecialistSocks
+  name: loadout-group-salvage-specialist-socks
+  minLimit: 0
+  loadouts:
+  - CargoThighHighs
+  - CourierThighHighs # FLOOF
+
+- type: loadoutGroup
+  id: QuartermasterSocks
+  name: loadout-group-quartermaster-socks
+  minLimit: 0
+  loadouts:
+  - CargoThighHighs

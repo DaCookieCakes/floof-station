@@ -1,0 +1,49 @@
+# GLASSES #
+- type: loadoutGroup
+  parent: Glasses
+  id: ScientistGlasses
+  name: loadout-group-scientist-glasses
+  minLimit: 0
+  loadouts:
+  - PrescriptionDiagnosticHud
+  - SafetyGlasses
+
+# NECK #
+- type: loadoutGroup
+  id: ResearchAssistantNeck
+  parent: ScienceCollars
+  name: loadout-group-research-assistant-neck
+  minLimit: 0
+
+# GLOVES #
+- type: loadoutGroup
+  id: ResearchDirectorGloves
+  parent: ScientistGloves
+  name: loadout-group-research-director-gloves
+  minLimit: 0
+  loadouts:
+  - RDArmWarmers
+
+# SOCKS #
+- type: loadoutGroup
+  id: ResearchDirectorSocks
+  name: loadout-group-research-director-socks
+  minLimit: 0
+  loadouts:
+  - RDThighHighs
+
+- type: loadoutGroup
+  id: ScientistSocks
+  name: loadout-group-scientist-socks
+  minLimit: 0
+  loadouts:
+  - ScienceThighHighs
+
+# SHOES #
+- type: loadoutGroup
+  id: ResearchAssistantShoes
+  name: loadout-group-research-assistant-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - WhiteShoes

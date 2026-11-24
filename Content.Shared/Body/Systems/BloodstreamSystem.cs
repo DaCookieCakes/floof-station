@@ -359,6 +359,26 @@ public sealed partial class BloodstreamSystem : EntitySystem
         DirtyField(ent, ent.Comp, nameof(BloodstreamComponent.BloodlossThreshold));
     }
 
+    // begin Goobstation: port EE height/width sliders
+    public void SetBloodMaxVolume(Entity<BloodstreamComponent?> ent, FixedPoint2 volume)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+
+        ent.Comp.BloodReferenceSolution.MaxVolume = volume; // Floof - HeightWidth
+        ent.Comp.BloodReferenceSolution.ScaleTo(volume);
+        DirtyField(ent, ent.Comp, nameof(BloodstreamComponent.BloodReferenceSolution));
+
+        // Floof Section - HeightWidth
+        if (_solutionContainer.ResolveSolution(ent.Owner, ent.Comp.BloodSolutionName, ref ent.Comp.BloodSolution))
+            _solutionContainer.SetCapacity(ent.Comp.BloodSolution.Value, volume * ent.Comp.MaxVolumeModifier);
+
+        if (_solutionContainer.ResolveSolution(ent.Owner, ent.Comp.MetabolitesSolutionName, ref ent.Comp.MetabolitesSolution))
+            _solutionContainer.SetCapacity(ent.Comp.MetabolitesSolution.Value, volume * ent.Comp.MaxVolumeModifier);
+        // Floof Section End
+    }
+    // end Goobstation: port EE height/width sliders
+
     /// <summary>
     /// Attempt to transfer a provided solution to internal solution.
     /// </summary>

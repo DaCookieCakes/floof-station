@@ -1,3 +1,4 @@
+#if false // Floof - moved to _Floof/Arrivals
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration;
@@ -505,3 +506,4 @@ public sealed partial class ServerArrivalsSystem : ArrivalsSystem
             "Option");
     }
 }
+#endif

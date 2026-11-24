@@ -13,11 +13,13 @@
     startingInventory:
       ClothingUniformJumpsuitChemistry: 1
       ClothingUniformJumpskirtChemistry: 1
+      ClothingUniformChemistsThong: 2 # FLOOF
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterCoatLabChem }
     startingInventory:
       ClothingOuterCoatLabChem: 1
       ClothingOuterWinterChem: 1
+      ClothingOuterApronChemist: 2 # FLOOF
   - name: vending-machine-category-equipment
     icon: { entity: ClothingEyesGlassesChemical }
     startingInventory:
@@ -27,5 +29,10 @@
       ClothingHeadsetMedical: 1
       ClothingHandsGlovesLatex: 1
       ClothingShoesColorWhite: 1
+      # FLOOF: Start
+      ClothingNeckCollarMed: 2
+      ClothingHandsChemistsWarmers: 2
+      ClothingUnderSocksChemists: 2
+      # FLOOF: End
     contrabandInventory:
       ToyFigurineChemist: 1

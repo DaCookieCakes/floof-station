@@ -13,6 +13,14 @@ public sealed partial class SpawnPointComponent : Component, ISpawnPoint
     [DataField("job_id")]
     public ProtoId<JobPrototype>? Job;
 
+    // Floofstation - lets one spawner serve several jobs (e.g. cyborg spawners also spawn dogborgs)
+    /// <summary>
+    /// Additional jobs this spawn point is valid for, on top of <see cref="Job"/>.
+    /// </summary>
+    [DataField]
+    public List<ProtoId<JobPrototype>> ExtraJobs = new();
+    // Floofstation end
+
     /// <summary>
     /// The type of spawn point.
     /// </summary>

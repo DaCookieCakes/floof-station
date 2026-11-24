@@ -1,0 +1,429 @@
+# Floof - Goob tech tree layout. Keeps the tree out of upstream technology prototypes.
+# `prerequisites` replaces the technology's own technologyPrerequisites entirely, so list all of them.
+
+# civilianservices
+
+- type: technologyPosition
+  id: PackagedLights
+  technology: PackagedLights
+  position: -1,4
+
+- type: technologyPosition
+  id: Hydroponics
+  technology: Hydroponics
+  position: -3,4
+  prerequisites:
+  - AdvancedEntertainment
+
+- type: technologyPosition
+  id: CritterMechs
+  technology: CritterMechs
+  position: 0,4
+  prerequisites:
+  - AdvancedEntertainment
+  - RipleyAPLU
+
+- type: technologyPosition
+  id: AudioVisualCommunication
+  technology: AudioVisualCommunication
+  position: 1,4
+  prerequisites:
+  - AdvancedEntertainment
+
+- type: technologyPosition
+  id: AdvancedEntertainment
+  technology: AdvancedEntertainment
+  position: 0,2
+
+- type: technologyPosition
+  id: MeatManipulation
+  technology: MeatManipulation
+  position: -3,5
+  prerequisites:
+  - Hydroponics
+
+- type: technologyPosition
+  id: FauxAstroTiles
+  technology: FauxAstroTiles
+  position: 1,5
+  prerequisites:
+  - AudioVisualCommunication
+
+- type: technologyPosition
+  id: BiochemicalStasis
+  technology: BiochemicalStasis
+  position: 3,5
+  prerequisites:
+  - AdvancedEntertainment
+
+- type: technologyPosition
+  id: MechanizedTreatment
+  technology: MechanizedTreatment
+  position: 4,5
+  prerequisites:
+  - BiochemicalStasis
+
+- type: technologyPosition
+  id: AdvancedCleaning
+  technology: AdvancedCleaning
+  position: -1,5
+  prerequisites:
+  - AdvancedEntertainment
+  - BasicRobotics
+
+- type: technologyPosition
+  id: HONKMech
+  technology: HONKMech
+  position: 0,5
+  prerequisites:
+  - CritterMechs
+  - RipleyAPLU
+
+- type: technologyPosition
+  id: AdvancedSpray
+  technology: AdvancedSpray
+  position: -1,6
+  prerequisites:
+  - AdvancedCleaning
+
+- type: technologyPosition
+  id: BluespaceCargoTransport
+  technology: BluespaceCargoTransport
+  position: 1,8
+  prerequisites:
+  - MeatManipulation
+  - FauxAstroTiles
+
+- type: technologyPosition
+  id: PushHorn
+  technology: PushHorn
+  position: 0,6
+  prerequisites:
+  - HONKMech
+
+- type: technologyPosition
+  id: QuantumFiberWeaving
+  technology: QuantumFiberWeaving
+  position: 1,9
+  prerequisites:
+  - BluespaceCargoTransport
+
+- type: technologyPosition
+  id: BluespaceChemistry
+  technology: BluespaceChemistry
+  position: 2,6
+  prerequisites:
+  - BiochemicalStasis
+
+- type: technologyPosition
+  id: LauncherSyringe
+  technology: LauncherSyringe
+  position: 2,7
+  prerequisites:
+  - BluespaceChemistry
+
+# industrial
+
+- type: technologyPosition
+  id: SalvageEquipment
+  technology: SalvageEquipment
+  position: 0,-4
+  prerequisites:
+  - SpaceScanning
+
+- type: technologyPosition
+  id: SpaceScanning
+  technology: SpaceScanning
+  position: 0,-3
+  prerequisites:
+  - PowerGeneration
+
+- type: technologyPosition
+  id: AdvancedPowercells
+  technology: AdvancedPowercells
+  position: 1,-6
+  prerequisites:
+  - IndustrialEngineering
+
+- type: technologyPosition
+  id: MechanicalCompression
+  technology: MechanicalCompression
+  position: 1,-4
+  prerequisites:
+  - SpaceScanning
+
+- type: technologyPosition
+  id: IndustrialEngineering
+  technology: IndustrialEngineering
+  position: 1,-5
+  prerequisites:
+  - MechanicalCompression
+
+- type: technologyPosition
+  id: PowerGeneration
+  technology: PowerGeneration
+  position: 0,-2
+
+- type: technologyPosition
+  id: AtmosphericTech
+  technology: AtmosphericTech
+  position: -2,-4
+  prerequisites:
+  - SpaceScanning
+
+- type: technologyPosition
+  id: RipleyAPLU
+  technology: RipleyAPLU
+  position: 0,-5
+  prerequisites:
+  - SalvageEquipment
+
+- type: technologyPosition
+  id: Shuttlecraft
+  technology: Shuttlecraft
+  position: 2,-4
+  prerequisites:
+  - MechanicalCompression
+
+- type: technologyPosition
+  id: AdvancedAtmospherics
+  technology: AdvancedAtmospherics
+  position: -2,-5
+  prerequisites:
+  - AtmosphericTech
+
+- type: technologyPosition
+  id: AdvancedToolsTechnology
+  technology: AdvancedToolsTechnology
+  position: 2,-5
+  prerequisites:
+  - Shuttlecraft
+
+- type: technologyPosition
+  id: MassExcavation
+  technology: MassExcavation
+  position: 0,-6
+  prerequisites:
+  - RipleyAPLU
+
+- type: technologyPosition
+  id: BluespaceStorage
+  technology: BluespaceStorage
+  position: 2,-7
+  prerequisites:
+  - AdvancedToolsTechnology
+  - AdvancedPowercells
+
+- type: technologyPosition
+  id: OptimizedMicrogalvanism
+  technology: OptimizedMicrogalvanism
+  position: 2,-6
+  prerequisites:
+  - AdvancedToolsTechnology
+  - AdvancedPowercells
+
+# arsenal
+
+- type: technologyPosition
+  id: SalvageWeapons
+  technology: SalvageWeapons
+  position: 1,0
+
+- type: technologyPosition
+  id: DraconicMunitions
+  technology: DraconicMunitions
+  position: 2,2
+  prerequisites:
+  - SalvageWeapons
+
+- type: technologyPosition
+  id: WeaponizedLaserManipulation
+  technology: WeaponizedLaserManipulation
+  position: 4,0
+  prerequisites:
+  - DraconicMunitions
+
+- type: technologyPosition
+  id: NonlethalAmmunition
+  technology: NonlethalAmmunition
+  position: 2,3
+  prerequisites:
+  - SalvageWeapons
+
+- type: technologyPosition
+  id: UraniumMunitions
+  technology: UraniumMunitions
+  position: 3,2
+  prerequisites:
+  - DraconicMunitions
+
+- type: technologyPosition
+  id: ExplosiveTechnology
+  technology: ExplosiveTechnology
+  position: 2,-1
+  prerequisites:
+  - SalvageWeapons
+
+- type: technologyPosition
+  id: SpecialMeans
+  technology: SpecialMeans
+  position: 4,3
+  prerequisites:
+  - AdvancedRiotControl
+
+- type: technologyPosition
+  id: AdvancedRiotControl
+  technology: AdvancedRiotControl
+  position: 3,3
+  prerequisites:
+  - NonlethalAmmunition
+
+- type: technologyPosition
+  id: ConcentratedLaserWeaponry
+  technology: ConcentratedLaserWeaponry
+  position: 5,0
+  prerequisites:
+  - WeaponizedLaserManipulation
+
+- type: technologyPosition
+  id: WaveParticleHarnessing
+  technology: WaveParticleHarnessing
+  position: 4,1
+  prerequisites:
+  - WeaponizedLaserManipulation
+
+- type: technologyPosition
+  id: KineticModifications
+  technology: KineticModifications
+  position: 1,-2
+  prerequisites:
+  - SalvageWeapons
+
+- type: technologyPosition
+  id: BasicShuttleArmament
+  technology: BasicShuttleArmament
+  position: 3,-4
+  prerequisites:
+  - ExplosiveTechnology
+  - Shuttlecraft
+
+- type: technologyPosition
+  id: DualWieldingTechnology
+  technology: DualWieldingTechnology
+  position: 4,2
+  prerequisites:
+  - UraniumMunitions
+
+- type: technologyPosition
+  id: PortableMicrofusionWeaponry
+  technology: PortableMicrofusionWeaponry
+  position: 6,0
+  prerequisites:
+  - ConcentratedLaserWeaponry
+
+- type: technologyPosition
+  id: ThermalWeaponry
+  technology: ThermalWeaponry
+  position: 5,1
+  prerequisites:
+  - WaveParticleHarnessing
+
+- type: technologyPosition
+  id: AdvancedShuttleWeapon
+  technology: AdvancedShuttleWeapon
+  position: 4,-4
+  prerequisites:
+  - BasicShuttleArmament
+  - Shuttlecraft
+
+# experimental
+
+- type: technologyPosition
+  id: BasicRobotics
+  technology: BasicRobotics
+  position: -1,0
+
+- type: technologyPosition
+  id: BasicAnomalousResearch
+  technology: BasicAnomalousResearch
+  position: -2,0
+  prerequisites:
+  - BasicRobotics
+
+- type: technologyPosition
+  id: BasicXenoArcheology
+  technology: BasicXenoArcheology
+  position: -2,2
+  prerequisites:
+  - BasicRobotics
+
+- type: technologyPosition
+  id: AlternativeResearch
+  technology: AlternativeResearch
+  position: -2,-1
+  prerequisites:
+  - BasicRobotics
+
+- type: technologyPosition
+  id: MagnetsTech
+  technology: MagnetsTech
+  position: -3,-1
+  prerequisites:
+  - AlternativeResearch
+
+- type: technologyPosition
+  id: AnomalyCoreHarnessing
+  technology: AnomalyCoreHarnessing
+  position: -3,1
+  prerequisites:
+  - BasicAnomalousResearch
+
+- type: technologyPosition
+  id: AbnormalArtifactManipulation
+  technology: AbnormalArtifactManipulation
+  position: -3,2
+  prerequisites:
+  - BasicXenoArcheology
+
+- type: technologyPosition
+  id: AdvancedAnomalyResearch
+  technology: AdvancedAnomalyResearch
+  position: -3,0
+  prerequisites:
+  - BasicAnomalousResearch
+
+- type: technologyPosition
+  id: DeterrenceTechnologies
+  technology: DeterrenceTechnologies
+  position: -3,-2
+  prerequisites:
+  - AlternativeResearch
+
+- type: technologyPosition
+  id: GravityManipulation
+  technology: GravityManipulation
+  position: -4,2
+  prerequisites:
+  - AbnormalArtifactManipulation
+  - AnomalyCoreHarnessing
+
+- type: technologyPosition
+  id: QuantumLeaping
+  technology: QuantumLeaping
+  position: -5,2
+  prerequisites:
+  - GravityManipulation
+
+- type: technologyPosition
+  id: BluespaceTimeManipulation
+  technology: BluespaceTimeManipulation
+  position: -4,1
+  prerequisites:
+  - GravityManipulation
+
+- type: technologyPosition
+  id: TeleSci
+  technology: TeleSci
+  position: -5,3
+  prerequisites:
+  - QuantumLeaping

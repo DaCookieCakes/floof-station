@@ -1,0 +1,164 @@
+- type: speciesOverview
+  id: Arachnid
+  pros:
+  - species-overview-arachnid-pro-pockets
+  - species-overview-arachnid-pro-raw-meat
+  cons:
+  - species-overview-arachnid-con-suffocate
+  - species-overview-arachnid-con-asphyxiation
+  - species-overview-arachnid-con-poison
+
+- type: speciesOverview
+  id: Rodentia
+  pros:
+  - species-overview-rodentia-pro-claws
+  - species-overview-rodentia-pro-small
+  - species-overview-rodentia-pro-duffelbags
+  - species-overview-rodentia-pro-crawl
+  - species-overview-rodentia-pro-raw-meat
+  - species-overview-rodentia-pro-toxins
+  - species-overview-rodentia-pro-rummage
+  - species-overview-rodentia-pro-cheeks
+  cons:
+  - species-overview-rodentia-con-vomit
+  - species-overview-rodentia-con-blunt
+  - species-overview-rodentia-con-mousetraps
+  - species-overview-rodentia-con-hunger
+
+- type: speciesOverview
+  id: Diona
+  pros:
+  - species-overview-diona-pro-hunger
+  - species-overview-diona-pro-blunt
+  - species-overview-diona-pro-slash
+  - species-overview-diona-pro-suffocate
+  - species-overview-diona-pro-fertilizer
+  - species-overview-diona-pro-harvest
+  cons:
+  - species-overview-diona-con-thirst
+  - species-overview-diona-con-heat
+  - species-overview-diona-con-shock
+  - species-overview-diona-con-fire
+  - species-overview-diona-con-speed
+  - species-overview-diona-con-pesticide
+
+- type: speciesOverview
+  id: Dwarf
+  pros:
+  - species-overview-dwarf-pro-alcohol
+  - species-overview-dwarf-pro-drunk
+  - species-overview-dwarf-pro-digest
+  - species-overview-dwarf-pro-dragged
+  cons:
+  - species-overview-dwarf-con-drag
+
+- type: speciesOverview
+  id: Human
+  pros:
+  - species-overview-human-pro-baseline
+  cons:
+  - species-overview-human-con-baseline
+
+- type: speciesOverview
+  id: Moth
+  pros:
+  - species-overview-moth-pro-zerog
+  - species-overview-moth-pro-cold
+  cons:
+  - species-overview-moth-con-diet
+  - species-overview-moth-con-heat
+  - species-overview-moth-con-fire
+
+- type: speciesOverview
+  id: Reptilian
+  pros:
+  - species-overview-reptilian-pro-tail
+  - species-overview-reptilian-pro-raw-meat
+  cons:
+  - species-overview-reptilian-con-diet
+  - species-overview-reptilian-con-cold
+  - species-overview-reptilian-con-poison
+
+- type: speciesOverview
+  id: SlimePerson
+  pros:
+  - species-overview-slime-pro-storage
+  - species-overview-slime-pro-blunt
+  - species-overview-slime-pro-poison
+  - species-overview-slime-pro-suffocate
+  cons:
+  - species-overview-slime-con-cold
+  - species-overview-slime-con-slash
+  - species-overview-slime-con-piercing
+  - species-overview-slime-con-pressure
+
+- type: speciesOverview
+  id: Vox
+  pros:
+  - species-overview-vox-pro-poison
+  cons:
+  - species-overview-vox-con-oxygen
+  - species-overview-vox-con-tank
+
+- type: speciesOverview
+  id: Vulpkanin
+  pros:
+  - species-overview-vulpkanin-pro-cold
+  - species-overview-vulpkanin-pro-leap
+  - species-overview-vulpkanin-pro-raw-meat
+  cons:
+  - species-overview-vulpkanin-con-heat
+  - species-overview-vulpkanin-con-fire
+  - species-overview-vulpkanin-con-poison
+
+- type: speciesOverview
+  id: Feroxi
+  guideEntry: GuideEntryFeroxi
+  pros:
+  - species-overview-feroxi-pro-bite
+  - species-overview-feroxi-pro-blood
+  - species-overview-feroxi-pro-blunt
+  - species-overview-feroxi-pro-cold
+  - species-overview-feroxi-pro-breathe
+  cons:
+  - species-overview-feroxi-con-diet
+  - species-overview-feroxi-con-poison
+  - species-overview-feroxi-con-slash
+  - species-overview-feroxi-con-thirst
+  - species-overview-feroxi-con-parched
+  - species-overview-feroxi-con-saline
+
+- type: speciesOverview
+  id: Shadekin
+  pros:
+  - species-overview-shadekin-pro-nightvision
+  - species-overview-shadekin-pro-cold
+  - species-overview-shadekin-pro-breathe
+  - species-overview-shadekin-pro-dark
+  - species-overview-shadekin-pro-claws
+  cons:
+  - species-overview-shadekin-con-light
+  - species-overview-shadekin-con-heat
+  - species-overview-shadekin-con-shock
+  - species-overview-shadekin-con-radiation
+  - species-overview-shadekin-con-bloodloss
+  - species-overview-shadekin-con-bloodloss-heal
+  - species-overview-shadekin-con-flash
+
+- type: speciesOverview
+  id: Harpy
+  guideEntry: GuideEntryHarpy
+  pros:
+  - species-overview-harpy-pro-mimicry
+  - species-overview-harpy-pro-speed
+  - species-overview-harpy-pro-zerog
+  - species-overview-harpy-pro-flight
+  - species-overview-harpy-pro-singer
+  - species-overview-harpy-pro-talons
+  cons:
+  - species-overview-harpy-con-air
+  - species-overview-harpy-con-fumes
+  - species-overview-harpy-con-light
+  - species-overview-harpy-con-recoil
+  - species-overview-harpy-con-brute
+  - species-overview-harpy-con-vision

@@ -1,0 +1,9 @@
+- type: soundCollection
+  id: FloodSwimStroke
+  files:
+  - /Audio/_Nuclear14/Effects/Footsteps/Water/water1.ogg
+  - /Audio/_Nuclear14/Effects/Footsteps/Water/water2.ogg
+  - /Audio/_Nuclear14/Effects/Footsteps/Water/water3.ogg
+  - /Audio/_Nuclear14/Effects/Footsteps/Water/water4.ogg
+  - /Audio/_Nuclear14/Effects/Footsteps/Water/water5.ogg
+  - /Audio/_Nuclear14/Effects/Footsteps/Water/water6.ogg

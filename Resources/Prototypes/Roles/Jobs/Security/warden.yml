@@ -1,5 +1,6 @@
 - type: job
   id: Warden
+  pay: 650 # Floof - bank
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
@@ -31,7 +32,7 @@
 - type: startingGear
   id: WardenGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+    #  eyes: ClothingEyesGlassesSecurity # FLOOF
     id: WardenPDA
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58

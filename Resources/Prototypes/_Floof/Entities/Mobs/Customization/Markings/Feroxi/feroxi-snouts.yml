@@ -1,0 +1,60 @@
+- type: marking
+  id: MarkingSnoutFeroxi
+  bodyPart: Snout
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout-countershading
+
+- type: marking
+  id: MarkingSnoutNurseFeroxi
+  bodyPart: Snout
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout-nurse
+
+- type: marking
+  id: MarkingSnoutStripedNurseFeroxi
+  bodyPart: Snout
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+    layers:
+      feroxi-snout-stripe:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout-stripe
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout-nurse
+
+
+- type: marking
+  id: MarkingSnoutStripedFeroxi
+  bodyPart: Snout
+  groupWhitelist: [ Feroxi ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+    layers:
+      feroxi-snout-stripe:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout
+  - sprite: _DeltaV/Mobs/Customization/Feroxi/snout_markings.rsi
+    state: feroxi-snout-stripe

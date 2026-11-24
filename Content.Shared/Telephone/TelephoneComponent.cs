@@ -2,6 +2,7 @@ using Content.Shared.Chat;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
+using Content.Shared._Starlight.Language; // Starlight
 
 namespace Content.Shared.Telephone;
 
@@ -187,7 +188,7 @@ public readonly record struct TelephoneMessageSentEvent(string Message, MsgChatM
 /// Raised when a chat message is received by a telephone from another
 /// </summary>
 [ByRefEvent]
-public readonly record struct TelephoneMessageReceivedEvent(string Message, MsgChatMessage ChatMsg, EntityUid MessageSource, Entity<TelephoneComponent> TelephoneSource);
+public readonly record struct TelephoneMessageReceivedEvent(string Message, MsgChatMessage ChatMsg, EntityUid MessageSource, Entity<TelephoneComponent> TelephoneSource, LanguagePrototype? Language = null); // Starlight
 
 #endregion
 

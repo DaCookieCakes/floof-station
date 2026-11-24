@@ -1,0 +1,41 @@
+- type: Tag
+  id: CombatRemote # Tag: used on the RemoteSignallerCombat
+
+- type: Tag
+  id: Grenade120mm # Ammo: Magazine120mmGrenadeBlast, ShuttleGunNTSFCyerxa120mm
+
+- type: Tag
+  id: MagazineGrenade120mm # Magazine: Magazine120mmGrenadeBlast
+
+- type: Tag
+  id: Cartridge60mmRocket
+
+- type: Tag
+  id: Magazine60mmRocket
+
+- type: Tag
+  id: Cartridge280mmSlug # Ammo: CartridgeCharon280mmSlug, CartridgeCharon280mmSubnuclear
+
+- type: Tag
+  id: Cartridge50mmRocket
+
+- type: Tag
+  id: Magazine50mmRocket
+
+- type: Tag
+  id: Cartridge75mmDravon # Ammo: CartridgeDravon75mmHE
+
+- type: Tag
+  id: Cartridge90mmAK570 # Ammo: CartridgeAK570_90mmHE
+
+- type: Tag
+  id: Cartridge240mmLeviathan # Ammo: CartridgeLeviathan240mmHE
+
+- type: Tag
+  id: MagazineDravon75mm
+
+- type: Tag
+  id: MagazineAK570_90mm
+
+- type: Tag
+  id: PowerCageOmega

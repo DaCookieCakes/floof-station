@@ -11,42 +11,50 @@
 # Jumpsuit
 - type: loadout
   id: ChiefEngineerJumpsuit
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitChiefEngineer
 
 - type: loadout
   id: ChiefEngineerJumpskirt
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtChiefEngineer
 
 - type: loadout
   id: ChiefEngineerTurtleneck
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitChiefEngineerTurtle
 
 - type: loadout
   id: ChiefEngineerTurtleneckSkirt
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtChiefEngineerTurtle
 
 # Head
 - type: loadout
   id: ChiefEngineerHead
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     head: ClothingHeadHatHardhatWhite
 
 - type: loadout
   id: ChiefEngineerBeret
+  groupBy: ChiefEngineerGear # FLOOF
   startingGear: EngineeringBeret
 
 # Neck
 - type: loadout
   id: ChiefEngineerCloak
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     neck: ClothingNeckCloakCe
 
 - type: loadout
   id: ChiefEngineerMantle
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     neck: ClothingNeckMantleCE
   effects:
@@ -61,11 +69,13 @@
 # OuterClothing
 - type: loadout
   id: ChiefEngineerWintercoat
+  groupBy: ChiefEngineerGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterCE
 
 # Shoes
 - type: loadout
   id: BrownShoes
+  groupBy: CommonGear # FLOOF
   equipment:
     shoes: ClothingShoesColorBrown

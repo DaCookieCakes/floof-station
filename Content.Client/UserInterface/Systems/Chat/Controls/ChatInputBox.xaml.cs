@@ -1,6 +1,7 @@
 using Content.Shared.Chat;
 using Content.Shared.Input;
 using Robust.Client.UserInterface.Controls;
+using Robust.Shared.Utility; // Wayfarer
 
 namespace Content.Client.UserInterface.Systems.Chat.Controls;
 
@@ -12,7 +13,9 @@ public class ChatInputBox : PanelContainer
     public const string StyleClassChatFilterOptionButton = "ChatFilterOptionButton";
 
     public readonly ChannelSelectorButton ChannelSelector;
-    public readonly HistoryLineEdit Input;
+    // public readonly HistoryLineEdit Input;
+    public readonly TextEdit Input; 
+    // Wayfarer - Multiline chatbox
     public readonly ChannelFilterButton FilterButton;
     protected readonly BoxContainer Container;
     protected ChatChannel ActiveChannel { get; private set; } = ChatChannel.Local;
@@ -34,13 +37,17 @@ public class ChatInputBox : PanelContainer
             MinWidth = 75
         };
         Container.AddChild(ChannelSelector);
-        Input = new HistoryLineEdit
+        // Wayfarer - Multiline chatbox
+        Input = new TextEdit 
         {
             Name = "Input",
-            PlaceHolder = GetChatboxInfoPlaceholder(),
+            Placeholder = new Rope.Leaf(GetChatboxInfoPlaceholder()),
             HorizontalExpand = true,
+            MinHeight = 22,
             StyleClasses = { StyleClassChatLineEdit }
         };
+        Input.SetHeight = 22;
+        // Wayfarer End
         Container.AddChild(Input);
         FilterButton = new ChannelFilterButton
         {

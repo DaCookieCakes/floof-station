@@ -79,6 +79,10 @@
   name: raw meat
   description: A slab of raw meat.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FoodMeat.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: plain
   - type: ToolRefinable
@@ -106,6 +110,10 @@
   name: raw human meat
   description: Gross.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FoodMeat.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: plain
   - type: ToolRefinable
@@ -408,6 +416,10 @@
   name: raw rat meat
   description: Prime meat from maintenance!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/FoodMeat.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: plain
   - type: Solution

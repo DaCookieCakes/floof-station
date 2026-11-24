@@ -1,17 +1,20 @@
 # Jumpsuit
 - type: loadout
   id: ReporterJumpsuit
+  groupBy: ReporterGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitReporter
 
 - type: loadout
   id: JournalistJumpsuit
+  groupBy: ReporterGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitJournalist
 
 # Head
 - type: loadout
   id: ReporterPressFedora
+  groupBy: ReporterGear # FLOOF
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
@@ -24,6 +27,7 @@
 # Outerclothing
 - type: loadout
   id: ReporterPressVest
+  groupBy: ReporterGear # FLOOF
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:

@@ -1,3 +1,4 @@
+using Content.Client._Floof.Consent.UI;
 using Content.Client.UserInterface.Systems.Actions;
 using Content.Client.UserInterface.Systems.Admin;
 using Content.Client.UserInterface.Systems.Bwoink;
@@ -9,6 +10,7 @@ using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Client.UserInterface.Systems.MenuBar.Widgets;
 using Content.Client.UserInterface.Systems.Sandbox;
+using Content.Client._Starlight.UserInterface.Systems.Language; // Starlight
 using Robust.Client.UserInterface.Controllers;
 
 namespace Content.Client.UserInterface.Systems.MenuBar;
@@ -24,6 +26,8 @@ public sealed partial class GameTopMenuBarUIController : UIController
     [Dependency] private SandboxUIController _sandbox = default!;
     [Dependency] private GuidebookUIController _guidebook = default!;
     [Dependency] private EmotesUIController _emotes = default!;
+    [Dependency] private LanguageMenuUIController _language = default!; // Starlight
+    [Dependency] private ConsentUiController _consent = default!; // Floof - Consent System
 
     private GameTopMenuBar? GameTopMenuBar => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>();
 
@@ -47,6 +51,8 @@ public sealed partial class GameTopMenuBarUIController : UIController
         _action.UnloadButton();
         _sandbox.UnloadButton();
         _emotes.UnloadButton();
+        _language.UnloadButton(); // Starlight
+        _consent.UnloadButton(); // Floof - Consent System
     }
 
     public void LoadButtons()
@@ -60,5 +66,7 @@ public sealed partial class GameTopMenuBarUIController : UIController
         _action.LoadButton();
         _sandbox.LoadButton();
         _emotes.LoadButton();
+        _language.LoadButton(); // Starlight
+        _consent.LoadButton(); // Floof - Consent System
     }
 }

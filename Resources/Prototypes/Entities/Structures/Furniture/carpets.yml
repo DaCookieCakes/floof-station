@@ -45,6 +45,7 @@
   parent: CarpetBase
   suffix: Red
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Carpets/red_carpet.rsi
   - type: Icon
@@ -66,6 +67,7 @@
   parent: CarpetBase
   suffix: Black
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/black_carpet.rsi
@@ -84,6 +86,7 @@
   parent: CarpetBase
   suffix: Pink
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/pink_carpet.rsi
@@ -102,6 +105,7 @@
   parent: CarpetBase
   suffix: Blue
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/blue_carpet.rsi
@@ -120,6 +124,7 @@
   parent: CarpetBase
   suffix: Green
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/green_carpet.rsi
@@ -138,6 +143,7 @@
   parent: CarpetBase
   suffix: Orange
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/orange_carpet.rsi
@@ -156,6 +162,7 @@
   parent: CarpetBase
   suffix: Sky Blue
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/skyblue_carpet.rsi
@@ -174,6 +181,7 @@
   parent: CarpetBase
   suffix: Purple
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/purple_carpet.rsi
@@ -192,6 +200,7 @@
   parent: CarpetBase
   suffix: Cyan
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/cyan_carpet.rsi
@@ -210,6 +219,7 @@
   parent: CarpetBase
   suffix: White
   components:
+  - type: FloodMask # Floof - flooding
   - type: Clickable
   - type: Sprite
     sprite: Structures/Furniture/Carpets/white_carpet.rsi
@@ -229,6 +239,7 @@
   id: CarpetChapel
   name: "chapel's carpet"
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Structures/Furniture/Carpets/chapel_carpet.rsi
     state: chapel

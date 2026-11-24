@@ -1,0 +1,4 @@
+- type: shader
+  id: AnimatedTile
+  kind: source
+  path: "/Textures/_Floof/Shaders/animated_tile.swsl"

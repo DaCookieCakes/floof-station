@@ -4,6 +4,10 @@
   parent: BaseStorageItem
   id: Medkit
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Medkit.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     sprite: Objects/Specific/Medical/firstaidkits.rsi
     state: firstaid
@@ -28,6 +32,10 @@
   parent: Medkit
   id: MedkitBurn
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitBurn.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: burnkit
   - type: Item
@@ -39,6 +47,10 @@
   parent: Medkit
   id: MedkitToxin
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitToxin.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: toxinkit
   - type: Item
@@ -50,6 +62,10 @@
   parent: Medkit
   id: MedkitO2
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/MedkitO2.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Sprite
     state: o2kit
   - type: Item

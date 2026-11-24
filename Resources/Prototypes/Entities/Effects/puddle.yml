@@ -170,11 +170,13 @@
     enabled: false # Let bum ass puddle system update this.
     states:
     - !type:DirectionSpriteSmoothing
-      mask: [ walls, windows, marble, puddles ]
+      mask: [ walls, windows, windows-exo, windows-exo-borg, windows-plasma, windows-plasma-reinf, windows-plastitanium, windows-regal, windows-reinf, windows-shuttle, windows-tinted, windows-uranium, windows-uranium-reinf, doors, marble, puddles ] # Floof - Flooding: every window type, doors
       base: splat
   - type: Puddle
   - type: Solution
     id: puddle
+    solution: # Floof - Flooding
+      maxVol: 300000 # Floof - Flooding: full tile, see FloodConstants.TileVolume
   - type: MixableSolution
     solution: puddle
   - type: Appearance

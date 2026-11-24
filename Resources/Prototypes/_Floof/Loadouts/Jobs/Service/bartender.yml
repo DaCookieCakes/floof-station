@@ -1,0 +1,21 @@
+# Head
+- type: loadout
+  id: SodaJerkHat
+  groupBy: BartenderGear
+  equipment:
+    head: ClothingHeadHatSodaJerk
+
+# Gloves
+- type: loadout
+  id: BartenderArmWarmers
+  groupBy: BartenderGear
+  equipment:
+    gloves: ClothingHandsBartenderWarmers
+
+# Socks
+- type: loadout
+  id: BartenderThighHighs
+  groupBy: BartenderGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksBartender
+

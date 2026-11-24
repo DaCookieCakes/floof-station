@@ -1,0 +1,131 @@
+#include "/Textures/_Floof/Shaders/ocean_shared.swsl"
+
+uniform highp vec3 map_light;
+
+const highp float schoolLane = 13.0;
+const highp float schoolGap = 34.0;
+const highp float schoolLife = 25.0;
+const highp float fishCell = 0.55;
+
+highp float smoothNoise(highp vec2 p) {
+    highp vec2 i = floor(p);
+    highp vec2 f = fract(p);
+    f = f * f * (3.0 - 2.0 * f);
+    return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
+        mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+}
+
+highp float murk(highp vec2 p) {
+    return smoothNoise(p) * 0.55 + smoothNoise(p * 2.1 + 9.0) * 0.3 + smoothNoise(p * 4.3 + 21.0) * 0.15;
+}
+
+highp float shafts(highp vec2 world) {
+    highp float slant = world.x + world.y * 0.45;
+    highp float wide = smoothNoise(vec2(slant * 0.16 + TIME * 0.03, world.y * 0.012));
+    highp float thin = smoothNoise(vec2(slant * 0.43 - TIME * 0.05, world.y * 0.02 + 7.0));
+    return smoothstep(0.5, 0.95, wide * 0.65 + thin * 0.35);
+}
+
+highp float fishShape(highp vec2 p, highp float size, highp float height) {
+    highp float body = 1.0 - step(1.0, dot(p / vec2(size, height), p / vec2(size, height)));
+    highp float behind = -p.x - size * 0.75;
+    highp float tail = step(0.0, behind) * step(behind, size * 0.55) * step(abs(p.y), behind * 0.9);
+    return max(body, tail);
+}
+
+highp float schoolBody(highp vec2 p, highp vec2 born) {
+    highp float body = 0.0;
+    for (int i = 0; i < 3; i++) {
+        highp float n = float(i);
+        highp float tilt = (hash(born + 20.0 + n) - 0.5) * 0.7;
+        highp vec2 d = p - (vec2(hash(born + 30.0 + n), hash(born + 40.0 + n)) - 0.5) * vec2(6.0, 2.0);
+        highp vec2 local = vec2(d.x * cos(tilt) + d.y * sin(tilt), d.y * cos(tilt) - d.x * sin(tilt));
+        local /= vec2(3.0 + hash(born + 50.0 + n) * 3.5, 0.7 + hash(born + 60.0 + n) * 0.9);
+        body = max(body, 1.0 - dot(local, local));
+    }
+
+    return body;
+}
+
+highp vec2 schools(highp vec2 world) {
+    highp float row = floor(world.y / schoolLane);
+    highp float dir = step(0.5, hash(vec2(row, 5.0))) * 2.0 - 1.0;
+    highp float speed = 0.3 + hash(vec2(row, 9.0)) * 0.4;
+    highp float x = world.x - dir * speed * TIME;
+    highp float cell = floor(x / schoolGap);
+    highp vec2 id = vec2(cell, row);
+
+    highp float cycle = riseProgress(schoolLife) + hash(id + 1.0) * 7.0;
+    highp float t = fract(cycle);
+    highp vec2 born = id + floor(cycle) * 17.0;
+    if (hash(born + 2.0) < 0.5)
+        return vec2(0.0);
+
+    highp vec2 center = vec2((cell + 0.5) * schoolGap, (row + 0.5) * schoolLane + 1.5);
+    highp float near = riseNear(t);
+    highp vec2 rel = (vec2(x, world.y) - center + vec2(0.0, near * 3.0)) / mix(0.6, 1.0, near);
+    if (dot(rel / vec2(11.0, 5.5), rel / vec2(11.0, 5.5)) > 1.0)
+        return vec2(0.0);
+
+    highp vec2 here = floor(rel / fishCell);
+    for (int i = -1; i <= 1; i++) {
+        for (int j = -1; j <= 1; j++) {
+            highp vec2 fish = here + vec2(float(i), float(j));
+            highp float seed = hash(fish + born * 3.0);
+            if (seed > 0.85)
+                continue;
+
+            highp vec2 home = (fish + vec2(hash(fish + born + 4.0), hash(fish + born + 6.0))) * fishCell;
+            highp vec2 wander = vec2(sin(TIME * (0.2 + seed * 0.3) + seed * 40.0), cos(TIME * (0.15 + seed * 0.25) + seed * 70.0)) * 0.18;
+            highp vec2 pos = home + wander;
+
+            highp float heading = (hash(fish + born + 8.0) - 0.5) * 0.5;
+            highp vec2 d = rel - pos;
+            highp vec2 local = vec2(d.x * cos(heading) + d.y * sin(heading), d.y * cos(heading) - d.x * sin(heading));
+            local.x *= dir;
+            local.y += sin(TIME * 6.0 + seed * 40.0 + local.x * 18.0) * 0.012;
+
+            highp float fishLength = 0.08 + hash(fish + born + 10.0) * 0.035;
+            if (fishShape(local, fishLength, fishLength * 0.35) <= 0.0)
+                continue;
+
+            if (seed < clamp(schoolBody(home, born) * 1.6, 0.0, 0.85))
+                return vec2(riseFade(t), near);
+        }
+    }
+
+    return vec2(0.0);
+}
+
+void fragment() {
+    highp vec2 world = toWorld(FRAGCOORD.xy - world_origin);
+
+    highp float strength = max(map_light.r, max(map_light.g, map_light.b));
+    highp vec3 hue = map_light / max(strength, 0.0001);
+    highp float brightness = min(strength, 1.0);
+
+    highp float cloud = murk(world * 0.07 + vec2(TIME * 0.012, TIME * 0.007));
+    highp vec3 shallow = surfaceBase() * hue * mix(0.85, 1.2, cloud);
+    highp vec3 blue = shallow * vec3(0.55, 0.75, 1.1);
+    highp vec3 lit = mix(blue, shallow, brightness);
+    highp vec3 water = mix(deepDark, lit, sqrt(brightness));
+
+    water += shallow * shafts(world) * brightness * 0.6;
+
+    highp vec2 school = schools(world);
+    highp vec3 fishColor = water * mix(0.2, 0.7, school.y);
+    water = mix(water, fishColor, school.x * smoothstep(0.02, 0.2, brightness) * 0.9);
+
+    water = max(water, lampWater(max(LIGHT.rgb - map_light, vec3(0.0))));
+    LIGHT = vec4(1.0);
+
+    highp float glow = deepGlow(world);
+    water += blipColor * glow;
+
+    highp float speck = speckLayers(world);
+    speck *= mix(0.12, 0.55, brightness) * (1.0 - smoothstep(0.3, 0.7, brightness));
+    water += speckColor * speck;
+
+    COLOR = vec4(water, 1.0);
+    MODULATE = vec4(1.0);
+}

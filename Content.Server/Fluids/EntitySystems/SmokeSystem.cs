@@ -20,6 +20,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Linq;
 using Content.Shared.Body.Systems;
+using Content.Server.Body.Components; // DeltaV
 using Content.Shared.EntityEffects.Effects.Solution;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 
@@ -260,7 +261,9 @@ public sealed partial class SmokeSystem : EntitySystem
         if (!_solutionContainerSystem.ResolveSolution(entity, bloodstream.BloodSolutionName, ref bloodstream.BloodSolution, out var bloodSolution) || bloodSolution.AvailableVolume <= 0)
             return;
 
-        var blockIngestion = _internals.AreInternalsWorking(entity);
+        // Starlight - Shadekin does not breathe and "AreInternalsWorking" does not check for that
+        var blockIngestion = _internals.AreInternalsWorking(entity)
+            || !HasComp<RespiratorComponent>(entity);
 
         var cloneSolution = solution.Clone();
         var availableTransfer = FixedPoint2.Min(cloneSolution.Volume, component.TransferRate);

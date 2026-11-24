@@ -1,0 +1,76 @@
+- type: vendingMachineInventory
+  id: SwimvendInventory
+  startingInventory:
+    # Floof Section - beach gear
+    ClothingUnderTopCoconut: 3
+    ClothingUnderBottomCoconutSkirt: 3
+    ClothingUniformFishsuit: 3
+    ClothingUnderBottomGrassSkirt: 3
+    ClothingUnderTopOnepieceHeart: 4
+    ClothingUnderTopHonkini: 3
+    ClothingUnderBottomSwimShortsMedical: 3
+    ClothingUnderTopMedkini: 3
+    ClothingUnderBottomMedkini: 3
+    ClothingUniformMermaid: 3
+    ClothingUniformNinjaSurfsuit: 2
+    ClothingUnderTopBikiniNt: 3
+    ClothingUnderBottomBikiniNt: 3
+    ClothingUnderTopOnepieceVintage: 3
+    ClothingUnderTopShirtkini: 3
+    ClothingUnderBottomSpeedo: 4
+    ClothingUniformSundress: 3
+    ClothingUnderTopSyndikini: 3
+    ClothingUnderBottomSyndikini: 3
+    ClothingUniformWetsuitOrange: 3
+    # Floof Section End
+    # Other clothing
+    ClothingHeadHatClownSunhat: 3
+    ClothingHeadHatSunhat: 4
+    ClothingShoesClownSandals: 3
+    ClothingShoesSandalsBlack: 10 # Floof - beach gear
+    ClothingShoesFlipflopsBlack: 5 # Floof - beach gear
+    ClothingShoesAngelSandals: 2 # Floof - beach gear
+    # Accessories
+    ClothingNeckLifeguardWhistle: 4
+    PlushieLifeguardBuoy: 4
+    BeachBall: 5
+    ClothingEyesGlassesCheapSunglasses: 10
+    ClothingEyesGlassesSunglasses: 2
+    # Floof Section - beach gear
+    # Generic Bikini Color Variants
+    ClothingUnderTopBikiniWhite: 4
+    ClothingUnderBottomBikiniWhite: 4
+    ClothingUnderTopBikiniBlack: 4
+    ClothingUnderBottomBikiniBlack: 4
+    ClothingUnderTopBikiniBlue: 4
+    ClothingUnderBottomBikiniBlue: 4
+    ClothingUnderTopBikiniRed: 3
+    ClothingUnderBottomBikiniRed: 3
+    ClothingUnderTopBikiniGreen: 3
+    ClothingUnderBottomBikiniGreen: 3
+    ClothingUnderTopBikiniYellow: 3
+    ClothingUnderBottomBikiniYellow: 3
+    ClothingUnderTopBikiniPink: 3
+    ClothingUnderBottomBikiniPink: 3
+    # Generic One-piece Color Variants
+    ClothingUnderTopOnepieceWhite: 4
+    ClothingUnderTopOnepieceBlack: 4
+    ClothingUnderTopOnepieceBlue: 4
+    ClothingUnderTopOnepieceRed: 3
+    ClothingUnderTopOnepieceGreen: 3
+    ClothingUnderTopOnepieceYellow: 3
+    ClothingUnderTopOnepiecePink: 3
+    # Generic Shorts Variants
+    ClothingUnderBottomSwimShortsWhite: 4
+    ClothingUnderBottomSwimShortsBlack: 4
+    ClothingUnderBottomSwimShortsBlue: 4
+    ClothingUnderBottomSwimShortsRed: 3
+    ClothingUnderBottomSwimShortsGreen: 3
+    ClothingUnderBottomSwimShortsYellow: 3
+    ClothingUnderBottomSwimShortsPink: 3
+    # Towels
+    TowelColorWhite: 3
+    # Floof Section End
+    TowelColorNT: 3
+    TowelColorCentcom: 2
+    TowelColorSyndicate: 1

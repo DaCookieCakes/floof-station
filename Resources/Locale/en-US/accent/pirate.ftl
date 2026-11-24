@@ -98,3 +98,6 @@ accent-pirate-replacement-31 = musket
 
 accent-pirate-replaced-32 = ammo
 accent-pirate-replacement-32 = gunpowder
+
+accent-pirate-words-33 = feroxi
+accent-pirate-replacement-33 = seafolk

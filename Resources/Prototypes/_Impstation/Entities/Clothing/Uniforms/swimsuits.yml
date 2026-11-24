@@ -1,0 +1,74 @@
+- type: entity
+  parent: [ClothingSwimsuitBase]
+  id: ClothingSwimsuitGreen
+  name: green swimsuit
+  description: The poms are synthetic, if you were wondering.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_green.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_green.rsi
+
+- type: entity
+  parent: [ClothingSwimsuitBase]
+  id: ClothingSwimsuitBlue
+  name: blue swimsuit
+  description: A wetsuit, perfect for diving for clams! Only clams.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_blue.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_blue.rsi
+  
+- type: entity
+  parent: [ClothingSwimsuitBase]
+  id: ClothingSwimsuitMagenta
+  name: magenta swimsuit
+  description: Legally distinct from the classic Hawaian shirt, as this is waterproof.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_magenta.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_magenta.rsi
+
+- type: entity
+  parent: [ClothingSwimsuitBase]
+  id: ClothingSwimsuitBlack
+  name: black and white swimsuit
+  description: Prevents sunburns specifically on your face!
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_black.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-open
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_black.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodSwimsuitBlack 
+    requiredSlot:
+    - innerclothing
+    slot: head
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-zip-verb
+    foldVerbText: fold-unzip-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: open
+  - type: ContainerContainer #greycloak has this and greycloak also has folding and hood functions #seeing if this fixes testfail
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: [ClothingSwimsuitBase]
+  id: ClothingSwimsuitGay
+  name: rainbow swimsuit
+  description: Tied and dyed! 
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_gay.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Uniforms/Other/Swimsuits/swimsuit_gay.rsi

@@ -3,6 +3,7 @@
   parent: [BaseItem, BaseSecurityCommandContraband]
   abstract: true
   components:
+  - type: FloodMask # Floof - flooding
   - type: Item
     size: Small
     storedRotation: 90

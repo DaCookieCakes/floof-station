@@ -1,0 +1,57 @@
+# Glassesmui
+- type: loadout
+  id: MedicalHud
+  groupBy: "MedicalGear"
+  equipment:
+    eyes: ClothingEyesHudMedical
+
+- type: loadout
+  id: PrescriptionMedicalHud
+  groupBy: "MedicalGear"
+  equipment:
+    eyes: ClothingEyesPrescriptionMedHud
+
+# Collars
+- type: loadout
+  id: ClothingNeckCollarMed
+  equipment:
+    neck: ClothingNeckCollarMed
+
+# Coats
+- type: loadout
+  id: MedicalLabCoat
+  groupBy: "MedicalGear"
+  equipment:
+    outerClothing: ClothingOuterCoatLabMedical
+
+- type: loadout
+  id: LongLabCoat
+  groupBy: "CommonGear"
+  equipment:
+    outerClothing: ClothingOuterCoatLabLong
+
+- type: loadout
+  id: MedicalLongLabCoat
+  groupBy: "MedicalGear"
+  equipment:
+    outerClothing: ClothingOuterCoatLabLongMedical
+
+# Gloves
+- type: loadout
+  id: NitrileGloves
+  groupBy: CommonGear
+  equipment:
+    gloves: ClothingHandsGlovesNitrile
+
+- type: loadout
+  id: MedicalArmWarmers
+  groupBy: MedicalGear
+  equipment:
+    gloves: ClothingHandsMedicWarmers
+
+# Socks
+- type: loadout
+  id: MedicalThighHighs
+  groupBy: MedicalGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksMedic

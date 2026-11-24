@@ -1,0 +1,26 @@
+- type: entity
+  name: trash bag
+  id: TrashBagBlue
+  parent: TrashBag
+  components:
+    - type: Sprite
+      layers:
+        - state: blue-icon-0
+          map: ["enum.StorageFillLayers.Fill"]
+    - type: Item
+      heldPrefix: blue
+    - type: StorageFillVisualizer
+      fillBaseName: blue-icon
+
+- type: entity
+  name: spell of all-consuming cleanliness
+  id: BagOfSummoningGarbage
+  parent: TrashBagBlue
+  components:
+    - type: Storage
+      maxItemSize: Huge
+      grid:
+        - 0,0,19,9
+      quickInsert: true
+      areaInsert: true
+      areaInsertRadius: 5

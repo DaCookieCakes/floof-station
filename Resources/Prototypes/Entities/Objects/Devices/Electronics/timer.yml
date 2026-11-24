@@ -35,6 +35,7 @@
   parent: SignalTimerElectronics
   name: brig timer electronics
   components:
+  - type: FloodMask # Floof - flooding
   - type: Construction
     deconstructionTarget: null
     graph: TimerElectronics

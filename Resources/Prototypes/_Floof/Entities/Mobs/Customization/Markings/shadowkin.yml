@@ -1,0 +1,66 @@
+- type: marking
+  id: EarsShadowkin
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/ears.rsi
+      state: shadowkin
+
+- type: marking
+  id: EarsShadowkinStriped
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+    layers:
+      shadowkin_stripes:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/ears.rsi
+      state: shadowkin
+    - sprite: _Floof/Mobs/Customization/Shadowkin/ears.rsi
+      state: shadowkin_stripes
+
+- type: marking
+  id: TailShadowkin
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/tails64x32.rsi
+      state: shadowkin
+
+- type: marking
+  id: TailShadowkinBig
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/tails64x32.rsi
+      state: shadowkin_big
+
+- type: marking
+  id: TailShadowkinBigFluff
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/tails64x32.rsi
+      state: shadowkin_big_fluff
+
+- type: marking
+  id: TailShadowkinShorter
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/tails32x32.rsi
+      state: shadowkin_shorter
+
+- type: marking
+  id: TailShadowkinMedium
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+    - sprite: _Floof/Mobs/Customization/Shadowkin/tails32x32.rsi
+      state: shadowkin_medium
+

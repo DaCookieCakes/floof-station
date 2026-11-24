@@ -38,7 +38,7 @@ public sealed partial class GasTileFireOverlay : Overlay
     // TODO combine textures into a single texture atlas.
     private readonly Texture[][] _frames;
 
-    private const int FireStates = 3;
+    private const int FireStates = 6; // Floof - tile fires
     private const string FireRsiPath = "/Textures/Effects/fire.rsi";
 
     public const int GasOverlayZIndex = (int)Shared.DrawDepth.DrawDepth.Effects; // Under ghosts, above mostly everything else
@@ -156,7 +156,7 @@ public sealed partial class GasTileFireOverlay : Overlay
                         if (!localBounds.Contains(index))
                             continue;
 
-                        var fireState = gas.FireState - 1;
+                        var fireState = gas.FireState - 1 + gas.FireType * 3; // Floof - tile fires
                         var texture = state.frames[fireState][state.frameCounter[fireState]];
                         state.drawHandle.DrawTexture(texture, index);
                     }

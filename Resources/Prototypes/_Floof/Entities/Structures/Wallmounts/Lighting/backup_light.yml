@@ -1,0 +1,60 @@
+- type: entity
+  parent: [ BaseWallLight, BaseLightHousingDestructible ]
+  id: BackupLight
+  name: backup light
+  description: A small light with an internal battery that turns on as soon as it stops receiving any power.
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/Lighting/emergency-light.rsi
+    layers:
+    - state: base
+      map: [ "enum.EmergencyLightVisualLayers.Base" ]
+    - state: emergency_light_off
+      map: [ "enum.EmergencyLightVisualLayers.LightOff" ]
+      color: "#FFD700"
+    - state: emergency_light_on
+      map: [ "enum.EmergencyLightVisualLayers.LightOn" ]
+      color: "#FFD700"
+      shader: "unshaded"
+      visible: false
+  - type: PointLight
+    enabled: false
+    color: "#FFD1A3"
+    radius: 3
+    energy: 0.4
+    softness: 1.1
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.EmergencyLightVisuals.On:
+        enum.EmergencyLightVisualLayers.LightOff:
+          True: { visible: false }
+          False: { visible: true }
+        enum.EmergencyLightVisualLayers.LightOn:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ApcPowerReceiver
+  - type: ExtensionCableReceiver
+  - type: Battery
+    # Very important:
+    # Disable networking to prevent the battery getting continuously dirtied every tick as it interacts with the power network.
+    # This can not be done by changing the charge rate as the power supply ramps up over time.
+    # This disables prediction for this battery.
+    netsync: false
+    maxCharge: 30000
+    startingCharge: 30000
+  - type: BackupLight
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+          ShardGlass:
+            min: 1
+            max: 1

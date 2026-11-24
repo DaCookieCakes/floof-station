@@ -1,0 +1,50 @@
+# brute
+- type: reagent
+  id: SalicylicAcid
+  name: reagent-name-salicylicacid
+  group: Medicine
+  desc: reagent-desc-salicylicacid
+  physicalDesc: reagent-physical-desc-mucus-like
+  flavor: medicine
+  color: "#f9e0e9"
+  metabolisms:
+    Bloodstream:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          conditions:
+            - !type:TotalDamageCondition
+              max: 30
+          damage:
+            types:
+              Blunt: -0.2
+              Piercing: -0.2
+              Slash: -0.2
+        - !type:HealthChange
+          conditions:
+            - !type:TotalDamageCondition
+              min: 30
+          damage:
+            types:
+              Blunt: -0.8
+              Piercing: -0.8
+              Slash: -0.8
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: SalicylicAcid
+              min: 15.5
+          damage: # ODing causes damage but heals brute
+            types:
+              Heat: 0.5
+              Shock: 0.5
+              Cold: 0.5
+              Caustic: 0.5
+              Blunt: -0.8
+              Piercing: -0.8
+              Slash: -0.8
+        - !type:Jitter
+          conditions:
+            - !type:ReagentCondition
+              reagent: SalicylicAcid
+              min: 15.5

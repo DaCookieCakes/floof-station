@@ -4,6 +4,7 @@
   name: handheld radio
   description: A handy handheld radio.
   components:
+  - type: FloodMask # Floof - flooding
   - type: TelecomExempt
   - type: RadioMicrophone
     broadcastChannel: Handheld

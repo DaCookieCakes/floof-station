@@ -53,3 +53,4 @@
     providedRecipes:
     - DoubleEmergencyOxygenTank
     - DoubleEmergencyNitrogenTank
+    - LatheRecipeDoubleEmergencyWaterVaporTank # Floof: Added.

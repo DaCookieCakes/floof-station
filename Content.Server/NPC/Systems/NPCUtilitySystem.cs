@@ -34,6 +34,8 @@ using Microsoft.Extensions.ObjectPool;
 using Robust.Server.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Server._Starlight.NPC.Queries.Considerations; // Starlight
+using Content.Shared.Projectiles; // Starlight
 
 namespace Content.Server.NPC.Systems;
 
@@ -389,6 +391,15 @@ public sealed partial class NPCUtilitySystem : EntitySystem
                         return 0f;
 
                     return temperature.Temperature <= con.MinTemp ? 1f : 0f;
+                }
+            // Starlight
+            case PDTargetIFFCon con:
+                {
+                    if (TryComp<ProjectileComponent>(targetUid, out var projectile) && projectile.Shooter is not null)
+                        if (Transform(owner).GridUid == Transform(projectile.Shooter.Value).GridUid)
+                            return 0f;
+
+                    return 1f;
                 }
             default:
                 throw new NotImplementedException();

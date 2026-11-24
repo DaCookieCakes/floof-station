@@ -1,0 +1,31 @@
+# Feroxi Meat
+- type: constructionGraph
+  id: ConstructionGraphFeroxiSteak
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: feroxi steak
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+  - node: feroxi steak
+    entity: FoodMeatFeroxiCooked
+
+# Feroxi Cutlet
+- type: constructionGraph
+  id: ConstructionGraphFeroxiCutlet
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: feroxi cutlet
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+  - node: feroxi cutlet
+    entity: FoodMeatFeroxiCutletCooked

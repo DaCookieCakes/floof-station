@@ -6,6 +6,7 @@
     startingInventory:
       OxygenTankFilled: 10
       NitrogenTankFilled: 10
+      TankWaterFilled: 10 # Floof: Added.
 
 - type: vendingMachineInventory
   id: TankDispenserEngineeringInventory
@@ -16,3 +17,4 @@
       PlasmaTankFilled: 10
       NitrogenTankFilled: 10
       OxygenTankFilled: 10
+      TankWaterFilled: 10 # Floof: Added.

@@ -25,6 +25,7 @@
   parent: OxygenTank
   suffix: Filled
   components:
+  - type: FloodMask # Floof - flooding
   - type: GasTank
     releasePressure: 21.3
     air:
@@ -158,6 +159,7 @@
   suffix: Filled
   name: nitrogen tank
   components:
+  - type: FloodMask # Floof - flooding
   - type: GasTank
     air:
       # 31 minutes

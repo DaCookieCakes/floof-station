@@ -1,0 +1,64 @@
+- type: marking
+  id: ResomiTail
+  bodyPart: Chest
+  forcedColoring: true
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: tail
+
+- type: marking
+  id: ResomiTailFeathers
+  bodyPart: Chest
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: tail_feathers
+
+- type: marking
+  id: ResomiLArmFeathers
+  bodyPart: LHand
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: l_hand_feathers
+
+- type: marking
+  id: ResomiLLegFeathers
+  bodyPart: LFoot
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: l_foot_feathers
+
+- type: marking
+  id: ResomiRArmFeathers
+  bodyPart: RHand
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: r_hand_feathers
+
+- type: marking
+  id: ResomiRLegFeathers
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: r_foot_feathers
+
+- type: marking
+  id: ResomiFluff
+  bodyPart: Chest
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: fluff
+
+- type: marking
+  id: ResomiFluffHead
+  bodyPart: Head
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: fluff_head
+
+- type: marking
+  id: ResomiFluffHeadUp
+  bodyPart: Head
+  sprites:
+  - sprite: _Floof/Mobs/Customization/resomi_parts.rsi
+    state: fluff_head_up
+

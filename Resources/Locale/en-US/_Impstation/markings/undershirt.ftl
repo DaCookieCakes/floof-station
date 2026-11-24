@@ -1,0 +1,11 @@
+marking-UndershirtSleeveless = Tanktop
+marking-UndershirtRolled = Undershirt (Rolled)
+marking-UndershirtRolledSleeveless = Tanktop (Rolled)
+marking-UndershirtDefault = Undershirt (Default)
+marking-UndershirtDefault-undershirt = Undershirt
+marking-UndershirtGrossSleeveless = Tanktop (Gross)
+marking-UndershirtGrossSleeveless-gross_sleeveless = Tanktop
+marking-UndershirtNanotrasen = Undershirt (Nanotrasen)
+marking-UndershirtNanotrasen-nanotrasen = Undershirt
+marking-UndershirtBraStrapless = Bra (Strapless)
+marking-UndershirtBraStrapless-strapless = Bra

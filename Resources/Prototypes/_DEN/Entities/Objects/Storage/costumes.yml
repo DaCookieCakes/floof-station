@@ -1,0 +1,137 @@
+- type: entity
+  parent: BaseCostumeBundle
+  id: CostumeBundleBunnySuit
+  name: black bunny suit bundle
+  components:
+  - type: Sprite
+    layers:
+    - state: outfit-1
+      map: [ "enum.StorageFillLayers.Fill" ]
+      color: "#2e2e2e"
+    - state: wrapper-fill
+      color: "#ffffff22"
+    - state: wrapper
+    - state: label
+      color: "#454545"
+  - type: SpawnItemsOnUse # Floof - Unwrap bundles
+    items:
+    - id: ClothingUniformCostumeBunnySuit
+    - id: ClothingHeadBunnySuitHeadband
+    - id: ClothingNeckBunnySuitCollar
+    - id: ClothingHandsBunnySuitCuffs
+    - id: ClothingShoesBootsLaceup
+
+- type: entity
+  parent: CostumeBundleBunnySuit
+  id: CostumeBundleBunnySuitBlue
+  name: blue bunny suit bundle
+  components:
+  - type: Sprite
+    layers:
+    - state: outfit-1
+      map: [ "enum.StorageFillLayers.Fill" ]
+      color: "#2337ba"
+    - state: wrapper-fill
+      color: "#ffffff22"
+    - state: wrapper
+    - state: label
+      color: "#454545"
+  - type: SpawnItemsOnUse # Floof - Unwrap bundles
+    items:
+    - id: ClothingUniformCostumeBunnySuitBlue
+    - id: ClothingHeadBunnySuitHeadbandBlue
+    - id: ClothingNeckBunnySuitCollarBlue
+    - id: ClothingHandsBunnySuitCuffsBlue
+    - id: ClothingShoesBootsLaceup
+
+- type: entity
+  parent: CostumeBundleBunnySuit
+  id: CostumeBundleBunnySuitGreen
+  name: green bunny suit bundle
+  components:
+  - type: Sprite
+    layers:
+    - state: outfit-1
+      map: [ "enum.StorageFillLayers.Fill" ]
+      color: "#2f8c23"
+    - state: wrapper-fill
+      color: "#ffffff22"
+    - state: wrapper
+    - state: label
+      color: "#454545"
+  - type: SpawnItemsOnUse # Floof - Unwrap bundles
+    items:
+    - id: ClothingUniformCostumeBunnySuitGreen
+    - id: ClothingHeadBunnySuitHeadbandGreen
+    - id: ClothingNeckBunnySuitCollarGreen
+    - id: ClothingHandsBunnySuitCuffsGreen
+    - id: ClothingShoesBootsLaceup
+
+- type: entity
+  parent: CostumeBundleBunnySuit
+  id: CostumeBundleBunnySuitPink
+  name: pink bunny suit bundle
+  components:
+  - type: Sprite
+    layers:
+    - state: outfit-1
+      map: [ "enum.StorageFillLayers.Fill" ]
+      color: "#db3b66"
+    - state: wrapper-fill
+      color: "#ffffff22"
+    - state: wrapper
+    - state: label
+      color: "#454545"
+  - type: SpawnItemsOnUse # Floof - Unwrap bundles
+    items:
+    - id: ClothingUniformCostumeBunnySuitPink
+    - id: ClothingHeadBunnySuitHeadbandPink
+    - id: ClothingNeckBunnySuitCollarPink
+    - id: ClothingHandsBunnySuitCuffsPink
+    - id: ClothingShoesBootsLaceup
+
+- type: entity
+  parent: CostumeBundleBunnySuit
+  id: CostumeBundleBunnySuitRed
+  name: red bunny suit bundle
+  components:
+  - type: Sprite
+    layers:
+    - state: outfit-1
+      map: [ "enum.StorageFillLayers.Fill" ]
+      color: "#a6152d"
+    - state: wrapper-fill
+      color: "#ffffff22"
+    - state: wrapper
+    - state: label
+      color: "#454545"
+  - type: SpawnItemsOnUse # Floof - Unwrap bundles
+    items:
+    - id: ClothingUniformCostumeBunnySuitRed
+    - id: ClothingHeadBunnySuitHeadbandRed
+    - id: ClothingNeckBunnySuitCollarRed
+    - id: ClothingHandsBunnySuitCuffsRed
+    - id: ClothingShoesBootsLaceup
+
+- type: entity
+  parent: CostumeBundleBunnySuit
+  id: CostumeBundleBunnySuitWhite
+  name: white bunny suit bundle
+  components:
+  - type: Sprite
+    layers:
+    - state: outfit-1
+      map: [ "enum.StorageFillLayers.Fill" ]
+      color: "#dbcdca"
+    - state: wrapper-fill
+      color: "#ffffff22"
+    - state: wrapper
+    - state: label
+      color: "#454545"
+  - type: SpawnItemsOnUse # Floof - Unwrap bundles
+    items:
+    - id: ClothingUniformCostumeBunnySuitWhite
+    - id: ClothingHeadBunnySuitHeadbandWhite
+    - id: ClothingNeckBunnySuitCollarWhite
+    - id: ClothingHandsBunnySuitCuffsWhite
+    - id: ClothingShoesBootsLaceup

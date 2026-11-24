@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Body;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -18,6 +19,8 @@ public sealed partial class OrganMarkingPicker : Control
     private readonly HashSet<HumanoidVisualLayers> _layers;
     private readonly ProtoId<MarkingsGroupPrototype> _group;
     private readonly ProtoId<OrganCategoryPrototype> _organ;
+
+    public ProtoId<OrganCategoryPrototype> Organ => _organ;
 
     public OrganMarkingPicker(MarkingsViewModel markingsModel, ProtoId<OrganCategoryPrototype> organ, HashSet<HumanoidVisualLayers> layers, ProtoId<MarkingsGroupPrototype> group)
     {
@@ -61,25 +64,93 @@ public sealed partial class OrganMarkingPicker : Control
         if (!_markingsModel.OrganProfileData.TryGetValue(_organ, out var organProfileData))
             return;
 
+        var layerTabs = LayerTabs.Children.ToList();
         LayerTabs.RemoveAllChildren();
-        var i = 0;
-        foreach (var layer in _layers)
+
+        var (toAdd, toRemove) =
+            GetLayerTabChanges(_layers, layerTabs, _markingsModel);
+
+        foreach (var tab in toRemove)
+            layerTabs.Remove(tab);
+
+        foreach (var layer in toAdd)
         {
             var allMarkings =
-                _markingsModel.EnforceGroupAndSexRestrictions ? _marking.MarkingsByLayerAndGroupAndSex(layer, _group, organProfileData.Sex) : _marking.MarkingsByLayer(layer);
+                _markingsModel.EnforceGroupAndSexRestrictions
+                    ? _marking.MarkingsByLayerAndGroupAndSex(layer, _group, organProfileData.Sex)
+                    : _marking.MarkingsByLayer(layer);
 
             if (allMarkings.Count == 0)
                 continue;
 
-            var control = new LayerMarkingPicker(_markingsModel, _organ, layer, allMarkings);
-            LayerTabs.AddChild(control);
-            if (_loc.TryGetString($"markings-layer-{layer}-{_group.Id}", out var layerTitle))
-                LayerTabs.SetTabTitle(i, layerTitle);
-            else
-                LayerTabs.SetTabTitle(i, _loc.GetString($"markings-layer-{layer}"));
-            i++;
+            layerTabs.Add(new LayerMarkingPicker(_markingsModel, _organ, layer, allMarkings));
         }
 
-        LayerTabs.TabsVisible = i > 1;
+        foreach (var layer in _layers)
+        {
+            var control = layerTabs
+                .OfType<LayerMarkingPicker>()
+                .FirstOrDefault(x => x.Equals(_organ, layer, _markingsModel.EnforceGroupAndSexRestrictions));
+
+            if (control is null)
+                continue;
+
+            LayerTabs.AddChild(control);
+
+            if (_loc.TryGetString($"markings-layer-{layer}-{_group.Id}", out var layerTitle))
+                LayerTabs.SetTabTitle(LayerTabs.ChildCount - 1, layerTitle);
+            else
+                LayerTabs.SetTabTitle(LayerTabs.ChildCount - 1, _loc.GetString($"markings-layer-{layer}"));
+        }
+
+        LayerTabs.TabsVisible = LayerTabs.ChildCount > 1;
     }
+
+    private (
+        List<HumanoidVisualLayers> ToAdd,
+        List<LayerMarkingPicker> ToRemove)
+        GetLayerTabChanges(
+            HashSet<HumanoidVisualLayers> layers,
+            List<Control> layerTabs,
+            MarkingsViewModel markingsModel)
+    {
+        var toAdd = new List<HumanoidVisualLayers>(layers);
+        var toRemove = new List<LayerMarkingPicker>();
+
+        foreach (var control in layerTabs)
+        {
+            if (control is not LayerMarkingPicker layerTab)
+                continue;
+
+            var found = false;
+
+            foreach (var layer in layers)
+            {
+                if (!layerTab.Equals(
+                        _organ,
+                        layer,
+                        markingsModel.EnforceGroupAndSexRestrictions))
+                    continue;
+
+                toAdd.Remove(layer);
+                found = true;
+                break;
+            }
+
+            if (!found)
+                toRemove.Add(layerTab);
+        }
+
+        return (toAdd, toRemove);
+    }
+    
+    public bool Reordering => LayerTabs.Children.OfType<LayerMarkingPicker>().Any(x => x.Reordering);
+
+    public bool Equals(MarkingsViewModel markingsModel, ProtoId<OrganCategoryPrototype> organ,
+        HashSet<HumanoidVisualLayers> layers, ProtoId<MarkingsGroupPrototype> group, bool reordering = false) => 
+        _markingsModel == markingsModel
+        && Reordering == reordering
+        && _layers.SetEquals(layers)
+        && _group == group
+        && _organ == organ;
 }

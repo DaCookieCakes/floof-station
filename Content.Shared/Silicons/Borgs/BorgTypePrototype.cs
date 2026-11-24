@@ -5,6 +5,8 @@ using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
+using Robust.Shared.Utility;
 
 namespace Content.Shared.Silicons.Borgs;
 
@@ -13,12 +15,30 @@ namespace Content.Shared.Silicons.Borgs;
 /// </summary>
 /// <seealso cref="SharedBorgSwitchableTypeSystem"/>
 [Prototype]
-public sealed partial class BorgTypePrototype : IPrototype
+public sealed partial class BorgTypePrototype : IPrototype, IInheritingPrototype // Floofstation - inheritance for dogborg variants
 {
     private static readonly ProtoId<SoundCollectionPrototype> DefaultFootsteps = new("FootstepBorg");
 
     [IdDataField]
     public required string ID { get; set; }
+
+    // Floofstation - inheritance for dogborg variants
+    /// <inheritdoc/>
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<BorgTypePrototype>))]
+    public string[]? Parents { get; private set; }
+
+    /// <inheritdoc/>
+    [NeverPushInheritance]
+    [AbstractDataField]
+    public bool Abstract { get; private set; }
+
+    /// <summary>
+    /// If set, this type is a recolor of another type. It's hidden from the main list in the selection menu and
+    /// shown in that type's variant row instead.
+    /// </summary>
+    [DataField, NeverPushInheritance]
+    public ProtoId<BorgTypePrototype>? VariantOf;
+    // Floofstation end
 
     //
     // Description info (name/desc) is configured via localization strings directly.
@@ -88,6 +108,14 @@ public sealed partial class BorgTypePrototype : IPrototype
     [DataField]
     public ComponentRegistry? AddComponents { get; set; }
 
+    /// <summary>
+    ///     FLOOF SPECIFIC
+    ///     What kind of cyborg this belongs to. I.E. 'dogborg'
+    ///     Only borgs whose <see cref="BorgSwitchableTypeComponent.AllowedCategory"/> matches can pick this type.
+    /// </summary>
+    [DataField]
+    public string TypeCategory { get; set; } = BorgSwitchableTypeComponent.DefaultCategory;
+
     //
     // Visual information
     //
@@ -97,6 +125,15 @@ public sealed partial class BorgTypePrototype : IPrototype
     /// </summary>
     [DataField]
     public string SpriteBodyState { get; set; } = "robot";
+
+    // Floofstation - types with sprites outside the default borg RSI
+    /// <summary>
+    /// The RSI containing this type's sprite states. Used for the robotics console icon.
+    /// The chassis entity's own sprite must use the same RSI.
+    /// </summary>
+    [DataField]
+    public ResPath SpriteRsi { get; set; } = new("Mobs/Silicon/chassis.rsi");
+    // Floofstation end
 
     /// <summary>
     /// An optional movement sprite state for the main borg body.

@@ -1,20 +1,24 @@
 # Jumpsuit
 - type: loadout
   id: LibrarianJumpsuit
+  groupBy: LibrarianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitLibrarian
 
 - type: loadout
   id: LibrarianJumpskirt
+  groupBy: LibrarianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtLibrarian
 
 - type: loadout
   id: CuratorJumpsuit
+  groupBy: LibrarianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitCurator
 
 - type: loadout
   id: CuratorJumpskirt
+  groupBy: LibrarianGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtCurator

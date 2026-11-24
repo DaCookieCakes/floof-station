@@ -94,6 +94,15 @@ public abstract partial class SharedFirelockSystem : EntitySystem
                 user,
                 PopupType.MediumCaution);
         }
+        // Floof Section - flooding
+        else if (ent.Comp.Flood)
+        {
+            _popupSystem.PopupEntity(Loc.GetString("firelock-component-is-holding-flood-message"),
+                ent.Owner,
+                user,
+                PopupType.MediumCaution);
+        }
+        // Floof Section End
     }
 
     private void OnAfterPried(EntityUid uid, FirelockComponent component, ref PriedEvent args)
@@ -144,6 +153,8 @@ public abstract partial class SharedFirelockSystem : EntitySystem
                 args.PushMarkup(Loc.GetString("firelock-component-examine-pressure-warning"));
             if (ent.Comp.Temperature)
                 args.PushMarkup(Loc.GetString("firelock-component-examine-temperature-warning"));
+            if (ent.Comp.Flood) // Floof - flooding
+                args.PushMarkup(Loc.GetString("firelock-component-examine-flood-warning")); // Floof - flooding
         }
     }
 }

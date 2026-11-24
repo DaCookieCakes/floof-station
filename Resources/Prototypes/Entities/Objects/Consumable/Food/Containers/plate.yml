@@ -101,6 +101,7 @@
   name: small plate
   description: A small plate. Delicate.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Objects/Consumable/Food/plates.rsi
     state: plate-small

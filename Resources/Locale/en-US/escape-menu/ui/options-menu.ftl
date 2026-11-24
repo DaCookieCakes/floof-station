@@ -114,6 +114,7 @@ ui-options-fps-counter = Show FPS counter
 ui-options-vp-width = Viewport width:
 ui-options-hud-layout = HUD layout:
 ui-options-sharpness = Sharpness:
+ui-options-hud-chatbar = Chatbox max height:
 
 ## Controls menu
 
@@ -152,6 +153,8 @@ ui-options-function-move-down = Move Down
 ui-options-function-move-right = Move Right
 ui-options-function-walk = Walk
 ui-options-function-toggle-knockdown = Toggle Crawling
+# Floofstation
+ui-options-function-toggle-crawling-under = Toggle crawling under furniture
 
 ui-options-function-camera-rotate-left = Rotate left
 ui-options-function-camera-rotate-right = Rotate right

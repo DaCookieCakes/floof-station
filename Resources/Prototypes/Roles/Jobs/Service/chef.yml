@@ -1,5 +1,6 @@
 - type: job
   id: Chef
+  pay: 400 # Floof - bank
   name: job-name-chef
   description: job-description-chef
   playTimeTracker: JobChef
@@ -22,7 +23,7 @@
 - type: startingGear
   id: ChefGear
   equipment:
-    shoes: ClothingShoesChef
+  #  shoes: ClothingShoesChef # FLOOF
     id: ChefPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltChefFilled

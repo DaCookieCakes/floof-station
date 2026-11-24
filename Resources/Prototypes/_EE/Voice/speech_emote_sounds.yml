@@ -1,0 +1,67 @@
+- type: emoteSounds
+  id: UnisexHarpy
+  voiceSelectorName: humanoid-profile-editor-voice-neutral
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: HarpyScreams
+    Growl:
+      collection: HarpyGrowls
+    Laugh:
+      collection: HarpyLaugh
+    Sneeze:
+      collection: HarpySneezes
+    Chirp:
+      collection: HarpyChirps
+    Cough:
+      collection: HarpyCoughs
+    CatMeow:
+      collection: HarpyMeows
+    CatHisses:
+      collection: HarpyHisses
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+    RobotBeep:
+      collection: HarpyBeeps
+    Yawn:
+      collection: HarpyYawn
+    Snore:
+      collection: Snores
+    Chitter:
+      collection: HarpyChitter
+    Squeak:
+      collection: HarpySqueak
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Honk:
+      collection: HarpyHonks
+    Sigh:
+      collection: HarpySigh
+    Crying:
+      collection: HarpyCry
+    Hoot:
+      collection: HarpyHoots
+    Caw:
+      path: /Audio/_DV/Voice/Harpy/caw1.ogg
+    Rev:
+      collection: HarpyRevs
+    Bang:
+      collection: HarpyBangs
+    Pew:
+      collection: HarpyPews
+    Ring:
+      collection: HarpyRings
+    Purr:
+      collection: HarpyPurrs
+    Mew:
+      collection: HarpyMews
+    Gasp:
+      collection: HarpyGasp
+    Whine:
+      collection: HarpyWhines
+    DefaultDeathgasp:
+      collection: HarpyDeathGasp
+

@@ -1,5 +1,6 @@
 - type: job
   id: Librarian
+  pay: 400 # Floof - bank
   name: job-name-librarian
   description: job-description-librarian
   playTimeTracker: JobLibrarian
@@ -14,7 +15,7 @@
 - type: startingGear
   id: LibrarianGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
+  #  shoes: ClothingShoesBootsLaceup # FLOOF
     id: LibrarianPDA
     ears: ClothingHeadsetService
     pocket1: d20Dice

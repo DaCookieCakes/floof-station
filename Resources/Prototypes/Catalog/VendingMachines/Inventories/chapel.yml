@@ -8,6 +8,7 @@
       ClothingUniformJumpskirtChaplain: 2
       ClothingUniformJumpsuitMonasticRobeDark: 1
       ClothingUniformJumpsuitMonasticRobeLight: 1
+      ClothingUniformChaplainThong: 1 # FLOOF
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterHoodieChaplain }
     startingInventory:
@@ -38,6 +39,11 @@
       ClothingNeckScarfStripedBlack: 3
       ClothingHeadsetService: 2
       ClothingMaskPlague: 1
+      # FLOOF: Start
+      ClothingHandsChaplainWarmers: 2
+      ClothingUnderSocksChaplain: 2
+      # FLOOF: End1
+      TarotCardDeckBox: 1 # Moffstation - Add Tarot cards to the chapel vending machine.
     contrabandInventory:
       ClothingShoesCult: 4
       FoodBakedBunHotX: 2

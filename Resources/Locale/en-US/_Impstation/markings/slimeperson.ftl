@@ -1,0 +1,16 @@
+marking-SlimeNose = Nose (Profile)
+marking-SlimeNose-nose = Nose (Profile)
+marking-SlimeMouth = Mouth
+marking-SlimeMouth-mouth = Mouth
+marking-SlimeEyesDefault = Eyes
+marking-SlimeEyesDefault-eyes = Eyes (Default)
+marking-SlimeEyeglow = Glowing Eyes
+marking-SlimeEyeglow-glow = Glowing Eyes
+marking-SlimeEyesDroopy = Droopy Eyes
+marking-SlimeEyesDroopy-droopy = Droopy Eyes
+marking-SlimeEyesDroopyGlowing = Droopy Glowing Eyes
+marking-SlimeEyesDroopyGlowing-droopyglow = Droopy Glowing Eyes
+marking-SlimeEyesCyclops = Cyclops Eye
+marking-SlimeEyesCyclops-cyclops = Cyclops Eye
+marking-SlimeEyesCyclopsGlowing = Cyclops Glowing Eye
+marking-SlimeEyesCyclopsGlowing-cyclopsglow = Cyclops Glowing Eye

@@ -46,10 +46,10 @@ marking-TattooEyeVoxRight = Right Eye
 marking-TattooEyeVoxLeft-tattoo_eye_vox_l = Left Eye
 marking-TattooEyeVoxLeft = Left Eye
 
-marking-TattooEyeshadowUpper-tattoo_eyeshadow_upper = Eyeshadow (Upper)
+marking-TattooEyeshadowUpper-eyeshadow_upper = Eyeshadow (Upper)
 marking-TattooEyeshadowUpper = Eyeshadow (Upper)
 
-marking-TattooEyeshadowLower-tattoo_eyeshadow_lower = Eyeshadow (Lower)
+marking-TattooEyeshadowLower-eyeshadow_lower = Eyeshadow (Lower)
 marking-TattooEyeshadowLower = Eyeshadow (Lower)
 
 marking-TattooEyeshadowLowerReptilian-tattoo_eyeshadow_lower_reptilian = Eyeshadow (Lower)

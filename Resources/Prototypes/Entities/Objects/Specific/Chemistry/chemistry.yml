@@ -164,6 +164,10 @@
   description: Used to contain a moderate amount of chemicals and solutions.
   id: Beaker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Beaker.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Spillable
     solution: beaker
   - type: StaticPrice
@@ -182,6 +186,10 @@
   parent: Beaker
   id: CryoxadoneBeakerSmall
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/Beaker.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Label
     localizedLabel: reagent-name-cryoxadone
   - type: Solution
@@ -470,6 +478,7 @@
   parent: BaseSyringe
   id: Syringe
   components:
+  - type: FloodMask # Floof - flooding
   - type: Tag
     tags:
     - Syringe
@@ -655,6 +664,10 @@
   parent: BaseStorageItem
   description: Holds up to 10 pills.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/PillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Item
     size: Tiny
     sprite: Objects/Specific/Chemistry/pills_canister.rsi

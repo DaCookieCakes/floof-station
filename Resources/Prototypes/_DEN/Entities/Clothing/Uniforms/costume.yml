@@ -1,0 +1,51 @@
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformCostumeBunnySuit
+  name: bunny suit
+  description: The immortal uniform of cocktail service - its original context has been lost to the ages. The fishnet leggings can be folded in.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Costumes/bunnysuit.rsi
+  - type: Foldable
+    unfoldVerbText: unfold-verb
+    foldVerbText: fold-verb
+
+- type: entity
+  parent: ClothingUniformCostumeBunnySuit
+  id: ClothingUniformCostumeBunnySuitBlue
+  suffix: blue
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Costumes/bunnysuit_blue.rsi
+
+- type: entity
+  parent: ClothingUniformCostumeBunnySuit
+  id: ClothingUniformCostumeBunnySuitGreen
+  suffix: green
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Costumes/bunnysuit_green.rsi
+
+- type: entity
+  parent: ClothingUniformCostumeBunnySuit
+  id: ClothingUniformCostumeBunnySuitPink
+  suffix: pink
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Costumes/bunnysuit_pink.rsi
+
+- type: entity
+  parent: ClothingUniformCostumeBunnySuit
+  id: ClothingUniformCostumeBunnySuitRed
+  suffix: red
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Costumes/bunnysuit_red.rsi
+
+- type: entity
+  parent: ClothingUniformCostumeBunnySuit
+  id: ClothingUniformCostumeBunnySuitWhite
+  suffix: white
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Costumes/bunnysuit_white.rsi

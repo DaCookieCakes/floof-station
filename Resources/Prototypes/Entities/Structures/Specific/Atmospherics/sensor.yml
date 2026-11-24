@@ -38,6 +38,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/AirSensor.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Transform
     anchored: true
   - type: Damageable

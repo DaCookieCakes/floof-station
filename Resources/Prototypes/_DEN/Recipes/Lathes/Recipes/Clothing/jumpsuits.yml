@@ -1,0 +1,209 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseJumpsuitRecipe
+  id: BaseRandomJumpsuitRecipe
+  categories:
+  - Jumpsuits
+  - RandomClothes
+
+# Color uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorWhite
+  result: ClothingUniformJumpsuitColorWhite
+  categories:
+  - Jumpsuits
+  - Colorable
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorBlack
+  result: ClothingUniformJumpsuitColorBlack
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorBlue
+  result: ClothingUniformJumpsuitColorBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorYellow
+  result: ClothingUniformJumpsuitColorYellow
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorGreen
+  result: ClothingUniformJumpsuitColorGreen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorOrange
+  result: ClothingUniformJumpsuitColorOrange
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorRed
+  result: ClothingUniformJumpsuitColorRed
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorPurple
+  result: ClothingUniformJumpsuitColorPurple
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorPink
+  result: ClothingUniformJumpsuitColorPink
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorDarkBlue
+  result: ClothingUniformJumpsuitColorDarkBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorDarkGreen
+  result: ClothingUniformJumpsuitColorDarkGreen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorLightBrown
+  result: ClothingUniformJumpsuitColorLightBrown
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorBrown
+  result: ClothingUniformJumpsuitColorBrown
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorMaroon
+  result: ClothingUniformJumpsuitColorMaroon
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitColorTeal
+  result: ClothingUniformJumpsuitColorTeal
+
+# Randomized clothing
+
+- type: latheRecipe
+  parent: BaseRandomJumpsuitRecipe
+  id: ClothingUniformRandomArmless
+  result: ClothingUniformRandomArmless
+
+- type: latheRecipe
+  parent: BaseRandomJumpsuitRecipe
+  id: ClothingUniformRandomStandard
+  result: ClothingUniformRandomStandard
+
+- type: latheRecipe
+  parent: BaseRandomJumpsuitRecipe
+  id: ClothingUniformRandomBra
+  result: ClothingUniformRandomBra
+
+- type: latheRecipe
+  parent: BaseRandomJumpsuitRecipe
+  id: ClothingUniformRandomShorts
+  result: ClothingUniformRandomShorts
+
+- type: latheRecipe
+  parent: BaseRandomJumpsuitRecipe
+  id: ClothingUniformRandomShirt
+  result: ClothingUniformRandomShirt
+
+# Job-relevant cosmetic uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformOveralls
+  result: ClothingUniformOveralls
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: UniformScrubsColorPurple
+  result: UniformScrubsColorPurple
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: UniformScrubsColorGreen
+  result: UniformScrubsColorGreen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: UniformScrubsColorBlue
+  result: UniformScrubsColorBlue
+
+# Non-job specific cosmetic uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitFlannel
+  result: ClothingUniformJumpsuitFlannel
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitNanotrasen
+  result: ClothingUniformJumpsuitNanotrasen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitPirate
+  result: ClothingUniformJumpsuitPirate
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitCossack
+  result: ClothingUniformJumpsuitCossack
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitKimono
+  result: ClothingUniformJumpsuitKimono
+
+## Hawaiian shirts
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitHawaiBlack
+  result: ClothingUniformJumpsuitHawaiBlack
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitHawaiBlue
+  result: ClothingUniformJumpsuitHawaiBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitHawaiRed
+  result: ClothingUniformJumpsuitHawaiRed
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitHawaiYellow
+  result: ClothingUniformJumpsuitHawaiYellow
+
+## Casual uniforms
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitCasualBlue
+  result: ClothingUniformJumpsuitCasualBlue
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitCasualPurple
+  result: ClothingUniformJumpsuitCasualPurple
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitCasualRed
+  result: ClothingUniformJumpsuitCasualRed
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformJumpsuitCasualGreen
+  result: ClothingUniformJumpsuitCasualGreen

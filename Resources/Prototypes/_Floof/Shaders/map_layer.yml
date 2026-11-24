@@ -1,0 +1,9 @@
+- type: shader
+  id: MapLayerAbove
+  kind: source
+  path: "/Textures/_Floof/Shaders/map_layer_above.swsl"
+
+- type: shader
+  id: MapLayerRoof
+  kind: source
+  path: "/Textures/_Floof/Shaders/map_layer_roof.swsl"

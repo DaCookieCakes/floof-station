@@ -1,4 +1,5 @@
-﻿using Content.Shared.CCVar;
+﻿#if false // Floof - moved to _Floof/Arrivals
+using Content.Shared.CCVar;
 using Content.Shared.Damage.Components;
 using Content.Shared.GameTicking;
 using Content.Shared.Movement.Components;
@@ -150,3 +151,4 @@ public abstract partial class ArrivalsSystem : EntitySystem
         return (time < duration) ? null : time - duration;
     }
 }
+#endif

@@ -1,0 +1,359 @@
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: NudityPermitRecipe
+  result: ClothingUniformNudityPermit
+  materials:
+    Cloth: 100
+
+# Arm Warmers
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CaptainArmWarmersRecipe
+  result: ClothingHandsCaptainWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CommandArmWarmersRecipe
+  result: ClothingHandsCommandWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: EngineerArmWarmersRecipe
+  result: ClothingHandsEngiWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChiefEngineerArmWarmersRecipe
+  result: ClothingHandsChiefEngiWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: EpistemicsArmWarmersRecipe
+  result: ClothingHandsEpiWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChaplainArmWarmersRecipe
+  result: ClothingHandsChaplainWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ResearchDirectorArmWarmersRecipe
+  result: ClothingHandsEpiHeadWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: PsionicMantisArmWarmersRecipe
+  result: ClothingHandsMantisEpiWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: LogisticsArmWarmersRecipe
+  result: ClothingHandsLogisWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: LogisticsOfficerArmWarmersRecipe
+  result: ClothingHandsLOLogisWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CourierArmWarmersRecipe
+  result: ClothingHandsCourierWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: MedicalArmWarmersRecipe
+  result: ClothingHandsMedicWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChemistArmWarmersRecipe
+  result: ClothingHandsChemistsWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ParamedicArmWarmersRecipe
+  result: ClothingHandsParaMedicWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CMOArmWarmersRecipe
+  result: ClothingHandsCMOWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: SecurityArmWarmersRecipe
+  result: ClothingHandsSecurityWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: HoSArmWarmersRecipe
+  result: ClothingHandsHeadSecurityWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: DetectiveArmWarmersRecipe
+  result: ClothingHandsDetectiveWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CorpsmanArmWarmersRecipe
+  result: ClothingHandsCorpsmanWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ServiceArmWarmersRecipe
+  result: ClothingHandsServiceWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: BartenderArmWarmersRecipe
+  result: ClothingHandsBartenderWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: MusicianArmWarmersRecipe
+  result: ClothingHandsMusicianWarmers
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChefArmWarmersRecipe
+  result: ClothingHandsChefWarmers
+
+# Socks
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CaptainThighHighsRecipe
+  result: ClothingUnderSocksCaptain
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CommandThighHighsRecipe
+  result: ClothingUnderSocksCommand
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: EngineerThighHighsRecipe
+  result: ClothingUnderSocksEngi
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChiefEngineerThighHighsRecipe
+  result: ClothingUnderSocksChiefEngi
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: EpistemicsThighHighsRecipe
+  result: ClothingUnderSocksEpi
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChaplainThighHighsRecipe
+  result: ClothingUnderSocksChaplain
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ResearchDirectorThighHighsRecipe
+  result: ClothingUnderSocksEpiHead
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: PsionicMantisThighHighsRecipe
+  result: ClothingUnderSocksMantisEpi
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: LogisticsThighHighsRecipe
+  result: ClothingUnderSocksLogis
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: LogisticsOfficerThighHighsRecipe
+  result: ClothingUnderSocksLOLogis
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CourierThighHighsRecipe
+  result: ClothingUnderSocksCourier
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: MedicalThighHighsRecipe
+  result: ClothingUnderSocksMedic
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChemistThighHighsRecipe
+  result: ClothingUnderSocksChemists
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ParamedicThighHighsRecipe
+  result: ClothingUnderSocksParaMedic
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CMOThighHighsRecipe
+  result: ClothingUnderSocksCMO
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: SecurityThighHighsRecipe
+  result: ClothingUnderSocksSecurity
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: HoSThighHighsRecipe
+  result: ClothingUnderSocksHeadSecurity
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: DetectiveThighHighsRecipe
+  result: ClothingUnderSocksDetective
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CorpsmanThighHighsRecipe
+  result: ClothingUnderSocksCorpsman
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ServiceThighHighsRecipe
+  result: ClothingUnderSocksService
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: BartenderThighHighsRecipe
+  result: ClothingUnderSocksBartender
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: MusicianThighHighsRecipe
+  result: ClothingUnderSocksMusician
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChefThighHighsRecipe
+  result: ClothingUnderSocksChef
+
+# Thongs
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CaptainThongRecipe
+  result: ClothingUniformCaptainThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CommandThongRecipe
+  result: ClothingUniformCommandThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: EngineerThongRecipe
+  result: ClothingUniformEngiThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChiefEngineerThongRecipe
+  result: ClothingUniformChiefEngiThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: EpistemicsThongRecipe
+  result: ClothingUniformEpiThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChaplainThongRecipe
+  result: ClothingUniformChaplainThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ResearchDirectorThongRecipe
+  result: ClothingUniformEpiHeadThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: PsionicMantisThongRecipe
+  result: ClothingUniformMantisEpiThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: LogisticsThongRecipe
+  result: ClothingUniformLogisThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: LogisticsOfficerThongRecipe
+  result: ClothingUniformLOLogisThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CourierThongRecipe
+  result: ClothingUniformCourierThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: MedicalThongRecipe
+  result: ClothingUniformMedicThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChemistThongRecipe
+  result: ClothingUniformChemistsThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ParamedicThongRecipe
+  result: ClothingUniformParaMedicThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CMOThongRecipe
+  result: ClothingUniformCMOThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: SurgeonGeneralThongRecipe
+  result: ClothingUniformSurgeonGerneralThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: SecurityThongRecipe
+  result: ClothingUniformSecurityThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: HoSThongRecipe
+  result: ClothingUniformHeadSecurityThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: DetectiveThongRecipe
+  result: ClothingUniformDetectiveThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: CorpsmanThongRecipe
+  result: ClothingUniformCorpsmanThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ServiceThongRecipe
+  result: ClothingUniformServiceThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: BartenderThongRecipe
+  result: ClothingUniformBartenderThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: MusicianThongRecipe
+  result: ClothingUniformMusicianThong
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ChefThongRecipe
+  result: ClothingUniformChefThong

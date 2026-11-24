@@ -1,0 +1,54 @@
+# Glasses
+- type: loadout
+  id: ChemicalGoggles
+  groupBy: "ChemistGear"
+  equipment:
+    eyes: ClothingEyesGlassesChemical
+
+- type: loadout
+  id: SafetyGlasses
+  groupBy: "CommonGear"
+  equipment:
+    eyes: ClothingEyesGlassesChemist
+
+# Outer clothing
+- type: loadout
+  id: SeniorChemistLabCoat
+  groupBy: ChemistGear
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorPhysician
+  equipment:
+    outerClothing: ClothingOuterCoatLabSeniorChemist
+
+- type: loadout
+  id: ChemistLongLabCoat
+  groupBy: ChemistGear
+  equipment:
+    outerClothing: ClothingOuterCoatLabLongChemist
+
+- type: loadout
+  id: PharmacistLabCoat
+  groupBy: ChemistGear
+  equipment:
+    outerClothing: ClothingOuterCoatLabPharma
+
+- type: loadout
+  id: ChemicalResistantApron
+  groupBy: ChemistGear
+  equipment:
+    outerClothing: ClothingOuterApronChemist
+
+# Gloves
+- type: loadout
+  id: ChemistArmWarmers
+  groupBy: ChemistGear
+  equipment:
+    gloves: ClothingHandsChemistsWarmers
+
+# Socks
+- type: loadout
+  id: ChemistThighHighs
+  groupBy: ChemistGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksChemists

@@ -138,6 +138,7 @@
   id: WeaponEnergyTurretAI
   suffix: AI, Silicon
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["StationAi"], ["ResearchDirector"]]
   - type: StationAiTurret
@@ -156,6 +157,7 @@
   id: WeaponEnergyTurretSecurity
   suffix: Security
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["StationAi"], ["Security"]]
   - type: TurretTargetSettings
@@ -174,6 +176,7 @@
   id: WeaponEnergyTurretCommand
   suffix: Command
   components:
+  - type: FloodMask # Floof - flooding
   - type: AccessReader
     access: [["StationAi"], ["Command"]]
   - type: TurretTargetSettings

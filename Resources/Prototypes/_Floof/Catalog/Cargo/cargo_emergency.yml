@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: CargoProductEmergencyWaterVaporTanks
+  icon:
+    sprite: _Floof/Objects/Tanks/water.rsi
+    state: icon
+  product: CrateWaterVaporInternals
+  cost: 350
+  category: cargoproduct-category-name-emergency
+  group: market

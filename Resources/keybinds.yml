@@ -194,6 +194,9 @@ binds:
 - function: OpenEmotesMenu
   type: State
   key: Y
+- function: OpenLanguageMenu # Starlight
+  type: State
+  key: L
 - function: TextCursorSelect
   # TextCursorSelect HAS to be above ExamineEntity
   # So that LineEdit receives it correctly.
@@ -274,6 +277,9 @@ binds:
   type: State
   key: V
   mod1: Shift
+- function: OfferItem # Floof - item offering
+  type: State
+  key: O # F is FlipObject
 - function: ShowDebugConsole
   type: State
   key: Tilde
@@ -543,7 +549,11 @@ binds:
   key: Z
 - function: ToggleKnockdown
   type: State
-  key: C
+  key: R # Floofstation - default changed to R to match the floof standard
+- function: ToggleCrawlingUnder # Floofstation
+  type: State
+  mod1: Shift
+  key: R
 - function: OpenAbilitiesMenu
   type: State
   key: K
@@ -647,3 +657,6 @@ binds:
   type: State
   key: MouseRight
   canFocus: true
+- function: OpenConsentWindow
+  type: State
+  key: Minus

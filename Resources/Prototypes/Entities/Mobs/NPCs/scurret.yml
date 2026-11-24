@@ -7,9 +7,14 @@
   parent: MobBaseAncestor
   abstract: true
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - ScurretSign
+    understands:
+    - ScurretSign
+  # Starlight-end
   # Custom names
-  - type: ReplacementAccent
-    accent: scurret
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -185,6 +190,14 @@
   id: MobBaseEmotionalSupportScurret
   name: Emotional Support Scurret
   components:
+  # Starlight-start: Languages
+    - type: LanguageKnowledge
+      speaks:
+      - ScurretSign
+      understands:
+      - ScurretSign
+      - GalacticCommon
+  # Starlight-end
     - type: Loadout
       prototypes: [ EmotionalSupportScurretGear ]
     - type: NpcFactionMember

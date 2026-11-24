@@ -8,6 +8,10 @@
       ClothingUniformJumpsuitBartender: 2
       ClothingUniformJumpskirtBartender: 2
       ClothingUniformJumpsuitBartenderPurple: 2
+      # FLOOF: Start
+      ClothingUniformServiceThong: 2
+      ClothingUniformBartenderThong: 2
+      # FLOOF: End
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterApronBar }
     startingInventory:
@@ -29,5 +33,11 @@
       ClothingHeadsetService: 2
       ClothingShoesColorBlack: 2
       ClothingBeltBandolier: 2
+      # FLOOF: Start
+      ClothingHandsServiceWarmers: 2
+      ClothingUnderSocksService: 2
+      ClothingHandsBartenderWarmers: 2
+      ClothingUnderSocksBartender: 2
+      # FLOOF: End
     contrabandInventory:
       ToyFigurineBartender: 1

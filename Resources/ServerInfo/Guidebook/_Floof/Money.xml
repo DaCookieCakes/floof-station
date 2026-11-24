@@ -1,0 +1,46 @@
+<Document>
+  # Money
+
+  <Box>
+    <GuideEntityEmbed Entity="Atm" Caption=""/>
+    <GuideEntityEmbed Entity="SpaceCash100" Caption=""/>
+  </Box>
+
+  ## Your Bank Account
+
+  Your character keeps their money between shifts. Whatever you have left at the end of a round is still there next time. New characters get $5000 to start with.
+
+  Every character slot has its own account, so your other characters can't dip into it. If you delete a character, their account goes with them.
+
+  ## Paydays
+
+  NT pays everyone at the same time, every 30 minutes. The amount depends on your job. A passenger gets $250, the captain gets $1000, and most jobs land somewhere in between.
+
+  You don't get paid just for having joined the round, though. Every 5 minutes NT checks if you're actually around: in your own body and alive (crit still counts). Being dead, ghosted, SSD or not having arrived yet all count as missing, even if your body is perfectly fine.
+
+  On payday it comes down to how many of those checks you were missing for:
+  - Less than half: [color=lightgreen]full pay[/color].
+  - Half or more: [color=yellow]half pay[/color].
+  - All of them: [color=palevioletred]nothing[/color].
+
+  So popping out for a smoke break as a ghost is fine. Spending the whole half hour in the morgue isn't.
+
+  ## Making It to CC
+
+  Get your body to Central Command on the evac shuttle and NT pays a bonus of two paychecks. The same rule applies, just counted over the whole shift instead of the last half hour.
+
+  It doesn't matter what state you arrive in. If you worked most of the shift and got killed on the shuttle, you still get the full bonus. Stay behind on the station and you get nothing.
+
+  ## Your PDA
+
+  Your PDA shows your balance. When you get paid, you'll also see a popup and a chat message, as long as you're carrying your own PDA. If you lose it you still get paid, you just won't hear about it.
+
+  Keep in mind that a PDA always shows its owner's balance, no matter who's holding it. Anyone who picks up yours can see how much you've got.
+
+  ## ATMs
+
+  ATMs turn the money in your account into spesos you can hold. That only works one way, since NT welded the deposit slots shut. Once you take cash out, it stays cash.
+
+  Cash is just an item, so it can be handed over, dropped or pickpocketed. Only take out what you actually need.
+
+</Document>

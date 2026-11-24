@@ -35,6 +35,13 @@ public sealed partial class CCVars
         CVarDef.Create("ic.flavor_text_length", 512, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
+    ///     FLOOF
+    ///     Sets the maximum length for consent text.
+    /// </summary>
+    public static readonly CVarDef<int> MaxConsentTextLength =
+        CVarDef.Create("ic.consent_text_length", 512, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
     ///     Sets the maximum character length of a job on an ID.
     /// </summary>
     public static readonly CVarDef<int> MaxIdJobLength =

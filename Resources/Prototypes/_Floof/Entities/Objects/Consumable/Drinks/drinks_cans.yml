@@ -1,0 +1,15 @@
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkGatorAidCan
+  name: gator aid can
+  description: Is it a sports drink, or is it what a gator gives you? Electrolytes, either way.
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GatorAid
+        Quantity: 40
+  - type: Sprite
+    sprite: _Floof/Objects/Consumable/Drinks/gatoraid.rsi
+  - type: Item
+    sprite: _Floof/Objects/Consumable/Drinks/gatoraid.rsi

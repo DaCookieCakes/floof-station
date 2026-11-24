@@ -15,6 +15,7 @@
       ClothingUniformJumpsuitSecGrey: 3
       ClothingUniformJumpskirtSecGrey: 3
       ClothingUniformJumpsuitSecBlue: 3
+      ClothingUniformSecurityThong: 3 # FLOOF
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterArmorBasic }
     startingInventory:
@@ -33,12 +34,14 @@
     startingInventory:
       ClothingHandsGlovesColorBlack: 3
       ClothingHandsGlovesFingerless: 3
+      ClothingHandsSecurityWarmers: 3 # FLOOF
   - name: vending-machine-category-footwear
     icon: { entity: ClothingShoesBootsJack }
     startingInventory:
       ClothingShoesBootsJack: 3
       ClothingShoesBootsCombat: 1
       ClothingShoesBootsWinterSec: 2
+      ClothingUnderSocksSecurity: 3 # FLOOF
   - name: vending-machine-category-equipment
     icon: { entity: ClothingHeadHatBeretSecurity }
     startingInventory:
@@ -46,6 +49,7 @@
       ClothingHeadsetSecurity: 3
       ClothingNeckScarfStripedRed: 3
       ClothingEyesBlindfold: 1
+      ClothingNeckCollarSec: 2 # FLOOF
     contrabandInventory:
       ClothingMaskClownSecurity: 1
       ClothingMaskMimeSecurity: 1

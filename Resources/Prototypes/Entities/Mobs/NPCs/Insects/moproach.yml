@@ -4,6 +4,14 @@
   name: moproach
   description: This little mothroach has mopshoes on its feet! How adorable!
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Moffic
+    understands:
+    - Moffic
+    - GalacticCommon
+  # Starlight-end
   - type: Sprite
     sprite: Mobs/Animals/Insects/mothroach/moproach.rsi
   - type: MovementSpeedModifier

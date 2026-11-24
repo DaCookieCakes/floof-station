@@ -1,0 +1,26 @@
+uniform highp float waterline;
+uniform highp float line_size;
+uniform highp vec4 water_color;
+uniform highp vec4 line_color;
+uniform highp vec4 above_color;
+
+void fragment() {
+    highp vec4 sprite = zTexture(UV);
+
+    bool above = FRAGCOORD.y > waterline;
+
+    if (sprite.a == 0.0 || above && above_color.a == 0.0) {
+        discard;
+    }
+
+    if (above) {
+        COLOR = above_color;
+    } else {
+        COLOR = FRAGCOORD.y > waterline - line_size ? line_color : water_color;
+    }
+
+    COLOR.a *= sprite.a;
+
+    // The engine multiplies the output by the layer's colour, which would stain the water with skin and clothing.
+    MODULATE.rgb = vec3(1.0);
+}

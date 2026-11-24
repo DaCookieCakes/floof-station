@@ -6,6 +6,10 @@
   name: packaged antimatter reactor crate
   description: 9 parts for the main body of an antimatter reactor, or for expanding an existing one.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -18,6 +22,10 @@
   name: antimatter containment jar crate
   description: 3 antimatter jars, for fuelling an antimatter reactor.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -30,6 +38,10 @@
   name: antimatter control unit crate
   description: The control unit of an antimatter reactor.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -54,6 +66,10 @@
   name: radiation collector crate
   description: A radiation collector, best used for singularity engines. Plasma is included.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -67,6 +83,10 @@
   name: containment field generator crate
   description: A containment field generator, keeps the singulo in submission.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -78,6 +98,10 @@
   name: singularity generator crate
   description: A singularity generator, the mother of the beast.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -122,6 +146,10 @@
   name: solar assembly crate
   description: A kit with solar flatpacks and glass to construct ten solar panels.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateAirGrenade.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -137,6 +165,10 @@
   name: tesla generator crate
   description: A tesla generator. God save you.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -148,6 +180,10 @@
   name: tesla coil crate
   description: Tesla coil. Attracts lightning and generates energy from it.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:
@@ -159,6 +195,10 @@
   name: tesla grounding rod crate
   description: Grounding rod, best for lightning protection.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/CrateEngineeringAMEControl.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       entity_storage:

@@ -4,6 +4,10 @@
   name: reagent grinder
   description: From BlenderTech. Will It Blend? Let's find out!
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/KitchenReagentGrinder.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ReagentGrinder
     grindSound:
       params:
@@ -90,6 +94,10 @@
   parent: KitchenReagentGrinder
   suffix: large beaker
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/KitchenReagentGrinder.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: ContainerFill
     containers:
       beakerSlot:

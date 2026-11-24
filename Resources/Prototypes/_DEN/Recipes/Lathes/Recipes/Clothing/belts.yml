@@ -1,0 +1,24 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  id: BaseBeltRecipe
+  categories:
+  - Belts
+  completetime: 2
+  materials:
+    Cloth: 100
+
+# Job-relevant cosmetic belts
+
+- type: latheRecipe
+  parent: BaseBeltRecipe
+  id: ClothingBeltSuspendersRed
+  result: ClothingBeltSuspendersRed
+
+- type: latheRecipe
+  parent: BaseBeltRecipe
+  id: ClothingBeltSuspendersBlack
+  result: ClothingBeltSuspendersBlack
+
+# Non-job specific cosmetic belts

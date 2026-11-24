@@ -1,32 +1,38 @@
 # Head
 - type: loadout
   id: WardenHead
+  groupBy: WardenGear # FLOOF
   equipment:
     head: ClothingHeadHatWarden
 
 - type: loadout
   id: WardenBeret
+  groupBy: WardenGear # FLOOF
   equipment:
     head: ClothingHeadHatBeretWarden
 
 # Jumpsuit
 - type: loadout
   id: WardenJumpsuit
+  groupBy: WardenGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpsuitWarden
 
 - type: loadout
   id: WardenJumpskirt
+  groupBy: WardenGear # FLOOF
   equipment:
     jumpsuit: ClothingUniformJumpskirtWarden
 
 # OuterClothing
 - type: loadout
   id: WardenCoat
+  groupBy: WardenGear # FLOOF
   equipment:
     outerClothing: ClothingOuterCoatWarden
 
 - type: loadout
   id: WardenArmoredWinterCoat
+  groupBy: WardenGear # FLOOF
   equipment:
     outerClothing: ClothingOuterWinterWarden

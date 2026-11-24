@@ -5,6 +5,7 @@
     icon: { entity: DrinkSodaWaterCan }
     startingInventory:
       DrinkSodaWaterCan: 10 #typically hacked product. Default product is "soda"
+      DrinkGatorAidCan: 2 # Floof
     contrabandInventory:
       DrinkSodaWaterBottleFull: 2
       DrinkColaCan: 10

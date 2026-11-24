@@ -4,6 +4,13 @@
   name: mouse
   description: Squeak!
   components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
+  # Starlight-end
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/Rodents/mouse.rsi
@@ -120,8 +127,8 @@
   - type: Vocal
     emoteSounds: Mouse
     wilhelmProbability: 0.001
-  - type: ReplacementAccent
-    accent: mouse
+  - type: LeashAnchor # Floof
+    kind: Intrinsic
   - type: Edible
   - type: FlavorProfile
     flavors:

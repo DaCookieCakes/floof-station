@@ -1,0 +1,10 @@
+- type: cargoBounty
+  id: BountySterileBag
+  reward: 2300
+  description: bounty-description-sterilebag
+  entries:
+  - name: bounty-item-sterilebag
+    amount: 30
+    whitelist:
+      tags:
+      - Sterilebag

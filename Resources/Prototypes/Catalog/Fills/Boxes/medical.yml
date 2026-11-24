@@ -4,6 +4,10 @@
   id: BoxSyringe
   description: A box full of syringes.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxSyringe.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -20,6 +24,10 @@
   id: BoxPillCanister
   description: A box full of pill canisters.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxPillCanister.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -36,6 +44,10 @@
   id: BoxBottle
   description: A box full of bottles.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxBottle.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -52,6 +64,10 @@
   id: BoxSterileMask
   description: This box contains sterile medical masks.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxSterileMask.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -68,6 +84,10 @@
   id: BoxLatexGloves
   description: Contains sterile latex gloves.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxLatexGloves.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -84,6 +104,10 @@
   id: BoxNitrileGloves
   description: Contains sterile nitrile gloves. Better than latex.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxLatexGloves.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -100,6 +124,10 @@
   id: BoxBodyBag
   description: Contains body bags.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxBodyBag.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: EntityTableContainerFill
     containers:
       storagebase:
@@ -120,6 +148,10 @@
   id: BoxVial
   description: A box full of vials.
   components:
+  - type: FloodMask # Floof - flooding
+    sprite: # Floof - flooding
+      sprite: _Floof/Flooding/Masks/BoxVial.rsi # Floof - flooding
+      state: mask # Floof - flooding
   - type: Storage
     grid:
     - 0,0,3,1

@@ -1,0 +1,20 @@
+# Outer clothing
+- type: loadout
+  id: HoSArmoredLongcoat
+  groupBy: HoSGear
+  equipment:
+    outerClothing: ClothingLongcoatHoS
+
+# Gloves
+- type: loadout
+  id: HoSArmWarmers
+  groupBy: HoSGear
+  equipment:
+    gloves: ClothingHandsHeadSecurityWarmers
+
+# Socks
+- type: loadout
+  id: HoSThighHighs
+  groupBy: HoSGear
+  equipment:
+    undergarmentSocks: ClothingUnderSocksHeadSecurity

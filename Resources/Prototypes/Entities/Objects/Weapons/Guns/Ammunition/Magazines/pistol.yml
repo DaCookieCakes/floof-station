@@ -103,6 +103,7 @@
   name: WT550 magazine (.35 auto top-mounted)
   description: Unconventional 30-round top feeding magazine for the WT550 SMG. Intended to hold general-purpose kinetic ammunition.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Item
     storedRotation: 90
   - type: Tag
@@ -138,6 +139,7 @@
   suffix: empty
   description: Unconventional 30-round top feeding magazine for the WT550 SMG.
   components:
+  - type: FloodMask # Floof - flooding
   - type: BallisticAmmoProvider
     proto: null
 
@@ -147,6 +149,7 @@
   name: pistol magazine (.35 auto)
   description: 10-round single-stack magazine for pistols. Intended to hold general-purpose kinetic ammunition.
   components:
+  - type: FloodMask # Floof - flooding
   - type: BallisticAmmoProvider
     proto: CartridgePistol
   - type: Sprite
@@ -169,6 +172,7 @@
   suffix: empty
   description: 10-round single-stack magazine for pistols.
   components:
+  - type: FloodMask # Floof - flooding
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite
@@ -271,6 +275,7 @@
   name: SMG magazine (.35 auto)
   description: 30-round double-stack magazine for submachine guns. Intended to hold general-purpose kinetic ammunition.
   components:
+  - type: FloodMask # Floof - flooding
   - type: BallisticAmmoProvider
     proto: CartridgePistol
     soundInsert:
@@ -295,6 +300,7 @@
   suffix: empty
   description: 30-round double-stack magazine for submachine guns.
   components:
+  - type: FloodMask # Floof - flooding
   - type: BallisticAmmoProvider
     proto: null
   - type: Sprite

@@ -8,6 +8,7 @@
       ClothingUniformJumpskirtDetective: 2
       ClothingUniformJumpsuitDetectiveGrey: 2
       ClothingUniformJumpskirtDetectiveGrey: 2
+      ClothingUniformDetectiveThong: 2 # FLOOF
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterCoatDetectiveLoadout }
     startingInventory:
@@ -24,6 +25,7 @@
     startingInventory:
       ClothingHandsGlovesColorBlack: 2
       ClothingHandsGlovesLatex: 2
+      ClothingHandsDetectiveWarmers: 2 # FLOOF
   - name: vending-machine-category-accessories
     icon: { entity: ClothingHeadHatFedoraBrown }
     startingInventory:
@@ -32,5 +34,9 @@
       ClothingNeckTieDet: 2
       ClothingHeadHatFedoraGrey: 2
       ClothingHeadsetSecurity: 2
+      # FLOOF: Start
+      ClothingNeckCollarSec: 2
+      ClothingUnderSocksDetective: 2
+      # FLOOF: End
     contrabandInventory:
       ToyFigurineDetective: 1

@@ -300,6 +300,7 @@
   name: sterile mask
   description: A sterile mask designed to help prevent the spread of diseases.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Sprite
     sprite: Clothing/Mask/sterile.rsi
   - type: Clothing
@@ -321,6 +322,7 @@
   name: muzzle
   description: To stop that awful noise.
   components:
+  - type: FloodMask # Floof - flooding
   - type: Item
     size: Tiny
   - type: Sprite

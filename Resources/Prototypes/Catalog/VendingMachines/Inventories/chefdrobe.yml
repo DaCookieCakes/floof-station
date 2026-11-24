@@ -6,6 +6,12 @@
     startingInventory:
       ClothingUniformJumpsuitChef: 1
       ClothingUniformJumpskirtChef:  2
+      # FLOOF: Start
+      ClothingUniformServiceThong: 2
+      ClothingUniformChefThong: 2
+      # FLOOF: End
+    contrabandInventory:
+      ClothingUniformSurgeonGerneralThong: 2 # FLOOF
   - name: vending-machine-category-outerwear
     icon: { entity: ClothingOuterApronChef }
     startingInventory:
@@ -17,6 +23,10 @@
     startingInventory:
       ClothingShoesColorBlack: 2
       ClothingShoesChef: 2
+      # FLOOF: Start
+      ClothingUnderSocksService: 2
+      ClothingUndergarmentSocksBase: 2
+      # FLOOF: End
   - name: vending-machine-category-equipment
     icon: { entity: ClothingHeadHatChef }
     startingInventory:
@@ -24,5 +34,11 @@
       ClothingMaskItalianMoustache: 2
       ClothingHeadHatChef: 2
       ClothingBeltChef: 2
+      # FLOOF: Start
+      ClothingHandsGlovesNitrile: 2
+      ClothingHandsGlovesLatex: 2
+      ClothingHandsServiceWarmers: 2
+      ClothingHandsChefWarmers: 2
+      # FLOOF: End
     contrabandInventory:
       ToyFigurineChef: 1

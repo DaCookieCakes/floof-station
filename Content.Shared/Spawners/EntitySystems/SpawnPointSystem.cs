@@ -35,7 +35,8 @@ public sealed partial class SpawnPointSystem : EntitySystem
 
             if (_gameTicker.RunLevel != GameRunLevel.InRound &&
                 spawnPoint.SpawnType == SpawnPointType.Job &&
-                (args.Job == null || spawnPoint.Job == null || spawnPoint.Job == args.Job))
+                (args.Job == null || spawnPoint.Job == null || spawnPoint.Job == args.Job
+                 || spawnPoint.ExtraJobs.Contains(args.Job.Value))) // Floofstation - extra jobs
             {
                 possiblePositions.Add(xform.Coordinates);
             }

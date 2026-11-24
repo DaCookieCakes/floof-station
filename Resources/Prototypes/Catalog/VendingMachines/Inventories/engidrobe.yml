@@ -13,6 +13,7 @@
       ClothingUniformJumpsuitEngineering: 3
       ClothingUniformJumpskirtEngineering: 3
       ClothingUniformJumpsuitEngineeringHazard: 3
+      ClothingUniformEngiThong: 3 # FLOOF
   - name: vending-machine-category-headwear
     icon: { entity: ClothingHeadHatHardhatYellow }
     startingInventory:
@@ -29,11 +30,15 @@
       ClothingShoesColorBlack: 3
       ClothingShoesBootsWork: 3
       ClothingShoesBootsWinterEngi: 2
+      ClothingUnderSocksEngi: 3   # FLOOF
   - name: vending-machine-category-equipment
     icon: { entity: ClothingNeckScarfStripedOrange }
     startingInventory:
       ClothingHeadsetEngineering: 3
       ClothingNeckScarfStripedOrange: 3
+      ClothingNeckCollarEngi: 2 # Floof
+      ClothingUncategorizedHarnessSafety: 4 # Floof
+      ClothingHandsEngiWarmers: 3 # FLOOF
     contrabandInventory:
       ToyFigurineEngineer: 1
       ToyFigurineChiefEngineer: 1
