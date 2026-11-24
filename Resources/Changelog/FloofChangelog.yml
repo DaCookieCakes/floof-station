@@ -1074,3 +1074,10 @@ Entries:
   id: 129
   time: '2026-11-24T14:00:18.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/408
+- author: Pachat-Kas
+  changes:
+    - type: Remove
+      message: Removed the disk slot from the submarine console.
+  id: 130
+  time: '2026-11-24T14:37:26.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/409
