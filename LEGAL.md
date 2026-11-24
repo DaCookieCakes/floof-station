@@ -42,4 +42,4 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Legacy code
 
-If you do not agree to the terms of these software licenses you may use legacy code from before [this commit](https://github.com/Floof-Station-SS14/Floof-Station/commit/734778e05dacaa2b42674b1f070d149d5deb248a).
+If you do not agree to the terms of these software licenses you may use legacy code from before [this commit](https://github.com/Floof-Station/space-station-14/commit/734778e05dacaa2b42674b1f070d149d5deb248a).
