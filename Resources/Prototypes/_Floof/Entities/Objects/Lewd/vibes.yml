@@ -15,6 +15,17 @@
       path: /Audio/_Floof/Lewd/vibrate_loop.ogg
   - type: UseDelay
     delay: 1.0
+  - type: TriggerOnSignal
+  - type: ItemToggleOnTrigger
+    consciousAction: false
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetwork
+  - type: DeviceLinkSink
+    ports:
+    - Trigger
+  - type: QuickLink
   - type: Appearance
   - type: MeleeWeapon
     wideAnimationRotation: 180
