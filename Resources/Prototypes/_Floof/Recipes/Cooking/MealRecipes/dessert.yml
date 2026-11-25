@@ -1,0 +1,12 @@
+- type: microwaveMealRecipe
+  id: RecipeRicePuddingBreastMilk
+  result: FoodRicePudding
+  time: 15
+  group: Dessert
+  reagents:
+    Rice: 10
+    MilkBreast: 30
+    Egg: 6
+    Sugar: 5
+  solids:
+    FoodBowlBig: 1

@@ -1,0 +1,11 @@
+- type: microwaveMealRecipe
+  id: RecipeMushroomSoupBreastMilk
+  result: FoodSoupMushroom
+  time: 10
+  group: Soup
+  reagents:
+    Water: 5
+    MilkBreast: 5
+  solids:
+    FoodBowlBig: 1
+    FoodMushroom: 2

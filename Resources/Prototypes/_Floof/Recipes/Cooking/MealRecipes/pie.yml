@@ -1,0 +1,51 @@
+- type: microwaveMealRecipe
+  id: RecipeCocoTartBreastMilk
+  result: FoodTartCoco
+  time: 15
+  group: Pie
+  reagents:
+    Sugar: 5
+    MilkBreast: 5
+  solids:
+    FoodDoughPie: 1
+    FoodSnackChocolateBar: 3
+    FoodPlateTin: 1
+
+- type: microwaveMealRecipe
+  id: RecipeGappleTartBreastMilk
+  result: FoodTartGapple
+  time: 15
+  group: Pie
+  reagents:
+    Sugar: 5
+    MilkBreast: 5
+  solids:
+    FoodDoughPie: 1
+    FoodGoldenApple: 2
+    FoodPlateTin: 1
+
+- type: microwaveMealRecipe
+  id: RecipeGrapeTartBreastMilk
+  result: FoodTartGrape
+  time: 15
+  group: Pie
+  reagents:
+    Sugar: 5
+    MilkBreast: 5
+  solids:
+    FoodDoughPie: 1
+    FoodGrape: 3
+    FoodPlateTin: 1
+
+- type: microwaveMealRecipe
+  id: RecipeMimeTartBreastMilk
+  result: FoodTartMime
+  time: 15
+  group: Pie
+  reagents:
+    Sugar: 5
+    MilkBreast: 5
+  solids:
+    FoodDoughPie: 1
+    FoodMimana: 3
+    FoodPlateTin: 1

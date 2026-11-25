@@ -1,0 +1,11 @@
+- type: microwaveMealRecipe
+  id: RecipeChocolateChipPancakeBreastMilk
+  result: FoodBakedPancakeCc
+  time: 5
+  group: BarsAndCookies
+  reagents:
+    Flour: 5
+    MilkBreast: 5
+    Egg: 6
+  solids:
+    FoodSnackChocolateBar: 1

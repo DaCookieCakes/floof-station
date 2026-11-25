@@ -21,16 +21,26 @@ public sealed partial class LewdFillStructureFromTarget : InteractionAction
     /// </summary>
     [DataField] public FixedPoint2 Amount = 20;
 
+    public override bool IsAllowed(InteractionArgs args, InteractionVerbPrototype proto, VerbDependencies deps)
+    {
+        return IsBuckledToTarget(args, deps);
+    }
+
+    /// <summary>
+    ///     The verb is used on the mount itself, so the user must be buckled to that mount specifically.
+    /// </summary>
+    private static bool IsBuckledToTarget(InteractionArgs args, VerbDependencies deps)
+    {
+        return deps.EntMan.HasComponent<BreedingMountComponent>(args.Target)
+            && deps.EntMan.TryGetComponent(args.User, out BuckleComponent? buckComp)
+            && buckComp.BuckledTo == args.Target;
+    }
+
     public override bool CanPerform(InteractionArgs args,
         InteractionVerbPrototype proto,
         bool beforeDelay,
         VerbDependencies deps)
     {
-        if (!deps.EntMan.TryGetComponent(args.User, out BuckleComponent? buckComp)
-            || !deps.EntMan.HasComponent<BreedingMountComponent>(buckComp.BuckledTo))
-            return false;
-        args.Used = buckComp.BuckledTo;
-
         return true;
     }
 
@@ -40,9 +50,10 @@ public sealed partial class LewdFillStructureFromTarget : InteractionAction
         var solutionContainer = deps.EntMan.System<SharedSolutionContainerSystem>();
         var puddleSystem = deps.EntMan.System<PuddleSystem>();
 
-        if (!deps.EntMan.TryGetComponent(args.User, out BuckleComponent? buckComp)
-            || buckComp.BuckledTo is not { } structure)
+        if (!IsBuckledToTarget(args, deps))
             return false;
+
+        var structure = args.Target;
 
         // Find the organ producing the requested fluid
         foreach (var organ in bodySystem.EnumerateOrgans<ProducerGenitalComponent>(args.User))
