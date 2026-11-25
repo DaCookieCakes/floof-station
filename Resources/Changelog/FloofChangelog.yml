@@ -1103,3 +1103,10 @@ Entries:
   id: 132
   time: '2026-11-25T15:28:58.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/412
+- author: DaCookieCakes
+  changes:
+    - type: Fix
+      message: Chairs now chair correctly when looking down or up.
+  id: 133
+  time: '2026-11-25T15:44:52.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/413
