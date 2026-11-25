@@ -1110,3 +1110,12 @@ Entries:
   id: 133
   time: '2026-11-25T15:44:52.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/413
+- author: Pachat-Kas
+  changes:
+    - type: Add
+      message: Ported washing machines and clothing stains from Moffstation.
+    - type: Add
+      message: Added stain repellent spray to keep clothes clean.
+  id: 134
+  time: '2026-11-25T16:49:20.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/414
