@@ -3,8 +3,10 @@ using Content.Server.Popups;
 using Content.Shared.Spider;
 using Content.Shared.Maps;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Physics; // Floof - spider webs in walls
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
+using Robust.Shared.Physics.Components; // Floof - spider webs in walls
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
@@ -81,7 +83,7 @@ public sealed partial class SpiderSystem : SharedSpiderSystem
         var result = false;
 
         // Spawn web in center
-        if (!IsTileBlockedByWeb(coords))
+        if (!IsTileBlockedByWeb(coords)) // Floof - spider webs in walls
         {
             Spawn(ent.Comp.WebPrototype, coords);
             result = true;
@@ -93,7 +95,7 @@ public sealed partial class SpiderSystem : SharedSpiderSystem
             var direction = (DirectionFlag)(1 << i);
             var outerSpawnCoordinates = coords.Offset(direction.AsDir().ToVec());
 
-            if (IsTileBlockedByWeb(outerSpawnCoordinates))
+            if (IsTileBlockedByWeb(outerSpawnCoordinates)) // Floof - spider webs in walls
                 continue;
 
             Spawn(ent.Comp.WebPrototype, outerSpawnCoordinates);
@@ -106,10 +108,16 @@ public sealed partial class SpiderSystem : SharedSpiderSystem
     private bool IsTileBlockedByWeb(EntityCoordinates coords)
     {
         _webs.Clear();
-        _turf.GetEntitiesInTile(coords, _webs);
+        _turf.GetEntitiesInTile(coords, _webs, LookupFlags.Static | LookupFlags.Sensors); // Floof - spider web stacking
         foreach (var entity in _webs)
         {
             if (HasComp<SpiderWebObjectComponent>(entity))
+                return true;
+
+            // Floof - spider webs in walls
+            if (TryComp<PhysicsComponent>(entity, out var body)
+                && body.Hard
+                && (body.CollisionLayer & (int) CollisionGroup.Impassable) != 0)
                 return true;
         }
         return false;

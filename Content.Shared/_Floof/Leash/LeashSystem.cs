@@ -46,6 +46,7 @@ public sealed partial class LeashSystem : EntitySystem
         InitializeContainerWorkarounds();
         InitializeJoints();
         InitializePrediction();
+        InitializeDisposals();
         StartThinkingWithPortals();
 
         UpdatesBefore.Add(typeof(SharedPhysicsSystem));
@@ -72,6 +73,9 @@ public sealed partial class LeashSystem : EntitySystem
             foreach (var (leash, leashed, anchor) in _pendingJointUpdates)
                 ProcessPendingJointUpdate(leash, leashed, anchor);
         _pendingJointUpdates.Clear();
+
+        if (_net.IsServer)
+            UpdateDisposals();
 
         var leashQuery = EntityQueryEnumerator<LeashComponent, PhysicsComponent>();
         while (leashQuery.MoveNext(out var leashEnt, out var leash, out var physics))

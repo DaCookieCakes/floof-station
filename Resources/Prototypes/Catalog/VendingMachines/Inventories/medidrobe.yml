@@ -1,45 +1,66 @@
 - type: vendingMachineInventory
   id: MediDrobeInventory
-  startingInventory:
-    # Essential Medical Clothing
-    ClothingEyesHudMedical: 2
-    ClothingEyesEyepatchHudMedical: 2
-    # Optional Clothing
-    ClothingHeadHatBeretMedic: 2
-    ClothingHeadNurseHat: 2
-    ClothingHeadHatParamedicsoft: 1
-    ClothingHeadHatSurgcapGreen: 2
-    ClothingHeadHatSurgcapBlue: 2
-    ClothingHeadHatSurgcapPurple: 2
-    ClothingMaskSterile: 2
-    ClothingHeadsetMedical: 2
-    ClothingBackpackMedical: 2
-    ClothingBackpackDuffelMedical: 2
-    ClothingBackpackSatchelMedical: 2
-    ClothingUniformJumpsuitMedicalDoctor: 2
-    ClothingUniformJumpskirtMedicalDoctor: 2
-    UniformScrubsColorGreen: 2
-    UniformScrubsColorBlue: 2
-    UniformScrubsColorPurple: 2
-    ClothingUniformJumpsuitParamedic: 1
-    ClothingUniformJumpskirtParamedic: 1
-    ClothingOuterCoatLab: 2
-    ClothingOuterWinterMed: 2
-    ClothingOuterCoatParamedicWB: 1
-    ClothingOuterWinterPara: 1
-    ClothingHandsGlovesLatex: 2
-    ClothingHandsGlovesNitrile: 2
-    ClothingShoesColorBlue: 2
-    ClothingShoesColorWhite: 2
-    ClothingShoesBootsWinterMed: 2
-    # FLOOF: Start
-    ClothingNeckCollarMed: 2
-    ClothingHandsMedicWarmers: 2
-    ClothingUnderSocksMedic: 2
-    ClothingUniformMedicThong: 2
-    # FLOOF: End
-  contrabandInventory:
-    ClothingUniformJumpskirtOfLife: 1
-    ToyFigurineMedicalDoctor: 1
-    ToyFigurineParamedic: 1
-    ToyFigurineChiefMedicalOfficer: 1
+  categories:
+  - name: vending-machine-category-bags
+    icon: { entity: ClothingBackpackMedical }
+    startingInventory:
+      ClothingBackpackMedical: 2
+      ClothingBackpackDuffelMedical: 2
+      ClothingBackpackSatchelMedical: 2
+  - name: vending-machine-category-uniforms
+    icon: { entity: ClothingUniformJumpsuitMedicalDoctor }
+    startingInventory:
+      ClothingUniformJumpsuitMedicalDoctor: 2
+      ClothingUniformJumpskirtMedicalDoctor: 2
+      UniformScrubsColorGreen: 2
+      UniformScrubsColorBlue: 2
+      UniformScrubsColorPurple: 2
+      ClothingUniformJumpsuitParamedic: 1
+      ClothingUniformJumpskirtParamedic: 1
+      ClothingUniformMedicThong: 2 # FLOOF
+    contrabandInventory:
+      ClothingUniformJumpskirtOfLife: 1
+  - name: vending-machine-category-outerwear
+    icon: { entity: ClothingOuterCoatLab }
+    startingInventory:
+      ClothingOuterCoatLab: 2
+      ClothingOuterWinterMed: 2
+      ClothingOuterCoatParamedicWB: 1
+      ClothingOuterWinterPara: 1
+  - name: vending-machine-category-footwear
+    icon: { entity: ClothingShoesColorWhite }
+    startingInventory:
+      ClothingShoesColorBlue: 2
+      ClothingShoesColorWhite: 2
+      ClothingShoesBootsWinterMed: 2
+      ClothingUnderSocksMedic: 2 # FLOOF
+  - name: vending-machine-category-headwear
+    icon: { entity: ClothingHeadHatBeretMedic }
+    startingInventory:
+      ClothingHeadHatBeretMedic: 2
+      ClothingHeadNurseHat: 2
+      ClothingHeadHatParamedicsoft: 1
+      ClothingHeadHatSurgcapGreen: 2
+      ClothingHeadHatSurgcapBlue: 2
+      ClothingHeadHatSurgcapPurple: 2
+  - name: vending-machine-category-gloves
+    icon: { entity: ClothingHandsGlovesLatex }
+    startingInventory:
+      ClothingHandsGlovesLatex: 2
+      ClothingHandsGlovesNitrile: 2
+      ClothingHandsMedicWarmers: 2 # FLOOF
+  - name: vending-machine-category-eyewear
+    icon: { entity: ClothingEyesHudMedical }
+    startingInventory:
+      ClothingEyesHudMedical: 2
+      ClothingEyesEyepatchHudMedical: 2
+  - name: vending-machine-category-equipment
+    icon: { entity: ClothingEyesHudMedical }
+    startingInventory:
+      ClothingMaskSterile: 2
+      ClothingHeadsetMedical: 2
+      ClothingNeckCollarMed: 2 # FLOOF
+    contrabandInventory:
+      ToyFigurineMedicalDoctor: 1
+      ToyFigurineParamedic: 1
+      ToyFigurineChiefMedicalOfficer: 1

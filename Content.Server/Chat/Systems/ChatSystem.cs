@@ -24,6 +24,7 @@ using Content.Shared.Speech; // Starlight
 using Content.Server._Starlight.Language; // Starlight
 using Content.Shared._Starlight.Language; // Starlight
 using Content.Shared.Popups; // Starlight
+using Robust.Shared.Utility; // Floof
 
 namespace Content.Server.Chat.Systems;
 
@@ -357,7 +358,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("verb", Loc.GetString(verbId)),
             ("fontType", fonttype),
             ("fontSize", language.SpeechOverride.FontSize ?? speech.FontSize),
-            ("message", message));
+            ("message", FormattedMessage.EscapeText(message))); // Floof - Escape markup
     }
     // Starlight - End
 }

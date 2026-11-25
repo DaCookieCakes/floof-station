@@ -1,26 +1,38 @@
 - type: vendingMachineInventory
   id: ChemDrobeInventory
-  startingInventory:
-    # Essential
-    ClothingEyesGlassesChemical: 1
-    # Optional
-    ClothingHeadsetMedical: 1
-    ClothingBackpackChemistry: 1
-    ClothingBackpackSatchelChemistry: 1
-    ClothingBackpackDuffelChemistry: 1
-    ChemBag: 1
-    ClothingUniformJumpsuitChemistry: 1
-    ClothingUniformJumpskirtChemistry: 1
-    ClothingOuterCoatLabChem: 1
-    ClothingOuterWinterChem: 1
-    ClothingHandsGlovesLatex: 1
-    ClothingShoesColorWhite: 1
-    # FLOOF: Start
-    ClothingNeckCollarMed: 2
-    ClothingHandsChemistsWarmers: 2
-    ClothingUnderSocksChemists: 2
-    ClothingUniformChemistsThong: 2
-    ClothingOuterApronChemist: 2
-    # FLOOF: End
-  contrabandInventory:
-    ToyFigurineChemist: 1
+  categories:
+  - name: vending-machine-category-bags
+    icon: { entity: ClothingBackpackChemistry }
+    startingInventory:
+      ClothingBackpackChemistry: 1
+      ClothingBackpackSatchelChemistry: 1
+      ClothingBackpackDuffelChemistry: 1
+      ChemBag: 1
+  - name: vending-machine-category-uniforms
+    icon: { entity: ClothingUniformJumpsuitChemistry }
+    startingInventory:
+      ClothingUniformJumpsuitChemistry: 1
+      ClothingUniformJumpskirtChemistry: 1
+      ClothingUniformChemistsThong: 2 # FLOOF
+  - name: vending-machine-category-outerwear
+    icon: { entity: ClothingOuterCoatLabChem }
+    startingInventory:
+      ClothingOuterCoatLabChem: 1
+      ClothingOuterWinterChem: 1
+      ClothingOuterApronChemist: 2 # FLOOF
+  - name: vending-machine-category-equipment
+    icon: { entity: ClothingEyesGlassesChemical }
+    startingInventory:
+      # Essential
+      ClothingEyesGlassesChemical: 1
+      # Optional
+      ClothingHeadsetMedical: 1
+      ClothingHandsGlovesLatex: 1
+      ClothingShoesColorWhite: 1
+      # FLOOF: Start
+      ClothingNeckCollarMed: 2
+      ClothingHandsChemistsWarmers: 2
+      ClothingUnderSocksChemists: 2
+      # FLOOF: End
+    contrabandInventory:
+      ToyFigurineChemist: 1

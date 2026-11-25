@@ -23,7 +23,7 @@
     deviceNetId: Wireless
     receiveFrequencyId: BasicDevice
   - type: WirelessNetwork
-    range: 200
   - type: DeviceLinkSink
     ports:
     - Trigger
+  - type: QuickLink

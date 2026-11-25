@@ -1,0 +1,29 @@
+# Ported from https://github.com/ArcaneSS14/arcane/tree/349326398f687b35dc56ae3b1325fa56f740ecd0
+
+- type: marking
+  id: AxolotlHead
+  bodyPart: Head
+  groupWhitelist: [Reptilian, Feroxi]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/head.rsi
+    state: axolotl-head-himera
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/head.rsi
+    state: axolotl-head-himera-r
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/head.rsi
+    state: axolotl-antennas-himera-ins-l
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/head.rsi
+    state: axolotl-antennas-himera-ins-r
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/head.rsi
+    state: axolotl-antennas-himera-l
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/head.rsi
+    state: axolotl-antennas-himera-r
+
+- type: marking
+  id: AxolotlTail
+  bodyPart: Tail
+  groupWhitelist: [Reptilian, Feroxi]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/long_tails.rsi
+    state: axolotl-tail
+  - sprite: _Goobstation/Mobs/Customization/Reptilian/long_tails.rsi
+    state: axolotl-tail-fin

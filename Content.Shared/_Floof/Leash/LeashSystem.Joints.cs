@@ -115,8 +115,9 @@ public sealed partial class LeashSystem
         if (aXform.MapUid != bXform.MapUid)
             return false;
 
-        if (!_container.TryGetOuterContainer(a, aXform, out aOuter)
-            && !_container.TryGetOuterContainer(b, bXform, out bOuter))
+        var aInContainer = _container.TryGetOuterContainer(a, aXform, out aOuter);
+        var bInContainer = _container.TryGetOuterContainer(b, bXform, out bOuter);
+        if (!aInContainer && !bInContainer)
             return true;
 
         // Otherwise, we need to make sure that neither of the entities contain the other, and that they are not in the same container.

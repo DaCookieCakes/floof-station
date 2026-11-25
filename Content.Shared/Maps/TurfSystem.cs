@@ -273,9 +273,7 @@ public static partial class TurfLookupExtensions
     /// <param name="flags">A set of lookup categories to search for relevant entities.</param>
     public static void GetEntitiesInTile(this EntityLookupSystem lookupSystem, TileRef turf, HashSet<EntityUid> intersecting, LookupFlags flags = LookupFlags.Static)
     {
-        var bounds = lookupSystem.GetWorldBounds(turf);
-        bounds.Box = bounds.Box.Scale(0.9f); // Otherwise the box can clip into neighboring tiles.
-        lookupSystem.GetEntitiesIntersecting(turf.GridUid, bounds, intersecting, flags);
+        lookupSystem.GetLocalEntitiesIntersecting(turf.GridUid, turf.GridIndices, intersecting, -0.05f, flags); // Otherwise the box can clip into neighboring tiles. // Floof - tile lookup rotation
     }
 
     /// <summary>

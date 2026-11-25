@@ -25,7 +25,7 @@
   - type: Tag
     tags:
     - FoodSnack
-    - ReptilianFood
+    - Meat
 
 - type: entity
   categories: [ HideSpawnMenu ]

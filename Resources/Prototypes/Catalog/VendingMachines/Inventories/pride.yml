@@ -1,95 +1,108 @@
 - type: vendingMachineInventory
   id: PrideDrobeInventory
-  startingInventory:
-    ClothingNeckLGBTPin: 3
-    ClothingNeckAllyPin: 3
-    ClothingNeckAromanticPin: 3
-    ClothingNeckAsexualPin: 3
-    ClothingNeckAroacePin: 3
-    ClothingNeckBisexualPin: 3
-    ClothingNeckGayPin: 3
-    ClothingNeckIntersexPin: 3
-    ClothingNeckLesbianPin: 3
-    ClothingNeckNonBinaryPin: 3
-    ClothingNeckPansexualPin: 3
-    ClothingNeckPluralPin: 3
-    ClothingNeckOmnisexualPin: 3
-    ClothingNeckGenderqueerPin: 3
-    ClothingNeckGenderfluidPin: 3
-    ClothingNeckTransPin: 3
-    ClothingNeckAutismPin: 3
-    ClothingNeckGoldAutismPin: 3
-    PlushieSharkBlue: 2
-    PlushieSharkPink: 2
-    PlushieSharkGrey: 2
-    ClothingNeckScarfStripedAce: 2
-    ClothingNeckScarfStripedAro: 2
-    ClothingNeckScarfStripedAroace: 2
-    ClothingNeckScarfStripedBiSexual: 2
-    ClothingNeckScarfStripedGay: 2
-    ClothingNeckScarfStripedInter: 2
-    ClothingNeckScarfStripedLesbian: 2
-    ClothingNeckScarfStripedPan: 2
-    ClothingNeckScarfStripedNonBinary: 2
-    ClothingNeckScarfStripedRainbow: 2
-    ClothingNeckScarfStripedTrans: 2
-    ClothingHeadHatXmasCrown: 2
-    BedsheetRainbow: 2
-    ClothingMultipleHeadphones: 2
-    ClothingHeadHatFlowerWreath: 2
-    ClothingUniformColorRainbow: 2
-    ClothingUniformJumpskirtColorRainbow: 2 # FLOOF: Moved
-    ClothingUnderSocksCoder: 2
-    ClothingUnderSocksBee: 2
-    ClothingHandsPlainWarmers: 2          # FLOOF
-    ClothingUnderSocksPlain: 2            # FLOOF
-    ClothingUnderSocksStripedWhite: 2     # FLOOF
-    ClothingUnderSocksStripedPurple: 2    # FLOOF
-    ClothingUnderSocksStripedRainbow: 2   # FLOOF
-    ClothingUnderSocksPrideRainbow: 2     # FLOOF
-    ClothingUnderSocksPrideAce: 2         # FLOOF
-    ClothingUnderSocksPrideAro: 2         # FLOOF
-    ClothingUnderSocksPrideBi: 2          # FLOOF
-    ClothingUnderSocksPrideGay: 2         # FLOOF
-    ClothingUnderSocksPrideInter: 2       # FLOOF
-    ClothingUnderSocksPrideLesbian: 2     # FLOOF
-    ClothingUnderSocksPrideNon: 2         # FLOOF
-    ClothingUnderSocksPridePan: 2         # FLOOF
-    ClothingUnderSocksPrideTrans: 2       # FLOOF
-    ClothingUnderSocksFishnets: 2         # FLOOF
-    ClothingHandsCoderWarmers: 2          # FLOOF
-    ClothingHandsCoderValidWarmers: 2     # FLOOF
-    ClothingHandsBeeWarmers: 2            # FLOOF
-    ClothingHandsStripeWhiteWarmers: 2    # FLOOF
-    ClothingHandsStripePurpleWarmers: 2   # FLOOF
-    ClothingHandsStripeRainbowWarmers: 2  # FLOOF
-    ClothingHandsPrideAce: 2      # FLOOF
-    ClothingHandsPrideAro: 2      # FLOOF
-    ClothingHandsPrideBi: 2       # FLOOF
-    ClothingHandsPrideGay: 2      # FLOOF
-    ClothingHandsPrideInter: 2    # FLOOF
-    ClothingHandsPrideLesbian: 2  # FLOOF
-    ClothingHandsPrideNon: 2      # FLOOF
-    ClothingHandsPridePan: 2      # FLOOF
-    ClothingHandsPrideRainbow: 2  # FLOOF
-    ClothingHandsPrideTrans: 2    # FLOOF
-    ClothingUniformThongCoder: 2          # FLOOF
-    ClothingUniformThongCoderValid: 2     # FLOOF
-    ClothingUniformThongBee: 2            # FLOOF
-    ClothingUniformThongPlain: 2          # FLOOF
-    ClothingUniformStripedThongWhite: 2   # FLOOF
-    ClothingUniformStripedThongPurple: 2  # FLOOF
-    ClothingUniformStripedThongRainbow: 2 # FLOOF
-    ClothingHeadHatCatEarsCosmetic: 1 # FLOOF
-    ClothingHeadHatDogEarsCosmetic: 1 # FLOOF
-  contrabandInventory:
-    ClothingNeckScarfStripedLesbianLong: 2
-  #  ClothingUniformJumpskirtColorRainbow: 2 # FLOOF: Moved
-    ClothingUniformFishnet: 2               # FLOOF
-    ClothingUniformFishnetAlt: 2            # FLOOF
-    ClothingUniformFishnetSimpleTop: 2      # FLOOF
-    ClothingUniformFishnetThong: 2          # FLOOF
-    ClothingUniformFishnetSleeves: 2        # FLOOF
-    ClothingUniformFishnetSleevesGloves: 2  # FLOOF
-    ClothingUniformLoinClothBlack: 2  # FLOOF
-    ClothingUniformLoinClothWhite: 2  # FLOOF
+  categories:
+  - name: vending-machine-category-pins
+    icon: { entity: ClothingNeckLGBTPin }
+    startingInventory:
+      ClothingNeckLGBTPin: 3
+      ClothingNeckAllyPin: 3
+      ClothingNeckAromanticPin: 3
+      ClothingNeckAsexualPin: 3
+      ClothingNeckAroacePin: 3
+      ClothingNeckBisexualPin: 3
+      ClothingNeckGayPin: 3
+      ClothingNeckIntersexPin: 3
+      ClothingNeckLesbianPin: 3
+      ClothingNeckNonBinaryPin: 3
+      ClothingNeckPansexualPin: 3
+      ClothingNeckPluralPin: 3
+      ClothingNeckOmnisexualPin: 3
+      ClothingNeckGenderqueerPin: 3
+      ClothingNeckGenderfluidPin: 3
+      ClothingNeckTransPin: 3
+      ClothingNeckAutismPin: 3
+      ClothingNeckGoldAutismPin: 3
+  - name: vending-machine-category-plushies
+    icon: { entity: PlushieSharkBlue }
+    startingInventory:
+      PlushieSharkBlue: 2
+      PlushieSharkPink: 2
+      PlushieSharkGrey: 2
+  - name: vending-machine-category-scarves
+    icon: { entity: ClothingNeckScarfStripedRainbow }
+    startingInventory:
+      ClothingNeckScarfStripedAce: 2
+      ClothingNeckScarfStripedAro: 2
+      ClothingNeckScarfStripedAroace: 2
+      ClothingNeckScarfStripedBiSexual: 2
+      ClothingNeckScarfStripedGay: 2
+      ClothingNeckScarfStripedInter: 2
+      ClothingNeckScarfStripedLesbian: 2
+      ClothingNeckScarfStripedPan: 2
+      ClothingNeckScarfStripedNonBinary: 2
+      ClothingNeckScarfStripedRainbow: 2
+      ClothingNeckScarfStripedTrans: 2
+    contrabandInventory:
+      ClothingNeckScarfStripedLesbianLong: 2
+  - name: vending-machine-category-accessories
+    icon: { entity: ClothingUniformColorRainbow }
+    startingInventory:
+      ClothingHeadHatXmasCrown: 2
+      BedsheetRainbow: 2
+      ClothingMultipleHeadphones: 2
+      ClothingHeadHatFlowerWreath: 2
+      ClothingUniformColorRainbow: 2
+      ClothingUniformJumpskirtColorRainbow: 2 # FLOOF: Moved
+      ClothingUnderSocksCoder: 2
+      ClothingUnderSocksBee: 2
+      ClothingHandsPlainWarmers: 2          # FLOOF
+      ClothingUnderSocksPlain: 2            # FLOOF
+      ClothingUnderSocksStripedWhite: 2     # FLOOF
+      ClothingUnderSocksStripedPurple: 2    # FLOOF
+      ClothingUnderSocksStripedRainbow: 2   # FLOOF
+      ClothingUnderSocksPrideRainbow: 2     # FLOOF
+      ClothingUnderSocksPrideAce: 2         # FLOOF
+      ClothingUnderSocksPrideAro: 2         # FLOOF
+      ClothingUnderSocksPrideBi: 2          # FLOOF
+      ClothingUnderSocksPrideGay: 2         # FLOOF
+      ClothingUnderSocksPrideInter: 2       # FLOOF
+      ClothingUnderSocksPrideLesbian: 2     # FLOOF
+      ClothingUnderSocksPrideNon: 2         # FLOOF
+      ClothingUnderSocksPridePan: 2         # FLOOF
+      ClothingUnderSocksPrideTrans: 2       # FLOOF
+      ClothingUnderSocksFishnets: 2         # FLOOF
+      ClothingHandsCoderWarmers: 2          # FLOOF
+      ClothingHandsCoderValidWarmers: 2     # FLOOF
+      ClothingHandsBeeWarmers: 2            # FLOOF
+      ClothingHandsStripeWhiteWarmers: 2    # FLOOF
+      ClothingHandsStripePurpleWarmers: 2   # FLOOF
+      ClothingHandsStripeRainbowWarmers: 2  # FLOOF
+      ClothingHandsPrideAce: 2      # FLOOF
+      ClothingHandsPrideAro: 2      # FLOOF
+      ClothingHandsPrideBi: 2       # FLOOF
+      ClothingHandsPrideGay: 2      # FLOOF
+      ClothingHandsPrideInter: 2    # FLOOF
+      ClothingHandsPrideLesbian: 2  # FLOOF
+      ClothingHandsPrideNon: 2      # FLOOF
+      ClothingHandsPridePan: 2      # FLOOF
+      ClothingHandsPrideRainbow: 2  # FLOOF
+      ClothingHandsPrideTrans: 2    # FLOOF
+      ClothingUniformThongCoder: 2          # FLOOF
+      ClothingUniformThongCoderValid: 2     # FLOOF
+      ClothingUniformThongBee: 2            # FLOOF
+      ClothingUniformThongPlain: 2          # FLOOF
+      ClothingUniformStripedThongWhite: 2   # FLOOF
+      ClothingUniformStripedThongPurple: 2  # FLOOF
+      ClothingUniformStripedThongRainbow: 2 # FLOOF
+      ClothingHeadHatCatEarsCosmetic: 1 # FLOOF
+      ClothingHeadHatDogEarsCosmetic: 1 # FLOOF
+    contrabandInventory:
+    #  ClothingUniformJumpskirtColorRainbow: 2 # FLOOF: Moved
+      ClothingUniformFishnet: 2               # FLOOF
+      ClothingUniformFishnetAlt: 2            # FLOOF
+      ClothingUniformFishnetSimpleTop: 2      # FLOOF
+      ClothingUniformFishnetThong: 2          # FLOOF
+      ClothingUniformFishnetSleeves: 2        # FLOOF
+      ClothingUniformFishnetSleevesGloves: 2  # FLOOF
+      ClothingUniformLoinClothBlack: 2  # FLOOF
+      ClothingUniformLoinClothWhite: 2  # FLOOF

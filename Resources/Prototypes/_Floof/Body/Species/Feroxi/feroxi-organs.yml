@@ -134,6 +134,7 @@
       - Crayon
       - Paper
       - IceCream
+    isSpecialDigestibleExclusive: false
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganFeroxiInternal, OrganFeroxiMetabolizer ]
