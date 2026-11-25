@@ -130,6 +130,9 @@
     - !type:BodyOrganRequirement
       organCategory: Dick
       targetSelf: true
+    - !type:EntityWhitelistRequirement
+      whitelist:
+        components: [ BreedingMount ]
   action:
     !type:LewdFillStructureFromTarget
     sourceSolution: balls

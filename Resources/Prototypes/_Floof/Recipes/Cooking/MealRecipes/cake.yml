@@ -1,0 +1,23 @@
+- type: microwaveMealRecipe
+  id: RecipeCatCakeBreastMilk
+  result: MobCatCake
+  time: 15
+  group: Cake
+  reagents:
+    MilkBreast: 15
+    Cognizine: 5
+  solids:
+    FoodCakePlain: 1
+    FoodSnackRaisins: 1
+    OrganAnimalHeart: 1
+
+- type: microwaveMealRecipe
+  id: RecipeBerryDelightBreastMilk
+  result: FoodCakeBerryDelight
+  time: 5
+  group: Cake
+  solids:
+    FoodCakeBlueberry: 1
+    FoodBerries: 2
+  reagents:
+    MilkBreast: 10

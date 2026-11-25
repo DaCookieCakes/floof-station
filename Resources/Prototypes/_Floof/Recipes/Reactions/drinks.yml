@@ -125,18 +125,6 @@
     CalicoSunrise: 3
 
 - type: reaction
-  id: Cream
-  requiredMixerCategories:
-  - Shake
-  reactants:
-    Sugar:
-      amount: 5
-    Milk:
-      amount: 10
-  products:
-    Cream: 15
-
-- type: reaction
   id: CremeDeCacao
   requiredMixerCategories:
   - Stir
@@ -613,6 +601,22 @@
     QuadrupleCreamChalice: 4
 
 - type: reaction
+  id: QuadrupleCreamChaliceBreastMilk
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Cream:
+      amount: 1
+    Cum:
+      amount: 1
+    IceCream:
+      amount: 1
+    MilkBreast:
+      amount: 1
+  products:
+    QuadrupleCreamChalice: 4
+
+- type: reaction
   id: RandyStallion
   reactants:
     Coffee:
@@ -747,6 +751,22 @@
     Egg:
       amount: 1
     Milk:
+      amount: 1
+    Rum:
+      amount: 1
+    Sugar:
+      amount: 1
+  products:
+    SyndicateEggnog: 5
+
+- type: reaction
+  id: SyndicateEggnogBreastMilk
+  reactants:
+    Cream:
+      amount: 1
+    Egg:
+      amount: 1
+    MilkBreast:
       amount: 1
     Rum:
       amount: 1

@@ -1,0 +1,77 @@
+- type: reaction
+  id: BreastMilkCurdling
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    MilkBreast:
+      amount: 40
+    Enzyme:
+      amount: 5
+      catalyst: true
+  effects:
+  - !type:SpawnEntity
+    entity: FoodCheese
+
+- type: reaction
+  id: CreateCornmealDoughBreastMilk
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    Cornmeal:
+      amount: 15
+    MilkBreast:
+      amount: 10
+    Egg:
+      amount: 6
+  effects:
+  - !type:SpawnEntity
+    entity: FoodDoughCornmeal
+
+- type: reaction
+  id: CreateCakeBatterBreastMilk
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    Flour:
+      amount: 20
+    Butter:
+      amount: 10
+    Egg:
+      amount: 6
+    Sugar:
+      amount: 10
+    MilkBreast:
+      amount: 10
+  effects:
+  - !type:SpawnEntity
+    entity: FoodCakeBatter
+
+- type: reaction
+  id: CreateChocolateBreastMilk
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    CocoaPowder:
+      amount: 4
+    MilkBreast:
+      amount: 2
+    Sugar:
+      amount: 2
+  effects:
+  - !type:SpawnEntity
+    entity: FoodSnackChocolateBar
+
+- type: reaction
+  id: ReduceBreastMilk
+  minTemp: 320
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    MilkBreast:
+      amount: 2
+  products:
+    Cream: 1

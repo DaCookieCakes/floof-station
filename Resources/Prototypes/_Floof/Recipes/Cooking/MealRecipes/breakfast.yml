@@ -1,0 +1,43 @@
+- type: microwaveMealRecipe
+  id: RecipeFrenchToastBreastMilk
+  result: FoodBreadFrenchToast
+  time: 5
+  group: Breakfast
+  reagents:
+    MilkBreast: 5
+    Egg: 6
+  solids:
+    FoodBreadPlainSlice: 1
+
+- type: microwaveMealRecipe
+  id: RecipePancakeBreastMilk
+  result: FoodBakedPancake
+  time: 5
+  group: Breakfast
+  reagents:
+    Flour: 5
+    MilkBreast: 5
+    Egg: 6
+
+- type: microwaveMealRecipe
+  id: RecipeBlueberryPancakeBreastMilk
+  result: FoodBakedPancakeBb
+  time: 5
+  group: Breakfast
+  reagents:
+    Flour: 5
+    MilkBreast: 5
+    Egg: 6
+  solids:
+    FoodBerries: 2
+
+- type: microwaveMealRecipe
+  id: RecipeWafflesBreastMilk
+  result: FoodBakedWaffle
+  time: 10
+  group: Breakfast
+  reagents:
+    Flour: 5
+    MilkBreast: 5
+    Egg: 6
+    SodaWater: 5

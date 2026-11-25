@@ -1,0 +1,11 @@
+- type: microwaveMealRecipe
+  id: RecipeCreamCheeseBreadBreastMilk
+  result: FoodBreadCreamcheese
+  time: 15
+  group: Breads
+  reagents:
+    MilkBreast: 5
+  solids:
+    FoodDough: 1
+    FoodCheeseSlice: 1
+
