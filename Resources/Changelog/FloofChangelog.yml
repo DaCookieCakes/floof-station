@@ -1090,3 +1090,16 @@ Entries:
   id: 131
   time: '2026-11-25T10:51:11.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/410
+- author: DaCookieCakes
+  changes:
+    - type: Add
+      message: Breast Milk can now be used in Food/Drink recipes.
+    - type: Remove
+      message: Milk and sugar can no longer be shaken to make cream.
+    - type: Tweak
+      message: Gapple Tart now uses Golden Apples instead of Gold AND Apples.
+    - type: Fix
+      message: Everything is no longer a mount, so only mounts are mounts.
+  id: 132
+  time: '2026-11-25T15:28:58.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/412
