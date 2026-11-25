@@ -1081,3 +1081,12 @@ Entries:
   id: 130
   time: '2026-11-24T14:37:26.0000000+00:00'
   url: https://github.com/Floof-Station/space-station-14/pull/409
+- author: Pachat-Kas
+  changes:
+    - type: Fix
+      message: >-
+        Spider webs no longer stack on top of each other or spawn inside walls
+        and windows.
+  id: 131
+  time: '2026-11-25T10:51:11.0000000+00:00'
+  url: https://github.com/Floof-Station/space-station-14/pull/410
