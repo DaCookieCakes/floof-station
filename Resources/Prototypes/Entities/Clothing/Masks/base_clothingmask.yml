@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [ Clothing, MoffStainableClothingBase ] # Moffstation - mixed in MoffStainableClothingBase
   id: ClothingMaskBase
   components:
   - type: Sprite
@@ -11,6 +11,16 @@
     slots: [mask]
   - type: StaticPrice
     price: 25
+  # Forky - start - clothing stains
+  - type: Stainable
+    clothingVisuals:
+      mask:
+      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+        state: maskblood
+    iconVisuals:
+    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      state: maskbloodicon
+  # Forky - end
 
 - type: entity
   abstract: true
