@@ -44,11 +44,9 @@ internal sealed partial class BuckleSystem : SharedBuckleSystem
         if (!_spriteQuery.TryComp(ent, out SpriteComponent? strapSprite))
             return;
 
-        var newDir = (args.NewRotation + _eye.CurrentEye.Rotation).GetCardinalDir();
-        var oldDir = (args.OldRotation + _eye.CurrentEye.Rotation).GetCardinalDir();
-
-        if (newDir == oldDir)
-            return;
+        // FLOOF
+        // MoveEvent rotations are parent-local, but the eye rotation counters the grid's world rotation.
+        var newDir = (_xformSystem.GetWorldRotation(ent) + _eye.CurrentEye.Rotation).GetCardinalDir();
 
         var isNorth = newDir == Direction.North;
 
